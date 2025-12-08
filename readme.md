@@ -1,7 +1,11 @@
-## Base Log @ 2025-12-08 17:37 UTC
+## Base Log @ 2025-12-08 20:43 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 0
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| CBS | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/120749` |
+| HBO | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46713` |
 ---
 #### Base Channels URL
 ```
