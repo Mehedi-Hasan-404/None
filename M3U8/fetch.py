@@ -51,7 +51,7 @@ async def main() -> None:
         asyncio.create_task(lotus.scrape(network.client)),
         asyncio.create_task(pixel.scrape()),
         asyncio.create_task(ppv.scrape(network.client)),
-        asyncio.create_task(roxie.scrape(network.client)),
+        # asyncio.create_task(roxie.scrape(network.client)),
         asyncio.create_task(shark.scrape(network.client)),
         asyncio.create_task(sport9.scrape(network.client)),
         asyncio.create_task(streambtw.scrape(network.client)),
