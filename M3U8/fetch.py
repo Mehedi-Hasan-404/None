@@ -55,7 +55,7 @@ async def main() -> None:
         asyncio.create_task(shark.scrape(network.client)),
         asyncio.create_task(sport9.scrape(network.client)),
         asyncio.create_task(streambtw.scrape(network.client)),
-        asyncio.create_task(streamcenter.scrape(network.client)),
+        # asyncio.create_task(streamcenter.scrape(network.client)),
         asyncio.create_task(streamfree.scrape(network.client)),
         asyncio.create_task(streamsgate.scrape(network.client)),
         asyncio.create_task(strmd.scrape(network.client)),
