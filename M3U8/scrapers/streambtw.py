@@ -128,7 +128,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
                 entry = {
                     "url": url,
                     "logo": logo,
-                    "base": BASE_URL,
+                    "base": link,
                     "timestamp": now,
                     "id": tvg_id or "Live.Event.us",
                     "link": link,
