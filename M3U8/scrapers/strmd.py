@@ -1,11 +1,10 @@
-import asyncio
 import re
 from functools import partial
 from typing import Any
 from urllib.parse import urljoin
 
 import httpx
-from playwright.async_api import BrowserContext, async_playwright
+from playwright.async_api import async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
 
