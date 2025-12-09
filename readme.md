@@ -1,13 +1,12 @@
-## Base Log @ 2025-12-09 08:51 UTC
+## Base Log @ 2025-12-09 14:46 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Comedy Central | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/7466` |
-| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/75621` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| TV One | HTTP Error (404) | `https://fl1.moveonjoy.com/TV_ONE/index.m3u8` |
 ---
 #### Base Channels URL
 ```
