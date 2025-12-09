@@ -12,7 +12,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("streambtw.json", exp=19_800)
+CACHE_FILE = Cache("streambtw.json", exp=5_400)
 
 BASE_URL = "https://streambtw.com"
 
