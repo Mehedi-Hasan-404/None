@@ -1,8 +1,8 @@
-from urllib.parse import quote, urljoin
+from urllib.parse import urljoin
 
 import httpx
 
-from .utils import Cache, Time, get_logger, leagues
+from .utils import Cache, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -62,7 +62,11 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
             tvg_id, pic = leagues.get_tvg_info(sport, name)
 
             events[key] = {
-                "url": f"https://stream.nvrmind.xyz/strmfr/{stream_key}720p/index.m3u8?stream_name={quote(name)}",
+                "url": network.build_proxy_url(
+                    tag=TAG,
+                    path=f"{stream_key}720p/index.m3u8",
+                    query={"stream_name": name},
+                ),
                 "logo": logo or pic,
                 "base": BASE_URL,
                 "timestamp": now,

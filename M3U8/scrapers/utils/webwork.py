@@ -5,6 +5,7 @@ import re
 from collections.abc import Awaitable, Callable
 from functools import partial
 from typing import TypeVar
+from urllib.parse import urlencode, urljoin
 
 import httpx
 from playwright.async_api import Browser, BrowserContext, Playwright, Request
@@ -15,6 +16,8 @@ T = TypeVar("T")
 
 
 class Network:
+    proxy_base = "https://stream.nvrmind.xyz"
+
     UA = (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -30,6 +33,23 @@ class Network:
         )
 
         self._logger = get_logger("network")
+
+    @staticmethod
+    def build_proxy_url(
+        tag: str,
+        path: str,
+        query: dict | None = None,
+    ) -> str:
+
+        base = network.proxy_base
+
+        tag = tag.lower()
+
+        return (
+            f"{urljoin(base, f'{tag}/{path}')}?{urlencode(query)}"
+            if query
+            else urljoin(base, f"{tag}/{path}")
+        )
 
     async def check_status(self, url: str) -> bool:
         try:
