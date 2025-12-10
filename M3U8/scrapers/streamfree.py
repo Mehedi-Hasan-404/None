@@ -1,4 +1,4 @@
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 
 import httpx
 
@@ -35,6 +35,8 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
 
     events = {}
 
+    now = Time.now().timestamp()
+
     for streams in api_data.get("streams", {}).values():
         if not streams:
             continue
@@ -60,10 +62,10 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
             tvg_id, pic = leagues.get_tvg_info(sport, name)
 
             events[key] = {
-                "url": urljoin(BASE_URL, f"live/{stream_key}720p/index.m3u8"),
+                "url": f"https://stream.nvrmind.xyz/strmfr/{stream_key}720p/index.m3u8?stream_name={quote(name)}",
                 "logo": logo or pic,
                 "base": BASE_URL,
-                "timestamp": Time.now().timestamp(),
+                "timestamp": now,
                 "id": tvg_id or "Live.Event.us",
             }
 
