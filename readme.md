@@ -1,10 +1,10 @@
-## Base Log @ 2025-12-10 14:47 UTC
+## Base Log @ 2025-12-10 20:45 UTC
 
 ### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cartoon Network | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46708` |
+| ESPN2 | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/2210` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
 ---
 #### Base Channels URL
