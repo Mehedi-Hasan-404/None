@@ -1,20 +1,11 @@
-## Base Log @ 2025-12-10 08:50 UTC
+## Base Log @ 2025-12-10 14:47 UTC
 
-### ✅ Working Streams: 135<br>❌ Dead Streams: 11
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Comedy Central | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/7466` |
-| Discovery Family Channel | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10538` |
-| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/75621` |
-| ESPN U | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10255` |
+| Cartoon Network | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46708` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
-| FDSN Southeast | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/81111` |
-| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/13370` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
-| SportsNet New York | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20938` |
-| Willow Cricket | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/41979` |
 ---
 #### Base Channels URL
 ```
