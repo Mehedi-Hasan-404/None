@@ -1,17 +1,13 @@
-## Base Log @ 2025-12-11 08:50 UTC
+## Base Log @ 2025-12-11 14:46 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 8
+### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/75621` |
+| BBC World News | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/139752` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
 | Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| MSNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/MSNBC/index.m3u8` |
-| Marquee Sports Network | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/13379` |
 | NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
-| Syfy | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46685` |
 ---
 #### Base Channels URL
 ```
