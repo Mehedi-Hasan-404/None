@@ -1,10 +1,9 @@
-## Base Log @ 2025-12-10 20:45 UTC
+## Base Log @ 2025-12-11 03:44 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 2
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN2 | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/2210` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
 ---
 #### Base Channels URL
