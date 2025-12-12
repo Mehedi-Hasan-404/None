@@ -136,6 +136,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
                     ev["event"],
                     ev["link"],
                 )
+
                 key = f"[{sport}] {event} ({TAG})"
 
                 tvg_id, logo = leagues.get_tvg_info(sport, event)
