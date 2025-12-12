@@ -44,10 +44,14 @@ async def process_event(
         log.info(f"URL {url_num}) No M3U8 found")
         return
 
-    encoded = match[2][::-1]
-    decoded = base64.b64decode(encoded[::-1]).decode("utf-8")
+    stream_link: str = match[2]
+
+    if not stream_link.startswith("http"):
+        stream_link = base64.b64decode(stream_link).decode("utf-8")
+
     log.info(f"URL {url_num}) Captured M3U8")
-    return decoded
+
+    return stream_link
 
 
 async def get_events(client: httpx.AsyncClient) -> list[dict[str, str]]:
