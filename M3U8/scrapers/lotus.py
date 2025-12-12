@@ -25,7 +25,7 @@ def fix_league(s: str) -> str:
 async def refresh_api_cache(
     client: httpx.AsyncClient,
     url: str,
-    ts: float,
+    now_ts: float,
 ) -> dict[str, dict[str, str]]:
     log.info("Refreshing API cache")
 
@@ -37,9 +37,10 @@ async def refresh_api_cache(
 
         return {}
 
-    data = r.json()
+    if not (data := r.json()):
+        return {}
 
-    data["timestamp"] = ts
+    data["timestamp"] = now_ts
 
     return data
 

@@ -115,6 +115,8 @@ async def scrape(client: httpx.AsyncClient) -> None:
         CACHE_FILE.write(cached_urls)
         return
 
+    log.info(f'Scraping from "{base_url}"')
+
     events = await get_events(
         client,
         api_url,

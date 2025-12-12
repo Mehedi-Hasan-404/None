@@ -67,12 +67,13 @@ async def refresh_api_cache(
 
     results = await asyncio.gather(*tasks)
 
-    data = list(chain(*results))
+    if not (data := list(chain(*results))):
+        return []
 
     for ev in data:
         ev["ts"] = ev.pop("timestamp")
 
-    data[-1]["timestamp"] = Time.now().timestamp()
+        data[-1]["timestamp"] = Time.now().timestamp()
 
     return data
 

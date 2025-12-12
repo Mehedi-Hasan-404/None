@@ -53,7 +53,7 @@ class Network:
 
     async def check_status(self, url: str) -> bool:
         try:
-            r = await self.client.get(url)
+            r = await self.client.get(url, timeout=5)
             r.raise_for_status()
             return r.status_code == 200
         except (httpx.HTTPError, httpx.TimeoutException) as e:

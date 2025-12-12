@@ -38,7 +38,7 @@ def fix_sport(s: str) -> str:
 async def refresh_api_cache(
     client: httpx.AsyncClient,
     url: str,
-    ts: float,
+    now_ts: float,
 ) -> list[dict[str, Any]]:
 
     log.info("Refreshing API cache")
@@ -49,11 +49,12 @@ async def refresh_api_cache(
     except Exception as e:
         log.error(f'Failed to fetch "{url}": {e}')
 
-        return {}
+        return []
 
-    data = r.json()
+    if not (data := r.json()):
+        return []
 
-    data[-1]["timestamp"] = ts
+    data[-1]["timestamp"] = now_ts
 
     return data
 

@@ -59,7 +59,8 @@ async def get_api_data(client: httpx.AsyncClient, url: str) -> list[dict[str, An
 
 
 async def refresh_api_cache(
-    client: httpx.AsyncClient, ts: float
+    client: httpx.AsyncClient,
+    now_ts: float,
 ) -> list[dict[str, Any]]:
     log.info("Refreshing API cache")
 
@@ -70,12 +71,13 @@ async def refresh_api_cache(
 
     results = await asyncio.gather(*tasks)
 
-    data = list(chain(*results))
+    if not (data := list(chain(*results))):
+        return []
 
     for ev in data:
         ev["ts"] = ev.pop("timestamp")
 
-    data[-1]["timestamp"] = ts
+        data[-1]["timestamp"] = now_ts
 
     return data
 
