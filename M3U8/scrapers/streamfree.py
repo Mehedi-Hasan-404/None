@@ -64,7 +64,7 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
             events[key] = {
                 "url": network.build_proxy_url(
                     tag=TAG,
-                    path=f"{stream_key}720p/index.m3u8",
+                    path=f"{stream_key}/index.m3u8",
                     query={"stream_name": name},
                 ),
                 "logo": logo or pic,
