@@ -60,7 +60,7 @@ async def main() -> None:
         asyncio.create_task(streamsgate.scrape(network.client)),
         asyncio.create_task(strmd.scrape(network.client)),
         asyncio.create_task(tvpass.scrape(network.client)),
-        # asyncio.create_task(watchfooty.scrape(network.client)),
+        asyncio.create_task(watchfooty.scrape(network.client)),
         asyncio.create_task(webcast.scrape(network.client)),
     ]
 

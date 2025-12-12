@@ -193,7 +193,7 @@ async def get_events(
         if not (ts := event.get("ts")):
             continue
 
-        start_ts = int(f"{ts}"[:-3])
+        start_ts = float(f"{ts}"[:-3])
 
         event_dt = Time.from_ts(start_ts)
 
