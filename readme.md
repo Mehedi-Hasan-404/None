@@ -1,11 +1,11 @@
-## Base Log @ 2025-12-11 23:35 UTC
+## Base Log @ 2025-12-12 03:44 UTC
 
 ### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC World News | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/139752` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
+| getTV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/18366` |
 ---
 #### Base Channels URL
 ```
