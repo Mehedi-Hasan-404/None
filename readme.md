@@ -1,11 +1,12 @@
-## Base Log @ 2025-12-13 03:35 UTC
+## Base Log @ 2025-12-13 08:44 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 2
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Southeast | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/81111` |
-| FDSN Southwest | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/21843` |
+| Cartoon Network | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46708` |
+| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
+| Marquee Sports Network | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/13379` |
 ---
 #### Base Channels URL
 ```
