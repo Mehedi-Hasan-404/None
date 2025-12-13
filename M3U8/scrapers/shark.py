@@ -10,13 +10,13 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("shark.json", exp=10_800)
+TAG = "SHARK"
 
-HTML_CACHE = Cache("shark-html.json", exp=19_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=19_800)
 
 BASE_URL = "https://sharkstreams.net"
-
-TAG = "SHARK"
 
 
 async def process_event(
@@ -45,18 +45,16 @@ async def process_event(
 
 
 async def refresh_html_cache(
-    client: httpx.AsyncClient,
-    url: str,
-    now_ts: float,
+    client: httpx.AsyncClient, now_ts: float
 ) -> dict[str, dict[str, str | float]]:
 
     log.info("Refreshing HTML cache")
 
     try:
-        r = await client.get(url)
+        r = await client.get(BASE_URL)
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+        log.error(f'Failed to fetch "{BASE_URL}": {e}')
 
         return {}
 
@@ -108,11 +106,7 @@ async def get_events(
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
-        events = await refresh_html_cache(
-            client,
-            BASE_URL,
-            now.timestamp(),
-        )
+        events = await refresh_html_cache(client, now.timestamp())
 
         HTML_CACHE.write(events)
 

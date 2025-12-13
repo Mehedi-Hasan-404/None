@@ -12,11 +12,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("sport9.json", exp=3_600)
+TAG = "SPRT9"
+
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=3_600)
 
 BASE_URL = "https://sport9.ru"
-
-TAG = "SPRT9"
 
 
 async def get_html(

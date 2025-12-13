@@ -11,13 +11,13 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("webcast.json", exp=10_800)
+TAG = "WEBCST"
 
-HTML_CACHE = Cache("webcast-html.json", exp=86_400)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=86_400)
 
 BASE_URLS = {"NFL": "https://nflwebcast.com", "NHL": "https://slapstreams.com"}
-
-TAG = "WEBCST"
 
 
 def fix_event(s: str) -> str:

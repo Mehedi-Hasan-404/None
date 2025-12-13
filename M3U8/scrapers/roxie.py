@@ -12,9 +12,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("roxie.json", exp=10_800)
+TAG = "ROXIE"
 
-HTML_CACHE = Cache("roxie-html.json", exp=19_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=19_800)
 
 BASE_URL = "https://roxiestreams.live"
 
@@ -27,8 +29,6 @@ SPORT_ENDPOINTS = {
     "nhl": "NHL",
     "soccer": "Soccer",
 }
-
-TAG = "ROXIE"
 
 
 async def process_event(

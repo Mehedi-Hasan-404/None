@@ -12,17 +12,17 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("strmd.json", exp=10_800)
+TAG = "STRMD"
 
-API_FILE = Cache("strmd-api.json", exp=28_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 MIRRORS = [
     "https://streami.su",
     "https://streamed.st",
     "https://streamed.pk",
 ]
-
-TAG = "STRMD"
 
 
 def fix_sport(s: str) -> str:

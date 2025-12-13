@@ -12,11 +12,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("streambtw.json", exp=3_600)
+TAG = "STRMBTW"
+
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=3_600)
 
 BASE_URL = "https://streambtw.com"
-
-TAG = "STRMBTW"
 
 
 def fix_league(s: str) -> str:

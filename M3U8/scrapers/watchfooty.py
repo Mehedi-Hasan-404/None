@@ -14,9 +14,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("watchfty.json", exp=10_800)
+TAG = "WFTY"
 
-API_FILE = Cache("watchfty-api.json", exp=28_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 API_MIRRORS = ["https://api.watchfooty.top", "https://api.watchfooty.st"]
 
@@ -39,8 +41,6 @@ SPORT_ENDPOINTS = [
     # "volleyball",
 ]
 
-TAG = "WFTY"
-
 
 async def get_api_data(client: httpx.AsyncClient, url: str) -> list[dict[str, Any]]:
     try:
@@ -55,8 +55,7 @@ async def get_api_data(client: httpx.AsyncClient, url: str) -> list[dict[str, An
 
 
 async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    url: str,
+    client: httpx.AsyncClient, url: str
 ) -> list[dict[str, Any]]:
     log.info("Refreshing API cache")
 

@@ -8,18 +8,17 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("streamfree.json", exp=19_800)
+TAG = "STRMFREE"
 
-BASE_URL = "https://streamfree.to"
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=19_800)
 
-TAG = "STRMFR"
+BASE_URL = "https://streamfree.to/"
 
 
-async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    url: str,
-) -> dict[str, dict[str, list]]:
+async def refresh_api_cache(client: httpx.AsyncClient) -> dict[str, dict[str, list]]:
     try:
+        url = urljoin(BASE_URL, "streams")
+
         r = await client.get(url)
         r.raise_for_status()
     except Exception as e:
@@ -31,7 +30,7 @@ async def refresh_api_cache(
 
 
 async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | float]]:
-    api_data = await refresh_api_cache(client, urljoin(BASE_URL, "streams"))
+    api_data = await refresh_api_cache(client)
 
     events = {}
 

@@ -8,11 +8,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("tvpass.json", exp=86_400)
+TAG = "TVP"
+
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=86_400)
 
 BASE_URL = "https://tvpass.org/playlist/m3u"
-
-TAG = "TVP"
 
 
 async def get_data(client: httpx.AsyncClient) -> list[str]:

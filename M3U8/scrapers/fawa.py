@@ -11,11 +11,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("fawa.json", exp=10_800)
+TAG = "FAWA"
+
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
 BASE_URL = "http://www.fawanews.sc/"
-
-TAG = "FAWA"
 
 
 async def process_event(

@@ -10,7 +10,9 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("timstreams.json", exp=10_800)
+TAG = "TIM"
+
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
 
 API_URL = "https://api.timstreams.site/main"
@@ -21,7 +23,6 @@ BASE_MIRRORS = [
     "https://timstreams.top",
 ]
 
-TAG = "TIM"
 
 sport_genres = {
     1: "Soccer",
@@ -44,14 +45,12 @@ sport_genres = {
 }
 
 
-async def refresh_api_cache(
-    client: httpx.AsyncClient, url: str
-) -> list[dict[str, Any]]:
+async def refresh_api_cache(client: httpx.AsyncClient) -> list[dict[str, Any]]:
     try:
-        r = await client.get(url)
+        r = await client.get(API_URL)
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+        log.error(f'Failed to fetch "{API_URL}": {e}')
 
         return []
 
@@ -59,12 +58,9 @@ async def refresh_api_cache(
 
 
 async def get_events(
-    client: httpx.AsyncClient,
-    url: str,
-    cached_keys: set[str],
+    client: httpx.AsyncClient, cached_keys: set[str]
 ) -> list[dict[str, str]]:
-
-    api_data = await refresh_api_cache(client, url)
+    api_data = await refresh_api_cache(client)
 
     now = Time.now().timestamp()
 
@@ -125,11 +121,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{base_url}"')
 
-    events = await get_events(
-        client,
-        API_URL,
-        set(cached_urls.keys()),
-    )
+    events = await get_events(client, set(cached_urls.keys()))
 
     log.info(f"Processing {len(events)} new URL(s)")
 

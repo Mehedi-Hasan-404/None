@@ -9,13 +9,14 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("streamcenter.json", exp=10_800)
+TAG = "STRMCNTR"
 
-API_FILE = Cache("streamcenter-api.json", exp=28_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 BASE_URL = "https://backendstreamcenter.youshop.pro:488/api/Parties"
 
-TAG = "STRMCNTR"
 
 categories = {
     4: "Basketball",
@@ -33,17 +34,15 @@ categories = {
 
 
 async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    url: str,
-    now_ts: float,
+    client: httpx.AsyncClient, now_ts: float
 ) -> list[dict[str, str | int]]:
     log.info("Refreshing API cache")
 
     try:
-        r = await client.get(url, params={"pageNumber": 1, "pageSize": 500})
+        r = await client.get(BASE_URL, params={"pageNumber": 1, "pageSize": 500})
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+        log.error(f'Failed to fetch "{BASE_URL}": {e}')
 
         return []
 
@@ -62,11 +61,7 @@ async def get_events(
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        api_data = await refresh_api_cache(
-            client,
-            BASE_URL,
-            now.timestamp(),
-        )
+        api_data = await refresh_api_cache(client, now.timestamp())
 
         API_FILE.write(api_data)
 

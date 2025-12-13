@@ -14,6 +14,7 @@ from scrapers import (
     streambtw,
     streamcenter,
     streamfree,
+    streamhub,
     streamsgate,
     strmd,
     timstreams,
@@ -58,6 +59,7 @@ async def main() -> None:
         asyncio.create_task(streambtw.scrape(network.client)),
         asyncio.create_task(streamcenter.scrape(network.client)),
         asyncio.create_task(streamfree.scrape(network.client)),
+        asyncio.create_task(streamhub.scrape(network.client)),
         asyncio.create_task(streamsgate.scrape(network.client)),
         asyncio.create_task(strmd.scrape(network.client)),
         asyncio.create_task(timstreams.scrape(network.client)),
@@ -80,6 +82,7 @@ async def main() -> None:
         | streamcenter.urls
         | strmd.urls
         | streamfree.urls
+        | streamhub.urls
         | streamsgate.urls
         | timstreams.urls
         | tvpass.urls

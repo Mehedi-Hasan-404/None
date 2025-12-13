@@ -9,14 +9,14 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("pixel.json", exp=19_800)
+TAG = "PIXEL"
+
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=19_800)
 
 BASE_URL = "https://pixelsport.tv/backend/livetv/events"
 
-TAG = "PIXL"
 
-
-async def get_api_data(url: str) -> dict[str, list[dict, str, str]]:
+async def get_api_data() -> dict[str, list[dict, str, str]]:
     async with async_playwright() as p:
         try:
             browser, context = await network.browser(p)
@@ -24,7 +24,7 @@ async def get_api_data(url: str) -> dict[str, list[dict, str, str]]:
             page = await context.new_page()
 
             await page.goto(
-                url,
+                BASE_URL,
                 wait_until="domcontentloaded",
                 timeout=10_000,
             )
@@ -32,7 +32,7 @@ async def get_api_data(url: str) -> dict[str, list[dict, str, str]]:
             raw_json = await page.locator("pre").inner_text(timeout=5_000)
 
         except Exception as e:
-            log.error(f'Failed to fetch "{url}": {e}')
+            log.error(f'Failed to fetch "{BASE_URL}": {e}')
 
             return {}
 
@@ -45,7 +45,7 @@ async def get_api_data(url: str) -> dict[str, list[dict, str, str]]:
 async def get_events() -> dict[str, dict[str, str | float]]:
     now = Time.clean(Time.now())
 
-    api_data = await get_api_data(BASE_URL)
+    api_data = await get_api_data()
 
     events = {}
 

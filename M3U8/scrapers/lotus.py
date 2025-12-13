@@ -9,13 +9,13 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("lotus.json", exp=5_400)
+TAG = "LOTUS"
 
-API_CACHE = Cache("lotus-api.json", exp=28_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=5_400)
+
+API_CACHE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 BASE_URL = "https://lotusgamehd.xyz/api-event.php"
-
-TAG = "LOTUS"
 
 
 def fix_league(s: str) -> str:
@@ -46,16 +46,14 @@ async def refresh_api_cache(
 
 
 async def get_events(
-    client: httpx.AsyncClient,
-    url: str,
-    cached_keys: set[str],
+    client: httpx.AsyncClient, cached_keys: set[str]
 ) -> list[dict[str, str]]:
     now = Time.now()
 
     if not (api_data := API_CACHE.load(per_entry=False)):
         api_data = await refresh_api_cache(
             client,
-            url,
+            BASE_URL,
             now.timestamp(),
         )
 
@@ -108,11 +106,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(
-        client,
-        BASE_URL,
-        set(cached_urls.keys()),
-    )
+    events = await get_events(client, set(cached_urls.keys()))
 
     log.info(f"Processing {len(events)} new URL(s)")
 

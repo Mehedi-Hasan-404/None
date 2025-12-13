@@ -9,9 +9,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-CACHE_FILE = Cache("ppv.json", exp=10_800)
+TAG = "PPV"
 
-API_FILE = Cache("ppv-api.json", exp=19_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
 
 API_MIRRORS = [
     "https://old.ppv.to/api/streams",
@@ -24,8 +26,6 @@ BASE_MIRRORS = [
     "https://ppvs.su",
     "https://ppv.to",
 ]
-
-TAG = "PPV"
 
 
 async def refresh_api_cache(
