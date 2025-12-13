@@ -1,7 +1,11 @@
-## Base Log @ 2025-12-12 21:33 UTC
+## Base Log @ 2025-12-13 03:35 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 0
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| FDSN Southeast | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/81111` |
+| FDSN Southwest | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/21843` |
 ---
 #### Base Channels URL
 ```
