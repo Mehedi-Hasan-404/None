@@ -14,7 +14,6 @@ TAG = "TIM"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-
 API_URL = "https://api.timstreams.site/main"
 
 BASE_MIRRORS = [
