@@ -19,7 +19,7 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=3_600)
 BASE_URL = "https://sport9.ru"
 
 
-async def get_html(
+async def get_html_data(
     client: httpx.AsyncClient,
     url: str,
     date: str,
@@ -43,7 +43,7 @@ async def get_events(
     now = Time.now()
 
     tasks = [
-        get_html(client, BASE_URL, str(d.date()))
+        get_html_data(client, BASE_URL, str(d.date()))
         for d in [
             now.delta(days=-1),
             now,

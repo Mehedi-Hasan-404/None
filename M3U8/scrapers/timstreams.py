@@ -22,8 +22,7 @@ BASE_MIRRORS = [
     "https://timstreams.top",
 ]
 
-
-sport_genres = {
+SPORT_GENRES = {
     1: "Soccer",
     2: "Motorsport",
     3: "MMA",
@@ -79,7 +78,7 @@ async def get_events(
             if (genre := ev["genre"]) in {16, 17}:
                 continue
 
-            sport = sport_genres.get(genre, "Live Event")
+            sport = SPORT_GENRES.get(genre, "Live Event")
 
             streams: list[dict[str, str]] = ev["streams"]
 

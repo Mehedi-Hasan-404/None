@@ -18,7 +18,7 @@ API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 BASE_URL = "https://backendstreamcenter.youshop.pro:488/api/Parties"
 
 
-categories = {
+CATEGORIES = {
     4: "Basketball",
     9: "Football",
     13: "Baseball",
@@ -87,7 +87,7 @@ async def get_events(
         if not start_dt <= event_dt <= end_dt:
             continue
 
-        if not (sport := categories.get(category_id)):
+        if not (sport := CATEGORIES.get(category_id)):
             continue
 
         key = f"[{sport}] {name} ({TAG})"

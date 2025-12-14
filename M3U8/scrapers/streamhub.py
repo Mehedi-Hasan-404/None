@@ -1,3 +1,4 @@
+import asyncio
 from functools import partial
 
 import httpx
@@ -17,55 +18,80 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 BASE_URL = "https://streamhub.pro/live-now"
 
 
-async def get_events(
-    client: httpx.AsyncClient, cached_keys: set[str]
-) -> list[dict[str, str]]:
+CATEGORIES = {
+    "Soccer": "sport_68c02a4464a38",
+    "American Football": "sport_68c02a4465113",
+    # "Baseball": "sport_68c02a446582f",
+    "Basketball": "sport_68c02a4466011",
+    # "Cricket": "sport_68c02a44669f3",
+    "Hockey": "sport_68c02a4466f56",
+    "MMA": "sport_68c02a44674e9",
+    "Racing": "sport_68c02a4467a48",
+    # "Rugby": "sport_68c02a4467fc1",
+    # "Tennis": "sport_68c02a4468cf7",
+    # "Volleyball": "sport_68c02a4469422",
+}
+
+
+async def get_html_data(client: httpx.AsyncClient, sport: str) -> bytes:
     try:
-        r = await client.get(BASE_URL)
+        r = await client.get(BASE_URL, params={"sport_id": sport})
         r.raise_for_status()
     except Exception as e:
         log.error(f'Failed to fetch "{BASE_URL}": {e}')
 
-        return []
+        return b""
 
-    soup = HTMLParser(r.content)
+    return r.content
+
+
+async def get_events(
+    client: httpx.AsyncClient, cached_keys: set[str]
+) -> list[dict[str, str]]:
+
+    tasks = [get_html_data(client, sport) for sport in CATEGORIES.values()]
+
+    results = await asyncio.gather(*tasks)
+
+    soups = [HTMLParser(html) for html in results]
 
     events = []
 
-    for event in soup.css(".events-section"):
-        if not (title_node := event.css_first(".section-titlte")):
-            continue
+    for soup in soups:
+        for section in soup.css(".events-section"):
+            if not (sport_node := section.css_first(".section-titlte")):
+                continue
 
-        sport = title_node.text(strip=True)
+            sport = sport_node.text(strip=True)
 
-        if not event.css_first(".event-competitors"):
-            continue
+            logo = section.css_first(".league-icon img").attributes.get("src")
 
-        home_team = event.css_first(".event-home-team").text(strip=True)
-        away_team = event.css_first(".event-visitor-team").text(strip=True)
+            for event in section.css(".section-event"):
+                event_name = "Live Event"
 
-        logo = event.css_first(".league-icon img").attributes.get("src")
+                if teams := event.css_first(".event-competitors"):
+                    home, away = teams.text(strip=True).split("vs.")
 
-        if not (event_button := event.css_first("div.event-button a")) or not (
-            href := event_button.attributes.get("href")
-        ):
-            continue
+                    event_name = f"{away} vs {home}"
 
-        event_name = f"{away_team} vs {home_team}"
+                if not (event_button := event.css_first("div.event-button a")) or not (
+                    href := event_button.attributes.get("href")
+                ):
+                    continue
 
-        key = f"[{sport}] {event_name} ({TAG})"
+                key = f"[{sport}] {event_name} ({TAG})"
 
-        if cached_keys & {key}:
-            continue
+                if cached_keys & {key}:
+                    continue
 
-        events.append(
-            {
-                "sport": sport,
-                "event": event_name,
-                "link": href,
-                "logo": logo,
-            }
-        )
+                events.append(
+                    {
+                        "sport": sport,
+                        "event": event_name,
+                        "link": href,
+                        "logo": logo,
+                    }
+                )
 
     return events
 
