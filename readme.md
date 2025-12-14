@@ -1,10 +1,12 @@
-## Base Log @ 2025-12-14 14:39 UTC
+## Base Log @ 2025-12-14 20:40 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/31636` |
+| getTV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/18366` |
 ---
 #### Base Channels URL
 ```
