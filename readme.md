@@ -1,17 +1,10 @@
-## Base Log @ 2025-12-14 08:44 UTC
+## Base Log @ 2025-12-14 14:39 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 8
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC America | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/20194` |
-| Cartoon Network | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46708` |
-| Discovery Family Channel | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/10538` |
-| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/75621` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
-| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/13370` |
-| USA East | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/10252` |
 ---
 #### Base Channels URL
 ```
