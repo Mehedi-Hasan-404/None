@@ -1,5 +1,6 @@
 import asyncio
 from functools import partial
+from urllib.parse import urljoin
 
 import httpx
 from playwright.async_api import async_playwright
@@ -15,7 +16,9 @@ TAG = "STRMHUB"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-BASE_URL = "https://streamhub.pro/live-now"
+HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=28_800)
+
+BASE_URL = "https://streamhub.pro/"
 
 
 CATEGORIES = {
@@ -33,67 +36,113 @@ CATEGORIES = {
 }
 
 
-async def get_html_data(client: httpx.AsyncClient, sport: str) -> bytes:
+async def get_html_data(client: httpx.AsyncClient, sport_id: str) -> bytes:
     try:
-        r = await client.get(BASE_URL, params={"sport_id": sport})
+        url = urljoin(BASE_URL, f"events/{Time.now().date()}")
+
+        r = await client.get(url, params={"sport_id": sport_id})
+
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{BASE_URL}": {e}')
+        log.error(f'Failed to fetch "{url}": {e}')
 
         return b""
 
     return r.content
 
 
-async def get_events(
-    client: httpx.AsyncClient, cached_keys: set[str]
-) -> list[dict[str, str]]:
+async def refresh_html_cache(
+    client: httpx.AsyncClient,
+    sport_id: str,
+    ts: float,
+) -> dict[str, dict[str, str | float]]:
 
-    tasks = [get_html_data(client, sport) for sport in CATEGORIES.values()]
+    html_data = await get_html_data(client, sport_id)
 
-    results = await asyncio.gather(*tasks)
+    soup = HTMLParser(html_data)
 
-    soups = [HTMLParser(html) for html in results]
+    events = {}
 
-    events = []
+    for section in soup.css(".events-section"):
+        if not (sport_node := section.css_first(".section-titlte")):
+            continue
 
-    for soup in soups:
-        for section in soup.css(".events-section"):
-            if not (sport_node := section.css_first(".section-titlte")):
+        sport = sport_node.text(strip=True)
+
+        logo = section.css_first(".league-icon img").attributes.get("src")
+
+        for event in section.css(".section-event"):
+            event_name = "Live Event"
+
+            if teams := event.css_first(".event-competitors"):
+                home, away = teams.text(strip=True).split("vs.")
+
+                event_name = f"{away} vs {home}"
+
+            if not (event_button := event.css_first(".event-button a")) or not (
+                href := event_button.attributes.get("href")
+            ):
                 continue
 
-            sport = sport_node.text(strip=True)
+            event_date = event.css_first(".event-countdown").attributes.get(
+                "data-start"
+            )
 
-            logo = section.css_first(".league-icon img").attributes.get("src")
+            event_dt = Time.from_str(event_date, timezone="UTC")
 
-            for event in section.css(".section-event"):
-                event_name = "Live Event"
+            key = f"[{sport}] {event_name} ({TAG})"
 
-                if teams := event.css_first(".event-competitors"):
-                    home, away = teams.text(strip=True).split("vs.")
-
-                    event_name = f"{away} vs {home}"
-
-                if not (event_button := event.css_first("div.event-button a")) or not (
-                    href := event_button.attributes.get("href")
-                ):
-                    continue
-
-                key = f"[{sport}] {event_name} ({TAG})"
-
-                if cached_keys & {key}:
-                    continue
-
-                events.append(
-                    {
-                        "sport": sport,
-                        "event": event_name,
-                        "link": href,
-                        "logo": logo,
-                    }
-                )
+            events[key] = {
+                "sport": sport,
+                "event": event_name,
+                "link": href,
+                "logo": logo,
+                "timestamp": ts,
+                "event_ts": event_dt.timestamp(),
+            }
 
     return events
+
+
+async def get_events(
+    client: httpx.AsyncClient,
+    cached_keys: set[str],
+) -> list[dict[str, str]]:
+    now = Time.clean(Time.now())
+
+    if not (events := HTML_CACHE.load()):
+        log.info("Refreshing HTML cache")
+
+        tasks = [
+            refresh_html_cache(
+                client,
+                sport_id,
+                now.timestamp(),
+            )
+            for sport_id in CATEGORIES.values()
+        ]
+
+        results = await asyncio.gather(*tasks)
+
+        events = {k: v for data in results for k, v in data.items()}
+
+        HTML_CACHE.write(events)
+
+    live = []
+
+    start_ts = now.delta(hours=-1).timestamp()
+    end_ts = now.delta(minutes=5).timestamp()
+
+    for k, v in events.items():
+        if cached_keys & {k}:
+            continue
+
+        if not start_ts <= v["event_ts"] <= end_ts:
+            continue
+
+        live.append({**v})
+
+    return live
 
 
 async def scrape(client: httpx.AsyncClient) -> None:
@@ -111,8 +160,6 @@ async def scrape(client: httpx.AsyncClient) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        now = Time.now().timestamp()
-
         async with async_playwright() as p:
             browser, context = await network.browser(p)
 
@@ -132,11 +179,12 @@ async def scrape(client: httpx.AsyncClient) -> None:
                     log=log,
                 )
 
-                sport, event, logo, link = (
+                sport, event, logo, link, ts = (
                     ev["sport"],
                     ev["event"],
                     ev["logo"],
                     ev["link"],
+                    ev["timestamp"],
                 )
 
                 key = f"[{sport}] {event} ({TAG})"
@@ -147,7 +195,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
                     "url": url,
                     "logo": logo or pic,
                     "base": "https://storytrench.net/",
-                    "timestamp": now,
+                    "timestamp": ts,
                     "id": tvg_id or "Live.Event.us",
                     "link": link,
                 }

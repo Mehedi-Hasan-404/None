@@ -57,6 +57,18 @@ async def process_event(
     return match[1]
 
 
+async def get_html_data(client: httpx.AsyncClient, url: str) -> bytes:
+    try:
+        r = await client.get(url)
+        r.raise_for_status()
+    except Exception as e:
+        log.error(f'Failed to fetch "{url}": {e}')
+
+        return b""
+
+    return r.content
+
+
 async def refresh_html_cache(
     client: httpx.AsyncClient,
     url: str,
@@ -64,15 +76,9 @@ async def refresh_html_cache(
     now_ts: float,
 ) -> dict[str, dict[str, str | float]]:
 
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+    html_data = await get_html_data(client, url)
 
-        return {}
-
-    soup = HTMLParser(r.content)
+    soup = HTMLParser(html_data)
 
     events = {}
 
@@ -108,15 +114,14 @@ async def refresh_html_cache(
 
 
 async def get_events(
-    client: httpx.AsyncClient,
-    sport_urls: dict[str, str],
-    cached_keys: set[str],
+    client: httpx.AsyncClient, cached_keys: set[str]
 ) -> list[dict[str, str]]:
-
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
         log.info("Refreshing HTML cache")
+
+        sport_urls = {sport: urljoin(BASE_URL, sport) for sport in SPORT_ENDPOINTS}
 
         tasks = [
             refresh_html_cache(
@@ -160,13 +165,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    sport_urls = {sport: urljoin(BASE_URL, sport) for sport in SPORT_ENDPOINTS}
-
-    events = await get_events(
-        client,
-        sport_urls,
-        set(cached_urls.keys()),
-    )
+    events = await get_events(client, set(cached_urls.keys()))
 
     log.info(f"Processing {len(events)} new URL(s)")
 
