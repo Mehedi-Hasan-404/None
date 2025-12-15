@@ -47,7 +47,6 @@ async def process_event(
 async def refresh_html_cache(
     client: httpx.AsyncClient, now_ts: float
 ) -> dict[str, dict[str, str | float]]:
-
     log.info("Refreshing HTML cache")
 
     try:

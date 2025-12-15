@@ -36,15 +36,21 @@ CATEGORIES = {
 }
 
 
-async def get_html_data(client: httpx.AsyncClient, sport_id: str) -> bytes:
-    try:
-        url = urljoin(BASE_URL, f"events/{Time.now().date()}")
+async def get_html_data(
+    client: httpx.AsyncClient,
+    date: str,
+    sport_id: str,
+) -> bytes:
 
-        r = await client.get(url, params={"sport_id": sport_id})
+    try:
+        r = await client.get(
+            urljoin(BASE_URL, f"events/{date}"),
+            params={"sport_id": sport_id},
+        )
 
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+        log.error(f'Failed to fetch "{r.url}": {e}')
 
         return b""
 
@@ -53,11 +59,12 @@ async def get_html_data(client: httpx.AsyncClient, sport_id: str) -> bytes:
 
 async def refresh_html_cache(
     client: httpx.AsyncClient,
+    date: str,
     sport_id: str,
     ts: float,
 ) -> dict[str, dict[str, str | float]]:
 
-    html_data = await get_html_data(client, sport_id)
+    html_data = await get_html_data(client, date, sport_id)
 
     soup = HTMLParser(html_data)
 
@@ -113,12 +120,16 @@ async def get_events(
     if not (events := HTML_CACHE.load()):
         log.info("Refreshing HTML cache")
 
+        dates = [now.date(), now.delta(days=1).date()]
+
         tasks = [
             refresh_html_cache(
                 client,
+                date,
                 sport_id,
                 now.timestamp(),
             )
+            for date in dates
             for sport_id in CATEGORIES.values()
         ]
 
@@ -184,7 +195,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
                     ev["event"],
                     ev["logo"],
                     ev["link"],
-                    ev["timestamp"],
+                    ev["event_ts"],
                 )
 
                 key = f"[{sport}] {event} ({TAG})"

@@ -29,7 +29,7 @@ async def get_html_data(
         r = await client.get(url, params={"date": date})
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+        log.error(f'Failed to fetch "{r.url}": {e}')
 
         return b""
 

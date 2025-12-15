@@ -1,5 +1,4 @@
 import json
-import re
 
 from playwright.async_api import async_playwright
 
@@ -49,8 +48,6 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
     events = {}
 
-    pattern = re.compile(r"https?://[^\s'\"]+?\.m3u8(?:\?[^\s'\"]*)?", re.IGNORECASE)
-
     for event in api_data.get("events", []):
         event_dt = Time.from_str(event["date"], timezone="UTC")
 
@@ -66,19 +63,18 @@ async def get_events() -> dict[str, dict[str, str | float]]:
         stream_urls = [(i, f"server{i}URL") for i in range(1, 4)]
 
         for z, stream_url in stream_urls:
-            if stream_link := channel_info.get(stream_url):
-                if pattern.search(stream_link):
-                    key = f"[{sport}] {event_name} {z} ({TAG})"
+            if (stream_link := channel_info.get(stream_url)) and stream_link != "null":
+                key = f"[{sport}] {event_name} {z} ({TAG})"
 
-                    tvg_id, logo = leagues.get_tvg_info(sport, event_name)
+                tvg_id, logo = leagues.get_tvg_info(sport, event_name)
 
-                    events[key] = {
-                        "url": stream_link,
-                        "logo": logo,
-                        "base": "https://pixelsport.tv",
-                        "timestamp": now.timestamp(),
-                        "id": tvg_id or "Live.Event.us",
-                    }
+                events[key] = {
+                    "url": stream_link,
+                    "logo": logo,
+                    "base": "https://pixelsport.tv",
+                    "timestamp": now.timestamp(),
+                    "id": tvg_id or "Live.Event.us",
+                }
 
     return events
 

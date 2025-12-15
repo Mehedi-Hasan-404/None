@@ -42,7 +42,7 @@ async def refresh_api_cache(
         r = await client.get(BASE_URL, params={"pageNumber": 1, "pageSize": 500})
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{BASE_URL}": {e}')
+        log.error(f'Failed to fetch "{r.url}": {e}')
 
         return []
 

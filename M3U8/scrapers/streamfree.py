@@ -17,12 +17,10 @@ BASE_URL = "https://streamfree.to/"
 
 async def refresh_api_cache(client: httpx.AsyncClient) -> dict[str, dict[str, list]]:
     try:
-        url = urljoin(BASE_URL, "streams")
-
-        r = await client.get(url)
+        r = await client.get(urljoin(BASE_URL, "streams"))
         r.raise_for_status()
     except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+        log.error(f'Failed to fetch "{r.url}": {e}')
 
         return {}
 
