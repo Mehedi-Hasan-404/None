@@ -1,19 +1,10 @@
-## Base Log @ 2025-12-15 08:53 UTC
+## Base Log @ 2025-12-15 14:51 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 10
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Big Ten Network | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/9828` |
-| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/75621` |
-| ESPN U | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/10255` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
-| FDSN Ohio | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/17752` |
-| FDSN Southwest | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/21843` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
-| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/13370` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/31637` |
-| SportsNet New York | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/20938` |
 ---
 #### Base Channels URL
 ```
