@@ -1,12 +1,11 @@
-## Base Log @ 2025-12-14 20:40 UTC
+## Base Log @ 2025-12-15 03:52 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/31636` |
-| getTV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/18366` |
+| Hallmark Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8` |
 ---
 #### Base Channels URL
 ```
