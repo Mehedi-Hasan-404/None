@@ -14,11 +14,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "WFTY"
+TAG = "WATCHFTY"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+CACHE_FILE = Cache(f"{TAG}.json", exp=10_800)
 
-API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
+API_FILE = Cache(f"{TAG}-api.json", exp=28_800)
 
 API_MIRRORS = ["https://api.watchfooty.top", "https://api.watchfooty.st"]
 

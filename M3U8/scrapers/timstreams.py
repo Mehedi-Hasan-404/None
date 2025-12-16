@@ -12,7 +12,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "TIM"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+CACHE_FILE = Cache(f"{TAG}.json", exp=3_600)
 
 API_URL = "https://api.timstreams.site/main"
 

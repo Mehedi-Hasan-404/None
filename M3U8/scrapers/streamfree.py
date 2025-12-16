@@ -10,7 +10,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STRMFREE"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=19_800)
+CACHE_FILE = Cache(f"{TAG}.json", exp=19_800)
 
 BASE_URL = "https://streamfree.to/"
 

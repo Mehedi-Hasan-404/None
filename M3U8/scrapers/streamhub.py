@@ -14,9 +14,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STRMHUB"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+CACHE_FILE = Cache(f"{TAG}.json", exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=28_800)
+HTML_CACHE = Cache(f"{TAG}-html.json", exp=28_800)
 
 BASE_URL = "https://streamhub.pro/"
 

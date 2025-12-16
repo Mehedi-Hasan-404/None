@@ -11,9 +11,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STRMCNTR"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+CACHE_FILE = Cache(f"{TAG}.json", exp=10_800)
 
-API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
+API_FILE = Cache(f"{TAG}-api.json", exp=28_800)
 
 BASE_URL = "https://backendstreamcenter.youshop.pro:488/api/Parties"
 
@@ -68,7 +68,7 @@ async def get_events(
     events = []
 
     start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
+    end_dt = now.delta(minutes=10)
 
     for stream_group in api_data:
         category_id: int = stream_group.get("categoryId")
