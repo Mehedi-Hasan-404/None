@@ -82,8 +82,8 @@ async def get_events(
 
             streams: list[dict[str, str]] = ev["streams"]
 
-            for z, stream in enumerate(streams, start=1):
-                key = f"[{sport}] {name} {z} ({TAG})"
+            for stream in streams:
+                key = f"[{sport}] {name} ({TAG})"
 
                 if cached_keys & {key}:
                     continue

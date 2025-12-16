@@ -142,13 +142,12 @@ async def get_events(
     live = []
 
     start_ts = now.delta(hours=-1).timestamp()
-    end_ts = now.delta(minutes=5).timestamp()
 
     for k, v in events.items():
         if cached_keys & {k}:
             continue
 
-        if not start_ts <= v["event_ts"] <= end_ts:
+        if not start_ts <= v["event_ts"]:
             continue
 
         live.append({**v})
