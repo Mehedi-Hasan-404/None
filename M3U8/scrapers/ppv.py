@@ -11,9 +11,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "PPV"
 
-CACHE_FILE = Cache(f"{TAG}.json", exp=10_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-API_FILE = Cache(f"{TAG}-api.json", exp=19_800)
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
 
 API_MIRRORS = [
     "https://old.ppv.to/api/streams",

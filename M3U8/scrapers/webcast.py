@@ -13,9 +13,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "WEBCAST"
 
-CACHE_FILE = Cache(f"{TAG}.json", exp=10_800)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG}-html.json", exp=86_400)
+HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=86_400)
 
 BASE_URLS = {"NFL": "https://nflwebcast.com", "NHL": "https://slapstreams.com"}
 

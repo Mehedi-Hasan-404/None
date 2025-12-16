@@ -11,9 +11,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "LOTUS"
 
-CACHE_FILE = Cache(f"{TAG}.json", exp=5_400)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=5_400)
 
-API_CACHE = Cache(f"{TAG}-api.json", exp=28_800)
+API_CACHE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 BASE_URL = "https://lotusgamehd.xyz/api-event.php"
 
