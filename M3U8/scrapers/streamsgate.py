@@ -94,8 +94,7 @@ async def get_events(
 
     events = []
 
-    start_dt = now.delta(hours=-1)
-    end_dt = now.delta(minutes=10)
+    start_dt = now.delta(minutes=-30)
 
     for stream_group in api_data:
         event_ts = stream_group.get("ts")
@@ -109,7 +108,7 @@ async def get_events(
 
         event_dt = Time.from_ts(event_ts)
 
-        if not start_dt <= event_dt <= end_dt:
+        if not start_dt <= event_dt:
             continue
 
         event = get_event(t1, t2)

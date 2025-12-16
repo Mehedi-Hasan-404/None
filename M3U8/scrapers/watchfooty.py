@@ -177,8 +177,7 @@ async def get_events(
     events = []
 
     now = Time.clean(Time.now())
-    start_dt = now.delta(hours=-1)
-    end_dt = now.delta(minutes=10)
+    start_dt = now.delta(minutes=-30)
     pattern = re.compile(r"\-+|\(")
 
     for event in api_data:
@@ -196,7 +195,7 @@ async def get_events(
 
         event_dt = Time.from_ts(start_ts)
 
-        if not start_dt <= event_dt <= end_dt:
+        if not start_dt <= event_dt:
             continue
 
         sport = pattern.split(league, 1)[0].strip()
@@ -251,7 +250,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     if events:
         async with async_playwright() as p:
-            browser, context = await network.browser(p)
+            browser, context = await network.browser(p, browser="brave")
 
             for i, ev in enumerate(events, start=1):
                 handler = partial(
