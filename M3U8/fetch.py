@@ -11,13 +11,11 @@ from scrapers import (
     roxie,
     shark,
     sport9,
-    streambtw,
     streamcenter,
     streamfree,
     streamhub,
     streamsgate,
     strmd,
-    timstreams,
     tvpass,
     watchfooty,
     webcast,
@@ -56,13 +54,11 @@ async def main() -> None:
         asyncio.create_task(roxie.scrape(network.client)),
         asyncio.create_task(shark.scrape(network.client)),
         asyncio.create_task(sport9.scrape(network.client)),
-        # asyncio.create_task(streambtw.scrape(network.client)),
         asyncio.create_task(streamcenter.scrape(network.client)),
         asyncio.create_task(streamfree.scrape(network.client)),
         asyncio.create_task(streamhub.scrape(network.client)),
         asyncio.create_task(streamsgate.scrape(network.client)),
         asyncio.create_task(strmd.scrape(network.client)),
-        # asyncio.create_task(timstreams.scrape(network.client)),
         asyncio.create_task(tvpass.scrape(network.client)),
         asyncio.create_task(watchfooty.scrape(network.client)),
         asyncio.create_task(webcast.scrape(network.client)),
@@ -78,13 +74,11 @@ async def main() -> None:
         | roxie.urls
         | shark.urls
         | sport9.urls
-        | streambtw.urls
         | streamcenter.urls
         | strmd.urls
         | streamfree.urls
         | streamhub.urls
         | streamsgate.urls
-        | timstreams.urls
         | tvpass.urls
         | watchfooty.urls
         | webcast.urls

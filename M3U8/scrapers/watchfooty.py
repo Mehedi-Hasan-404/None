@@ -104,7 +104,7 @@ async def process_event(
             timeout=15_000,
         )
 
-        await page.wait_for_timeout(1_500)
+        await page.wait_for_timeout(2_000)
 
         try:
             header = await page.wait_for_selector(
@@ -178,6 +178,8 @@ async def get_events(
 
     now = Time.clean(Time.now())
     start_dt = now.delta(minutes=-30)
+    end_dt = now.delta(minutes=5)
+
     pattern = re.compile(r"\-+|\(")
 
     for event in api_data:
@@ -195,7 +197,7 @@ async def get_events(
 
         event_dt = Time.from_ts(start_ts)
 
-        if not start_dt <= event_dt:
+        if not start_dt <= event_dt <= end_dt:
             continue
 
         sport = pattern.split(league, 1)[0].strip()
