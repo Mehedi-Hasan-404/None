@@ -1,10 +1,26 @@
-## Base Log @ 2025-12-17 14:47 UTC
+## Base Log @ 2025-12-17 20:44 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 129<br>❌ Dead Streams: 17
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
+| CNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/CNBC/index.m3u8` |
+| Discovery Life | HTTP Error (404) | `https://fl1.moveonjoy.com/DISCOVERY_LIFE/index.m3u8` |
 | FDSN Florida | HTTP Error (403) | `http://tv14s.xyz:8080/A1Jay5/362586/46794` |
+| FYI TV | HTTP Error (404) | `http://fl1.moveonjoy.com/FYI/index.m3u8` |
+| Grit TV | HTTP Error (404) | `http://fl1.moveonjoy.com/GRIT_TV/index.m3u8` |
+| HBO 2 | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_2/index.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
+| HBO Zone | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_ZONE/index.m3u8` |
+| MLB Network | HTTP Error (404) | `https://fl1.moveonjoy.com/MLB_NETWORK/index.m3u8` |
+| NBA TV | HTTP Error (404) | `http://fl1.moveonjoy.com/NBA_TV/index.m3u8` |
+| National Geographic | HTTP Error (404) | `http://fl1.moveonjoy.com/National_Geographic/index.m3u8` |
+| Paramount Network | HTTP Error (404) | `https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8` |
+| Showtime | HTTP Error (404) | `http://fl1.moveonjoy.com/SHOWTIME/index.m3u8` |
+| Smithsonian Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/SMITHSONIAN_CHANNEL/index.m3u8` |
+| Tennis Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/TENNIS_CHANNEL/index.m3u8` |
 ---
 #### Base Channels URL
 ```
