@@ -32,7 +32,7 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
 
     events = {}
 
-    now = Time.now().timestamp()
+    now = Time.clean(Time.now()).timestamp()
 
     for streams in api_data.get("streams", {}).values():
         if not streams:

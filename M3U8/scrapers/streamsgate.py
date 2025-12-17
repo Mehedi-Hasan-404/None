@@ -153,7 +153,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     if events:
         async with async_playwright() as p:
-            browser, context = await network.browser(p)
+            browser, context = await network.browser(p, browser="brave")
 
             for i, ev in enumerate(events, start=1):
                 handler = partial(

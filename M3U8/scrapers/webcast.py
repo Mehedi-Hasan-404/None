@@ -35,7 +35,7 @@ async def refresh_html_cache(
 
         return {}
 
-    now = Time.now()
+    now = Time.clean(Time.now())
 
     soup = HTMLParser(r.content)
 

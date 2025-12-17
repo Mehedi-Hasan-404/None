@@ -111,7 +111,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        now = Time.now().timestamp()
+        now = Time.clean(Time.now()).timestamp()
 
         async with async_playwright() as p:
             browser, context = await network.browser(p)

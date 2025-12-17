@@ -28,7 +28,7 @@ async def get_data(client: httpx.AsyncClient) -> list[str]:
 
 
 async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | float]]:
-    now = Time.now().timestamp()
+    now = Time.clean(Time.now()).timestamp()
 
     events = {}
 

@@ -72,7 +72,7 @@ async def refresh_api_cache(
     for ev in data:
         ev["ts"] = ev.pop("timestamp")
 
-        data[-1]["timestamp"] = Time.now().timestamp()
+        data[-1]["timestamp"] = Time.clean(Time.now()).timestamp()
 
     return data
 
