@@ -1,19 +1,10 @@
-## Base Log @ 2025-12-16 21:06 UTC
+## Base Log @ 2025-12-17 03:41 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 10
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| A&E TV | HTTP Error (404) | `http://fl1.moveonjoy.com/ANE/index.m3u8` |
-| Animal Planet | HTTP Error (404) | `http://fl1.moveonjoy.com/Animal_Planet/index.m3u8` |
-| BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
-| Comedy TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
-| Cooking Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/COOKING_CHANNEL/index.m3u8` |
-| Crime & Investigation Network | HTTP Error (404) | `https://fl1.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
-| Discovery Life | HTTP Error (404) | `https://fl1.moveonjoy.com/DISCOVERY_LIFE/index.m3u8` |
 | FDSN Florida | HTTP Error (403) | `http://tv14s.xyz:8080/A1Jay5/362586/46794` |
-| Investigation Discovery | HTTP Error (404) | `https://fl1.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8` |
-| Oxygen | HTTP Error (404) | `https://fl1.moveonjoy.com/OXYGEN/index.m3u8` |
 ---
 #### Base Channels URL
 ```
