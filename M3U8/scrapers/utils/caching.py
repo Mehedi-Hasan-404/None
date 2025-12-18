@@ -7,7 +7,9 @@ from .config import Time
 class Cache:
     def __init__(self, file: str, exp: int | float) -> None:
         self.file = Path(__file__).parent.parent / "caches" / file
+
         self.exp = exp
+
         self.now_ts = Time.now().timestamp()
 
     def is_fresh(self, entry: dict) -> bool:

@@ -21,27 +21,33 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     if not (event_data := await network.request(url, log=log)):
         log.info(f"URL {url_num}) Failed to load url.")
+
         return
 
     soup = HTMLParser(event_data.content)
 
     if not (iframe := soup.css_first("iframe#wp_player")):
         log.warning(f"URL {url_num}) No iframe element found.")
+
         return
 
     if not (iframe_src := iframe.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe source found.")
+
         return
 
     if not (iframe_src_data := await network.request(iframe_src, log=log)):
         log.info(f"URL {url_num}) Failed to load iframe source.")
+
         return
 
     if not (match := pattern.search(iframe_src_data.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
+
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
+
     return base64.b64decode(match[1]).decode("utf-8")
 
 
@@ -98,7 +104,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
+
     cached_count = len(cached_urls)
+
     urls.update(cached_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
@@ -137,6 +145,7 @@ async def scrape() -> None:
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
+
     else:
         log.info("No new events found")
 

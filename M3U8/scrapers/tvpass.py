@@ -26,7 +26,9 @@ async def get_events() -> dict[str, dict[str, str | float]]:
     for i, line in enumerate(data, start=1):
         if line.startswith("#EXTINF"):
             tvg_id_match = re.search(r'tvg-id="([^"]*)"', line)
+
             tvg_name_match = re.search(r'tvg-name="([^"]*)"', line)
+
             group_title_match = re.search(r'group-title="([^"]*)"', line)
 
             tvg = tvg_id_match[1] if tvg_id_match else None
@@ -57,7 +59,9 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 async def scrape() -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
+
         log.info(f"Loaded {len(urls)} event(s) from cache")
+
         return
 
     log.info(f'Scraping from "{BASE_URL}"')

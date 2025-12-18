@@ -22,9 +22,13 @@ COLORS = {
 class ColorFormatter(logging.Formatter):
     def format(self, record) -> str:
         color = COLORS.get(record.levelname, COLORS["reset"])
+
         levelname = record.levelname
+
         record.levelname = f"{color}{levelname:<8}{COLORS['reset']}"
+
         formatted = super().format(record)
+
         record.levelname = levelname
 
         return formatted
@@ -38,10 +42,15 @@ def get_logger(name: str | None = None) -> logging.Logger:
 
     if not logger.hasHandlers():
         handler = logging.StreamHandler()
+
         formatter = ColorFormatter(LOG_FMT, datefmt="%Y-%m-%d | %H:%M:%S")
+
         handler.setFormatter(formatter)
+
         logger.addHandler(handler)
+
         logger.setLevel(logging.INFO)
+
         logger.propagate = False
 
     return logger

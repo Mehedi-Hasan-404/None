@@ -45,11 +45,13 @@ class Time(datetime):
 
     def to_tz(self, tzone: str) -> "Time":
         dt = self.astimezone(self.ZONES[tzone])
+
         return self.__class__.fromtimestamp(dt.timestamp(), tz=self.ZONES[tzone])
 
     @classmethod
     def _to_class_tz(cls, dt) -> "Time":
         dt = dt.astimezone(cls.TZ)
+
         return cls.fromtimestamp(dt.timestamp(), tz=cls.TZ)
 
     @classmethod

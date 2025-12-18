@@ -55,7 +55,9 @@ async def get_events() -> dict[str, dict[str, str | float]]:
             continue
 
         event_name = event["match_name"]
+
         channel_info: dict[str, str] = event["channel"]
+
         category: dict[str, str] = channel_info["TVCategory"]
 
         sport = category["name"]
@@ -82,7 +84,9 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 async def scrape() -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
+
         log.info(f"Loaded {len(urls)} event(s) from cache")
+
         return
 
     log.info(f'Scraping from "{BASE_URL}"')

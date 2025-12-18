@@ -104,12 +104,14 @@ async def process_event(
             text = await header.inner_text()
         except TimeoutError:
             log.warning(f"URL {url_num}) Can't find stream links header.")
+
             return
 
         match = re.search(r"\((\d+)\)", text)
 
         if not match or int(match[1]) == 0:
             log.warning(f"URL {url_num}) No available stream links.")
+
             return
 
         first_available = await page.wait_for_selector(
@@ -124,6 +126,7 @@ async def process_event(
             await asyncio.wait_for(wait_task, timeout=6)
         except asyncio.TimeoutError:
             log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
+
             return
 
         finally:
@@ -137,17 +140,21 @@ async def process_event(
 
         if captured:
             log.info(f"URL {url_num}) Captured M3U8")
+
             return captured[-1]
 
         log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
+
         return
 
     except Exception as e:
         log.warning(f"URL {url_num}) Exception while processing: {e}")
+
         return
 
     finally:
         page.remove_listener("request", handler)
+
         await page.close()
 
 
@@ -213,8 +220,11 @@ async def get_events(
 
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
+
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+
     valid_count = cached_count = len(valid_urls)
+
     urls.update(valid_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
@@ -225,7 +235,9 @@ async def scrape() -> None:
 
     if not (base_url and api_url):
         log.warning("No working Watch Footy mirrors")
+
         CACHE_FILE.write(cached_urls)
+
         return
 
     log.info(f'Scraping from "{base_url}"')
@@ -287,6 +299,7 @@ async def scrape() -> None:
 
     if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
+
     else:
         log.info("No new events found")
 

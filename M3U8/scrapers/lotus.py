@@ -72,7 +72,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
+
     cached_count = len(cached_urls)
+
     urls.update(cached_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
@@ -129,6 +131,7 @@ async def scrape() -> None:
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
+
     else:
         log.info("No new events found")
 

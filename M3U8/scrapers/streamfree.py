@@ -70,7 +70,9 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 async def scrape() -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
+
         log.info(f"Loaded {len(urls)} event(s) from cache")
+
         return
 
     log.info(f'Scraping from "{BASE_URL}"')

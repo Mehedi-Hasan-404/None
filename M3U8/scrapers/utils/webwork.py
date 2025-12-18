@@ -12,6 +12,8 @@ from playwright.async_api import Browser, BrowserContext, Playwright, Request
 
 from .logger import get_logger
 
+logger = get_logger(__name__)
+
 T = TypeVar("T")
 
 
@@ -31,8 +33,6 @@ class Network:
             headers={"User-Agent": Network.UA},
             http2=True,
         )
-
-        self._logger = get_logger("network")
 
     @staticmethod
     def build_proxy_url(
@@ -58,16 +58,18 @@ class Network:
         **kwargs,
     ) -> httpx.Response | None:
 
-        log = log or self._logger
+        log = log or logger
 
         try:
             r = await self.client.get(url, **kwargs)
-            r.raise_for_status()
-        except Exception as e:
-            log.error(f'Failed to fetch "{url}": {e}\n{kwargs = }')
-            return ""
 
-        return r
+            r.raise_for_status()
+
+            return r
+        except (httpx.HTTPError, httpx.TimeoutException) as e:
+            log.error(f'Failed to fetch "{url}": {e}')
+
+            return ""
 
     async def get_base(self, mirrors: list[str]) -> str | None:
         random.shuffle(mirrors)
@@ -89,7 +91,7 @@ class Network:
         log: logging.Logger | None = None,
     ) -> T | None:
 
-        log = log or get_logger("network")
+        log = log or logger
 
         task = asyncio.create_task(fn())
 
@@ -104,13 +106,15 @@ class Network:
                 await task
             except asyncio.CancelledError:
                 pass
+
             except Exception as e:
                 log.debug(f"URL {url_num}) Ignore exception after timeout: {e}")
 
-            return None
+            return
         except Exception as e:
             log.error(f"URL {url_num}) Unexpected error: {e}")
-            return None
+
+            return
 
     @staticmethod
     def capture_req(
@@ -141,7 +145,7 @@ class Network:
         log: logging.Logger | None = None,
     ) -> str | None:
 
-        log = log or self._logger
+        log = log or logger
 
         page = await context.new_page()
 
@@ -170,6 +174,7 @@ class Network:
                 await asyncio.wait_for(wait_task, timeout=timeout)
             except asyncio.TimeoutError:
                 log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
+
                 return
 
             finally:
@@ -183,17 +188,21 @@ class Network:
 
             if captured:
                 log.info(f"URL {url_num}) Captured M3U8")
+
                 return captured[0]
 
             log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
+
             return
 
         except Exception as e:
             log.warning(f"URL {url_num}) Exception while processing: {e}")
+
             return
 
         finally:
             page.remove_listener("request", handler)
+
             await page.close()
 
     @staticmethod
@@ -205,7 +214,9 @@ class Network:
 
         if browser == "brave":
             brwsr = await playwright.chromium.connect_over_cdp("http://localhost:9222")
+
             context = brwsr.contexts[0]
+
         else:
             brwsr = await playwright.firefox.launch(headless=True)
 

@@ -21,15 +21,18 @@ BASE_URL = "https://sharkstreams.net"
 async def process_event(url: str, url_num: int) -> str | None:
     if not (r := await network.request(url, log=log)):
         log.info(f"URL {url_num}) Failed to load url.")
+
         return
 
     data: dict[str, list[str]] = r.json()
 
     if not (urls := data.get("urls")):
         log.info(f"URL {url_num}) No M3U8 found")
+
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
+
     return urls[0]
 
 
@@ -47,6 +50,7 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
 
     for row in soup.css(".row"):
         date_node = row.css_first(".ch-date")
+
         sport_node = row.css_first(".ch-category")
         name_node = row.css_first(".ch-name")
 
@@ -54,7 +58,9 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
             continue
 
         event_dt = Time.from_str(date_node.text(strip=True), timezone="EST")
+
         sport = sport_node.text(strip=True)
+
         event_name = name_node.text(strip=True)
 
         embed_btn = row.css_first("a.hd-link.secondary")
@@ -107,7 +113,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
+
     cached_count = len(cached_urls)
+
     urls.update(cached_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
@@ -157,6 +165,7 @@ async def scrape() -> None:
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
+
     else:
         log.info("No new events found")
 

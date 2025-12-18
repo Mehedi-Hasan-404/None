@@ -20,6 +20,7 @@ BASE_URL = "http://www.fawanews.sc/"
 async def process_event(url: str, url_num: int) -> str | None:
     if not (html_data := await network.request(url, log=log)):
         log.info(f"URL {url_num}) Failed to load url.")
+
         return
 
     valid_m3u8 = re.compile(
@@ -29,9 +30,11 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     if not (match := valid_m3u8.search(html_data.text)):
         log.info(f"URL {url_num}) No M3U8 found")
+
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
+
     return match[2]
 
 
@@ -83,8 +86,11 @@ async def get_events(cached_hrefs: set[str]) -> list[dict[str, str]]:
 
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
+
     cached_hrefs = {entry["href"] for entry in cached_urls.values()}
+
     cached_count = len(cached_urls)
+
     urls.update(cached_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
@@ -137,6 +143,7 @@ async def scrape() -> None:
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
+
     else:
         log.info("No new events found")
 

@@ -39,6 +39,7 @@ async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str
         API_FILE.write(api_data)
 
     now = Time.clean(Time.now())
+
     start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=30)
 
@@ -50,8 +51,11 @@ async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str
 
         for event in stream_group.get("streams", []):
             name = event.get("name")
+
             start_ts = event.get("starts_at")
+
             logo = event.get("poster")
+
             iframe = event.get("iframe")
 
             if not (name and start_ts and iframe):
@@ -80,7 +84,9 @@ async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str
 
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
+
     cached_count = len(cached_urls)
+
     urls.update(cached_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
@@ -148,6 +154,7 @@ async def scrape() -> None:
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
+
     else:
         log.info("No new events found")
 
