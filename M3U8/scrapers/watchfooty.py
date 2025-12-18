@@ -19,11 +19,15 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
 API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
-API_MIRRORS = ["https://api.watchfooty.top", "https://api.watchfooty.st"]
+API_URL = "https://api.watchfooty.st"
 
-BASE_MIRRORS = ["https://www.watchfooty.top", "https://www.watchfooty.st"]
+BASE_MIRRORS = [
+    "https://www.watchfooty.top",
+    "https://www.watchfooty.st",
+    "https://www.watchfooty.su",
+]
 
-SPORT_ENDPOINTS = [
+VALID_SPORTS = [
     "american-football",
     # "australian-football",
     # "baseball",
@@ -41,27 +45,27 @@ SPORT_ENDPOINTS = [
 ]
 
 
-async def refresh_api_cache(url: str, now_ts: float) -> list[dict[str, Any]]:
+async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
     log.info("Refreshing API cache")
 
     tasks = [
         network.request(
-            urljoin(url, f"api/v1/matches/{sport}"),
+            urljoin(API_URL, "api/v1/matches/all"),
             log=log,
-            timeout=5,
+            params={"date": d.date()},
         )
-        for sport in SPORT_ENDPOINTS
+        for d in [now, now.delta(days=1)]
     ]
 
     results = await asyncio.gather(*tasks)
 
-    if not (data := list(chain.from_iterable(r.json() for r in results if r))):
+    if not (data := [*chain.from_iterable(r.json() for r in results if r)]):
         return []
 
     for ev in data:
         ev["ts"] = ev.pop("timestamp")
 
-        data[-1]["timestamp"] = now_ts
+        data[-1]["timestamp"] = now.timestamp()
 
     return data
 
@@ -158,16 +162,11 @@ async def process_event(
         await page.close()
 
 
-async def get_events(
-    base_url: str,
-    api_url: str,
-    cached_keys: list[str],
-) -> list[dict[str, str]]:
-
+async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        api_data = await refresh_api_cache(api_url, now.timestamp())
+        api_data = await refresh_api_cache(now)
 
         API_FILE.write(api_data)
 
@@ -188,6 +187,9 @@ async def get_events(
         if not (match_id and name and league):
             continue
 
+        if event["sport"] not in VALID_SPORTS:
+            continue
+
         sport = pattern.split(league, 1)[0].strip()
 
         if f"[{sport}] {name} ({TAG})" in cached_keys:
@@ -203,7 +205,7 @@ async def get_events(
         if not start_dt <= event_dt <= end_dt:
             continue
 
-        logo = urljoin(api_url, poster) if (poster := event.get("poster")) else None
+        logo = urljoin(API_URL, poster) if (poster := event.get("poster")) else None
 
         events.append(
             {
@@ -229,11 +231,7 @@ async def scrape() -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    base_url = await network.get_base(BASE_MIRRORS)
-
-    api_url = await network.get_base(API_MIRRORS)
-
-    if not (base_url and api_url):
+    if not (base_url := await network.get_base(BASE_MIRRORS)):
         log.warning("No working Watch Footy mirrors")
 
         CACHE_FILE.write(cached_urls)
@@ -242,11 +240,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{base_url}"')
 
-    events = await get_events(
-        base_url,
-        api_url,
-        cached_urls.keys(),
-    )
+    events = await get_events(base_url, cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

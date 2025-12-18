@@ -25,7 +25,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         network.request(
             BASE_URL,
             log=log,
-            params={"date": f"{d.date()}"},
+            params={"date": d.date()},
         )
         for d in [
             now.delta(days=-1),

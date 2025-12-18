@@ -19,7 +19,6 @@ HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=28_800)
 
 BASE_URL = "https://streamhub.pro/"
 
-
 CATEGORIES = {
     "Soccer": "sport_68c02a4464a38",
     "American Football": "sport_68c02a4465113",

@@ -16,7 +16,6 @@ API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 BASE_URL = "https://backendstreamcenter.youshop.pro:488/api/Parties"
 
-
 CATEGORIES = {
     4: "Basketball",
     9: "Football",

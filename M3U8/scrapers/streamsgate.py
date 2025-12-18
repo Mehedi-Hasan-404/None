@@ -58,7 +58,7 @@ async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
 
     results = await asyncio.gather(*tasks)
 
-    if not (data := list(chain.from_iterable(r.json() for r in results if r))):
+    if not (data := [*chain.from_iterable(r.json() for r in results if r)]):
         return []
 
     for ev in data:
@@ -94,10 +94,10 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not (event_ts and sport):
             continue
 
-        if f"[{sport}] {event} ({TAG})" in cached_keys:
+        if "F1 Abu Dhabi" in event:  # api bug
             continue
 
-        if "F1 Abu Dhabi" in event:  # api bug
+        if f"[{sport}] {event} ({TAG})" in cached_keys:
             continue
 
         event_dt = Time.from_ts(event_ts)
