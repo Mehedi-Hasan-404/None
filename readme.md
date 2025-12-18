@@ -1,10 +1,11 @@
-## Base Log @ 2025-12-18 14:46 UTC
+## Base Log @ 2025-12-18 20:40 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | ESPN U | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10255` |
+| ION TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/9297` |
 ---
 #### Base Channels URL
 ```
