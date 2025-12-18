@@ -5,6 +5,7 @@ from pathlib import Path
 
 from scrapers import (
     fawa,
+    istreameast,
     lotus,
     pixel,
     ppv,
@@ -48,6 +49,7 @@ async def main() -> None:
 
     tasks = [
         asyncio.create_task(fawa.scrape(network.client)),
+        asyncio.create_task(istreameast.scrape(network.client)),
         asyncio.create_task(lotus.scrape(network.client)),
         asyncio.create_task(pixel.scrape()),
         asyncio.create_task(ppv.scrape(network.client)),
@@ -68,6 +70,7 @@ async def main() -> None:
 
     additions = (
         fawa.urls
+        | istreameast.urls
         | lotus.urls
         | pixel.urls
         | ppv.urls
