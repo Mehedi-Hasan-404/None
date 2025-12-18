@@ -48,22 +48,22 @@ async def main() -> None:
     base_m3u8, tvg_chno = load_base()
 
     tasks = [
-        asyncio.create_task(fawa.scrape(network.client)),
-        asyncio.create_task(istreameast.scrape(network.client)),
-        asyncio.create_task(lotus.scrape(network.client)),
+        asyncio.create_task(fawa.scrape()),
+        asyncio.create_task(istreameast.scrape()),
+        asyncio.create_task(lotus.scrape()),
         asyncio.create_task(pixel.scrape()),
-        asyncio.create_task(ppv.scrape(network.client)),
-        asyncio.create_task(roxie.scrape(network.client)),
-        asyncio.create_task(shark.scrape(network.client)),
-        asyncio.create_task(sport9.scrape(network.client)),
-        asyncio.create_task(streamcenter.scrape(network.client)),
-        asyncio.create_task(streamfree.scrape(network.client)),
-        asyncio.create_task(streamhub.scrape(network.client)),
-        asyncio.create_task(streamsgate.scrape(network.client)),
-        asyncio.create_task(strmd.scrape(network.client)),
-        asyncio.create_task(tvpass.scrape(network.client)),
-        asyncio.create_task(watchfooty.scrape(network.client)),
-        asyncio.create_task(webcast.scrape(network.client)),
+        asyncio.create_task(ppv.scrape()),
+        asyncio.create_task(roxie.scrape()),
+        asyncio.create_task(shark.scrape()),
+        asyncio.create_task(sport9.scrape()),
+        asyncio.create_task(streamcenter.scrape()),
+        asyncio.create_task(streamfree.scrape()),
+        asyncio.create_task(streamhub.scrape()),
+        asyncio.create_task(streamsgate.scrape()),
+        asyncio.create_task(strmd.scrape()),
+        asyncio.create_task(tvpass.scrape()),
+        asyncio.create_task(watchfooty.scrape()),
+        asyncio.create_task(webcast.scrape()),
     ]
 
     await asyncio.gather(*tasks)

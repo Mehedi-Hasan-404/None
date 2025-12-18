@@ -1,8 +1,6 @@
 import re
 
-import httpx
-
-from .utils import Cache, Time, get_logger, leagues
+from .utils import Cache, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -15,24 +13,15 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=86_400)
 BASE_URL = "https://tvpass.org/playlist/m3u"
 
 
-async def get_data(client: httpx.AsyncClient) -> list[str]:
-    try:
-        r = await client.get(BASE_URL)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{BASE_URL}": {e}')
-
-        return []
-
-    return r.text.splitlines()
-
-
-async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | float]]:
-    now = Time.clean(Time.now()).timestamp()
-
+async def get_events() -> dict[str, dict[str, str | float]]:
     events = {}
 
-    data = await get_data(client)
+    if not (r := await network.request(BASE_URL, log=log)):
+        return events
+
+    now = Time.clean(Time.now())
+
+    data = r.text.splitlines()
 
     for i, line in enumerate(data, start=1):
         if line.startswith("#EXTINF"):
@@ -59,13 +48,13 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
                         "logo": logo,
                         "id": tvg_id or "Live.Event.us",
                         "base": "https://tvpass.org",
-                        "timestamp": now,
+                        "timestamp": now.timestamp(),
                     }
 
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
         log.info(f"Loaded {len(urls)} event(s) from cache")
@@ -73,9 +62,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client)
-
-    urls.update(events)
+    urls.update(await get_events())
 
     CACHE_FILE.write(urls)
 

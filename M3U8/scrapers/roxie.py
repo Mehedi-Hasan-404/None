@@ -3,7 +3,6 @@ import re
 from functools import partial
 from urllib.parse import urljoin
 
-import httpx
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -31,17 +30,8 @@ SPORT_ENDPOINTS = {
 }
 
 
-async def process_event(
-    client: httpx.AsyncClient,
-    url: str,
-    url_num: int,
-) -> str | None:
-
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'URL {url_num}) Failed to fetch "{url}": {e}')
+async def process_event(url: str, url_num: int) -> str | None:
+    if not (html_data := await network.request(url, log=log)):
         return
 
     valid_m3u8 = re.compile(
@@ -49,7 +39,7 @@ async def process_event(
         re.IGNORECASE,
     )
 
-    if not (match := valid_m3u8.search(r.text)):
+    if not (match := valid_m3u8.search(html_data.text)):
         log.info(f"URL {url_num}) No M3U8 found")
         return
 
@@ -57,30 +47,18 @@ async def process_event(
     return match[1]
 
 
-async def get_html_data(client: httpx.AsyncClient, url: str) -> bytes:
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
-
-        return b""
-
-    return r.content
-
-
 async def refresh_html_cache(
-    client: httpx.AsyncClient,
     url: str,
     sport: str,
     now_ts: float,
 ) -> dict[str, dict[str, str | float]]:
 
-    html_data = await get_html_data(client, url)
-
-    soup = HTMLParser(html_data)
-
     events = {}
+
+    if not (html_data := await network.request(url, log=log)):
+        return events
+
+    soup = HTMLParser(html_data.content)
 
     for row in soup.css("table#eventsTable tbody tr"):
         if not (a_tag := row.css_first("td a")):
@@ -113,9 +91,7 @@ async def refresh_html_cache(
     return events
 
 
-async def get_events(
-    client: httpx.AsyncClient, cached_keys: set[str]
-) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
@@ -125,7 +101,6 @@ async def get_events(
 
         tasks = [
             refresh_html_cache(
-                client,
                 url,
                 sport,
                 now.timestamp(),
@@ -145,7 +120,7 @@ async def get_events(
     end_ts = now.delta(minutes=30).timestamp()
 
     for k, v in events.items():
-        if cached_keys & {k}:
+        if k in cached_keys:
             continue
 
         if not start_ts <= v["event_ts"] <= end_ts:
@@ -156,7 +131,7 @@ async def get_events(
     return live
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -165,7 +140,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 
@@ -173,7 +148,6 @@ async def scrape(client: httpx.AsyncClient) -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                client=client,
                 url=ev["link"],
                 url_num=i,
             )

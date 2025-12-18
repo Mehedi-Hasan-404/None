@@ -1,6 +1,5 @@
 from functools import partial
 
-import httpx
 from playwright.async_api import async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -22,40 +21,16 @@ def fix_league(s: str) -> str:
     return " ".join(x.capitalize() for x in s.split()) if len(s) > 5 else s.upper()
 
 
-async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    url: str,
-    now_ts: float,
-) -> dict[str, dict[str, str]]:
-    log.info("Refreshing API cache")
-
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
-
-        return {}
-
-    if not (data := r.json()):
-        return {}
-
-    data["timestamp"] = now_ts
-
-    return data
-
-
-async def get_events(
-    client: httpx.AsyncClient, cached_keys: set[str]
-) -> list[dict[str, str]]:
-    now = Time.now()
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+    now = Time.clean(Time.now())
 
     if not (api_data := API_CACHE.load(per_entry=False)):
-        api_data = await refresh_api_cache(
-            client,
-            BASE_URL,
-            now.timestamp(),
-        )
+        api_data = {}
+
+        if r := await network.request(BASE_URL, log=log):
+            api_data: dict = r.json()
+
+            api_data["timestamp"] = now.timestamp()
 
         API_CACHE.write(api_data)
 
@@ -68,9 +43,14 @@ async def get_events(
             continue
 
         for event in info["items"]:
-            event_league = event["league"]
+            if (event_league := event["league"]) == "channel tv":
+                continue
 
-            if event_league == "channel tv":
+            sport = fix_league(event_league)
+
+            event_name = event["title"]
+
+            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
                 continue
 
             event_streams: list[dict[str, str]] = event["streams"]
@@ -78,26 +58,19 @@ async def get_events(
             if not (event_link := event_streams[0].get("link")):
                 continue
 
-            sport = fix_league(event_league)
-            event_name = event["title"]
-
-            key = f"[{sport}] {event_name} ({TAG})"
-
-            if cached_keys & {key}:
-                continue
-
             events.append(
                 {
                     "sport": sport,
                     "event": event_name,
                     "link": event_link,
+                    "timestamp": now.timestamp(),
                 }
             )
 
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -106,13 +79,11 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        now = Time.clean(Time.now()).timestamp()
-
         async with async_playwright() as p:
             browser, context = await network.browser(p)
 
@@ -132,10 +103,11 @@ async def scrape(client: httpx.AsyncClient) -> None:
                 )
 
                 if url:
-                    sport, event, link = (
+                    sport, event, link, ts = (
                         ev["sport"],
                         ev["event"],
                         ev["link"],
+                        ev["timestamp"],
                     )
 
                     tvg_id, logo = leagues.get_tvg_info(sport, event)
@@ -146,7 +118,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
                         "url": url,
                         "logo": logo,
                         "base": "https://vividmosaica.com/",
-                        "timestamp": now,
+                        "timestamp": ts,
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
                     }

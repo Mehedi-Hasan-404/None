@@ -5,7 +5,6 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-import httpx
 from playwright.async_api import BrowserContext, async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -42,37 +41,27 @@ SPORT_ENDPOINTS = [
 ]
 
 
-async def get_api_data(client: httpx.AsyncClient, url: str) -> list[dict[str, Any]]:
-    try:
-        r = await client.get(url, timeout=5)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
-
-        return []
-
-    return r.json()
-
-
-async def refresh_api_cache(
-    client: httpx.AsyncClient, url: str
-) -> list[dict[str, Any]]:
+async def refresh_api_cache(url: str, now_ts: float) -> list[dict[str, Any]]:
     log.info("Refreshing API cache")
 
     tasks = [
-        get_api_data(client, urljoin(url, f"api/v1/matches/{sport}"))
+        network.request(
+            urljoin(url, f"api/v1/matches/{sport}"),
+            log=log,
+            timeout=5,
+        )
         for sport in SPORT_ENDPOINTS
     ]
 
     results = await asyncio.gather(*tasks)
 
-    if not (data := list(chain(*results))):
+    if not (data := list(chain.from_iterable(r.json() for r in results if r))):
         return []
 
     for ev in data:
         ev["ts"] = ev.pop("timestamp")
 
-        data[-1]["timestamp"] = Time.clean(Time.now()).timestamp()
+        data[-1]["timestamp"] = now_ts
 
     return data
 
@@ -163,31 +152,38 @@ async def process_event(
 
 
 async def get_events(
-    client: httpx.AsyncClient,
-    api_url: str,
     base_url: str,
-    cached_keys: set[str],
+    api_url: str,
+    cached_keys: list[str],
 ) -> list[dict[str, str]]:
 
+    now = Time.clean(Time.now())
+
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        api_data = await refresh_api_cache(client, api_url)
+        api_data = await refresh_api_cache(api_url, now.timestamp())
 
         API_FILE.write(api_data)
 
     events = []
 
-    now = Time.clean(Time.now())
+    pattern = re.compile(r"\-+|\(")
+
     start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=5)
 
-    pattern = re.compile(r"\-+|\(")
-
     for event in api_data:
         match_id = event.get("matchId")
+
         name = event.get("title")
+
         league = event.get("league")
 
         if not (match_id and name and league):
+            continue
+
+        sport = pattern.split(league, 1)[0].strip()
+
+        if f"[{sport}] {name} ({TAG})" in cached_keys:
             continue
 
         if not (ts := event.get("ts")):
@@ -200,14 +196,7 @@ async def get_events(
         if not start_dt <= event_dt <= end_dt:
             continue
 
-        sport = pattern.split(league, 1)[0].strip()
-
         logo = urljoin(api_url, poster) if (poster := event.get("poster")) else None
-
-        key = f"[{sport}] {name} ({TAG})"
-
-        if cached_keys & {key}:
-            continue
 
         events.append(
             {
@@ -222,7 +211,7 @@ async def get_events(
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
     valid_count = cached_count = len(valid_urls)
@@ -242,10 +231,9 @@ async def scrape(client: httpx.AsyncClient) -> None:
     log.info(f'Scraping from "{base_url}"')
 
     events = await get_events(
-        client,
-        api_url,
         base_url,
-        set(cached_urls.keys()),
+        api_url,
+        cached_urls.keys(),
     )
 
     log.info(f"Processing {len(events)} new URL(s)")

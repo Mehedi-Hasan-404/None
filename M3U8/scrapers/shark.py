@@ -1,7 +1,6 @@
 import re
 from functools import partial
 
-import httpx
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -19,49 +18,32 @@ HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=19_800)
 BASE_URL = "https://sharkstreams.net"
 
 
-async def process_event(
-    client: httpx.AsyncClient,
-    url: str,
-    url_num: int,
-) -> str | None:
-
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'URL {url_num}) Failed to fetch "{url}": {e}')
+async def process_event(url: str, url_num: int) -> str | None:
+    if not (r := await network.request(url, log=log)):
+        log.info(f"URL {url_num}) Failed to load url.")
         return
 
     data: dict[str, list[str]] = r.json()
 
-    if not data.get("urls"):
+    if not (urls := data.get("urls")):
         log.info(f"URL {url_num}) No M3U8 found")
-
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
+    return urls[0]
 
-    return data["urls"][0]
 
-
-async def refresh_html_cache(
-    client: httpx.AsyncClient, now_ts: float
-) -> dict[str, dict[str, str | float]]:
+async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
     log.info("Refreshing HTML cache")
 
-    try:
-        r = await client.get(BASE_URL)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{BASE_URL}": {e}')
+    events = {}
 
-        return {}
+    if not (html_data := await network.request(BASE_URL, log=log)):
+        return events
 
     pattern = re.compile(r"openEmbed\('([^']+)'\)", re.IGNORECASE)
 
-    soup = HTMLParser(r.content)
-
-    events = {}
+    soup = HTMLParser(html_data.content)
 
     for row in soup.css(".row"):
         date_node = row.css_first(".ch-date")
@@ -98,14 +80,11 @@ async def refresh_html_cache(
     return events
 
 
-async def get_events(
-    client: httpx.AsyncClient,
-    cached_keys: set[str],
-) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
-        events = await refresh_html_cache(client, now.timestamp())
+        events = await refresh_html_cache(now.timestamp())
 
         HTML_CACHE.write(events)
 
@@ -115,7 +94,7 @@ async def get_events(
     end_ts = now.delta(minutes=10).timestamp()
 
     for k, v in events.items():
-        if cached_keys & {k}:
+        if k in cached_keys:
             continue
 
         if not start_ts <= v["event_ts"] <= end_ts:
@@ -126,7 +105,7 @@ async def get_events(
     return live
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -135,7 +114,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 
@@ -143,7 +122,6 @@ async def scrape(client: httpx.AsyncClient) -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                client=client,
                 url=ev["link"],
                 url_num=i,
             )

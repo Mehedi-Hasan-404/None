@@ -1,6 +1,5 @@
 from functools import partial
 
-import httpx
 from playwright.async_api import async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -28,34 +27,16 @@ BASE_MIRRORS = [
 ]
 
 
-async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    url: str,
-) -> dict[str, dict[str, str]]:
-    log.info("Refreshing API cache")
+async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str]]:
+    events = []
 
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
-
-        return {}
-
-    return r.json()
-
-
-async def get_events(
-    client: httpx.AsyncClient,
-    api_url: str,
-    cached_keys: set[str],
-) -> list[dict[str, str]]:
     if not (api_data := API_FILE.load(per_entry=False)):
-        api_data = await refresh_api_cache(client, api_url)
+        api_data = {}
+
+        if r := await network.request(api_url, log=log):
+            api_data: dict = r.json()
 
         API_FILE.write(api_data)
-
-    events = []
 
     now = Time.clean(Time.now())
     start_dt = now.delta(minutes=-30)
@@ -76,9 +57,7 @@ async def get_events(
             if not (name and start_ts and iframe):
                 continue
 
-            key = f"[{sport}] {name} ({TAG})"
-
-            if cached_keys & {key}:
+            if f"[{sport}] {name} ({TAG})" in cached_keys:
                 continue
 
             event_dt = Time.from_ts(start_ts)
@@ -99,7 +78,7 @@ async def get_events(
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -117,11 +96,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{base_url}"')
 
-    events = await get_events(
-        client,
-        api_url,
-        set(cached_urls.keys()),
-    )
+    events = await get_events(api_url, cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

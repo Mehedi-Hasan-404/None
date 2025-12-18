@@ -1,6 +1,5 @@
 from functools import partial
 
-import httpx
 from playwright.async_api import async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -33,35 +32,20 @@ CATEGORIES = {
 }
 
 
-async def refresh_api_cache(
-    client: httpx.AsyncClient, now_ts: float
-) -> list[dict[str, str | int]]:
-    log.info("Refreshing API cache")
-
-    try:
-        r = await client.get(BASE_URL, params={"pageNumber": 1, "pageSize": 500})
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{r.url}": {e}')
-
-        return []
-
-    if not (data := r.json()):
-        return []
-
-    data[-1]["timestamp"] = now_ts
-
-    return data
-
-
-async def get_events(
-    client: httpx.AsyncClient,
-    cached_keys: set[str],
-) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        api_data = await refresh_api_cache(client, now.timestamp())
+        api_data = []
+
+        if r := await network.request(
+            BASE_URL,
+            log=log,
+            params={"pageNumber": 1, "pageSize": 500},
+        ):
+            api_data: list[dict] = r.json()
+
+            api_data[-1]["timestamp"] = now.timestamp()
 
         API_FILE.write(api_data)
 
@@ -82,17 +66,15 @@ async def get_events(
         if not (name and category_id and iframe and event_time):
             continue
 
-        event_dt = Time.from_str(event_time, timezone="CET")
-
-        if not start_dt <= event_dt <= end_dt:
-            continue
-
         if not (sport := CATEGORIES.get(category_id)):
             continue
 
-        key = f"[{sport}] {name} ({TAG})"
+        if f"[{sport}] {name} ({TAG})" in cached_keys:
+            continue
 
-        if cached_keys & {key}:
+        event_dt = Time.from_str(event_time, timezone="CET")
+
+        if not start_dt <= event_dt <= end_dt:
             continue
 
         events.append(
@@ -107,7 +89,7 @@ async def get_events(
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -116,7 +98,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info('Scraping from "https://streamcenter.xyz"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

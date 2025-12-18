@@ -1,7 +1,5 @@
 from urllib.parse import urljoin
 
-import httpx
-
 from .utils import Cache, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
@@ -15,24 +13,20 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=19_800)
 BASE_URL = "https://streamfree.to/"
 
 
-async def refresh_api_cache(client: httpx.AsyncClient) -> dict[str, dict[str, list]]:
-    try:
-        r = await client.get(urljoin(BASE_URL, "streams"))
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{r.url}": {e}')
-
-        return {}
-
-    return r.json()
-
-
-async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | float]]:
-    api_data = await refresh_api_cache(client)
-
+async def get_events() -> dict[str, dict[str, str | float]]:
     events = {}
 
-    now = Time.clean(Time.now()).timestamp()
+    if not (
+        r := await network.request(
+            urljoin(BASE_URL, "streams"),
+            log=log,
+        )
+    ):
+        return events
+
+    api_data: dict = r.json()
+
+    now = Time.clean(Time.now())
 
     for streams in api_data.get("streams", {}).values():
         if not streams:
@@ -66,14 +60,14 @@ async def get_events(client: httpx.AsyncClient) -> dict[str, dict[str, str | flo
                 ),
                 "logo": logo or pic,
                 "base": BASE_URL,
-                "timestamp": now,
+                "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
             }
 
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
         log.info(f"Loaded {len(urls)} event(s) from cache")
@@ -81,9 +75,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client)
-
-    urls.update(events)
+    urls.update(await get_events())
 
     CACHE_FILE.write(urls)
 

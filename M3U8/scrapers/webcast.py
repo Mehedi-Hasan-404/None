@@ -1,7 +1,6 @@
 import asyncio
 from functools import partial
 
-import httpx
 from playwright.async_api import async_playwright
 from selectolax.parser import HTMLParser
 
@@ -24,22 +23,15 @@ def fix_event(s: str) -> str:
     return " vs ".join(s.split("@"))
 
 
-async def refresh_html_cache(
-    client: httpx.AsyncClient, url: str
-) -> dict[str, dict[str, str | float]]:
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
+async def refresh_html_cache(url: str) -> dict[str, dict[str, str | float]]:
+    events = {}
 
-        return {}
+    if not (html_data := await network.request(url, log=log)):
+        return events
 
     now = Time.clean(Time.now())
 
-    soup = HTMLParser(r.content)
-
-    events = {}
+    soup = HTMLParser(html_data.content)
 
     title = soup.css_first("title").text(strip=True)
 
@@ -87,15 +79,13 @@ async def refresh_html_cache(
     return events
 
 
-async def get_events(
-    client: httpx.AsyncClient, cached_keys: set[str]
-) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
         log.info("Refreshing HTML cache")
 
-        tasks = [refresh_html_cache(client, url) for url in BASE_URLS.values()]
+        tasks = [refresh_html_cache(url) for url in BASE_URLS.values()]
 
         results = await asyncio.gather(*tasks)
 
@@ -109,7 +99,7 @@ async def get_events(
     end_ts = now.delta(minutes=30).timestamp()
 
     for k, v in events.items():
-        if cached_keys & {k}:
+        if k in cached_keys:
             continue
 
         if not start_ts <= v["event_ts"] <= end_ts:
@@ -120,7 +110,7 @@ async def get_events(
     return live
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -129,7 +119,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{' & '.join(BASE_URLS.values())}"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

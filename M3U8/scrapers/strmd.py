@@ -1,9 +1,7 @@
 import re
 from functools import partial
-from typing import Any
 from urllib.parse import urljoin
 
-import httpx
 from playwright.async_api import async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -35,52 +33,28 @@ def fix_sport(s: str) -> str:
     return s.capitalize() if len(s) >= 4 else s.upper()
 
 
-async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    url: str,
-    now_ts: float,
-) -> list[dict[str, Any]]:
-
-    log.info("Refreshing API cache")
-
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
-
-        return []
-
-    if not (data := r.json()):
-        return []
-
-    data[-1]["timestamp"] = now_ts
-
-    return data
-
-
-async def get_events(
-    client: httpx.AsyncClient,
-    url: str,
-    cached_keys: set[str],
-) -> list[dict[str, str]]:
-
+async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        api_data = await refresh_api_cache(
-            client,
+        api_data = []
+
+        if r := await network.request(
             urljoin(url, "api/matches/all-today"),
-            now.timestamp(),
-        )
+            log=log,
+        ):
+            api_data: list[dict] = r.json()
+
+            api_data[-1]["timestamp"] = now.timestamp()
 
         API_FILE.write(api_data)
 
     events = []
 
+    pattern = re.compile(r"[\n\r]+|\s{2,}")
+
     start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=30)
-    pattern = re.compile(r"[\n\r]+|\s{2,}")
 
     for event in api_data:
         if (category := event.get("category")) == "other":
@@ -99,13 +73,12 @@ async def get_events(
         sport = fix_sport(category)
 
         parts = pattern.split(event["title"].strip())
+
         name = " | ".join(p.strip() for p in parts if p.strip())
 
         logo = urljoin(url, poster) if (poster := event.get("poster")) else None
 
-        key = f"[{sport}] {name} ({TAG})"
-
-        if cached_keys & {key}:
+        if f"[{sport}] {name} ({TAG})" in cached_keys:
             continue
 
         sources: list[dict[str, str]] = event["sources"]
@@ -113,7 +86,8 @@ async def get_events(
         if not sources:
             continue
 
-        skip_types = {"alpha", "bravo"}
+        skip_types = ["alpha", "bravo"]
+
         valid_sources = [d for d in sources if d.get("source") not in skip_types]
 
         if not valid_sources:
@@ -122,6 +96,7 @@ async def get_events(
         srce = valid_sources[0]
 
         source_type = srce.get("source")
+
         stream_id = srce.get("id")
 
         if not (source_type and stream_id):
@@ -140,7 +115,7 @@ async def get_events(
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -154,11 +129,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{base_url}"')
 
-    events = await get_events(
-        client,
-        base_url,
-        set(cached_urls.keys()),
-    )
+    events = await get_events(base_url, cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

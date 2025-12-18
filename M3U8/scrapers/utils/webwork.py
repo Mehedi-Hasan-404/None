@@ -51,26 +51,35 @@ class Network:
             else urljoin(base, f"{tag}/{path}")
         )
 
-    async def check_status(self, url: str) -> bool:
+    async def request(
+        self,
+        url: str,
+        log: logging.Logger | None = None,
+        **kwargs,
+    ) -> httpx.Response | None:
+
+        log = log or self._logger
+
         try:
-            r = await self.client.get(url, timeout=5)
+            r = await self.client.get(url, **kwargs)
             r.raise_for_status()
-            return r.status_code == 200
-        except (httpx.HTTPError, httpx.TimeoutException) as e:
-            self._logger.debug(f"Status check failed for {url}: {e}")
-            return False
+        except Exception as e:
+            log.error(f'Failed to fetch "{url}": {e}\n{kwargs = }')
+            return ""
+
+        return r
 
     async def get_base(self, mirrors: list[str]) -> str | None:
         random.shuffle(mirrors)
 
-        tasks = [self.check_status(link) for link in mirrors]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+        for mirror in mirrors:
+            if not (r := await self.request(mirror)):
+                continue
 
-        working_mirrors = [
-            mirror for mirror, success in zip(mirrors, results) if success
-        ]
+            elif r.status_code != 200:
+                continue
 
-        return working_mirrors[0] if working_mirrors else None
+            return mirror
 
     @staticmethod
     async def safe_process(
@@ -80,8 +89,7 @@ class Network:
         log: logging.Logger | None = None,
     ) -> T | None:
 
-        if not log:
-            log = logging.getLogger(__name__)
+        log = log or get_logger("network")
 
         task = asyncio.create_task(fn())
 
@@ -132,6 +140,8 @@ class Network:
         timeout: int | float = 10,
         log: logging.Logger | None = None,
     ) -> str | None:
+
+        log = log or self._logger
 
         page = await context.new_page()
 

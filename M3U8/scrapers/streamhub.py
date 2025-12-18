@@ -2,7 +2,6 @@ import asyncio
 from functools import partial
 from urllib.parse import urljoin
 
-import httpx
 from playwright.async_api import async_playwright
 from selectolax.parser import HTMLParser
 
@@ -36,39 +35,23 @@ CATEGORIES = {
 }
 
 
-async def get_html_data(
-    client: httpx.AsyncClient,
-    date: str,
-    sport_id: str,
-) -> bytes:
-
-    try:
-        r = await client.get(
-            urljoin(BASE_URL, f"events/{date}"),
-            params={"sport_id": sport_id},
-        )
-
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{r.url}": {e}')
-
-        return b""
-
-    return r.content
-
-
 async def refresh_html_cache(
-    client: httpx.AsyncClient,
     date: str,
     sport_id: str,
     ts: float,
 ) -> dict[str, dict[str, str | float]]:
-
-    html_data = await get_html_data(client, date, sport_id)
-
-    soup = HTMLParser(html_data)
-
     events = {}
+
+    if not (
+        html_data := await network.request(
+            urljoin(BASE_URL, f"events/{date}"),
+            log=log,
+            params={"sport_id": sport_id},
+        )
+    ):
+        return events
+
+    soup = HTMLParser(html_data.content)
 
     for section in soup.css(".events-section"):
         if not (sport_node := section.css_first(".section-titlte")):
@@ -111,25 +94,19 @@ async def refresh_html_cache(
     return events
 
 
-async def get_events(
-    client: httpx.AsyncClient,
-    cached_keys: set[str],
-) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
         log.info("Refreshing HTML cache")
 
-        dates = [now.date(), now.delta(days=1).date()]
-
         tasks = [
             refresh_html_cache(
-                client,
                 date,
                 sport_id,
                 now.timestamp(),
             )
-            for date in dates
+            for date in [now.date(), now.delta(days=1).date()]
             for sport_id in CATEGORIES.values()
         ]
 
@@ -145,7 +122,7 @@ async def get_events(
     end_ts = now.delta(minutes=5).timestamp()
 
     for k, v in events.items():
-        if cached_keys & {k}:
+        if k in cached_keys:
             continue
 
         if not start_ts <= v["event_ts"] <= end_ts:
@@ -156,7 +133,7 @@ async def get_events(
     return live
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -165,7 +142,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

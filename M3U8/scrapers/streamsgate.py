@@ -4,7 +4,6 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-import httpx
 from playwright.async_api import async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -46,32 +45,20 @@ def get_event(t1: str, t2: str) -> str:
             return f"{t1.strip()} vs {t2.strip()}"
 
 
-async def get_api_data(client: httpx.AsyncClient, url: str) -> list[dict[str, Any]]:
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{url}": {e}')
-
-        return []
-
-    return r.json()
-
-
-async def refresh_api_cache(
-    client: httpx.AsyncClient,
-    now_ts: float,
-) -> list[dict[str, Any]]:
+async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
     log.info("Refreshing API cache")
 
     tasks = [
-        get_api_data(client, urljoin(BASE_URL, f"data/{sport}.json"))
+        network.request(
+            urljoin(BASE_URL, f"data/{sport}.json"),
+            log=log,
+        )
         for sport in SPORT_ENDPOINTS
     ]
 
     results = await asyncio.gather(*tasks)
 
-    if not (data := list(chain(*results))):
+    if not (data := list(chain.from_iterable(r.json() for r in results if r))):
         return []
 
     for ev in data:
@@ -82,13 +69,11 @@ async def refresh_api_cache(
     return data
 
 
-async def get_events(
-    client: httpx.AsyncClient, cached_keys: set[str]
-) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        api_data = await refresh_api_cache(client, now.timestamp())
+        api_data = await refresh_api_cache(now.timestamp())
 
         API_FILE.write(api_data)
 
@@ -104,7 +89,15 @@ async def get_events(
 
         t1, t2 = stream_group.get("away"), stream_group.get("home")
 
+        event = get_event(t1, t2)
+
         if not (event_ts and sport):
+            continue
+
+        if f"[{sport}] {event} ({TAG})" in cached_keys:
+            continue
+
+        if "F1 Abu Dhabi" in event:  # api bug
             continue
 
         event_dt = Time.from_ts(event_ts)
@@ -112,17 +105,10 @@ async def get_events(
         if not start_dt <= event_dt <= end_dt:
             continue
 
-        event = get_event(t1, t2)
-
         if not (streams := stream_group.get("streams")):
             continue
 
         if not (url := streams[0].get("url")):
-            continue
-
-        key = f"[{sport}] {event} ({TAG})"
-
-        if cached_keys & {key}:
             continue
 
         events.append(
@@ -137,7 +123,7 @@ async def get_events(
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_count = len(cached_urls)
     urls.update(cached_urls)
@@ -146,7 +132,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client, set(cached_urls.keys()))
+    events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

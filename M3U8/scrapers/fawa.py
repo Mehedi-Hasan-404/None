@@ -2,7 +2,6 @@ import re
 from functools import partial
 from urllib.parse import quote, urljoin
 
-import httpx
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -18,17 +17,9 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 BASE_URL = "http://www.fawanews.sc/"
 
 
-async def process_event(
-    client: httpx.AsyncClient,
-    url: str,
-    url_num: int,
-) -> str | None:
-
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'URL {url_num}) Failed to fetch "{url}": {e}')
+async def process_event(url: str, url_num: int) -> str | None:
+    if not (html_data := await network.request(url, log=log)):
+        log.info(f"URL {url_num}) Failed to load url.")
         return
 
     valid_m3u8 = re.compile(
@@ -36,7 +27,7 @@ async def process_event(
         re.IGNORECASE,
     )
 
-    if not (match := valid_m3u8.search(r.text)):
+    if not (match := valid_m3u8.search(html_data.text)):
         log.info(f"URL {url_num}) No M3U8 found")
         return
 
@@ -44,24 +35,16 @@ async def process_event(
     return match[2]
 
 
-async def get_events(
-    client: httpx.AsyncClient,
-    cached_hrefs: set[str],
-) -> list[dict[str, str]]:
-    try:
-        r = await client.get(BASE_URL)
-        r.raise_for_status()
-    except Exception as e:
-        log.error(f'Failed to fetch "{BASE_URL}": {e}')
+async def get_events(cached_hrefs: set[str]) -> list[dict[str, str]]:
+    events = []
 
-        return []
+    if not (html_data := await network.request(BASE_URL, log=log)):
+        return events
 
-    soup = HTMLParser(r.content)
+    soup = HTMLParser(html_data.content)
 
     valid_event = re.compile(r"\d{1,2}:\d{1,2}")
     clean_event = re.compile(r"\s+-+\s+\w{1,4}")
-
-    events = []
 
     for item in soup.css(".user-item"):
         text = item.css_first(".user-item__name")
@@ -98,7 +81,7 @@ async def get_events(
     return events
 
 
-async def scrape(client: httpx.AsyncClient) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
     cached_hrefs = {entry["href"] for entry in cached_urls.values()}
     cached_count = len(cached_urls)
@@ -108,7 +91,7 @@ async def scrape(client: httpx.AsyncClient) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(client, cached_hrefs)
+    events = await get_events(cached_hrefs)
 
     log.info(f"Processing {len(events)} new URL(s)")
 
@@ -118,7 +101,6 @@ async def scrape(client: httpx.AsyncClient) -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                client=client,
                 url=ev["link"],
                 url_num=i,
             )
