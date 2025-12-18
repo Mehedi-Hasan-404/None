@@ -1,7 +1,16 @@
-## Base Log @ 2025-12-18 04:24 UTC
+## Base Log @ 2025-12-18 08:50 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 0
+### ✅ Working Streams: 139<br>❌ Dead Streams: 7
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/79545` |
+| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/75621` |
+| FDSN SoCal | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/221151` |
+| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
+| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/13370` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
 ---
 #### Base Channels URL
 ```
