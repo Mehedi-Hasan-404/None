@@ -57,7 +57,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
-    pattern = re.compile(r"^(?:LIVE|\d+\s+(minutes?)\b)", re.IGNORECASE)
+    pattern = re.compile(r"^(?:LIVE|(?:[1-9]|[12]\d|30)\s+minutes?\b)", re.IGNORECASE)
 
     soup = HTMLParser(html_data.content)
 

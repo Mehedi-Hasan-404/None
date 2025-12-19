@@ -76,6 +76,8 @@ async def process_event(
     context: BrowserContext,
 ) -> str | None:
 
+    pattern = re.compile(r"\((\d+)\)")
+
     page = await context.new_page()
 
     captured: list[str] = []
@@ -111,9 +113,7 @@ async def process_event(
 
             return
 
-        match = re.search(r"\((\d+)\)", text)
-
-        if not match or int(match[1]) == 0:
+        if not (match := pattern.search(text)) or int(match[1]) == 0:
             log.warning(f"URL {url_num}) No available stream links.")
 
             return
