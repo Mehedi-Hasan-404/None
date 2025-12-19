@@ -67,6 +67,14 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not (rank_elem := li_item.css_first(".f1-podium--rank")):
             continue
 
+        if not (time_elem := li_item.css_first(".SaatZamanBilgisi")):
+            continue
+
+        time_text = time_elem.text(strip=True)
+
+        if not pattern.search(time_text):
+            continue
+
         sport = rank_elem.text(strip=True)
 
         if not (driver_elem := li_item.css_first(".f1-podium--driver")):
@@ -81,14 +89,6 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             continue
 
         if not (href := link.attributes.get("href")):
-            continue
-
-        if not (time_elem := li_item.css_first(".SaatZamanBilgisi")):
-            continue
-
-        time_text = time_elem.text(strip=True)
-
-        if not pattern.search(time_text):
             continue
 
         events.append(

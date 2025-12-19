@@ -17,7 +17,7 @@ TAG = "WATCHFTY"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
 
 API_URL = "https://api.watchfooty.st"
 
@@ -118,11 +118,26 @@ async def process_event(
 
             return
 
-        first_available = await page.wait_for_selector(
-            'a[href*="/stream/"]', timeout=3_000
-        )
+        try:
+            first_available = await page.wait_for_selector(
+                'a[href*="/stream/"]',
+                timeout=3_000,
+            )
+        except TimeoutError:
+            log.warning(f"URL {url_num}) No available stream links.")
 
-        await first_available.click()
+            return
+
+        if not (href := await first_available.get_attribute("href")):
+            log.warning(f"URL {url_num}) No available stream links.")
+
+            return
+
+        await page.goto(
+            href,
+            wait_until="domcontentloaded",
+            timeout=5_000,
+        )
 
         wait_task = asyncio.create_task(got_one.wait())
 
