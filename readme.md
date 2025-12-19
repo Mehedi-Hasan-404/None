@@ -1,10 +1,16 @@
-## Base Log @ 2025-12-19 03:44 UTC
+## Base Log @ 2025-12-19 08:50 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 139<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN U | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10255` |
+| Comedy Central | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/7466` |
+| FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
+| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
+| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/13370` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
+| Syfy | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46685` |
 ---
 #### Base Channels URL
 ```
