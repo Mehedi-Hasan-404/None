@@ -18,13 +18,13 @@ T = TypeVar("T")
 
 
 class Network:
-    proxy_base = "https://stream.nvrmind.xyz"
-
     UA = (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
     )
+
+    proxy_base = "https://stream.nvrmind.xyz"
 
     def __init__(self) -> None:
         self.client = httpx.AsyncClient(
@@ -41,14 +41,12 @@ class Network:
         query: dict | None = None,
     ) -> str:
 
-        base = network.proxy_base
-
         tag = tag.lower()
 
         return (
-            f"{urljoin(base, f'{tag}/{path}')}?{urlencode(query)}"
+            f"{urljoin(network.proxy_base, f'{tag}/{path}')}?{urlencode(query)}"
             if query
-            else urljoin(base, f"{tag}/{path}")
+            else urljoin(network.proxy_base, f"{tag}/{path}")
         )
 
     async def request(
@@ -207,12 +205,9 @@ class Network:
 
     @staticmethod
     async def browser(
-        playwright: Playwright,
-        browser: str = "firefox",
-        ignore_https_errors: bool = False,
+        playwright: Playwright, browser: str = "internal"
     ) -> tuple[Browser, BrowserContext]:
-
-        if browser == "brave":
+        if browser == "external":
             brwsr = await playwright.chromium.connect_over_cdp("http://localhost:9222")
 
             context = brwsr.contexts[0]
@@ -222,7 +217,7 @@ class Network:
 
             context = await brwsr.new_context(
                 user_agent=Network.UA,
-                ignore_https_errors=ignore_https_errors,
+                ignore_https_errors=False,
                 viewport={"width": 1366, "height": 768},
                 device_scale_factor=1,
                 locale="en-US",

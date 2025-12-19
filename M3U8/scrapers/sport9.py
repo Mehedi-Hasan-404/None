@@ -107,7 +107,7 @@ async def scrape() -> None:
         now = Time.clean(Time.now()).timestamp()
 
         async with async_playwright() as p:
-            browser, context = await network.browser(p, browser="brave")
+            browser, context = await network.browser(p, browser="external")
 
             for i, ev in enumerate(events, start=1):
                 handler = partial(

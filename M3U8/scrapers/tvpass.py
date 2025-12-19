@@ -6,7 +6,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "TVP"
+TAG = "TVPASS"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=86_400)
 
