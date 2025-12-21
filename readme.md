@@ -1,7 +1,12 @@
-## Base Log @ 2025-12-21 14:39 UTC
+## Base Log @ 2025-12-21 20:40 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 0
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Discovery Science | HTTP Error (404) | `https://fl1.moveonjoy.com/Discovery_Science/index.m3u8` |
+| FX | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46690` |
+| Sportsnet East | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/57298` |
 ---
 #### Base Channels URL
 ```
