@@ -1,10 +1,12 @@
-## Base Log @ 2025-12-20 20:39 UTC
+## Base Log @ 2025-12-21 03:48 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Court TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/21092` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
+| FDSN North | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/58827` |
 ---
 #### Base Channels URL
 ```
