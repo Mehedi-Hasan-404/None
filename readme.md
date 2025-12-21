@@ -1,12 +1,30 @@
-## Base Log @ 2025-12-21 03:48 UTC
+## Base Log @ 2025-12-21 08:45 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 125<br>❌ Dead Streams: 21
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Court TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/21092` |
+| A&E TV | HTTP Error (404) | `http://fl1.moveonjoy.com/ANE/index.m3u8` |
+| Animal Planet | HTTP Error (404) | `http://fl1.moveonjoy.com/Animal_Planet/index.m3u8` |
+| BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
+| Boomerang | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/14741` |
+| Comedy Central | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/7466` |
+| Comedy TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
+| Cooking Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/COOKING_CHANNEL/index.m3u8` |
+| Crime & Investigation Network | HTTP Error (404) | `https://fl1.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
+| Discovery Family Channel | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10538` |
+| Discovery Life | HTTP Error (404) | `https://fl1.moveonjoy.com/DISCOVERY_LIFE/index.m3u8` |
+| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/75621` |
+| ESPN U | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10255` |
 | FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/46794` |
-| FDSN North | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/58827` |
+| FDSN Southwest | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/21843` |
+| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
+| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/13370` |
+| Investigation Discovery | HTTP Error (404) | `https://fl1.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8` |
+| Outdoor Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/OUTDOOR_CHANNEL/index.m3u8` |
+| Oxygen | HTTP Error (404) | `https://fl1.moveonjoy.com/OXYGEN/index.m3u8` |
+| SportsNet New York | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20938` |
+| USA East | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/10252` |
 ---
 #### Base Channels URL
 ```
