@@ -83,7 +83,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     end_dt = now.delta(minutes=5)
 
     for stream_group in api_data:
-        event_ts = stream_group.get("ts")
+        date = stream_group.get("time")
 
         sport = stream_group.get("league")
 
@@ -91,16 +91,13 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         event = get_event(t1, t2)
 
-        if not (event_ts and sport):
-            continue
-
-        if "F1 Abu Dhabi" in event:  # api bug
+        if not (date and sport):
             continue
 
         if f"[{sport}] {event} ({TAG})" in cached_keys:
             continue
 
-        event_dt = Time.from_ts(event_ts)
+        event_dt = Time.from_str(date, timezone="UTC")
 
         if not start_dt <= event_dt <= end_dt:
             continue

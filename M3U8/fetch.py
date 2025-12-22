@@ -18,6 +18,7 @@ from scrapers import (
     strmd,
     time4tv,
     tvpass,
+    watchfooty,
     webcast,
 )
 from scrapers.utils import get_logger, network
@@ -61,6 +62,7 @@ async def main() -> None:
         asyncio.create_task(strmd.scrape()),
         asyncio.create_task(time4tv.scrape()),
         asyncio.create_task(tvpass.scrape()),
+        asyncio.create_task(watchfooty.scrape()),
         asyncio.create_task(webcast.scrape()),
     ]
 
@@ -81,6 +83,7 @@ async def main() -> None:
         | streamsgate.urls
         | time4tv.urls
         | tvpass.urls
+        | watchfooty.urls
         | webcast.urls
     )
 
