@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 
 from scrapers import (
+    embedhd,
     fawa,
     istreameast,
     pixel,
@@ -16,7 +17,6 @@ from scrapers import (
     streamhub,
     streamsgate,
     strmd,
-    time4tv,
     tvpass,
     watchfooty,
     webcast,
@@ -48,6 +48,7 @@ async def main() -> None:
     base_m3u8, tvg_chno = load_base()
 
     tasks = [
+        asyncio.create_task(embedhd.scrape()),
         asyncio.create_task(fawa.scrape()),
         asyncio.create_task(istreameast.scrape()),
         asyncio.create_task(pixel.scrape()),
@@ -60,7 +61,6 @@ async def main() -> None:
         asyncio.create_task(streamhub.scrape()),
         asyncio.create_task(streamsgate.scrape()),
         asyncio.create_task(strmd.scrape()),
-        asyncio.create_task(time4tv.scrape()),
         asyncio.create_task(tvpass.scrape()),
         asyncio.create_task(watchfooty.scrape()),
         asyncio.create_task(webcast.scrape()),
@@ -69,7 +69,8 @@ async def main() -> None:
     await asyncio.gather(*tasks)
 
     additions = (
-        fawa.urls
+        embedhd.urls
+        | fawa.urls
         | istreameast.urls
         | pixel.urls
         | ppv.urls
@@ -81,7 +82,6 @@ async def main() -> None:
         | streamfree.urls
         | streamhub.urls
         | streamsgate.urls
-        | time4tv.urls
         | tvpass.urls
         | watchfooty.urls
         | webcast.urls

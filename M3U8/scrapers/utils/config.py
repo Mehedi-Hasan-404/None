@@ -130,7 +130,7 @@ class Time(datetime):
 
 
 class Leagues:
-    live_img = "https://i.gyazo.com/978f2eb4a199ca5b56b447aded0cb9e3.png"
+    live_img = "https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png"
 
     def __init__(self) -> None:
         self.data = json.loads(
@@ -165,7 +165,7 @@ class Leagues:
         league: str,
     ) -> bool:
 
-        pattern = re.compile(r"\s+(?:-|vs\.?|at|@)\s+", flags=re.IGNORECASE)
+        pattern = re.compile(r"\s+(?:-|vs\.?|at|@)\s+", re.IGNORECASE)
 
         if pattern.search(event):
             t1, t2 = re.split(pattern, event)
