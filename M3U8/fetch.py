@@ -6,7 +6,6 @@ from pathlib import Path
 from scrapers import (
     fawa,
     istreameast,
-    lotus,
     pixel,
     ppv,
     roxie,
@@ -17,8 +16,8 @@ from scrapers import (
     streamhub,
     streamsgate,
     strmd,
+    time4tv,
     tvpass,
-    watchfooty,
     webcast,
 )
 from scrapers.utils import get_logger, network
@@ -50,7 +49,6 @@ async def main() -> None:
     tasks = [
         asyncio.create_task(fawa.scrape()),
         asyncio.create_task(istreameast.scrape()),
-        asyncio.create_task(lotus.scrape()),
         asyncio.create_task(pixel.scrape()),
         asyncio.create_task(ppv.scrape()),
         asyncio.create_task(roxie.scrape()),
@@ -61,8 +59,8 @@ async def main() -> None:
         asyncio.create_task(streamhub.scrape()),
         asyncio.create_task(streamsgate.scrape()),
         asyncio.create_task(strmd.scrape()),
+        asyncio.create_task(time4tv.scrape()),
         asyncio.create_task(tvpass.scrape()),
-        # asyncio.create_task(watchfooty.scrape()),
         asyncio.create_task(webcast.scrape()),
     ]
 
@@ -71,7 +69,6 @@ async def main() -> None:
     additions = (
         fawa.urls
         | istreameast.urls
-        | lotus.urls
         | pixel.urls
         | ppv.urls
         | roxie.urls
@@ -82,8 +79,8 @@ async def main() -> None:
         | streamfree.urls
         | streamhub.urls
         | streamsgate.urls
+        | time4tv.urls
         | tvpass.urls
-        | watchfooty.urls
         | webcast.urls
     )
 

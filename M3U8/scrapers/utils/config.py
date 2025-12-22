@@ -89,23 +89,22 @@ class Time(datetime):
 
         else:
             formats = [
+                "%B %d, %Y %H:%M",
                 "%B %d, %Y %I:%M %p",
                 "%B %d, %Y %I:%M:%S %p",
-                "%m/%d/%Y %I:%M %p",
-                "%B %d, %Y %H:%M",
                 "%B %d, %Y %H:%M:%S",
                 "%Y-%m-%d",
                 "%Y-%m-%d %H:%M",
                 "%Y-%m-%d %H:%M:%S",
-                "%Y-%m-%d %H:%M %p",
                 "%Y-%m-%d %I:%M %p",
+                "%Y-%m-%d %H:%M %p",
                 "%Y/%m/%d %H:%M",
                 "%Y/%m/%d %H:%M:%S",
-                "%m/%d/%Y %H:%M",
-                "%m/%d/%Y %H:%M:%S",
                 "%Y-%m-%dT%H:%M:%S",
                 "%Y/%m/%dT%H:%M:%S.%fZ",
-                "%Y-%m-%dT%H:%M:%S.%fZ",
+                "%m/%d/%Y %H:%M",
+                "%m/%d/%Y %I:%M %p",
+                "%m/%d/%Y %H:%M:%S",
                 "%a, %d %b %Y %H:%M:%S %z",
             ]
 
