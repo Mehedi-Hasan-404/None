@@ -64,11 +64,12 @@ async def main() -> None:
         asyncio.create_task(streamsgate.scrape()),
         asyncio.create_task(strmd.scrape()),
         asyncio.create_task(tvpass.scrape()),
-        # asyncio.create_task(watchfooty.scrape()),
         asyncio.create_task(webcast.scrape()),
     ]
 
     await asyncio.gather(*tasks)
+
+    await watchfooty.scrape()
 
     additions = (
         embedhd.urls

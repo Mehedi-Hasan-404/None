@@ -261,51 +261,53 @@ async def scrape() -> None:
 
     if events:
         async with async_playwright() as p:
-            browser, context = await network.browser(p)
+            browser, context = await network.browser(p, browser="external")
 
-            for i, ev in enumerate(events, start=1):
-                handler = partial(
-                    process_event,
-                    url=ev["link"],
-                    url_num=i,
-                    context=context,
-                )
+            try:
+                for i, ev in enumerate(events, start=1):
+                    handler = partial(
+                        process_event,
+                        url=ev["link"],
+                        url_num=i,
+                        context=context,
+                    )
 
-                url, iframe = await network.safe_process(
-                    handler,
-                    url_num=i,
-                    semaphore=network.PW_S,
-                    log=log,
-                )
+                    url, iframe = await network.safe_process(
+                        handler,
+                        url_num=i,
+                        semaphore=network.PW_S,
+                        log=log,
+                    )
 
-                sport, event, logo, ts, link = (
-                    ev["sport"],
-                    ev["event"],
-                    ev["logo"],
-                    ev["timestamp"],
-                    ev["link"],
-                )
+                    sport, event, logo, ts, link = (
+                        ev["sport"],
+                        ev["event"],
+                        ev["logo"],
+                        ev["timestamp"],
+                        ev["link"],
+                    )
 
-                key = f"[{sport}] {event} ({TAG})"
+                    key = f"[{sport}] {event} ({TAG})"
 
-                tvg_id, pic = leagues.get_tvg_info(sport, event)
+                    tvg_id, pic = leagues.get_tvg_info(sport, event)
 
-                entry = {
-                    "url": url,
-                    "logo": logo or pic,
-                    "base": iframe,
-                    "timestamp": ts,
-                    "id": tvg_id or "Live.Event.us",
-                    "link": link,
-                }
+                    entry = {
+                        "url": url,
+                        "logo": logo or pic,
+                        "base": iframe,
+                        "timestamp": ts,
+                        "id": tvg_id or "Live.Event.us",
+                        "link": link,
+                    }
 
-                cached_urls[key] = entry
+                    cached_urls[key] = entry
 
-                if url:
-                    valid_count += 1
-                    urls[key] = entry
+                    if url:
+                        valid_count += 1
+                        urls[key] = entry
 
-            await browser.close()
+            finally:
+                await browser.close()
 
     if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")

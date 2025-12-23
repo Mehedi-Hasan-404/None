@@ -89,46 +89,48 @@ async def scrape() -> None:
         async with async_playwright() as p:
             browser, context = await network.browser(p)
 
-            for i, ev in enumerate(events, start=1):
-                handler = partial(
-                    network.process_event,
-                    url=ev["link"],
-                    url_num=i,
-                    context=context,
-                    log=log,
-                )
-
-                url = await network.safe_process(
-                    handler,
-                    url_num=i,
-                    semaphore=network.PW_S,
-                    log=log,
-                )
-
-                if url:
-                    sport, event, link, ts = (
-                        ev["sport"],
-                        ev["event"],
-                        ev["link"],
-                        ev["timestamp"],
+            try:
+                for i, ev in enumerate(events, start=1):
+                    handler = partial(
+                        network.process_event,
+                        url=ev["link"],
+                        url_num=i,
+                        context=context,
+                        log=log,
                     )
 
-                    tvg_id, logo = leagues.get_tvg_info(sport, event)
+                    url = await network.safe_process(
+                        handler,
+                        url_num=i,
+                        semaphore=network.PW_S,
+                        log=log,
+                    )
 
-                    key = f"[{sport}] {event} ({TAG})"
+                    if url:
+                        sport, event, link, ts = (
+                            ev["sport"],
+                            ev["event"],
+                            ev["link"],
+                            ev["timestamp"],
+                        )
 
-                    entry = {
-                        "url": url,
-                        "logo": logo,
-                        "base": "https://vividmosaica.com/",
-                        "timestamp": ts,
-                        "id": tvg_id or "Live.Event.us",
-                        "link": link,
-                    }
+                        tvg_id, logo = leagues.get_tvg_info(sport, event)
 
-                    urls[key] = cached_urls[key] = entry
+                        key = f"[{sport}] {event} ({TAG})"
 
-            await browser.close()
+                        entry = {
+                            "url": url,
+                            "logo": logo,
+                            "base": "https://vividmosaica.com/",
+                            "timestamp": ts,
+                            "id": tvg_id or "Live.Event.us",
+                            "link": link,
+                        }
+
+                        urls[key] = cached_urls[key] = entry
+
+            finally:
+                await browser.close()
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")

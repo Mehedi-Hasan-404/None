@@ -88,16 +88,18 @@ async def scrape() -> None:
     async with async_playwright() as p:
         browser, context = await network.browser(p)
 
-        handler = partial(get_events, context=context)
+        try:
+            handler = partial(get_events, context=context)
 
-        events = await network.safe_process(
-            handler,
-            url_num=1,
-            semaphore=network.PW_S,
-            log=log,
-        )
+            events = await network.safe_process(
+                handler,
+                url_num=1,
+                semaphore=network.PW_S,
+                log=log,
+            )
 
-        await browser.close()
+        finally:
+            await browser.close()
 
     urls.update(events or {})
 
