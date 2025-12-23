@@ -66,7 +66,14 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    urls.update(await get_events())
+    events = await network.safe_process(
+        get_events,
+        url_num=1,
+        semaphore=network.HTTP_S,
+        log=log,
+    )
+
+    urls.update(events or {})
 
     CACHE_FILE.write(urls)
 

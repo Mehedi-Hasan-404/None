@@ -78,11 +78,11 @@ async def process_event(
 
     pattern = re.compile(r"\((\d+)\)")
 
-    page = await context.new_page()
-
     captured: list[str] = []
 
     got_one = asyncio.Event()
+
+    page = await context.new_page()
 
     handler = partial(
         network.capture_req,
@@ -102,10 +102,7 @@ async def process_event(
         await page.wait_for_timeout(2_000)
 
         try:
-            header = await page.wait_for_selector(
-                "text=/Stream Links/i",
-                timeout=5_000,
-            )
+            header = await page.wait_for_selector("text=/Stream Links/i", timeout=5_000)
 
             text = await header.inner_text()
         except TimeoutError:
@@ -120,8 +117,7 @@ async def process_event(
 
         try:
             first_available = await page.wait_for_selector(
-                'a[href*="/stream/"]',
-                timeout=3_000,
+                'a[href*="/stream/"]', timeout=3_000
             )
         except TimeoutError:
             log.warning(f"URL {url_num}) No available stream links.")
@@ -133,21 +129,17 @@ async def process_event(
 
             return None, None
 
+        embed = re.sub(
+            pattern=r"^.*\/stream",
+            repl="https://spiderembed.top/embed",
+            string=href,
+        )
+
         await page.goto(
-            href,
+            embed,
             wait_until="domcontentloaded",
             timeout=5_000,
         )
-
-        if not (iframe := await page.query_selector("iframe")):
-            log.warning(f"URL {url_num}) No iframe found.")
-
-            return None, None
-
-        if not (iframe_src := await iframe.get_attribute("src")):
-            log.warning(f"URL {url_num}) No iframe source found.")
-
-            return None, None
 
         wait_task = asyncio.create_task(got_one.wait())
 
@@ -170,7 +162,7 @@ async def process_event(
         if captured:
             log.info(f"URL {url_num}) Captured M3U8")
 
-            return captured[-1], iframe_src
+            return captured[0], embed
 
         log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
 
@@ -282,6 +274,7 @@ async def scrape() -> None:
                 url, iframe = await network.safe_process(
                     handler,
                     url_num=i,
+                    semaphore=network.PW_S,
                     log=log,
                 )
 

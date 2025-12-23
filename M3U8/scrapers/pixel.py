@@ -1,6 +1,7 @@
 import json
+from functools import partial
 
-from playwright.async_api import async_playwright
+from playwright.async_api import BrowserContext, async_playwright
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -15,36 +16,29 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=19_800)
 BASE_URL = "https://pixelsport.tv/backend/livetv/events"
 
 
-async def get_api_data() -> dict[str, list[dict, str, str]]:
-    async with async_playwright() as p:
-        try:
-            browser, context = await network.browser(p)
+async def get_api_data(context: BrowserContext) -> dict[str, list[dict, str, str]]:
+    try:
+        page = await context.new_page()
 
-            page = await context.new_page()
+        await page.goto(
+            BASE_URL,
+            wait_until="domcontentloaded",
+            timeout=10_000,
+        )
 
-            await page.goto(
-                BASE_URL,
-                wait_until="domcontentloaded",
-                timeout=10_000,
-            )
+        raw_json = await page.locator("pre").inner_text(timeout=5_000)
+    except Exception as e:
+        log.error(f'Failed to fetch "{BASE_URL}": {e}')
 
-            raw_json = await page.locator("pre").inner_text(timeout=5_000)
-
-        except Exception as e:
-            log.error(f'Failed to fetch "{BASE_URL}": {e}')
-
-            return {}
-
-        finally:
-            await browser.close()
+        return {}
 
     return json.loads(raw_json)
 
 
-async def get_events() -> dict[str, dict[str, str | float]]:
+async def get_events(context: BrowserContext) -> dict[str, dict[str, str | float]]:
     now = Time.clean(Time.now())
 
-    api_data = await get_api_data()
+    api_data = await get_api_data(context)
 
     events = {}
 
@@ -91,9 +85,21 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events()
+    async with async_playwright() as p:
+        browser, context = await network.browser(p)
 
-    urls.update(events)
+        handler = partial(get_events, context=context)
+
+        events = await network.safe_process(
+            handler,
+            url_num=1,
+            semaphore=network.PW_S,
+            log=log,
+        )
+
+        await browser.close()
+
+    urls.update(events or {})
 
     CACHE_FILE.write(urls)
 

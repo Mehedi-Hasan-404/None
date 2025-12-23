@@ -151,6 +151,7 @@ async def scrape() -> None:
                 url = await network.safe_process(
                     handler,
                     url_num=i,
+                    semaphore=network.PW_S,
                     log=log,
                 )
 

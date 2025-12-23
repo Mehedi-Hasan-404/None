@@ -66,9 +66,7 @@ async def get_events() -> list[dict[str, str]]:
             ):
                 continue
 
-            league = league_elem.text(strip=True)
-
-            name = event_elem.text(strip=True)
+            league, name = league_elem.text(strip=True), event_elem.text(strip=True)
 
             events.append(
                 {
@@ -108,8 +106,8 @@ async def scrape() -> None:
             url = await network.safe_process(
                 handler,
                 url_num=i,
+                semaphore=network.HTTP_S,
                 log=log,
-                timeout=10,
             )
 
             if url:

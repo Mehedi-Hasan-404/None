@@ -24,11 +24,15 @@ class Network:
         "Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
     )
 
+    HTTP_S = asyncio.Semaphore(10)
+
+    PW_S = asyncio.Semaphore(3)
+
     proxy_base = "https://stream.nvrmind.xyz"
 
     def __init__(self) -> None:
         self.client = httpx.AsyncClient(
-            timeout=5,
+            timeout=httpx.Timeout(5.0),
             follow_redirects=True,
             headers={"User-Agent": Network.UA},
             http2=True,
@@ -85,34 +89,39 @@ class Network:
     async def safe_process(
         fn: Callable[[], Awaitable[T]],
         url_num: int,
-        timeout: int | float = 15,
+        semaphore: asyncio.Semaphore,
+        timeout: int | float = 10,
         log: logging.Logger | None = None,
     ) -> T | None:
 
         log = log or logger
 
-        task = asyncio.create_task(fn())
-
-        try:
-            return await asyncio.wait_for(task, timeout=timeout)
-        except asyncio.TimeoutError:
-            log.warning(f"URL {url_num}) Timed out after {timeout}s, skipping event")
-
-            task.cancel()
+        async with semaphore:
+            task = asyncio.create_task(fn())
 
             try:
-                await task
-            except asyncio.CancelledError:
-                pass
+                return await asyncio.wait_for(task, timeout=timeout)
 
+            except asyncio.TimeoutError:
+                log.warning(
+                    f"URL {url_num}) Timed out after {timeout}s, skipping event"
+                )
+
+                task.cancel()
+
+                try:
+                    await task
+                except asyncio.CancelledError:
+                    pass
+
+                except Exception as e:
+                    log.debug(f"URL {url_num}) Ignore exception after timeout: {e}")
+
+                return
             except Exception as e:
-                log.debug(f"URL {url_num}) Ignore exception after timeout: {e}")
+                log.error(f"URL {url_num}) Unexpected error: {e}")
 
-            return
-        except Exception as e:
-            log.error(f"URL {url_num}) Unexpected error: {e}")
-
-            return
+                return
 
     @staticmethod
     def capture_req(

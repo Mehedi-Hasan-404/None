@@ -22,7 +22,7 @@ epg_urls = [
 ]
 
 client = httpx.AsyncClient(
-    timeout=5,
+    timeout=httpx.Timeout(5.0),
     follow_redirects=True,
     http2=True,
     headers={
