@@ -1,5 +1,6 @@
 import base64
 import re
+from functools import partial
 
 from selectolax.parser import HTMLParser
 
@@ -9,7 +10,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "ISTRMEST"
+TAG = "iSTRMEST"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=3_600)
 
@@ -121,7 +122,20 @@ async def scrape() -> None:
         now = Time.clean(Time.now()).timestamp()
 
         for i, ev in enumerate(events, start=1):
-            if url := await process_event(ev["link"], i):
+            handler = partial(
+                process_event,
+                url=ev["link"],
+                url_num=i,
+            )
+
+            url = await network.safe_process(
+                handler,
+                url_num=i,
+                log=log,
+                timeout=10,
+            )
+
+            if url:
                 sport, event, link = (
                     ev["sport"],
                     ev["event"],
