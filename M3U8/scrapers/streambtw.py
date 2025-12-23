@@ -96,7 +96,7 @@ async def scrape() -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        now = Time.now().timestamp()
+        now = Time.clean(Time.now())
 
         for i, ev in enumerate(events, start=1):
             handler = partial(
@@ -127,7 +127,7 @@ async def scrape() -> None:
                     "url": url,
                     "logo": logo,
                     "base": link,
-                    "timestamp": now,
+                    "timestamp": now.timestamp(),
                     "id": tvg_id or "Live.Event.us",
                     "link": link,
                 }

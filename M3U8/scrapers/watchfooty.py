@@ -269,7 +269,7 @@ async def scrape() -> None:
 
     if events:
         async with async_playwright() as p:
-            browser, context = await network.browser(p, browser="external")
+            browser, context = await network.browser(p)
 
             for i, ev in enumerate(events, start=1):
                 handler = partial(
