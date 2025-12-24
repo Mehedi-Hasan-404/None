@@ -53,7 +53,7 @@ async def main() -> None:
         asyncio.create_task(embedhd.scrape()),
         asyncio.create_task(fawa.scrape()),
         asyncio.create_task(istreameast.scrape()),
-        asyncio.create_task(pixel.scrape()),
+        # asyncio.create_task(pixel.scrape()),
         asyncio.create_task(ppv.scrape()),
         asyncio.create_task(roxie.scrape()),
         asyncio.create_task(shark.scrape()),
