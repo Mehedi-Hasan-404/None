@@ -1,10 +1,10 @@
-## Base Log @ 2025-12-23 20:41 UTC
+## Base Log @ 2025-12-24 03:44 UTC
 
 ### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Florida | HTTP Error (403) | `http://1tv41.icu:8080/8434692955/judgen64@yahoo.com/46794` |
+| FDSN Florida | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
 ---
 #### Base Channels URL
 ```
