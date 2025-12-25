@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 
 from scrapers import (
+    cdnlivetv,
     embedhd,
     fawa,
     istreameast,
@@ -50,6 +51,7 @@ async def main() -> None:
     base_m3u8, tvg_chno = load_base()
 
     tasks = [
+        asyncio.create_task(cdnlivetv.scrape()),
         asyncio.create_task(embedhd.scrape()),
         asyncio.create_task(fawa.scrape()),
         asyncio.create_task(istreameast.scrape()),
@@ -74,7 +76,8 @@ async def main() -> None:
     await watchfooty.scrape()
 
     additions = (
-        embedhd.urls
+        cdnlivetv.urls
+        | embedhd.urls
         | fawa.urls
         | istreameast.urls
         | pixel.urls
