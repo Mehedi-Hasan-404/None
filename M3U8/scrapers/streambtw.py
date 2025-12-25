@@ -89,7 +89,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(BASE_URL)
+    events = await get_events()
 
     log.info(f"Processing {len(events)} new URL(s)")
 
