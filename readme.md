@@ -1,10 +1,7 @@
-## Base Log @ 2025-12-25 14:42 UTC
+## Base Log @ 2025-12-25 20:42 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 146<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| TV Land | Unknown status (302) | `https://fl1.moveonjoy.com/TV_LAND/index.m3u8` |
 ---
 #### Base Channels URL
 ```
