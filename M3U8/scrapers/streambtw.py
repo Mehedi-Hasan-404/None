@@ -15,7 +15,7 @@ TAG = "STRMBTW"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=3_600)
 
-BASE_URL = "https://streambtw.com"
+MIRRORS = ["https://hiteasport.info/", "https://streambtw.com/"]
 
 
 def fix_league(s: str) -> str:
@@ -45,10 +45,10 @@ async def process_event(url: str, url_num: int) -> str | None:
     return stream_link
 
 
-async def get_events() -> list[dict[str, str]]:
+async def get_events(url: str) -> list[dict[str, str]]:
     events = []
 
-    if not (html_data := await network.request(BASE_URL, log=log)):
+    if not (html_data := await network.request(url, log=log)):
         return events
 
     soup = HTMLParser(html_data.content)
@@ -72,7 +72,7 @@ async def get_events() -> list[dict[str, str]]:
                 {
                     "sport": fix_league(league),
                     "event": name,
-                    "link": urljoin(BASE_URL, href),
+                    "link": urljoin(url, href),
                 }
             )
 
@@ -87,9 +87,14 @@ async def scrape() -> None:
 
         return
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    if not (base_url := await network.get_base(MIRRORS)):
+        log.warning("No working StreamBTW mirrors")
 
-    events = await get_events()
+        return
+
+    log.info(f'Scraping from "{base_url}"')
+
+    events = await get_events(base_url)
 
     log.info(f"Processing {len(events)} new URL(s)")
 

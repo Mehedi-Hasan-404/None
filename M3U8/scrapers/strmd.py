@@ -126,7 +126,9 @@ async def scrape() -> None:
 
     if not (base_url := await network.get_base(MIRRORS)):
         log.warning("No working STRMD mirrors")
+
         CACHE_FILE.write(cached_urls)
+
         return
 
     log.info(f'Scraping from "{base_url}"')

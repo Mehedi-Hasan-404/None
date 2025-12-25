@@ -97,7 +97,9 @@ async def scrape() -> None:
 
     if not (base_url and api_url):
         log.warning("No working PPV mirrors")
+
         CACHE_FILE.write(cached_urls)
+
         return
 
     log.info(f'Scraping from "{base_url}"')
