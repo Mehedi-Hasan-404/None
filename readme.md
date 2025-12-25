@@ -1,20 +1,10 @@
-## Base Log @ 2025-12-25 08:49 UTC
+## Base Log @ 2025-12-25 14:42 UTC
 
-### ✅ Working Streams: 135<br>❌ Dead Streams: 11
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ACC Network | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/9273` |
-| Comedy Central | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/7466` |
-| Disney XD | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/75621` |
-| ESPN U | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/10255` |
-| FDSN North | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/58827` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
-| Freeform TV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/13370` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| History Channel | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/15017` |
-| NBC Sports NOW | HTTP Error (404) | `https://jmp2.uk/plu-6549306c83595c000815a696.m3u8` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/31637` |
+| TV Land | Unknown status (302) | `https://fl1.moveonjoy.com/TV_LAND/index.m3u8` |
 ---
 #### Base Channels URL
 ```
