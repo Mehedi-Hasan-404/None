@@ -13,7 +13,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "SPORT9"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=3_600)
+CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=5_400)
 
 BASE_URL = "https://sport9.ru/"
 

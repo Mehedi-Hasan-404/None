@@ -12,7 +12,7 @@ TAG = "CDNTV"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
 
 API_URL = "https://api.cdn-live.tv/api/v1/events/sports"
 
@@ -71,11 +71,13 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             # ):
             #     continue
 
+            link = channels[0]
+
             events.append(
                 {
                     "sport": league,
                     "event": name,
-                    "link": channels[0],  # link
+                    "link": link,
                     "timestamp": event_dt.timestamp(),
                 }
             )
