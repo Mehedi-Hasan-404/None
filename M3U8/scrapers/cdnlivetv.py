@@ -21,6 +21,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     events = []
 
     if not (api_data := API_FILE.load(per_entry=False)):
+        log.info("Refreshing API cache")
+
         api_data = {}
 
         if r := await network.request(
