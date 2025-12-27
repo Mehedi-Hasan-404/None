@@ -304,6 +304,7 @@ async def scrape() -> None:
 
                     if url:
                         valid_count += 1
+
                         urls[key] = entry
 
             finally:
