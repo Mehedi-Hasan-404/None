@@ -138,7 +138,7 @@ async def scrape() -> None:
                         entry = {
                             "url": url,
                             "logo": logo,
-                            "base": "",
+                            "base": link,
                             "timestamp": ts,
                             "id": tvg_id or "Live.Event.us",
                             "link": link,

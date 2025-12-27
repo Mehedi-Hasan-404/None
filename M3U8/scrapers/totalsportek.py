@@ -79,6 +79,12 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                     sport = span.text(strip=True)
 
             if node.tag == "a" and "nav-link2" in node_class:
+                if not (time_node := node.css_first(".col-3")):
+                    continue
+
+                if not time_node.text(strip=True) == "MatchStarted":
+                    continue
+
                 if not (href := node.attributes.get("href")):
                     continue
 
