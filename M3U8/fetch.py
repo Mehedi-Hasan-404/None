@@ -51,7 +51,7 @@ async def main() -> None:
     base_m3u8, tvg_chno = load_base()
 
     tasks = [
-        asyncio.create_task(cdnlivetv.scrape()),
+        # asyncio.create_task(cdnlivetv.scrape()),
         asyncio.create_task(embedhd.scrape()),
         asyncio.create_task(fawa.scrape()),
         asyncio.create_task(istreameast.scrape()),
