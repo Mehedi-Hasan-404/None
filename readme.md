@@ -1,7 +1,10 @@
-## Base Log @ 2025-12-28 14:41 UTC
+## Base Log @ 2025-12-28 20:42 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 0
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| FX | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/46690` |
 ---
 #### Base Channels URL
 ```
