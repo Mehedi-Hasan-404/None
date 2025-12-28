@@ -1,10 +1,7 @@
-## Base Log @ 2025-12-27 20:41 UTC
+## Base Log @ 2025-12-28 03:57 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 146<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| ION TV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/9297` |
 ---
 #### Base Channels URL
 ```
