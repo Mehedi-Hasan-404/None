@@ -1,7 +1,87 @@
-## Base Log @ 2025-12-29 03:59 UTC
+## Base Log @ 2025-12-29 08:52 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 0
+### ✅ Working Streams: 68<br>❌ Dead Streams: 78
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| BBC World News | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/139752` |
+| Big Ten Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/9828` |
+| Bloomberg TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/15158` |
+| Boomerang | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/14741` |
+| Bounce TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/48323` |
+| CBS Sports Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10454` |
+| CBS | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/120749` |
+| CW | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/120893` |
+| Cartoon Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46708` |
+| Comedy Central | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/7466` |
+| Comet TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/125831` |
+| Cozi TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/11868` |
+| Discovery Channel | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46720` |
+| Discovery Family Channel | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10538` |
+| Disney XD | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/75621` |
+| Disney | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/2206` |
+| ESPN News | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/17707` |
+| ESPN U | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10255` |
+| ESPN | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/14197` |
+| ESPN2 | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/2210` |
+| FDSN Detroit | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20936` |
+| FDSN Florida | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
+| FDSN North | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/58827` |
+| FDSN Ohio | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/17752` |
+| FDSN Oklahoma | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20934` |
+| FDSN SoCal | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/221151` |
+| FDSN Southeast | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/81111` |
+| FDSN Southwest | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/21843` |
+| FDSN Sun | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/104917` |
+| FDSN West | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20932` |
+| FDSN Wisconsin | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/78599` |
+| FX | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46690` |
+| FXX | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46699` |
+| Food Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/7323` |
+| Fox Business | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/17639` |
+| Fox News | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/1818` |
+| Fox Sports 1 | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/1846` |
+| Fox Sports 2 | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
+| Fox | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/121595` |
+| Freeform TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/13370` |
+| Game Show Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/120633` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| HBO | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46713` |
+| History Channel | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/15017` |
+| ION TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/9297` |
+| MSG | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/21090` |
+| MSNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/MSNBC/index.m3u8` |
+| Marquee Sports Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/13379` |
+| MotorTrend TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10399` |
+| NBC Sports Bay Area | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/9900` |
+| NBC Sports Boston | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20939` |
+| NBC Sports California | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20940` |
+| NBC Sports Philadelphia | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20943` |
+| NESN | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/31637` |
+| NFL RedZone | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/208830` |
+| NewsNation | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/161450` |
+| Nickelodeon | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/38` |
+| Nicktoons | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/36` |
+| Reelz Channel | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10526` |
+| SEC Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/17608` |
+| Space City Home Network | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/213668` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/31636` |
+| Spectrum SportsNet Lakers | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20946` |
+| SportsNet New York | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/20938` |
+| SportsNet Pittsburgh | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/108178` |
+| Sportsnet 360 | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/57299` |
+| Sportsnet East | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/57298` |
+| Sportsnet One | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10247` |
+| Sportsnet Ontario | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/11649` |
+| Starz | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/9299` |
+| Syfy | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46685` |
+| TLC | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/12734` |
+| TSN1 | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/57292` |
+| The Weather Channel | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/18926` |
+| USA East | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/10252` |
+| Vice TV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/46697` |
+| Willow Cricket | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/41979` |
+| getTV | HTTP Error (401) | `http://cord-cutter.net:8080/k4Svp2/645504/18366` |
 ---
 #### Base Channels URL
 ```
