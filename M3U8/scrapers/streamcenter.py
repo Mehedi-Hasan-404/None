@@ -14,7 +14,7 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
 API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
-BASE_URL = "https://backendstreamcenter.youshop.pro:488/api/Parties"
+BASE_URL = "https://backend.streamcenter.live/api/Parties"
 
 CATEGORIES = {
     4: "Basketball",
@@ -37,7 +37,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
         log.info("Refreshing API cache")
 
-        api_data = []
+        api_data = [{"timestamp": now.timestamp()}]
 
         if r := await network.request(
             BASE_URL,

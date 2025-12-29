@@ -28,19 +28,19 @@ BASE_MIRRORS = [
 
 
 async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str]]:
-    events = []
+    now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False)):
         log.info("Refreshing API cache")
 
-        api_data = {}
+        api_data = {"timestamp": now.timestamp()}
 
         if r := await network.request(api_url, log=log):
             api_data: dict = r.json()
 
         API_FILE.write(api_data)
 
-    now = Time.clean(Time.now())
+    events = []
 
     start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=30)

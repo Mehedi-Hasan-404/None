@@ -82,13 +82,10 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 if not (time_node := node.css_first(".col-3")):
                     continue
 
-                if not time_node.text(strip=True) == "MatchStarted":
+                if time_node.text(strip=True) != "MatchStarted":
                     continue
 
-                if not (href := node.attributes.get("href")):
-                    continue
-
-                if href.startswith("http"):
+                if not (href := node.attributes.get("href")) or href.startswith("http"):
                     continue
 
                 sport = fix_league(sport)

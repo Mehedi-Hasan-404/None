@@ -39,7 +39,7 @@ async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
         log.info("Refreshing API cache")
 
-        api_data = []
+        api_data = [{"timestamp": now.timestamp()}]
 
         if r := await network.request(
             urljoin(url, "api/matches/all-today"),

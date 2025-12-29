@@ -1,4 +1,3 @@
-import asyncio
 from functools import partial
 
 from playwright.async_api import async_playwright
@@ -33,10 +32,6 @@ async def refresh_html_cache() -> dict[str, dict[str, str | float]]:
 
     soup = HTMLParser(html_data.content)
 
-    title = soup.css_first("title").text(strip=True)
-
-    sport = "NFL" if "NFL" in title else "NHL"
-
     date_text = now.strftime("%B %d, %Y")
 
     if date_row := soup.css_first("tr.mdatetitle"):
@@ -66,10 +61,10 @@ async def refresh_html_cache() -> dict[str, dict[str, str | float]]:
 
         event = fix_event(event_name)
 
-        key = f"[{sport}] {event} ({TAG})"
+        key = f"[NHL] {event} ({TAG})"
 
         events[key] = {
-            "sport": sport,
+            "sport": "NHL",
             "event": event,
             "link": href,
             "event_ts": event_dt.timestamp(),

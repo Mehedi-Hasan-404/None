@@ -59,7 +59,7 @@ async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
     results = await asyncio.gather(*tasks)
 
     if not (data := [*chain.from_iterable(r.json() for r in results if r)]):
-        return []
+        return [{"timestamp": now_ts}]
 
     for ev in data:
         ev["ts"] = ev.pop("timestamp")
