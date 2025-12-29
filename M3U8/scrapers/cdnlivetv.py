@@ -64,18 +64,21 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             if not start_dt <= event_dt <= end_dt:
                 continue
 
-            channels: list[str] = [channel["url"] for channel in event["channels"]]
+            if not (channels := event.get("channels")):
+                continue
+
+            event_links: list[str] = [channel["url"] for channel in channels]
 
             # if not (
             #     link := (
-            #         channels[0]
-            #         if len(channels) == 1
-            #         else await network.get_base(channels)
+            #         event_links[0]
+            #         if len(event_links) == 1
+            #         else await network.get_base(event_links)
             #     )
             # ):
             #     continue
 
-            link = channels[0]
+            link = event_links[0]
 
             events.append(
                 {
