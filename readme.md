@@ -1,16 +1,14 @@
-## Base Log @ 2026-01-01 14:42 UTC
+## Base Log @ 2026-01-01 20:43 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 8
+### ✅ Working Streams: 140<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Boomerang | HTTP Error (404) | `http://fl1.moveonjoy.com/BOOMERANG/index.m3u8` |
 | Bounce TV | HTTP Error (404) | `http://fl1.moveonjoy.com/BOUNCE_TV/index.m3u8` |
-| FDSN Florida | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/46794` |
-| FDSN Midwest | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/66795` |
 | FX Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/FX_MOVIE/index.m3u8` |
 | HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
 | HBO | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO/index.m3u8` |
+| Hallmark Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8` |
 | Root Sports | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/85232` |
 ---
 #### Base Channels URL
