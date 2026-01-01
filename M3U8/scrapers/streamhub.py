@@ -86,8 +86,8 @@ async def refresh_html_cache(
                 "event": event_name,
                 "link": href,
                 "logo": logo,
-                "timestamp": ts,
                 "event_ts": event_dt.timestamp(),
+                "timestamp": ts,
             }
 
     return events
