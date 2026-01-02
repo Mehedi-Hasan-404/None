@@ -24,12 +24,12 @@ CATEGORIES = {
     "American Football": "sport_68c02a4465113",
     # "Baseball": "sport_68c02a446582f",
     "Basketball": "sport_68c02a4466011",
-    # "Cricket": "sport_68c02a44669f3",
+    "Cricket": "sport_68c02a44669f3",
     "Hockey": "sport_68c02a4466f56",
     "MMA": "sport_68c02a44674e9",
     "Racing": "sport_68c02a4467a48",
     # "Rugby": "sport_68c02a4467fc1",
-    # "Tennis": "sport_68c02a4468cf7",
+    "Tennis": "sport_68c02a4468cf7",
     # "Volleyball": "sport_68c02a4469422",
 }
 

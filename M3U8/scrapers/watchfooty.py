@@ -32,16 +32,16 @@ VALID_SPORTS = [
     # "australian-football",
     # "baseball",
     "basketball",
-    # "cricket",
-    # "darts",
+    "cricket",
+    "darts",
     "fighting",
     "football",
     "golf",
     "hockey",
     "racing",
     # "rugby",
-    # "tennis",
-    # "volleyball",
+    "tennis",
+    "volleyball",
 ]
 
 

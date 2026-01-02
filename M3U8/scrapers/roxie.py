@@ -21,7 +21,7 @@ BASE_URL = "https://roxiestreams.live"
 
 SPORT_ENDPOINTS = {
     "fighting": "Fighting",
-    "mlb": "MLB",
+    # "mlb": "MLB",
     "motorsports": "Racing",
     "nba": "NBA",
     "nfl": "American Football",
