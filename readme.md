@@ -1,14 +1,14 @@
-## Base Log @ 2026-01-01 20:43 UTC
+## Base Log @ 2026-01-02 03:51 UTC
 
 ### ✅ Working Streams: 140<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Bounce TV | HTTP Error (404) | `http://fl1.moveonjoy.com/BOUNCE_TV/index.m3u8` |
+| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
 | FX Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/FX_MOVIE/index.m3u8` |
 | HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
 | HBO | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO/index.m3u8` |
-| Hallmark Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8` |
 | Root Sports | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/85232` |
 ---
 #### Base Channels URL
