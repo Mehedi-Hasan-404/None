@@ -135,9 +135,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
-    cached_count = len(cached_urls)
+    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
 
-    urls.update(cached_urls)
+    valid_count = cached_count = len(valid_urls)
+
+    urls.update(valid_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
@@ -169,34 +171,38 @@ async def scrape() -> None:
                         log=log,
                     )
 
+                    sport, event, logo, link, ts = (
+                        ev["sport"],
+                        ev["event"],
+                        ev["logo"],
+                        ev["link"],
+                        ev["event_ts"],
+                    )
+
+                    key = f"[{sport}] {event} ({TAG})"
+
+                    tvg_id, pic = leagues.get_tvg_info(sport, event)
+
+                    entry = {
+                        "url": url,
+                        "logo": logo or pic,
+                        "base": "https://storytrench.net/",
+                        "timestamp": ts,
+                        "id": tvg_id or "Live.Event.us",
+                        "link": link,
+                    }
+
+                    cached_urls[key] = entry
+
                     if url:
-                        sport, event, logo, link, ts = (
-                            ev["sport"],
-                            ev["event"],
-                            ev["logo"],
-                            ev["link"],
-                            ev["event_ts"],
-                        )
+                        valid_count += 1
 
-                        key = f"[{sport}] {event} ({TAG})"
-
-                        tvg_id, pic = leagues.get_tvg_info(sport, event)
-
-                        entry = {
-                            "url": url,
-                            "logo": logo or pic,
-                            "base": "https://storytrench.net/",
-                            "timestamp": ts,
-                            "id": tvg_id or "Live.Event.us",
-                            "link": link,
-                        }
-
-                        urls[key] = cached_urls[key] = entry
+                        urls[key] = entry
 
             finally:
                 await browser.close()
 
-    if new_count := len(cached_urls) - cached_count:
+    if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
 
     else:
