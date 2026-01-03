@@ -1,10 +1,11 @@
-## Base Log @ 2026-01-02 17:36 UTC
+## Base Log @ 2026-01-03 03:42 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
+| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
 ---
 #### Base Channels URL
 ```
