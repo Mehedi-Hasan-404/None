@@ -1,15 +1,10 @@
-## Base Log @ 2026-01-03 08:47 UTC
+## Base Log @ 2026-01-03 14:40 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 6
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| AMC | HTTP Error (404) | `http://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8` |
 | BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
-| FDSN SoCal | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/221151` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| MSNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/MSNBC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
