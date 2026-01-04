@@ -1,4 +1,4 @@
-## Base Log @ 2026-01-04 08:46 UTC
+## Base Log @ 2026-01-04 14:40 UTC
 
 ### ✅ Working Streams: 92<br>❌ Dead Streams: 54
 
@@ -6,7 +6,6 @@
 | ------- | ------------ | ---- |
 | Altitude Sports | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/79545` |
 | BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
-| Boomerang | HTTP Error (404) | `http://fl1.moveonjoy.com/BOOMERANG/index.m3u8` |
 | CW | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/120893` |
 | Comet TV | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/125831` |
 | Court TV | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/21092` |
@@ -32,15 +31,16 @@
 | Fox Sports 2 | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
 | Fox | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/121595` |
 | Game Show Network | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/120633` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
 | History Channel | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/15017` |
 | MSG | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/21090` |
+| MSNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/MSNBC/index.m3u8` |
 | Marquee Sports Network | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/13379` |
 | NBC Sports Bay Area | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/9900` |
 | NBC Sports Boston | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/20939` |
 | NBC Sports California | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/20940` |
 | NBC Sports Philadelphia | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/20943` |
 | NESN | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/31637` |
+| NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 | NFL RedZone | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/208830` |
 | Root Sports | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/85232` |
 | Space City Home Network | HTTP Error (404) | `http://cord-cutter.net:8080/k4Svp2/645504/213668` |
