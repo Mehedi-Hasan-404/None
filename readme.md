@@ -1,9 +1,10 @@
-## Base Log @ 2026-01-03 20:41 UTC
+## Base Log @ 2026-01-04 04:00 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Astro Premier League | HTTP Error (407) | `http://stalker.klma2023.net/play/live.php?mac=00:1B:79:F8:59:0E&stream=1163984&extension=ts` |
 | BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
 ---
 #### Base Channels URL
