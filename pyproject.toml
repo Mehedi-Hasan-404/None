@@ -3,6 +3,7 @@ name = "iptv"
 version = "0.0.3"
 requires-python = ">=3.10"
 dependencies = [
+    "feedparser>=6.0.12",
     "httpx[http2]>=0.28.1",
     "playwright>=1.55.0",
     "pytz>=2025.2",

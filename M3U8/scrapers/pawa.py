@@ -2,6 +2,7 @@ import base64
 import re
 from functools import partial
 
+import feedparser
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -10,11 +11,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "iSTRMEAST"
+TAG = "PAWA"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-BASE_URL = "https://istreameast.app"
+BASE_URL = "https://pawastreams.net/feed"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -25,7 +26,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     soup = HTMLParser(event_data.content)
 
-    if not (iframe := soup.css_first("iframe#wp_player")):
+    if not (iframe := soup.css_first("iframe")):
         log.warning(f"URL {url_num}) No iframe element found.")
 
         return
@@ -58,45 +59,27 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
-    pattern = re.compile(r"^(?:LIVE|(?:[1-9]|[12]\d|30)\s+minutes?\b)", re.IGNORECASE)
+    feed = feedparser.parse(html_data.content)
 
-    soup = HTMLParser(html_data.content)
-
-    for link in soup.css("li.f1-podium--item > a.f1-podium--link"):
-        li_item = link.parent
-
-        if not (rank_elem := li_item.css_first(".f1-podium--rank")):
+    for entry in feed.entries:
+        if not (link := entry.get("link")):
             continue
 
-        if not (time_elem := li_item.css_first(".SaatZamanBilgisi")):
+        if not (title := entry.get("title")):
             continue
 
-        time_text = time_elem.text(strip=True)
+        sport = "Soccer"
 
-        if not pattern.search(time_text):
-            continue
+        title = title.replace(" v ", " vs ")
 
-        sport = rank_elem.text(strip=True)
-
-        if not (driver_elem := li_item.css_first(".f1-podium--driver")):
-            continue
-
-        event_name = driver_elem.text(strip=True)
-
-        if inner_span := driver_elem.css_first("span.d-md-inline"):
-            event_name = inner_span.text(strip=True)
-
-        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-            continue
-
-        if not (href := link.attributes.get("href")):
+        if f"[{sport}] {title} ({TAG})" in cached_keys:
             continue
 
         events.append(
             {
                 "sport": sport,
-                "event": event_name,
-                "link": href,
+                "event": title,
+                "link": link,
             }
         )
 
@@ -149,7 +132,7 @@ async def scrape() -> None:
                 entry = {
                     "url": url,
                     "logo": logo,
-                    "base": "https://gooz.aapmains.net",
+                    "base": link,
                     "timestamp": now,
                     "id": tvg_id or "Live.Event.us",
                     "link": link,

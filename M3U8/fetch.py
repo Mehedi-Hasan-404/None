@@ -8,6 +8,7 @@ from scrapers import (
     embedhd,
     fawa,
     istreameast,
+    pawa,
     pixel,
     ppv,
     roxie,
@@ -55,6 +56,7 @@ async def main() -> None:
         asyncio.create_task(embedhd.scrape()),
         asyncio.create_task(fawa.scrape()),
         asyncio.create_task(istreameast.scrape()),
+        asyncio.create_task(pawa.scrape()),
         asyncio.create_task(pixel.scrape()),
         asyncio.create_task(ppv.scrape()),
         asyncio.create_task(roxie.scrape()),
@@ -80,6 +82,7 @@ async def main() -> None:
         | embedhd.urls
         | fawa.urls
         | istreameast.urls
+        | pawa.urls
         | pixel.urls
         | ppv.urls
         | roxie.urls
