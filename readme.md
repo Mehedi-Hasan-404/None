@@ -1,12 +1,24 @@
-## Base Log @ 2026-01-05 04:06 UTC
+## Base Log @ 2026-01-05 08:55 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 131<br>❌ Dead Streams: 15
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
+| Comet TV | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/125831` |
+| FDSN Detroit | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20936` |
+| FDSN Midwest | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/66795` |
+| FDSN North | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/58827` |
+| FDSN SoCal | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/221151` |
+| FDSN Southeast | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/81111` |
+| FDSN Southwest | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/21843` |
+| FDSN Sun | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/104917` |
+| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
 | MSNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/MSNBC/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
+| NFL RedZone | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/208830` |
+| SportsNet Pittsburgh | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/108178` |
 ---
 #### Base Channels URL
 ```
