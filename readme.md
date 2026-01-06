@@ -1,17 +1,9 @@
-## Base Log @ 2026-01-06 08:52 UTC
+## Base Log @ 2026-01-06 14:47 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 10
+### ✅ Working Streams: 146<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BET | HTTP Error (404) | `http://fl1.moveonjoy.com/BET_EAST/index.m3u8` |
-| FDSN Midwest | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/66795` |
-| FDSN SoCal | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/221151` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| MSNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/MSNBC/index.m3u8` |
-| NBC Sports NOW | HTTP Error (403) | `https://jmp2.uk/plu-6549306c83595c000815a696.m3u8` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 | Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31636` |
 ---
