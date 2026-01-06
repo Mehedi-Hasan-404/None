@@ -22197,6 +22197,11 @@
       <value>Not Rated</value>
     </rating>
   </programme>
+  <channel id="Premier.Sports.2.HD.uk">
+    <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s109162_dark_360w_270h.png" />
+    <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s109162_dark_360w_270h.png" />
+    <display-name lang="en">Premier Sports 2 HD</display-name>
+  </channel>
   <channel id="Premier.Sports.1.HD.uk">
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s79027_dark_360w_270h.png" />
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s79027_dark_360w_270h.png" />
@@ -22762,6 +22767,447 @@
     <icon src="https://tv.assets.pressassociation.io/4a7b3464-3c38-5967-8c54-226430075172.jpg" />
     <episode-num system="onscreen">S2025 E162</episode-num>
   </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260105213000 +0000" stop="20260105220000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 3</sub-title>
+    <desc lang="en">Iconic sporting venues.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E3</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260105220000 +0000" stop="20260106000000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Montreal at Dallas</sub-title>
+    <desc lang="en">Dallas Stars v Montreal Canadiens.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E186</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106000000 +0000" stop="20260106030000 +0000">
+    <title lang="en">Live NHL Ice Hockey</title>
+    <sub-title lang="en">Utah at NY Rangers</sub-title>
+    <desc lang="en">New York Rangers v Utah Mammoth (Face-off 12.00am). Coverage of the inter-conference match at Madison Square Garden.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/bcfc6faf-2ed8-5c35-bee6-d432dc692c3b.jpg" />
+    <episode-num system="onscreen">S2026 E188</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106030000 +0000" stop="20260106033000 +0000">
+    <title lang="en">NHL Specials</title>
+    <sub-title lang="en">Summer with Stanley</sub-title>
+    <desc lang="en">The Florida Panthers celebrate their 2024/25 Stanley Cup success.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/7c68a809-ba71-55ab-9d0e-58572973e2c9.jpg" />
+    <episode-num system="onscreen">S2025 E11</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106033000 +0000" stop="20260106040000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 1</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E1</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106040000 +0000" stop="20260106060000 +0000">
+    <title lang="en">LaLiga</title>
+    <sub-title lang="en">Celta Vigo v Valencia</sub-title>
+    <desc lang="en">Celta Vigo v Valencia.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/4a7b3464-3c38-5967-8c54-226430075172.jpg" />
+    <episode-num system="onscreen">S2025 E160</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106060000 +0000" stop="20260106080000 +0000">
+    <title lang="en">LaLiga</title>
+    <sub-title lang="en">Osasuna v Athletic Club</sub-title>
+    <desc lang="en">Osasuna v Athletic Bilbao.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/4a7b3464-3c38-5967-8c54-226430075172.jpg" />
+    <episode-num system="onscreen">S2025 E161</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106080000 +0000" stop="20260106100000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Utah at NY Rangers</sub-title>
+    <desc lang="en">New York Rangers v Utah Mammoth.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E188</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106100000 +0000" stop="20260106103000 +0000">
+    <title lang="en">Bike World</title>
+    <desc lang="en">The latest action from the high octane world of two wheels.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/e1536647-2e6f-5ad4-98f5-367e682be3bf.jpg" />
+    <episode-num system="onscreen">S2025 E132</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106103000 +0000" stop="20260106123000 +0000">
+    <title lang="en">United Rugby Championship</title>
+    <sub-title lang="en">Benetton v Edinburgh</sub-title>
+    <desc lang="en">Benetton Rugby v Edinburgh Rugby.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/c91df4e8-dbd0-5cf1-81a6-38f9deffcc4b.jpg" />
+    <episode-num system="onscreen">S2025 E71</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106123000 +0000" stop="20260106143000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Harlequins v Bayonne</sub-title>
+    <desc lang="en">Harlequins v Bayonne.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E20</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106143000 +0000" stop="20260106150000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 4</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E4</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106150000 +0000" stop="20260106160000 +0000">
+    <title lang="en">Asian Le Mans Series</title>
+    <sub-title lang="en">Malaysia</sub-title>
+    <desc lang="en">The 4 Hours of Sepang.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/f05c2ee1-26d9-5d8a-9fa3-537cd7b75ee7.jpg" />
+    <episode-num system="onscreen">S2025 E1</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106160000 +0000" stop="20260106180000 +0000">
+    <title lang="en">Top 14 Rugby Union</title>
+    <desc lang="en">Action from the French top flight.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b2a27490-c4d9-5c0c-8bce-6c221dbe9398.jpg" />
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106180000 +0000" stop="20260106183000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 10</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E10</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106183000 +0000" stop="20260106193000 +0000">
+    <title lang="en">Asian Le Mans Series</title>
+    <sub-title lang="en">Malaysia 2</sub-title>
+    <desc lang="en">The 4 Hours of Sepang.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/f05c2ee1-26d9-5d8a-9fa3-537cd7b75ee7.jpg" />
+    <episode-num system="onscreen">S2025 E2</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106193000 +0000" stop="20260106213000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Leicester v Leinster</sub-title>
+    <desc lang="en">Leicester Tigers v Leinster Rugby.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E13</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106213000 +0000" stop="20260106220000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 1</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E1</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260106220000 +0000" stop="20260107000000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Utah at NY Rangers</sub-title>
+    <desc lang="en">New York Rangers v Utah Mammoth.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E188</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107000000 +0000" stop="20260107003000 +0000">
+    <title lang="en">NHL Specials</title>
+    <sub-title lang="en">Summer with Stanley</sub-title>
+    <desc lang="en">The Florida Panthers celebrate their 2024/25 Stanley Cup success.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/7c68a809-ba71-55ab-9d0e-58572973e2c9.jpg" />
+    <episode-num system="onscreen">S2025 E11</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107003000 +0000" stop="20260107033000 +0000">
+    <title lang="en">Live NHL Ice Hockey</title>
+    <sub-title lang="en">Florida at Toronto</sub-title>
+    <desc lang="en">Toronto Maple Leafs v Florida Panthers (Face-off 12.30am). Coverage of the Eastern Conference match at Scotiabank Arena.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/bcfc6faf-2ed8-5c35-bee6-d432dc692c3b.jpg" />
+    <episode-num system="onscreen">S2026 E190</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107033000 +0000" stop="20260107040000 +0000">
+    <title lang="en">NHL: This is Hockey</title>
+    <sub-title lang="en">This is Hockey: Argentina</sub-title>
+    <desc lang="en">A look at the growth of ice hockey in Argentina.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/2ed9cbba-eb7e-583a-b379-fb502b044eb8.jpg" />
+    <episode-num system="onscreen">S2024 E1</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107040000 +0000" stop="20260107043000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 2</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E2</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107043000 +0000" stop="20260107050000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 4</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E4</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107050000 +0000" stop="20260107060000 +0000">
+    <title lang="en">NHL Tonight</title>
+    <sub-title lang="en">Top 20 Wings</sub-title>
+    <desc lang="en">A look at 20 of the best wingers currently in the NHL.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/fd1d2ed7-99cc-5882-9a0b-f0e4f72717d9.jpg" />
+    <episode-num system="onscreen">S2025 E6</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107060000 +0000" stop="20260107080000 +0000">
+    <title lang="en">Top 14 Rugby Union</title>
+    <sub-title lang="en">Perpignan v Toulouse</sub-title>
+    <desc lang="en">Perpignan v Toulouse.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b2a27490-c4d9-5c0c-8bce-6c221dbe9398.jpg" />
+    <episode-num system="onscreen">S2025 E53</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107080000 +0000" stop="20260107100000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Florida at Toronto</sub-title>
+    <desc lang="en">Toronto Maple Leafs v Florida Panthers.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E190</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107100000 +0000" stop="20260107120000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Glasgow Warriors v Toulouse</sub-title>
+    <desc lang="en">Glasgow Warriors v Toulouse.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E19</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107120000 +0000" stop="20260107123000 +0000">
+    <title lang="en">FastZone</title>
+    <sub-title lang="en">FastZone 39</sub-title>
+    <desc lang="en">A weekly Motorsports highlights show covering everything from prototypes to endurance racing, karting to airplanes and even some real oddities.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b3945fb5-c556-5ce7-b568-03774ab067ce.jpg" />
+    <episode-num system="onscreen">S2024 E39</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107123000 +0000" stop="20260107130000 +0000">
+    <title lang="en">Bike World</title>
+    <desc lang="en">The latest action from the high octane world of two wheels.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/e1536647-2e6f-5ad4-98f5-367e682be3bf.jpg" />
+    <episode-num system="onscreen">S2025 E132</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107130000 +0000" stop="20260107150000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Castres v Edinburgh</sub-title>
+    <desc lang="en">Castres v Edinburgh.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E21</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107150000 +0000" stop="20260107153000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 1</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E1</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107153000 +0000" stop="20260107160000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 3</sub-title>
+    <desc lang="en">Iconic sporting venues.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E3</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107160000 +0000" stop="20260107180000 +0000">
+    <title lang="en">Top 14 Rugby Union</title>
+    <sub-title lang="en">Bordeaux Begles v Racing 92</sub-title>
+    <desc lang="en">Bordeaux Begles v Racing 92.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b2a27490-c4d9-5c0c-8bce-6c221dbe9398.jpg" />
+    <episode-num system="onscreen">S2025 E55</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107180000 +0000" stop="20260107183000 +0000">
+    <title lang="en">FastZone</title>
+    <sub-title lang="en">FastZone 39</sub-title>
+    <desc lang="en">A weekly Motorsports highlights show covering everything from prototypes to endurance racing, karting to airplanes and even some real oddities.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b3945fb5-c556-5ce7-b568-03774ab067ce.jpg" />
+    <episode-num system="onscreen">S2024 E39</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107183000 +0000" stop="20260107190000 +0000">
+    <title lang="en">Football's Greatest</title>
+    <sub-title lang="en">Football's Greatest 1</sub-title>
+    <desc lang="en">The finest players in history discuss their careers.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/31c81ef5-7517-511a-a3ca-0989dbc47b8f.jpg" />
+    <episode-num system="onscreen">S2022 E1</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107190000 +0000" stop="20260107193000 +0000">
+    <title lang="en">Football's Greatest</title>
+    <sub-title lang="en">Football's Greatest 5</sub-title>
+    <desc lang="en">The finest players in history discuss their careers.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/31c81ef5-7517-511a-a3ca-0989dbc47b8f.jpg" />
+    <episode-num system="onscreen">S2022 E5</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107193000 +0000" stop="20260107213000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Stormers v La Rochelle</sub-title>
+    <desc lang="en">Stormers v La Rochelle.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E14</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107213000 +0000" stop="20260107220000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 3</sub-title>
+    <desc lang="en">Iconic sporting venues.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E3</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260107220000 +0000" stop="20260108000000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Florida at Toronto</sub-title>
+    <desc lang="en">Toronto Maple Leafs v Florida Panthers.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E190</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108000000 +0000" stop="20260108030000 +0000">
+    <title lang="en">Live NHL Ice Hockey</title>
+    <sub-title lang="en">Dallas at Washington</sub-title>
+    <desc lang="en">Washington Capitals v Dallas Stars (Face-off 12.00am). Coverage of the inter-conference match at Capital One Arena.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/bcfc6faf-2ed8-5c35-bee6-d432dc692c3b.jpg" />
+    <episode-num system="onscreen">S2026 E192</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108030000 +0000" stop="20260108033000 +0000">
+    <title lang="en">NHL: This is Hockey</title>
+    <sub-title lang="en">This is Hockey: Chile</sub-title>
+    <desc lang="en">A look at the growth of ice hockey in Chile.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/2ed9cbba-eb7e-583a-b379-fb502b044eb8.jpg" />
+    <episode-num system="onscreen">S2024 E2</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108033000 +0000" stop="20260108040000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 3</sub-title>
+    <desc lang="en">Iconic sporting venues.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E3</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108040000 +0000" stop="20260108060000 +0000">
+    <title lang="en">LaLiga</title>
+    <sub-title lang="en">Osasuna v Athletic Club</sub-title>
+    <desc lang="en">Osasuna v Athletic Bilbao.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/4a7b3464-3c38-5967-8c54-226430075172.jpg" />
+    <episode-num system="onscreen">S2025 E161</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108060000 +0000" stop="20260108080000 +0000">
+    <title lang="en">Top 14 Rugby Union</title>
+    <desc lang="en">Action from the French top flight.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b2a27490-c4d9-5c0c-8bce-6c221dbe9398.jpg" />
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108080000 +0000" stop="20260108100000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Dallas at Washington</sub-title>
+    <desc lang="en">Washington Capitals v Dallas Stars.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E192</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108100000 +0000" stop="20260108103000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 2</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E2</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108103000 +0000" stop="20260108123000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Bordeaux Begles v Scarlets</sub-title>
+    <desc lang="en">Bordeaux Begles v Scarlets.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E17</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108123000 +0000" stop="20260108143000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Sharks v Saracens</sub-title>
+    <desc lang="en">Sharks v Saracens.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E16</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108143000 +0000" stop="20260108150000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 3</sub-title>
+    <desc lang="en">Iconic sporting venues.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E3</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108150000 +0000" stop="20260108170000 +0000">
+    <title lang="en">LaLiga</title>
+    <sub-title lang="en">Celta Vigo v Valencia</sub-title>
+    <desc lang="en">Celta Vigo v Valencia.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/4a7b3464-3c38-5967-8c54-226430075172.jpg" />
+    <episode-num system="onscreen">S2025 E160</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108170000 +0000" stop="20260108190000 +0000">
+    <title lang="en">Top 14 Rugby Union</title>
+    <sub-title lang="en">La Rochelle v Toulon</sub-title>
+    <desc lang="en">La Rochelle v Toulon.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/b2a27490-c4d9-5c0c-8bce-6c221dbe9398.jpg" />
+    <episode-num system="onscreen">S2025 E56</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108190000 +0000" stop="20260108193000 +0000">
+    <title lang="en">Bike World</title>
+    <desc lang="en">The latest action from the high octane world of two wheels.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/e1536647-2e6f-5ad4-98f5-367e682be3bf.jpg" />
+    <episode-num system="onscreen">S2025 E132</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108193000 +0000" stop="20260108213000 +0000">
+    <title lang="en">Champions Cup</title>
+    <sub-title lang="en">Munster v Gloucester</sub-title>
+    <desc lang="en">Munster Rugby v Gloucester Rugby.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/43ccb6ad-9c9f-5f75-bd3e-bb0404423f8d.jpg" />
+    <episode-num system="onscreen">S2025 E18</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108213000 +0000" stop="20260108220000 +0000">
+    <title lang="en">Temples of Sport</title>
+    <sub-title lang="en">Temples of Sport 4</sub-title>
+    <desc lang="en">Iconic sporting venues from around the globe.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/a7c34b74-fe6c-5dc8-9d11-366466e8516a.jpg" />
+    <episode-num system="onscreen">S2022 E4</episode-num>
+  </programme>
+  <programme channel="Premier.Sports.2.HD.uk" start="20260108220000 +0000" stop="20260109000000 +0000">
+    <title lang="en">NHL Ice Hockey</title>
+    <sub-title lang="en">Dallas at Washington</sub-title>
+    <desc lang="en">Washington Capitals v Dallas Stars.</desc>
+    <category lang="en">Sport</category>
+    <icon src="https://tv.assets.pressassociation.io/058b4bbc-ab3d-5c4a-8d2a-6cfa37d868b5.jpg" />
+    <episode-num system="onscreen">S2026 E192</episode-num>
+  </programme>
   <channel id="HBO.Drama.us2">
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s34879_dark_360w_270h.png" />
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s34879_dark_360w_270h.png" />
@@ -22846,6 +23292,11 @@
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s32281_dark_360w_270h.png" />
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s32281_dark_360w_270h.png" />
     <display-name lang="en">NBA TV HD</display-name>
+  </channel>
+  <channel id="CBS.News.National.Stream.us2">
+    <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s104846_dark_360w_270h.png" />
+    <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s104846_dark_360w_270h.png" />
+    <display-name lang="en">CBS News National Stream</display-name>
   </channel>
   <channel id="Outdoor.Channel.HD.us2">
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14776_dark_360w_270h.png" />
@@ -35579,6 +36030,889 @@
     <category lang="en">Sports</category>
     <category lang="en">Hockey</category>
     <icon src="http://dshm.tmsimg.com/assets/GNLZZGG0029Y4S2.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105060000 +0000" stop="20260105070000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105070000 +0000" stop="20260105080000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105080000 +0000" stop="20260105090000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105090000 +0000" stop="20260105100000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105100000 +0000" stop="20260105103000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105103000 +0000" stop="20260105110000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105110000 +0000" stop="20260105113000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105113000 +0000" stop="20260105120000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105120000 +0000" stop="20260105130000 +0000">
+    <title lang="en">CBS Morning News</title>
+    <desc lang="en">CBS News Mornings is a live daily morning news show that is anchored by Anne-Marie Green. Get ahead on the latest news by streaming the most important national and global stories first thing in the morning.</desc>
+    <credits>
+      <actor>Anne-Marie Green</actor>
+    </credits>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21455348_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105130000 +0000" stop="20260105140000 +0000">
+    <title lang="en">CBS Mornings</title>
+    <desc lang="en">Hosts Gayle King, Tony Dokoupil and Nate Burleson set out to unite CBS' morning landscape with their lively and original reporting on international news stories during the weekday program's first hour, while expanding on feature reporting during the second hour with live interviews as well as in-depth pieces, covering topics from news, sports, climate and technology to race, health, parenting and personal finance. The team broadcasts from a new state-of-the-art studio in New York's Times Square.</desc>
+    <credits>
+      <actor>Gayle King</actor>
+      <actor>Tony Dokoupil</actor>
+      <actor>Nate Burleson</actor>
+    </credits>
+    <date>2021</date>
+    <category lang="en">Talk</category>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p20589677_b_h8_ai.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105140000 +0000" stop="20260105160000 +0000">
+    <title lang="en">CBS News 24/7 Mornings</title>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31819629_b_h8_aa.jpg?w=960&amp;h=540" />
+    <premiere lang="en" />
+  </programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105160000 +0000" stop="20260105170000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105170000 +0000" stop="20260105180000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105180000 +0000" stop="20260105190000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105190000 +0000" stop="20260105193000 +0000">
+    <title lang="en">CBS News Live Reporting</title>
+    <desc lang="en">Live news and top stories on CBS News.</desc>
+    <date>2023</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p25904603_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105193000 +0000" stop="20260105200000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105200000 +0000" stop="20260105203000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105203000 +0000" stop="20260105210000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105210000 +0000" stop="20260105220000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105220000 +0000" stop="20260105230000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <premiere lang="en" />
+  </programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260105230000 +0000" stop="20260106000000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <premiere lang="en" />
+  </programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106000000 +0000" stop="20260106020000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106020000 +0000" stop="20260106030000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106030000 +0000" stop="20260106033000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106033000 +0000" stop="20260106040000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106040000 +0000" stop="20260106043000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106043000 +0000" stop="20260106050000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106050000 +0000" stop="20260106060000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106060000 +0000" stop="20260106070000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106070000 +0000" stop="20260106080000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106080000 +0000" stop="20260106090000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106090000 +0000" stop="20260106100000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106100000 +0000" stop="20260106103000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106103000 +0000" stop="20260106110000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106110000 +0000" stop="20260106113000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106113000 +0000" stop="20260106120000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106120000 +0000" stop="20260106130000 +0000">
+    <title lang="en">CBS Morning News</title>
+    <desc lang="en">CBS News Mornings is a live daily morning news show that is anchored by Anne-Marie Green. Get ahead on the latest news by streaming the most important national and global stories first thing in the morning.</desc>
+    <credits>
+      <actor>Anne-Marie Green</actor>
+    </credits>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21455348_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106130000 +0000" stop="20260106140000 +0000">
+    <title lang="en">CBS Mornings</title>
+    <desc lang="en">Hosts Gayle King, Tony Dokoupil and Nate Burleson set out to unite CBS' morning landscape with their lively and original reporting on international news stories during the weekday program's first hour, while expanding on feature reporting during the second hour with live interviews as well as in-depth pieces, covering topics from news, sports, climate and technology to race, health, parenting and personal finance. The team broadcasts from a new state-of-the-art studio in New York's Times Square.</desc>
+    <credits>
+      <actor>Gayle King</actor>
+      <actor>Tony Dokoupil</actor>
+      <actor>Nate Burleson</actor>
+    </credits>
+    <date>2021</date>
+    <category lang="en">Talk</category>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p20589677_b_h8_ai.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106140000 +0000" stop="20260106160000 +0000">
+    <title lang="en">CBS News 24/7 Mornings</title>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31819629_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106160000 +0000" stop="20260106170000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106170000 +0000" stop="20260106180000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106180000 +0000" stop="20260106190000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106190000 +0000" stop="20260106193000 +0000">
+    <title lang="en">CBS News Live Reporting</title>
+    <desc lang="en">Live news and top stories on CBS News.</desc>
+    <date>2023</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p25904603_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106193000 +0000" stop="20260106200000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106200000 +0000" stop="20260106203000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106203000 +0000" stop="20260106210000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106210000 +0000" stop="20260106220000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106220000 +0000" stop="20260106230000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260106230000 +0000" stop="20260107000000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107000000 +0000" stop="20260107020000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107020000 +0000" stop="20260107030000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107030000 +0000" stop="20260107033000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107033000 +0000" stop="20260107040000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107040000 +0000" stop="20260107043000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107043000 +0000" stop="20260107050000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107050000 +0000" stop="20260107060000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107060000 +0000" stop="20260107070000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107070000 +0000" stop="20260107080000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107080000 +0000" stop="20260107090000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107090000 +0000" stop="20260107100000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107100000 +0000" stop="20260107103000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107103000 +0000" stop="20260107110000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107110000 +0000" stop="20260107113000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107113000 +0000" stop="20260107120000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107120000 +0000" stop="20260107130000 +0000">
+    <title lang="en">CBS Morning News</title>
+    <desc lang="en">CBS News Mornings is a live daily morning news show that is anchored by Anne-Marie Green. Get ahead on the latest news by streaming the most important national and global stories first thing in the morning.</desc>
+    <credits>
+      <actor>Anne-Marie Green</actor>
+    </credits>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21455348_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107130000 +0000" stop="20260107140000 +0000">
+    <title lang="en">CBS Mornings</title>
+    <desc lang="en">Hosts Gayle King, Tony Dokoupil and Nate Burleson set out to unite CBS' morning landscape with their lively and original reporting on international news stories during the weekday program's first hour, while expanding on feature reporting during the second hour with live interviews as well as in-depth pieces, covering topics from news, sports, climate and technology to race, health, parenting and personal finance. The team broadcasts from a new state-of-the-art studio in New York's Times Square.</desc>
+    <credits>
+      <actor>Gayle King</actor>
+      <actor>Tony Dokoupil</actor>
+      <actor>Nate Burleson</actor>
+    </credits>
+    <date>2021</date>
+    <category lang="en">Talk</category>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p20589677_b_h8_ai.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107140000 +0000" stop="20260107160000 +0000">
+    <title lang="en">CBS News 24/7 Mornings</title>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31819629_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107160000 +0000" stop="20260107170000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107170000 +0000" stop="20260107180000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107180000 +0000" stop="20260107190000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107190000 +0000" stop="20260107193000 +0000">
+    <title lang="en">CBS News Live Reporting</title>
+    <desc lang="en">Live news and top stories on CBS News.</desc>
+    <date>2023</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p25904603_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107193000 +0000" stop="20260107200000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107200000 +0000" stop="20260107203000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107203000 +0000" stop="20260107210000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107210000 +0000" stop="20260107220000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107220000 +0000" stop="20260107230000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260107230000 +0000" stop="20260108000000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108000000 +0000" stop="20260108020000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108020000 +0000" stop="20260108030000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108030000 +0000" stop="20260108033000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108033000 +0000" stop="20260108040000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108040000 +0000" stop="20260108043000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108043000 +0000" stop="20260108050000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108050000 +0000" stop="20260108060000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108060000 +0000" stop="20260108070000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108070000 +0000" stop="20260108080000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108080000 +0000" stop="20260108090000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108090000 +0000" stop="20260108100000 +0000">
+    <title lang="en">CBS News Roundup</title>
+    <desc lang="en">The headlines one needs to know overnight... plus, a roundup of MoneyWatch, health, consumer and up-to-the-minute technology news, the latest weather, and inspiring stories of kindness and hope.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27490843_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108100000 +0000" stop="20260108103000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108103000 +0000" stop="20260108110000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108110000 +0000" stop="20260108113000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108113000 +0000" stop="20260108120000 +0000">
+    <title lang="en">CBS News Mornings</title>
+    <desc lang="en">CBS News Mornings broadcasts on weekdays and offers viewers up-to-date news, comprehensive weather forecasts, and highlights from the world of sports.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236437_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108120000 +0000" stop="20260108130000 +0000">
+    <title lang="en">CBS Morning News</title>
+    <desc lang="en">CBS News Mornings is a live daily morning news show that is anchored by Anne-Marie Green. Get ahead on the latest news by streaming the most important national and global stories first thing in the morning.</desc>
+    <credits>
+      <actor>Anne-Marie Green</actor>
+    </credits>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21455348_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108130000 +0000" stop="20260108140000 +0000">
+    <title lang="en">CBS Mornings</title>
+    <desc lang="en">Hosts Gayle King, Tony Dokoupil and Nate Burleson set out to unite CBS' morning landscape with their lively and original reporting on international news stories during the weekday program's first hour, while expanding on feature reporting during the second hour with live interviews as well as in-depth pieces, covering topics from news, sports, climate and technology to race, health, parenting and personal finance. The team broadcasts from a new state-of-the-art studio in New York's Times Square.</desc>
+    <credits>
+      <actor>Gayle King</actor>
+      <actor>Tony Dokoupil</actor>
+      <actor>Nate Burleson</actor>
+    </credits>
+    <date>2021</date>
+    <category lang="en">Talk</category>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p20589677_b_h8_ai.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108140000 +0000" stop="20260108160000 +0000">
+    <title lang="en">CBS News 24/7 Mornings</title>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31819629_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108160000 +0000" stop="20260108170000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108170000 +0000" stop="20260108180000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108180000 +0000" stop="20260108190000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108190000 +0000" stop="20260108193000 +0000">
+    <title lang="en">CBS News Live Reporting</title>
+    <desc lang="en">Live news and top stories on CBS News.</desc>
+    <date>2023</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p25904603_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108193000 +0000" stop="20260108200000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108200000 +0000" stop="20260108203000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108203000 +0000" stop="20260108210000 +0000">
+    <title lang="en">CBS News Latest Headlines</title>
+    <desc lang="en">The latest headlines and top stories from CBS News.</desc>
+    <date>2022</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p21487003_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108210000 +0000" stop="20260108220000 +0000">
+    <title lang="en">CBS News 24/7</title>
+    <desc lang="en">Coverage, reporting and storytelling from CBS News and Stations; a look at how news coverage comes together.</desc>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27733200_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108220000 +0000" stop="20260108230000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260108230000 +0000" stop="20260109000000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109000000 +0000" stop="20260109020000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109020000 +0000" stop="20260109030000 +0000">
+    <title lang="en">The Daily Report</title>
+    <desc lang="en">The Daily Report on CBS News features original interviews and insights on the most important, urgent and interesting stories of the day.</desc>
+    <credits>
+      <actor>John Dickerson</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p27236388_b_h8_ab.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109030000 +0000" stop="20260109033000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109033000 +0000" stop="20260109040000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109040000 +0000" stop="20260109043000 +0000">
+    <title lang="en">CBS Evening News</title>
+    <desc lang="en">The latest world and national news.</desc>
+    <credits>
+      <actor>Tony Dokoupil</actor>
+      <actor>Maurice DuBois</actor>
+      <actor>Jericka Duncan</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p28807922_b_h8_ad.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109043000 +0000" stop="20260109050000 +0000">
+    <title lang="en">24/7 Primetime</title>
+    <desc lang="en">24/7 Primetime is your essential daily guide to all the stories shaping your world. Anchored by CBS News' Elizabeth Cook, the show delivers the news you need to know.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p31446893_b_h8_aa.jpg?w=960&amp;h=540" />
+    <previously-shown /></programme>
+  <programme channel="CBS.News.National.Stream.us2" start="20260109050000 +0000" stop="20260109060000 +0000">
+    <title lang="en">The Takeout with Major Garrett</title>
+    <desc lang="en">The Takeout is a new spin on the widely acclaimed podcast hosted by CBS News Chief Washington Correspondent Major Garrett. A daily streaming show that harnesses the best of CBS News's political reporting and lives comfortably in deep discussions of economics, pop culture, sports and technology.</desc>
+    <date>2025</date>
+    <category lang="en">News</category>
+    <icon src="http://dshm.tmsimg.com/assets/p30158443_b_h8_ab.jpg?w=960&amp;h=540" />
     <previously-shown /></programme>
   <programme channel="MSNBC.HD.us2" start="20260105060000 +0000" stop="20260105070000 +0000">
     <title lang="en">Dateline</title>
@@ -403457,37 +404791,6 @@
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s114140_dark_360w_270h.png" />
     <lcn>225</lcn>
   </channel>
-  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260106080000 +0000" stop="20260106090000 +0000">
-    <title>Dakar Rally</title>
-    <sub-title>Dakar Rally</sub-title>
-    <desc>YANBU &gt; ALULA.</desc>
-    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/613094bcebc35bc7acbca943fb5d26d1/images/gracenote/assets/p23649247_b_h10_ad.jpg" />
-    <episode-num system="onscreen">S04E03</episode-num>
-  </programme>
-  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260106090000 +0000" stop="20260106110000 +0000">
-    <title>PFT Live</title>
-    <desc>Coverage of the news from around the NFL; breaking down the league's reports and rumors.</desc>
-    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/3b234878e4b25f6c9f31aff39875417d/images/gracenote/assets/p22919764_b_h10_aa.jpg" />
-    <episode-num system="onscreen">S14E02</episode-num>
-  </programme>
-  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260106110000 +0000" stop="20260106120000 +0000">
-    <title>Chris Simms Unbuttoned</title>
-    <desc>An unfiltered look at the NFL, with player access and stories from a life in and around football.</desc>
-    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/82a87e1327c753a189e12632b49258eb/images/gracenote/assets/p18991697_b_h10_ab.jpg" />
-    <episode-num system="onscreen">S07E01</episode-num>
-  </programme>
-  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260106120000 +0000" stop="20260106140000 +0000">
-    <title>PFT Live</title>
-    <desc>Coverage of the news from around the NFL; breaking down the league's reports and rumors.</desc>
-    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/3b234878e4b25f6c9f31aff39875417d/images/gracenote/assets/p22919764_b_h10_aa.jpg" />
-    <episode-num system="onscreen">S14E03</episode-num>
-  </programme>
-  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260106140000 +0000" stop="20260106170000 +0000">
-    <title>The Dan Patrick Show</title>
-    <desc>Interviews and discussions with some of the biggest stars in sports and entertainment.</desc>
-    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/268b76d3582253118619b5a96aeb4974/images/gracenote/assets/p18691242_b_h8_aa.jpg" />
-    <episode-num system="onscreen">S07E02</episode-num>
-  </programme>
   <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260106170000 +0000" stop="20260106180000 +0000">
     <title>Numbers on the Board</title>
     <desc>A blend of NBA opinions, stats, culture, and a fresh narrative to the game we love.</desc>
@@ -403814,5 +405117,36 @@
     <desc>The NBA's biggest stars, jaw-dropping plays and clutch buzzer-beaters come to life.</desc>
     <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/42ab08724cad70d5f52e856c166bc2e5/images/gracenote/assets/p31278364_b_h10_aa.jpg" />
     <episode-num system="onscreen">S01E31</episode-num>
+  </programme>
+  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260109080000 +0000" stop="20260109090000 +0000">
+    <title>Dakar Rally</title>
+    <sub-title>Dakar Rally</sub-title>
+    <desc>BIVOUAC REFUGE &gt; HAIL.</desc>
+    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/613094bcebc35bc7acbca943fb5d26d1/images/gracenote/assets/p23649247_b_h10_ad.jpg" />
+    <episode-num system="onscreen">S04E06</episode-num>
+  </programme>
+  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260109090000 +0000" stop="20260109110000 +0000">
+    <title>PFT Live</title>
+    <desc>Coverage of the news from around the NFL; breaking down the league's reports and rumors.</desc>
+    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/3b234878e4b25f6c9f31aff39875417d/images/gracenote/assets/p22919764_b_h10_aa.jpg" />
+    <episode-num system="onscreen">S14E05</episode-num>
+  </programme>
+  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260109110000 +0000" stop="20260109120000 +0000">
+    <title>Chris Simms Unbuttoned</title>
+    <desc>An unfiltered look at the NFL, with player access and stories from a life in and around football.</desc>
+    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/82a87e1327c753a189e12632b49258eb/images/gracenote/assets/p18991697_b_h10_ab.jpg" />
+    <episode-num system="onscreen">S07E03</episode-num>
+  </programme>
+  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260109120000 +0000" stop="20260109140000 +0000">
+    <title>PFT Live</title>
+    <desc>Coverage of the news from around the NFL; breaking down the league's reports and rumors.</desc>
+    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/3b234878e4b25f6c9f31aff39875417d/images/gracenote/assets/p22919764_b_h10_aa.jpg" />
+    <episode-num system="onscreen">S14E06</episode-num>
+  </programme>
+  <programme channel="a90a91570ce0536cbb22b591ad7e0da2" start="20260109140000 +0000" stop="20260109170000 +0000">
+    <title>The Dan Patrick Show</title>
+    <desc>Interviews and discussions with some of the biggest stars in sports and entertainment.</desc>
+    <icon src="https://images.sr.roku.com/idType/roku-trc/context/trc/id/268b76d3582253118619b5a96aeb4974/images/gracenote/assets/p18691242_b_h8_aa.jpg" />
+    <episode-num system="onscreen">S07E05</episode-num>
   </programme>
   </tv>
