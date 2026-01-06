@@ -1,5 +1,10 @@
 import logging
+from logging.handlers import TimedRotatingFileHandler
 from pathlib import Path
+
+LOG_DIR = Path(__file__).parent.parent.parent / "logs"
+
+LOG_DIR.mkdir(exist_ok=True)
 
 LOG_FMT = (
     "[%(asctime)s] "
@@ -14,7 +19,6 @@ COLORS = {
     "INFO": "\033[32m",
     "WARNING": "\033[33m",
     "ERROR": "\033[31m",
-    "CRITICAL": "\033[1;41m",
     "reset": "\033[0m",
 }
 
@@ -40,18 +44,33 @@ def get_logger(name: str | None = None) -> logging.Logger:
 
     logger = logging.getLogger(name)
 
-    if not logger.hasHandlers():
-        handler = logging.StreamHandler()
+    logger.setLevel(logging.INFO)
 
-        formatter = ColorFormatter(LOG_FMT, datefmt="%Y-%m-%d | %H:%M:%S")
+    if logger.hasHandlers():
+        return logger
 
-        handler.setFormatter(formatter)
+    formatting = {"fmt": LOG_FMT, "datefmt": "%Y-%m-%d | %H:%M:%S"}
 
-        logger.addHandler(handler)
+    file_handler = TimedRotatingFileHandler(
+        LOG_DIR / "fetch.log",
+        when="midnight",
+        interval=1,
+        backupCount=3,
+        encoding="utf-8",
+        utc=False,
+    )
 
-        logger.setLevel(logging.INFO)
+    file_handler.setFormatter(logging.Formatter(**formatting))
 
-        logger.propagate = False
+    console_handler = logging.StreamHandler()
+
+    console_handler.setFormatter(ColorFormatter(**formatting))
+
+    logger.addHandler(file_handler)
+
+    logger.addHandler(console_handler)
+
+    logger.propagate = False
 
     return logger
 

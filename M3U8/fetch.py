@@ -49,6 +49,8 @@ def load_base() -> tuple[list[str], int]:
 
 
 async def main() -> None:
+    log.info(f"{'=' * 10} Scraper Started {'=' * 10}")
+
     base_m3u8, tvg_chno = load_base()
 
     tasks = [
@@ -143,6 +145,10 @@ async def main() -> None:
     )
 
     log.info(f"Events saved to {EVENTS_FILE.resolve()}")
+
+    for hndlr in log.handlers:
+        hndlr.flush()
+        hndlr.stream.write("\n")
 
 
 if __name__ == "__main__":
