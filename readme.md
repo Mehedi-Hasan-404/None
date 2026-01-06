@@ -1,11 +1,11 @@
-## Base Log @ 2026-01-06 14:47 UTC
+## Base Log @ 2026-01-06 20:43 UTC
 
 ### ✅ Working Streams: 146<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31636` |
 ---
 #### Base Channels URL
 ```
