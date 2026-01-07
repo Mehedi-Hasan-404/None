@@ -1,17 +1,11 @@
-## Base Log @ 2026-01-07 08:52 UTC
+## Base Log @ 2026-01-07 14:48 UTC
 
-### ✅ Working Streams: 139<br>❌ Dead Streams: 9
+### ✅ Working Streams: 145<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| FDSN Detroit | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20936` |
-| FDSN North | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/58827` |
-| FDSN Ohio | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/17752` |
-| FDSN West | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20932` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
+| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
