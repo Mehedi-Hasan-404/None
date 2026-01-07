@@ -1,12 +1,12 @@
-## Base Log @ 2026-01-07 14:48 UTC
+## Base Log @ 2026-01-07 20:45 UTC
 
 ### ✅ Working Streams: 145<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
+| Premier Sports 1 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1276/video.m3u8?token=c708d1e1b86b0247d95ecf4645dadd0f` |
 ---
 #### Base Channels URL
 ```
