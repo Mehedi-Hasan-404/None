@@ -1,10 +1,11 @@
-## Base Log @ 2026-01-06 20:43 UTC
+## Base Log @ 2026-01-07 03:49 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 2
+### ✅ Working Streams: 145<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
+| FDSN Oklahoma | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20934` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
