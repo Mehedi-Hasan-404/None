@@ -16,7 +16,7 @@ TAG = "STRMSGATE"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
-API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
+API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
 
 BASE_URL = "https://streamingon.org"
 
