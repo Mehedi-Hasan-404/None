@@ -1,9 +1,10 @@
-## Base Log @ 2026-01-08 17:19 UTC
+## Base Log @ 2026-01-08 20:44 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 2
+### ✅ Working Streams: 145<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| BET | HTTP Error (403) | `https://streamer1.nexgen.bz/BET/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 ---
