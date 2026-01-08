@@ -1,3 +1,4 @@
+import asyncio
 from functools import partial
 
 from playwright.async_api import async_playwright
@@ -15,22 +16,26 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
 HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=86_400)
 
-BASE_URL = "https://slapstreams.com"
+BASE_URLS = {"NFL": "https://nflwebcast.com", "NHL": "https://slapstreams.com"}
 
 
 def fix_event(s: str) -> str:
     return " vs ".join(s.split("@"))
 
 
-async def refresh_html_cache() -> dict[str, dict[str, str | float]]:
+async def refresh_html_cache(url: str) -> dict[str, dict[str, str | float]]:
     events = {}
 
-    if not (html_data := await network.request(BASE_URL, log=log)):
+    if not (html_data := await network.request(url, log=log)):
         return events
 
     now = Time.clean(Time.now())
 
     soup = HTMLParser(html_data.content)
+
+    title = soup.css_first("title").text(strip=True)
+
+    sport = "NFL" if "NFL" in title else "NHL"
 
     date_text = now.strftime("%B %d, %Y")
 
@@ -61,10 +66,10 @@ async def refresh_html_cache() -> dict[str, dict[str, str | float]]:
 
         event = fix_event(event_name)
 
-        key = f"[NHL] {event} ({TAG})"
+        key = f"[{sport}] {event} ({TAG})"
 
         events[key] = {
-            "sport": "NHL",
+            "sport": sport,
             "event": event,
             "link": href,
             "event_ts": event_dt.timestamp(),
@@ -80,7 +85,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (events := HTML_CACHE.load()):
         log.info("Refreshing HTML cache")
 
-        events = await refresh_html_cache()
+        tasks = [refresh_html_cache(url) for url in BASE_URLS.values()]
+
+        results = await asyncio.gather(*tasks)
+
+        events = {k: v for data in results for k, v in data.items()}
 
         HTML_CACHE.write(events)
 
@@ -110,7 +119,7 @@ async def scrape() -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    log.info(f'Scraping from "{' & '.join(BASE_URLS.values())}"')
 
     events = await get_events(cached_urls.keys())
 
@@ -152,7 +161,7 @@ async def scrape() -> None:
                         entry = {
                             "url": url,
                             "logo": logo,
-                            "base": BASE_URL,
+                            "base": BASE_URLS[sport],
                             "timestamp": ts,
                             "id": tvg_id or "Live.Event.us",
                             "link": link,
