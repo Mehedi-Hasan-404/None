@@ -1,24 +1,11 @@
-## Base Log @ 2026-01-08 14:50 UTC
+## Base Log @ 2026-01-08 17:19 UTC
 
-### ✅ Working Streams: 133<br>❌ Dead Streams: 15
+### ✅ Working Streams: 146<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Aspire | HTTP Error (404) | `http://fl1.moveonjoy.com/Aspire/index.m3u8` |
-| BBC America | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_AMERICA/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| Discovery Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Discovery_Channel/index.m3u8` |
-| FX | HTTP Error (404) | `http://fl1.moveonjoy.com/FX/index.m3u8` |
-| FYI TV | HTTP Error (404) | `http://fl1.moveonjoy.com/FYI/index.m3u8` |
-| Food Network | HTTP Error (404) | `http://fl1.moveonjoy.com/FOOD_NETWORK/index.m3u8` |
-| HBO 2 | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_2/index.m3u8` |
-| HBO Zone | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_ZONE/index.m3u8` |
-| HBO | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO/index.m3u8` |
-| Lifetime | HTTP Error (404) | `http://fl1.moveonjoy.com/LIFETIME/index.m3u8` |
-| MotorTrend TV | HTTP Error (404) | `http://fl1.moveonjoy.com/MOTOR_TREND/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
-| Showtime | HTTP Error (404) | `http://fl1.moveonjoy.com/SHOWTIME/index.m3u8` |
-| Smithsonian Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/SMITHSONIAN_CHANNEL/index.m3u8` |
 ---
 #### Base Channels URL
 ```
