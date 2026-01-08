@@ -1,6 +1,6 @@
-## Base Log @ 2026-01-08 08:52 UTC
+## Base Log @ 2026-01-08 14:50 UTC
 
-### ✅ Working Streams: 126<br>❌ Dead Streams: 22
+### ✅ Working Streams: 133<br>❌ Dead Streams: 15
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -8,24 +8,17 @@
 | BBC America | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_AMERICA/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
 | Discovery Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Discovery_Channel/index.m3u8` |
-| FDSN Detroit | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20936` |
-| FDSN Ohio | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/17752` |
-| FDSN Southeast | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/81111` |
 | FX | HTTP Error (404) | `http://fl1.moveonjoy.com/FX/index.m3u8` |
 | FYI TV | HTTP Error (404) | `http://fl1.moveonjoy.com/FYI/index.m3u8` |
 | Food Network | HTTP Error (404) | `http://fl1.moveonjoy.com/FOOD_NETWORK/index.m3u8` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
 | HBO 2 | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_2/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
 | HBO Zone | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_ZONE/index.m3u8` |
+| HBO | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO/index.m3u8` |
 | Lifetime | HTTP Error (404) | `http://fl1.moveonjoy.com/LIFETIME/index.m3u8` |
 | MotorTrend TV | HTTP Error (404) | `http://fl1.moveonjoy.com/MOTOR_TREND/index.m3u8` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 | Showtime | HTTP Error (404) | `http://fl1.moveonjoy.com/SHOWTIME/index.m3u8` |
 | Smithsonian Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/SMITHSONIAN_CHANNEL/index.m3u8` |
-| SportsNet New York | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20938` |
-| Willow Cricket | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/41979` |
 ---
 #### Base Channels URL
 ```
