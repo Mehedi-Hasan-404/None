@@ -1,14 +1,21 @@
-## Base Log @ 2026-01-09 03:50 UTC
+## Base Log @ 2026-01-09 08:52 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 5
+### ✅ Working Streams: 136<br>❌ Dead Streams: 12
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| FDSN Wisconsin | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/78599` |
-| MSNBC | HTTP Error (404) | `http://41.205.93.154/MSNBC/index.m3u8` |
+| FDSN Detroit | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20936` |
+| FDSN North | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/58827` |
+| FDSN Ohio | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/17752` |
+| FDSN Southeast | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/81111` |
+| FDSN West | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20932` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| MSG | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/21090` |
+| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/31637` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
 | Premier Sports 2 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1275/mpegts?token=0abb07758b53c286d3b6b7943b7c5405` |
+| SportsNet New York | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20938` |
 ---
 #### Base Channels URL
 ```
