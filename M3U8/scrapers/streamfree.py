@@ -44,13 +44,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
             key = f"[{sport}] {name} ({TAG})"
 
-            logo = (
-                urljoin(BASE_URL, thumbnail)
-                if (thumbnail := stream.get("thumbnail_url"))
-                else None
-            )
-
-            tvg_id, pic = leagues.get_tvg_info(sport, name)
+            tvg_id, logo = leagues.get_tvg_info(sport, name)
 
             events[key] = {
                 "url": network.build_proxy_url(
@@ -58,7 +52,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
                     path=f"{stream_key}/index.m3u8",
                     query={"stream_name": name},
                 ),
-                "logo": logo or pic,
+                "logo": logo,
                 "base": BASE_URL,
                 "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",

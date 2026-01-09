@@ -37,6 +37,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         API_CACHE.write(api_data)
 
     events = []
+    start_dt = now.delta(minutes=-30)
+    end_dt = now.delta(hours=3)
 
     for info in api_data.get("days", []):
         for event in info["items"]:
@@ -45,7 +47,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
             event_dt = Time.from_str(event["when_et"], timezone="ET")
 
-            if now.date() != event_dt.date():
+            if not start_dt <= event_dt <= end_dt:
                 continue
 
             sport = fix_league(event_league)
