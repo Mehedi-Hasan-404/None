@@ -38,9 +38,6 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
-
     for info in api_data.get("days", []):
         for event in info["items"]:
             if (event_league := event["league"]) == "channel tv":
@@ -48,7 +45,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
             event_dt = Time.from_str(event["when_et"], timezone="ET")
 
-            if not start_dt <= event_dt <= end_dt:
+            if now.date() != event_dt.date():
                 continue
 
             sport = fix_league(event_league)

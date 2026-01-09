@@ -14,7 +14,7 @@ TAG = "TOTALSPRTK"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=28_800)
 
-BASE_URL = "https://live.totalsportek777.com/"
+BASE_URL = "https://live2.totalsportek777.com/"
 
 
 def fix_league(s: str) -> str:
@@ -29,15 +29,12 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     soup = HTMLParser(html_data.content)
 
-    if not (iframe := soup.css_first("iframe")):
+    if not (iframe := soup.css_first(".box iframe")):
         log.warning(f"URL {url_num}) No iframe element found.")
 
         return None, None
 
-    if (
-        not (iframe_src := iframe.attributes.get("src"))
-        or "xsportportal" not in iframe_src
-    ):
+    if not (iframe_src := iframe.attributes.get("src")):
         log.warning(f"URL {url_num}) No valid iframe source found.")
 
         return None, None
@@ -56,7 +53,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return bytes.fromhex(match[2]).decode("utf-8"), iframe_src
+    return match[2], iframe_src
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
