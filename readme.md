@@ -1,12 +1,14 @@
-## Base Log @ 2026-01-08 20:44 UTC
+## Base Log @ 2026-01-09 03:50 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 3
+### ✅ Working Streams: 143<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BET | HTTP Error (403) | `https://streamer1.nexgen.bz/BET/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
+| FDSN Wisconsin | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/78599` |
+| MSNBC | HTTP Error (404) | `http://41.205.93.154/MSNBC/index.m3u8` |
 | NFL Network | HTTP Error (404) | `http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8` |
+| Premier Sports 2 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1275/mpegts?token=0abb07758b53c286d3b6b7943b7c5405` |
 ---
 #### Base Channels URL
 ```
