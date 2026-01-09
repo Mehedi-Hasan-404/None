@@ -199,7 +199,7 @@ http://cord-cutter.net:8080/30550113/30550113/1847
 http://fl1.moveonjoy.com/FREE_FORM/index.m3u8
 
 #EXTINF:-1 tvg-chno="67" tvg-id="Fuse.HD.us2" tvg-name="FUSE" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14929_dark_360w_270h.png" group-title="TV",FUSE
-http://fl1.moveonjoy.com/FUSE/index.m3u8
+http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
 #EXTINF:-1 tvg-chno="68" tvg-id="FX.HD.us2" tvg-name="FX" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14321_dark_360w_270h.png" group-title="TV",FX
 http://fl1.moveonjoy.com/FX/index.m3u8
@@ -316,7 +316,7 @@ http://cord-cutter.net:8080/30550113/30550113/31637
 http://fl1.moveonjoy.com/NEWS_NATION/index.m3u8
 
 #EXTINF:-1 tvg-chno="106" tvg-id="NFL.Network.HD.us2" tvg-name="NFL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nfl-network-hz-us.png" group-title="TV",NFL Network
-http://fl1.moveonjoy.com/NFL_NETWORK/index.m3u8
+http://23.237.104.106:8080/USA_NFL_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="107" tvg-id="NFL.RedZone.HD.us2" tvg-name="NFL RedZone" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nfl-red-zone-hz-us.png" group-title="TV",NFL RedZone
 http://cord-cutter.net:8080/30550113/30550113/208830
@@ -352,7 +352,7 @@ http://109.61.81.147:1935/cdn7/1276/video.m3u8?token=c708d1e1b86b0247d95ecf4645d
 http://109.61.81.147:1935/cdn7/1275/mpegts?token=0abb07758b53c286d3b6b7943b7c5405
 
 #EXTINF:-1 tvg-chno="118" tvg-id="ReelzChannel.HD.us2" tvg-name="Reelz Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68385_dark_360w_270h.png" group-title="TV",Reelz Channel
-http://fl1.moveonjoy.com/REELZ/index.m3u8
+http://23.237.104.106:8080/USA_REELZ/index.m3u8
 
 #EXTINF:-1 tvg-chno="119" tvg-id="ROOT.Sports.Northwest.HD.us2" tvg-name="Root Sports" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11062_dark_360w_270h.png" group-title="TV",Root Sports
 http://cord-cutter.net:8080/30550113/30550113/85232
