@@ -1,15 +1,11 @@
-## Base Log @ 2026-01-10 08:47 UTC
+## Base Log @ 2026-01-10 14:41 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 6
+### ✅ Working Streams: 146<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Astro Premier League | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/4612/mpegts?token=856c055d95cdb7bedfa41be7b71b119c` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/1847` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| SportsNet New York | HTTP Error (403) | `http://cord-cutter.net:8080/30550113/30550113/20938` |
+| FDSN Wisconsin | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/78599` |
 ---
 #### Base Channels URL
 ```
