@@ -1,15 +1,36 @@
-## Base Log @ 2026-01-09 20:44 UTC
+## Base Log @ 2026-01-10 03:43 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 6
+### ✅ Working Streams: 121<br>❌ Dead Streams: 27
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| A&E TV | HTTP Error (404) | `http://fl1.moveonjoy.com/ANE/index.m3u8` |
+| ACC Network | HTTP Error (404) | `http://fl1.moveonjoy.com/ACC_NETWORK/index.m3u8` |
+| AMC | HTTP Error (404) | `http://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8` |
+| Animal Planet | HTTP Error (404) | `http://fl1.moveonjoy.com/Animal_Planet/index.m3u8` |
+| BET | Connection timed out (000) | `https://streamer1.nexgen.bz/BET/index.m3u8` |
 | C-SPAN | HTTP Error (404) | `http://fl1.moveonjoy.com/C-SPAN/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
+| CNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/CNBC/index.m3u8` |
+| Cartoon Network | HTTP Error (404) | `http://fl1.moveonjoy.com/CARTOON_NETWORK/index.m3u8` |
+| Comedy Central | HTTP Error (404) | `http://fl1.moveonjoy.com/Comedy_Central/index.m3u8` |
+| Comedy TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
+| Cooking Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/COOKING_CHANNEL/index.m3u8` |
+| Crime & Investigation Network | HTTP Error (404) | `https://fl1.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
+| Discovery Family Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/DISCOVERY_FAMILY_CHANNEL/index.m3u8` |
+| Discovery Life | HTTP Error (404) | `https://fl1.moveonjoy.com/DISCOVERY_LIFE/index.m3u8` |
 | Freeform TV | HTTP Error (404) | `http://fl1.moveonjoy.com/FREE_FORM/index.m3u8` |
-| ION TV | HTTP Error (404) | `http://fl1.moveonjoy.com/ION_TV/index.m3u8` |
+| Hallmark Mystery | HTTP Error (404) | `https://fl1.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8` |
 | Investigation Discovery | HTTP Error (404) | `https://fl1.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8` |
-| Premier Sports 2 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1275/mpegts?token=0abb07758b53c286d3b6b7943b7c5405` |
+| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
+| National Geographic | HTTP Error (404) | `http://fl1.moveonjoy.com/National_Geographic/index.m3u8` |
+| Outdoor Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/OUTDOOR_CHANNEL/index.m3u8` |
+| Ovation | HTTP Error (404) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
+| Oxygen | HTTP Error (404) | `https://fl1.moveonjoy.com/OXYGEN/index.m3u8` |
+| SEC Network | HTTP Error (404) | `http://fl1.moveonjoy.com/SEC_NETWORK/index.m3u8` |
+| Starz | HTTP Error (404) | `http://fl1.moveonjoy.com/STARZ/index.m3u8` |
+| Syfy | HTTP Error (404) | `http://fl1.moveonjoy.com/SYFY/index.m3u8` |
+| TLC | HTTP Error (404) | `http://fl1.moveonjoy.com/TLC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
