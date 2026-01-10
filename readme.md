@@ -1,11 +1,11 @@
-## Base Log @ 2026-01-10 14:41 UTC
+## Base Log @ 2026-01-10 20:41 UTC
 
 ### ✅ Working Streams: 146<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| FDSN Wisconsin | HTTP Error (502) | `http://cord-cutter.net:8080/30550113/30550113/78599` |
+| Hallmark Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8` |
 ---
 #### Base Channels URL
 ```
