@@ -14,20 +14,14 @@ CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
 
 API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
 
-API_MIRRORS = [
+MIRRORS = [
     "https://old.ppv.to/api/streams",
     "https://api.ppvs.su/api/streams",
     "https://api.ppv.to/api/streams",
 ]
 
-BASE_MIRRORS = [
-    "https://old.ppv.to",
-    "https://ppvs.su",
-    "https://ppv.to",
-]
 
-
-async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False)):
@@ -35,7 +29,7 @@ async def get_events(api_url: str, cached_keys: list[str]) -> list[dict[str, str
 
         api_data = {"timestamp": now.timestamp()}
 
-        if r := await network.request(api_url, log=log):
+        if r := await network.request(url, log=log):
             api_data: dict = r.json()
 
         API_FILE.write(api_data)
@@ -93,11 +87,7 @@ async def scrape() -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    base_url = await network.get_base(BASE_MIRRORS)
-
-    api_url = await network.get_base(API_MIRRORS)
-
-    if not (base_url and api_url):
+    if not (base_url := await network.get_base(MIRRORS)):
         log.warning("No working PPV mirrors")
 
         CACHE_FILE.write(cached_urls)
@@ -106,7 +96,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{base_url}"')
 
-    events = await get_events(api_url, cached_urls.keys())
+    events = await get_events(base_url, cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 
@@ -148,7 +138,7 @@ async def scrape() -> None:
                         entry = {
                             "url": url,
                             "logo": logo or pic,
-                            "base": base_url,
+                            "base": link,
                             "timestamp": ts,
                             "id": tvg_id or "Live.Event.us",
                             "link": link,
