@@ -68,7 +68,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not (title := entry.get("title")):
             continue
 
-        sport = "Soccer"
+        sport = "Live Event"
 
         title = title.replace(" v ", " vs ")
 
