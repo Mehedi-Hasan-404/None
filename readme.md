@@ -1,11 +1,10 @@
-## Base Log @ 2026-01-10 20:41 UTC
+## Base Log @ 2026-01-11 03:59 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 2
+### ✅ Working Streams: 147<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| Hallmark Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8` |
 ---
 #### Base Channels URL
 ```
