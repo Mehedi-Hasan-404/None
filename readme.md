@@ -1,18 +1,11 @@
-## Base Log @ 2026-01-12 08:55 UTC
+## Base Log @ 2026-01-12 14:52 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 10
+### ✅ Working Streams: 145<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Boomerang | HTTP Error (404) | `http://fl1.moveonjoy.com/BOOMERANG/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| Comet TV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/125831` |
-| FDSN Ohio | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/17752` |
-| FDSN SoCal | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/221151` |
-| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/31637` |
-| NFL RedZone | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/208830` |
-| Premier Sports 1 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1276/video.m3u8?token=c708d1e1b86b0247d95ecf4645dadd0f` |
 | TV One | HTTP Error (404) | `https://fl1.moveonjoy.com/TV_ONE/index.m3u8` |
 ---
 #### Base Channels URL
