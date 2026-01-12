@@ -37,8 +37,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         API_CACHE.write(api_data)
 
     events = []
-    start_dt = now.delta(hours=-1)
-    end_dt = now.delta(hours=3)
+
+    start_dt = now.delta(hours=-3)
+    end_dt = now.delta(minutes=30)
 
     for info in api_data.get("days", []):
         for event in info["items"]:
