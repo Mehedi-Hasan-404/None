@@ -1,16 +1,18 @@
-## Base Log @ 2026-01-12 03:59 UTC
+## Base Log @ 2026-01-12 08:55 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 8
+### ✅ Working Streams: 138<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| AMC | HTTP Error (404) | `http://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8` |
-| C-SPAN | HTTP Error (404) | `http://fl1.moveonjoy.com/C-SPAN/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
-| Comedy Central | HTTP Error (404) | `http://fl1.moveonjoy.com/Comedy_Central/index.m3u8` |
-| E! Entertainment | HTTP Error (404) | `http://fl1.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8` |
-| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
-| Sony Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Sony_Movie_Channel/index.m3u8` |
+| Comet TV | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/125831` |
+| FDSN Ohio | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/17752` |
+| FDSN SoCal | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/221151` |
+| Fox Sports 2 | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/1847` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NESN | HTTP Error (403) | `http://cord-cutter.net:8080/k4Svp2/645504/31637` |
+| NFL RedZone | HTTP Error (502) | `http://cord-cutter.net:8080/k4Svp2/645504/208830` |
+| Premier Sports 1 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1276/video.m3u8?token=c708d1e1b86b0247d95ecf4645dadd0f` |
 | TV One | HTTP Error (404) | `https://fl1.moveonjoy.com/TV_ONE/index.m3u8` |
 ---
 #### Base Channels URL
