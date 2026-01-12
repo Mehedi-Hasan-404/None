@@ -1,10 +1,16 @@
-## Base Log @ 2026-01-11 22:14 UTC
+## Base Log @ 2026-01-12 03:59 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 2
+### ✅ Working Streams: 140<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| AMC | HTTP Error (404) | `http://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8` |
+| C-SPAN | HTTP Error (404) | `http://fl1.moveonjoy.com/C-SPAN/index.m3u8` |
 | CBS | HTTP Error (404) | `http://fl1.moveonjoy.com/CBSEAST/index.m3u8` |
+| Comedy Central | HTTP Error (404) | `http://fl1.moveonjoy.com/Comedy_Central/index.m3u8` |
+| E! Entertainment | HTTP Error (404) | `http://fl1.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8` |
+| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
+| Sony Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Sony_Movie_Channel/index.m3u8` |
 | TV One | HTTP Error (404) | `https://fl1.moveonjoy.com/TV_ONE/index.m3u8` |
 ---
 #### Base Channels URL
