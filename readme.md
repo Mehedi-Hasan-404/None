@@ -1,7 +1,12 @@
-## Base Log @ 2026-01-13 14:50 UTC
+## Base Log @ 2026-01-13 20:45 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 0
+### ✅ Working Streams: 145<br>❌ Dead Streams: 3
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Astro Premier League | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/4612/mpegts?token=856c055d95cdb7bedfa41be7b71b119c` |
+| Premier Sports 1 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1276/video.m3u8?token=c708d1e1b86b0247d95ecf4645dadd0f` |
+| Premier Sports 2 | HTTP Error (403) | `http://109.61.81.147:1935/cdn7/1275/mpegts?token=0abb07758b53c286d3b6b7943b7c5405` |
 ---
 #### Base Channels URL
 ```
