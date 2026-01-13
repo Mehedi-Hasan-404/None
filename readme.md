@@ -1,17 +1,7 @@
-## Base Log @ 2026-01-13 08:53 UTC
+## Base Log @ 2026-01-13 14:50 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 8
+### ✅ Working Streams: 148<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| Boomerang | HTTP Error (404) | `http://fl1.moveonjoy.com/BOOMERANG/index.m3u8` |
-| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
-| FDSN Ohio | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/17752.m3u8` |
-| FDSN Southwest | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/21843.m3u8` |
-| Fox Sports 2 | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/1847.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NESN | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/31637.m3u8` |
-| Pop TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Pop_TV/index.m3u8` |
 ---
 #### Base Channels URL
 ```
