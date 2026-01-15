@@ -1,14 +1,17 @@
-## Base Log @ 2026-01-15 14:48 UTC
+## Base Log @ 2026-01-15 20:46 UTC
 
-### ✅ Working Streams: 139<br>❌ Dead Streams: 6
+### ✅ Working Streams: 136<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
+| FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8` |
 | FDSN West | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254471` |
+| FDSN Wisconsin | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254470` |
+| NBC Sports Boston | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Space City Home Network | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
+| Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
 ---
 #### Base Channels URL
