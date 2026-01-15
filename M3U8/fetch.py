@@ -77,7 +77,7 @@ async def main() -> None:
 
     await asyncio.gather(*tasks)
 
-    #await watchfooty.scrape()
+    await watchfooty.scrape()
 
     additions = (
         cdnlivetv.urls
