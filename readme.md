@@ -1,20 +1,18 @@
-## Base Log @ 2026-01-16 08:51 UTC
+## Base Log @ 2026-01-16 14:47 UTC
 
-### ✅ Working Streams: 132<br>❌ Dead Streams: 13
+### ✅ Working Streams: 134<br>❌ Dead Streams: 11
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Detroit | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254459` |
+| Cozi TV | HTTP Error (404) | `https://fl1.moveonjoy.com/COZI_TV/index.m3u8` |
+| Discovery Science | Unknown status (302) | `https://fl1.moveonjoy.com/Discovery_Science/index.m3u8` |
 | FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
-| FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8` |
-| FDSN West | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254471` |
-| Game Show Network | HTTP Error (404) | `https://streamer1.nexgen.bz/GSN/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NBC Sports Boston | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
+| FDSN Wisconsin | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254470` |
+| NBC Sports Boston | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
+| NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Pop TV | Unknown status (302) | `https://fl1.moveonjoy.com/Pop_TV/index.m3u8` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
 | The Weather Channel | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257329` |
 ---
