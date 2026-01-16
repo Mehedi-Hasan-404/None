@@ -1,18 +1,22 @@
-## Base Log @ 2026-01-15 20:46 UTC
+## Base Log @ 2026-01-16 03:50 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 9
+### ✅ Working Streams: 132<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| ESPN | Connection timed out (000) | `http://41.205.93.154/ESPN/index.m3u8` |
+| ESPN2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257104` |
 | FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
 | FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8` |
 | FDSN West | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254471` |
-| FDSN Wisconsin | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254470` |
-| NBC Sports Boston | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
+| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| Game Show Network | HTTP Error (404) | `https://streamer1.nexgen.bz/GSN/index.m3u8` |
+| MSNBC | Connection timed out (000) | `http://41.205.93.154/MSNBC/index.m3u8` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 | Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
+| The Weather Channel | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257329` |
 ---
 #### Base Channels URL
 ```
