@@ -1,17 +1,21 @@
-## Base Log @ 2026-01-16 20:41 UTC
+## Base Log @ 2026-01-17 03:43 UTC
 
-### ✅ Working Streams: 137<br>❌ Dead Streams: 8
+### ✅ Working Streams: 133<br>❌ Dead Streams: 12
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257104` |
-| FDSN Detroit | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254459` |
-| FDSN Midwest | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254462` |
-| FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
+| BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
+| ESPN | HTTP Error (500) | `http://41.205.93.154/ESPN/index.m3u8` |
+| ESPN2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257104` |
+| FDSN North | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
+| FDSN Southwest | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254469` |
+| FDSN Sun | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254467` |
+| Hallmark Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8` |
+| Hallmark Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HALLMARK_DRAMA/index.m3u8` |
+| Hallmark Mystery | HTTP Error (404) | `https://fl1.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
 | Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
-| The Weather Channel | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257329` |
 ---
 #### Base Channels URL
 ```
