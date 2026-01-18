@@ -1,22 +1,21 @@
-## Base Log @ 2026-01-18 08:47 UTC
+## Base Log @ 2026-01-18 14:40 UTC
 
-### ✅ Working Streams: 131<br>❌ Dead Streams: 14
+### ✅ Working Streams: 132<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
-| ESPN2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257104` |
-| FDSN Detroit | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254459` |
-| FDSN Florida | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254460` |
-| FDSN Midwest | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254462` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| ESPN2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257104` |
+| FDSN Florida | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254460` |
+| FDSN Midwest | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254462` |
 | FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
-| FDSN Ohio | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254464` |
-| FDSN Wisconsin | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254470` |
-| Food Network | HTTP Error (404) | `http://fl1.moveonjoy.com/FOOD_NETWORK/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| FDSN Ohio | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254464` |
+| FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8` |
+| NBC Sports Boston | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| NESN | HTTP Error (403) | `http://hardcoremedia.xyz/MZJC2ajcBk/tpbusggzm3/261656` |
+| Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
+| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 | Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
 ---
 #### Base Channels URL
