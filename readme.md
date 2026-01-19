@@ -1,19 +1,23 @@
-## Base Log @ 2026-01-19 08:56 UTC
+## Base Log @ 2026-01-19 14:52 UTC
 
-### ✅ Working Streams: 135<br>❌ Dead Streams: 10
+### ✅ Working Streams: 131<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Boomerang | HTTP Error (404) | `http://fl1.moveonjoy.com/BOOMERANG/index.m3u8` |
+| C-SPAN | HTTP Error (404) | `http://fl1.moveonjoy.com/C-SPAN/index.m3u8` |
+| E! Entertainment | HTTP Error (404) | `http://fl1.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| FDSN Detroit | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254459` |
+| FDSN Midwest | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254462` |
 | FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
-| FDSN SoCal | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254465` |
-| FDSN West | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254471` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NBC Sports Boston | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
+| FDSN Ohio | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254464` |
+| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
+| NESN | HTTP Error (403) | `http://hardcoremedia.xyz/MZJC2ajcBk/tpbusggzm3/261656` |
+| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 | Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
-| The Weather Channel | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257329` |
 ---
 #### Base Channels URL
 ```
