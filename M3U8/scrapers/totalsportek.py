@@ -14,52 +14,79 @@ TAG = "TOTALSPRTK"
 
 CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=28_800)
 
-BASE_URL = "https://live.totalsportek777.com/"
+MIRRORS = [
+    {
+        "base": "https://live.totalsportek777.com/",
+        "hex_decode": True,
+    },
+    {
+        "base": "https://live2.totalsportek777.com/",
+        "hex_decode": False,
+    },
+]
 
 
 def fix_league(s: str) -> str:
     return s.upper() if s.islower() else s
 
 
-async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
-    if not (html_data := await network.request(url, log=log)):
-        log.info(f"URL {url_num}) Failed to load url.")
-
-        return None, None
-
-    soup = HTMLParser(html_data.content)
-
-    if not (iframe := soup.css_first("iframe")):
-        log.warning(f"URL {url_num}) No iframe element found.")
-
-        return None, None
-
-    if not (iframe_src := iframe.attributes.get("src")):
-        log.warning(f"URL {url_num}) No valid iframe source found.")
-
-        return None, None
-
-    if not (iframe_src_data := await network.request(iframe_src, log=log)):
-        log.info(f"URL {url_num}) Failed to load iframe source.")
-
-        return None, None
-
+async def process_event(href: str, url_num: int) -> tuple[str | None, str | None]:
     valid_m3u8 = re.compile(r'var\s+(\w+)\s*=\s*"([^"]*)"', re.IGNORECASE)
 
-    if not (match := valid_m3u8.search(iframe_src_data.text)):
-        log.warning(f"URL {url_num}) No Clappr source found.")
+    for x, mirror in enumerate(MIRRORS, start=1):
+        base = mirror["base"]
 
-        return None, None
+        hex_decode = mirror["hex_decode"]
 
-    log.info(f"URL {url_num}) Captured M3U8")
+        url = urljoin(base, href)
 
-    return bytes.fromhex(match[2]).decode("utf-8"), iframe_src
+        if not (html_data := await network.request(url, log=log)):
+            log.info(f"M{x} | URL {url_num}) Failed to load url.")
+
+            return None, None
+
+        soup = HTMLParser(html_data.content)
+
+        iframe = soup.css_first("iframe")
+
+        if not iframe or not (iframe_src := iframe.attributes.get("src")):
+            log.warning(f"M{x} | URL {url_num}) No iframe element found.")
+            continue
+
+        if not (iframe_src_data := await network.request(iframe_src, log=log)):
+            log.warning(f"M{x} | URL {url_num}) Failed to load iframe source.")
+            continue
+
+        if not (match := valid_m3u8.search(iframe_src_data.text)):
+            log.warning(f"M{x} | URL {url_num}) No Clappr source found.")
+            continue
+
+        raw = match[2]
+
+        try:
+            m3u8_url = bytes.fromhex(raw).decode("utf-8") if hex_decode else raw
+
+        except Exception as e:
+            log.warning(f"M{x} | URL {url_num}) Decoding failed: {e}")
+            continue
+
+        if m3u8_url and iframe_src:
+            log.info(f"M{x} | URL {url_num}) Captured M3U8")
+
+            return m3u8_url, iframe_src
+
+        else:
+            log.warning(f"M{x} | URL {url_num}) No M3U8 found")
+
+            return None, None
+
+    return None, None
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     events = []
 
-    if not (html_data := await network.request(BASE_URL, log=log)):
+    if not (html_data := await network.request(url, log=log)):
         return events
 
     soup = HTMLParser(html_data.content)
@@ -98,7 +125,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                     {
                         "sport": sport,
                         "event": event_name,
-                        "link": urljoin(BASE_URL, href),
+                        "href": href,
                     }
                 )
 
@@ -116,9 +143,14 @@ async def scrape() -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    if not (base_url := await network.get_base([mirr["base"] for mirr in MIRRORS])):
+        log.warning("No working TotalSportek mirrors")
 
-    events = await get_events(cached_urls.keys())
+        CACHE_FILE.write(cached_urls)
+
+        return
+
+    events = await get_events(base_url, cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 
@@ -128,7 +160,7 @@ async def scrape() -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                url=ev["link"],
+                href=ev["href"],
                 url_num=i,
             )
 
@@ -139,10 +171,10 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event, link = (
+            sport, event, href = (
                 ev["sport"],
                 ev["event"],
-                ev["link"],
+                ev["href"],
             )
 
             key = f"[{sport}] {event} ({TAG})"
@@ -155,7 +187,7 @@ async def scrape() -> None:
                 "base": iframe,
                 "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
-                "link": link,
+                "href": href,
             }
 
             cached_urls[key] = entry
