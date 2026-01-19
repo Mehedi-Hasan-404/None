@@ -1,17 +1,19 @@
-## Base Log @ 2026-01-18 20:42 UTC
+## Base Log @ 2026-01-19 08:56 UTC
 
-### ✅ Working Streams: 137<br>❌ Dead Streams: 8
+### ✅ Working Streams: 135<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257104` |
-| FDSN Detroit | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254459` |
-| FDSN Florida | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254460` |
-| FDSN Midwest | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254462` |
 | FDSN North | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254463` |
+| FDSN SoCal | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254465` |
+| FDSN West | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/254471` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
 | NBC Sports Boston | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257204` |
 | NBC Sports California | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257217` |
 | Space City Home Network | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257248` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
+| The Weather Channel | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257329` |
 ---
 #### Base Channels URL
 ```
