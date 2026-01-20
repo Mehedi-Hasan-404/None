@@ -1,6 +1,6 @@
 import re
 from functools import partial
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from selectolax.parser import HTMLParser
 
@@ -26,7 +26,9 @@ MIRRORS = [
 ]
 
 
-def fix_league(s: str) -> str:
+def fix_txt(s: str) -> str:
+    s = " ".join(s.split())
+
     return s.upper() if s.islower() else s
 
 
@@ -34,9 +36,9 @@ async def process_event(href: str, url_num: int) -> tuple[str | None, str | None
     valid_m3u8 = re.compile(r'var\s+(\w+)\s*=\s*"([^"]*)"', re.IGNORECASE)
 
     for x, mirror in enumerate(MIRRORS, start=1):
-        base = mirror["base"]
+        base: str = mirror["base"]
 
-        hex_decode = mirror["hex_decode"]
+        hex_decode: bool = mirror["hex_decode"]
 
         url = urljoin(base, href)
 
@@ -61,11 +63,10 @@ async def process_event(href: str, url_num: int) -> tuple[str | None, str | None
             log.warning(f"M{x} | URL {url_num}) No Clappr source found.")
             continue
 
-        raw = match[2]
+        raw: str = match[2]
 
         try:
             m3u8_url = bytes.fromhex(raw).decode("utf-8") if hex_decode else raw
-
         except Exception as e:
             log.warning(f"M{x} | URL {url_num}) Decoding failed: {e}")
             continue
@@ -75,10 +76,7 @@ async def process_event(href: str, url_num: int) -> tuple[str | None, str | None
 
             return m3u8_url, iframe_src
 
-        else:
-            log.warning(f"M{x} | URL {url_num}) No M3U8 found")
-
-            return None, None
+        log.warning(f"M{x} | URL {url_num}) No M3U8 found")
 
     return None, None
 
@@ -93,41 +91,42 @@ async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
 
     sport = "Live Event"
 
-    for box in soup.css(".div-main-box"):
-        for node in box.iter():
-            if not (node_class := node.attributes.get("class")):
-                continue
+    for node in soup.css("a"):
+        if not node.attributes.get("class"):
+            continue
 
-            if "my-1" in node_class:
-                if span := node.css_first("span"):
-                    sport = span.text(strip=True)
+        if (parent := node.parent) and "my-1" in parent.attributes.get("class", ""):
+            if span := node.css_first("span"):
+                sport = span.text(strip=True)
 
-            if node.tag == "a" and "nav-link2" in node_class:
-                if not (time_node := node.css_first(".col-3")):
-                    continue
+        sport = fix_txt(sport)
 
-                if time_node.text(strip=True) != "MatchStarted":
-                    continue
+        if not (teams := [t.text(strip=True) for t in node.css(".col-7 .col-12")]):
+            continue
 
-                if not (href := node.attributes.get("href")) or href.startswith("http"):
-                    continue
+        if not (href := node.attributes.get("href")):
+            continue
 
-                sport = fix_league(sport)
+        href = urlparse(href).path if href.startswith("http") else href
 
-                teams = [t.text(strip=True) for t in node.css(".col-7 .col-12")]
+        if not (time_node := node.css_first(".col-3 span")):
+            continue
 
-                event_name = " vs ".join(teams)
+        if time_node.text(strip=True) != "MatchStarted":
+            continue
 
-                if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-                    continue
+        event_name = fix_txt(" vs ".join(teams))
 
-                events.append(
-                    {
-                        "sport": sport,
-                        "event": event_name,
-                        "href": href,
-                    }
-                )
+        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+            continue
+
+        events.append(
+            {
+                "sport": sport,
+                "event": event_name,
+                "href": href,
+            }
+        )
 
     return events
 
