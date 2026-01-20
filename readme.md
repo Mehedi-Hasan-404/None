@@ -1,10 +1,15 @@
-## Base Log @ 2026-01-19 20:43 UTC
+## Base Log @ 2026-01-20 03:54 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 1
+### ✅ Working Streams: 139<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Cozi TV | HTTP Error (404) | `https://fl1.moveonjoy.com/COZI_TV/index.m3u8` |
+| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
+| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
