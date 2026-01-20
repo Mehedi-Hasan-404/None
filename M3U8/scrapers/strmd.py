@@ -18,7 +18,7 @@ API_FILE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
 
 MIRRORS = [
     "https://streami.su",
-    "https://streamed.st",
+    # "https://streamed.st",
     "https://streamed.pk",
 ]
 
