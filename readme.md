@@ -1,13 +1,16 @@
-## Base Log @ 2026-01-21 03:54 UTC
+## Base Log @ 2026-01-21 08:54 UTC
 
-### ✅ Working Streams: 141<br>❌ Dead Streams: 4
+### ✅ Working Streams: 138<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141447` |
 | FDSN Florida | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/46794.m3u8` |
-| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
-| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| FDSN Wisconsin | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/78599.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| NESN | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/46726.m3u8` |
+| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
 ```
