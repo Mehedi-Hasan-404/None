@@ -64,7 +64,7 @@ async def main() -> None:
         asyncio.create_task(roxie.scrape()),
         asyncio.create_task(shark.scrape()),
         asyncio.create_task(sport9.scrape()),
-        # asyncio.create_task(streambtw.scrape()),
+        asyncio.create_task(streambtw.scrape()),
         asyncio.create_task(streamcenter.scrape()),
         asyncio.create_task(streamfree.scrape()),
         asyncio.create_task(streamhub.scrape()),
