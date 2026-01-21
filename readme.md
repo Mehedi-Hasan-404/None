@@ -1,13 +1,13 @@
-## Base Log @ 2026-01-20 22:40 UTC
+## Base Log @ 2026-01-21 03:54 UTC
 
 ### ✅ Working Streams: 141<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
 | FDSN Florida | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/46794.m3u8` |
-| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
 ```
