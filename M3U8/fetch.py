@@ -69,7 +69,7 @@ async def main() -> None:
         asyncio.create_task(streamfree.scrape()),
         asyncio.create_task(streamhub.scrape()),
         asyncio.create_task(streamsgate.scrape()),
-        asyncio.create_task(strmd.scrape()),
+        # asyncio.create_task(strmd.scrape()),
         asyncio.create_task(totalsportek.scrape()),
         asyncio.create_task(tvpass.scrape()),
         asyncio.create_task(webcast.scrape()),
