@@ -1,38 +1,18 @@
-## Base Log @ 2026-01-21 20:54 UTC
+## Base Log @ 2026-01-22 03:57 UTC
 
-### ✅ Working Streams: 116<br>❌ Dead Streams: 29
+### ✅ Working Streams: 136<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ACC Network | HTTP Error (404) | `http://fl1.moveonjoy.com/ACC_NETWORK/index.m3u8` |
-| BBC America | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_AMERICA/index.m3u8` |
-| BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| CBS Sports Network | HTTP Error (404) | `http://fl1.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8` |
-| Discovery Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Discovery_Channel/index.m3u8` |
-| Discovery Family Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/DISCOVERY_FAMILY_CHANNEL/index.m3u8` |
-| Discovery Life | HTTP Error (404) | `https://fl1.moveonjoy.com/DISCOVERY_LIFE/index.m3u8` |
-| ESPN News | HTTP Error (404) | `http://fl1.moveonjoy.com/ESPN_NEWS/index.m3u8` |
+| ABC | HTTP Error (404) | `https://fl1.moveonjoy.com/FL_Tampa_ABC/index.m3u8` |
 | FDSN Florida | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/46794.m3u8` |
 | FDSN Wisconsin | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/78599.m3u8` |
-| FYI TV | HTTP Error (404) | `http://fl1.moveonjoy.com/FYI/index.m3u8` |
-| Fox Business | HTTP Error (404) | `https://fl1.moveonjoy.com/FOX_Business_Network/index.m3u8` |
-| Grit TV | HTTP Error (404) | `http://fl1.moveonjoy.com/GRIT_TV/index.m3u8` |
-| HBO 2 | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_2/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| FX Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/FX_MOVIE/index.m3u8` |
 | HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
-| HBO Zone | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_ZONE/index.m3u8` |
-| MLB Network | HTTP Error (404) | `https://fl1.moveonjoy.com/MLB_NETWORK/index.m3u8` |
-| Marquee Sports Network | HTTP Error (404) | `https://fl1.moveonjoy.com/MARQUEE_SPORTS_NETWORK/index.m3u8` |
-| NBA TV | HTTP Error (404) | `http://fl1.moveonjoy.com/NBA_TV/index.m3u8` |
-| National Geographic | HTTP Error (404) | `http://fl1.moveonjoy.com/National_Geographic/index.m3u8` |
-| Nickelodeon | HTTP Error (404) | `http://fl1.moveonjoy.com/NICKELODEON/index.m3u8` |
-| Paramount Network | HTTP Error (404) | `https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Showtime | HTTP Error (404) | `http://fl1.moveonjoy.com/SHOWTIME/index.m3u8` |
-| Smithsonian Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/SMITHSONIAN_CHANNEL/index.m3u8` |
-| Syfy | HTTP Error (404) | `http://fl1.moveonjoy.com/SYFY/index.m3u8` |
-| Tennis Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/TENNIS_CHANNEL/index.m3u8` |
-| getTV | HTTP Error (404) | `http://fl1.moveonjoy.com/GET_TV/index.m3u8` |
+| HBO | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO/index.m3u8` |
+| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
