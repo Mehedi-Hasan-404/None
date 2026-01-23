@@ -1,18 +1,13 @@
-## Base Log @ 2026-01-23 08:52 UTC
+## Base Log @ 2026-01-23 14:50 UTC
 
-### ✅ Working Streams: 135<br>❌ Dead Streams: 10
+### ✅ Working Streams: 140<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| FDSN North | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/58827.m3u8` |
-| FDSN Ohio | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/17752.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NESN | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/46726.m3u8` |
+| NBC Sports Bay Area | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
 | NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
-| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/213668.m3u8` |
+| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
 ---
 #### Base Channels URL
