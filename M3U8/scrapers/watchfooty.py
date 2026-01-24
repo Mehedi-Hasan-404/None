@@ -17,7 +17,7 @@ TAG = "WATCHFTY"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-API_FILE = Cache(f"{TAG}-api.json", exp=19_800)
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 API_URL = "https://api.watchfooty.st"
 
