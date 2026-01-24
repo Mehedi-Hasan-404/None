@@ -1,7 +1,7 @@
 import json
 from functools import partial
 
-from playwright.async_api import BrowserContext, Page
+from playwright.async_api import Browser, Page
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -73,7 +73,7 @@ async def get_events(page: Page) -> dict[str, dict[str, str | float]]:
     return events
 
 
-async def scrape(browser: BrowserContext) -> None:
+async def scrape(browser: Browser) -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
 

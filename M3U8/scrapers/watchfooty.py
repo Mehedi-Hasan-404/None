@@ -5,7 +5,7 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-from playwright.async_api import BrowserContext, Page, TimeoutError
+from playwright.async_api import Browser, Page, TimeoutError
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -232,7 +232,7 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
     return events
 
 
-async def scrape(browser: BrowserContext) -> None:
+async def scrape(browser: Browser) -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}

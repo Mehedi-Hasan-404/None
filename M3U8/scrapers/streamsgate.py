@@ -4,7 +4,7 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-from playwright.async_api import BrowserContext
+from playwright.async_api import Browser
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -120,7 +120,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return events
 
 
-async def scrape(browser: BrowserContext) -> None:
+async def scrape(browser: Browser) -> None:
     cached_urls = CACHE_FILE.load()
 
     cached_count = len(cached_urls)

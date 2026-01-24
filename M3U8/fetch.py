@@ -162,10 +162,10 @@ async def main() -> None:
 
     log.info(f"Events saved to {EVENTS_FILE.resolve()}")
 
-    for hndlr in log.handlers:
-        hndlr.flush()
-        hndlr.stream.write("\n")
-
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+    for hndlr in log.handlers:
+        hndlr.flush()
+        hndlr.stream.write("\n")

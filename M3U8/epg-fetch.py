@@ -5,15 +5,18 @@ import re
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-import httpx
+from scrapers.utils import get_logger, network
 
-epg_file = Path(__file__).parent / "TV.xml"
+log = get_logger(__name__)
 
-epg_urls = [
+BASE_M3U8 = Path(__file__).parent / "base.m3u8"
+
+EPG_FILE = Path(__file__).parent / "TV.xml"
+
+EPG_URLS = [
     "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_FANDUEL1.xml.gz",
-    "https://epgshare01.online/epgshare01/epg_ripper_MY1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz",
     "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
@@ -21,44 +24,31 @@ epg_urls = [
     "https://i.mjh.nz/Roku/all.xml.gz",
 ]
 
-client = httpx.AsyncClient(
-    timeout=httpx.Timeout(5.0),
-    follow_redirects=True,
-    http2=True,
-    headers={
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
-    },
-)
+LIVE_IMG = "https://i.gyazo.com/978f2eb4a199ca5b56b447aded0cb9e3.png"
 
-live_img = "https://i.gyazo.com/978f2eb4a199ca5b56b447aded0cb9e3.png"
-
-dummies = {
-    "Basketball.Dummy.us": live_img,
-    "Golf.Dummy.us": live_img,
-    "Live.Event.us": live_img,
+DUMMIES = {
+    "Basketball.Dummy.us": LIVE_IMG,
+    "Golf.Dummy.us": LIVE_IMG,
+    "Live.Event.us": LIVE_IMG,
     "MLB.Baseball.Dummy.us": None,
     "NBA.Basketball.Dummy.us": None,
     "NFL.Dummy.us": None,
     "NHL.Hockey.Dummy.us": None,
-    "PPV.EVENTS.Dummy.us": live_img,
-    "Racing.Dummy.us": live_img,
-    "Soccer.Dummy.us": live_img,
-    "Tennis.Dummy.us": live_img,
+    "PPV.EVENTS.Dummy.us": LIVE_IMG,
+    "Racing.Dummy.us": LIVE_IMG,
+    "Soccer.Dummy.us": LIVE_IMG,
+    "Tennis.Dummy.us": LIVE_IMG,
     "WNBA.dummy.us": None,
 }
 
-replace_ids = {
+REPLACE_IDs = {
     "NCAA Sports": {"old": "Sports.Dummy.us", "new": "NCAA.Sports.Dummy.us"},
     "UFC": {"old": "UFC.247.Dummy.us", "new": "UFC.Dummy.us"},
 }
 
 
 def get_tvg_ids() -> dict[str, str]:
-    base_m3u8 = (
-        (Path(__file__).parent.parent / "M3U8" / "base.m3u8")
-        .read_text(encoding="utf-8")
-        .splitlines()
-    )
+    base_m3u8 = BASE_M3U8.read_text(encoding="utf-8").splitlines()
 
     tvg = {}
 
@@ -73,20 +63,17 @@ def get_tvg_ids() -> dict[str, str]:
 
 
 async def fetch_xml(url: str) -> ET.Element | None:
-    try:
-        r = await client.get(url)
-        r.raise_for_status()
-    except Exception as e:
-        print(f'Failed to fetch "{url}": {e}')
+    if not (html_data := await network.request(url, log=log)):
         return
 
     try:
-        decompressed_data = gzip.decompress(r.content)
+        decompressed_data = gzip.decompress(html_data.content)
 
         return ET.fromstring(decompressed_data)
-
     except Exception as e:
-        print(f'Failed to decompress and parse XML from "{url}": {e}')
+        log.error(f'Failed to decompress and parse XML from "{url}": {e}')
+
+        return
 
 
 def hijack_id(
@@ -138,13 +125,15 @@ def hijack_id(
 
 
 async def main() -> None:
+    log.info(f"{'=' * 10} Fetching EPG {'=' * 10}")
+
     tvg_ids = get_tvg_ids()
 
-    tvg_ids |= dummies | {v["old"]: live_img for v in replace_ids.values()}
+    tvg_ids |= DUMMIES | {v["old"]: LIVE_IMG for v in REPLACE_IDs.values()}
 
     root = ET.Element("tv")
 
-    tasks = [fetch_xml(url) for url in epg_urls]
+    tasks = [fetch_xml(url) for url in EPG_URLS]
 
     results = await asyncio.gather(*tasks)
 
@@ -176,20 +165,24 @@ async def main() -> None:
 
                 root.append(program)
 
-        for k, v in replace_ids.items():
+        for k, v in REPLACE_IDs.items():
             hijack_id(**v, text=k, root=root)
 
     tree = ET.ElementTree(root)
 
-    tree.write(epg_file, encoding="utf-8", xml_declaration=True)
+    tree.write(EPG_FILE, encoding="utf-8", xml_declaration=True)
 
-    print(f"EPG saved to {epg_file.resolve()}")
+    log.info(f"EPG saved to {EPG_FILE.resolve()}")
 
 
 if __name__ == "__main__":
     asyncio.run(main())
 
+    for hndlr in log.handlers:
+        hndlr.flush()
+        hndlr.stream.write("\n")
+
     try:
-        asyncio.run(client.aclose())
+        asyncio.run(network.client.aclose())
     except Exception:
         pass

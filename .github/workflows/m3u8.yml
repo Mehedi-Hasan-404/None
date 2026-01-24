@@ -22,23 +22,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Cache venv
-        if: steps.check_time.outputs.run == 'true'
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: shared-venv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
-          restore-keys: |
-            shared-venv-${{ runner.os }}-
-
-      - name: Cache cert
-        uses: actions/cache@v3
-        with:
-          path: M3U8/scrape/utils/cached-ca.pem
-          key: cert-cache-${{ runner.os }}-${{ hashFiles('M3U8/scrape/utils/cached-ca.pem') }}
-          restore-keys: |
-            cert-cache-${{ runner.os }}-
-
       - name: Install uv
         if: steps.check_time.outputs.run == 'true'
         uses: astral-sh/setup-uv@v6

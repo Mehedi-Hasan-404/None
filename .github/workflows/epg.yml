@@ -14,14 +14,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Cache venv
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: shared-venv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
-          restore-keys: |
-            shared-venv-${{ runner.os }}-
-
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
@@ -36,13 +28,13 @@ jobs:
           python-version-file: "pyproject.toml"
 
       - name: Fetch EPG
-        run: uv run EPG/fetch.py
+        run: uv run M3U8/epg-fetch.py
 
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "update EPG"
-          file_pattern: "EPG/TV.xml"
+          file_pattern: "M3U8/TV.xml"
           commit_author: "GitHub Actions Bot <actions@github.com>"
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "actions@github.com"

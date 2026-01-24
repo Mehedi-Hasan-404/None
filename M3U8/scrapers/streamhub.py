@@ -2,7 +2,7 @@ import asyncio
 from functools import partial
 from urllib.parse import urljoin
 
-from playwright.async_api import BrowserContext
+from playwright.async_api import Browser
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -132,7 +132,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return live
 
 
-async def scrape(browser: BrowserContext) -> None:
+async def scrape(browser: Browser) -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
