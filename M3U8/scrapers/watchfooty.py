@@ -5,7 +5,7 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-from playwright.async_api import BrowserContext, async_playwright
+from playwright.async_api import BrowserContext, Page, TimeoutError
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -15,9 +15,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "WATCHFTY"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+CACHE_FILE = Cache(TAG, exp=10_800)
 
-API_FILE = Cache(f"{TAG.lower()}-api.json", exp=19_800)
+API_FILE = Cache(f"{TAG}-api.json", exp=19_800)
 
 API_URL = "https://api.watchfooty.st"
 
@@ -73,7 +73,7 @@ async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
 async def process_event(
     url: str,
     url_num: int,
-    context: BrowserContext,
+    page: Page,
 ) -> tuple[str | None, str | None]:
 
     pattern = re.compile(r"\((\d+)\)")
@@ -81,8 +81,6 @@ async def process_event(
     captured: list[str] = []
 
     got_one = asyncio.Event()
-
-    page = await context.new_page()
 
     handler = partial(
         network.capture_req,
@@ -117,7 +115,8 @@ async def process_event(
 
         try:
             first_available = await page.wait_for_selector(
-                'a[href*="/stream/"]', timeout=3_000
+                'a[href*="/stream/"]',
+                timeout=3_000,
             )
         except TimeoutError:
             log.warning(f"URL {url_num}) No available stream links.")
@@ -176,8 +175,6 @@ async def process_event(
     finally:
         page.remove_listener("request", handler)
 
-        await page.close()
-
 
 async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
@@ -235,7 +232,7 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
     return events
 
 
-async def scrape() -> None:
+async def scrape(browser: BrowserContext) -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
@@ -260,16 +257,14 @@ async def scrape() -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with async_playwright() as p:
-            browser, context = await network.browser(p, browser="external")
-
-            try:
-                for i, ev in enumerate(events, start=1):
+        async with network.event_context(browser) as context:
+            for i, ev in enumerate(events, start=1):
+                async with network.event_page(context) as page:
                     handler = partial(
                         process_event,
                         url=ev["link"],
                         url_num=i,
-                        context=context,
+                        page=page,
                     )
 
                     url, iframe = await network.safe_process(
@@ -306,9 +301,6 @@ async def scrape() -> None:
                         valid_count += 1
 
                         urls[key] = entry
-
-            finally:
-                await browser.close()
 
     if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")

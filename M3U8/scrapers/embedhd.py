@@ -1,6 +1,6 @@
 from functools import partial
 
-from playwright.async_api import async_playwright
+from playwright.async_api import BrowserContext
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -10,9 +10,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "EMBEDHD"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=5_400)
+CACHE_FILE = Cache(TAG, exp=5_400)
 
-API_CACHE = Cache(f"{TAG.lower()}-api.json", exp=28_800)
+API_CACHE = Cache(f"{TAG}-api", exp=28_800)
 
 BASE_URL = "https://embedhd.org/api-event.php"
 
@@ -75,7 +75,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return events
 
 
-async def scrape() -> None:
+async def scrape(browser: BrowserContext) -> None:
     cached_urls = CACHE_FILE.load()
 
     cached_count = len(cached_urls)
@@ -91,16 +91,14 @@ async def scrape() -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with async_playwright() as p:
-            browser, context = await network.browser(p)
-
-            try:
-                for i, ev in enumerate(events, start=1):
+        async with network.event_context(browser) as context:
+            for i, ev in enumerate(events, start=1):
+                async with network.event_page(context) as page:
                     handler = partial(
                         network.process_event,
                         url=ev["link"],
                         url_num=i,
-                        context=context,
+                        page=page,
                         log=log,
                     )
 
@@ -133,9 +131,6 @@ async def scrape() -> None:
                         }
 
                         urls[key] = cached_urls[key] = entry
-
-            finally:
-                await browser.close()
 
     if new_count := len(cached_urls) - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")

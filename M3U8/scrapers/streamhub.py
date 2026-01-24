@@ -2,7 +2,7 @@ import asyncio
 from functools import partial
 from urllib.parse import urljoin
 
-from playwright.async_api import async_playwright
+from playwright.async_api import BrowserContext
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -13,9 +13,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STRMHUB"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=10_800)
+CACHE_FILE = Cache(TAG, exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG.lower()}-html.json", exp=28_800)
+HTML_CACHE = Cache(f"{TAG}-html", exp=28_800)
 
 BASE_URL = "https://streamhub.pro/"
 
@@ -132,7 +132,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return live
 
 
-async def scrape() -> None:
+async def scrape(browser: BrowserContext) -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
@@ -150,16 +150,14 @@ async def scrape() -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with async_playwright() as p:
-            browser, context = await network.browser(p, browser="external")
-
-            try:
-                for i, ev in enumerate(events, start=1):
+        async with network.event_context(browser) as context:
+            for i, ev in enumerate(events, start=1):
+                async with network.event_page(context) as page:
                     handler = partial(
                         network.process_event,
                         url=ev["link"],
                         url_num=i,
-                        context=context,
+                        page=page,
                         timeout=5,
                         log=log,
                     )
@@ -198,9 +196,6 @@ async def scrape() -> None:
                         valid_count += 1
 
                         urls[key] = entry
-
-            finally:
-                await browser.close()
 
     if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")

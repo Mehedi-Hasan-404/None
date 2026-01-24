@@ -3,6 +3,7 @@ import asyncio
 import re
 from pathlib import Path
 
+from playwright.async_api import async_playwright
 from scrapers import (
     cdnlivetv,
     embedhd,
@@ -19,7 +20,7 @@ from scrapers import (
     streamfree,
     streamhub,
     streamsgate,
-    strmd,
+    tflix,
     totalsportek,
     tvpass,
     watchfooty,
@@ -53,31 +54,46 @@ async def main() -> None:
 
     base_m3u8, tvg_chno = load_base()
 
-    tasks = [
-        asyncio.create_task(cdnlivetv.scrape()),
-        asyncio.create_task(embedhd.scrape()),
-        asyncio.create_task(fawa.scrape()),
-        asyncio.create_task(istreameast.scrape()),
-        asyncio.create_task(pawa.scrape()),
-        asyncio.create_task(pixel.scrape()),
-        asyncio.create_task(ppv.scrape()),
-        asyncio.create_task(roxie.scrape()),
-        asyncio.create_task(shark.scrape()),
-        asyncio.create_task(sport9.scrape()),
-        asyncio.create_task(streambtw.scrape()),
-        asyncio.create_task(streamcenter.scrape()),
-        asyncio.create_task(streamfree.scrape()),
-        asyncio.create_task(streamhub.scrape()),
-        asyncio.create_task(streamsgate.scrape()),
-        # asyncio.create_task(strmd.scrape()),
-        asyncio.create_task(totalsportek.scrape()),
-        asyncio.create_task(tvpass.scrape()),
-        asyncio.create_task(webcast.scrape()),
-    ]
+    async with async_playwright() as p:
+        try:
+            hdl_brwsr = await network.browser(p)
 
-    await asyncio.gather(*tasks)
+            xtrnl_brwsr = await network.browser(p, external=True)
 
-    await watchfooty.scrape()
+            pw_tasks = [
+                asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
+                asyncio.create_task(embedhd.scrape(hdl_brwsr)),
+                asyncio.create_task(pixel.scrape(hdl_brwsr)),
+                asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
+                asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamcenter.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
+                asyncio.create_task(tflix.scrape(xtrnl_brwsr)),
+                asyncio.create_task(webcast.scrape(hdl_brwsr)),
+                asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
+            ]
+
+            httpx_tasks = [
+                asyncio.create_task(fawa.scrape()),
+                asyncio.create_task(istreameast.scrape()),
+                asyncio.create_task(pawa.scrape()),
+                asyncio.create_task(roxie.scrape()),
+                asyncio.create_task(shark.scrape()),
+                asyncio.create_task(streambtw.scrape()),
+                asyncio.create_task(streamfree.scrape()),
+                asyncio.create_task(totalsportek.scrape()),
+                asyncio.create_task(tvpass.scrape()),
+            ]
+
+            await asyncio.gather(*(pw_tasks + httpx_tasks))
+
+        finally:
+            await hdl_brwsr.close()
+
+            await xtrnl_brwsr.close()
+
+            await network.client.aclose()
 
     additions = (
         cdnlivetv.urls
@@ -95,7 +111,7 @@ async def main() -> None:
         | streamfree.urls
         | streamhub.urls
         | streamsgate.urls
-        | strmd.urls
+        | tflix.urls
         | totalsportek.urls
         | tvpass.urls
         | watchfooty.urls
@@ -153,8 +169,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-    try:
-        asyncio.run(network.client.aclose())
-    except Exception:
-        pass

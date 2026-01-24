@@ -12,7 +12,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "TOTALSPRTK"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=28_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
 MIRRORS = [
     {

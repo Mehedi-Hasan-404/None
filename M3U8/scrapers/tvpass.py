@@ -8,7 +8,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "TVPASS"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=86_400)
+CACHE_FILE = Cache(TAG, exp=86_400)
 
 BASE_URL = "https://tvpass.org/playlist/m3u"
 

@@ -1,7 +1,7 @@
 import json
 from functools import partial
 
-from playwright.async_api import BrowserContext, async_playwright
+from playwright.async_api import BrowserContext, Page
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -11,15 +11,13 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "PIXEL"
 
-CACHE_FILE = Cache(f"{TAG.lower()}.json", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://pixelsport.tv/backend/livetv/events"
 
 
-async def get_api_data(context: BrowserContext) -> dict[str, list[dict, str, str]]:
+async def get_api_data(page: Page) -> dict[str, list[dict, str, str]]:
     try:
-        page = await context.new_page()
-
         await page.goto(
             BASE_URL,
             wait_until="domcontentloaded",
@@ -35,10 +33,10 @@ async def get_api_data(context: BrowserContext) -> dict[str, list[dict, str, str
     return json.loads(raw_json)
 
 
-async def get_events(context: BrowserContext) -> dict[str, dict[str, str | float]]:
+async def get_events(page: Page) -> dict[str, dict[str, str | float]]:
     now = Time.clean(Time.now())
 
-    api_data = await get_api_data(context)
+    api_data = await get_api_data(page)
 
     events = {}
 
@@ -75,7 +73,7 @@ async def get_events(context: BrowserContext) -> dict[str, dict[str, str | float
     return events
 
 
-async def scrape() -> None:
+async def scrape(browser: BrowserContext) -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
 
@@ -85,11 +83,9 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    async with async_playwright() as p:
-        browser, context = await network.browser(p)
-
-        try:
-            handler = partial(get_events, context=context)
+    async with network.event_context(browser) as context:
+        async with network.event_page(context) as page:
+            handler = partial(get_events, page=page)
 
             events = await network.safe_process(
                 handler,
@@ -97,9 +93,6 @@ async def scrape() -> None:
                 semaphore=network.PW_S,
                 log=log,
             )
-
-        finally:
-            await browser.close()
 
     urls.update(events or {})
 
