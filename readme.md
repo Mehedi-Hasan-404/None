@@ -1,18 +1,17 @@
-## Base Log @ 2026-01-24 08:47 UTC
+## Base Log @ 2026-01-24 14:41 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 9
+### ✅ Working Streams: 137<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| ABC | HTTP Error (404) | `https://fl1.moveonjoy.com/FL_Tampa_ABC/index.m3u8` |
 | BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
-| FDSN Florida | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/46794.m3u8` |
-| FDSN SoCal | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/221151.m3u8` |
-| FDSN West | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20932.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
-| Premier Sports 1 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
+| FDSN Southwest | HTTP Error (502) | `http://mytvstream.net:8080/live/A1Jay5/362586/21843.m3u8` |
+| Hallmark Mystery | HTTP Error (404) | `https://fl1.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8` |
+| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/213668.m3u8` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
+| getTV | Unknown status (302) | `http://fl1.moveonjoy.com/GET_TV/index.m3u8` |
 ---
 #### Base Channels URL
 ```
