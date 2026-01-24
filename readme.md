@@ -1,17 +1,16 @@
-## Base Log @ 2026-01-24 14:41 UTC
+## Base Log @ 2026-01-24 20:41 UTC
 
-### ✅ Working Streams: 137<br>❌ Dead Streams: 8
+### ✅ Working Streams: 138<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `https://fl1.moveonjoy.com/FL_Tampa_ABC/index.m3u8` |
 | BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| FDSN Southwest | HTTP Error (502) | `http://mytvstream.net:8080/live/A1Jay5/362586/21843.m3u8` |
-| Hallmark Mystery | HTTP Error (404) | `https://fl1.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8` |
-| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Cozi TV | HTTP Error (404) | `https://fl1.moveonjoy.com/COZI_TV/index.m3u8` |
+| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| History Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/history_channel/index.m3u8` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
-| getTV | Unknown status (302) | `http://fl1.moveonjoy.com/GET_TV/index.m3u8` |
+| Sportsnet One | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
+| TSN1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/142475` |
 ---
 #### Base Channels URL
 ```
