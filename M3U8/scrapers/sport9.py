@@ -106,7 +106,7 @@ async def scrape(browser: Browser) -> None:
     if events:
         now = Time.clean(Time.now()).timestamp()
 
-        async with network.event_context(browser) as context:
+        async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
