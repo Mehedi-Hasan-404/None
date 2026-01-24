@@ -121,7 +121,7 @@ write_readme() {
         echo "#### Combined (Base + Live Events) URL"
         echo -e "\`\`\`\nhttps://s.id/d9M3U8\n\`\`\`\n"
         echo "#### EPG URL"
-        echo -e "\`\`\`\nhttps://s.id/d9EPG\n\`\`\`\n"
+        echo -e "\`\`\`\nhttps://s.id/d9sEPG\n\`\`\`\n"
         echo "---"
         echo "#### Mirrors"
         echo -n "[GitHub](https://github.com/doms9/iptv) | "
