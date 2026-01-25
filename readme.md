@@ -1,14 +1,18 @@
-## Base Log @ 2026-01-25 04:04 UTC
+## Base Log @ 2026-01-25 08:47 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 5
+### ✅ Working Streams: 136<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
+| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
+| FDSN Midwest | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/66795.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
 | NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Paramount Network | HTTP Error (404) | `https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Sony Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Sony_Movie_Channel/index.m3u8` |
-| Sportsnet One | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
+| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/213668.m3u8` |
 ---
 #### Base Channels URL
 ```
