@@ -1,16 +1,14 @@
-## Base Log @ 2026-01-24 20:41 UTC
+## Base Log @ 2026-01-25 04:04 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 7
+### ✅ Working Streams: 140<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| Cozi TV | HTTP Error (404) | `https://fl1.moveonjoy.com/COZI_TV/index.m3u8` |
-| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| History Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/history_channel/index.m3u8` |
+| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
 | Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Sony Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Sony_Movie_Channel/index.m3u8` |
 | Sportsnet One | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
-| TSN1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/142475` |
 ---
 #### Base Channels URL
 ```
