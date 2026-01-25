@@ -67,7 +67,7 @@ async def main() -> None:
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(xtrnl_brwsr)),
-                asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
+                # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(tflix.scrape(xtrnl_brwsr)),
                 asyncio.create_task(webcast.scrape(hdl_brwsr)),
