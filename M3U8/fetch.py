@@ -20,11 +20,10 @@ from scrapers import (
     streamfree,
     streamhub,
     streamsgate,
-    tflix,
-    totalsportek,
     tvpass,
     watchfooty,
     webcast,
+    xstreameast,
 )
 from scrapers.utils import get_logger, network
 
@@ -69,7 +68,6 @@ async def main() -> None:
                 asyncio.create_task(streamcenter.scrape(xtrnl_brwsr)),
                 # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(tflix.scrape(xtrnl_brwsr)),
                 asyncio.create_task(webcast.scrape(hdl_brwsr)),
                 asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
             ]
@@ -82,8 +80,8 @@ async def main() -> None:
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(streamfree.scrape()),
-                asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvpass.scrape()),
+                asyncio.create_task(xstreameast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
@@ -111,11 +109,10 @@ async def main() -> None:
         | streamfree.urls
         | streamhub.urls
         | streamsgate.urls
-        | tflix.urls
-        | totalsportek.urls
         | tvpass.urls
         | watchfooty.urls
         | webcast.urls
+        | xstreameast.urls
     )
 
     live_events: list[str] = []

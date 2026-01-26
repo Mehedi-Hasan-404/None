@@ -76,6 +76,8 @@ async def process_event(
     page: Page,
 ) -> tuple[str | None, str | None]:
 
+    nones = [None for _ in range(2)]
+
     pattern = re.compile(r"\((\d+)\)")
 
     captured: list[str] = []
@@ -106,12 +108,12 @@ async def process_event(
         except TimeoutError:
             log.warning(f"URL {url_num}) Can't find stream links header.")
 
-            return None, None
+            return nones
 
         if not (match := pattern.search(text)) or int(match[1]) == 0:
             log.warning(f"URL {url_num}) No available stream links.")
 
-            return None, None
+            return nones
 
         try:
             first_available = await page.wait_for_selector(
@@ -121,12 +123,12 @@ async def process_event(
         except TimeoutError:
             log.warning(f"URL {url_num}) No available stream links.")
 
-            return None, None
+            return nones
 
         if not (href := await first_available.get_attribute("href")):
             log.warning(f"URL {url_num}) No available stream links.")
 
-            return None, None
+            return nones
 
         embed = re.sub(
             pattern=r"^.*\/stream",
@@ -147,7 +149,7 @@ async def process_event(
         except asyncio.TimeoutError:
             log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
 
-            return None, None
+            return nones
 
         finally:
             if not wait_task.done():
@@ -165,12 +167,12 @@ async def process_event(
 
         log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
 
-        return None, None
+        return nones
 
     except Exception as e:
         log.warning(f"URL {url_num}) Exception while processing: {e}")
 
-        return None, None
+        return nones
 
     finally:
         page.remove_listener("request", handler)
