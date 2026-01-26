@@ -1,18 +1,13 @@
-## Base Log @ 2026-01-25 20:43 UTC
+## Base Log @ 2026-01-26 04:07 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 9
+### ✅ Working Streams: 141<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| Boomerang | HTTP Error (404) | `http://fl1.moveonjoy.com/BOOMERANG/index.m3u8` |
-| Disney XD | HTTP Error (404) | `http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8` |
-| FDSN Florida | HTTP Error (502) | `http://mytvstream.net:8080/live/A1Jay5/362586/46794.m3u8` |
-| FDSN Southeast | HTTP Error (502) | `http://mytvstream.net:8080/live/A1Jay5/362586/2213.m3u8` |
-| NBC Sports Bay Area | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
-| Premier Sports 1 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Premier Sports 2 | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
 ```
