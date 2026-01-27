@@ -9,6 +9,7 @@ from scrapers import (
     embedhd,
     fawa,
     istreameast,
+    livetvsx,
     pawa,
     pixel,
     ppv,
@@ -62,6 +63,7 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
+                asyncio.create_task(livetvsx.scrape(hdl_brwsr)),
                 asyncio.create_task(pixel.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
@@ -98,6 +100,7 @@ async def main() -> None:
         | embedhd.urls
         | fawa.urls
         | istreameast.urls
+        | livetvsx.urls
         | pawa.urls
         | pixel.urls
         | ppv.urls
