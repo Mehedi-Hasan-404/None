@@ -46,7 +46,7 @@ async def process_event(
             timeout=15_000,
         )
 
-        await page.wait_for_timeout(2_000)
+        await page.wait_for_timeout(1_500)
 
         buttons = await page.query_selector_all(".lnktbj a[href*='webplayer']")
 
@@ -63,7 +63,7 @@ async def process_event(
             href = await btn.get_attribute("href")
             break
 
-        if not href:
+        else:
             log.warning(f"URL {url_num}) No available stream links.")
 
             return
@@ -109,7 +109,7 @@ async def process_event(
 
 
 async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
-    log.info("Refreshing HTML cache")
+    log.info("Refreshing XML cache")
 
     events = {}
 
@@ -186,14 +186,14 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    log.info('Scraping from "https://livetv.sx/enx/"')
 
     events = await get_events(cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with network.event_context(browser, stealth=False) as context:
+        async with network.event_context(browser) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
