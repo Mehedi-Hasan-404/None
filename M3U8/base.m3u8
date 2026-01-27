@@ -28,10 +28,12 @@ http://fl1.moveonjoy.com/Aspire/index.m3u8
 http://fl1.moveonjoy.com/BBC_AMERICA/index.m3u8
 
 #EXTINF:-1 tvg-chno="10" tvg-id="BBC.News.(North.America).HD.us2" tvg-name="BBC World News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s89542_dark_360w_270h.png" group-title="TV",BBC World News
-http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/1723
 
 #EXTINF:-1 tvg-chno="11" tvg-id="BET.HD.us2" tvg-name="BET" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10051_dark_360w_270h.png" group-title="TV",BET
-https://streamer1.nexgen.bz/BET/index.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/2071
 
 #EXTINF:-1 tvg-chno="12" tvg-id="Big.Ten.Network.HD.us2" tvg-name="Big Ten Network" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s56783_dark_360w_270h.png" group-title="TV",Big Ten Network
 http://23.237.104.106:8080/USA_BTN/index.m3u8
@@ -148,7 +150,8 @@ http://mytvstream.net:8080/live/A1Jay5/362586/66795.m3u8
 http://mytvstream.net:8080/live/A1Jay5/362586/58827.m3u8
 
 #EXTINF:-1 tvg-chno="50" tvg-id="FanDuel.Sports.Network.Ohio.(Cleveland).HDTV.us" tvg-name="FDSN Ohio" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s49691_dark_360w_270h.png" group-title="TV",FDSN Ohio
-http://mytvstream.net:8080/live/A1Jay5/362586/17752.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222126
 
 #EXTINF:-1 tvg-chno="51" tvg-id="FanDuel.Sports.Network.Oklahoma.24/7.HDTV.(Tulsa).us" tvg-name="FDSN Oklahoma" tvg-logo="https://i.gyazo.com/80ad6fd142cd67f06eef58d9ce5aa72b.png" group-title="TV",FDSN Oklahoma
 http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8
@@ -157,13 +160,16 @@ http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8
 http://mytvstream.net:8080/live/A1Jay5/362586/221151.m3u8
 
 #EXTINF:-1 tvg-chno="53" tvg-id="FanDuel.Sports.Network.Southeast.HDTV.(Mont./Birm./Dothan/Mobile.AL).us" tvg-name="FDSN Southeast" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s20789_dark_360w_270h.png" group-title="TV",FDSN Southeast
-http://mytvstream.net:8080/live/A1Jay5/362586/2213.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222130
 
 #EXTINF:-1 tvg-chno="54" tvg-id="FanDuel.Sports.Network.Southwest.HDTV.24/7.(Main).us" tvg-name="FDSN Southwest" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59629_dark_360w_270h.png" group-title="TV",FDSN Southwest
-http://mytvstream.net:8080/live/A1Jay5/362586/21843.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/220452
 
 #EXTINF:-1 tvg-chno="55" tvg-id="FanDuel.Sports.Network.Sun.South.24/7.HDTV.(South.Marlins,.Rays,.Heat).us" tvg-name="FDSN Sun" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s61084_dark_360w_270h.png" group-title="TV",FDSN Sun
-http://mytvstream.net:8080/live/A1Jay5/362586/104917.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222132
 
 #EXTINF:-1 tvg-chno="56" tvg-id="FanDuel.Sports.Network.West.HDTV.us" tvg-name="FDSN West" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59627_dark_360w_270h.png" group-title="TV",FDSN West
 http://mytvstream.net:8080/live/A1Jay5/362586/20932.m3u8
@@ -211,7 +217,8 @@ https://fl1.moveonjoy.com/FXX/index.m3u8
 http://fl1.moveonjoy.com/FYI/index.m3u8
 
 #EXTINF:-1 tvg-chno="71" tvg-id="Game.Show.Network.HD.us2" tvg-name="Game Show Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14909_dark_360w_270h.png" group-title="TV",Game Show Network
-https://streamer1.nexgen.bz/GSN/index.m3u8
+#EXTVLCOPT:http-user-agent=curl/8.5.0
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/1948
 
 #EXTINF:-1 tvg-chno="72" tvg-id="get.us2" tvg-name="getTV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s82563_dark_360w_270h.png" group-title="TV",getTV
 http://fl1.moveonjoy.com/GET_TV/index.m3u8
@@ -235,7 +242,7 @@ https://fl1.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
 http://fl1.moveonjoy.com/HBO/index.m3u8
 
 #EXTINF:-1 tvg-chno="79" tvg-id="HBO2.HD.us2" tvg-name="HBO 2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68140_dark_360w_270h.png" group-title="TV",HBO 2
-http://fl1.moveonjoy.com/HBO_2/index.m3u8
+http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/2071
 
 #EXTINF:-1 tvg-chno="80" tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59839_dark_360w_270h.png" group-title="TV",HBO Comedy
 http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8
