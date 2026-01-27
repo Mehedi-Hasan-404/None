@@ -160,8 +160,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     live = []
 
-    start_ts = now.delta(minutes=-30).timestamp()
-    end_ts = now.delta(minutes=30).timestamp()
+    start_ts = now.delta(hours=-1).timestamp()
+    end_ts = now.delta(minutes=5).timestamp()
 
     for k, v in events.items():
         if k in cached_keys:
@@ -210,10 +210,11 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event, ts = (
+                    sport, event, ts, link = (
                         ev["sport"],
                         ev["event"],
                         ev["timestamp"],
+                        ev["link"],
                     )
 
                     key = f"[{sport}] {event} ({TAG})"
@@ -226,6 +227,7 @@ async def scrape(browser: Browser) -> None:
                         "base": "https://livetv.sx/enx/",
                         "timestamp": ts,
                         "id": tvg_id or "Live.Event.us",
+                        "link": link,
                     }
 
                     cached_urls[key] = entry
