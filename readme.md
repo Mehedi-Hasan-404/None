@@ -1,15 +1,19 @@
-## Base Log @ 2026-01-28 01:18 UTC
+## Base Log @ 2026-01-28 03:55 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 6
+### ✅ Working Streams: 136<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC America | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_AMERICA/index.m3u8` |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| FDSN Ohio | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222126` |
 | FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8` |
-| FDSN Southwest | HTTP Error (403) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/220452` |
+| FDSN Southeast | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222130` |
+| FDSN Southwest | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/220452` |
+| FDSN Sun | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222132` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| NBC Sports Philadelphia | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/136477` |
+| NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
 | Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
