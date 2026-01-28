@@ -1,19 +1,14 @@
-## Base Log @ 2026-01-27 20:45 UTC
+## Base Log @ 2026-01-28 01:18 UTC
 
-### ✅ Working Streams: 134<br>❌ Dead Streams: 11
+### ✅ Working Streams: 140<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC World News | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8` |
-| BET | HTTP Error (403) | `https://streamer1.nexgen.bz/BET/index.m3u8` |
-| FDSN Ohio | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/17752.m3u8` |
+| BBC America | HTTP Error (404) | `http://fl1.moveonjoy.com/BBC_AMERICA/index.m3u8` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
 | FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/20934.m3u8` |
-| FDSN Southeast | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/2213.m3u8` |
-| FDSN Southwest | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/21843.m3u8` |
-| FDSN Sun | HTTP Error (403) | `http://mytvstream.net:8080/live/A1Jay5/362586/104917.m3u8` |
-| Game Show Network | HTTP Error (403) | `https://streamer1.nexgen.bz/GSN/index.m3u8` |
-| NBC Sports Bay Area | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NFL RedZone | Unknown status (302) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| FDSN Southwest | HTTP Error (403) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/220452` |
+| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
 | Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
