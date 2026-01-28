@@ -14,6 +14,8 @@ get_status() {
     [[ "$url" != http* ]] && return
 
     for attempt in $(seq 1 "$RETRY_COUNT"); do
+        echo "Checking '$url'"
+
         response=$(
             curl -skL \
                 -A "$UA" \
@@ -22,7 +24,7 @@ get_status() {
                 -H "Accept-Encoding: gzip, deflate, br" \
                 -H "Connection: keep-alive" \
                 -o /dev/null \
-                --max-time 15 \
+                --max-time 30 \
                 -w "%{http_code}" \
                 "$url" 2>&1
         )
