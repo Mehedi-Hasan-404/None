@@ -129,12 +129,14 @@ class Network:
     async def event_context(
         browser: Browser,
         stealth: bool = True,
+        ignore_https: bool = False,
     ) -> AsyncGenerator[BrowserContext, None]:
         context: BrowserContext | None = None
 
         try:
             context = await browser.new_context(
                 user_agent=Network.UA if stealth else None,
+                ignore_https_errors=ignore_https,
                 viewport={"width": 1366, "height": 768},
                 device_scale_factor=1,
                 locale="en-US",

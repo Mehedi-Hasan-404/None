@@ -10,11 +10,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "LTVSX"
-
-XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
+TAG = "LIVETVSX"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
+
+XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
 
 BASE_URL = "https://cdn.livetv861.me/rss/upcoming_en.xml"
 
@@ -193,7 +193,7 @@ async def scrape(browser: Browser) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with network.event_context(browser) as context:
+        async with network.event_context(browser, ignore_https=True) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(

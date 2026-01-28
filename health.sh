@@ -9,21 +9,23 @@ STATUSLOG=$(mktemp)
 get_status() {
     local url="$1"
     local channel="$2"
+    local index="$3"
+    local total="$4"
     local attempt response status_code
 
     [[ "$url" != http* ]] && return
 
-    for attempt in $(seq 1 "$RETRY_COUNT"); do
-        echo "Checking '$url'"
+    printf '[%d/%d] Checking %s\n' "$((index + 1))" "$total" "$url"
 
+    for attempt in $(seq 1 "$RETRY_COUNT"); do
         response=$(
             curl -skL \
                 -A "$UA" \
                 -H "Accept: */*" \
                 -H "Accept-Language: en-US,en;q=0.9" \
-                -H "Accept-Encoding: gzip, deflate, br" \
                 -H "Connection: keep-alive" \
                 -o /dev/null \
+                --compressed \
                 --max-time 30 \
                 -w "%{http_code}" \
                 "$url" 2>&1
@@ -49,7 +51,7 @@ get_status() {
     status_code="$response"
 
     case "$status_code" in
-    200)
+    2* | 3*)
         echo "PASS" >>"$STATUSLOG"
         ;;
 
@@ -73,6 +75,7 @@ get_status() {
 
 check_links() {
     echo "Checking links from: $base_file"
+    total_urls=$(grep -cE '^https?://' "$base_file")
     channel_num=0
     name=""
 
@@ -88,14 +91,14 @@ check_links() {
 
         elif [[ "$line" =~ ^https?:// ]]; then
             while (($(jobs -r | wc -l) >= MAX_JOBS)); do sleep 0.2; done
-            get_status "$line" "$name" &
+            get_status "$line" "$name" "$channel_num" "$total_urls" &
             ((channel_num++))
         fi
 
     done < <(cat "$base_file")
 
     wait
-    echo "Done."
+    echo -e "\nDone."
 }
 
 write_readme() {
