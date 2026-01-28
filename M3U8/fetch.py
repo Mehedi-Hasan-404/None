@@ -83,7 +83,7 @@ async def main() -> None:
                 # asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(streamfree.scrape()),
                 asyncio.create_task(tvpass.scrape()),
-                asyncio.create_task(xstreameast.scrape()),
+                # asyncio.create_task(xstreameast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
