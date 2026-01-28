@@ -57,7 +57,7 @@ async def process_event(
 
             label = (await img.get_attribute("alt") or "").lower()
 
-            if label == "web":
+            if not label or label == "web":
                 continue
 
             href = await btn.get_attribute("href")
@@ -193,7 +193,9 @@ async def scrape(browser: Browser) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with network.event_context(browser, ignore_https=True) as context:
+        async with network.event_context(
+            browser, ignore_https=True, stealth=False
+        ) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(

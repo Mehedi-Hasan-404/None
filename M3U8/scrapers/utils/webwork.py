@@ -154,8 +154,7 @@ class Network:
             )
 
             if stealth:
-                await context.add_init_script(
-                    """
+                await context.add_init_script("""
                     Object.defineProperty(navigator, "webdriver", { get: () => undefined });
 
                     Object.defineProperty(navigator, "languages", {
@@ -203,8 +202,7 @@ class Network:
                     });
 
                     observer.observe(document.documentElement, { childList: true, subtree: true });
-                """
-                )
+                """)
 
             else:
                 context = await browser.new_context()
