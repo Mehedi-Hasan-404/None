@@ -50,22 +50,22 @@ async def process_event(
 
         buttons = await page.query_selector_all(".lnktbj a[href*='webplayer']")
 
-        href = None
+        labels = await page.eval_on_selector_all(
+            ".lnktyt span",
+            "elements => elements.map(el => el.textContent.trim().toLowerCase())",
+        )
 
-        for btn in buttons:
-            img = await btn.query_selector("img")
-
-            label = (await img.get_attribute("alt") or "").lower()
-
-            if not label or label == "web":
+        for btn, label in zip(buttons, labels):
+            if label == "web":
                 continue
 
-            href = await btn.get_attribute("href")
+            if not (href := await btn.get_attribute("href")):
+                continue
+
             break
 
         else:
-            log.warning(f"URL {url_num}) No available stream links.")
-
+            log.warning(f"URL {url_num}) No valid sources found.")
             return
 
         href = href if href.startswith("http") else f"https:{href}"
