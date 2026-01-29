@@ -18,7 +18,11 @@ XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
 
 BASE_URL = "https://cdn.livetv861.me/rss/upcoming_en.xml"
 
-VALID_SPORTS = {"NBA", "NHL", "NFL", "NCAA", "MLB"}
+VALID_SPORTS = {
+    "Football",
+    "Basketball",
+    "Ice Hockey",
+}
 
 
 async def process_event(
@@ -56,7 +60,7 @@ async def process_event(
         )
 
         for btn, label in zip(buttons, labels):
-            if label == "web":
+            if label in ["web", "youtube"]:
                 continue
 
             if not (href := await btn.get_attribute("href")):
@@ -130,14 +134,16 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
         if not all([title, link, sport_sum, date]):
             continue
 
-        sport = sport_sum.split()[-1]
+        sprt = sport_sum.split(".", 1)
+
+        sport, league = sprt[0], "".join(sprt[1:]).strip()
 
         if sport not in VALID_SPORTS:
             continue
 
         event_dt = Time.from_str(date)
 
-        key = f"[{sport}] {title} ({TAG})"
+        key = f"[{sport} - {league}] {title} ({TAG})"
 
         events[key] = {
             "sport": sport,
