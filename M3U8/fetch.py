@@ -64,14 +64,14 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
-                asyncio.create_task(livetvsx.scrape(hdl_brwsr)),
+                # asyncio.create_task(livetvsx.scrape(hdl_brwsr)),
                 asyncio.create_task(pixel.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(xtrnl_brwsr)),
                 # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
-                asyncio.create_task(totalsportek.scrape(hdl_brwsr)),
+                # asyncio.create_task(totalsportek.scrape(hdl_brwsr)),
                 asyncio.create_task(webcast.scrape(hdl_brwsr)),
                 asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
             ]
@@ -85,7 +85,7 @@ async def main() -> None:
                 asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(streamfree.scrape()),
                 asyncio.create_task(tvpass.scrape()),
-                asyncio.create_task(xstreameast.scrape()),
+                # asyncio.create_task(xstreameast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
