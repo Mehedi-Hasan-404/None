@@ -147,6 +147,7 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
 
         events[key] = {
             "sport": sport,
+            "league": league,
             "event": title,
             "link": link,
             "event_ts": event_dt.timestamp(),
@@ -216,14 +217,15 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event, ts, link = (
+                    sport, league, event, ts, link = (
                         ev["sport"],
+                        ev["league"],
                         ev["event"],
                         ev["timestamp"],
                         ev["link"],
                     )
 
-                    key = f"[{sport}] {event} ({TAG})"
+                    key = f"[{sport} - {league}] {event} ({TAG})"
 
                     tvg_id, logo = leagues.get_tvg_info(sport, event)
 
