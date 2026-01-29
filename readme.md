@@ -1,17 +1,12 @@
-## Base Log @ 2026-01-29 15:04 UTC
+## Base Log @ 2026-01-29 17:45 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 8
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Ohio | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222126` |
 | FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/20934.m3u8` |
-| FDSN Southwest | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/220452` |
-| FDSN Sun | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222132` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| NBC Sports Bay Area | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| MSNBC | HTTP Error (404) | `http://41.205.93.154/MSNBC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
