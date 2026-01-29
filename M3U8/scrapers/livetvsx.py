@@ -193,9 +193,7 @@ async def scrape(browser: Browser) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        async with network.event_context(
-            browser, ignore_https=True, stealth=False
-        ) as context:
+        async with network.event_context(browser, ignore_https=True) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
