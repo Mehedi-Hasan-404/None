@@ -1,22 +1,17 @@
-## Base Log @ 2026-01-29 09:05 UTC
+## Base Log @ 2026-01-29 15:04 UTC
 
-### ✅ Working Streams: 133<br>❌ Dead Streams: 13
+### ✅ Working Streams: 138<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC World News | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/1723` |
-| Cozi TV | HTTP Error (404) | `https://fl1.moveonjoy.com/COZI_TV/index.m3u8` |
 | FDSN Ohio | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222126` |
 | FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/20934.m3u8` |
 | FDSN Southwest | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/220452` |
 | FDSN Sun | HTTP Error (502) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222132` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
 | NBC Sports Bay Area | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
-| NESN | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/46726.m3u8` |
+| NFL RedZone | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
 | Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141497` |
-| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
