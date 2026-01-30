@@ -5,15 +5,13 @@ import re
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from scrapers.utils import get_logger, network
+from scrapers.utils import get_logger, leagues, network
 
 log = get_logger(__name__)
 
 BASE_M3U8 = Path(__file__).parent / "base.m3u8"
 
 EPG_FILE = Path(__file__).parent / "TV.xml"
-
-LIVE_IMG = "https://i.gyazo.com/978f2eb4a199ca5b56b447aded0cb9e3.png"
 
 EPG_URLS = {
     "https://epgshare01.online/epgshare01/epg_ripper_CA2.xml.gz",
@@ -27,23 +25,33 @@ EPG_URLS = {
 }
 
 DUMMIES = {
-    "Basketball.Dummy.us": LIVE_IMG,
-    "Golf.Dummy.us": LIVE_IMG,
-    "Live.Event.us": LIVE_IMG,
+    "Basketball.Dummy.us": leagues.live_img,
+    "Golf.Dummy.us": leagues.live_img,
+    "Live.Event.us": leagues.live_img,
     "MLB.Baseball.Dummy.us": None,
     "NBA.Basketball.Dummy.us": None,
     "NFL.Dummy.us": None,
     "NHL.Hockey.Dummy.us": None,
-    "PPV.EVENTS.Dummy.us": LIVE_IMG,
-    "Racing.Dummy.us": LIVE_IMG,
-    "Soccer.Dummy.us": LIVE_IMG,
-    "Tennis.Dummy.us": LIVE_IMG,
+    "PPV.EVENTS.Dummy.us": leagues.live_img,
+    "Racing.Dummy.us": leagues.live_img,
+    "Soccer.Dummy.us": leagues.live_img,
+    "Tennis.Dummy.us": leagues.live_img,
     "WNBA.dummy.us": None,
 }
 
 REPLACE_IDs = {
-    "NCAA Sports": {"old": "Sports.Dummy.us", "new": "NCAA.Sports.Dummy.us"},
-    "UFC": {"old": "UFC.247.Dummy.us", "new": "UFC.Dummy.us"},
+    "Ice Hockey": {
+        "old": "Minor.League.Hockey.Dummy.us",
+        "new": "Ice.Hockey.Dummy.us",
+    },
+    "NCAA Sports": {
+        "old": "Sports.Dummy.us",
+        "new": "NCAA.Sports.Dummy.us",
+    },
+    "UFC": {
+        "old": "UFC.247.Dummy.us",
+        "new": "UFC.Dummy.us",
+    },
 }
 
 
@@ -62,7 +70,7 @@ def get_tvg_ids() -> dict[str, str]:
 
     tvg |= DUMMIES
 
-    tvg |= {v["old"]: LIVE_IMG for v in REPLACE_IDs.values()}
+    tvg |= {v["old"]: leagues.live_img for v in REPLACE_IDs.values()}
 
     return tvg
 
@@ -71,14 +79,14 @@ async def fetch_xml(url: str) -> ET.Element | None:
     if not (xml_data := await network.request(url, log=log)):
         return
 
-    try:
-        log.info(f'Parsing XML from "{url}"')
+    log.info(f'Parsing XML from "{url}"')
 
+    try:
         data = gzip.decompress(xml_data.content)
 
         return ET.fromstring(data)
     except Exception as e:
-        log.error(f'Failed to parse from "{url}": {e}')
+        log.error(f'Failed to parse XML from "{url}": {e}')
 
         return
 
@@ -176,7 +184,7 @@ async def main() -> None:
     for title, ids in REPLACE_IDs.items():
         hijack_id(root, **ids, text=title)
 
-    if missing_ids := set(tvg_ids) - parsed_tvg_ids:
+    if missing_ids := tvg_ids.keys() - parsed_tvg_ids:
         log.warning(f"Missed {len(missing_ids)} TVG ID(s)")
 
         for channel_id in missing_ids:
@@ -195,10 +203,6 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-    for hndlr in log.handlers:
-        hndlr.flush()
-        hndlr.stream.write("\n")
 
     try:
         asyncio.run(network.client.aclose())

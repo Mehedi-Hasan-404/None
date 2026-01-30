@@ -200,11 +200,14 @@ class Leagues:
                 elif self.is_valid(event, "WNBA"):
                     return self.info("WNBA")
 
-                else:
-                    return self.info("Basketball")
+                return self.info("Basketball")
 
             case "Ice Hockey" | "Hockey":
-                return self.info("NHL")
+                return (
+                    self.info("NHL")
+                    if self.is_valid(event, "NHL")
+                    else self.info("Hockey")
+                )
 
             case _:
                 return self.info(sport)
