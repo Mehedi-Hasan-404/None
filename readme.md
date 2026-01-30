@@ -1,11 +1,12 @@
-## Base Log @ 2026-01-29 22:51 UTC
+## Base Log @ 2026-01-30 04:20 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
 | Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
+| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57297.m3u8` |
 ---
 #### Base Channels URL
