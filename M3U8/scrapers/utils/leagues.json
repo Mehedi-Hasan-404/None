@@ -28,6 +28,14 @@
         }
       }
     ],
+    "Ice.Hockey.Dummy.us": [
+      {
+        "HOCKEY": {
+          "logo": "https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png",
+          "names": []
+        }
+      }
+    ],
     "MLB.Baseball.Dummy.us": [
       {
         "MLB": {
@@ -104,7 +112,6 @@
         "NHL": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png",
           "names": [
-            "HOCKEY",
             "NATIONAL HOCKEY LEAGUE",
             "NHL HOCKEY",
             "NHL PLAYOFFS",
@@ -207,7 +214,7 @@
       {
         "BUNDESLIGA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/10.png",
-          "names": ["BUNDESLIG", "GERMAN BUNDESLIGA"]
+          "names": ["BUNDESLIG", "GERMAN BUNDESLIGA", "GERMANY BUNDESLIGA"]
         }
       },
       {
@@ -315,6 +322,12 @@
         "COUPE DE FRANCE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/182.png",
           "names": ["FRANCE CUP", "FRENCH CUP"]
+        }
+      },
+      {
+        "EERSTE DIVISIE": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/105.png",
+          "names": ["KEUKEN KAMPIOEN DIVISIE"]
         }
       },
       {
@@ -442,6 +455,8 @@
             "LALIGA",
             "PRIMERA DIVISION",
             "PRIMERA DIVISIÓN",
+            "SPAIN LA LIGA",
+            "SPAIN LALIGA",
             "SPANISH LA LIGA",
             "SPANISH LALIGA"
           ]
@@ -456,6 +471,7 @@
             "LALIGA 2",
             "SEGUNDA DIVISION",
             "SEGUNDA DIVISIÓN",
+            "SEGUNDA LIGA",
             "SPAIN SEGUNDA DIVISION",
             "SPANISH LA LIGA 2",
             "SPANISH LALIGA 2",
@@ -972,6 +988,71 @@
       "Vikings",
       "Washington Commanders",
       "Washington Redskins"
+    ],
+    "NHL": [
+      "Anaheim",
+      "Anaheim Ducks",
+      "Boston",
+      "Boston Bruins",
+      "Buffalo",
+      "Buffalo Sabres",
+      "Calgary",
+      "Calgary Flames",
+      "Carolina",
+      "Carolina Hurricanes",
+      "Chicago",
+      "Chicago Blackhawks",
+      "Colorado",
+      "Colorado Avalanche",
+      "Columbus",
+      "Columbus Blue Jackets",
+      "Dallas",
+      "Dallas Stars",
+      "Detroit",
+      "Detroit Red Wings",
+      "Edmonton",
+      "Edmonton Oilers",
+      "Florida",
+      "Florida Panthers",
+      "Los Angeles",
+      "Los Angeles Kings",
+      "Minnesota",
+      "Minnesota Wild",
+      "Montreal",
+      "Montreal Canadiens",
+      "Nashville",
+      "Nashville Predators",
+      "New Jersey",
+      "New Jersey Devils",
+      "New York",
+      "New York Islanders",
+      "New York Rangers",
+      "Ottawa",
+      "Ottawa Senators",
+      "Philadelphia",
+      "Philadelphia Flyers",
+      "Pittsburgh",
+      "Pittsburgh Penguins",
+      "San Jose",
+      "San Jose Sharks",
+      "Seattle",
+      "Seattle Kraken",
+      "St. Louis",
+      "St. Louis Blues",
+      "Tampa Bay",
+      "Tampa Bay Lightning",
+      "Toronto",
+      "Toronto Maple Leafs",
+      "Utah",
+      "Utah Mammoth",
+      "Vancouver",
+      "Vancouver Canucks",
+      "Vegas",
+      "Vegas Golden Knights",
+      "Washington",
+      "Washington Capitals",
+      "Winnipeg",
+      "Winnipeg Jets"
     ],
     "WNBA": [
       "Aces",
