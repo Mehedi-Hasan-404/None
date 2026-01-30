@@ -221,7 +221,7 @@ async def scrape(browser: Browser) -> None:
                         ev["sport"],
                         ev["league"],
                         ev["event"],
-                        ev["timestamp"],
+                        ev["event_ts"],
                         ev["link"],
                     )
 
