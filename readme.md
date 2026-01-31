@@ -1,15 +1,13 @@
-## Base Log @ 2026-01-31 04:15 UTC
+## Base Log @ 2026-01-31 07:29 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 6
+### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Sun | HTTP Error (403) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/222132` |
-| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| NBC Sports Bay Area | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| Comedy TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
+| E! Entertainment | HTTP Error (000) | `http://fl1.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8` |
 | Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
-| Premier Sports 2 | HTTP Error (502) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Vice TV | HTTP Error (404) | `https://fl1.moveonjoy.com/VICELAND/index.m3u8` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
