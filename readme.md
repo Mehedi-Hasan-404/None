@@ -1,13 +1,14 @@
-## Base Log @ 2026-01-31 20:47 UTC
+## Base Log @ 2026-01-31 21:08 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 141<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
-| HLN TV | HTTP Error (000) | `https://turnerlive.warnermediacdn.com/hls/live/586496/cnngo/hln/VIDEO_0_3564000.m3u8` |
+| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
 | Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
 | Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
