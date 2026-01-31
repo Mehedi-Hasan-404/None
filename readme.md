@@ -1,12 +1,12 @@
-## Base Log @ 2026-01-31 14:48 UTC
+## Base Log @ 2026-01-31 20:47 UTC
 
 ### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
-| NFL RedZone | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
-| Premier Sports 1 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
+| HLN TV | HTTP Error (000) | `https://turnerlive.warnermediacdn.com/hls/live/586496/cnngo/hln/VIDEO_0_3564000.m3u8` |
+| Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
 | Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
