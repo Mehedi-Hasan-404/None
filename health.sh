@@ -1,8 +1,6 @@
 #!/bin/bash
 base_file="./M3U8/base.m3u8"
-UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 MAX_JOBS=10
-RETRY_COUNT=3
 README="./readme.md"
 STATUSLOG=$(mktemp)
 
@@ -15,66 +13,39 @@ get_status() {
 
     [[ "$url" != http* ]] && return
 
-    printf '[%d/%d] Checking %s\n' "$((index + 1))" "$total" "$url"
+    printf '[%d/%d] Checking "%s"\n' "$((index + 1))" "$total" "$url"
 
-    for attempt in $(seq 1 "$RETRY_COUNT"); do
-        response=$(
-            curl -skL \
-                -A "$UA" \
-                -H "Accept: */*" \
-                -H "Accept-Language: en-US,en;q=0.9" \
-                -H "Connection: keep-alive" \
-                -o /dev/null \
-                --compressed \
-                --max-time 30 \
-                -w "%{http_code}" \
-                "$url" 2>&1
-        )
+    output=$(
+        ffprobe \
+            -v error \
+            -rw_timeout 15000000 \
+            -timeout 15000000 \
+            -select_streams v:0 \
+            -show_entries stream=codec_name \
+            -of csv=p=0 \
+            -headers "User-Agent: curl/8.5.0" \
+            "$url" 2>&1
+    )
 
-        [[ "$response" =~ ^[0-9]+$ ]] && break
+    rc=$?
 
-        sleep 1
-    done
-
-    if [[ ! "$response" =~ ^[0-9]+$ ]]; then
-        if [[ "$response" == *"timed out"* ]]; then
-            echo "| $channel | Connection timed out | \`$url\` |" >>"$STATUSLOG"
-        else
-            echo "| $channel | Curl error | \`$url\` |" >>"$STATUSLOG"
-        fi
-
-        echo "FAIL" >>"$STATUSLOG"
-
-        return
-    fi
-
-    status_code="$response"
-
-    case "$status_code" in
-    2* | 3*)
+    if ((rc == 0)); then
         echo "PASS" >>"$STATUSLOG"
-        ;;
+    else
+        if [[ "$output" =~ Server\ returned\ ([0-9]{3})\ (.+) ]]; then
+            code="${BASH_REMATCH[1]}"
 
-    4* | 5*)
-        echo "| $channel | HTTP Error ($status_code) | \`$url\` |" >>"$STATUSLOG"
-        echo "FAIL" >>"$STATUSLOG"
-        ;;
-
-    *)
-        if [[ "$status_code" == "000" ]]; then
-            echo "| $channel | Connection timed out (000) | \`$url\` |" >>"$STATUSLOG"
+            echo "| $channel | HTTP Error ($code) | \`$url\` |" >>"$STATUSLOG"
         else
-            echo "| $channel | Unknown status ($status_code) | \`$url\` |" >>"$STATUSLOG"
+            echo "| $channel | HTTP Error (000) | \`$url\` |" >>"$STATUSLOG"
         fi
 
         echo "FAIL" >>"$STATUSLOG"
-        ;;
-
-    esac
+    fi
 }
 
 check_links() {
-    echo "Checking links from: $base_file"
+    echo -e "Checking links from: $base_file\n"
     total_urls=$(grep -cE '^https?://' "$base_file")
     channel_num=0
     name=""
