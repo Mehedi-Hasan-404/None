@@ -1,13 +1,14 @@
-## Base Log @ 2026-01-31 07:29 UTC
+## Base Log @ 2026-01-31 08:52 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 141<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Comedy TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
-| E! Entertainment | HTTP Error (000) | `http://fl1.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NBC Sports Bay Area | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
 | Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
-| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/57297.m3u8` |
+| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
 ```
