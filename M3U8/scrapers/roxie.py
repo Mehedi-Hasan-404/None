@@ -17,7 +17,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 
-BASE_URL = "https://roxiestreams.live"
+BASE_URL = "https://roxiestreams.info"
 
 SPORT_ENDPOINTS = {
     "fighting": "Fighting",
