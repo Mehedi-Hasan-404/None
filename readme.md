@@ -1,14 +1,22 @@
-## Base Log @ 2026-01-31 21:08 UTC
+## Base Log @ 2026-02-01 04:41 UTC
 
-### ✅ Working Streams: 141<br>❌ Dead Streams: 5
+### ✅ Working Streams: 133<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Disney | HTTP Error (404) | `https://fl1.moveonjoy.com/DISNEY/index.m3u8` |
+| HBO 2 | HTTP Error (000) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/2071` |
 | HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
-| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
-| Premier Sports 1 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
-| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Hallmark Family | HTTP Error (000) | `https://fl1.moveonjoy.com/HALLMARK_DRAMA/index.m3u8` |
+| Nicktoons | HTTP Error (000) | `http://fl1.moveonjoy.com/NICKTOONS/index.m3u8` |
+| Ovation | HTTP Error (404) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
+| Oxygen | HTTP Error (000) | `https://fl1.moveonjoy.com/OXYGEN/index.m3u8` |
+| Paramount Network | HTTP Error (000) | `https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8` |
+| Pop TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Pop_TV/index.m3u8` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/57297.m3u8` |
+| TV Land | HTTP Error (000) | `https://fl1.moveonjoy.com/TV_LAND/index.m3u8` |
+| TV One | HTTP Error (000) | `https://fl1.moveonjoy.com/TV_ONE/index.m3u8` |
+| Vice TV | HTTP Error (000) | `https://fl1.moveonjoy.com/VICELAND/index.m3u8` |
 ---
 #### Base Channels URL
 ```
