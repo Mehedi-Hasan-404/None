@@ -1,8 +1,8 @@
 import asyncio
-import re
 from functools import partial
 from urllib.parse import urljoin
 
+from playwright.async_api import Browser
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -28,25 +28,6 @@ SPORT_ENDPOINTS = {
     "nhl": "NHL",
     "soccer": "Soccer",
 }
-
-
-async def process_event(url: str, url_num: int) -> str | None:
-    if not (html_data := await network.request(url, log=log)):
-        return
-
-    valid_m3u8 = re.compile(
-        r"showPlayer\(['\"]clappr['\"],\s*['\"]([^'\"]+?\.m3u8(?:\?[^'\"]*)?)['\"]\)",
-        re.IGNORECASE,
-    )
-
-    if not (match := valid_m3u8.search(html_data.text)):
-        log.info(f"URL {url_num}) No M3U8 found")
-
-        return
-
-    log.info(f"URL {url_num}) Captured M3U8")
-
-    return match[1]
 
 
 async def refresh_html_cache(
@@ -133,12 +114,14 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return live
 
 
-async def scrape() -> None:
+async def scrape(browser: Browser) -> None:
     cached_urls = CACHE_FILE.load()
 
-    cached_count = len(cached_urls)
+    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
 
-    urls.update(cached_urls)
+    valid_count = cached_count = len(valid_urls)
+
+    urls.update(valid_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
@@ -149,44 +132,52 @@ async def scrape() -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        for i, ev in enumerate(events, start=1):
-            handler = partial(
-                process_event,
-                url=ev["link"],
-                url_num=i,
-            )
+        async with network.event_context(browser) as context:
+            for i, ev in enumerate(events, start=1):
+                async with network.event_page(context) as page:
+                    handler = partial(
+                        network.process_event,
+                        url=ev["link"],
+                        url_num=i,
+                        page=page,
+                        log=log,
+                    )
 
-            url = await network.safe_process(
-                handler,
-                url_num=i,
-                semaphore=network.HTTP_S,
-                log=log,
-            )
+                    url = await network.safe_process(
+                        handler,
+                        url_num=i,
+                        semaphore=network.PW_S,
+                        log=log,
+                    )
 
-            if url:
-                sport, event, ts, link = (
-                    ev["sport"],
-                    ev["event"],
-                    ev["event_ts"],
-                    ev["link"],
-                )
+                    sport, event, ts, link = (
+                        ev["sport"],
+                        ev["event"],
+                        ev["event_ts"],
+                        ev["link"],
+                    )
 
-                tvg_id, logo = leagues.get_tvg_info(sport, event)
+                    tvg_id, logo = leagues.get_tvg_info(sport, event)
 
-                key = f"[{sport}] {event} ({TAG})"
+                    key = f"[{sport}] {event} ({TAG})"
 
-                entry = {
-                    "url": url,
-                    "logo": logo,
-                    "base": BASE_URL,
-                    "timestamp": ts,
-                    "id": tvg_id or "Live.Event.us",
-                    "link": link,
-                }
+                    entry = {
+                        "url": url,
+                        "logo": logo,
+                        "base": BASE_URL,
+                        "timestamp": ts,
+                        "id": tvg_id or "Live.Event.us",
+                        "link": link,
+                    }
 
-                urls[key] = cached_urls[key] = entry
+                    cached_urls[key] = entry
 
-    if new_count := len(cached_urls) - cached_count:
+                    if url:
+                        valid_count += 1
+
+                        urls[key] = entry
+
+    if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
 
     else:

@@ -317,8 +317,6 @@ class Network:
         finally:
             page.remove_listener("request", handler)
 
-            await page.close()
-
 
 network = Network()
 
