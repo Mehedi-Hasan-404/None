@@ -1,13 +1,13 @@
-## Base Log @ 2026-02-02 04:35 UTC
+## Base Log @ 2026-02-02 09:08 UTC
 
 ### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | HBO 2 | HTTP Error (000) | `http://lucidhosting.xyz:82/sandriassoc@gmail.com/Sm8G4ddxoW/2071` |
-| HLN TV | HTTP Error (000) | `https://turnerlive.warnermediacdn.com/hls/live/586496/cnngo/hln/VIDEO_0_3564000.m3u8` |
-| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Sony Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/Sony_Movie_Channel/index.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NBC Sports Bay Area | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141497` |
 ---
 #### Base Channels URL
 ```
