@@ -99,8 +99,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     live = []
 
-    start_ts = now.delta(minutes=-30).timestamp()
-    end_ts = now.delta(minutes=30).timestamp()
+    start_ts = now.delta(hours=-1).timestamp()
+    end_ts = now.delta(minutes=5).timestamp()
 
     for k, v in events.items():
         if k in cached_keys:
