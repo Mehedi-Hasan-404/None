@@ -15,7 +15,7 @@ TAG = "STRMBTW"
 
 CACHE_FILE = Cache(TAG, exp=3_600)
 
-BASE_URLS = ["https://hiteasport.info/", "https://streambtw.com/"]
+BASE_URL = "https://hiteasport.info/"
 
 
 def fix_league(s: str) -> str:
@@ -45,36 +45,37 @@ async def process_event(url: str, url_num: int) -> str | None:
     return stream_link
 
 
-async def get_events(url: str) -> list[dict[str, str]]:
+async def get_events() -> list[dict[str, str]]:
     events = []
 
-    if not (html_data := await network.request(url, log=log)):
+    if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
     soup = HTMLParser(html_data.content)
 
-    for card in soup.css(".league"):
-        if not (league_elem := card.css_first(".league-header h4")):
+    for event in soup.css(".t-item"):
+        if not (league_elem := event.css_first(".t-league")):
             continue
 
-        for event in card.css(".match"):
-            if not (event_elem := event.css_first(".match-title")):
-                continue
+        if not (event_elem := event.css_first(".t-match")):
+            continue
 
-            if not (watch_btn := event.css_first(".watch-btn")) or not (
-                href := watch_btn.attributes.get("href")
-            ):
-                continue
+        if not (watch_btn := event.css_first("a.t-watch")) or not (
+            href := watch_btn.attributes.get("href")
+        ):
+            continue
 
-            league, name = league_elem.text(strip=True), event_elem.text(strip=True)
+        league = league_elem.text(strip=True)
 
-            events.append(
-                {
-                    "sport": fix_league(league),
-                    "event": name,
-                    "link": urljoin(url, href),
-                }
-            )
+        event = event_elem.text(strip=True)
+
+        events.append(
+            {
+                "sport": fix_league(league),
+                "event": event,
+                "link": urljoin(BASE_URL, href),
+            }
+        )
 
     return events
 
@@ -87,16 +88,9 @@ async def scrape() -> None:
 
         return
 
-    if not (base_url := await network.get_base(BASE_URLS)):
-        log.warning("No working StreamBTW mirrors")
+    log.info(f'Scraping from "{BASE_URL}"')
 
-        CACHE_FILE.write(urls)
-
-        return
-
-    log.info(f'Scraping from "{base_url}"')
-
-    events = await get_events(base_url)
+    events = await get_events()
 
     log.info(f"Processing {len(events)} new URL(s)")
 
