@@ -1,10 +1,16 @@
-## Base Log @ 2026-02-03 04:25 UTC
+## Base Log @ 2026-02-03 09:04 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 139<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| CNBC | HTTP Error (404) | `https://fl1.moveonjoy.com/CNBC/index.m3u8` |
+| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| NBC Sports Bay Area | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
+| NFL RedZone | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/249239` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141497` |
 ---
 #### Base Channels URL
 ```
