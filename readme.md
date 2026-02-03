@@ -1,11 +1,9 @@
-## Base Log @ 2026-02-02 15:07 UTC
+## Base Log @ 2026-02-03 04:25 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
-| Paramount Network | HTTP Error (404) | `https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8` |
 | Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
