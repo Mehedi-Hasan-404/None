@@ -1,10 +1,12 @@
-## Base Log @ 2026-02-03 21:01 UTC
+## Base Log @ 2026-02-04 04:20 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Premier Sports 1 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117037` |
+| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
+| Pop TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Pop_TV/index.m3u8` |
+| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 ---
 #### Base Channels URL
 ```
