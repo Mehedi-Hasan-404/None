@@ -1,12 +1,19 @@
-## Base Log @ 2026-02-04 04:20 UTC
+## Base Log @ 2026-02-04 09:06 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 136<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Lifetime Movie Network | HTTP Error (404) | `https://fl1.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8` |
-| Pop TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Pop_TV/index.m3u8` |
-| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
+| Disney | HTTP Error (404) | `https://fl1.moveonjoy.com/DISNEY/index.m3u8` |
+| FX Movie Channel | HTTP Error (404) | `http://fl1.moveonjoy.com/FX_MOVIE/index.m3u8` |
+| HBO Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HBO_FAMILY/index.m3u8` |
+| HBO | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO/index.m3u8` |
+| NBC Sports Bay Area | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/257216` |
+| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
+| Ovation | HTTP Error (404) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141497` |
+| SportsNet Pittsburgh | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141448` |
+| Sportsnet 360 | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/21635` |
 ---
 #### Base Channels URL
 ```
