@@ -68,7 +68,7 @@ async def main() -> None:
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(webcast.scrape(hdl_brwsr)),
             ]
@@ -76,19 +76,19 @@ async def main() -> None:
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
-                asyncio.create_task(pawa.scrape()),
+                # asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(streamfree.scrape()),
                 asyncio.create_task(tvpass.scrape()),
-                # asyncio.create_task(xstreameast.scrape()),
+                asyncio.create_task(xstreameast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
 
             # others
             await watchfooty.scrape(xtrnl_brwsr)
-            await livetvsx.scrape(hdl_brwsr)
+            await livetvsx.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
