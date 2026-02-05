@@ -1,11 +1,13 @@
-## Base Log @ 2026-02-04 21:00 UTC
+## Base Log @ 2026-02-05 04:25 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 2
+### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
-| SportsNet Pittsburgh | HTTP Error (403) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/141448` |
+| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/20939.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
+| SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/108178.m3u8` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
