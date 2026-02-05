@@ -1,13 +1,13 @@
-## Base Log @ 2026-02-05 09:08 UTC
+## Base Log @ 2026-02-05 15:09 UTC
 
-### ✅ Working Streams: 107<br>❌ Dead Streams: 39
+### ✅ Working Streams: 109<br>❌ Dead Streams: 37
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| AMC | HTTP Error (404) | `http://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8` |
 | Altitude Sports | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/79545.m3u8` |
 | BET | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/13702.m3u8` |
 | CBS | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/120749.m3u8` |
+| CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
 | ESPN2 | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/2210.m3u8` |
 | FDSN Detroit | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/20930.m3u8` |
 | FDSN Florida | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/46794.m3u8` |
@@ -21,17 +21,15 @@
 | FDSN Sun | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/104917.m3u8` |
 | FDSN West | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/20932.m3u8` |
 | FDSN Wisconsin | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/78599.m3u8` |
+| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
 | Fox News | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/1818.m3u8` |
 | Fox Sports 2 | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/1847.m3u8` |
 | Game Show Network | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/120633.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
 | NBC Sports Bay Area | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/9900.m3u8` |
 | NBC Sports Boston | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/20939.m3u8` |
 | NBC Sports California | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/20940.m3u8` |
 | NBC Sports Philadelphia | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/20943.m3u8` |
-| NESN | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/46726.m3u8` |
 | NFL RedZone | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/159118.m3u8` |
-| Ovation | HTTP Error (404) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
 | Space City Home Network | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
 | Spectrum SportsNet LA Dodgers | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
 | Spectrum SportsNet Lakers | HTTP Error (404) | `http://mytvstream.net:8080/live/56481106/11185695/20946.m3u8` |
