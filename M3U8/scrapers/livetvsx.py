@@ -74,6 +74,8 @@ async def process_event(
 
         href = href if href.startswith("http") else f"https:{href}"
 
+        href.replace("livetv.sx", "livetv872.me")
+
         await page.goto(
             href,
             wait_until="domcontentloaded",
@@ -149,7 +151,7 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
             "sport": sport,
             "league": league,
             "event": title,
-            "link": link,
+            "link": link.replace("livetv.sx", "livetv872.me"),
             "event_ts": event_dt.timestamp(),
             "timestamp": now_ts,
         }
@@ -215,6 +217,7 @@ async def scrape(browser: Browser) -> None:
                         url_num=i,
                         semaphore=network.PW_S,
                         log=log,
+                        timeout=20,
                     )
 
                     sport, league, event, ts, link = (
