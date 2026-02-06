@@ -177,6 +177,7 @@ class Leagues:
             "redzone",
             "red zone",
             "college gameday",
+            "nfl honors",
         }
 
     def get_tvg_info(
