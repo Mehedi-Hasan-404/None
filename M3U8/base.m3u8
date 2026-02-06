@@ -58,7 +58,7 @@ http://fl1.moveonjoy.com/C-SPAN/index.m3u8
 http://fl1.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="20" tvg-id="WCBS-DT.us_locals1" tvg-name="CBS" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10098_dark_360w_270h.png" group-title="TV",CBS
-http://mytvstream.net:8080/live/bn80NG/909467/120749.m3u8
+https://fl1.moveonjoy.com/NY_NEW_YORK_CBS/index.m3u8
 
 #EXTINF:-1 tvg-chno="21" tvg-id="CBS.News.National.Stream.us2" tvg-name="CBS News 24/7" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s104846_dark_360w_270h.png" group-title="TV",CBS News 24/7
 https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8
