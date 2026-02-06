@@ -1,12 +1,16 @@
-## Base Log @ 2026-02-06 04:26 UTC
+## Base Log @ 2026-02-06 09:07 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 3
+### ✅ Working Streams: 139<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/79545.m3u8` |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
+| Ovation | HTTP Error (404) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
+| Showtime | HTTP Error (404) | `http://fl1.moveonjoy.com/SHOWTIME/index.m3u8` |
 | Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/31636.m3u8` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57297.m3u8` |
+| USA East | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/10252.m3u8` |
 ---
 #### Base Channels URL
 ```
