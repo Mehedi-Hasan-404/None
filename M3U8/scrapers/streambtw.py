@@ -15,7 +15,7 @@ TAG = "STRMBTW"
 
 CACHE_FILE = Cache(TAG, exp=3_600)
 
-BASE_URL = "https://hiteasport.info/"
+BASE_URL = "https://hiteasport.info"
 
 
 def fix_league(s: str) -> str:
@@ -53,29 +53,28 @@ async def get_events() -> list[dict[str, str]]:
 
     soup = HTMLParser(html_data.content)
 
-    for event in soup.css(".t-item"):
-        if not (league_elem := event.css_first(".t-league")):
+    for card in soup.css(".league"):
+        if not (league_elem := card.css_first(".league-title")):
             continue
 
-        if not (event_elem := event.css_first(".t-match")):
-            continue
+        for event in card.css(".match"):
+            if not (match_elem := event.css_first(".match-name")):
+                continue
 
-        if not (watch_btn := event.css_first("a.t-watch")) or not (
-            href := watch_btn.attributes.get("href")
-        ):
-            continue
+            if (not (watch_btn := event.css_first("a.watch-btn"))) or (
+                not (href := watch_btn.attributes.get("href"))
+            ):
+                continue
 
-        league = league_elem.text(strip=True)
+            league, name = league_elem.text(strip=True), match_elem.text(strip=True)
 
-        event = event_elem.text(strip=True)
-
-        events.append(
-            {
-                "sport": fix_league(league),
-                "event": event,
-                "link": urljoin(BASE_URL, href),
-            }
-        )
+            events.append(
+                {
+                    "sport": fix_league(league),
+                    "event": name,
+                    "link": urljoin(BASE_URL, href),
+                }
+            )
 
     return events
 
