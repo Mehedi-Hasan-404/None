@@ -1,11 +1,10 @@
-## Base Log @ 2026-02-06 00:48 UTC
+## Base Log @ 2026-02-06 04:26 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
-| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
 | Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/31636.m3u8` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57297.m3u8` |
 ---
