@@ -1,11 +1,16 @@
-## Base Log @ 2026-02-07 04:18 UTC
+## Base Log @ 2026-02-07 08:54 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 2
+### ✅ Working Streams: 139<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/20939.m3u8` |
+| NFL RedZone | HTTP Error (000) | `http://mytvstream.net:8080/live/bn80NG/909467/159118.m3u8` |
+| SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/108178.m3u8` |
+| Sportsnet 360 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/2219.m3u8` |
+| USA East | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/10252.m3u8` |
 ---
 #### Base Channels URL
 ```
