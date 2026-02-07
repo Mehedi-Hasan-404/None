@@ -18,7 +18,6 @@ from scrapers import (
     sport9,
     streambtw,
     streamcenter,
-    streamfree,
     streamhub,
     streamsgate,
     tvpass,
@@ -79,7 +78,6 @@ async def main() -> None:
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streambtw.scrape()),
-                asyncio.create_task(streamfree.scrape()),
                 asyncio.create_task(tvpass.scrape()),
                 # asyncio.create_task(xstreameast.scrape()),
             ]
@@ -111,7 +109,6 @@ async def main() -> None:
         | sport9.urls
         | streambtw.urls
         | streamcenter.urls
-        | streamfree.urls
         | streamhub.urls
         | streamsgate.urls
         | tvpass.urls
