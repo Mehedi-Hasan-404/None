@@ -71,6 +71,7 @@ async def main() -> None:
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(totalsportek.scrape(hdl_brwsr)),
+                asyncio.create_task(tvpass.scrape(hdl_brwsr)),
                 asyncio.create_task(webcast.scrape(hdl_brwsr)),
             ]
 
@@ -80,7 +81,6 @@ async def main() -> None:
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streambtw.scrape()),
-                # asyncio.create_task(tvpass.scrape()),
                 asyncio.create_task(xstreameast.scrape()),
             ]
 

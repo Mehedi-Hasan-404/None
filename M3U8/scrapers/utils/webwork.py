@@ -6,7 +6,6 @@ from collections.abc import Awaitable, Callable
 from contextlib import asynccontextmanager
 from functools import partial
 from typing import AsyncGenerator, TypeVar
-from urllib.parse import urlencode, urljoin
 
 import httpx
 from playwright.async_api import Browser, BrowserContext, Page, Playwright, Request
@@ -37,21 +36,6 @@ class Network:
             follow_redirects=True,
             headers={"User-Agent": Network.UA},
             http2=True,
-        )
-
-    @staticmethod
-    def build_proxy_url(
-        tag: str,
-        path: str,
-        query: dict | None = None,
-    ) -> str:
-
-        tag = tag.lower()
-
-        return (
-            f"{urljoin(network.proxy_base, f'{tag}/{path}')}?{urlencode(query)}"
-            if query
-            else urljoin(network.proxy_base, f"{tag}/{path}")
         )
 
     async def request(

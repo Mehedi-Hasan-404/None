@@ -100,6 +100,7 @@ class Time(datetime):
                 "%Y-%m-%d %I:%M %p",
                 "%Y-%m-%d %H:%M %p",
                 "%Y-%m-%dT%H:%M:%S",
+                "%Y-%m-%dT%H:%M:%SZ",
                 "%Y-%m-%dT%H:%M:%S.%fZ",
                 "%Y/%m/%d %H:%M",
                 "%Y/%m/%d %H:%M:%S",
