@@ -76,7 +76,7 @@ async def process_event(
     page: Page,
 ) -> tuple[str | None, str | None]:
 
-    nones = [None for _ in range(2)]
+    nones = None, None
 
     pattern = re.compile(r"\((\d+)\)")
 

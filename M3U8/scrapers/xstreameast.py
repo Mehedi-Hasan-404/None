@@ -30,9 +30,9 @@ SPORT_ENDPOINTS = [
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
-    valid_m3u8 = re.compile(r'var\s+(\w+)\s*=\s*"([^"]*)"', re.IGNORECASE)
+    valid_m3u8 = re.compile(r'(var|const)\s+(\w+)\s*=\s*"([^"]*)"', re.IGNORECASE)
 
-    nones = [None for _ in range(2)]
+    nones = None, None
 
     if not (html_data := await network.request(url, log=log)):
         log.info(f"URL {url_num}) Failed to load url.")
@@ -58,9 +58,12 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) No Clappr source found.")
         return nones
 
+    if len(encoded := match[2]) < 20:
+        encoded = match[3]
+
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return bytes.fromhex(match[2]).decode("utf-8"), iframe_src
+    return bytes.fromhex(encoded).decode("utf-8"), iframe_src
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
