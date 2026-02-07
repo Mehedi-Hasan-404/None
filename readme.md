@@ -1,15 +1,16 @@
-## Base Log @ 2026-02-07 14:51 UTC
+## Base Log @ 2026-02-07 20:49 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 6
+### ✅ Working Streams: 139<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CMT | HTTP Error (404) | `https://fl1.moveonjoy.com/CMT/index.m3u8` |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
-| Cooking Channel | HTTP Error (404) | `https://fl1.moveonjoy.com/COOKING_CHANNEL/index.m3u8` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| Paramount Network | HTTP Error (404) | `https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/31636.m3u8` |
 | Sportsnet 360 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/2219.m3u8` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57297.m3u8` |
+| TSN1 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57292.m3u8` |
 ---
 #### Base Channels URL
 ```
