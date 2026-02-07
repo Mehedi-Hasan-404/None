@@ -1,7 +1,7 @@
 import base64
+import json
 import re
 from functools import partial
-from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -53,26 +53,47 @@ async def get_events() -> list[dict[str, str]]:
 
     soup = HTMLParser(html_data.content)
 
-    for card in soup.css(".league"):
-        if not (league_elem := card.css_first(".league-title")):
-            continue
+    script_text = None
 
-        for event in card.css(".match"):
-            if not (match_elem := event.css_first(".match-name")):
-                continue
+    for s in soup.css("script"):
+        t = s.text() or ""
 
-            if (not (watch_btn := event.css_first("a.watch-btn"))) or (
-                not (href := watch_btn.attributes.get("href"))
-            ):
-                continue
+        if "const DATA" in t:
+            script_text = t
+            break
 
-            league, name = league_elem.text(strip=True), match_elem.text(strip=True)
+    if not script_text:
+        return events
+
+    if not (
+        match := re.search(r"const\s+DATA\s*=\s*(\[\s*.*?\s*\]);", script_text, re.S)
+    ):
+        return events
+
+    data_js = match[1].replace("\n      ", "").replace("\n    ", "")
+    s1 = re.sub(r"{\s", '{"', data_js)
+    s2 = re.sub(r':"', '":"', s1)
+    s3 = re.sub(r":\[", '":[', s2)
+    s4 = re.sub(r"},\]", "}]", s3)
+    s5 = re.sub(r'",\s', '","', s4)
+
+    data: list[dict[str, str]] = json.loads(s5)
+
+    for matches in data:
+        league = matches["title"]
+
+        items: list[dict[str, str]] = matches["items"]
+
+        for info in items:
+            title = info["title"]
+
+            url = info["url"]
 
             events.append(
                 {
                     "sport": fix_league(league),
-                    "event": name,
-                    "link": urljoin(BASE_URL, href),
+                    "event": title,
+                    "link": url,
                 }
             )
 
