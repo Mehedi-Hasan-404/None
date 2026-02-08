@@ -1,9 +1,7 @@
 import base64
-import json
 import re
 from functools import partial
-
-from selectolax.parser import HTMLParser
+from urllib.parse import urljoin
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -14,6 +12,8 @@ urls: dict[str, dict[str, str | float]] = {}
 TAG = "STRMBTW"
 
 CACHE_FILE = Cache(TAG, exp=3_600)
+
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 BASE_URL = "https://hiteasport.info"
 
@@ -32,7 +32,6 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     if not (match := valid_m3u8.search(html_data.text)):
         log.info(f"URL {url_num}) No M3U8 found")
-
         return
 
     stream_link: str = match[2]
@@ -46,56 +45,49 @@ async def process_event(url: str, url_num: int) -> str | None:
 
 
 async def get_events() -> list[dict[str, str]]:
+    now = Time.clean(Time.now())
+
+    if not (api_data := API_FILE.load(per_entry=False)):
+        log.info("Refreshing API cache")
+
+        api_data = {"timestamp": now.timestamp()}
+
+        if r := await network.request(
+            urljoin(BASE_URL, "public/api.php"),
+            log=log,
+            params={"action": "get"},
+        ):
+            api_data: dict = r.json()
+
+            api_data["timestamp"] = now.timestamp()
+
+        API_FILE.write(api_data)
+
     events = []
 
-    if not (html_data := await network.request(BASE_URL, log=log)):
-        return events
+    if last_update := api_data.get("updated_at"):
+        last_update_dt = Time.from_str(last_update, timezone="UTC")
 
-    soup = HTMLParser(html_data.content)
+        if last_update_dt.date() != now.date():
+            return events
 
-    script_text = None
+    for info in api_data.get("groups", []):
+        if not (sport := info["title"]):
+            sport = "Live Event"
 
-    for s in soup.css("script"):
-        t = s.text() or ""
+        if items := info.get("items"):
+            for event in items:
+                event_name: str = event["title"]
 
-        if "const DATA" in t:
-            script_text = t
-            break
+                link: str = event["url"]
 
-    if not script_text:
-        return events
-
-    if not (
-        match := re.search(r"const\s+DATA\s*=\s*(\[\s*.*?\s*\]);", script_text, re.S)
-    ):
-        return events
-
-    data_js = match[1].replace("\n      ", "").replace("\n    ", "")
-    s1 = re.sub(r"{\s", '{"', data_js)
-    s2 = re.sub(r':"', '":"', s1)
-    s3 = re.sub(r":\[", '":[', s2)
-    s4 = re.sub(r"},\]", "}]", s3)
-    s5 = re.sub(r'",\s', '","', s4)
-
-    data: list[dict[str, str]] = json.loads(s5)
-
-    for matches in data:
-        league = matches["title"]
-
-        items: list[dict[str, str]] = matches["items"]
-
-        for info in items:
-            title = info["title"]
-
-            url = info["url"]
-
-            events.append(
-                {
-                    "sport": fix_league(league),
-                    "event": title,
-                    "link": url,
-                }
-            )
+                events.append(
+                    {
+                        "sport": fix_league(sport),
+                        "event": event_name,
+                        "link": link,
+                    }
+                )
 
     return events
 
