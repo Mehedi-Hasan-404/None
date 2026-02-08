@@ -1,14 +1,13 @@
-## Base Log @ 2026-02-08 14:52 UTC
+## Base Log @ 2026-02-08 20:49 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 6
+### ✅ Working Streams: 141<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
 | Game Show Network | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/120633.m3u8` |
-| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz:80/NW3Vk7xXwW/8375773282/117038` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/31636.m3u8` |
+| Pop TV | HTTP Error (404) | `https://fl1.moveonjoy.com/Pop_TV/index.m3u8` |
 | Sportsnet 360 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/2219.m3u8` |
 ---
 #### Base Channels URL
