@@ -1,16 +1,17 @@
-## Base Log @ 2026-02-08 04:41 UTC
+## Base Log @ 2026-02-08 08:56 UTC
 
-### ✅ Working Streams: 139<br>❌ Dead Streams: 7
+### ✅ Working Streams: 138<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/213668.m3u8` |
 | Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/31636.m3u8` |
 | Sportsnet 360 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/2219.m3u8` |
 | Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57297.m3u8` |
 | TSN1 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/57292.m3u8` |
+| USA East | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/10252.m3u8` |
 ---
 #### Base Channels URL
 ```
