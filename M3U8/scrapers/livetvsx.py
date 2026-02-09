@@ -22,6 +22,7 @@ VALID_SPORTS = {
     "Football",
     "Basketball",
     "Ice Hockey",
+    "Olympic Games",
 }
 
 
@@ -140,9 +141,6 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
 
         sport, league = sprt[0], "".join(sprt[1:]).strip()
 
-        if sport not in VALID_SPORTS:
-            continue
-
         event_dt = Time.from_str(date)
 
         key = f"[{sport} - {league}] {title} ({TAG})"
@@ -174,6 +172,13 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     for k, v in events.items():
         if k in cached_keys:
+            continue
+
+        if not (
+            v["sport"] in VALID_SPORTS
+            or v["league"] in VALID_SPORTS
+            or v["event"].lower() == "olympic games"
+        ):
             continue
 
         if not start_ts <= v["event_ts"] <= end_ts:

@@ -13,7 +13,7 @@ TAG = "STRMBTW"
 
 CACHE_FILE = Cache(TAG, exp=3_600)
 
-API_FILE = Cache(f"{TAG}-api", exp=28_800)
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 BASE_URL = "https://hiteasport.info"
 
