@@ -16,7 +16,10 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 HTML_CACHE = Cache(f"{TAG}-html", exp=86_400)
 
-BASE_URLS = {"NFL": "https://nflwebcast.com", "NHL": "https://slapstreams.com"}
+BASE_URLS = {
+    # "NFL": "https://nflwebcast.com",
+    "NHL": "https://slapstreams.com",
+}
 
 
 def fix_event(s: str) -> str:

@@ -24,7 +24,7 @@ SPORT_ENDPOINTS = {
     # "mlb": "MLB",
     "motorsports": "Racing",
     "nba": "NBA",
-    "nfl": "American Football",
+    # "nfl": "American Football",
     "nhl": "NHL",
     "soccer": "Soccer",
 }

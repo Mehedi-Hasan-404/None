@@ -22,10 +22,10 @@ BASE_URL = "https://streamingon.org"
 
 SPORT_ENDPOINTS = [
     "soccer",
-    "nfl",
+    # "nfl",
     "nba",
     "cfb",
-    "mlb",
+    # "mlb",
     "nhl",
     "ufc",
     "boxing",

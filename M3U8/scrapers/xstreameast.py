@@ -22,7 +22,7 @@ SPORT_ENDPOINTS = [
     # "mlb",
     "mma",
     "nba",
-    "nfl",
+    # "nfl",
     "nhl",
     "soccer",
     "wwe",

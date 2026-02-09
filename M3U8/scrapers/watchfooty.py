@@ -28,7 +28,7 @@ BASE_MIRRORS = [
 ]
 
 VALID_SPORTS = [
-    "american-football",
+    # "american-football",
     # "australian-football",
     # "baseball",
     "basketball",

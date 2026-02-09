@@ -21,7 +21,7 @@ BASE_URL = "https://streamhub.pro/"
 
 CATEGORIES = {
     "Soccer": "sport_68c02a4464a38",
-    "American Football": "sport_68c02a4465113",
+    # "American Football": "sport_68c02a4465113",
     # "Baseball": "sport_68c02a446582f",
     "Basketball": "sport_68c02a4466011",
     "Cricket": "sport_68c02a44669f3",
