@@ -1,13 +1,15 @@
-## Base Log @ 2026-02-09 09:14 UTC
+## Base Log @ 2026-02-09 15:29 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 140<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/79545.m3u8` |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
 | FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://fl1.moveonjoy.com/HBO_COMEDY/index.m3u8` |
+| Hallmark Family | HTTP Error (404) | `https://fl1.moveonjoy.com/HALLMARK_DRAMA/index.m3u8` |
 | Sportsnet 360 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/2219.m3u8` |
+| getTV | HTTP Error (404) | `http://fl1.moveonjoy.com/GET_TV/index.m3u8` |
 ---
 #### Base Channels URL
 ```
