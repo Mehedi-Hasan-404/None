@@ -124,7 +124,7 @@ http://fl1.moveonjoy.com/DISNEY_XD/index.m3u8
 http://fl1.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8
 
 #EXTINF:-1 tvg-chno="42" tvg-id="ESPN.HD.us2" tvg-name="ESPN" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10179_dark_360w_270h.png" group-title="TV",ESPN
-http://41.205.93.154/ESPN/index.m3u8
+http://mytvstream.net:8080/live/bn80NG/909467/14197.m3u8
 
 #EXTINF:-1 tvg-chno="43" tvg-id="ESPNEWS.HD.us2" tvg-name="ESPN News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16485_dark_360w_270h.png" group-title="TV",ESPN News
 http://fl1.moveonjoy.com/ESPN_NEWS/index.m3u8
