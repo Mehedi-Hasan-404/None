@@ -88,7 +88,7 @@ async def main() -> None:
 
             # others
             await watchfooty.scrape(xtrnl_brwsr)
-            # await livetvsx.scrape(xtrnl_brwsr)
+            await livetvsx.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
