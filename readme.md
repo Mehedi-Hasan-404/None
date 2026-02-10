@@ -1,10 +1,14 @@
-## Base Log @ 2026-02-10 04:41 UTC
+## Base Log @ 2026-02-10 09:30 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 141<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/79545.m3u8` |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
+| FDSN Midwest | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/66795.m3u8` |
+| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/20939.m3u8` |
+| SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/108178.m3u8` |
 ---
 #### Base Channels URL
 ```
