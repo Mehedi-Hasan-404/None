@@ -337,7 +337,7 @@ https://fl1.moveonjoy.com/Ovation/index.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/46695.m3u8
 
 #EXTINF:-1 tvg-chno="113" tvg-id="Paramount.Network.HD.us2" tvg-name="Paramount Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11163_dark_360w_270h.png" group-title="TV",Paramount Network
-http://mytvstream.net:8080/live/30550113/30550113/46694.m3u88
+http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="114" tvg-id="POP.HD.us2" tvg-name="Pop TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16715_dark_360w_270h.png" group-title="TV",Pop TV
 http://mytvstream.net:8080/live/30550113/30550113/20976.m3u8
