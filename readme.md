@@ -1,14 +1,10 @@
-## Base Log @ 2026-02-09 21:03 UTC
+## Base Log @ 2026-02-10 04:41 UTC
 
-### ✅ Working Streams: 141<br>❌ Dead Streams: 5
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CW | HTTP Error (404) | `https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8` |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
-| FXX | HTTP Error (404) | `https://fl1.moveonjoy.com/FXX/index.m3u8` |
-| Sportsnet 360 | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/2219.m3u8` |
-| TSN2 | HTTP Error (000) | `http://mytvstream.net:8080/live/bn80NG/909467/47442.m3u8` |
 ---
 #### Base Channels URL
 ```
