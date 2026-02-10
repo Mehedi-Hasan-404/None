@@ -16,7 +16,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
 
-BASE_URL = "https://cdn.livetv861.me/rss/upcoming_en.xml"
+BASE_URL = "https://cdn.livetv873.me/rss/upcoming_en.xml"
 
 VALID_SPORTS = {
     "Football",
@@ -75,7 +75,7 @@ async def process_event(
 
         href = href if href.startswith("http") else f"https:{href}"
 
-        href.replace("livetv.sx", "livetv872.me")
+        href.replace("livetv.sx", "livetv873.me")
 
         await page.goto(
             href,
@@ -149,7 +149,7 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
             "sport": sport,
             "league": league,
             "event": title,
-            "link": link.replace("livetv.sx", "livetv872.me"),
+            "link": link.replace("livetv.sx", "livetv873.me"),
             "event_ts": event_dt.timestamp(),
             "timestamp": now_ts,
         }
