@@ -21,7 +21,7 @@ from scrapers import (
     streamhub,
     streamsgate,
     totalsportek,
-    tvpass,
+    tvapp,
     watchfooty,
     webcast,
     xstreameast,
@@ -71,7 +71,7 @@ async def main() -> None:
                 # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(totalsportek.scrape(hdl_brwsr)),
-                asyncio.create_task(tvpass.scrape(hdl_brwsr)),
+                asyncio.create_task(tvapp.scrape(hdl_brwsr)),
                 # asyncio.create_task(webcast.scrape(hdl_brwsr)),
             ]
 
@@ -114,7 +114,7 @@ async def main() -> None:
         | streamhub.urls
         | streamsgate.urls
         | totalsportek.urls
-        | tvpass.urls
+        | tvapp.urls
         | watchfooty.urls
         | webcast.urls
         | xstreameast.urls

@@ -165,19 +165,19 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         XML_CACHE.write(events)
 
-    live = []
-
     start_ts = now.delta(hours=-1).timestamp()
     end_ts = now.delta(minutes=5).timestamp()
+
+    live = []
 
     for k, v in events.items():
         if k in cached_keys:
             continue
 
-        if not (
-            v["sport"] in VALID_SPORTS
-            or v["league"] in VALID_SPORTS
-            or v["event"].lower() == "olympic games"
+        if (
+            v["sport"] not in VALID_SPORTS
+            and v["league"] not in VALID_SPORTS
+            and v["event"].lower() != "olympic games"
         ):
             continue
 
