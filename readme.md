@@ -1,18 +1,12 @@
-## Base Log @ 2026-02-11 21:58 UTC
+## Base Log @ 2026-02-11 23:28 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 10
+### ✅ Working Streams: 142<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Comedy TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
-| Crime & Investigation Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/53689.m3u8` |
-| ESPN News | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/11707.m3u8` |
 | Freeform TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/13370.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
 | Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
 | NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
-| NFL RedZone | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/159118.m3u8` |
-| Ovation | HTTP Error (000) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
 | SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/108178.m3u8` |
 ---
 #### Base Channels URL
