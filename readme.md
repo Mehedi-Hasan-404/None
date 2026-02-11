@@ -1,16 +1,17 @@
-## Base Log @ 2026-02-11 01:08 UTC
+## Base Log @ 2026-02-11 04:40 UTC
 
-### ✅ Working Streams: 139<br>❌ Dead Streams: 7
+### ✅ Working Streams: 138<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| C-SPAN | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8` |
 | Comedy TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
 | Crime & Investigation Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/53689.m3u8` |
 | ESPN News | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/11707.m3u8` |
+| ESPN2 | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/2210.m3u8` |
 | Game Show Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/120633.m3u8` |
 | Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
 | Ovation | HTTP Error (000) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8` |
 ---
 #### Base Channels URL
 ```
