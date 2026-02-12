@@ -1,9 +1,10 @@
-## Base Log @ 2026-02-12 15:13 UTC
+## Base Log @ 2026-02-12 20:58 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Discovery Science | HTTP Error (404) | `https://fl31.moveonjoy.com/Discovery_Science/index.m3u8` |
 | Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
 ---
 #### Base Channels URL
