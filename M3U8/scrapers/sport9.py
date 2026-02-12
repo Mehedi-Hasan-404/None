@@ -104,7 +104,7 @@ async def scrape(browser: Browser) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
-        now = Time.clean(Time.now()).timestamp()
+        now = Time.clean(Time.now())
 
         async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):
@@ -139,7 +139,7 @@ async def scrape(browser: Browser) -> None:
                             "url": url,
                             "logo": logo,
                             "base": "https://vividmosaica.com/",
-                            "timestamp": now,
+                            "timestamp": now.timestamp(),
                             "id": tvg_id or "Live.Event.us",
                             "link": link,
                         }

@@ -1,5 +1,5 @@
 from functools import partial
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from playwright.async_api import Browser
 from selectolax.parser import HTMLParser
@@ -12,17 +12,21 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "TVAPP"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=86_400)
 
 BASE_URL = "https://thetvapp.to"
 
 
-async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
-    log.info("Refreshing HTML cache")
+def fix_url(s: str) -> str:
+    parsed = urlparse(s)
 
-    events = {}
+    base = f"origin.{parsed.netloc.split('.', 1)[-1]}"
+
+    return urljoin(f"http://{base}", parsed.path.replace("tracks-v1a1/", ""))
+
+
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+    events = []
 
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
@@ -39,54 +43,23 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
             continue
 
         for a in row.css("a.list-group-item[href]"):
+            event_name = a.text(strip=True).split(":", 1)[0]
+
+            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+                continue
+
             if not (href := a.attributes.get("href")):
                 continue
 
-            if not (span := a.css_first("span")):
-                continue
-
-            event_time = span.text(strip=True)
-
-            event_dt = Time.from_str(event_time, timezone="UTC")
-
-            event_name = a.text(strip=True).split(":")[0]
-
-            key = f"[{sport}] {event_name} ({TAG})"
-
-            events[key] = {
-                "sport": sport,
-                "event": event_name,
-                "link": urljoin(BASE_URL, href),
-                "event_ts": event_dt.timestamp(),
-                "timestamp": now_ts,
-            }
+            events.append(
+                {
+                    "sport": sport,
+                    "event": event_name,
+                    "link": urljoin(BASE_URL, href),
+                }
+            )
 
     return events
-
-
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (events := HTML_CACHE.load()):
-        events = await refresh_html_cache(now.timestamp())
-
-        HTML_CACHE.write(events)
-
-    live = []
-
-    start_ts = now.delta(minutes=-30).timestamp()
-    end_ts = now.delta(minutes=30).timestamp()
-
-    for k, v in events.items():
-        if k in cached_keys:
-            continue
-
-        if not start_ts <= v["event_ts"] <= end_ts:
-            continue
-
-        live.append({**v})
-
-    return live
 
 
 async def scrape(browser: Browser) -> None:
@@ -105,6 +78,8 @@ async def scrape(browser: Browser) -> None:
     log.info(f"Processing {len(events)} new URL(s)")
 
     if events:
+        now = Time.clean(Time.now())
+
         async with network.event_context(browser) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
@@ -124,10 +99,9 @@ async def scrape(browser: Browser) -> None:
                     )
 
                     if url:
-                        sport, event, ts, link = (
+                        sport, event, link = (
                             ev["sport"],
                             ev["event"],
-                            ev["event_ts"],
                             ev["link"],
                         )
 
@@ -136,10 +110,10 @@ async def scrape(browser: Browser) -> None:
                         tvg_id, logo = leagues.get_tvg_info(sport, event)
 
                         entry = {
-                            "url": url,
+                            "url": fix_url(url),
                             "logo": logo,
                             "base": BASE_URL,
-                            "timestamp": ts,
+                            "timestamp": now.timestamp(),
                             "id": tvg_id or "Live.Event.us",
                             "link": link,
                         }
