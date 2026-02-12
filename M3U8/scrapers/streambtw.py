@@ -19,7 +19,7 @@ BASE_URL = "https://hiteasport.info"
 
 
 def fix_league(s: str) -> str:
-    pattern = re.compile(r"^\w*-\w*", re.IGNORECASE)
+    pattern = re.compile(r"^\w*-\w*", re.I)
 
     return " ".join(s.split("-")) if pattern.search(s) else s
 
@@ -28,7 +28,7 @@ async def process_event(url: str, url_num: int) -> str | None:
     if not (html_data := await network.request(url, log=log)):
         return
 
-    valid_m3u8 = re.compile(r'var\s+(\w+)\s*=\s*"([^"]*)"', re.IGNORECASE)
+    valid_m3u8 = re.compile(r'var\s+(\w+)\s*=\s*"([^"]*)"', re.I)
 
     if not (match := valid_m3u8.search(html_data.text)):
         log.info(f"URL {url_num}) No M3U8 found")

@@ -28,8 +28,6 @@ class Network:
 
     PW_S = asyncio.Semaphore(3)
 
-    proxy_base = "https://stream.nvrmind.xyz"
-
     def __init__(self) -> None:
         self.client = httpx.AsyncClient(
             timeout=httpx.Timeout(5.0),

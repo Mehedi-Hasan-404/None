@@ -44,7 +44,7 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
-    pattern = re.compile(r"openEmbed\('([^']+)'\)", re.IGNORECASE)
+    pattern = re.compile(r"openEmbed\('([^']+)'\)", re.I)
 
     soup = HTMLParser(html_data.content)
 
@@ -106,7 +106,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not start_ts <= v["event_ts"] <= end_ts:
             continue
 
-        live.append({**v})
+        live.append(v)
 
     return live
 

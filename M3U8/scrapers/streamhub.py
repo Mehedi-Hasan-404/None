@@ -130,7 +130,7 @@ async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
         if not start_ts <= v["event_ts"] <= end_ts:
             continue
 
-        live.append({**v})
+        live.append(v)
 
     return live
 

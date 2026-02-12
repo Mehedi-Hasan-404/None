@@ -25,7 +25,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     valid_m3u8 = re.compile(
         r'var\s+(\w+)\s*=\s*\[["\']?(https?:\/\/[^"\'\s>]+\.m3u8(?:\?[^"\'\s>]*)?)["\']\]?',
-        re.IGNORECASE,
+        re.I,
     )
 
     if not (match := valid_m3u8.search(html_data.text)):

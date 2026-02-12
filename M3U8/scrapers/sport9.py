@@ -45,7 +45,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         for card in soup.css("a.match-card"):
             live_badge = card.css_first(".live-badge")
 
-            if not live_badge or live_badge.text(strip=True) != "Live":
+            if not live_badge or live_badge.text(strip=True).lower() != "live":
                 continue
 
             if not (sport_node := card.css_first(".tournament-name")):

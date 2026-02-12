@@ -40,7 +40,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
         return
 
-    pattern = re.compile(r"source:\s*window\.atob\(\s*'([^']+)'\s*\)", re.IGNORECASE)
+    pattern = re.compile(r"source:\s*window\.atob\(\s*'([^']+)'\s*\)", re.I)
 
     if not (match := pattern.search(iframe_src_data.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
@@ -58,7 +58,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
-    pattern = re.compile(r"^(?:LIVE|(?:[1-9]|[12]\d|30)\s+minutes?\b)", re.IGNORECASE)
+    pattern = re.compile(r"^(?:LIVE|(?:[1-9]|[12]\d|30)\s+minutes?\b)", re.I)
 
     soup = HTMLParser(html_data.content)
 

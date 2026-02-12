@@ -34,7 +34,7 @@ async def process_event(url: str, url_num: int) -> str | None:
     if not (html_data := await network.request(url, log=log)):
         return
 
-    valid_m3u8 = re.compile(r"'clappr',\s+'([^\"]*)'", re.IGNORECASE)
+    valid_m3u8 = re.compile(r"'clappr',\s+'([^\"]*)'", re.I)
 
     if not (match := valid_m3u8.search(html_data.text)):
         log.info(f"URL {url_num}) No M3U8 found")
@@ -125,7 +125,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not start_ts <= v["event_ts"] <= end_ts:
             continue
 
-        live.append({**v})
+        live.append(v)
 
     return live
 
@@ -133,9 +133,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
-    cached_count = len(cached_urls)
+    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
 
-    urls.update(cached_urls)
+    valid_count = cached_count = len(valid_urls)
+
+    urls.update(valid_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
@@ -160,30 +162,34 @@ async def scrape() -> None:
                 log=log,
             )
 
+            sport, event, ts, link = (
+                ev["sport"],
+                ev["event"],
+                ev["event_ts"],
+                ev["link"],
+            )
+
+            tvg_id, logo = leagues.get_tvg_info(sport, event)
+
+            key = f"[{sport}] {event} ({TAG})"
+
+            entry = {
+                "url": url,
+                "logo": logo,
+                "base": BASE_URL,
+                "timestamp": ts,
+                "id": tvg_id or "Live.Event.us",
+                "link": link,
+            }
+
+            cached_urls[key] = entry
+
             if url:
-                sport, event, ts, link = (
-                    ev["sport"],
-                    ev["event"],
-                    ev["event_ts"],
-                    ev["link"],
-                )
+                valid_count += 1
 
-                tvg_id, logo = leagues.get_tvg_info(sport, event)
+                urls[key] = entry
 
-                key = f"[{sport}] {event} ({TAG})"
-
-                entry = {
-                    "url": url,
-                    "logo": logo,
-                    "base": BASE_URL,
-                    "timestamp": ts,
-                    "id": tvg_id or "Live.Event.us",
-                    "link": link,
-                }
-
-                urls[key] = cached_urls[key] = entry
-
-    if new_count := len(cached_urls) - cached_count:
+    if new_count := valid_count - cached_count:
         log.info(f"Collected and cached {new_count} new event(s)")
 
     else:
