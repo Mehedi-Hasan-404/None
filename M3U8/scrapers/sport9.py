@@ -15,7 +15,7 @@ TAG = "SPORT9"
 
 CACHE_FILE = Cache(TAG, exp=5_400)
 
-BASE_URL = "https://sport9.ru/"
+BASE_URL = "https://sport9.ru"
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:

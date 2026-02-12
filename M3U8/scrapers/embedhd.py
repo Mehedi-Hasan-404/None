@@ -1,4 +1,5 @@
 from functools import partial
+from urllib.parse import urljoin
 
 from playwright.async_api import Browser
 
@@ -14,7 +15,7 @@ CACHE_FILE = Cache(TAG, exp=5_400)
 
 API_CACHE = Cache(f"{TAG}-api", exp=28_800)
 
-BASE_URL = "https://embedhd.org/api-event.php"
+BASE_URL = "https://embedhd.org"
 
 
 def fix_league(s: str) -> str:
@@ -29,7 +30,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         api_data = {"timestamp": now.timestamp()}
 
-        if r := await network.request(BASE_URL, log=log):
+        if r := await network.request(urljoin(BASE_URL, "api-event.php"), log=log):
             api_data: dict = r.json()
 
             api_data["timestamp"] = now.timestamp()

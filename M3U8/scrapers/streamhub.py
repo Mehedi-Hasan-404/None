@@ -17,7 +17,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 HTML_CACHE = Cache(f"{TAG}-html", exp=28_800)
 
-BASE_URL = "https://streamhub.pro/"
+MIRRORS = ["https://streamhub.pro", "https://livesports4u.net"]
 
 CATEGORIES = {
     "Soccer": "sport_68c02a4464a38",
@@ -35,15 +35,17 @@ CATEGORIES = {
 
 
 async def refresh_html_cache(
+    url: str,
     date: str,
     sport_id: str,
     ts: float,
 ) -> dict[str, dict[str, str | float]]:
+
     events = {}
 
     if not (
         html_data := await network.request(
-            urljoin(BASE_URL, f"events/{date}"),
+            urljoin(url, f"events/{date}"),
             log=log,
             params={"sport_id": sport_id},
         )
@@ -93,7 +95,7 @@ async def refresh_html_cache(
     return events
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
@@ -101,6 +103,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         tasks = [
             refresh_html_cache(
+                url,
                 date,
                 sport_id,
                 now.timestamp(),
@@ -143,9 +146,16 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    if not (base_url := await network.get_base(MIRRORS)):
+        log.warning("No working PPV mirrors")
 
-    events = await get_events(cached_urls.keys())
+        CACHE_FILE.write(cached_urls)
+
+        return
+
+    log.info(f'Scraping from "{base_url}"')
+
+    events = await get_events(base_url, cached_urls.keys())
 
     log.info(f"Processing {len(events)} new URL(s)")
 

@@ -1,5 +1,6 @@
 import json
 from functools import partial
+from urllib.parse import urljoin
 
 from playwright.async_api import Browser, Page
 
@@ -13,20 +14,20 @@ TAG = "PIXEL"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://pixelsport.tv/backend/livetv/events"
+BASE_URL = "https://pixelsport.tv"
 
 
 async def get_api_data(page: Page) -> dict[str, list[dict, str, str]]:
     try:
         await page.goto(
-            BASE_URL,
+            url := urljoin(BASE_URL, "backend/livetv/events"),
             wait_until="domcontentloaded",
             timeout=10_000,
         )
 
         raw_json = await page.locator("pre").inner_text(timeout=5_000)
     except Exception as e:
-        log.error(f'Failed to fetch "{BASE_URL}": {e}')
+        log.error(f'Failed to fetch "{url}": {e}')
 
         return {}
 
@@ -65,7 +66,7 @@ async def get_events(page: Page) -> dict[str, dict[str, str | float]]:
                 events[key] = {
                     "url": stream_link,
                     "logo": logo,
-                    "base": "https://pixelsport.tv",
+                    "base": BASE_URL,
                     "timestamp": now.timestamp(),
                     "id": tvg_id or "Live.Event.us",
                 }

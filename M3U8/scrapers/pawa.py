@@ -15,7 +15,7 @@ TAG = "PAWA"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-BASE_URL = "https://pawastreams.net/feed/"
+BASE_URL = "https://pawastreams.net/feed"
 
 
 async def process_event(url: str, url_num: int) -> str | None:

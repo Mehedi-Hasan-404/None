@@ -1,4 +1,5 @@
 from functools import partial
+from urllib.parse import urljoin
 
 from playwright.async_api import Browser
 
@@ -14,7 +15,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-API_URL = "https://api.cdn-live.tv/api/v1/events/sports"
+API_URL = "https://api.cdn-live.tv"
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
@@ -26,7 +27,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         log.info("Refreshing API cache")
 
         if r := await network.request(
-            API_URL,
+            urljoin(API_URL, "api/v1/events/sports"),
             log=log,
             params={"user": "cdnlivetv", "plan": "free"},
         ):
