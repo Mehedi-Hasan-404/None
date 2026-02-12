@@ -1,13 +1,11 @@
-## Base Log @ 2026-02-11 23:28 UTC
+## Base Log @ 2026-02-12 04:35 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Freeform TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/13370.m3u8` |
 | Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
-| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
-| SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/108178.m3u8` |
+| NFL RedZone | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/159118.m3u8` |
 ---
 #### Base Channels URL
 ```
