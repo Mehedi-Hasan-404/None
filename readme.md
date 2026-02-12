@@ -1,13 +1,10 @@
-## Base Log @ 2026-02-12 09:11 UTC
+## Base Log @ 2026-02-12 15:13 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 4
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
 | Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
-| MTV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9818.m3u8` |
-| Showtime | HTTP Error (404) | `http://fl31.moveonjoy.com/SHOWTIME/index.m3u8` |
 ---
 #### Base Channels URL
 ```
