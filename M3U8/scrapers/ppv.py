@@ -1,5 +1,4 @@
 from functools import partial
-from urllib.parse import urljoin
 
 from playwright.async_api import Browser
 
@@ -16,9 +15,9 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 MIRRORS = [
-    "https://old.ppv.to",
-    "https://api.ppvs.su",
-    "https://api.ppv.to",
+    "https://old.ppv.to/api/streams",
+    "https://api.ppvs.su/api/streams",
+    "https://api.ppv.to/api/streams",
 ]
 
 
@@ -30,7 +29,7 @@ async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
 
         api_data = {"timestamp": now.timestamp()}
 
-        if r := await network.request(urljoin(url, "api/streams"), log=log):
+        if r := await network.request(url, log=log):
             api_data: dict = r.json()
 
         API_FILE.write(api_data)
