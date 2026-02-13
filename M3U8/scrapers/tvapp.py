@@ -25,7 +25,7 @@ def fix_url(s: str) -> str:
     return urljoin(f"http://{base}", parsed.path.replace("tracks-v1a1/", ""))
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events() -> list[dict[str, str]]:
     events = []
 
     if not (html_data := await network.request(BASE_URL, log=log)):
@@ -45,9 +45,6 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         for a in row.css("a.list-group-item[href]"):
             event_name = a.text(strip=True).split(":", 1)[0]
 
-            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-                continue
-
             if not (href := a.attributes.get("href")):
                 continue
 
@@ -63,17 +60,16 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 
 async def scrape(browser: Browser) -> None:
-    cached_urls = CACHE_FILE.load()
+    if cached := CACHE_FILE.load():
+        urls.update(cached)
 
-    cached_count = len(cached_urls)
+        log.info(f"Loaded {len(urls)} event(s) from cache")
 
-    urls.update(cached_urls)
-
-    log.info(f"Loaded {cached_count} event(s) from cache")
+        return
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(cached_urls.keys())
+    events = await get_events()
 
     log.info(f"Processing {len(events)} new URL(s)")
 
@@ -118,12 +114,8 @@ async def scrape(browser: Browser) -> None:
                             "link": link,
                         }
 
-                        urls[key] = cached_urls[key] = entry
+                        urls[key] = entry
 
-    if new_count := len(cached_urls) - cached_count:
-        log.info(f"Collected and cached {new_count} new event(s)")
+    log.info(f"Collected and cached {len(urls)} new event(s)")
 
-    else:
-        log.info("No new events found")
-
-    CACHE_FILE.write(cached_urls)
+    CACHE_FILE.write(urls)
