@@ -1,6 +1,6 @@
 import json
 import re
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pytz
@@ -51,25 +51,6 @@ class Time(datetime):
     @classmethod
     def _to_class_tz(cls, dt) -> "Time":
         dt = dt.astimezone(cls.TZ)
-
-        return cls.fromtimestamp(dt.timestamp(), tz=cls.TZ)
-
-    @classmethod
-    def from_only_time(cls, s: str, d: date, timezone: str) -> "Time":
-        hour, minute = map(int, s.split(":"))
-
-        dt = datetime(
-            2000,
-            1,
-            1,
-            hour,
-            minute,
-            tzinfo=cls.ZONES.get(timezone, cls.TZ),
-        )
-
-        dt = dt.astimezone(cls.TZ)
-
-        dt = datetime.combine(d, dt.timetz())
 
         return cls.fromtimestamp(dt.timestamp(), tz=cls.TZ)
 
