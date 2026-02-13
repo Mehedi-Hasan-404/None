@@ -1,14 +1,10 @@
-## Base Log @ 2026-02-13 09:07 UTC
+## Base Log @ 2026-02-13 15:07 UTC
 
-### ✅ Working Streams: 141<br>❌ Dead Streams: 5
+### ✅ Working Streams: 145<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
 | Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
-| NBC Sports Boston | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
-| SportsNet New York | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20938.m3u8` |
-| SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/108178.m3u8` |
 ---
 #### Base Channels URL
 ```
