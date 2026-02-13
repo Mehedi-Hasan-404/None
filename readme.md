@@ -1,10 +1,12 @@
-## Base Log @ 2026-02-13 15:07 UTC
+## Base Log @ 2026-02-13 21:03 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 1
+### ✅ Working Streams: 143<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Hallmark Mystery | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
+| Bravo TV | HTTP Error (404) | `http://41.205.93.154/BRAVO/index.m3u8` |
+| Hallmark Mystery | HTTP Error (404) | `https://fl2.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8` |
+| NFL RedZone | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/159118.m3u8` |
 ---
 #### Base Channels URL
 ```
