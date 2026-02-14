@@ -96,7 +96,7 @@ async def process_event(
         await page.goto(
             url,
             wait_until="domcontentloaded",
-            timeout=15_000,
+            timeout=10_000,
         )
 
         await page.wait_for_timeout(2_000)
@@ -274,6 +274,7 @@ async def scrape(browser: Browser) -> None:
                         url_num=i,
                         semaphore=network.PW_S,
                         log=log,
+                        timeout=20,
                     )
 
                     sport, event, logo, ts, link = (
