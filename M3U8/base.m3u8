@@ -22,13 +22,13 @@ http://mytvstream.net:8080/live/30550113/30550113/18925.m3u8
 http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8
 
 #EXTINF:-1 tvg-chno="8" tvg-id="ASPiRE.HD.us2" tvg-name="Aspire" tvg-logo="https://i.gyazo.com/0dec42cc5ef48c489cc10db906dc5b9b.png" group-title="TV",Aspire
-http://fl31.moveonjoy.com/Aspire/index.m3u8
+http://fl41.moveonjoy.com/Aspire/index.m3u8
 
 #EXTINF:-1 tvg-chno="9" tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s64492_dark_360w_270h.png" group-title="TV",BBC America
-http://fl31.moveonjoy.com/BBC_AMERICA/index.m3u8
+https://fl2.moveonjoy.com/BBC_AMERICA/index.m3u8
 
 #EXTINF:-1 tvg-chno="10" tvg-id="BBC.News.(North.America).HD.us2" tvg-name="BBC World News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s89542_dark_360w_270h.png" group-title="TV",BBC World News
-http://fl31.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+https://fl2.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
 
 #EXTINF:-1 tvg-chno="11" tvg-id="BET.HD.us2" tvg-name="BET" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10051_dark_360w_270h.png" group-title="TV",BET
 http://mytvstream.net:8080/live/30550113/30550113/13702.m3u8
@@ -268,7 +268,7 @@ http://23.237.104.106:8080/USA_LMN/index.m3u8
 https://fl31.moveonjoy.com/MARQUEE_SPORTS_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="90" tvg-id="MLB.Network.HD.us2" tvg-name="MLB Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s62081_dark_360w_270h.png" group-title="TV",MLB Network
-https://fl31.moveonjoy.com/MLB_NETWORK/index.m3u8
+http://stream.cammonitorplus.net/337626/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==
 
 #EXTINF:-1 tvg-chno="91" tvg-id="MOTORTREND.HD.us2" tvg-name="MotorTrend TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s31046_dark_360w_270h.png" group-title="TV",MotorTrend TV
 http://mytvstream.net:8080/live/30550113/30550113/10399.m3u8
@@ -286,7 +286,7 @@ http://mytvstream.net:8080/live/30550113/30550113/9818.m3u8
 http://23.237.104.106:8080/USA_NAT_GEO/index.m3u8
 
 #EXTINF:-1 tvg-chno="96" tvg-id="NBA.TV.HD.us2" tvg-name="NBA TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s32281_dark_360w_270h.png" group-title="TV",NBA TV
-http://fl31.moveonjoy.com/NBA_TV/index.m3u8
+http://212.102.60.231/NBA_TV/index.m3u8
 
 #EXTINF:-1 tvg-chno="97" tvg-id="WFLA-DT.us_locals1" tvg-name="NBC" tvg-logo="https://i.gyazo.com/39d42952500205d04e448247b7889256.png" group-title="TV",NBC
 http://mytvstream.net:8080/live/30550113/30550113/120950.m3u8
