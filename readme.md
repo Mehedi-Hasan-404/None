@@ -1,12 +1,12 @@
-## Base Log @ 2026-02-14 20:48 UTC
+## Base Log @ 2026-02-15 04:33 UTC
 
 ### ✅ Working Streams: 141<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Comedy TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
-| Crime & Investigation Network | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/53689.m3u8` |
-| ESPN News | HTTP Error (000) | `http://mytvstream.net:8080/live/bn80NG/909467/11707.m3u8` |
+| Crime & Investigation Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/53689.m3u8` |
+| ESPN News | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/11707.m3u8` |
 | Ovation | HTTP Error (000) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
 | getTV | HTTP Error (404) | `http://fl31.moveonjoy.com/GET_TV/index.m3u8` |
 ---
