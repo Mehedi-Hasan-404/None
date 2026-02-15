@@ -2,7 +2,7 @@ import asyncio
 from functools import partial
 from urllib.parse import urljoin
 
-from playwright.async_api import Browser, Page
+from playwright.async_api import Browser, Page, TimeoutError
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -99,11 +99,14 @@ async def process_event(
             timeout=15_000,
         )
 
-        if btn := await page.wait_for_selector(
-            "button:has-text('Stream 1')",
-            timeout=8_000,
-        ):
-            await btn.click()
+        try:
+            if btn := await page.wait_for_selector(
+                "button:has-text('Stream 1')",
+                timeout=5_000,
+            ):
+                await btn.click()
+        except TimeoutError:
+            pass
 
         wait_task = asyncio.create_task(got_one.wait())
 
