@@ -15,7 +15,7 @@ CACHE_FILE = Cache(TAG, exp=3_600)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-BASE_URL = "https://hiteasport.info"
+BASE_URL = "https://streambtw.com"
 
 
 def fix_league(s: str) -> str:

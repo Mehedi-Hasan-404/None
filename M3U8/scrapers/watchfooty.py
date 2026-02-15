@@ -102,7 +102,7 @@ async def process_event(
         await page.wait_for_timeout(2_000)
 
         try:
-            header = await page.wait_for_selector("text=/Stream Links/i", timeout=5_000)
+            header = await page.wait_for_selector("text=/Stream Links/i", timeout=4_000)
 
             text = await header.inner_text()
         except TimeoutError:

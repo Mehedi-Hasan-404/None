@@ -126,15 +126,16 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
     feed = feedparser.parse(xml_data.content)
 
     for entry in feed.entries:
-        title = entry.get("title")
+        if not (date := entry.get("published")):
+            continue
 
-        link = entry.get("link")
+        if not (link := entry.get("link")):
+            continue
 
-        sport_sum = entry.get("summary")
+        if not (title := entry.get("title")):
+            continue
 
-        date = entry.get("published")
-
-        if not all([title, link, sport_sum, date]):
+        if not (sport_sum := entry.get("summary")):
             continue
 
         sprt = sport_sum.split(".", 1)

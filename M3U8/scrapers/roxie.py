@@ -78,7 +78,7 @@ async def process_event(
     url: str,
     url_num: int,
     page: Page,
-) -> tuple[str | None, str | None]:
+) -> str | None:
 
     captured: list[str] = []
 
