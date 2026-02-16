@@ -1,20 +1,11 @@
-## Base Log @ 2026-02-16 15:06 UTC
+## Base Log @ 2026-02-16 17:14 UTC
 
-### ✅ Working Streams: 135<br>❌ Dead Streams: 11
+### ✅ Working Streams: 144<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| AMC | HTTP Error (404) | `http://41.205.93.154/AMC/index.m3u8 ` |
-| Comedy TV | HTTP Error (000) | `https://fl1.moveonjoy.com/Comedy_TV/index.m3u8` |
-| Crime & Investigation Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/53689.m3u8` |
-| ESPN News | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/11707.m3u8` |
-| FYI TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9240.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
-| Hallmark Family | HTTP Error (404) | `https://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8` |
-| Outdoor Channel | HTTP Error (404) | `https://fl2.moveonjoy.com/OUTDOOR_CHANNEL/index.m3u8` |
-| Ovation | HTTP Error (000) | `https://fl1.moveonjoy.com/Ovation/index.m3u8` |
-| Oxygen | HTTP Error (404) | `https://fl2.moveonjoy.com/OXYGEN/index.m3u8` |
-| getTV | HTTP Error (404) | `http://fl31.moveonjoy.com/GET_TV/index.m3u8` |
+| FYI TV | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/9240.m3u8` |
+| Ovation | HTTP Error (404) | `http://fl51.moveonjoy.com/Ovation/index.m3u8` |
 ---
 #### Base Channels URL
 ```
