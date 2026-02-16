@@ -64,7 +64,7 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
-                asyncio.create_task(pixel.scrape(hdl_brwsr)),
+                # asyncio.create_task(pixel.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
@@ -73,7 +73,7 @@ async def main() -> None:
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(totalsportek.scrape(hdl_brwsr)),
                 # asyncio.create_task(tvapp.scrape(hdl_brwsr)),
-                asyncio.create_task(webcast.scrape(hdl_brwsr)),
+                # asyncio.create_task(webcast.scrape(hdl_brwsr)),
             ]
 
             httpx_tasks = [
