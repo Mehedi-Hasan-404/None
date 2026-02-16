@@ -25,10 +25,10 @@ http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8
 http://fl41.moveonjoy.com/Aspire/index.m3u8
 
 #EXTINF:-1 tvg-chno="9" tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s64492_dark_360w_270h.png" group-title="TV",BBC America
-https://fl2.moveonjoy.com/BBC_AMERICA/index.m3u8
+https://bcovlive-a.akamaihd.net/7f5ec16d102f4b5d92e8e27bc95ff424/us-east-1/6240731308001/playlist.m3u8
 
 #EXTINF:-1 tvg-chno="10" tvg-id="BBC.News.(North.America).HD.us2" tvg-name="BBC World News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s89542_dark_360w_270h.png" group-title="TV",BBC World News
-https://fl2.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8
 
 #EXTINF:-1 tvg-chno="11" tvg-id="BET.HD.us2" tvg-name="BET" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10051_dark_360w_270h.png" group-title="TV",BET
 http://mytvstream.net:8080/live/30550113/30550113/46703.m3u8
@@ -316,7 +316,7 @@ http://mytvstream.net:8080/live/30550113/30550113/161450.m3u8
 http://23.237.104.106:8080/USA_NFL_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="106" tvg-id="NFL.RedZone.HD.us2" tvg-name="NFL RedZone" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nfl-red-zone-hz-us.png" group-title="TV",NFL RedZone
-http://mytvstream.net:8080/live/30550113/30550113/159118.m3u8
+https://starshare.st/live/P4B9TB9xR8/humongous2tonight/23550.ts
 
 #EXTINF:-1 tvg-chno="107" tvg-id="NHL.Network.HD.us2" tvg-name="NHL Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58570_dark_360w_270h.png" group-title="TV",NHL Network
 http://23.237.104.106:8080/USA_NHL_NETWORK/index.m3u8
