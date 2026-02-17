@@ -73,7 +73,7 @@ async def main() -> None:
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(totalsportek.scrape(hdl_brwsr)),
                 # asyncio.create_task(tvapp.scrape(hdl_brwsr)),
-                # asyncio.create_task(webcast.scrape(hdl_brwsr)),
+                asyncio.create_task(webcast.scrape(hdl_brwsr)),
             ]
 
             httpx_tasks = [
