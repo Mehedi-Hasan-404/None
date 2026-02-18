@@ -1,10 +1,11 @@
-## Base Log @ 2026-02-18 04:32 UTC
+## Base Log @ 2026-02-18 09:10 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 6
+### ✅ Working Streams: 148<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | ABC | HTTP Error (404) | `http://fl41.moveonjoy.com/NY_NEW_YORK_ABC/index.m3u8` |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/43761449506/smallwood/79545.m3u8` |
 | Cleo TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Cleo_TV/index.m3u8` |
 | Comedy TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Comedy_TV/index.m3u8` |
 | Crime & Investigation Network | HTTP Error (404) | `http://fl41.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
