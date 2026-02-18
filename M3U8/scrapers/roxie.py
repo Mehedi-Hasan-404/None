@@ -104,7 +104,13 @@ async def process_event(
                 "button:has-text('Stream 1')",
                 timeout=5_000,
             ):
-                await btn.click()
+                await btn.click(force=True, click_count=2)
+        except TimeoutError:
+            pass
+
+        try:
+            if player := await page.wait_for_selector(".play-wrapper", timeout=5_000):
+                await player.click(force=True, click_count=3)
         except TimeoutError:
             pass
 
@@ -165,8 +171,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     live = []
 
-    start_ts = now.delta(hours=-1).timestamp()
-    end_ts = now.delta(minutes=5).timestamp()
+    start_ts = now.delta(hours=-1.5).timestamp()
+    end_ts = now.delta(minutes=1).timestamp()
 
     for k, v in events.items():
         if k in cached_keys:

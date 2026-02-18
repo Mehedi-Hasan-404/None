@@ -79,7 +79,8 @@ async def get_events() -> list[dict[str, str]]:
             for event in items:
                 event_name: str = event["title"]
 
-                link: str = event["url"]
+                if not (link := event.get("url")):
+                    continue
 
                 events.append(
                     {

@@ -58,8 +58,6 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
-    pattern = re.compile(r"^(?:LIVE|(?:[1-9]|[12]\d|30)\s+minutes?\b)", re.I)
-
     soup = HTMLParser(html_data.content)
 
     for link in soup.css("li.f1-podium--item > a.f1-podium--link"):
@@ -71,9 +69,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not (time_elem := li_item.css_first(".SaatZamanBilgisi")):
             continue
 
-        time_text = time_elem.text(strip=True)
-
-        if not pattern.search(time_text):
+        if time_elem.text(strip=True).lower() != "live":
             continue
 
         sport = rank_elem.text(strip=True)
