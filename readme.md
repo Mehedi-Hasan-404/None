@@ -1,14 +1,14 @@
-## Base Log @ 2026-02-17 15:11 UTC
+## Base Log @ 2026-02-18 04:32 UTC
 
 ### ✅ Working Streams: 149<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Big Ten Network | HTTP Error (000) | `http://23.237.104.106:8080/USA_BTN/index.m3u8` |
+| ABC | HTTP Error (404) | `http://fl41.moveonjoy.com/NY_NEW_YORK_ABC/index.m3u8` |
 | Cleo TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Cleo_TV/index.m3u8` |
 | Comedy TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Comedy_TV/index.m3u8` |
 | Crime & Investigation Network | HTTP Error (404) | `http://fl41.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
-| FDSN West | HTTP Error (000) | `http://mytvstream.net:8080/live/43761449506/smallwood/20932.m3u8` |
+| Fox | HTTP Error (404) | `http://fl41.moveonjoy.com/FL_ORLANDO_FOX/index.m3u8` |
 | Ovation | HTTP Error (404) | `http://fl41.moveonjoy.com/Ovation/index.m3u8` |
 ---
 #### Base Channels URL
