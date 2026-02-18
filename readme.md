@@ -1,6 +1,6 @@
-## Base Log @ 2026-02-18 18:40 UTC
+## Base Log @ 2026-02-18 21:04 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 4
+### ✅ Working Streams: 150<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -8,6 +8,7 @@
 | Comedy TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Comedy_TV/index.m3u8` |
 | Crime & Investigation Network | HTTP Error (404) | `http://fl41.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
 | Ovation | HTTP Error (404) | `http://fl41.moveonjoy.com/Ovation/index.m3u8` |
+| Sportsnet One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/57297.m3u8` |
 ---
 #### Base Channels URL
 ```
