@@ -1,23 +1,12 @@
-## Base Log @ 2026-02-18 15:13 UTC
+## Base Log @ 2026-02-18 18:40 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 15
+### ✅ Working Streams: 151<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://fl41.moveonjoy.com/NY_NEW_YORK_ABC/index.m3u8` |
-| CBS | HTTP Error (404) | `http://fl41.moveonjoy.com/NY_NEW_YORK_CBS/index.m3u8` |
-| CMT | HTTP Error (000) | `http://23.237.104.106:8080/USA_CMT/index.m3u8` |
 | Cleo TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Cleo_TV/index.m3u8` |
-| Comedy Central | HTTP Error (000) | `http://23.237.104.106:8080/USA_COMEDY_CENTRAL/index.m3u8` |
 | Comedy TV | HTTP Error (404) | `http://fl41.moveonjoy.com/Comedy_TV/index.m3u8` |
 | Crime & Investigation Network | HTTP Error (404) | `http://fl41.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8` |
-| Discovery Channel | HTTP Error (000) | `http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8` |
-| Disney XD | HTTP Error (000) | `http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8` |
-| E! Entertainment | HTTP Error (000) | `http://23.237.104.106:8080/USA_E/index.m3u8` |
-| ESPN U | HTTP Error (000) | `http://23.237.104.106:8080/USA_ESPNU/index.m3u8` |
-| FX | HTTP Error (000) | `http://23.237.104.106:8080/USA_FX/index.m3u8` |
-| Food Network | HTTP Error (000) | `http://23.237.104.106:8080/USA_FOOD_NETWORK/index.m3u8` |
-| Fox | HTTP Error (404) | `http://fl41.moveonjoy.com/FL_ORLANDO_FOX/index.m3u8` |
 | Ovation | HTTP Error (404) | `http://fl41.moveonjoy.com/Ovation/index.m3u8` |
 ---
 #### Base Channels URL
