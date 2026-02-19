@@ -21,7 +21,7 @@ BASE_URL = "https://roxiestreams.info"
 
 SPORT_ENDPOINTS = {
     "fighting": "Fighting",
-    # "mlb": "MLB",
+    "mlb": "MLB",
     "motorsports": "Racing",
     "nba": "NBA",
     # "nfl": "American Football",
@@ -97,12 +97,12 @@ async def process_event(
         await page.goto(
             url,
             wait_until="domcontentloaded",
-            timeout=15_000,
+            timeout=6_000,
         )
 
         try:
             if btn := await page.wait_for_selector(
-                "button:has-text('Stream 1')",
+                "button.streambutton:nth-of-type(1)",
                 timeout=5_000,
             ):
                 await btn.click(force=True, click_count=2)
@@ -140,7 +140,7 @@ async def process_event(
         return
 
     except Exception as e:
-        log.warning(f"URL {url_num}) Exception while processing: {e}")
+        log.warning(f"URL {url_num}) {e}")
         return
 
     finally:
@@ -202,15 +202,15 @@ async def scrape(browser: Browser) -> None:
 
     events = await get_events(cached_urls.keys())
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         async with network.event_context(browser) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
                         process_event,
-                        url=ev["link"],
+                        url=(link := ev["link"]),
                         url_num=i,
                         page=page,
                     )
@@ -222,11 +222,10 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event, ts, link = (
+                    sport, event, ts = (
                         ev["sport"],
                         ev["event"],
                         ev["event_ts"],
-                        ev["link"],
                     )
 
                     tvg_id, logo = leagues.get_tvg_info(sport, event)

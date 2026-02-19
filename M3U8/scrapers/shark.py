@@ -124,13 +124,13 @@ async def scrape() -> None:
 
     events = await get_events(cached_urls.keys())
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                url=ev["link"],
+                url=(link := ev["link"]),
                 url_num=i,
             )
 
@@ -142,11 +142,10 @@ async def scrape() -> None:
             )
 
             if url:
-                sport, event, ts, link = (
+                sport, event, ts = (
                     ev["sport"],
                     ev["event"],
                     ev["event_ts"],
-                    ev["link"],
                 )
 
                 tvg_id, logo = leagues.get_tvg_info(sport, event)

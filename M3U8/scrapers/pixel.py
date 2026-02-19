@@ -22,7 +22,7 @@ async def get_api_data(page: Page) -> dict[str, list[dict, str, str]]:
         await page.goto(
             url := urljoin(BASE_URL, "backend/livetv/events"),
             wait_until="domcontentloaded",
-            timeout=10_000,
+            timeout=6_000,
         )
 
         raw_json = await page.locator("pre").inner_text(timeout=5_000)

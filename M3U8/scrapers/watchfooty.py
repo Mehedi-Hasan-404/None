@@ -29,17 +29,13 @@ BASE_MIRRORS = [
 
 VALID_SPORTS = [
     # "american-football",
-    # "australian-football",
-    # "baseball",
+    "baseball",
     "basketball",
-    "cricket",
-    "darts",
     "fighting",
     "football",
     "golf",
     "hockey",
     "racing",
-    # "rugby",
     "tennis",
     "volleyball",
 ]
@@ -96,7 +92,7 @@ async def process_event(
         await page.goto(
             url,
             wait_until="domcontentloaded",
-            timeout=10_000,
+            timeout=8_000,
         )
 
         await page.wait_for_timeout(2_000)
@@ -170,7 +166,7 @@ async def process_event(
         return nones
 
     except Exception as e:
-        log.warning(f"URL {url_num}) Exception while processing: {e}")
+        log.warning(f"URL {url_num}) {e}")
 
         return nones
 
@@ -256,15 +252,15 @@ async def scrape(browser: Browser) -> None:
 
     events = await get_events(base_url, cached_urls.keys())
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
                         process_event,
-                        url=ev["link"],
+                        url=(link := ev["link"]),
                         url_num=i,
                         page=page,
                     )
@@ -277,12 +273,11 @@ async def scrape(browser: Browser) -> None:
                         timeout=20,
                     )
 
-                    sport, event, logo, ts, link = (
+                    sport, event, logo, ts = (
                         ev["sport"],
                         ev["event"],
                         ev["logo"],
                         ev["timestamp"],
-                        ev["link"],
                     )
 
                     key = f"[{sport}] {event} ({TAG})"

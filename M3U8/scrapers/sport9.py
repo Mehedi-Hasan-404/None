@@ -101,9 +101,9 @@ async def scrape(browser: Browser) -> None:
 
     events = await get_events(cached_urls.keys())
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         now = Time.clean(Time.now())
 
         async with network.event_context(browser, stealth=False) as context:
@@ -111,7 +111,7 @@ async def scrape(browser: Browser) -> None:
                 async with network.event_page(context) as page:
                     handler = partial(
                         network.process_event,
-                        url=ev["link"],
+                        url=(link := ev["link"]),
                         url_num=i,
                         page=page,
                         log=log,
@@ -125,11 +125,7 @@ async def scrape(browser: Browser) -> None:
                     )
 
                     if url:
-                        sport, event, link = (
-                            ev["sport"],
-                            ev["event"],
-                            ev["link"],
-                        )
+                        sport, event = ev["sport"], ev["event"]
 
                         key = f"[{sport}] {event} ({TAG})"
 

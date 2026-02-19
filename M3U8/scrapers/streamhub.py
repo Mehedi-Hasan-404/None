@@ -20,17 +20,14 @@ HTML_CACHE = Cache(f"{TAG}-html", exp=28_800)
 BASE_URL = "https://livesports4u.net"
 
 CATEGORIES = {
-    "Soccer": "sport_68c02a4464a38",
     # "American Football": "sport_68c02a4465113",
-    # "Baseball": "sport_68c02a446582f",
+    "Baseball": "sport_68c02a446582f",
     "Basketball": "sport_68c02a4466011",
-    "Cricket": "sport_68c02a44669f3",
     "Hockey": "sport_68c02a4466f56",
     "MMA": "sport_68c02a44674e9",
     "Racing": "sport_68c02a4467a48",
-    # "Rugby": "sport_68c02a4467fc1",
+    "Soccer": "sport_68c02a4464a38",
     "Tennis": "sport_68c02a4468cf7",
-    # "Volleyball": "sport_68c02a4469422",
 }
 
 
@@ -148,15 +145,15 @@ async def scrape(browser: Browser) -> None:
 
     events = await get_events(cached_urls.keys())
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
                         network.process_event,
-                        url=ev["link"],
+                        url=(link := ev["link"]),
                         url_num=i,
                         page=page,
                         timeout=5,
@@ -170,11 +167,10 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event, logo, link, ts = (
+                    sport, event, logo, ts = (
                         ev["sport"],
                         ev["event"],
                         ev["logo"],
-                        ev["link"],
                         ev["event_ts"],
                     )
 

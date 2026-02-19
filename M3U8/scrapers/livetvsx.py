@@ -18,12 +18,14 @@ XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
 
 BASE_URL = "https://cdn.livetv873.me/rss/upcoming_en.xml"
 
-VALID_SPORTS = {
-    "Football",
+VALID_SPORTS = [
+    "MLB. Preseason",
+    "MLB",
     "Basketball",
+    "Football",
     "Ice Hockey",
     "Olympic Games",
-}
+]
 
 
 async def process_event(
@@ -48,7 +50,7 @@ async def process_event(
         await page.goto(
             url,
             wait_until="domcontentloaded",
-            timeout=15_000,
+            timeout=10_000,
         )
 
         await page.wait_for_timeout(1_500)
@@ -108,7 +110,7 @@ async def process_event(
         return
 
     except Exception as e:
-        log.warning(f"URL {url_num}) Exception while processing: {e}")
+        log.warning(f"URL {url_num}) {e}")
         return
 
     finally:
@@ -205,15 +207,15 @@ async def scrape(browser: Browser) -> None:
 
     events = await get_events(cached_urls.keys())
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         async with network.event_context(browser, ignore_https=True) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
                         process_event,
-                        url=ev["link"],
+                        url=(link := ev["link"]),
                         url_num=i,
                         page=page,
                     )
@@ -226,12 +228,11 @@ async def scrape(browser: Browser) -> None:
                         timeout=20,
                     )
 
-                    sport, league, event, ts, link = (
+                    sport, league, event, ts = (
                         ev["sport"],
                         ev["league"],
                         ev["event"],
                         ev["event_ts"],
-                        ev["link"],
                     )
 
                     key = f"[{sport} - {league}] {event} ({TAG})"

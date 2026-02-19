@@ -4,11 +4,20 @@ import random
 import re
 from collections.abc import Awaitable, Callable
 from contextlib import asynccontextmanager
-from functools import partial
+from functools import cache, partial
+from pathlib import Path
 from typing import AsyncGenerator, TypeVar
+from urllib.parse import urlparse
 
 import httpx
-from playwright.async_api import Browser, BrowserContext, Page, Playwright, Request
+from playwright.async_api import (
+    Browser,
+    BrowserContext,
+    Page,
+    Playwright,
+    Request,
+    Route,
+)
 
 from .logger import get_logger
 
@@ -73,7 +82,7 @@ class Network:
         fn: Callable[[], Awaitable[T]],
         url_num: int,
         semaphore: asyncio.Semaphore,
-        timeout: int | float = 10,
+        timeout: int | float = 30,
         log: logging.Logger | None = None,
     ) -> T | None:
 
@@ -98,7 +107,7 @@ class Network:
                     pass
 
                 except Exception as e:
-                    log.debug(f"URL {url_num}) Ignore exception after timeout: {e}")
+                    log.warning(f"URL {url_num}) Ignore exception after timeout: {e}")
 
                 return
             except Exception as e:
@@ -107,84 +116,65 @@ class Network:
                 return
 
     @staticmethod
+    @cache
+    def blocked_domains() -> list[str]:
+        return (
+            (Path(__file__).parent / "easylist.txt")
+            .read_text(encoding="utf-8")
+            .splitlines()
+        )
+
+    @staticmethod
+    def to_block(request: Request) -> bool:
+        hostname = (urlparse(request.url).hostname or "").lower()
+
+        return any(
+            hostname == domain or hostname.endswith(f".{domain}")
+            for domain in Network.blocked_domains()
+        )
+
+    @staticmethod
+    async def _adblock(route: Route) -> None:
+        request = route.request
+
+        if request.resource_type not in ["script", "image", "media", "xhr"]:
+            await route.continue_()
+
+            return
+
+        await route.abort() if Network.to_block(request) else await route.continue_()
+
+    @staticmethod
     @asynccontextmanager
     async def event_context(
         browser: Browser,
         stealth: bool = True,
         ignore_https: bool = False,
     ) -> AsyncGenerator[BrowserContext, None]:
+
         context: BrowserContext | None = None
 
         try:
-            context = await browser.new_context(
-                user_agent=Network.UA if stealth else None,
-                ignore_https_errors=ignore_https,
-                viewport={"width": 1366, "height": 768},
-                device_scale_factor=1,
-                locale="en-US",
-                timezone_id="America/New_York",
-                color_scheme="dark",
-                permissions=["geolocation"],
-                extra_http_headers=(
-                    {
-                        "Accept-Language": "en-US,en;q=0.9",
-                        "Upgrade-Insecure-Requests": "1",
-                    }
-                    if stealth
-                    else None
-                ),
-            )
-
             if stealth:
-                await context.add_init_script("""
-                    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
-
-                    Object.defineProperty(navigator, "languages", {
-                    get: () => ["en-US", "en"],
-                    });
-
-                    Object.defineProperty(navigator, "plugins", {
-                    get: () => [1, 2, 3, 4],
-                    });
-
-                    const elementDescriptor = Object.getOwnPropertyDescriptor(
-                    HTMLElement.prototype,
-                    "offsetHeight"
-                    );
-
-                    Object.defineProperty(HTMLDivElement.prototype, "offsetHeight", {
-                    ...elementDescriptor,
-                    get: function () {
-                        if (this.id === "modernizr") {
-                        return 24;
+                context = await browser.new_context(
+                    user_agent=Network.UA,
+                    ignore_https_errors=ignore_https,
+                    viewport={"width": 1366, "height": 768},
+                    device_scale_factor=1,
+                    locale="en-US",
+                    timezone_id="America/New_York",
+                    color_scheme="dark",
+                    extra_http_headers=(
+                        {
+                            "Accept-Language": "en-US,en;q=0.9",
+                            "Upgrade-Insecure-Requests": "1",
                         }
-                        return elementDescriptor.get.apply(this);
-                    },
-                    });
+                    ),
+                )
 
-                    Object.defineProperty(window.screen, "width", { get: () => 1366 });
-                    Object.defineProperty(window.screen, "height", { get: () => 768 });
+                await context.add_init_script(path=Path(__file__).parent / "stealth.js")
 
-                    const getParameter = WebGLRenderingContext.prototype.getParameter;
-
-                    WebGLRenderingContext.prototype.getParameter = function (param) {
-                    if (param === 37445) return "Intel Inc."; //  UNMASKED_VENDOR_WEBGL
-                    if (param === 37446) return "Intel Iris OpenGL    Engine"; // UNMASKED_RENDERER_WEBGL
-                    return getParameter.apply(this, [param]);
-                    };
-
-                    const observer = new MutationObserver((mutations) => {
-                    mutations.forEach((mutation) => {
-                        mutation.addedNodes.forEach((node) => {
-                        if (node.tagName === "IFRAME" && node.hasAttribute("sandbox")) {
-                            node.removeAttribute("sandbox");
-                        }
-                        });
-                    });
-                    });
-
-                    observer.observe(document.documentElement, { childList: true, subtree: true });
-                """)
+                await context.route("**/*", Network._adblock)
 
             else:
                 context = await browser.new_context()
@@ -261,7 +251,7 @@ class Network:
             await page.goto(
                 url,
                 wait_until="domcontentloaded",
-                timeout=15_000,
+                timeout=6_000,
             )
 
             wait_task = asyncio.create_task(got_one.wait())
@@ -292,7 +282,7 @@ class Network:
             return
 
         except Exception as e:
-            log.warning(f"URL {url_num}) Exception while processing: {e}")
+            log.warning(f"URL {url_num}) {e}")
 
             return
 

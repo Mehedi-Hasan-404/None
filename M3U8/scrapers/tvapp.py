@@ -1,7 +1,6 @@
 from functools import partial
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin
 
-from playwright.async_api import Browser
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -17,12 +16,27 @@ CACHE_FILE = Cache(TAG, exp=86_400)
 BASE_URL = "https://thetvapp.to"
 
 
-def fix_url(s: str) -> str:
-    parsed = urlparse(s)
+async def process_event(url: str, url_num: int) -> str | None:
+    if not (html_data := await network.request(url, log=log)):
+        log.info(f"URL {url_num}) Failed to load url.")
 
-    base = f"origin.{parsed.netloc.split('.', 1)[-1]}"
+        return
 
-    return urljoin(f"http://{base}", parsed.path.replace("tracks-v1a1/", ""))
+    soup = HTMLParser(html_data.content)
+
+    if not (channel_name_elem := soup.css_first("#stream_name")):
+        log.warning(f"URL {url_num}) No channel found.")
+
+        return
+
+    if not (channel_name := channel_name_elem.attributes.get("name")):
+        log.warning(f"URL {url_num}) No channel found.")
+
+        return
+
+    log.info(f"URL {url_num}) Captured M3U8")
+
+    return f"http://origin.thetvapp.to/hls/{channel_name.strip().upper()}/mono.m3u8"
 
 
 async def get_events() -> list[dict[str, str]]:
@@ -59,7 +73,7 @@ async def get_events() -> list[dict[str, str]]:
     return events
 
 
-async def scrape(browser: Browser) -> None:
+async def scrape() -> None:
     if cached := CACHE_FILE.load():
         urls.update(cached)
 
@@ -71,50 +85,42 @@ async def scrape(browser: Browser) -> None:
 
     events = await get_events()
 
-    log.info(f"Processing {len(events)} new URL(s)")
-
     if events:
+        log.info(f"Processing {len(events)} new URL(s)")
+
         now = Time.clean(Time.now())
 
-        async with network.event_context(browser) as context:
-            for i, ev in enumerate(events, start=1):
-                async with network.event_page(context) as page:
-                    handler = partial(
-                        network.process_event,
-                        url=ev["link"],
-                        url_num=i,
-                        page=page,
-                        log=log,
-                    )
+        for i, ev in enumerate(events, start=1):
+            handler = partial(
+                process_event,
+                url=(link := ev["link"]),
+                url_num=i,
+            )
 
-                    url = await network.safe_process(
-                        handler,
-                        url_num=i,
-                        semaphore=network.PW_S,
-                        log=log,
-                    )
+            url = await network.safe_process(
+                handler,
+                url_num=i,
+                semaphore=network.HTTP_S,
+                log=log,
+            )
 
-                    if url:
-                        sport, event, link = (
-                            ev["sport"],
-                            ev["event"],
-                            ev["link"],
-                        )
+            if url:
+                sport, event = ev["sport"], ev["event"]
 
-                        key = f"[{sport}] {event} ({TAG})"
+                key = f"[{sport}] {event} ({TAG})"
 
-                        tvg_id, logo = leagues.get_tvg_info(sport, event)
+                tvg_id, logo = leagues.get_tvg_info(sport, event)
 
-                        entry = {
-                            "url": fix_url(url),
-                            "logo": logo,
-                            "base": BASE_URL,
-                            "timestamp": now.timestamp(),
-                            "id": tvg_id or "Live.Event.us",
-                            "link": link,
-                        }
+                entry = {
+                    "url": url,
+                    "logo": logo,
+                    "base": BASE_URL,
+                    "timestamp": now.timestamp(),
+                    "id": tvg_id or "Live.Event.us",
+                    "link": link,
+                }
 
-                        urls[key] = entry
+                urls[key] = entry
 
     log.info(f"Collected and cached {len(urls)} new event(s)")
 
