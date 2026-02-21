@@ -1,18 +1,11 @@
-## Base Log @ 2026-02-21 14:51 UTC
+## Base Log @ 2026-02-21 16:21 UTC
 
-### ✅ Working Streams: 147<br>❌ Dead Streams: 10
+### ✅ Working Streams: 154<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Cleo TV | HTTP Error (404) | `http://212.102.60.231/Cleo_TV/index.m3u8` |
 | Comedy TV | HTTP Error (404) | `http://212.102.60.231/Comedy_TV/index.m3u8` |
-| Crime & Investigation Network | HTTP Error (404) | `http://212.102.60.231/Crime_and_Investigation_Network/index.m3u8` |
-| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
-| Fox Sports 1 | HTTP Error (000) | `http://109.61.81.147:1935/cdn7/3368/video.m3u8?token=3d43ae750ba5e9814f074f919b8e2f60` |
-| Fox Sports 2 | HTTP Error (000) | `http://109.61.81.147:1935/cdn7/3367/video.m3u8?token=5ad742b0838080b87b1ea87c1394c5f4` |
-| HBO Zone | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/92650.m3u8` |
-| Lifetime Movie Network | HTTP Error (404) | `http://41.205.93.154/LMN/index.m3u8` |
-| Nickelodeon | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/53728.m3u8` |
 | Ovation | HTTP Error (404) | `http://212.102.60.231/Ovation/index.m3u8` |
 ---
 #### Base Channels URL
