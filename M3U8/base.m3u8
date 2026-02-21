@@ -194,7 +194,7 @@ http://mytvstream.net:8080/live/30550113/30550113/7323.m3u8
 http://stream.cammonitorplus.net/1772/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==
 
 #EXTINF:-1 tvg-chno="65" tvg-id="Fox.Business.HD.us2" tvg-name="Fox Business" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58649_dark_360w_270h.png" group-title="TV",Fox Business
-http://41.205.93.154/FOXBUSINESS/index.m3u8
+http://mytvstream.net:8080/live/30550113/30550113/17639.m3u8
 
 #EXTINF:-1 tvg-chno="66" tvg-id="Fox.News.Channel.HD.us2" tvg-name="Fox News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16374_dark_360w_270h.png" group-title="TV",Fox News
 http://mytvstream.net:8080/live/30550113/30550113/1818.m3u8
@@ -257,7 +257,7 @@ http://mytvstream.net:8080/live/30550113/30550113/17773.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8
 
 #EXTINF:-1 tvg-chno="86" tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Zone" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18431_dark_360w_270h.png" group-title="TV",HBO Zone
-http://mytvstream.net:8080/live/30550113/30550113/92650.m3u8
+http://mytvstream.net:8080/live/30550113/30550113/9265.m3u8
 
 #EXTINF:-1 tvg-chno="87" tvg-id="History.HD.us2" tvg-name="History Channel" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s87679_dark_360w_270h.png" group-title="TV",History Channel
 http://mytvstream.net:8080/live/30550113/30550113/15017.m3u8
@@ -278,7 +278,7 @@ http://mytvstream.net:8080/live/30550113/30550113/9297.m3u8
 http://41.205.93.154/LIFETIME/index.m3u8
 
 #EXTINF:-1 tvg-chno="93" tvg-id="LMN.HD.us2" tvg-name="Lifetime Movie Network" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18480_dark_360w_270h.png" group-title="TV",Lifetime Movie Network
-http://41.205.93.154/LMN/index.m3u8
+http://mytvstream.net:8080/live/30550113/30550113/2208.m3u8
 
 #EXTINF:-1 tvg-chno="94" tvg-id="Marquee.Sports.Network.HD.us2" tvg-name="Marquee Sports Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s113768_dark_360w_270h.png" group-title="TV",Marquee Sports Network
 http://mytvstream.net:8080/live/30550113/30550113/13379.m3u8
@@ -341,7 +341,7 @@ https://nhl-firetv.amagi.tv/playlist.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/46710.m3u8
 
 #EXTINF:-1 tvg-chno="114" tvg-id="Nickelodeon.HD.us2" tvg-name="Nickelodeon" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png" group-title="TV",Nickelodeon
-http://mytvstream.net:8080/live/30550113/30550113/53728.m3u8
+http://mytvstream.net:8080/live/30550113/30550113/38.m3u8
 
 #EXTINF:-1 tvg-chno="115" tvg-id="Nicktoons.us2" tvg-name="Nicktoons" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30420_dark_360w_270h.png" group-title="TV",Nicktoons
 http://212.102.60.231/NICKTOONS/index.m3u8
