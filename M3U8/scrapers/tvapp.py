@@ -25,12 +25,12 @@ async def process_event(url: str, url_num: int) -> str | None:
     soup = HTMLParser(html_data.content)
 
     if not (channel_name_elem := soup.css_first("#stream_name")):
-        log.warning(f"URL {url_num}) No channel found.")
+        log.warning(f"URL {url_num}) No channel name elem found.")
 
         return
 
     if not (channel_name := channel_name_elem.attributes.get("name")):
-        log.warning(f"URL {url_num}) No channel found.")
+        log.warning(f"URL {url_num}) No channel name found.")
 
         return
 
@@ -51,13 +51,15 @@ async def get_events() -> list[dict[str, str]]:
         if not (h3_elem := row.css_first("h3")):
             continue
 
-        sport = h3_elem.text(strip=True)
-
-        if sport.lower() == "live tv channels":
+        if (sport := h3_elem.text(strip=True)).lower() == "live tv channels":
             continue
 
         for a in row.css("a.list-group-item[href]"):
-            event_name = a.text(strip=True).split(":", 1)[0]
+            splits = a.text(strip=True).split(":")
+
+            del splits[-3:]
+
+            event_name = ":".join(splits)
 
             if not (href := a.attributes.get("href")):
                 continue
