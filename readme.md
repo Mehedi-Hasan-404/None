@@ -1,16 +1,13 @@
-## Base Log @ 2026-02-22 08:55 UTC
+## Base Log @ 2026-02-22 14:51 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 7
+### ✅ Working Streams: 153<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cartoon Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/46708.m3u8` |
 | Cleo TV | HTTP Error (404) | `http://212.102.60.231/Cleo_TV/index.m3u8` |
 | Comedy TV | HTTP Error (404) | `http://212.102.60.231/Comedy_TV/index.m3u8` |
-| ESPN U | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/10255.m3u8` |
-| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
+| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
 | Ovation | HTTP Error (404) | `http://212.102.60.231/Ovation/index.m3u8` |
-| Pop TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20976.m3u8` |
 ---
 #### Base Channels URL
 ```
