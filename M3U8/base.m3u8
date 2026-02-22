@@ -40,13 +40,13 @@ https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_ch
 http://212.102.60.231/BET/index.m3u8
 
 #EXTINF:-1 tvg-chno="14" tvg-id="Big.Ten.Network.HD.us2" tvg-name="Big Ten Network" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s56783_dark_360w_270h.png" group-title="TV",Big Ten Network
-http://mytvstream.net:8080/live/30550113/30550113/9828.m3u8
+http://23.237.104.106:8080/USA_BTN/index.m3u8
 
 #EXTINF:-1 tvg-chno="15" tvg-id="Bloomberg.HD.us2" tvg-name="Bloomberg TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s71799_dark_360w_270h.png" group-title="TV",Bloomberg TV
 https://live-manifest.production-public.tubi.io/live/a5aabf5a-9615-4987-8163-18edfa1360c6/playlist.m3u8
 
 #EXTINF:-1 tvg-chno="16" tvg-id="Boomerang.us2" tvg-name="Boomerang" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s21883_dark_360w_270h.png" group-title="TV",Boomerang
-http://mytvstream.net:8080/live/30550113/30550113/14741.m3u8
+http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 
 #EXTINF:-1 tvg-chno="17" tvg-id="Bounce.TV.us2" tvg-name="Bounce TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s73067_dark_360w_270h.png" group-title="TV",Bounce TV
 http://212.102.60.231/BOUNCE_TV/index.m3u8
@@ -61,7 +61,7 @@ https://buzzrota-web.amagi.tv/playlist.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8
 
 #EXTINF:-1 tvg-chno="21" tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12131_dark_360w_270h.png" group-title="TV",Cartoon Network
-http://mytvstream.net:8080/live/30550113/30550113/46708.m3u8
+http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="22" tvg-id="WCBS-DT.us_locals1" tvg-name="CBS" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10098_dark_360w_270h.png" group-title="TV",CBS
 http://stream.cammonitorplus.net/1810/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==
@@ -76,13 +76,13 @@ https://dai.google.com/linear/hls/event/GxrCGmwST0ixsrc_QgB6qw/master.m3u8
 http://snowbank.houseinventer.com/7007/index.m3u8?token=c0lTeGc1M0gydFNjcloydGZhbTFsY1RYMkphdG5OcXdxNHpMeGFYWW5ZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==
 
 #EXTINF:-1 tvg-chno="26" tvg-id="Cinemax.HD.us2" tvg-name="Cinemax" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s34933_dark_360w_270h.png" group-title="TV",Cinemax
-http://mytvstream.net:8080/live/30550113/30550113/13380.m3u8
+http://23.237.104.106:8080/USA_CINEMAX/index.m3u8
 
 #EXTINF:-1 tvg-chno="27" tvg-id="Cleo.TV.HD.us2" tvg-name="Cleo TV" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s110289_dark_360w_270h.png" group-title="TV",Cleo TV
 http://212.102.60.231/Cleo_TV/index.m3u8
 
 #EXTINF:-1 tvg-chno="28" tvg-id="CMT.HD.us2" tvg-name="CMT" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10138_dark_360w_270h.png" group-title="TV",CMT
-http://mytvstream.net:8080/live/30550113/30550113/10476.m3u8
+http://23.237.104.106:8080/USA_CMT/index.m3u8
 
 #EXTINF:-1 tvg-chno="29" tvg-id="CNBC.HD.us2" tvg-name="CNBC" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10139_dark_360w_270h.png" group-title="TV",CNBC
 http://mytvstream.net:8080/live/30550113/30550113/9815.m3u8
@@ -91,7 +91,7 @@ http://mytvstream.net:8080/live/30550113/30550113/9815.m3u8
 https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
 
 #EXTINF:-1 tvg-chno="31" tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10149_dark_360w_270h.png" group-title="TV",Comedy Central
-http://mytvstream.net:8080/live/30550113/30550113/7466.m3u8
+http://23.237.104.106:8080/USA_COMEDY_CENTRAL/index.m3u8
 
 #EXTINF:-1 tvg-chno="32" tvg-id="Comedy.TV.HD.us2" tvg-name="Comedy TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s82470_dark_360w_270h.png" group-title="TV",Comedy TV
 http://212.102.60.231/Comedy_TV/index.m3u8
@@ -100,7 +100,7 @@ http://212.102.60.231/Comedy_TV/index.m3u8
 https://fast-channels.sinclairstoryline.com/COMET/index.m3u8
 
 #EXTINF:-1 tvg-chno="34" tvg-id="Cooking.Channel.HD.us2" tvg-name="Cooking Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30156_dark_360w_270h.png" group-title="TV",Cooking Channel
-http://mytvstream.net:8080/live/30550113/30550113/9229.m3u8
+http://23.237.104.106:8080/USA_COOKING/index.m3u8
 
 #EXTINF:-1 tvg-chno="35" tvg-id="Court.TV.us2" tvg-name="Court TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s117160_dark_360w_270h.png" group-title="TV",Court TV
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8
@@ -115,7 +115,7 @@ http://mytvstream.net:8080/live/30550113/30550113/57256.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/120893.m3u8
 
 #EXTINF:-1 tvg-chno="39" tvg-id="Discovery.Channel.HD.us2" tvg-name="Discovery Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11150_dark_360w_270h.png" group-title="TV",Discovery Channel
-http://mytvstream.net:8080/live/30550113/30550113/46720.m3u8
+http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 
 #EXTINF:-1 tvg-chno="40" tvg-id="Discovery.Family.Channel.HD.us2" tvg-name="Discovery Family Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16618_dark_360w_270h.png" group-title="TV",Discovery Family Channel
 http://mytvstream.net:8080/live/30550113/30550113/10538.m3u8
@@ -133,7 +133,7 @@ http://fl12.moveonjoy.com/DISNEY/index.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/75621.m3u8
 
 #EXTINF:-1 tvg-chno="45" tvg-id="E!.Entertainment.Television.HD.us2" tvg-name="E! Entertainment" tvg-logo="https://i.gyazo.com/f73b80e3eb56cec06df6705d00e2f422.png" group-title="TV",E! Entertainment
-http://mytvstream.net:8080/live/30550113/30550113/11651.m3u8
+http://23.237.104.106:8080/USA_E/index.m3u8
 
 #EXTINF:-1 tvg-chno="46" tvg-id="ESPN.HD.us2" tvg-name="ESPN" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10179_dark_360w_270h.png" group-title="TV",ESPN
 http://snowbank.houseinventer.com/6500/index.m3u8?token=M1lDdWljYkdyZGFhZzVxeGc2Mkt5OGJicWNxd2xheDkzWWVieEt5b3lZVERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==
@@ -142,7 +142,7 @@ http://snowbank.houseinventer.com/6500/index.m3u8?token=M1lDdWljYkdyZGFhZzVxeGc2
 http://mytvstream.net:8080/live/30550113/30550113/17707.m3u8
 
 #EXTINF:-1 tvg-chno="48" tvg-id="ESPNU.HD.us2" tvg-name="ESPN U" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s45654_dark_360w_270h.png" group-title="TV",ESPN U
-http://mytvstream.net:8080/live/30550113/30550113/10255.m3u8
+http://23.237.104.106:8080/USA_ESPNU/index.m3u8
 
 #EXTINF:-1 tvg-chno="49" tvg-id="ESPN2.HD.us2" tvg-name="ESPN2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12444_dark_360w_270h.png" group-title="TV",ESPN2
 http://snowbank.houseinventer.com/6501/index.m3u8?token=M1lDdWljYkdyZGFhZzVxeGc2Mkt5OGJicWNxd2xheDkzWWVieE
@@ -209,7 +209,7 @@ http://mytvstream.net:8080/live/30550113/30550113/1847.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/13370.m3u8
 
 #EXTINF:-1 tvg-chno="70" tvg-id="Fuse.HD.us2" tvg-name="FUSE" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14929_dark_360w_270h.png" group-title="TV",FUSE
-http://mytvstream.net:8080/live/30550113/30550113/46701.m3u8
+http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
 #EXTINF:-1 tvg-chno="71" tvg-id="FX.HD.us2" tvg-name="FX" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14321_dark_360w_270h.png" group-title="TV",FX
 http://fl12.moveonjoy.com/FX/index.m3u8
@@ -236,7 +236,7 @@ http://mytvstream.net:8080/live/30550113/30550113/46728.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/20861.m3u8
 
 #EXTINF:-1 tvg-chno="79" tvg-id="Hallmark.Channel.HD.us2" tvg-name="Hallmark Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11221_dark_360w_270h.png" group-title="TV",Hallmark Channel
-http://mytvstream.net:8080/live/30550113/30550113/46719.m3u8
+http://23.237.104.106:8080/USA_HALLMARK/index.m3u8
 
 #EXTINF:-1 tvg-chno="80" tvg-id="Hallmark.Family.us2" tvg-name="Hallmark Family" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s105723_dark_360w_270h.png" group-title="TV",Hallmark Family
 http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8
@@ -245,13 +245,13 @@ http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8
 
 #EXTINF:-1 tvg-chno="82" tvg-id="HBO.East.us2" tvg-name="HBO" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10240_dark_360w_270h.png" group-title="TV",HBO
-http://mytvstream.net:8080/live/30550113/30550113/46713.m3u8
+http://23.237.104.106:8080/USA_HBO/index.m3u8
 
 #EXTINF:-1 tvg-chno="83" tvg-id="HBO2.HD.us2" tvg-name="HBO 2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68140_dark_360w_270h.png" group-title="TV",HBO 2
-http://mytvstream.net:8080/live/30550113/30550113/9816.m3u8
+http://23.237.104.106:8080/USA_HBO2/index.m3u8
 
 #EXTINF:-1 tvg-chno="84" tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59839_dark_360w_270h.png" group-title="TV",HBO Comedy
-http://mytvstream.net:8080/live/30550113/30550113/17773.m3u8
+http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
 #EXTINF:-1 tvg-chno="85" tvg-id="HBO.Drama.us2" tvg-name="HBO Family" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s34879_dark_360w_270h.png" group-title="TV",HBO Family
 http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8
@@ -263,7 +263,7 @@ http://mytvstream.net:8080/live/30550113/30550113/9265.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/15017.m3u8
 
 #EXTINF:-1 tvg-chno="88" tvg-id="HLN.HD.us2" tvg-name="HLN TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10145_dark_360w_270h.png" group-title="TV",HLN TV
-http://mytvstream.net:8080/live/30550113/30550113/17748.m3u8
+http://23.237.104.106:8080/USA_HLN/index.m3u8
 
 #EXTINF:-1 tvg-chno="89" tvg-id="INSP.HD.us2" tvg-name="INSP" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11066_dark_360w_270h.png" group-title="TV",INSP
 http://fl12.moveonjoy.com/INSP/index.m3u8
@@ -278,7 +278,7 @@ http://mytvstream.net:8080/live/30550113/30550113/9297.m3u8
 http://41.205.93.154/LIFETIME/index.m3u8
 
 #EXTINF:-1 tvg-chno="93" tvg-id="LMN.HD.us2" tvg-name="Lifetime Movie Network" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18480_dark_360w_270h.png" group-title="TV",Lifetime Movie Network
-http://mytvstream.net:8080/live/30550113/30550113/2208.m3u8
+http://23.237.104.106:8080/USA_LMN/index.m3u8
 
 #EXTINF:-1 tvg-chno="94" tvg-id="Marquee.Sports.Network.HD.us2" tvg-name="Marquee Sports Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s113768_dark_360w_270h.png" group-title="TV",Marquee Sports Network
 http://mytvstream.net:8080/live/30550113/30550113/13379.m3u8
@@ -290,7 +290,7 @@ http://stream.cammonitorplus.net/337626/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2h
 http://mytvstream.net:8080/live/30550113/30550113/10399.m3u8
 
 #EXTINF:-1 tvg-chno="97" tvg-id="MSG.National.us2" tvg-name="MSG" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10979_dark_360w_270h.png" group-title="TV",MSG
-http://mytvstream.net:8080/live/30550113/30550113/21090.m3u8
+http://23.237.104.106:8080/USA_MSG/index.m3u8
 
 #EXTINF:-1 tvg-chno="98" tvg-id="MSNBC.HD.us2" tvg-name="MSNBC" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16300_dark_360w_270h.png" group-title="TV",MSNBC
 http://41.205.93.154/MSNBC/index.m3u8
@@ -299,7 +299,7 @@ http://41.205.93.154/MSNBC/index.m3u8
 http://fl12.moveonjoy.com/MTV/index.m3u8
 
 #EXTINF:-1 tvg-chno="100" tvg-id="National.Geographic.HD.us2" tvg-name="National Geographic" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s49438_dark_360w_270h.png" group-title="TV",National Geographic
-http://mytvstream.net:8080/live/30550113/30550113/9277.m3u8
+http://23.237.104.106:8080/USA_NAT_GEO/index.m3u8
 
 #EXTINF:-1 tvg-chno="101" tvg-id="NBA.TV.HD.us2" tvg-name="NBA TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s32281_dark_360w_270h.png" group-title="TV",NBA TV
 http://212.102.60.231/NBA_TV/index.m3u8
@@ -341,7 +341,7 @@ https://nhl-firetv.amagi.tv/playlist.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/46710.m3u8
 
 #EXTINF:-1 tvg-chno="114" tvg-id="Nickelodeon.HD.us2" tvg-name="Nickelodeon" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png" group-title="TV",Nickelodeon
-http://mytvstream.net:8080/live/30550113/30550113/38.m3u8
+http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 
 #EXTINF:-1 tvg-chno="115" tvg-id="Nicktoons.us2" tvg-name="Nicktoons" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30420_dark_360w_270h.png" group-title="TV",Nicktoons
 http://212.102.60.231/NICKTOONS/index.m3u8
@@ -356,7 +356,7 @@ http://212.102.60.231/Ovation/index.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/9245.m3u8
 
 #EXTINF:-1 tvg-chno="119" tvg-id="Paramount.Network.HD.us2" tvg-name="Paramount Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11163_dark_360w_270h.png" group-title="TV",Paramount Network
-http://mytvstream.net:8080/live/30550113/30550113/16201.m3u8
+http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="120" tvg-id="PBS.KIDS.HD.us2" tvg-name="PBS Kids" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s101364_dark_360w_270h.png" group-title="TV",PBS Kids
 https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8
@@ -377,10 +377,10 @@ http://212.102.60.231/QVC/index.m3u8
 http://212.102.60.231/REELZ/index.m3u8
 
 #EXTINF:-1 tvg-chno="126" tvg-id="SEC.Network.HD.us2" tvg-name="SEC Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s89535_dark_360w_270h.png" group-title="TV",SEC Network
-http://mytvstream.net:8080/live/30550113/30550113/17608.m3u8
+http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="127" tvg-id="Paramount+.with.Showtime.HD.us2" tvg-name="Showtime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-us.png" group-title="TV",Showtime
-http://mytvstream.net:8080/live/30550113/30550113/46214.m3u8
+http://23.237.104.106:8080/USA_SHOWTIME/index.m3u8
 
 #EXTINF:-1 tvg-chno="128" tvg-id="Smithsonian.HD.Network.us2" tvg-name="Smithsonian Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58532_dark_360w_270h.png" group-title="TV",Smithsonian Channel
 http://mytvstream.net:8080/live/30550113/30550113/31150.m3u8
@@ -419,7 +419,7 @@ https://stream.decentdoubts.net/801/index.m3u8?token=cTREYWhzaWIxOWlhZ3BpcWh0Mkd
 http://mytvstream.net:8080/live/30550113/30550113/108178.m3u8
 
 #EXTINF:-1 tvg-chno="140" tvg-id="Starz.HD.us2" tvg-name="Starz" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12719_dark_360w_270h.png" group-title="TV",Starz
-http://mytvstream.net:8080/live/30550113/30550113/9299.m3u8
+http://23.237.104.106:8080/USA_STARZ/index.m3u8
 
 #EXTINF:-1 tvg-chno="141" tvg-id="Starz.Encore.Classic.us2" tvg-name="Starz Encore Classic" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14764_dark_360w_270h.png" group-title="TV",Starz Encore Classic
 http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8
@@ -470,4 +470,4 @@ http://mytvstream.net:8080/live/30550113/30550113/46697.m3u8
 http://fl12.moveonjoy.com/WE_TV/index.m3u8
 
 #EXTINF:-1 tvg-chno="157" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
-http://mytvstream.net:8080/live/30550113/30550113/57972.m3u8
+http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
