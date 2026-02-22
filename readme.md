@@ -1,13 +1,10 @@
-## Base Log @ 2026-02-22 14:51 UTC
+## Base Log @ 2026-02-22 20:50 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 4
+### ✅ Working Streams: 156<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cleo TV | HTTP Error (404) | `http://212.102.60.231/Cleo_TV/index.m3u8` |
-| Comedy TV | HTTP Error (404) | `http://212.102.60.231/Comedy_TV/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
-| Ovation | HTTP Error (404) | `http://212.102.60.231/Ovation/index.m3u8` |
+| INSP | HTTP Error (404) | `http://fl12.moveonjoy.com/INSP/index.m3u8` |
 ---
 #### Base Channels URL
 ```
