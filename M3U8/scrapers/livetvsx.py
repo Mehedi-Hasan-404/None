@@ -24,7 +24,6 @@ VALID_SPORTS = [
     "Basketball",
     "Football",
     "Ice Hockey",
-    "Olympic Games",
 ]
 
 

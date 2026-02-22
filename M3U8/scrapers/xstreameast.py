@@ -18,11 +18,11 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 BASE_URL = "https://xstreameast.com"
 
 SPORT_ENDPOINTS = [
-    "mlb",
+    # "mlb",
     "mma",
     "nba",
     # "nfl",
-    "nhl",
+    # "nhl",
     "soccer",
     "wwe",
 ]
