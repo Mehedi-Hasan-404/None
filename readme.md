@@ -1,15 +1,12 @@
-## Base Log @ 2026-02-23 15:13 UTC
+## Base Log @ 2026-02-23 21:08 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 6
+### ✅ Working Streams: 153<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CW | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117129.ts` |
-| Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129706.ts` |
-| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
+| HBO Comedy | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257141.ts` |
 | INSP | HTTP Error (404) | `http://fl12.moveonjoy.com/INSP/index.m3u8` |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
-| TV Land | HTTP Error (404) | `http://fl12.moveonjoy.com/TV_LAND/index.m3u8` |
+| TLC | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129765.ts` |
 ---
 #### Base Channels URL
 ```
