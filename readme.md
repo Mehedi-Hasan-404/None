@@ -1,10 +1,23 @@
-## Base Log @ 2026-02-22 20:50 UTC
+## Base Log @ 2026-02-23 04:35 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 1
+### ✅ Working Streams: 142<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Disney XD | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130092.ts` |
+| Disney | HTTP Error (404) | `http://fl12.moveonjoy.com/DISNEY/index.m3u8` |
+| FDSN Florida | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254460.ts` |
+| FDSN SoCal | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254465.ts` |
+| FDSN Southwest | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254469.ts` |
+| FDSN Sun | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254467.ts` |
+| FDSN West | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254471.ts` |
+| FDSN Wisconsin | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254470.ts` |
+| FX | HTTP Error (404) | `http://fl12.moveonjoy.com/FX/index.m3u8` |
+| FXX | HTTP Error (404) | `http://fl12.moveonjoy.com/FXX/index.m3u8` |
 | INSP | HTTP Error (404) | `http://fl12.moveonjoy.com/INSP/index.m3u8` |
+| MTV | HTTP Error (404) | `http://fl12.moveonjoy.com/MTV/index.m3u8` |
+| TV Land | HTTP Error (404) | `http://fl12.moveonjoy.com/TV_LAND/index.m3u8` |
+| We Tv | HTTP Error (404) | `http://fl12.moveonjoy.com/WE_TV/index.m3u8` |
 ---
 #### Base Channels URL
 ```
