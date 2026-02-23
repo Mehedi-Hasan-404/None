@@ -126,11 +126,11 @@ http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129866.ts
 #EXTINF:-1 tvg-chno="42" tvg-id="Science.Channel.HD.us2" tvg-name="Discovery Science" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s24282_dark_360w_270h.png" group-title="TV",Discovery Science
 http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129867.ts
 
-#EXTINF:-1 tvg-chno="43" tvg-id="Disney.Channel.HD.us2" tvg-name="Disney" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="TV",Disney
-http://fl12.moveonjoy.com/DISNEY/index.m3u8
+#EXTINF:-1 tvg-chno="43" tvg-id="Disney.Channel.HD.us2" tvg-name="Disney" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="TV",Disney Channel
+http://104.255.88.155/disney/index.m3u8
 
 #EXTINF:-1 tvg-chno="44" tvg-id="Disney.XD.HD.us2" tvg-name="Disney XD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="TV",Disney XD
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130092.ts
+http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
 
 #EXTINF:-1 tvg-chno="45" tvg-id="E!.Entertainment.Television.HD.us2" tvg-name="E! Entertainment" tvg-logo="https://i.gyazo.com/f73b80e3eb56cec06df6705d00e2f422.png" group-title="TV",E! Entertainment
 http://23.237.104.106:8080/USA_E/index.m3u8
@@ -148,10 +148,10 @@ http://23.237.104.106:8080/USA_ESPNU/index.m3u8
 http://snowbank.houseinventer.com/6501/index.m3u8?token=M1lDdWljYkdyZGFhZzVxeGc2Mkt5OGJicWNxd2xheDkzWWVieEt5b3lZVERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==
 
 #EXTINF:-1 tvg-chno="50" tvg-id="FanDuel.Sports.Network.Detroit.24/7.HDTV.us" tvg-name="FDSN Detroit" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s54286_dark_360w_270h.png" group-title="TV",FDSN Detroit
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254459.ts
+http://mytvstream.net:8080/live/30550113/30550113/20930.m3u8
 
 #EXTINF:-1 tvg-chno="51" tvg-id="FanDuel.Sports.Network.Florida.HDTV.(Out.of.Market).us" tvg-name="FDSN Florida" tvg-logo="https://i.gyazo.com/fad701fbaaafe161b13b23ed9b50179b.png" group-title="TV",FDSN Florida
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254460.ts
+http://mytvstream.net:8080/live/30550113/30550113/46794.m3u8
 
 #EXTINF:-1 tvg-chno="52" tvg-id="FanDuel.Sports.Network.Midwest.24/7.HDTV.us" tvg-name="FDSN Midwest" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11058_dark_360w_270h.png" group-title="TV",FDSN Midwest
 http://mytvstream.net:8080/live/30550113/30550113/66795.m3u8
@@ -166,22 +166,22 @@ http://mytvstream.net:8080/live/30550113/30550113/17752.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/20934.m3u8
 
 #EXTINF:-1 tvg-chno="56" tvg-id="FanDuel.Sports.Network.SoCal.HDTV.us" tvg-name="FDSN SoCal" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16743_dark_360w_270h.png" group-title="TV",FDSN SoCal
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254465.ts
+http://mytvstream.net:8080/live/30550113/30550113/221151.m3u8
 
 #EXTINF:-1 tvg-chno="57" tvg-id="FanDuel.Sports.Network.Southeast.HDTV.(Mont./Birm./Dothan/Mobile.AL).us" tvg-name="FDSN Southeast" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s20789_dark_360w_270h.png" group-title="TV",FDSN Southeast
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254466.ts
+http://mytvstream.net:8080/live/30550113/30550113/2213.m3u8
 
 #EXTINF:-1 tvg-chno="58" tvg-id="FanDuel.Sports.Network.Southwest.HDTV.24/7.(Main).us" tvg-name="FDSN Southwest" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59629_dark_360w_270h.png" group-title="TV",FDSN Southwest
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254469.ts
+http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8
 
 #EXTINF:-1 tvg-chno="59" tvg-id="FanDuel.Sports.Network.Sun.South.24/7.HDTV.(South.Marlins,.Rays,.Heat).us" tvg-name="FDSN Sun" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s61084_dark_360w_270h.png" group-title="TV",FDSN Sun
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254467.ts
+http://mytvstream.net:8080/live/30550113/30550113/104917.m3u8
 
 #EXTINF:-1 tvg-chno="60" tvg-id="FanDuel.Sports.Network.West.HDTV.us" tvg-name="FDSN West" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59627_dark_360w_270h.png" group-title="TV",FDSN West
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254471.ts
+http://mytvstream.net:8080/live/30550113/30550113/20932.m3u8
 
 #EXTINF:-1 tvg-chno="61" tvg-id="FanDuel.Sports.Network.Wisconsin.24/7.HDTV.us" tvg-name="FDSN Wisconsin" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16348_dark_360w_270h.png" group-title="TV",FDSN Wisconsin
-http://hardcoremedia.xyz/live/rabdsbmz/3731346838/254470.ts
+http://mytvstream.net:8080/live/30550113/30550113/78599.m3u8
 
 #EXTINF:-1 tvg-chno="62" tvg-id="plex.tv.FIFA+.plex" tvg-name="FIFA+ TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s136235_dark_360w_270h.png" group-title="TV",FIFA+ TV
 https://jmp2.uk/stvp-IN270000230
@@ -211,13 +211,13 @@ http://hardcoremedia.xyz/live/rabdsbmz/3731346838/11205.ts
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
 #EXTINF:-1 tvg-chno="71" tvg-id="FX.HD.us2" tvg-name="FX" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14321_dark_360w_270h.png" group-title="TV",FX
-http://fl12.moveonjoy.com/FX/index.m3u8
+http://23.237.104.106:8080/USA_FX/index.m3u8
 
 #EXTINF:-1 tvg-chno="72" tvg-id="FX.Movie.Channel.HD.us2" tvg-name="FX Movie Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s70253_dark_360w_270h.png" group-title="TV",FX Movie Channel
 http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129878.ts
 
 #EXTINF:-1 tvg-chno="73" tvg-id="FXX.HD.us2" tvg-name="FXX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" group-title="TV",FXX
-http://fl12.moveonjoy.com/FXX/index.m3u8
+http://23.237.104.106:8080/USA_FXX/index.m3u8
 
 #EXTINF:-1 tvg-chno="74" tvg-id="FYI.Channel.HD.us2" tvg-name="FYI TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16834_dark_360w_270h.png" group-title="TV",FYI TV
 http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130105.ts
@@ -295,7 +295,7 @@ http://23.237.104.106:8080/USA_MSG/index.m3u8
 http://41.205.93.154/MSNBC/index.m3u8
 
 #EXTINF:-1 tvg-chno="99" tvg-id="MTV.-.Music.Television.HD.us2" tvg-name="MTV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10986_dark_360w_270h.png" group-title="TV",MTV
-http://fl12.moveonjoy.com/MTV/index.m3u8
+http://23.237.104.106:8080/USA_MTV/index.m3u8
 
 #EXTINF:-1 tvg-chno="100" tvg-id="National.Geographic.HD.us2" tvg-name="National Geographic" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s49438_dark_360w_270h.png" group-title="TV",National Geographic
 http://23.237.104.106:8080/USA_NAT_GEO/index.m3u8
@@ -463,7 +463,7 @@ http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129973.ts
 http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129976.ts
 
 #EXTINF:-1 tvg-chno="155" tvg-id="WE.tv.HD.us2" tvg-name="We Tv" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16409_dark_360w_270h.png" group-title="TV",We Tv
-http://fl12.moveonjoy.com/WE_TV/index.m3u8
+http://23.237.104.106:8080/USA_WE_TV/index.m3u8
 
 #EXTINF:-1 tvg-chno="156" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
