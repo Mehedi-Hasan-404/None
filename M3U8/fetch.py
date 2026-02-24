@@ -23,6 +23,7 @@ from scrapers import (
     streamsgate,
     totalsportek,
     tvapp,
+    volokit,
     watchfooty,
     webcast,
     xstreameast,
@@ -83,6 +84,7 @@ async def main() -> None:
                 # asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
+                asyncio.create_task(volokit.scrape()),
                 asyncio.create_task(xstreameast.scrape()),
             ]
 
@@ -118,6 +120,7 @@ async def main() -> None:
         | streamsgate.urls
         | totalsportek.urls
         | tvapp.urls
+        | volokit.urls
         | watchfooty.urls
         | webcast.urls
         | xstreameast.urls

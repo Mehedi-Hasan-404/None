@@ -91,6 +91,7 @@ class Time(datetime):
                 "%m/%d/%Y %I:%M %p",
                 "%m/%d/%Y %H:%M:%S",
                 "%a, %d %b %Y %H:%M:%S %z",
+                "%A, %b %d, %Y %H:%M",
             ]
 
             for frmt in formats:
