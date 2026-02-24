@@ -1,13 +1,10 @@
-## Base Log @ 2026-02-24 09:13 UTC
+## Base Log @ 2026-02-24 15:18 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 7
+### ✅ Working Streams: 152<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Southeast | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/2213.m3u8` |
-| FDSN Southwest | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8` |
-| FDSN Sun | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/104917.m3u8` |
-| FDSN West | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20932.m3u8` |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1762/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
 | Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129706.ts` |
 | HBO Comedy | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257141.ts` |
 | INSP | HTTP Error (404) | `http://fl12.moveonjoy.com/INSP/index.m3u8` |
