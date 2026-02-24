@@ -181,8 +181,6 @@ async def scrape() -> None:
     if events:
         log.info(f"Processing {len(events)} new URL(s)")
 
-        now = Time.clean(Time.now())
-
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
@@ -197,7 +195,11 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event = ev["sport"], ev["event"]
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["event_ts"],
+            )
 
             key = f"[{sport}] {event} ({TAG})"
 
@@ -207,7 +209,7 @@ async def scrape() -> None:
                 "url": url,
                 "logo": logo,
                 "base": link,
-                "timestamp": now.timestamp(),
+                "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
             }
