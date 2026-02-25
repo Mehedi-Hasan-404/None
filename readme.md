@@ -1,13 +1,12 @@
-## Base Log @ 2026-02-25 04:34 UTC
+## Base Log @ 2026-02-25 09:13 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 4
+### ✅ Working Streams: 153<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129706.ts` |
 | HBO Comedy | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257141.ts` |
 | INSP | HTTP Error (404) | `http://fl12.moveonjoy.com/INSP/index.m3u8` |
-| SportsNet New York | HTTP Error (404) | `http://212.102.60.231/SNY/index.m3u8` |
-| TLC | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129765.ts` |
 ---
 #### Base Channels URL
 ```
