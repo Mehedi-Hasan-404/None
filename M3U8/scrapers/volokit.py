@@ -22,7 +22,7 @@ BASE_URL = "http://volokit.xyz"
 SPORT_ENDPOINTS = {
     "mlb": "MLB",
     # "nfl": "NFL",
-    # "nhl": "NHL",
+    "nhl": "NHL",
 }
 
 
