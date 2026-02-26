@@ -285,7 +285,7 @@ async def scrape(browser: Browser) -> None:
                     tvg_id, pic = leagues.get_tvg_info(sport, event)
 
                     entry = {
-                        "url": url,
+                        "url": url.split("&t")[0],
                         "logo": logo or pic,
                         "base": iframe,
                         "timestamp": ts,
