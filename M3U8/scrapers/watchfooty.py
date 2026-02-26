@@ -285,7 +285,7 @@ async def scrape(browser: Browser) -> None:
                     tvg_id, pic = leagues.get_tvg_info(sport, event)
 
                     entry = {
-                        "url": url.split("&t")[0],
+                        "url": url,
                         "logo": logo or pic,
                         "base": iframe,
                         "timestamp": ts,
@@ -297,6 +297,8 @@ async def scrape(browser: Browser) -> None:
 
                     if url:
                         valid_count += 1
+                        
+                        entry["url"] = url.split("&t")[0]
 
                         urls[key] = entry
 
