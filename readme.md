@@ -1,13 +1,14 @@
-## Base Log @ 2026-02-25 21:01 UTC
+## Base Log @ 2026-02-26 04:27 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 4
+### ✅ Working Streams: 156<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CW | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117129.ts` |
-| Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129706.ts` |
-| HBO Comedy | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257141.ts` |
-| INSP | HTTP Error (404) | `http://fl12.moveonjoy.com/INSP/index.m3u8` |
+| FDSN Southeast | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/2213.m3u8` |
+| FDSN Southwest | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8` |
+| FDSN Sun | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/104917.m3u8` |
+| FYI TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130105.ts` |
+| Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/258721.ts` |
 ---
 #### Base Channels URL
 ```
