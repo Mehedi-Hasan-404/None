@@ -15,7 +15,7 @@ TAG = "VOLOKIT"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG}-html", exp=28_800)
+HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URL = "http://volokit.xyz"
 
