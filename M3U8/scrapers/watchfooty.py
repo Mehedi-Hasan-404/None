@@ -297,7 +297,7 @@ async def scrape(browser: Browser) -> None:
 
                     if url:
                         valid_count += 1
-                        
+
                         entry["url"] = url.split("&t")[0]
 
                         urls[key] = entry

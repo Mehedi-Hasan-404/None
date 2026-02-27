@@ -14,9 +14,10 @@ TAG = "WEBCAST"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG}-html", exp=86_400)
+HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URLS = {
+    "MLB": "https://mlbwebcast.com",
     # "NFL": "https://nflwebcast.com",
     "NHL": "https://slapstreams.com",
 }
@@ -36,9 +37,7 @@ async def refresh_html_cache(url: str) -> dict[str, dict[str, str | float]]:
 
     soup = HTMLParser(html_data.content)
 
-    title = soup.css_first("title").text(strip=True)
-
-    sport = "NFL" if "NFL" in title else "NHL"
+    sport = next((k for k, v in BASE_URLS.items() if v == url), "Live Event")
 
     date_text = now.strftime("%B %d, %Y")
 
