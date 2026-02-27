@@ -149,7 +149,7 @@ class Leagues:
         league: str,
     ) -> bool:
 
-        pattern = re.compile(r"\s+(?:-|vs\.?|at|@)\s+", re.IGNORECASE)
+        pattern = re.compile(r"\s+(?:-|vs\.?|at|@)\s+", re.I)
 
         if pattern.search(event):
             t1, t2 = re.split(pattern, event)

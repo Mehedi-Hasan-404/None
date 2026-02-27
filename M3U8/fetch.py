@@ -71,7 +71,6 @@ async def main() -> None:
                 asyncio.create_task(streamcenter.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
-                asyncio.create_task(webcast.scrape(hdl_brwsr)),
             ]
 
             httpx_tasks = [
@@ -84,6 +83,7 @@ async def main() -> None:
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(volokit.scrape()),
                 asyncio.create_task(xstreameast.scrape()),
+                asyncio.create_task(webcast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))

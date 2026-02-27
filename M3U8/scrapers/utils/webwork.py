@@ -215,10 +215,7 @@ class Network:
 
         escaped = [re.escape(i) for i in invalids]
 
-        pattern = re.compile(
-            rf"^(?!.*({'|'.join(escaped)})).*\.m3u8",
-            re.IGNORECASE,
-        )
+        pattern = re.compile(rf"^(?!.*({'|'.join(escaped)})).*\.m3u8", re.I)
 
         if pattern.search(req.url):
             captured.append(req.url)
