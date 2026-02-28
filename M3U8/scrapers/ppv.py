@@ -1,3 +1,4 @@
+import re
 from functools import partial
 
 from playwright.async_api import Browser
@@ -14,12 +15,18 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-MIRRORS = [
+API_MIRRORS = [
     "https://api.ppv.to/api/streams",
     "https://api.ppv.cx/api/streams",
     "https://api.ppv.sh/api/streams",
     "https://api.ppv.la/api/streams",
 ]
+
+
+def fix_url(s: str) -> str:
+    pattern = re.compile(r"index\.m3u8$", re.I)
+
+    return pattern.sub(r"tracks-v1a1/mono.ts.m3u8", s)
 
 
 async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
@@ -90,16 +97,16 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    if not (base_url := await network.get_base(MIRRORS)):
+    if not (api_url := await network.get_base(API_MIRRORS)):
         log.warning("No working PPV mirrors")
 
         CACHE_FILE.write(cached_urls)
 
         return
 
-    log.info(f'Scraping from "{base_url}"')
+    log.info(f'Scraping from "{api_url}"')
 
-    events = await get_events(base_url, cached_urls.keys())
+    events = await get_events(api_url, cached_urls.keys())
 
     if events:
         log.info(f"Processing {len(events)} new URL(s)")
@@ -147,6 +154,8 @@ async def scrape(browser: Browser) -> None:
 
                     if url:
                         valid_count += 1
+
+                        entry["url"] = fix_url(url)
 
                         urls[key] = entry
 

@@ -31,9 +31,11 @@ async def process_event(url: str, url_num: int) -> str | None:
 
         return
 
+    pattern = re.compile(r"playlist\.m3u8\?.*$", re.I)
+
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return urls[0]
+    return pattern.sub(r"chunks.m3u8", urls[0])
 
 
 async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
