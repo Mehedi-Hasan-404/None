@@ -1,11 +1,12 @@
-## Base Log @ 2026-02-28 04:05 UTC
+## Base Log @ 2026-02-28 08:50 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Disney XD | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130092.ts` |
+| BET | HTTP Error (404) | `http://212.102.60.231/BET/index.m3u8` |
 | Disney | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257087.ts` |
+| FYI TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130105.ts` |
 | Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/258721.ts` |
 ---
 #### Base Channels URL
