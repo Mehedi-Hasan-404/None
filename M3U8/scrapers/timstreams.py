@@ -10,7 +10,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "TIMSTRM"
+TAG = "TIMSTRMS"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
@@ -58,7 +58,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(hours=-2)
+    start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=30)
 
     for info in api_data:
