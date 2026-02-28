@@ -1,11 +1,12 @@
-## Base Log @ 2026-02-27 22:46 UTC
+## Base Log @ 2026-02-28 04:05 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FYI TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130105.ts` |
-| NBC Sports Bay Area | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/9900.m3u8` |
+| Disney XD | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130092.ts` |
+| Disney | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257087.ts` |
+| Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/258721.ts` |
 ---
 #### Base Channels URL
 ```
