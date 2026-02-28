@@ -17,6 +17,7 @@ from scrapers import (
     roxie,
     shark,
     sport9,
+    streambtw,
     streamcenter,
     streamhub,
     streamsgate,
@@ -81,6 +82,7 @@ async def main() -> None:
                 asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
+                asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(volokit.scrape()),
@@ -114,6 +116,7 @@ async def main() -> None:
         | roxie.urls
         | shark.urls
         | sport9.urls
+        | streambtw.urls
         | streamcenter.urls
         | streamhub.urls
         | streamsgate.urls
