@@ -12,9 +12,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "WEBCAST"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URLS = {
     "MLB": "https://mlbwebcast.com",
@@ -68,89 +66,49 @@ async def process_event(url: str, url_num: int) -> str | None:
     return match[2]
 
 
-async def refresh_html_cache(url: str) -> dict[str, dict[str, str | float]]:
-    events = {}
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+    tasks = [network.request(url, log=log) for url in BASE_URLS.values()]
 
-    if not (html_data := await network.request(url, log=log)):
+    results = await asyncio.gather(*tasks)
+
+    events = []
+
+    if not (
+        soups := [(HTMLParser(html.content), html.url) for html in results if html]
+    ):
         return events
 
-    now = Time.clean(Time.now())
+    for soup, url in soups:
+        sport = next((k for k, v in BASE_URLS.items() if v == url), "Live Event")
 
-    soup = HTMLParser(html_data.content)
+        for row in soup.css("tr.singele_match_date"):
+            if not (vs_node := row.css_first("td.teamvs a")):
+                continue
 
-    sport = next((k for k, v in BASE_URLS.items() if v == url), "Live Event")
+            event_name = vs_node.text(strip=True)
 
-    date_text = now.strftime("%B %d, %Y")
+            for span in vs_node.css("span.mtdate"):
+                date = span.text(strip=True)
 
-    if date_row := soup.css_first("tr.mdatetitle"):
-        if mtdate_span := date_row.css_first("span.mtdate"):
-            date_text = mtdate_span.text(strip=True)
+                event_name = event_name.replace(date, "").strip()
 
-    for row in soup.css("tr.singele_match_date"):
-        if not (time_node := row.css_first("td.matchtime")):
-            continue
+            if not (href := vs_node.attributes.get("href")):
+                continue
 
-        time = time_node.text(strip=True)
+            event = fix_event(event_name)
 
-        if not (vs_node := row.css_first("td.teamvs a")):
-            continue
+            if f"[{sport}] {event} ({TAG})" in cached_keys:
+                continue
 
-        event_name = vs_node.text(strip=True)
-
-        for span in vs_node.css("span.mtdate"):
-            date = span.text(strip=True)
-
-            event_name = event_name.replace(date, "").strip()
-
-        if not (href := vs_node.attributes.get("href")):
-            continue
-
-        event_dt = Time.from_str(f"{date_text} {time} PM", timezone="EST")
-
-        event = fix_event(event_name)
-
-        key = f"[{sport}] {event} ({TAG})"
-
-        events[key] = {
-            "sport": sport,
-            "event": event,
-            "link": href,
-            "event_ts": event_dt.timestamp(),
-            "timestamp": now.timestamp(),
-        }
+            events.append(
+                {
+                    "sport": sport,
+                    "event": event,
+                    "link": href,
+                }
+            )
 
     return events
-
-
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (events := HTML_CACHE.load()):
-        log.info("Refreshing HTML cache")
-
-        tasks = [refresh_html_cache(url) for url in BASE_URLS.values()]
-
-        results = await asyncio.gather(*tasks)
-
-        events = {k: v for data in results for k, v in data.items()}
-
-        HTML_CACHE.write(events)
-
-    live = []
-
-    start_ts = now.delta(minutes=-30).timestamp()
-    end_ts = now.delta(minutes=30).timestamp()
-
-    for k, v in events.items():
-        if k in cached_keys:
-            continue
-
-        if not start_ts <= v["event_ts"] <= end_ts:
-            continue
-
-        live.append(v)
-
-    return live
 
 
 async def scrape() -> None:
@@ -171,6 +129,8 @@ async def scrape() -> None:
     if events:
         log.info(f"Processing {len(events)} new URL(s)")
 
+        now = Time.clean(Time.now())
+
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
@@ -185,11 +145,7 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event, ts = (
-                ev["sport"],
-                ev["event"],
-                ev["event_ts"],
-            )
+            sport, event = ev["sport"], ev["event"]
 
             key = f"[{sport}] {event} ({TAG})"
 
@@ -199,7 +155,7 @@ async def scrape() -> None:
                 "url": url,
                 "logo": logo,
                 "base": BASE_URLS[sport],
-                "timestamp": ts,
+                "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
             }

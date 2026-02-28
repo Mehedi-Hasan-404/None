@@ -81,10 +81,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (soups := [HTMLParser(html.content) for html in results if html]):
         return events
 
+    sport = "Live Event"
+
     for soup in soups:
-
-        sport = "Live Event"
-
         if sport_header := soup.css_first("h1.text-3xl"):
             header = sport_header.text(strip=True)
 
