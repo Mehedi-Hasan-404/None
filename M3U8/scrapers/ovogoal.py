@@ -11,9 +11,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "OVOGOAL"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://ovogoal.plus"
 
@@ -48,25 +46,20 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
     return match[3], iframe_src
 
 
-async def refresh_html_cache() -> dict[str, dict[str, str | float]]:
-    log.info("Refreshing HTML cache")
-
-    now = Time.clean(Time.now())
-
-    events = {}
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+    events = []
 
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
     soup = HTMLParser(html_data.content)
 
+    sport = "Live Event"
+
     for card in soup.css(".stream-row"):
         if (not (watch_btn_elem := card.css_first(".watch-btn"))) or (
             not (onclick := watch_btn_elem.attributes.get("onclick"))
         ):
-            continue
-
-        if not (event_time_elem := card.css_first(".stream-time")):
             continue
 
         if not (event_name_elem := card.css_first(".stream-info")):
@@ -76,48 +69,18 @@ async def refresh_html_cache() -> dict[str, dict[str, str | float]]:
 
         event_name = event_name_elem.text(strip=True)
 
-        event_time = event_time_elem.text(strip=True)
+        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+            continue
 
-        event_dt = Time.from_str(f"{now.date()} {event_time}", timezone="CET")
-
-        sport = "Live Event"
-
-        key = f"[{sport}] {event_name} ({TAG})"
-
-        events[key] = {
-            "sport": sport,
-            "event": event_name,
-            "link": href,
-            "event_ts": event_dt.timestamp(),
-            "timestamp": now.timestamp(),
-        }
+        events.append(
+            {
+                "sport": sport,
+                "event": event_name,
+                "link": href,
+            }
+        )
 
     return events
-
-
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (events := HTML_CACHE.load()):
-        events = await refresh_html_cache()
-
-        HTML_CACHE.write(events)
-
-    live = []
-
-    start_ts = now.delta(minutes=-30).timestamp()
-    end_ts = now.delta(minutes=30).timestamp()
-
-    for k, v in events.items():
-        if k in cached_keys:
-            continue
-
-        if not start_ts <= v["event_ts"] <= end_ts:
-            continue
-
-        live.append(v)
-
-    return live
 
 
 async def scrape() -> None:
@@ -138,6 +101,8 @@ async def scrape() -> None:
     if events:
         log.info(f"Processing {len(events)} new URL(s)")
 
+        now = Time.clean(Time.now())
+
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
@@ -152,11 +117,7 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event, ts = (
-                ev["sport"],
-                ev["event"],
-                ev["event_ts"],
-            )
+            sport, event = ev["sport"], ev["event"]
 
             key = f"[{sport}] {event} ({TAG})"
 
@@ -166,7 +127,7 @@ async def scrape() -> None:
                 "url": url,
                 "logo": logo,
                 "base": iframe,
-                "timestamp": ts,
+                "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
             }

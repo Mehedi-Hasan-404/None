@@ -61,14 +61,14 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     feed = feedparser.parse(html_data.content)
 
+    sport = "Live Event"
+
     for entry in feed.entries:
         if not (link := entry.get("link")):
             continue
 
         if not (title := entry.get("title")):
             continue
-
-        sport = "Live Event"
 
         title = title.replace(" v ", " vs ")
 
