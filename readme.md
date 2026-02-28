@@ -1,10 +1,13 @@
-## Base Log @ 2026-02-28 14:45 UTC
+## Base Log @ 2026-02-28 20:46 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| A&E TV | HTTP Error (404) | `http://41.205.93.154/AandE/index.m3u8` |
 | Disney | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257087.ts` |
+| FYI TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130105.ts` |
+| TLC | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129765.ts` |
 ---
 #### Base Channels URL
 ```
