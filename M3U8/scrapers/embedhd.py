@@ -87,9 +87,7 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(cached_urls.keys())
-
-    if events:
+    if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
         async with network.event_context(browser) as context:
@@ -132,8 +130,7 @@ async def scrape(browser: Browser) -> None:
 
                         urls[key] = cached_urls[key] = entry
 
-    if new_count := len(cached_urls) - cached_count:
-        log.info(f"Collected and cached {new_count} new event(s)")
+        log.info(f"Collected and cached {len(cached_urls) - cached_count} new event(s)")
 
     else:
         log.info("No new events found")

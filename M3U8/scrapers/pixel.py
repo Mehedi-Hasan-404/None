@@ -97,6 +97,6 @@ async def scrape(browser: Browser) -> None:
 
     urls.update(events or {})
 
-    CACHE_FILE.write(urls)
-
     log.info(f"Collected and cached {len(urls)} new event(s)")
+
+    CACHE_FILE.write(urls)

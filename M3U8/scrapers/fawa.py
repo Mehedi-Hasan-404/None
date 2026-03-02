@@ -99,9 +99,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events(cached_hrefs)
-
-    if events:
+    if events := await get_events(cached_hrefs):
         log.info(f"Processing {len(events)} new URL(s)")
 
         now = Time.clean(Time.now())
@@ -143,8 +141,7 @@ async def scrape() -> None:
 
                 urls[key] = entry
 
-    if new_count := valid_count - cached_count:
-        log.info(f"Collected and cached {new_count} new event(s)")
+        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
     else:
         log.info("No new events found")

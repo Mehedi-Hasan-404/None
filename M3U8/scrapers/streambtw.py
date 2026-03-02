@@ -103,9 +103,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    events = await get_events()
-
-    if events:
+    if events := await get_events():
         log.info(f"Processing {len(events)} new URL(s)")
 
         now = Time.clean(Time.now())
