@@ -115,8 +115,13 @@ class Network:
 
                 return
 
-    @staticmethod
     @cache
+    @staticmethod
+    def stealth_js() -> str:
+        return (Path(__file__).parent / "stealth.js").read_text(encoding="utf-8")
+
+    @cache
+    @staticmethod
     def blocked_domains() -> list[str]:
         return (
             (Path(__file__).parent / "easylist.txt")
@@ -172,7 +177,7 @@ class Network:
                     ),
                 )
 
-                await context.add_init_script(path=Path(__file__).parent / "stealth.js")
+                await context.add_init_script(script=Network.stealth_js())
 
                 await context.route("**/*", Network._adblock)
 
