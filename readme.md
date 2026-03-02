@@ -1,12 +1,16 @@
-## Base Log @ 2026-03-02 15:06 UTC
+## Base Log @ 2026-03-02 21:00 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 154<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Disney | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257087.ts` |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1790/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| AXS TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129830.ts` |
+| Cozi TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129858.ts` |
 | Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/258721.ts` |
-| HBO 2 | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO2/index.m3u8` |
+| Hallmark Mystery | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129888.ts` |
+| ION TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129903.ts` |
+| Oxygen | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/15912.ts` |
 ---
 #### Base Channels URL
 ```
