@@ -1,7 +1,12 @@
-## Base Log @ 2026-03-02 04:25 UTC
+## Base Log @ 2026-03-02 09:06 UTC
 
-### ✅ Working Streams: 161<br>❌ Dead Streams: 0
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| CMT | HTTP Error (404) | `http://23.237.104.106:8080/USA_CMT/index.m3u8` |
+| Golf Channel | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/258721.ts` |
+| NBC Sports California | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/136474.ts` |
 ---
 #### Base Channels URL
 ```
