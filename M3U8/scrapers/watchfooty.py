@@ -89,11 +89,15 @@ async def process_event(
     page.on("request", handler)
 
     try:
-        await page.goto(
+        resp = await page.goto(
             url,
             wait_until="domcontentloaded",
             timeout=8_000,
         )
+
+        if resp.status != 200:
+            log.warning(f"URL {url_num}) status code: {resp.status}")
+            return
 
         await page.wait_for_timeout(2_000)
 

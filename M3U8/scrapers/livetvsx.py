@@ -1,4 +1,5 @@
 import asyncio
+import re
 from functools import partial
 
 import feedparser
@@ -24,7 +25,20 @@ VALID_SPORTS = [
     "Basketball",
     "Football",
     "Ice Hockey",
+    "Wrestling",
 ]
+
+
+def fix_url(s: str) -> str | None:
+    pattern = re.compile(r"eventinfo\/(\d*)", re.I)
+
+    if not (match := pattern.search(s)):
+        return
+
+    elif not (event_id := match[1]).isalnum():
+        return
+
+    return f"https://cdn.livetv872.me/cache/links/en.{event_id}.html"
 
 
 async def process_event(
@@ -43,43 +57,40 @@ async def process_event(
         got_one=got_one,
     )
 
+    event_id_pattern = re.compile(r"&c=(\d*)", re.I)
+
     page.on("request", handler)
 
     try:
-        await page.goto(
+        resp = await page.goto(
             url,
             wait_until="domcontentloaded",
             timeout=10_000,
         )
 
-        await page.wait_for_timeout(1_500)
+        if resp.status != 200:
+            log.warning(f"URL {url_num}) status code: {resp.status}")
+            return
 
-        buttons = await page.query_selector_all(".lnktbj a[href*='webplayer']")
+        try:
+            event_a = page.locator('a[title*="Aliez"]').first
 
-        labels = await page.eval_on_selector_all(
-            ".lnktyt span",
-            "elements => elements.map(el => el.textContent.trim().toLowerCase())",
-        )
+            href = await event_a.get_attribute("href", timeout=1_250)
 
-        for btn, label in zip(buttons, labels):
-            if label in ["web", "youtube"]:
-                continue
-
-            if not (href := await btn.get_attribute("href")):
-                continue
-
-            break
-
-        else:
+        except TimeoutError:
             log.warning(f"URL {url_num}) No valid sources found.")
             return
 
-        href = href if href.startswith("http") else f"https:{href}"
+        if match := event_id_pattern.search(href):
+            event_id = match[1]
 
-        href.replace("livetv.sx", "livetv873.me")
+            event_url = f"https://emb.apl392.me/player/live.php?id={event_id}"
+
+        else:
+            event_url = href if href.startswith("http") else f"https:{href}"
 
         await page.goto(
-            href,
+            event_url,
             wait_until="domcontentloaded",
             timeout=5_000,
         )
@@ -130,7 +141,7 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
         if not (date := entry.get("published")):
             continue
 
-        if not (link := entry.get("link")):
+        if (not (link := entry.get("link"))) or (not (fixed_link := fix_url(link))):
             continue
 
         if not (title := entry.get("title")):
@@ -151,7 +162,7 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
             "sport": sport,
             "league": league,
             "event": title,
-            "link": link.replace("livetv.sx", "livetv873.me"),
+            "link": fixed_link,
             "event_ts": event_dt.timestamp(),
             "timestamp": now_ts,
         }

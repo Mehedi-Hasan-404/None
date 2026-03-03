@@ -19,11 +19,16 @@ BASE_URL = "https://pixelsport.tv"
 
 async def get_api_data(page: Page) -> dict[str, list[dict, str, str]]:
     try:
-        await page.goto(
+        resp = await page.goto(
             url := urljoin(BASE_URL, "backend/livetv/events"),
             wait_until="domcontentloaded",
             timeout=6_000,
         )
+
+        if resp.status != 200:
+            log.warning(f"{url} status code: {resp.status}")
+
+            return {}
 
         raw_json = await page.locator("pre").inner_text(timeout=5_000)
     except Exception as e:
