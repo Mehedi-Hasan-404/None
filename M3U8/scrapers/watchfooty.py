@@ -183,7 +183,7 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
 
     pattern = re.compile(r"\-+|\(")
 
-    start_dt = now.delta(hours=-1)
+    start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=5)
 
     for event in api_data:
