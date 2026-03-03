@@ -5,7 +5,7 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-from playwright.async_api import Browser, Page, TimeoutError
+from playwright.async_api import Browser, Page, Response, TimeoutError
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -66,15 +66,24 @@ async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
     return data
 
 
+def sift_xhr(resp: Response, match_id: int) -> bool:
+    resp_url = resp.url
+
+    return (
+        f"/en/stream/{match_id}/" in resp_url
+        and "_rsc=" not in resp_url
+        and resp.status == 200
+    )
+
+
 async def process_event(
     url: str,
+    match_id: int,
     url_num: int,
     page: Page,
 ) -> tuple[str | None, str | None]:
 
     nones = None, None
-
-    pattern = re.compile(r"\((\d+)\)")
 
     captured: list[str] = []
 
@@ -86,46 +95,30 @@ async def process_event(
         got_one=got_one,
     )
 
+    strm_handler = partial(sift_xhr, match_id=match_id)
+
     page.on("request", handler)
 
     try:
-        resp = await page.goto(
-            url,
-            wait_until="domcontentloaded",
-            timeout=8_000,
-        )
-
-        if resp.status != 200:
-            log.warning(f"URL {url_num}) Status Code: {resp.status}")
-            return
-
-        await page.wait_for_timeout(2_000)
-
         try:
-            header = await page.wait_for_selector("text=/Stream Links/i", timeout=4_000)
+            async with page.expect_response(strm_handler, timeout=2_500) as strm_resp:
+                resp = await page.goto(
+                    url,
+                    wait_until="domcontentloaded",
+                    timeout=6_000,
+                )
 
-            text = await header.inner_text()
+                if not resp or resp.status != 200:
+                    log.warning(
+                        f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
+                    )
+
+                    return nones
+
+                response = await strm_resp.value
+
+                stream_url = response.url
         except TimeoutError:
-            log.warning(f"URL {url_num}) Can't find stream links header.")
-
-            return nones
-
-        if not (match := pattern.search(text)) or int(match[1]) == 0:
-            log.warning(f"URL {url_num}) No available stream links.")
-
-            return nones
-
-        try:
-            first_available = await page.wait_for_selector(
-                'a[href*="/stream/"]',
-                timeout=3_000,
-            )
-        except TimeoutError:
-            log.warning(f"URL {url_num}) No available stream links.")
-
-            return nones
-
-        if not (href := await first_available.get_attribute("href")):
             log.warning(f"URL {url_num}) No available stream links.")
 
             return nones
@@ -133,7 +126,7 @@ async def process_event(
         embed = re.sub(
             pattern=r"^.*\/stream",
             repl="https://spiderembed.top/embed",
-            string=href,
+            string=stream_url,
         )
 
         await page.goto(
@@ -190,7 +183,7 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
 
     pattern = re.compile(r"\-+|\(")
 
-    start_dt = now.delta(minutes=-30)
+    start_dt = now.delta(hours=-1)
     end_dt = now.delta(minutes=5)
 
     for event in api_data:
@@ -226,6 +219,7 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
                 "sport": sport,
                 "event": name,
                 "link": urljoin(base_url, f"stream/{match_id}"),
+                "match-id": match_id,
                 "logo": logo,
                 "timestamp": event_dt.timestamp(),
             }
@@ -263,6 +257,7 @@ async def scrape(browser: Browser) -> None:
                     handler = partial(
                         process_event,
                         url=(link := ev["link"]),
+                        match_id=ev["match-id"],
                         url_num=i,
                         page=page,
                     )

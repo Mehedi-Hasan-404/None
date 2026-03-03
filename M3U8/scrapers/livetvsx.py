@@ -68,8 +68,10 @@ async def process_event(
             timeout=10_000,
         )
 
-        if resp.status != 200:
-            log.warning(f"URL {url_num}) Status Code: {resp.status}")
+        if not resp or resp.status != 200:
+            log.warning(
+                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
+            )
             return
 
         try:
@@ -83,7 +85,9 @@ async def process_event(
         if (match := event_id_pattern.search(href)) and (
             event_id := match[1]
         ).isalnum():
+
             event_url = f"https://aliez.tv/player/live.php?id={event_id}"
+
         else:
             event_url = href if href.startswith("http") else f"https:{href}"
 

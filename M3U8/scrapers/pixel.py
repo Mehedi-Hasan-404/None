@@ -25,8 +25,8 @@ async def get_api_data(page: Page) -> dict[str, list[dict, str, str]]:
             timeout=6_000,
         )
 
-        if resp.status != 200:
-            log.warning(f"{url} Status Code: {resp.status}")
+        if not resp or resp.status != 200:
+            log.warning(f"{url} Status Code: {resp.status if resp else 'None'}")
 
             return {}
 

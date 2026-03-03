@@ -99,8 +99,11 @@ async def process_event(
             timeout=6_000,
         )
 
-        if resp.status != 200:
-            log.warning(f"URL {url_num}) Status Code: {resp.status}")
+        if not resp or resp.status != 200:
+            log.warning(
+                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
+            )
+
             return
 
         try:
