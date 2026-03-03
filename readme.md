@@ -1,26 +1,11 @@
-## Base Log @ 2026-03-03 20:55 UTC
+## Base Log @ 2026-03-03 21:57 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 17
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| C-SPAN | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/136589.m3u8` |
-| Disney | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257087.ts` |
-| FDSN Detroit | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/20930.m3u8` |
-| FDSN Florida | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/46794.m3u8` |
-| FDSN Midwest | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/66795.m3u8` |
-| FDSN North | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/58827.m3u8` |
-| FDSN Ohio | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/17752.m3u8` |
-| FDSN Oklahoma | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/20934.m3u8` |
-| FDSN SoCal | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/221151.m3u8` |
-| FDSN Southeast | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/2213.m3u8` |
-| FDSN Southwest | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/21843.m3u8` |
-| FDSN Sun | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/104917.m3u8` |
-| FDSN West | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/20932.m3u8` |
-| FDSN Wisconsin | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/78599.m3u8` |
-| HBO Family | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/17772.m3u8` |
-| NBC Sports Bay Area | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/9900.m3u8` |
-| NBC Sports Boston | HTTP Error (404) | `http://mytvstream.net:8080/live/bn80NG/909467/20939.m3u8` |
+| Bloomberg TV | HTTP Error (404) | `http://41.205.93.154/BLOOMBERG/index.m3u8` |
+| TLC | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129765.ts` |
 ---
 #### Base Channels URL
 ```
