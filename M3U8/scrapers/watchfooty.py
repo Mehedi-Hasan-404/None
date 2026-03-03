@@ -96,7 +96,7 @@ async def process_event(
         )
 
         if resp.status != 200:
-            log.warning(f"URL {url_num}) status code: {resp.status}")
+            log.warning(f"URL {url_num}) Status Code: {resp.status}")
             return
 
         await page.wait_for_timeout(2_000)

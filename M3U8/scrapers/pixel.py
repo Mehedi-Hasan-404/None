@@ -26,7 +26,7 @@ async def get_api_data(page: Page) -> dict[str, list[dict, str, str]]:
         )
 
         if resp.status != 200:
-            log.warning(f"{url} status code: {resp.status}")
+            log.warning(f"{url} Status Code: {resp.status}")
 
             return {}
 

@@ -257,7 +257,7 @@ class Network:
             )
 
             if resp.status != 200:
-                log.warning(f"URL {url_num}) status code: {resp.status}")
+                log.warning(f"URL {url_num}) Status Code: {resp.status}")
 
                 return
 

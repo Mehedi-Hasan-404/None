@@ -3,7 +3,7 @@ import re
 from functools import partial
 
 import feedparser
-from playwright.async_api import Browser, Page
+from playwright.async_api import Browser, Page, TimeoutError
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -47,6 +47,8 @@ async def process_event(
     page: Page,
 ) -> str | None:
 
+    event_id_pattern = re.compile(r"&c=(\d*)", re.I)
+
     captured: list[str] = []
 
     got_one = asyncio.Event()
@@ -56,8 +58,6 @@ async def process_event(
         captured=captured,
         got_one=got_one,
     )
-
-    event_id_pattern = re.compile(r"&c=(\d*)", re.I)
 
     page.on("request", handler)
 
@@ -69,23 +69,21 @@ async def process_event(
         )
 
         if resp.status != 200:
-            log.warning(f"URL {url_num}) status code: {resp.status}")
+            log.warning(f"URL {url_num}) Status Code: {resp.status}")
             return
 
         try:
             event_a = page.locator('a[title*="Aliez"]').first
 
             href = await event_a.get_attribute("href", timeout=1_250)
-
         except TimeoutError:
             log.warning(f"URL {url_num}) No valid sources found.")
             return
 
-        if match := event_id_pattern.search(href):
-            event_id = match[1]
-
+        if (match := event_id_pattern.search(href)) and (
+            event_id := match[1]
+        ).isalnum():
             event_url = f"https://emb.apl392.me/player/live.php?id={event_id}"
-
         else:
             event_url = href if href.startswith("http") else f"https:{href}"
 
