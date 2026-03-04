@@ -46,8 +46,6 @@ def get_event(t1: str, t2: str) -> str:
 
 
 async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
-    log.info("Refreshing API cache")
-
     tasks = [
         network.request(
             urljoin(BASE_URL, f"data/{sport}.json"),
@@ -73,6 +71,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
+        log.info("Refreshing API cache")
+
         api_data = await refresh_api_cache(now.timestamp())
 
         API_FILE.write(api_data)

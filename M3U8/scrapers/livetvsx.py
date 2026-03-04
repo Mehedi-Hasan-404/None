@@ -47,8 +47,6 @@ async def process_event(
     page: Page,
 ) -> str | None:
 
-    event_id_pattern = re.compile(r"&c=(\d*)", re.I)
-
     captured: list[str] = []
 
     got_one = asyncio.Event()
@@ -82,14 +80,7 @@ async def process_event(
             log.warning(f"URL {url_num}) No valid sources found.")
             return
 
-        if (match := event_id_pattern.search(href)) and (
-            event_id := match[1]
-        ).isalnum():
-
-            event_url = f"https://aliez.tv/player/live.php?id={event_id}"
-
-        else:
-            event_url = href if href.startswith("http") else f"https:{href}"
+        event_url = href if href.startswith("http") else f"https:{href}"
 
         await page.goto(
             event_url,

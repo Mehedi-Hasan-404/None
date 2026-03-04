@@ -27,7 +27,7 @@ def fix_event(s: str) -> str:
 
 async def process_event(url: str, url_num: int) -> str | None:
     if not (event_data := await network.request(url, log=log)):
-        log.info(f"URL {url_num}) Failed to load url.")
+        log.warning(f"URL {url_num}) Failed to load url.")
 
         return
 
@@ -50,7 +50,7 @@ async def process_event(url: str, url_num: int) -> str | None:
             log=log,
         )
     ):
-        log.info(f"URL {url_num}) Failed to load iframe source.")
+        log.warning(f"URL {url_num}) Failed to load iframe source.")
 
         return
 

@@ -18,7 +18,7 @@ BASE_URL = "https://thetvapp.to"
 
 async def process_event(url: str, url_num: int) -> str | None:
     if not (html_data := await network.request(url, log=log)):
-        log.info(f"URL {url_num}) Failed to load url.")
+        log.warning(f"URL {url_num}) Failed to load url.")
 
         return
 

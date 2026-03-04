@@ -20,7 +20,7 @@ BASE_URL = "https://pawastreams.net/feed/"
 
 async def process_event(url: str, url_num: int) -> str | None:
     if not (event_data := await network.request(url, log=log)):
-        log.info(f"URL {url_num}) Failed to load url.")
+        log.warning(f"URL {url_num}) Failed to load url.")
 
         return
 
@@ -37,7 +37,7 @@ async def process_event(url: str, url_num: int) -> str | None:
         return
 
     if not (iframe_src_data := await network.request(iframe_src, log=log)):
-        log.info(f"URL {url_num}) Failed to load iframe source.")
+        log.warning(f"URL {url_num}) Failed to load iframe source.")
 
         return
 

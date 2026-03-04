@@ -42,8 +42,6 @@ VALID_SPORTS = [
 
 
 async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
-    log.info("Refreshing API cache")
-
     tasks = [
         network.request(
             urljoin(API_URL, "api/v1/matches/all"),
@@ -175,6 +173,8 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
+        log.info("Refreshing API cache")
+
         api_data = await refresh_api_cache(now)
 
         API_FILE.write(api_data)

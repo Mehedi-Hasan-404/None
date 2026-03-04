@@ -20,14 +20,14 @@ BASE_URL = "https://sharkstreams.net"
 
 async def process_event(url: str, url_num: int) -> str | None:
     if not (r := await network.request(url, log=log)):
-        log.info(f"URL {url_num}) Failed to load url.")
+        log.warning(f"URL {url_num}) Failed to load url.")
 
         return
 
     data: dict[str, list[str]] = r.json()
 
     if not (urls := data.get("urls")):
-        log.info(f"URL {url_num}) No M3U8 found")
+        log.warning(f"URL {url_num}) No M3U8 found")
 
         return
 
@@ -39,8 +39,6 @@ async def process_event(url: str, url_num: int) -> str | None:
 
 
 async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
-    log.info("Refreshing HTML cache")
-
     events = {}
 
     if not (html_data := await network.request(BASE_URL, log=log)):
@@ -92,6 +90,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (events := HTML_CACHE.load()):
+        log.info("Refreshing HTML cache")
+
         events = await refresh_html_cache(now.timestamp())
 
         HTML_CACHE.write(events)
