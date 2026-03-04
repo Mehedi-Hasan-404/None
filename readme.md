@@ -1,7 +1,11 @@
-## Base Log @ 2026-03-04 04:19 UTC
+## Base Log @ 2026-03-04 09:02 UTC
 
-### ✅ Working Streams: 161<br>❌ Dead Streams: 0
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/141447.ts` |
+| Space City Home Network | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/229934.ts` |
 ---
 #### Base Channels URL
 ```
