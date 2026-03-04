@@ -17,10 +17,14 @@ CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "http://volokit.xyz"
 
-SPORT_ENDPOINTS = {
-    "mlb": "MLB",
-    # "nfl": "NFL",
-    "nhl": "NHL",
+SPORT_URLS = {
+    sport: urljoin(BASE_URL, f"sport/{sport.lower()}/")
+    for sport in [
+        "MLB",
+        "NHL",
+        # "NFL",
+        "WBC",
+    ]
 }
 
 
@@ -70,11 +74,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    sport_urls = {
-        sport.upper(): urljoin(BASE_URL, f"sport/{sport}/") for sport in SPORT_ENDPOINTS
-    }
-
-    tasks = [network.request(url, log=log) for url in sport_urls.values()]
+    tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
     results = await asyncio.gather(*tasks)
 
@@ -95,7 +95,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
             name = fix_event(name_node.text(strip=True))
 
-            sport = next((k for k, v in sport_urls.items() if v == url), "Live Event")
+            sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
 
             if f"[{sport}] {name} ({TAG})" in cached_keys:
                 continue

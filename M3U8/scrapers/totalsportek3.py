@@ -11,7 +11,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "TOTALSPRTK"
+TAG = "TOTALSPRTK3"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
@@ -33,29 +33,29 @@ async def process_event(url: str, url_num: int) -> str | None:
     soup_1 = HTMLParser(event_data.content)
 
     if not (iframe_1 := soup_1.css_first("iframe")):
-        log.warning(f"URL {url_num}) No iframe element found.")
+        log.warning(f"URL {url_num}) No iframe element found. (IFR1)")
 
         return
 
     if not (iframe_1_src := iframe_1.attributes.get("src")):
-        log.warning(f"URL {url_num}) No iframe source found.")
+        log.warning(f"URL {url_num}) No iframe source found. (IFR1)")
 
         return
 
     if not (iframe_1_src_data := await network.request(iframe_1_src, log=log)):
-        log.warning(f"URL {url_num}) Failed to load iframe source.")
+        log.warning(f"URL {url_num}) Failed to load iframe source. (IFR1)")
 
         return
 
     soup_2 = HTMLParser(iframe_1_src_data.content)
 
     if not (iframe_2 := soup_2.css_first("iframe")):
-        log.warning(f"URL {url_num}) No iframe element found.")
+        log.warning(f"URL {url_num}) No iframe element found. (IFR2)")
 
         return
 
     if not (iframe_2_src := iframe_2.attributes.get("src")):
-        log.warning(f"URL {url_num}) No iframe source found.")
+        log.warning(f"URL {url_num}) No iframe source found. (IFR2)")
 
         return
 
@@ -66,14 +66,14 @@ async def process_event(url: str, url_num: int) -> str | None:
             headers={"Referer": iframe_1_src},
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load iframe source.")
+        log.warning(f"URL {url_num}) Failed to load iframe source. (IFR2)")
 
         return
 
     valid_m3u8 = re.compile(r'currentStreamUrl\s+=\s+"([^"]*)"', re.I)
 
     if not (match := valid_m3u8.search(iframe_2_src_data.text)):
-        log.warning(f"URL {url_num}) No Clappr source found.")
+        log.warning(f"URL {url_num}) No Clappr source found. (IFR2)")
 
         return
 

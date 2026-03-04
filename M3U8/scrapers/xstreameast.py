@@ -17,14 +17,17 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 BASE_URL = "https://xstreameast.com"
 
-SPORT_ENDPOINTS = [
-    # "mlb",
-    "mma",
-    "nba",
-    # "nfl",
-    # "nhl",
-    "soccer",
-    "wwe",
+SPORT_URLS = [
+    urljoin(BASE_URL, f"categories/{sport}/")
+    for sport in [
+        # "mlb",
+        "mma",
+        "nba",
+        # "nfl",
+        # "nhl",
+        "soccer",
+        "wwe",
+    ]
 ]
 
 
@@ -66,13 +69,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    tasks = [
-        network.request(
-            urljoin(BASE_URL, f"categories/{sport}/"),
-            log=log,
-        )
-        for sport in SPORT_ENDPOINTS
-    ]
+    tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
     results = await asyncio.gather(*tasks)
 

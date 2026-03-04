@@ -20,16 +20,19 @@ API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 BASE_URL = "https://streamingon.org"
 
-SPORT_ENDPOINTS = [
-    "boxing",
-    # "cfb",
-    "f1",
-    "mlb",
-    "nba",
-    # "nfl",
-    "nhl",
-    "soccer",
-    "ufc",
+SPORT_URLS = [
+    urljoin(BASE_URL, f"data/{sport}.json")
+    for sport in [
+        "boxing",
+        # "cfb",
+        "f1",
+        "mlb",
+        "nba",
+        # "nfl",
+        "nhl",
+        "soccer",
+        "ufc",
+    ]
 ]
 
 
@@ -46,13 +49,7 @@ def get_event(t1: str, t2: str) -> str:
 
 
 async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
-    tasks = [
-        network.request(
-            urljoin(BASE_URL, f"data/{sport}.json"),
-            log=log,
-        )
-        for sport in SPORT_ENDPOINTS
-    ]
+    tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
     results = await asyncio.gather(*tasks)
 

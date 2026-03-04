@@ -22,7 +22,8 @@ from scrapers import (
     streamhub,
     streamsgate,
     timstreams,
-    totalsportek,
+    totalsportek1,
+    totalsportek3,
     tvapp,
     volokit,
     watchfooty,
@@ -80,10 +81,11 @@ async def main() -> None:
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
-                # asyncio.create_task(pawa.scrape()),
+                asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streambtw.scrape()),
-                asyncio.create_task(totalsportek.scrape()),
+                asyncio.create_task(totalsportek1.scrape()),
+                asyncio.create_task(totalsportek3.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(volokit.scrape()),
                 # asyncio.create_task(xstreameast.scrape()),
@@ -121,7 +123,8 @@ async def main() -> None:
         | streamhub.urls
         | streamsgate.urls
         | timstreams.urls
-        | totalsportek.urls
+        | totalsportek1.urls
+        | totalsportek3.urls
         | tvapp.urls
         | volokit.urls
         | watchfooty.urls

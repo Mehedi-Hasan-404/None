@@ -19,16 +19,19 @@ HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URL = "https://livesports4u.net"
 
-CATEGORIES = {
-    # "American Football": "sport_68c02a4465113",
-    "Baseball": "sport_68c02a446582f",
-    "Basketball": "sport_68c02a4466011",
-    "Hockey": "sport_68c02a4466f56",
-    "MMA": "sport_68c02a44674e9",
-    "Racing": "sport_68c02a4467a48",
-    "Soccer": "sport_68c02a4464a38",
-    "Tennis": "sport_68c02a4468cf7",
-}
+SPORT_ENDPOINTS = [
+    f"sport_{sport_id}"
+    for sport_id in [
+        # "68c02a4465113",  # American Football
+        "68c02a446582f",  # Baseball
+        "68c02a4466011",  # Basketball
+        "68c02a4466f56",  # Hockey
+        "68c02a44674e9",  # MMA
+        "68c02a4467a48",  # Racing
+        "68c02a4464a38",  # Soccer
+        "68c02a4468cf7",  # Tennis
+    ]
+]
 
 
 async def refresh_html_cache(
@@ -104,7 +107,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 now.timestamp(),
             )
             for date in [now.date(), now.delta(days=1).date()]
-            for sport_id in CATEGORIES.values()
+            for sport_id in SPORT_ENDPOINTS.values()
         ]
 
         results = await asyncio.gather(*tasks)

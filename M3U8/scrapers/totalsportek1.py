@@ -1,8 +1,7 @@
-import base64
 import re
 from functools import partial
+from urllib.parse import urljoin, urlparse
 
-import feedparser
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -11,11 +10,17 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "PAWA"
+TAG = "TOTALSPRTK1"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
-BASE_URL = "https://pawastreams.net/feed/"
+BASE_URL = "https://live.totalsportekarmy.com"
+
+
+def fix_txt(s: str) -> str:
+    s = " ".join(s.split())
+
+    return s.upper() if s.islower() else s
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -24,35 +29,33 @@ async def process_event(url: str, url_num: int) -> str | None:
 
         return
 
-    soup = HTMLParser(event_data.content)
+    soup_1 = HTMLParser(event_data.content)
 
-    if not (iframe := soup.css_first("iframe")):
+    if not (iframe := soup_1.css_first("iframe")):
         log.warning(f"URL {url_num}) No iframe element found.")
 
         return
 
-    if not (iframe_src := iframe.attributes.get("src")):
+    if not (iframe_url := iframe.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe source found.")
 
         return
 
-    if not (iframe_src_data := await network.request(iframe_src, log=log)):
+    if not (iframe_src := await network.request(iframe_url, log=log)):
         log.warning(f"URL {url_num}) Failed to load iframe source.")
 
         return
 
-    pattern = re.compile(r"source:\s*window\.atob\(\s*'([^']+)'\s*\)", re.I)
+    valid_m3u8 = re.compile(r'const\s+hexEncoded\s+=\s+"([^"]*)"', re.I)
 
-    if not (match := pattern.search(iframe_src_data.text)):
+    if not (match := valid_m3u8.search(iframe_src.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
 
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    m3u = base64.b64decode(match[1]).decode("utf-8")
-
-    return m3u.split("&remote")[0]
+    return bytes.fromhex(match[1]).decode("utf-8")
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
@@ -61,27 +64,44 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
-    feed = feedparser.parse(html_data.content)
+    soup = HTMLParser(html_data.content)
 
     sport = "Live Event"
 
-    for entry in feed.entries:
-        if not (link := entry.get("link")):
+    for node in soup.css("a"):
+        if not node.attributes.get("class"):
             continue
 
-        if not (title := entry.get("title")):
+        if (parent := node.parent) and "my-1" in parent.attributes.get("class", ""):
+            if span := node.css_first("span"):
+                sport = span.text(strip=True)
+
+        sport = fix_txt(sport)
+
+        if not (teams := [t.text(strip=True) for t in node.css(".col-7 .col-12")]):
             continue
 
-        title = title.replace(" v ", " vs ")
+        if not (href := node.attributes.get("href")):
+            continue
 
-        if f"[{sport}] {title} ({TAG})" in cached_keys:
+        href = urlparse(href).path if href.startswith("http") else href
+
+        if not (time_node := node.css_first(".col-3 span")):
+            continue
+
+        if time_node.text(strip=True).lower() != "matchstarted":
+            continue
+
+        event_name = fix_txt(" vs ".join(teams))
+
+        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
             continue
 
         events.append(
             {
                 "sport": sport,
-                "event": title,
-                "link": link,
+                "event": event_name,
+                "link": urljoin(BASE_URL, href),
             }
         )
 

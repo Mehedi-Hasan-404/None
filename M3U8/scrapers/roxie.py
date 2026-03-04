@@ -19,14 +19,18 @@ HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URL = "https://roxiestreams.info"
 
-SPORT_ENDPOINTS = {
-    "fighting": "Fighting",
-    "mlb": "MLB",
-    "motorsports": "Racing",
-    "nba": "NBA",
-    # "nfl": "American Football",
-    "nhl": "NHL",
-    "soccer": "Soccer",
+SPORT_URLS = {
+    "Racing": urljoin(BASE_URL, "motorsports"),
+    # "American Football": urljoin(BASE_URL, "nfl"),
+} | {
+    sport: urljoin(BASE_URL, sport.lower())
+    for sport in [
+        "Fighting",
+        "MLB",
+        "NBA",
+        "NHL",
+        "Soccer",
+    ]
 }
 
 
@@ -59,7 +63,7 @@ async def refresh_html_cache(
 
         event_dt = Time.from_str(data_start, timezone="PST")
 
-        event_sport = SPORT_ENDPOINTS[sport]
+        event_sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
 
         key = f"[{event_sport}] {event} ({TAG})"
 
@@ -159,15 +163,13 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (events := HTML_CACHE.load()):
         log.info("Refreshing HTML cache")
 
-        sport_urls = {sport: urljoin(BASE_URL, sport) for sport in SPORT_ENDPOINTS}
-
         tasks = [
             refresh_html_cache(
                 url,
                 sport,
                 now.timestamp(),
             )
-            for sport, url in sport_urls.items()
+            for sport, url in SPORT_URLS.items()
         ]
 
         results = await asyncio.gather(*tasks)

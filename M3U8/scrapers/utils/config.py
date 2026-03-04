@@ -194,6 +194,13 @@ class Leagues:
                     else self.info("Hockey")
                 )
 
+            case "Baseball" | "MLB":
+                return (
+                    self.info("MLB")
+                    if self.is_valid(event, "MLB")
+                    else self.info("Baseball")
+                )
+
             case _:
                 return self.info(sport)
 
