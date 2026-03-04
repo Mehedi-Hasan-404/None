@@ -1,11 +1,13 @@
-## Base Log @ 2026-03-04 09:02 UTC
+## Base Log @ 2026-03-04 15:04 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/141447.ts` |
-| Space City Home Network | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/229934.ts` |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1762/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| HBO Comedy | HTTP Error (000) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
+| Hallmark Mystery | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129888.ts` |
+| ION TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129903.ts` |
 ---
 #### Base Channels URL
 ```
