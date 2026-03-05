@@ -1,11 +1,21 @@
-## Base Log @ 2026-03-05 04:22 UTC
+## Base Log @ 2026-03-05 09:05 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 149<br>❌ Dead Streams: 12
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
 | CNBC | HTTP Error (404) | `http://41.205.93.154/CNBC/index.m3u8` |
+| Cozi TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/11868.m3u8` |
+| Discovery Family Channel | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/57347.m3u8` |
+| FDSN Florida | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/46794.m3u8` |
+| FDSN Oklahoma | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20934.m3u8` |
+| FDSN SoCal | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/221151.m3u8` |
+| FDSN Wisconsin | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/78599.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| Smithsonian Channel | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/31150.m3u8` |
+| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/213668.m3u8` |
+| SportsNet Pittsburgh | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/108178.m3u8` |
 ---
 #### Base Channels URL
 ```
