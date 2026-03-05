@@ -1,11 +1,11 @@
-## Base Log @ 2026-03-04 20:55 UTC
+## Base Log @ 2026-03-05 04:22 UTC
 
 ### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | CNBC | HTTP Error (404) | `http://41.205.93.154/CNBC/index.m3u8` |
-| FYI TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/130105.ts` |
+| NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
 ---
 #### Base Channels URL
 ```
