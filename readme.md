@@ -1,10 +1,17 @@
-## Base Log @ 2026-03-05 15:11 UTC
+## Base Log @ 2026-03-05 20:59 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 153<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| ABC | HTTP Error (403) | `http://stream.cammonitorplus.net/1740/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| CBS | HTTP Error (403) | `http://stream.cammonitorplus.net/1810/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| Discovery Channel | HTTP Error (404) | `http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8` |
+| Fox | HTTP Error (403) | `http://stream.cammonitorplus.net/1772/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| MLB Network | HTTP Error (403) | `http://stream.cammonitorplus.net/337626/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| NBC | HTTP Error (403) | `http://stream.cammonitorplus.net/1765/index.m3u8?token=MnE3ZWg1YkgxdFdWZlo2c2hLMkltWnJhcFo1OHhxcXVyb2pKazZXaWxZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| Syfy | HTTP Error (404) | `http://41.205.93.154/SYFY/index.m3u8` |
 ---
 #### Base Channels URL
 ```
