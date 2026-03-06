@@ -1,10 +1,13 @@
-## Base Log @ 2026-03-06 04:19 UTC
+## Base Log @ 2026-03-06 09:02 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CBS | HTTP Error (000) | `http://lunar.pm:8080/leslie/snook/64533` |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
+| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
+| NBC Sports Bay Area | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9900.m3u8` |
+| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
 ---
 #### Base Channels URL
 ```
