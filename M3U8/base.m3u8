@@ -16,7 +16,7 @@ https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_51
 http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8
 
 #EXTINF:-1 tvg-chno="6" tvg-id="AMC.HD.us2" tvg-name="AMC" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10021_dark_360w_270h.png" group-title="TV",AMC
-http://41.205.93.154/AMC/index.m3u8
+http://23.239.31.26:8989/amc/index.m3u8
 
 #EXTINF:-1 tvg-chno="7" tvg-id="Animal.Planet.HD.us2" tvg-name="Animal Planet" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16331_dark_360w_270h.png" group-title="TV",Animal Planet
 http://23.239.31.26:8989/animalplanet/index.m3u8
@@ -58,7 +58,7 @@ http://104.255.88.155/bravo/index.m3u8
 https://buzzrota-web.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 tvg-chno="20" tvg-id="CSPAN.us2" tvg-name="C-SPAN" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10161_dark_360w_270h.png" group-title="TV",C-SPAN
-http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8
+https://restream-live.realiptv.to/Lucas123/Lucas123/92792
 
 #EXTINF:-1 tvg-chno="21" tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12131_dark_360w_270h.png" group-title="TV",Cartoon Network
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
@@ -250,7 +250,7 @@ http://23.237.104.106:8080/USA_HBO/index.m3u8
 http://23.237.104.106:8080/USA_HBO2/index.m3u8
 
 #EXTINF:-1 tvg-chno="84" tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59839_dark_360w_270h.png" group-title="TV",HBO Comedy
-http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
+http://mytvstream.net:8080/live/30550113/30550113/17773.m3u8
 
 #EXTINF:-1 tvg-chno="85" tvg-id="HBO.Drama.us2" tvg-name="HBO Family" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s34879_dark_360w_270h.png" group-title="TV",HBO Family
 http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8
@@ -382,7 +382,7 @@ http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8
 http://23.237.104.106:8080/USA_SHOWTIME/index.m3u8
 
 #EXTINF:-1 tvg-chno="128" tvg-id="Showtime.Extreme.HD.us2" tvg-name="Showtime Extreme" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18086_dark_360w_270h.png" group-title="TV",Showtime Extreme
-https://starshare.st/live/P4B9TB9xR8/humongous2tonight/3410.ts
+http://mytvstream.net:8080/live/30550113/30550113/13220.m3u8
 
 #EXTINF:-1 tvg-chno="129" tvg-id="Sky.Family.HD.uk" tvg-name="Sky Family" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/80/35/skychb4018.png" group-title="TV",Sky Family
 https://starshare.st/live/P4B9TB9xR8/humongous2tonight/274.ts
@@ -400,7 +400,7 @@ http://mytvstream.net:8080/live/30550113/30550113/2214.m3u8
 http://mytvstream.net:8080/live/30550113/30550113/213668.m3u8
 
 #EXTINF:-1 tvg-chno="134" tvg-id="Spectrum.SportsNet.LA.Dodgers.HD.us2" tvg-name="Spectrum SportsNet LA Dodgers" tvg-logo="https://i.gyazo.com/765cce528ddda366695bb178d9dee6da.png" group-title="TV",Spectrum SportsNet LA Dodgers
-http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8
+https://restream-live.realiptv.to/Lucas123/Lucas123/74683
 
 #EXTINF:-1 tvg-chno="135" tvg-id="Spectrum.SportsNet.Lakers.HD.us2" tvg-name="Spectrum SportsNet Lakers" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s77422_dark_360w_270h.png" group-title="TV",Spectrum SportsNet Lakers
 http://mytvstream.net:8080/live/30550113/30550113/21842.m3u8
