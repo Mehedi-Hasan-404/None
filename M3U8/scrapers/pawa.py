@@ -13,7 +13,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "PAWA"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
 BASE_URL = "https://pawastreams.net/feed/"
 
