@@ -1,6 +1,7 @@
 #!/bin/bash
-base_file="./M3U8/base.m3u8"
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 MAX_JOBS=10
+base_file="./M3U8/base.m3u8"
 README="./readme.md"
 STATUSLOG=$(mktemp)
 
@@ -23,7 +24,7 @@ get_status() {
             -select_streams v:0 \
             -show_entries stream=codec_name \
             -of csv=p=0 \
-            -headers "User-Agent: curl/8.5.0" \
+            -headers "User-Agent: $UA" \
             "$url" 2>&1
     )
 
