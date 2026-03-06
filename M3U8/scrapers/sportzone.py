@@ -45,7 +45,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(hours=-2.5)
+    start_dt = now.delta(hours=-30)
     end_dt = now.delta(minutes=30)
 
     for stream_group in api_data:
