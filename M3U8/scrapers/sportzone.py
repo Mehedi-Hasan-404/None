@@ -11,9 +11,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "SPRTZONE"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
+CACHE_FILE = Cache(TAG, exp=5_400)
 
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
+API_FILE = Cache(f"{TAG}-api", exp=28_800)
 
 API_URL = "https://sportzone.su/data.json"
 
@@ -45,7 +45,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(hours=-30)
+    start_dt = now.delta(hours=-3)
     end_dt = now.delta(minutes=30)
 
     for stream_group in api_data:
