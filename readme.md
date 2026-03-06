@@ -1,10 +1,10 @@
-## Base Log @ 2026-03-06 00:55 UTC
+## Base Log @ 2026-03-06 04:19 UTC
 
 ### ✅ Working Streams: 160<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| CBS | HTTP Error (000) | `http://lunar.pm:8080/leslie/snook/64533` |
 ---
 #### Base Channels URL
 ```
