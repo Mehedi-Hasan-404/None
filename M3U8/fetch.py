@@ -16,7 +16,7 @@ from scrapers import (
     ppv,
     roxie,
     shark,
-    sport9,
+    sportzone,
     streambtw,
     streamcenter,
     streamhub,
@@ -70,7 +70,7 @@ async def main() -> None:
                 asyncio.create_task(pixel.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
-                # asyncio.create_task(sport9.scrape(xtrnl_brwsr)),
+                asyncio.create_task(sportzone.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
                 # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
@@ -117,7 +117,7 @@ async def main() -> None:
         | ppv.urls
         | roxie.urls
         | shark.urls
-        | sport9.urls
+        | sportzone.urls
         | streambtw.urls
         | streamcenter.urls
         | streamhub.urls
