@@ -1,13 +1,16 @@
-## Base Log @ 2026-03-06 09:02 UTC
+## Base Log @ 2026-03-06 15:02 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 4
+### ✅ Working Streams: 154<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
-| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
-| NBC Sports Bay Area | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9900.m3u8` |
-| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
+| C-SPAN | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8` |
+| Comedy TV | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/261524.ts` |
+| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| MSG | HTTP Error (404) | `http://23.237.104.106:8080/USA_MSG/index.m3u8` |
+| Ovation | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129935.ts` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8` |
 ---
 #### Base Channels URL
 ```
