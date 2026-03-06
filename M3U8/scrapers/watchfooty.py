@@ -99,7 +99,7 @@ async def process_event(
 
     try:
         try:
-            async with page.expect_response(strm_handler, timeout=2_500) as strm_resp:
+            async with page.expect_response(strm_handler, timeout=3_250) as strm_resp:
                 resp = await page.goto(
                     url,
                     wait_until="domcontentloaded",
