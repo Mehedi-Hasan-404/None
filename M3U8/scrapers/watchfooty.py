@@ -19,9 +19,9 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-API_URL = "https://api.watchfooty.st"
+BASE_DOMAIN = "watchfooty.pw"
 
-BASE_MIRRORS = ["https://www.watchfooty.pw"]
+API_URL, BASE_URL = f"https://api.{BASE_DOMAIN}", f"https://www.{BASE_DOMAIN}"
 
 VALID_SPORTS = [
     # "american-football",
@@ -119,7 +119,7 @@ async def process_event(
 
         embed = re.sub(
             pattern=r"^.*\/stream",
-            repl="https://spiderembed.top/embed",
+            repl="https://pikachusports.top/embed",
             string=stream_url,
         )
 
@@ -165,7 +165,7 @@ async def process_event(
         page.remove_listener("request", handler)
 
 
-async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
@@ -214,7 +214,7 @@ async def get_events(base_url: str, cached_keys: list[str]) -> list[dict[str, st
             {
                 "sport": sport,
                 "event": name,
-                "link": urljoin(base_url, f"stream/{match_id}"),
+                "link": urljoin(BASE_URL, f"stream/{match_id}"),
                 "match-id": match_id,
                 "logo": logo,
                 "timestamp": event_dt.timestamp(),
@@ -235,16 +235,9 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    if not (base_url := await network.get_base(BASE_MIRRORS)):
-        log.warning("No working Watch Footy mirrors")
+    log.info(f'Scraping from "{BASE_URL}"')
 
-        CACHE_FILE.write(cached_urls)
-
-        return
-
-    log.info(f'Scraping from "{base_url}"')
-
-    if events := await get_events(base_url, cached_urls.keys()):
+    if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
         async with network.event_context(browser, stealth=False) as context:
