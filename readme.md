@@ -1,11 +1,12 @@
-## Base Log @ 2026-03-07 04:11 UTC
+## Base Log @ 2026-03-07 08:53 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cleo TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
-| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| Bloomberg TV | HTTP Error (404) | `http://41.205.93.154/BLOOMBERG/index.m3u8` |
+| Discovery Science | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20866.m3u8` |
+| Showtime Extreme | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/13220.m3u8` |
 ---
 #### Base Channels URL
 ```
