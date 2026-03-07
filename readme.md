@@ -1,12 +1,12 @@
-## Base Log @ 2026-03-07 08:53 UTC
+## Base Log @ 2026-03-07 14:47 UTC
 
 ### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Bloomberg TV | HTTP Error (404) | `http://41.205.93.154/BLOOMBERG/index.m3u8` |
-| Discovery Science | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20866.m3u8` |
-| Showtime Extreme | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/13220.m3u8` |
+| MSNBC | HTTP Error (404) | `http://41.205.93.154/MSNBC/index.m3u8` |
+| Pop TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20976.m3u8` |
 ---
 #### Base Channels URL
 ```
