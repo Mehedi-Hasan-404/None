@@ -21,11 +21,7 @@ API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 API_URL = "https://api.watchfooty.st"
 
-BASE_MIRRORS = [
-    "https://www.watchfooty.top",
-    "https://www.watchfooty.st",
-    "https://www.watchfooty.su",
-]
+BASE_MIRRORS = ["https://www.watchfooty.pw"]
 
 VALID_SPORTS = [
     # "american-football",
