@@ -1,10 +1,12 @@
-## Base Log @ 2026-03-08 04:23 UTC
+## Base Log @ 2026-03-08 08:53 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | MSNBC | HTTP Error (404) | `http://41.205.93.154/MSNBC/index.m3u8` |
+| NBC Sports Bay Area | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9900.m3u8` |
+| Spectrum SportsNet Lakers | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/21842.m3u8` |
 ---
 #### Base Channels URL
 ```
