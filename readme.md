@@ -1,11 +1,10 @@
-## Base Log @ 2026-03-08 14:49 UTC
+## Base Log @ 2026-03-08 20:47 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 160<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cleo TV | HTTP Error (403) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
-| MSNBC | HTTP Error (404) | `http://41.205.93.154/MSNBC/index.m3u8` |
+| FDSN Ohio | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17752.m3u8` |
 ---
 #### Base Channels URL
 ```
