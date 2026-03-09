@@ -68,7 +68,7 @@ async def main() -> None:
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(pixel.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(roxie.scrape(hdl_brwsr)),
+                asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportzone.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
