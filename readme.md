@@ -1,7 +1,11 @@
-## Base Log @ 2026-03-09 15:29 UTC
+## Base Log @ 2026-03-09 20:58 UTC
 
-### ✅ Working Streams: 161<br>❌ Dead Streams: 0
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Bravo TV | HTTP Error (404) | `http://104.255.88.155/bravo/index.m3u8` |
+| FDSN Southwest | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8` |
 ---
 #### Base Channels URL
 ```
