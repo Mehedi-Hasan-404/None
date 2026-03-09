@@ -28,7 +28,6 @@ from scrapers import (
     volokit,
     watchfooty,
     webcast,
-    xstreameast,
 )
 from scrapers.utils import get_logger, network
 
@@ -69,7 +68,7 @@ async def main() -> None:
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(pixel.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
-                asyncio.create_task(roxie.scrape(hdl_brwsr)),
+                # asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportzone.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
@@ -88,7 +87,6 @@ async def main() -> None:
                 asyncio.create_task(totalsportek3.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(volokit.scrape()),
-                # asyncio.create_task(xstreameast.scrape()),
                 asyncio.create_task(webcast.scrape()),
             ]
 
@@ -129,7 +127,6 @@ async def main() -> None:
         | volokit.urls
         | watchfooty.urls
         | webcast.urls
-        | xstreameast.urls
     )
 
     live_events: list[str] = []
