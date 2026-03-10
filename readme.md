@@ -1,12 +1,13 @@
-## Base Log @ 2026-03-10 09:07 UTC
+## Base Log @ 2026-03-10 15:15 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| Nickelodeon | HTTP Error (000) | `http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8` |
-| Pop TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20976.m3u8` |
+| FYI TV | HTTP Error (403) | `https://restream-live.realiptv.to/Lucas123/Lucas123/30924` |
+| Fox Business | HTTP Error (403) | `https://restream-live.realiptv.to/Lucas123/Lucas123/3730` |
+| Fox News | HTTP Error (403) | `http://104.255.88.155/foxnews/index.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 ---
 #### Base Channels URL
 ```
