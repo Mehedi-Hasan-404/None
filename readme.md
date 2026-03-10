@@ -1,12 +1,10 @@
-## Base Log @ 2026-03-10 15:15 UTC
+## Base Log @ 2026-03-10 20:57 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 4
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FYI TV | HTTP Error (403) | `https://restream-live.realiptv.to/Lucas123/Lucas123/30924` |
-| Fox Business | HTTP Error (403) | `https://restream-live.realiptv.to/Lucas123/Lucas123/3730` |
-| Fox News | HTTP Error (403) | `http://104.255.88.155/foxnews/index.m3u8` |
+| Big Ten Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_BTN/index.m3u8` |
 | Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 ---
 #### Base Channels URL
