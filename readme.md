@@ -1,10 +1,12 @@
-## Base Log @ 2026-03-10 04:20 UTC
+## Base Log @ 2026-03-10 09:07 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| Nickelodeon | HTTP Error (000) | `http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8` |
+| Pop TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20976.m3u8` |
 ---
 #### Base Channels URL
 ```
