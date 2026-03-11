@@ -59,8 +59,6 @@ async def refresh_html_cache(
 
         sport = sport_node.text(strip=True)
 
-        logo = section.css_first(".league-icon img").attributes.get("src")
-
         for event in section.css(".section-event"):
             event_name = "Live Event"
 
@@ -86,7 +84,6 @@ async def refresh_html_cache(
                 "sport": sport,
                 "event": event_name,
                 "link": href,
-                "logo": logo,
                 "event_ts": event_dt.timestamp(),
                 "timestamp": ts,
             }
@@ -168,20 +165,19 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event, logo, ts = (
+                    sport, event, ts = (
                         ev["sport"],
                         ev["event"],
-                        ev["logo"],
                         ev["event_ts"],
                     )
 
                     key = f"[{sport}] {event} ({TAG})"
 
-                    tvg_id, pic = leagues.get_tvg_info(sport, event)
+                    tvg_id, logo = leagues.get_tvg_info(sport, event)
 
                     entry = {
                         "url": url,
-                        "logo": logo or pic,
+                        "logo": logo,
                         "base": "https://storytrench.net/",
                         "timestamp": ts,
                         "id": tvg_id or "Live.Event.us",
