@@ -1,12 +1,12 @@
-## Base Log @ 2026-03-11 09:05 UTC
+## Base Log @ 2026-03-11 15:11 UTC
 
 ### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
+| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20180.m3u8` |
 | Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
+| TV One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20868.m3u8` |
 ---
 #### Base Channels URL
 ```
