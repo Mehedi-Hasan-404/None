@@ -1,7 +1,11 @@
-## Base Log @ 2026-03-12 15:14 UTC
+## Base Log @ 2026-03-12 20:59 UTC
 
-### ✅ Working Streams: 161<br>❌ Dead Streams: 0
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| CBS Sports Golazo Network | HTTP Error (000) | `https://dai.google.com/linear/hls/event/GxrCGmwST0ixsrc_QgB6qw/master.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 ---
 #### Base Channels URL
 ```
