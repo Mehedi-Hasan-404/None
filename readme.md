@@ -1,9 +1,10 @@
-## Base Log @ 2026-03-11 20:56 UTC
+## Base Log @ 2026-03-12 04:24 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| HBO Comedy | HTTP Error (403) | `https://restream-live.realiptv.to/Lucas123/Lucas123/648977` |
 | Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 | History Channel | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/15017.m3u8` |
 ---
