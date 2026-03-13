@@ -1,7 +1,10 @@
-## Base Log @ 2026-03-13 15:08 UTC
+## Base Log @ 2026-03-13 20:59 UTC
 
-### ✅ Working Streams: 161<br>❌ Dead Streams: 0
+### ✅ Working Streams: 160<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 ---
 #### Base Channels URL
 ```
