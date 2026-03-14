@@ -1,13 +1,14 @@
-## Base Log @ 2026-03-14 08:59 UTC
+## Base Log @ 2026-03-14 14:52 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 4
+### ✅ Working Streams: 156<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
-| FDSN Southeast | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/2213.m3u8` |
+| Cleo TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
+| Comedy TV | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/261524.ts` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8` |
+| Ovation | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129935.ts` |
 ---
 #### Base Channels URL
 ```
