@@ -25,7 +25,6 @@ from scrapers import (
     totalsportek3,
     tvapp,
     volokit,
-    watchfooty,
     webcast,
 )
 from scrapers.utils import get_logger, network
@@ -69,7 +68,7 @@ async def main() -> None:
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportzone.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
-                # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(timstreams.scrape(xtrnl_brwsr)),
             ]
@@ -91,7 +90,6 @@ async def main() -> None:
             await asyncio.gather(*(pw_tasks + httpx_tasks))
 
             # others
-            # await watchfooty.scrape(xtrnl_brwsr)
             await livetvsx.scrape(xtrnl_brwsr)
 
         finally:
@@ -122,7 +120,6 @@ async def main() -> None:
         | totalsportek3.urls
         | tvapp.urls
         | volokit.urls
-        | watchfooty.urls
         | webcast.urls
     )
 
