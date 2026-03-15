@@ -1,13 +1,17 @@
-## Base Log @ 2026-03-14 20:50 UTC
+## Base Log @ 2026-03-15 04:43 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 4
+### ✅ Working Streams: 153<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
+| CBS Sports Network | HTTP Error (403) | `http://snowbank.houseinventer.com/7007/index.m3u8?token=c0lTeGc1M0gydFNjcloydGZhbTFsY1RYMkphdG5OcXdxNHpMeGFYWW5ZRERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| ESPN | HTTP Error (403) | `http://snowbank.houseinventer.com/6500/index.m3u8?token=M1lDdWljYkdyZGFhZzVxeGc2Mkt5OGJicWNxd2xheDkzWWVieEt5b3lZVERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| ESPN2 | HTTP Error (403) | `http://snowbank.houseinventer.com/6501/index.m3u8?token=M1lDdWljYkdyZGFhZzVxeGc2Mkt5OGJicWNxd2xheDkzWWVieEt5b3lZVERxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
+| FDSN Southwest | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8` |
 | Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| NBC | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/120751.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| Sony Movie Channel | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/2214.m3u8` |
+| USA East | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/10252.m3u8` |
 ---
 #### Base Channels URL
 ```
