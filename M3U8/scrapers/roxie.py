@@ -35,9 +35,7 @@ SPORT_URLS = {
 
 
 async def refresh_html_cache(
-    url: str,
-    sport: str,
-    now_ts: float,
+    url: str, now_ts: float
 ) -> dict[str, dict[str, str | float]]:
 
     events = {}

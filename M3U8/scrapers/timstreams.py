@@ -1,9 +1,7 @@
-import asyncio
 from functools import partial
 from urllib.parse import urljoin
 
-from playwright.async_api import Browser, Page, Response
-from selectolax.parser import HTMLParser
+from playwright.async_api import Browser
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -14,6 +12,10 @@ urls: dict[str, dict[str, str | float]] = {}
 TAG = "TIMSTRMS"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
+
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
+
+API_URL = "https://timstreams.fit/api/live-upcoming"
 
 BASE_URL = "https://timstreams.fit"
 
@@ -38,137 +40,57 @@ SPORT_GENRES = {
 }
 
 
-def sift_xhr(resp: Response) -> bool:
-    resp_url = resp.url
-
-    return "hmembeds.one/embed" in resp_url and resp.status == 200
-
-
-async def process_event(
-    url: str,
-    url_num: int,
-    page: Page,
-) -> tuple[str | None, str | None]:
-
-    nones = None, None
-
-    captured: list[str] = []
-
-    got_one = asyncio.Event()
-
-    handler = partial(
-        network.capture_req,
-        captured=captured,
-        got_one=got_one,
-    )
-
-    page.on("request", handler)
-
-    try:
-        try:
-            async with page.expect_response(sift_xhr, timeout=3_000) as strm_resp:
-                resp = await page.goto(
-                    url,
-                    wait_until="domcontentloaded",
-                    timeout=6_000,
-                )
-
-                if not resp or resp.status != 200:
-                    log.warning(
-                        f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
-                    )
-
-                    return nones
-
-                response = await strm_resp.value
-
-                embed_url = response.url
-        except TimeoutError:
-            log.warning(f"URL {url_num}) No available stream links.")
-
-            return nones
-
-        wait_task = asyncio.create_task(got_one.wait())
-
-        try:
-            await asyncio.wait_for(wait_task, timeout=6)
-        except asyncio.TimeoutError:
-            log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
-
-            return nones
-
-        finally:
-            if not wait_task.done():
-                wait_task.cancel()
-
-                try:
-                    await wait_task
-                except asyncio.CancelledError:
-                    pass
-
-        if captured:
-            log.info(f"URL {url_num}) Captured M3U8")
-
-            return captured[0], embed_url
-
-        log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
-
-        return nones
-
-    except Exception as e:
-        log.warning(f"URL {url_num}) {e}")
-
-        return nones
-
-    finally:
-        page.remove_listener("request", handler)
-
-
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+    now = Time.clean(Time.now())
+
+    if not (api_data := API_FILE.load(per_entry=False)):
+        log.info("Refreshing API cache")
+
+        api_data = {"timestamp": now.timestamp()}
+
+        if r := await network.request(API_URL, log=log):
+            api_data: dict = r.json()
+
+            api_data["timestamp"] = now.timestamp()
+
+        API_FILE.write(api_data)
+
     events = []
 
-    if not (html_data := await network.request(BASE_URL, log=log)):
-        return events
+    start_dt = now.delta(hours=-30)
+    end_dt = now.delta(minutes=30)
 
-    soup = HTMLParser(html_data.content)
-
-    for card in soup.css("#eventsSection .card"):
-        card_attrs = card.attributes
-
-        if not (sport_id := card_attrs.get("data-genre")):
+    for info in api_data.get("events", []):
+        if (genre := info.get("genre", 999)) not in SPORT_GENRES:
             continue
 
-        elif not (sport := SPORT_GENRES.get(int(sport_id))):
+        event_dt = Time.from_str(info["time"], timezone="EST")
+
+        if not start_dt <= event_dt <= end_dt:
             continue
 
-        if not (event_name := card_attrs.get("data-search")):
+        name: str = info["name"]
+
+        url_id: str = info["url"]
+
+        logo: str | None = info.get("logo")
+
+        sport = SPORT_GENRES[genre]
+
+        if f"[{sport}] {name} ({TAG})" in cached_keys:
             continue
 
-        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+        if not (streams := info.get("streams")) or not (url := streams[0].get("url")):
             continue
-
-        if not (badge_elem := card.css_first(".badge")):
-            continue
-
-        if "data-countdown" in badge_elem.attributes:
-            continue
-
-        if (not (watch_btn := card.css_first("a.btn-watch"))) or (
-            not (href := watch_btn.attributes.get("href"))
-        ):
-            continue
-
-        logo = None
-
-        if card_thumb := card.css_first(".card-thumb img"):
-            logo = card_thumb.attributes.get("src")
 
         events.append(
             {
                 "sport": sport,
-                "event": event_name,
-                "link": urljoin(BASE_URL, href),
+                "event": name,
+                "link": urljoin(BASE_URL, f"watch/{url_id}"),
+                "ref": url,
                 "logo": logo,
+                "timestamp": event_dt.timestamp(),
             }
         )
 
@@ -191,29 +113,30 @@ async def scrape(browser: Browser) -> None:
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
-        now = Time.clean(Time.now())
-
         async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
-                        process_event,
+                        network.process_event,
                         url=(link := ev["link"]),
                         url_num=i,
                         page=page,
+                        log=log,
                     )
 
-                    url, iframe = await network.safe_process(
+                    url = await network.safe_process(
                         handler,
                         url_num=i,
                         semaphore=network.PW_S,
                         log=log,
                     )
 
-                    sport, event, logo = (
+                    sport, event, logo, ref, ts = (
                         ev["sport"],
                         ev["event"],
                         ev["logo"],
+                        ev["ref"],
+                        ev["timestamp"],
                     )
 
                     key = f"[{sport}] {event} ({TAG})"
@@ -223,8 +146,8 @@ async def scrape(browser: Browser) -> None:
                     entry = {
                         "url": url,
                         "logo": logo or pic,
-                        "base": iframe,
-                        "timestamp": now.timestamp(),
+                        "base": ref,
+                        "timestamp": ts,
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
                     }
