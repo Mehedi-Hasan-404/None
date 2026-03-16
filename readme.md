@@ -1,14 +1,11 @@
-## Base Log @ 2026-03-15 20:52 UTC
+## Base Log @ 2026-03-16 05:03 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 5
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| C-SPAN | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8` |
+| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
-| Premier Sports 2 | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/5030.ts` |
-| Sky Family | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/274.ts` |
-| Smithsonian Channel | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/31150.m3u8` |
 ---
 #### Base Channels URL
 ```
