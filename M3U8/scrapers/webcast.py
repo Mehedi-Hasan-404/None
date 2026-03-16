@@ -54,7 +54,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
         return
 
-    pattern = re.compile(r"source:\s+(\'|\")(.*)(\'|\")", re.I)
+    pattern = re.compile(r"(source:|streamUrl\s+=)\s+(\'|\")(.*)(\'|\")", re.I)
 
     if not (match := pattern.search(iframe_src_data.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
@@ -63,7 +63,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return match[2]
+    return match[3]
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
