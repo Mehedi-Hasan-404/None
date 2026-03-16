@@ -162,11 +162,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         log.info("Refreshing HTML cache")
 
         tasks = [
-            refresh_html_cache(
-                url,
-                now.timestamp(),
-            )
-            for url in SPORT_URLS.values()
+            refresh_html_cache(url, now.timestamp()) for url in SPORT_URLS.values()
         ]
 
         results = await asyncio.gather(*tasks)
