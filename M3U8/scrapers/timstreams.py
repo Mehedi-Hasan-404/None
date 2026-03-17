@@ -64,7 +64,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if (genre := info.get("genre", 999)) not in SPORT_GENRES:
             continue
 
-        event_dt = Time.from_str(info["time"], timezone="EST")
+        event_time = " ".join(info["time"].split("T"))
+
+        event_dt = Time.from_str(event_time, timezone="EST")
 
         if not start_dt <= event_dt <= end_dt:
             continue
