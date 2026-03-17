@@ -1,10 +1,16 @@
-## Base Log @ 2026-03-17 04:29 UTC
+## Base Log @ 2026-03-17 09:13 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 154<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Game Show Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/120633.m3u8` |
+| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| ION TV | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9297.m3u8` |
+| Marquee Sports Network | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/13379.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8` |
 ---
 #### Base Channels URL
 ```
