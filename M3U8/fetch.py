@@ -8,6 +8,7 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
+    glisco,
     istreameast,
     livetvsx,
     ovogoal,
@@ -75,6 +76,7 @@ async def main() -> None:
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
+                asyncio.create_task(glisco.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
                 # asyncio.create_task(pawa.scrape()),
@@ -103,6 +105,7 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
+        | glisco.urls
         | istreameast.urls
         | livetvsx.urls
         | ovogoal.urls
@@ -141,10 +144,12 @@ async def main() -> None:
             f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
         )
 
+        UA = info.get("UA", network.UA)
+
         vlc_block = [
             f'#EXTVLCOPT:http-referrer={info["base"]}',
             f'#EXTVLCOPT:http-origin={info["base"]}',
-            f"#EXTVLCOPT:http-user-agent={network.UA}",
+            f"#EXTVLCOPT:http-user-agent={UA}",
             info["url"],
         ]
 
