@@ -8,13 +8,13 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
-    glisco,
     istreameast,
     livetvsx,
     ovogoal,
     pawa,
     ppv,
     roxie,
+    s2watch,
     shark,
     sportzone,
     streambtw,
@@ -76,10 +76,10 @@ async def main() -> None:
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
-                asyncio.create_task(glisco.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
                 # asyncio.create_task(pawa.scrape()),
+                asyncio.create_task(s2watch.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(totalsportek1.scrape()),
@@ -92,7 +92,7 @@ async def main() -> None:
             await asyncio.gather(*(pw_tasks + httpx_tasks))
 
             # others
-            await livetvsx.scrape(xtrnl_brwsr)
+            # await livetvsx.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
@@ -105,13 +105,13 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
-        | glisco.urls
         | istreameast.urls
         | livetvsx.urls
         | ovogoal.urls
         | pawa.urls
         | ppv.urls
         | roxie.urls
+        | s2watch.urls
         | shark.urls
         | sportzone.urls
         | streambtw.urls
