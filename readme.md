@@ -1,10 +1,13 @@
-## Base Log @ 2026-03-18 04:34 UTC
+## Base Log @ 2026-03-18 09:12 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 2
+### ✅ Working Streams: 157<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Florida | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/46794.m3u8` |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
+| Golf Channel | HTTP Error (403) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/3294.ts` |
+| Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
 ---
 #### Base Channels URL
