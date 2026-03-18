@@ -56,7 +56,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     sport = "Live Event"
 
-    for card in soup.css(".stream-row"):
+    for card in soup.css(".main-content .stream-row"):
         if (not (watch_btn_elem := card.css_first(".watch-btn"))) or (
             not (onclick := watch_btn_elem.attributes.get("onclick"))
         ):
