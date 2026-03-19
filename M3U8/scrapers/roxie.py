@@ -103,7 +103,7 @@ async def process_event(
 
             stream = await page.evaluate("() => clapprPlayer.options.source")
         except TimeoutError:
-            log.info(f"URL {url_num}) Could not find Clappr source")
+            log.warning(f"URL {url_num}) Could not find Clappr source")
             return
 
         log.info(f"URL {url_num}) Captured M3U8")
