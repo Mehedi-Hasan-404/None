@@ -1,4 +1,5 @@
 import asyncio
+import re
 from functools import partial
 from urllib.parse import urljoin
 
@@ -20,6 +21,7 @@ HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 BASE_URL = "https://roxiestreams.info"
 
 SPORT_URLS = {
+    "March Madness": urljoin(BASE_URL, "march-madness"),
     "Racing": urljoin(BASE_URL, "motorsports"),
     # "American Football": urljoin(BASE_URL, "nfl"),
 } | {
@@ -57,9 +59,16 @@ async def refresh_html_cache(
         if not (span := row.css_first("span.countdown-timer")):
             continue
 
-        data_start = span.attributes["data-start"].rsplit(":", 1)[0]
+        if not (data_start := span.attributes.get("data-start")):
+            continue
 
-        event_dt = Time.from_str(data_start, timezone="PST")
+        event_time = (
+            data_start.rsplit(":", 1)[0]
+            if re.search(r"\d+:\d+:\d+", data_start)
+            else data_start
+        )
+
+        event_dt = Time.from_str(event_time, timezone="PST")
 
         event_sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
 

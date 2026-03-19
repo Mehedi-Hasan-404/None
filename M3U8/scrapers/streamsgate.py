@@ -1,10 +1,10 @@
-import asyncio
+import json
+import re
 from functools import partial
-from itertools import chain
 from typing import Any
-from urllib.parse import urljoin
 
 from playwright.async_api import Browser
+from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -16,103 +16,95 @@ TAG = "STRMSGATE"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
-
-BASE_URL = "https://streamingon.org"
-
-SPORT_URLS = [
-    urljoin(BASE_URL, f"data/{sport}.json")
-    for sport in [
-        "boxing",
-        # "cfb",
-        "f1",
-        "mlb",
-        "nba",
-        # "nfl",
-        "nhl",
-        "soccer",
-        "ufc",
-    ]
-]
-
-
-def get_event(t1: str, t2: str) -> str:
-    match t1:
-        case "RED ZONE":
-            return "NFL RedZone"
-
-        case "TBD":
-            return "TBD"
-
-        case _:
-            return f"{t1.strip()} vs {t2.strip()}"
-
-
-async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
-    tasks = [network.request(url, log=log) for url in SPORT_URLS]
-
-    results = await asyncio.gather(*tasks)
-
-    if not (data := [*chain.from_iterable(r.json() for r in results if r)]):
-        return [{"timestamp": now_ts}]
-
-    for ev in data:
-        ev["ts"] = ev.pop("timestamp")
-
-    data[-1]["timestamp"] = now_ts
-
-    return data
+BASE_URL = "https://streamingon.org/index.php"
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
-    if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        log.info("Refreshing API cache")
-
-        api_data = await refresh_api_cache(now.timestamp())
-
-        API_FILE.write(api_data)
-
     events = []
 
-    start_dt = now.delta(hours=-1)
-    end_dt = now.delta(minutes=5)
-
-    for stream_group in api_data:
-        date = stream_group.get("time")
-
-        sport = stream_group.get("league")
-
-        t1, t2 = stream_group.get("away"), stream_group.get("home")
-
-        event = get_event(t1, t2)
-
-        if not (date and sport):
-            continue
-
-        if f"[{sport}] {event} ({TAG})" in cached_keys:
-            continue
-
-        event_dt = Time.from_str(date, timezone="UTC")
-
-        if not start_dt <= event_dt <= end_dt:
-            continue
-
-        if not (streams := stream_group.get("streams")):
-            continue
-
-        if not (url := streams[0].get("url")):
-            continue
-
-        events.append(
-            {
-                "sport": sport,
-                "event": event,
-                "link": url,
-                "timestamp": event_dt.timestamp(),
-            }
+    if not (
+        html_data := await network.request(
+            BASE_URL,
+            params={
+                "sport": "all",
+                "league": "all",
+                "sort": "time",
+                "stream": "available",
+                "day": "all",
+            },
+            log=log,
         )
+    ):
+        return events
+
+    link_data_ptrn = re.compile(r"var\s+linkData\s+=\s+({.*?});", re.I | re.S)
+
+    if not (match := link_data_ptrn.search(html_data.text)):
+        log.warning("No `linkData` variable found.")
+        return events
+
+    link_data: dict[str, dict[str, Any]] = json.loads(match[1])
+
+    start_dt = now.delta(minutes=-30)
+    end_dt = now.delta(minutes=30)
+
+    soup = HTMLParser(html_data.content)
+
+    for body in soup.css(".sport-body"):
+        if not (date_elem := body.css_first(".date-label")):
+            continue
+
+        event_date = date_elem.text(strip=True)
+
+        for card in soup.css(".game-card"):
+            if not (event_id := card.attributes.get("data-id")):
+                continue
+
+            if not (league_elem := card.css_first(".card-league")):
+                continue
+
+            if not (teams := card.css(".card-teams .card-team-name")):
+                continue
+
+            if not (time_elem := card.css_first(".card-time")):
+                continue
+
+            event_dt = Time.from_str(
+                f"{event_date} {time_elem.text(strip=True)}",
+                timezone="CET",
+            )
+
+            if not start_dt <= event_dt <= end_dt:
+                continue
+
+            sport = league_elem.text(strip=True)
+
+            team_1, team_2 = (team.text(strip=True) for team in teams)
+
+            event_name = f"{team_2} vs {team_1}"
+
+            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+                continue
+
+            if not (event_info := link_data.get(event_id)):
+                continue
+
+            if not (stream_links := event_info.get("streamLinks")):
+                continue
+
+            if not (url := stream_links[0].get("url")):
+                continue
+
+            events.append(
+                {
+                    "sport": sport,
+                    "event": event_name,
+                    "link": url,
+                    "timestamp": now.timestamp(),
+                }
+            )
 
     return events
 
@@ -174,8 +166,6 @@ async def scrape(browser: Browser) -> None:
 
                     if url:
                         valid_count += 1
-
-                        entry["url"] = url.split("&e")[0]
 
                         urls[key] = entry
 
