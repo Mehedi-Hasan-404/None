@@ -25,7 +25,6 @@ from scrapers import (
     totalsportek1,
     totalsportek3,
     tvapp,
-    volokit,
     webcast,
 )
 from scrapers.utils import get_logger, network
@@ -85,7 +84,6 @@ async def main() -> None:
                 asyncio.create_task(totalsportek1.scrape()),
                 asyncio.create_task(totalsportek3.scrape()),
                 asyncio.create_task(tvapp.scrape()),
-                # asyncio.create_task(volokit.scrape()),
                 asyncio.create_task(webcast.scrape()),
             ]
 
@@ -122,7 +120,6 @@ async def main() -> None:
         | totalsportek1.urls
         | totalsportek3.urls
         | tvapp.urls
-        | volokit.urls
         | webcast.urls
     )
 
