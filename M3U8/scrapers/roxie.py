@@ -82,18 +82,6 @@ async def process_event(
     page: Page,
 ) -> str | None:
 
-    captured: list[str] = []
-
-    got_one = asyncio.Event()
-
-    handler = partial(
-        network.capture_req,
-        captured=captured,
-        got_one=got_one,
-    )
-
-    page.on("request", handler)
-
     try:
         resp = await page.goto(
             url,
@@ -105,54 +93,25 @@ async def process_event(
             log.warning(
                 f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
             )
-
             return
 
         try:
-            if btn := await page.wait_for_selector(
-                "button.streambutton:nth-of-type(1)",
-                timeout=5_000,
-            ):
-                await btn.click(force=True, click_count=2)
+            await page.wait_for_function(
+                "() => typeof clapprPlayer !== 'undefined'",
+                timeout=6_000,
+            )
+
+            stream = await page.evaluate("() => clapprPlayer.options.source")
         except TimeoutError:
-            pass
-
-        try:
-            if player := await page.wait_for_selector(".play-wrapper", timeout=5_000):
-                await player.click(force=True, click_count=3)
-        except TimeoutError:
-            pass
-
-        wait_task = asyncio.create_task(got_one.wait())
-
-        try:
-            await asyncio.wait_for(wait_task, timeout=6)
-        except asyncio.TimeoutError:
-            log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
+            log.info(f"URL {url_num}) Could not find Clappr source")
             return
 
-        finally:
-            if not wait_task.done():
-                wait_task.cancel()
-
-                try:
-                    await wait_task
-                except asyncio.CancelledError:
-                    pass
-
-        if captured:
-            log.info(f"URL {url_num}) Captured M3U8")
-            return captured[0]
-
-        log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
-        return
+        log.info(f"URL {url_num}) Captured M3U8")
+        return stream
 
     except Exception as e:
         log.warning(f"URL {url_num}) {e}")
         return
-
-    finally:
-        page.remove_listener("request", handler)
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
