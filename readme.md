@@ -1,13 +1,11 @@
-## Base Log @ 2026-03-19 09:07 UTC
+## Base Log @ 2026-03-19 15:11 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 5
+### ✅ Working Streams: 159<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
-| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
 | Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| NBC Sports California | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
+| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
 ---
 #### Base Channels URL
