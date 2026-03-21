@@ -18,15 +18,15 @@ API_CACHE = Cache(f"{TAG}-api", exp=28_800)
 
 API_URL = "https://s2watch.me/api/v1/schedule/list"
 
-EVENT_BASE = "https://gopst.link"
+BASE_URL = "https://gopst.link"
 
 
 async def process_event(event_id: int, url_num: int) -> tuple[str | None, str | None]:
     nones = None, None
 
     if not (
-        event_api_src := await network.request(
-            urljoin(EVENT_BASE, "api/player.php"),
+        base_api_src := await network.request(
+            urljoin(BASE_URL, "api/player.php"),
             params={"id": event_id},
             log=log,
         )
@@ -34,7 +34,7 @@ async def process_event(event_id: int, url_num: int) -> tuple[str | None, str | 
         log.warning(f"URL {url_num}) Failed to get iframe url.")
         return nones
 
-    if not (embed_url := event_api_src.json().get("url")):
+    if not (embed_url := base_api_src.json().get("url")):
         log.warning(f"URL {url_num}) No iframe url available.")
         return nones
 
@@ -44,11 +44,11 @@ async def process_event(event_id: int, url_num: int) -> tuple[str | None, str | 
             log=log,
             headers={
                 "User-Agent": "curl/8.19.0",
-                "Referer": f"{event_api_src.url}",
+                "Referer": f"{base_api_src.url}",
             },
         )
     ):
-        log.warning(f"URL {url_num}) Failed to get load iframe url.")
+        log.warning(f"URL {url_num}) Failed to load iframe url.")
         return nones
 
     pattern = re.compile(r'var\s+src\s+=\s+"([^"]*)"', re.I)
@@ -162,7 +162,7 @@ async def scrape() -> None:
                 "base": iframe,
                 "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
-                "link": urljoin(EVENT_BASE, f"ch?id={event_id}"),
+                "link": urljoin(BASE_URL, f"ch?id={event_id}"),
                 "UA": "curl/8.19.0",
             }
 
