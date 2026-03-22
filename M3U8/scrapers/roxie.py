@@ -1,5 +1,4 @@
 import asyncio
-import re
 from functools import partial
 from urllib.parse import urljoin
 
@@ -14,9 +13,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "ROXIE"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://roxiestreams.info"
 
@@ -34,55 +31,6 @@ SPORT_URLS = {
         "Soccer",
     ]
 }
-
-
-async def refresh_html_cache(
-    url: str, now_ts: float
-) -> dict[str, dict[str, str | float]]:
-
-    events = {}
-
-    if not (html_data := await network.request(url, log=log)):
-        return events
-
-    soup = HTMLParser(html_data.content)
-
-    for row in soup.css("table#eventsTable tbody tr"):
-        if not (a_tag := row.css_first("td a")):
-            continue
-
-        event = a_tag.text(strip=True)
-
-        if not (href := a_tag.attributes.get("href")):
-            continue
-
-        if not (span := row.css_first("span.countdown-timer")):
-            continue
-
-        if not (data_start := span.attributes.get("data-start")):
-            continue
-
-        event_time = (
-            data_start.rsplit(":", 1)[0]
-            if (re.search(r"\d+:\d+:\d+", data_start) or "M:00" in data_start)
-            else data_start
-        )
-
-        event_dt = Time.from_str(event_time, timezone="PST")
-
-        event_sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
-
-        key = f"[{event_sport}] {event} ({TAG})"
-
-        events[key] = {
-            "sport": event_sport,
-            "event": event,
-            "link": href,
-            "event_ts": event_dt.timestamp(),
-            "timestamp": now_ts,
-        }
-
-    return events
 
 
 async def process_event(
@@ -131,36 +79,41 @@ async def process_event(
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
+    tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
-    if not (events := HTML_CACHE.load()):
-        log.info("Refreshing HTML cache")
+    results = await asyncio.gather(*tasks)
 
-        tasks = [
-            refresh_html_cache(url, now.timestamp()) for url in SPORT_URLS.values()
-        ]
+    events = []
 
-        results = await asyncio.gather(*tasks)
+    if not (
+        soups := [(HTMLParser(html.content), html.url) for html in results if html]
+    ):
+        return events
 
-        events = {k: v for data in results for k, v in data.items()}
+    for soup, url in soups:
+        sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
 
-        HTML_CACHE.write(events)
+        for row in soup.css("table#eventsTable tbody tr"):
+            if not (a_tag := row.css_first("td a")):
+                continue
 
-    live = []
+            event = a_tag.text(strip=True)
 
-    start_ts = now.delta(hours=-1.5).timestamp()
-    end_ts = now.delta(minutes=1).timestamp()
+            if not (href := a_tag.attributes.get("href")):
+                continue
 
-    for k, v in events.items():
-        if k in cached_keys:
-            continue
+            if f"[{sport}] {event} ({TAG})" in cached_keys:
+                continue
 
-        if not start_ts <= v["event_ts"] <= end_ts:
-            continue
+            events.append(
+                {
+                    "sport": sport,
+                    "event": event,
+                    "link": href,
+                }
+            )
 
-        live.append(v)
-
-    return live
+    return events
 
 
 async def scrape(browser: Browser) -> None:
@@ -179,6 +132,8 @@ async def scrape(browser: Browser) -> None:
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
+        now = Time.clean(Time.now())
+
         async with network.event_context(browser) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
@@ -196,11 +151,7 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event, ts = (
-                        ev["sport"],
-                        ev["event"],
-                        ev["event_ts"],
-                    )
+                    sport, event = ev["sport"], ev["event"]
 
                     tvg_id, logo = leagues.get_tvg_info(sport, event)
 
@@ -210,7 +161,7 @@ async def scrape(browser: Browser) -> None:
                         "url": url,
                         "logo": logo,
                         "base": BASE_URL,
-                        "timestamp": ts,
+                        "timestamp": now.timestamp(),
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
                     }
