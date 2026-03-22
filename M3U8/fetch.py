@@ -68,7 +68,7 @@ async def main() -> None:
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportzone.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
-                # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(timstreams.scrape(xtrnl_brwsr)),
             ]
@@ -80,7 +80,7 @@ async def main() -> None:
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(s2watch.scrape()),
                 asyncio.create_task(shark.scrape()),
-                asyncio.create_task(streambtw.scrape()),
+                # asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(totalsportek1.scrape()),
                 asyncio.create_task(totalsportek3.scrape()),
                 asyncio.create_task(tvapp.scrape()),
