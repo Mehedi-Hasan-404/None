@@ -141,12 +141,10 @@ async def main() -> None:
             f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
         )
 
-        UA = info.get("UA", network.UA)
-
         vlc_block = [
             f'#EXTVLCOPT:http-referrer={info["base"]}',
             f'#EXTVLCOPT:http-origin={info["base"]}',
-            f"#EXTVLCOPT:http-user-agent={UA}",
+            f"#EXTVLCOPT:http-user-agent={info.get('UA', network.UA)}",
             info["url"],
         ]
 
