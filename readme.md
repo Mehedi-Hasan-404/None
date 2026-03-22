@@ -1,17 +1,12 @@
-## Base Log @ 2026-03-22 14:52 UTC
+## Base Log @ 2026-03-22 15:35 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 8
+### ✅ Working Streams: 159<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| A&E TV | HTTP Error (404) | `http://23.239.31.26:8989/aande/index.m3u8` |
-| ACC Network | HTTP Error (404) | `http://23.239.31.26:8989/accnetwork/index.m3u8` |
-| AMC | HTTP Error (404) | `http://23.239.31.26:8989/amc/index.m3u8` |
-| AXS TV | HTTP Error (404) | `http://23.239.31.26:8989/axstv/index.m3u8` |
-| Animal Planet | HTTP Error (404) | `http://23.239.31.26:8989/animalplanet/index.m3u8` |
-| FDSN South | HTTP Error (404) | `http://23.239.31.26:8989/ballysportssouth/index.m3u8` |
-| Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/bn80NG/909467/9307.m3u8` |
+| NBC Sports Philadelphia | HTTP Error (000) | `http://mytvstream.net:8080/live/bn80NG/909467/20943.m3u8` |
+| NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/bn80NG/909467/20179.m3u8` |
 ---
 #### Base Channels URL
 ```
