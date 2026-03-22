@@ -64,7 +64,7 @@ async def refresh_html_cache(
 
         event_time = (
             data_start.rsplit(":", 1)[0]
-            if re.search(r"\d+:\d+:\d+", data_start)
+            if (re.search(r"\d+:\d+:\d+", data_start) or "M:00" in data_start)
             else data_start
         )
 
