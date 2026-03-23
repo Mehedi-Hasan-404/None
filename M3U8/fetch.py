@@ -17,7 +17,6 @@ from scrapers import (
     s2watch,
     shark,
     sportzone,
-    streambtw,
     streamcenter,
     streamhub,
     streamsgate,
@@ -80,7 +79,6 @@ async def main() -> None:
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(s2watch.scrape()),
                 asyncio.create_task(shark.scrape()),
-                # asyncio.create_task(streambtw.scrape()),
                 asyncio.create_task(totalsportek1.scrape()),
                 asyncio.create_task(totalsportek3.scrape()),
                 asyncio.create_task(tvapp.scrape()),
@@ -112,7 +110,6 @@ async def main() -> None:
         | s2watch.urls
         | shark.urls
         | sportzone.urls
-        | streambtw.urls
         | streamcenter.urls
         | streamhub.urls
         | streamsgate.urls
