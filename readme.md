@@ -1,11 +1,17 @@
-## Base Log @ 2026-03-24 04:30 UTC
+## Base Log @ 2026-03-24 09:13 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 2
+### ✅ Working Streams: 154<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| C-SPAN | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8` |
+| FYI TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9240.m3u8` |
+| Grit TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20861.m3u8` |
+| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
 | Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| ION TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9297.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8` |
 ---
 #### Base Channels URL
 ```
