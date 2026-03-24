@@ -18,7 +18,7 @@ API_CACHE = Cache(f"{TAG}-api", exp=28_800)
 
 API_URL = "https://s2watch.me/api/v1/schedule/list"
 
-BASE_URL = "https://gopst.link"
+BASE_URL = "https://zarviro.link"
 
 
 async def process_event(event_id: int, url_num: int) -> tuple[str | None, str | None]:
