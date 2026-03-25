@@ -15,7 +15,7 @@ TAG = "ROXIE"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://roxiestreams.info"
+BASE_URL = "https://roxiestreams.su"
 
 SPORT_URLS = {
     "March Madness": urljoin(BASE_URL, "march-madness"),
@@ -109,7 +109,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 {
                     "sport": sport,
                     "event": event,
-                    "link": href,
+                    "link": urljoin(BASE_URL, href),
                 }
             )
 
