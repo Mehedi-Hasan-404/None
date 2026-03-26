@@ -1,10 +1,9 @@
-## Base Log @ 2026-03-26 15:49 UTC
+## Base Log @ 2026-03-26 20:57 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 2
+### ✅ Working Streams: 161<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
 ---
 #### Base Channels URL
