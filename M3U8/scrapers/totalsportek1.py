@@ -14,7 +14,7 @@ TAG = "TOTALSPRTK1"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
-BASE_URL = "https://live.totalsportekarmy.com"
+BASE_URL = "https://live.totalsportek.foo"
 
 
 def fix_txt(s: str) -> str:

@@ -149,7 +149,8 @@ async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
 
         event_dt = Time.from_str(date)
 
-        key = f"[{sport} - {league}] {title} ({TAG})"
+        if (key := f"[{sport} - {league}] {title} ({TAG})") in events:
+            continue
 
         events[key] = {
             "sport": sport,

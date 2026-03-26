@@ -84,6 +84,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         t1, t2 = stream_group.get("away"), stream_group.get("home")
 
+        if not (t1 and t2):
+            continue
+
         event = get_event(t1, t2)
 
         if not (date and sport):
