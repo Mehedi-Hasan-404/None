@@ -18,7 +18,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-BASE_URL = "https://streamingon.org"
+BASE_URL = "https://streamsgates.io"
 
 SPORT_URLS = [
     urljoin(BASE_URL, f"data/{sport}.json")

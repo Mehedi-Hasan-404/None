@@ -11,7 +11,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "TIMSTRMS"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
+CACHE_FILE = Cache(TAG, exp=3_600)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
@@ -57,8 +57,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
+    start_dt = now.delta(hours=-3)
+    end_dt = now.delta(minutes=5)
 
     for info in api_data.get("events", []):
         if (genre := info.get("genre", 999)) not in SPORT_GENRES:
