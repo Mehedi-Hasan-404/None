@@ -14,9 +14,7 @@ from scrapers import (
     pawa,
     ppv,
     roxie,
-    s2watch,
     shark,
-    sportzone,
     streamcenter,
     streamhub,
     streamsgate,
@@ -24,6 +22,7 @@ from scrapers import (
     totalsportek1,
     totalsportek3,
     tvapp,
+    watchfooty,
     webcast,
 )
 from scrapers.utils import get_logger, network
@@ -65,10 +64,9 @@ async def main() -> None:
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
-                # asyncio.create_task(sportzone.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
                 # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
+                asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
                 asyncio.create_task(timstreams.scrape(xtrnl_brwsr)),
             ]
 
@@ -77,7 +75,6 @@ async def main() -> None:
                 asyncio.create_task(istreameast.scrape()),
                 # asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
-                # asyncio.create_task(s2watch.scrape()),
                 asyncio.create_task(shark.scrape()),
                 # asyncio.create_task(totalsportek1.scrape()),
                 asyncio.create_task(totalsportek3.scrape()),
@@ -89,6 +86,7 @@ async def main() -> None:
 
             # others
             await livetvsx.scrape(xtrnl_brwsr)
+            await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
@@ -107,9 +105,7 @@ async def main() -> None:
         | pawa.urls
         | ppv.urls
         | roxie.urls
-        | s2watch.urls
         | shark.urls
-        | sportzone.urls
         | streamcenter.urls
         | streamhub.urls
         | streamsgate.urls
@@ -117,6 +113,7 @@ async def main() -> None:
         | totalsportek1.urls
         | totalsportek3.urls
         | tvapp.urls
+        | watchfooty.urls
         | webcast.urls
     )
 
