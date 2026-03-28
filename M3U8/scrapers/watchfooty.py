@@ -104,7 +104,7 @@ async def pre_process(url: str, url_num: int) -> str | None:
         link_data["wld"]["sn"],
     )
 
-    return f"https://sportsembed.su/embed/{'/'.join(embed_path)}"
+    return f"https://sportsembed.su/embed/{'/'.join(embed_path)}?player=clappr&autoplay=true"
 
 
 async def process_event(

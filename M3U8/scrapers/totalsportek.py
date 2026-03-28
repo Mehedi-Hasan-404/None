@@ -11,7 +11,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "TOTALSPRTK3"
+TAG = "TOTALSPRTK"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
