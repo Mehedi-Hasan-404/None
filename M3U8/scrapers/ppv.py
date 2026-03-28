@@ -77,7 +77,7 @@ async def get_events(url: str, cached_keys: list[str]) -> list[dict[str, str]]:
                 {
                     "sport": sport,
                     "event": name,
-                    "link": iframe,
+                    "link": f"{iframe}#player=clappr#autoplay=true",
                     "logo": logo,
                     "timestamp": event_dt.timestamp(),
                 }
