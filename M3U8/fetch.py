@@ -10,6 +10,7 @@ from scrapers import (
     fawa,
     istreameast,
     livetvsx,
+    ovogoal,
     pawa,
     ppv,
     roxie,
@@ -17,7 +18,6 @@ from scrapers import (
     streamcenter,
     streamhub,
     streamsgate,
-    timstreams,
     totalsportek,
     tvapp,
     watchfooty,
@@ -65,12 +65,12 @@ async def main() -> None:
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
                 # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(timstreams.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
+                asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
@@ -97,6 +97,7 @@ async def main() -> None:
         | fawa.urls
         | istreameast.urls
         | livetvsx.urls
+        | ovogoal.urls
         | pawa.urls
         | ppv.urls
         | roxie.urls
@@ -104,7 +105,6 @@ async def main() -> None:
         | streamcenter.urls
         | streamhub.urls
         | streamsgate.urls
-        | timstreams.urls
         | totalsportek.urls
         | tvapp.urls
         | watchfooty.urls
