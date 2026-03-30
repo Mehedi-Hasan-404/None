@@ -1,10 +1,12 @@
-## Base Log @ 2026-03-29 20:56 UTC
+## Base Log @ 2026-03-30 05:10 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 2
+### ✅ Working Streams: 158<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Hallmark Family | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
+| FDSN Southeast | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/2213.m3u8` |
+| FDSN Southwest | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
 ---
 #### Base Channels URL
