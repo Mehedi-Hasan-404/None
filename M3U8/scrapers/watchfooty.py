@@ -187,6 +187,9 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         (live_data.json() or [{}])[-1].get("result", {}).get("data", {}).get("json")
     )
 
+    if not api_data:
+        return events
+
     for link in api_data:
         if not link.get("viewerCount"):
             continue
