@@ -74,7 +74,7 @@ async def main() -> None:
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
-                asyncio.create_task(tvapp.scrape()),
+                # asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
             ]
 
