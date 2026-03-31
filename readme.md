@@ -1,14 +1,12 @@
-## Base Log @ 2026-03-30 21:07 UTC
+## Base Log @ 2026-03-31 09:38 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 5
+### ✅ Working Streams: 159<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Ohio | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17752.m3u8` |
-| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
 | Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| NFL Network | HTTP Error (404) | `https://stream.decentdoubts.net/6128524/index.m3u8?token=Mm9QYnQ1ZkpyYWllaEoydWhheUVsOGl1cGNpQW1xcUczNGVZeHRuWHlYL0RxNEduaVp1UnBxU2VlWmF0ZnRlRGxaMm1zNStDbnJOOXFZMlhtcStybmc9PQ==` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| SportsNet New York | HTTP Error (404) | `http://212.102.60.231/SNY/index.m3u8` |
 ---
 #### Base Channels URL
 ```
