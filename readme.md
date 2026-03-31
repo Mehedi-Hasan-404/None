@@ -1,71 +1,11 @@
-## Base Log @ 2026-03-31 15:44 UTC
+## Base Log @ 2026-03-31 16:37 UTC
 
-### ✅ Working Streams: 100<br>❌ Dead Streams: 62
+### ✅ Working Streams: 160<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/121139.m3u8` |
-| AXS TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/48324.m3u8` |
-| Altitude Sports | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/79545.m3u8` |
-| Antenna TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20180.m3u8` |
-| Aspire | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/21927.m3u8` |
-| Boomerang | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/14741.m3u8` |
-| C-SPAN | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/136589.m3u8` |
-| CBS | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/120749.m3u8` |
-| CW | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/120889.m3u8` |
-| Cozi TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/11868.m3u8` |
-| Discovery Family Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/57347.m3u8` |
-| Discovery Life | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/9861.m3u8` |
-| Discovery Science | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20866.m3u8` |
-| FDSN Detroit | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20930.m3u8` |
-| FDSN Florida | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/46794.m3u8` |
-| FDSN Midwest | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/66795.m3u8` |
-| FDSN North | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/58827.m3u8` |
-| FDSN Ohio | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/17752.m3u8` |
-| FDSN Oklahoma | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20934.m3u8` |
-| FDSN SoCal | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/221151.m3u8` |
-| FDSN South | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20922.m3u8` |
-| FDSN Southeast | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/2213.m3u8` |
-| FDSN Southwest | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/21843.m3u8` |
-| FDSN Sun | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/104917.m3u8` |
-| FDSN Wisconsin | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/78599.m3u8` |
-| FX Movie Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/10260.m3u8` |
-| FYI TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/9240.m3u8` |
-| Fox Business | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/17639.m3u8` |
-| Fox | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/120750.m3u8` |
-| Freeform TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/13370.m3u8` |
-| Game Show Network | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/120633.m3u8` |
-| Grit TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20861.m3u8` |
-| HBO Family | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/17772.m3u8` |
-| Hallmark Family | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/9307.m3u8` |
-| Hallmark Mystery | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/10289.m3u8` |
-| History Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/15017.m3u8` |
-| ION TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/9297.m3u8` |
-| Investigation Discovery | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/46810.m3u8` |
-| MSNBC | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/9296.m3u8` |
-| Marquee Sports Network | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/13379.m3u8` |
-| MotorTrend TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/10399.m3u8` |
-| NBC Sports Bay Area | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/9900.m3u8` |
-| NBC Sports Boston | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20939.m3u8` |
-| NBC Sports California | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20940.m3u8` |
-| NBC Sports Philadelphia | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20943.m3u8` |
-| NBC | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/120751.m3u8` |
-| NHL Network | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
-| NewsNation | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/161450.m3u8` |
-| Nick Jr | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/46710.m3u8` |
-| Pop TV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20976.m3u8` |
-| Showtime Extreme | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/13220.m3u8` |
-| Smithsonian Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/31150.m3u8` |
-| Sony Movie Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/2214.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/31636.m3u8` |
-| Spectrum SportsNet Lakers | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/21842.m3u8` |
-| SportsNet Pittsburgh | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/108178.m3u8` |
-| TV Land | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/46696.m3u8` |
-| TV One | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20868.m3u8` |
-| Tennis Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/20184.m3u8` |
-| The Weather Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/18926.m3u8` |
-| USA East | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/10252.m3u8` |
-| getTV | HTTP Error (404) | `http://mytvstream.net:8080/live/30550113/30550113/18366.m3u8` |
+| Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/43761449506/smallwood/9307.m3u8` |
+| NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/43761449506/smallwood/20179.m3u8` |
 ---
 #### Base Channels URL
 ```
