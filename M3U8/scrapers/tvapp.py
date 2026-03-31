@@ -57,9 +57,7 @@ async def get_events() -> list[dict[str, str]]:
         for a in row.css("a.list-group-item[href]"):
             splits = a.text(strip=True).split(":")
 
-            del splits[-3:]
-
-            event_name = ":".join(splits)
+            event_name = ":".join(splits[:2]).split("@")[0].strip()
 
             if not (href := a.attributes.get("href")):
                 continue
