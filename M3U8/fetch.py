@@ -8,6 +8,7 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
+    fsports,
     istreameast,
     livetvsx,
     ovogoal,
@@ -18,6 +19,7 @@ from scrapers import (
     streamcenter,
     streamhub,
     streamsgate,
+    streamtpnew,
     totalsportek,
     tvapp,
     watchfooty,
@@ -60,6 +62,7 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
+                asyncio.create_task(fsports.scrape(hdl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
@@ -73,6 +76,7 @@ async def main() -> None:
                 # asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
+                asyncio.create_task(streamtpnew.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
@@ -95,6 +99,7 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
+        | fsports.urls
         | istreameast.urls
         | livetvsx.urls
         | ovogoal.urls
@@ -105,6 +110,7 @@ async def main() -> None:
         | streamcenter.urls
         | streamhub.urls
         | streamsgate.urls
+        | streamtpnew.urls
         | totalsportek.urls
         | tvapp.urls
         | watchfooty.urls

@@ -14,7 +14,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-BASE_URL = "https://backend.streamcenter.live/api/Parties"
+API_URL = "https://backend.streamcenter.live/api/Parties"
 
 CATEGORIES = {
     4: "Basketball",
@@ -39,7 +39,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         api_data = [{"timestamp": now.timestamp()}]
 
         if r := await network.request(
-            BASE_URL,
+            API_URL,
             log=log,
             params={"pageNumber": 1, "pageSize": 500},
         ):
