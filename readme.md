@@ -1,9 +1,13 @@
-## Base Log @ 2026-03-31 16:37 UTC
+## Base Log @ 2026-04-01 05:11 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 2
+### ✅ Working Streams: 156<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| AMC | HTTP Error (404) | `http://41.205.93.154/AMC/index.m3u8` |
+| Bravo TV | HTTP Error (404) | `http://41.205.93.154/BRAVO/index.m3u8` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/43761449506/smallwood/17772.m3u8` |
 | Hallmark Family | HTTP Error (403) | `http://mytvstream.net:8080/live/43761449506/smallwood/9307.m3u8` |
 | NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/43761449506/smallwood/20179.m3u8` |
 ---
