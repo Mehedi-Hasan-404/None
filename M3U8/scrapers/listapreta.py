@@ -8,9 +8,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "LISTA"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 API_URL = "https://listapreta.site/sports-widget/events.php"
 
@@ -64,22 +62,13 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
-    if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        log.info("Refreshing API cache")
-
-        api_data = [{"timestamp": now.timestamp()}]
-
-        if r := await network.request(API_URL, log=log):
-            api_data: list[dict[str, str]] = r.json()
-
-            api_data[-1]["timestamp"] = now.timestamp()
-
-        API_FILE.write(api_data)
-
     events = []
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
+    if not (api_req := await network.request(API_URL, log=log)):
+        return events
+
+    elif not (api_data := api_req.json()):
+        return events
 
     for event in api_data:
         sport = event.get("sport")
@@ -96,7 +85,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         event_dt = Time.from_str(event["start"], timezone="UTC")
 
-        if not start_dt <= now <= end_dt:
+        if now.date() != event_dt.date():
             continue
 
         if not (channels := event.get("channels")):
@@ -111,7 +100,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 "sport": sport,
                 "event": event_name,
                 "link": link,
-                "timestamp": event_dt.timestamp(),
+                "timestamp": now.timestamp(),
             }
         )
 

@@ -13,8 +13,6 @@ TAG = "STP"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
-
 API_URL = "https://streamtpnew.com/eventos.json"
 
 
@@ -53,21 +51,13 @@ async def process_event(url: str, url_num: int) -> str | None:
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        log.info("Refreshing API cache")
-
-        api_data = [{"timestamp": now.timestamp()}]
-
-        if r := await network.request(API_URL, log=log):
-            api_data: list[dict[str, str]] = r.json()
-
-            api_data[-1]["timestamp"] = now.timestamp()
-
-        API_FILE.write(api_data)
-
     events = []
+
+    if not (api_req := await network.request(API_URL, log=log)):
+        return events
+
+    elif not (api_data := api_req.json()):
+        return events
 
     for event in api_data:
         name = event.get("title")
