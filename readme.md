@@ -1,10 +1,10 @@
-## Base Log @ 2026-04-02 09:34 UTC
+## Base Log @ 2026-04-02 15:33 UTC
 
 ### ✅ Working Streams: 161<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| NHL Network | HTTP Error (000) | `http://mytvstream.net:8080/live/30550113/30550113/20179.m3u8` |
+| NBC Sports NOW | HTTP Error (000) | `https://jmp2.uk/stvp-USBD420002446` |
 ---
 #### Base Channels URL
 ```
