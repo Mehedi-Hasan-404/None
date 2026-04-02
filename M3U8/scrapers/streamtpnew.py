@@ -39,19 +39,17 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     embed_list: list[tuple[int, str]] = ast.literal_eval(embed_list_str)
 
-    embed_list.sort(key=lambda i: i[0])
-
     m3u8 = "".join(
         chr(
             int("".join(c for c in base64.b64decode(v).decode("utf-8") if c.isdigit()))
             - sum(map(int, digit_list))
         )
-        for _, v in embed_list
+        for _, v in sorted(embed_list, key=lambda i: i[0])
     )
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return m3u8.split("&ip")[0]
+    return m3u8.split("ip=")[0]
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:

@@ -92,9 +92,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 async def scrape(browser: Browser) -> None:
     cached_urls = CACHE_FILE.load()
 
-    cached_count = len(cached_urls)
+    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
 
-    urls.update(cached_urls)
+    valid_count = cached_count = len(valid_urls)
+
+    urls.update(valid_urls)
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
@@ -121,29 +123,33 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
+                    sport, event, ts = (
+                        ev["sport"],
+                        ev["event"],
+                        ev["timestamp"],
+                    )
+
+                    key = f"[{sport}] {event} ({TAG})"
+
+                    tvg_id, logo = leagues.get_tvg_info(sport, event)
+
+                    entry = {
+                        "url": url,
+                        "logo": logo,
+                        "base": link,
+                        "timestamp": ts,
+                        "id": tvg_id or "Live.Event.us",
+                        "link": link,
+                    }
+
+                    cached_urls[key] = entry
+
                     if url:
-                        sport, event, ts = (
-                            ev["sport"],
-                            ev["event"],
-                            ev["timestamp"],
-                        )
+                        valid_count += 1
 
-                        key = f"[{sport}] {event} ({TAG})"
+                        urls[key] = entry
 
-                        tvg_id, logo = leagues.get_tvg_info(sport, event)
-
-                        entry = {
-                            "url": url,
-                            "logo": logo,
-                            "base": link,
-                            "timestamp": ts,
-                            "id": tvg_id or "Live.Event.us",
-                            "link": link,
-                        }
-
-                        urls[key] = cached_urls[key] = entry
-
-        log.info(f"Collected and cached {len(cached_urls) - cached_count} new event(s)")
+        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
     else:
         log.info("No new events found")
