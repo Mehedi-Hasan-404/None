@@ -1,11 +1,10 @@
-## Base Log @ 2026-04-03 09:14 UTC
+## Base Log @ 2026-04-03 15:07 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 3
+### ✅ Working Streams: 160<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20180.m3u8` |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
 | TV One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20868.m3u8` |
 ---
 #### Base Channels URL
