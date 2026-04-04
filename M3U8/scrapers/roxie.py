@@ -18,7 +18,7 @@ CACHE_FILE = Cache(TAG, exp=19_800)
 BASE_URL = "https://roxiestreams.su"
 
 SPORT_URLS = {
-    # "March Madness": urljoin(BASE_URL, "march-madness"),
+    "March Madness": urljoin(BASE_URL, "march-madness"),
     "Racing": urljoin(BASE_URL, "motorsports"),
     # "American Football": urljoin(BASE_URL, "nfl"),
 } | {
