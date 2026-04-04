@@ -11,7 +11,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STP"
 
-CACHE_FILE = Cache(TAG, exp=19_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
 API_URL = "https://streamtpnew.com/eventos.json"
 

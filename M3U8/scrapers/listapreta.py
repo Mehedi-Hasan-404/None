@@ -8,7 +8,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "LISTA"
 
-CACHE_FILE = Cache(TAG, exp=19_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
 API_URL = "https://listapreta.site/sports-widget/events.php"
 
