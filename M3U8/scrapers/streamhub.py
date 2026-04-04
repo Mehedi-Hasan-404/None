@@ -17,7 +17,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
 
-BASE_URL = "https://streamhub.pro"
+BASE_URL = "https://livesports4u.net"
 
 SPORT_ENDPOINTS = [
     f"sport_{sport_id}"
@@ -25,7 +25,7 @@ SPORT_ENDPOINTS = [
         # "68c02a4465113",  # American Football
         # "68c02a446582f",  # Baseball
         "68c02a4466011",  # Basketball
-        # "68c02a4466f56",  # Hockey
+        "68c02a4466f56",  # Hockey
         # "68c02a44674e9",  # MMA
         # "68c02a4467a48",  # Racing
         "68c02a4464a38",  # Soccer
