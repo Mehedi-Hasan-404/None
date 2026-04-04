@@ -1,10 +1,15 @@
-## Base Log @ 2026-04-03 15:07 UTC
+## Base Log @ 2026-04-04 04:28 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 2
+### ✅ Working Streams: 155<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20180.m3u8` |
+| CBS Sports Network | HTTP Error (401) | `https://restream-live.realiptv.to/2879115/5077048/3712` |
+| ESPN2 | HTTP Error (401) | `https://restream-live.realiptv.to/2879115/5077048/2581` |
+| Hallmark Family | HTTP Error (401) | `https://restream-live.realiptv.to/2879115/5077048/660922` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| NHL Network | HTTP Error (401) | `https://restream-live.realiptv.to/2879115/5077048/3672` |
 | TV One | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20868.m3u8` |
 ---
 #### Base Channels URL
