@@ -1,6 +1,5 @@
 import re
 from functools import partial
-from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -10,11 +9,15 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "OVOGOAL"
+TAG = "OVO"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
-BASE_URL = "https://ovogoal.plus"
+BASE_URL = "https://orbixa.top"
+
+
+def fix_league(s: str) -> str:
+    return " ".join(x.capitalize() for x in s.split()) if len(s) > 5 else s.upper()
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
@@ -61,31 +64,36 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     soup = HTMLParser(html_data.content)
 
-    sport = "Live Event"
+    for card in soup.css(".section-title"):
+        sport = fix_league(card.text(strip=True))
 
-    for card in soup.css(".main-content .stream-row"):
-        if (not (watch_btn_elem := card.css_first(".watch-btn"))) or (
-            not (onclick := watch_btn_elem.attributes.get("onclick"))
-        ):
-            continue
+        node = card.next
 
-        if not (event_name_elem := card.css_first(".stream-info")):
-            continue
+        while node:
+            if node.attributes.get("class") == "section-title":
+                break
 
-        href = onclick.split(".href=")[-1].replace("'", "")
+            elif node.tag == "a" and node.attributes.get("class") == "match":
+                if not (team_elems := node.css(".team")):
+                    continue
 
-        event_name = event_name_elem.text(strip=True)
+                if not (href := node.attributes.get("href")):
+                    continue
 
-        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-            continue
+                event_name = " vs ".join(team.text(strip=True) for team in team_elems)
 
-        events.append(
-            {
-                "sport": sport,
-                "event": event_name,
-                "link": urljoin(BASE_URL, href),
-            }
-        )
+                if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+                    continue
+
+                events.append(
+                    {
+                        "sport": sport,
+                        "event": event_name,
+                        "link": href,
+                    }
+                )
+
+            node = node.next
 
     return events
 
