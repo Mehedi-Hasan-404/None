@@ -64,36 +64,34 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     soup = HTMLParser(html_data.content)
 
-    for card in soup.css(".section-title"):
-        sport = fix_league(card.text(strip=True))
+    sport = None
 
-        node = card.next
+    for node in soup.css(".wrapper *"):
+        if (cls := node.attributes.get("class")) == "section-title":
+            sport = fix_league(node.text(strip=True))
 
-        while node:
-            if node.attributes.get("class") == "section-title":
-                break
+        if node.tag == "a" and cls == "match":
+            if not sport:
+                continue
 
-            elif node.tag == "a" and node.attributes.get("class") == "match":
-                if not (team_elems := node.css(".team")):
-                    continue
+            if not (team_elems := node.css(".team")):
+                continue
 
-                if not (href := node.attributes.get("href")):
-                    continue
+            if not (href := node.attributes.get("href")):
+                continue
 
-                event_name = " vs ".join(team.text(strip=True) for team in team_elems)
+            event_name = " vs ".join(team.text(strip=True) for team in team_elems)
 
-                if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-                    continue
+            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+                continue
 
-                events.append(
-                    {
-                        "sport": sport,
-                        "event": event_name,
-                        "link": href,
-                    }
-                )
-
-            node = node.next
+            events.append(
+                {
+                    "sport": sport,
+                    "event": event_name,
+                    "link": href,
+                }
+            )
 
     return events
 
