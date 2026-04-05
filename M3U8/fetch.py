@@ -67,8 +67,6 @@ async def main() -> None:
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(streamcenter.scrape(hdl_brwsr)),
-                # asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(streamsgate.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
@@ -78,6 +76,8 @@ async def main() -> None:
                 asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
+                asyncio.create_task(streamhub.scrape()),
+                asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtpnew.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
