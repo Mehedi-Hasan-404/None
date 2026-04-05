@@ -1,10 +1,11 @@
 import asyncio
+import re
 from functools import partial
 from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-from playwright.async_api import Browser
+from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -46,6 +47,42 @@ def get_event(t1: str, t2: str) -> str:
             return f"{t1.strip()} vs {t2.strip()}"
 
 
+async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
+    if not (event_data := await network.request(url, log=log)):
+        log.warning(f"URL {url_num}) Failed to load url.")
+        return
+
+    soup_1 = HTMLParser(event_data.content)
+
+    ifr = soup_1.css_first("iframe")
+
+    if not ifr or not (src := ifr.attributes.get("src")):
+        log.warning(f"URL {url_num}) No iframe element found.")
+        return
+
+    ifr_src = f"https:{src}" if src.startswith("//") else src
+
+    if not (
+        ifr_src_data := await network.request(
+            ifr_src,
+            headers={"Referer": url},
+            log=log,
+        )
+    ):
+        log.warning(f"URL {url_num}) Failed to load iframe source. (IFR1)")
+        return
+
+    valid_m3u8 = re.compile(r"file:\s+(\'|\")([^\"]*)(\'|\")", re.I)
+
+    if not (match := valid_m3u8.search(ifr_src_data.text)):
+        log.warning(f"URL {url_num}) No source found.")
+        return
+
+    log.info(f"URL {url_num}) Captured M3U8")
+
+    return match[2]
+
+
 async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
     tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
@@ -74,8 +111,8 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(hours=-1)
-    end_dt = now.delta(minutes=5)
+    start_dt = now.delta(minutes=-30)
+    end_dt = now.delta(minutes=30)
 
     for stream_group in api_data:
         date = stream_group.get("time")
@@ -118,7 +155,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return events
 
 
-async def scrape(browser: Browser) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
@@ -134,51 +171,45 @@ async def scrape(browser: Browser) -> None:
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
-        async with network.event_context(browser, stealth=False) as context:
-            for i, ev in enumerate(events, start=1):
-                async with network.event_page(context) as page:
-                    handler = partial(
-                        network.process_event,
-                        url=(link := ev["link"]),
-                        url_num=i,
-                        page=page,
-                        log=log,
-                    )
+        for i, ev in enumerate(events, start=1):
+            handler = partial(
+                process_event,
+                url=(link := ev["link"]),
+                url_num=i,
+            )
 
-                    url = await network.safe_process(
-                        handler,
-                        url_num=i,
-                        semaphore=network.PW_S,
-                        log=log,
-                    )
+            url = await network.safe_process(
+                handler,
+                url_num=i,
+                semaphore=network.PW_S,
+                log=log,
+            )
 
-                    sport, event, ts = (
-                        ev["sport"],
-                        ev["event"],
-                        ev["timestamp"],
-                    )
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["timestamp"],
+            )
 
-                    key = f"[{sport}] {event} ({TAG})"
+            key = f"[{sport}] {event} ({TAG})"
 
-                    tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(sport, event)
 
-                    entry = {
-                        "url": url,
-                        "logo": logo,
-                        "base": "https://instreams.click/",
-                        "timestamp": ts,
-                        "id": tvg_id or "Live.Event.us",
-                        "link": link,
-                    }
+            entry = {
+                "url": url,
+                "logo": logo,
+                "base": "https://streamfree.click",
+                "timestamp": ts,
+                "id": tvg_id or "Live.Event.us",
+                "link": link,
+            }
 
-                    cached_urls[key] = entry
+            cached_urls[key] = entry
 
-                    if url:
-                        valid_count += 1
+            if url:
+                valid_count += 1
 
-                        entry["url"] = url.split("&e")[0]
-
-                        urls[key] = entry
+                urls[key] = entry
 
         log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
