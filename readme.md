@@ -1,12 +1,11 @@
-## Base Log @ 2026-04-05 09:05 UTC
+## Base Log @ 2026-04-05 15:00 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 4
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/5AGbfz/324331/20180.m3u8` |
-| FDSN South | HTTP Error (403) | `http://mytvstream.net:8080/live/5AGbfz/324331/20922.m3u8` |
-| NHL Network | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257211.ts` |
+| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
 | TV One | HTTP Error (403) | `http://mytvstream.net:8080/live/5AGbfz/324331/20868.m3u8` |
 ---
 #### Base Channels URL
