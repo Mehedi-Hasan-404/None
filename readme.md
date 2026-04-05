@@ -1,12 +1,14 @@
-## Base Log @ 2026-04-05 15:00 UTC
+## Base Log @ 2026-04-05 20:57 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 156<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/5AGbfz/324331/20180.m3u8` |
-| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
-| TV One | HTTP Error (403) | `http://mytvstream.net:8080/live/5AGbfz/324331/20868.m3u8` |
+| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20180.m3u8` |
+| BET | HTTP Error (404) | `http://212.102.60.231/BET/index.m3u8` |
+| NHL Network | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257211.ts` |
+| Reelz Channel | HTTP Error (404) | `http://212.102.60.231/REELZ/index.m3u8` |
+| Starz Encore Classic | HTTP Error (404) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
