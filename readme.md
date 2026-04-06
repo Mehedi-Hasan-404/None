@@ -1,11 +1,16 @@
-## Base Log @ 2026-04-06 06:02 UTC
+## Base Log @ 2026-04-06 09:46 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 154<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| AXS TV | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162519.ts` |
 | Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/20180.m3u8` |
-| Fox Sports 2 | HTTP Error (403) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/55.ts` |
+| Aspire | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162754.ts` |
+| MotorTrend TV | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162559.ts` |
+| Nick Jr | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162571.ts` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162585.ts` |
+| Spectrum SportsNet Lakers | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162739.ts` |
 ---
 #### Base Channels URL
 ```
