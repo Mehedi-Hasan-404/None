@@ -1,14 +1,22 @@
-## Base Log @ 2026-04-05 20:57 UTC
+## Base Log @ 2026-04-06 05:09 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 5
+### ✅ Working Streams: 148<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/30550113/30550113/20180.m3u8` |
-| BET | HTTP Error (404) | `http://212.102.60.231/BET/index.m3u8` |
-| NHL Network | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257211.ts` |
-| Reelz Channel | HTTP Error (404) | `http://212.102.60.231/REELZ/index.m3u8` |
-| Starz Encore Classic | HTTP Error (404) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
+| ESPN2 | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21590.ts` |
+| FDSN West | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/3426.ts` |
+| FYI TV | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97459.ts` |
+| Fox News | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/51.ts` |
+| Game Show Network | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21571.ts` |
+| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/17772.m3u8` |
+| Hallmark Mystery | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97462.ts` |
+| History Channel | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21558.ts` |
+| MSNBC | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21551.ts` |
+| Pop TV | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97479.ts` |
+| Sky Sports News | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/23.ts` |
+| Smithsonian Channel | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97481.ts` |
+| TV Land | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21580.ts` |
 ---
 #### Base Channels URL
 ```
