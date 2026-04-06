@@ -1,14 +1,12 @@
-## Base Log @ 2026-04-06 15:11 UTC
+## Base Log @ 2026-04-06 15:31 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 5
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/20180.m3u8` |
-| Hallmark Mystery | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162546.ts` |
-| Nick Jr | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162571.ts` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162585.ts` |
-| Spectrum SportsNet Lakers | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162739.ts` |
+| HBO Family | HTTP Error (000) | `http://mytvstream.net:8080/live/k4Svp2/645504/17772.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/78514.ts` |
 ---
 #### Base Channels URL
 ```
