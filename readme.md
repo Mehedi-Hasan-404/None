@@ -1,22 +1,11 @@
-## Base Log @ 2026-04-06 05:09 UTC
+## Base Log @ 2026-04-06 06:02 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 13
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN2 | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21590.ts` |
-| FDSN West | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/3426.ts` |
-| FYI TV | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97459.ts` |
-| Fox News | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/51.ts` |
-| Game Show Network | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21571.ts` |
-| HBO Family | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/17772.m3u8` |
-| Hallmark Mystery | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97462.ts` |
-| History Channel | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21558.ts` |
-| MSNBC | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21551.ts` |
-| Pop TV | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97479.ts` |
-| Sky Sports News | HTTP Error (000) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/23.ts` |
-| Smithsonian Channel | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97481.ts` |
-| TV Land | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21580.ts` |
+| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/20180.m3u8` |
+| Fox Sports 2 | HTTP Error (403) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/55.ts` |
 ---
 #### Base Channels URL
 ```
