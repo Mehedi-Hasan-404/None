@@ -67,7 +67,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (api_req := await network.request(API_URL, log=log)):
         return events
 
-    elif not (api_data := api_req.json()):
+    elif not (api_data := api_req.json()) or api_data.get("error"):
         return events
 
     for event in api_data:

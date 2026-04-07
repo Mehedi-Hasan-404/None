@@ -13,7 +13,7 @@ TAG = "SHARK"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
+HTML_FILE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URL = "https://sharkstreams.net"
 
@@ -89,12 +89,12 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
-    if not (events := HTML_CACHE.load()):
+    if not (events := HTML_FILE.load()):
         log.info("Refreshing HTML cache")
 
         events = await refresh_html_cache(now.timestamp())
 
-        HTML_CACHE.write(events)
+        HTML_FILE.write(events)
 
     live = []
 

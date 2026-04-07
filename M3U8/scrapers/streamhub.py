@@ -15,7 +15,7 @@ TAG = "STRMHUB"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-HTML_CACHE = Cache(f"{TAG}-html", exp=19_800)
+HTML_FILE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URL = "https://livesports4u.net"
 
@@ -149,7 +149,7 @@ async def refresh_html_cache(
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
-    if not (events := HTML_CACHE.load()):
+    if not (events := HTML_FILE.load()):
         log.info("Refreshing HTML cache")
 
         tasks = [
@@ -166,7 +166,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         events = {k: v for data in results for k, v in data.items()}
 
-        HTML_CACHE.write(events)
+        HTML_FILE.write(events)
 
     live = []
 

@@ -13,7 +13,7 @@ TAG = "EMBEDHD"
 
 CACHE_FILE = Cache(TAG, exp=5_400)
 
-API_CACHE = Cache(f"{TAG}-api", exp=28_800)
+API_FILE = Cache(f"{TAG}-api", exp=28_800)
 
 BASE_URL = "https://embedhd.org"
 
@@ -25,7 +25,7 @@ def fix_league(s: str) -> str:
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
-    if not (api_data := API_CACHE.load(per_entry=False)):
+    if not (api_data := API_FILE.load(per_entry=False)):
         log.info("Refreshing API cache")
 
         api_data = {"timestamp": now.timestamp()}
@@ -35,7 +35,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
             api_data["timestamp"] = now.timestamp()
 
-        API_CACHE.write(api_data)
+        API_FILE.write(api_data)
 
     events = []
 

@@ -26,12 +26,14 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     if not (api_data := API_FILE.load(per_entry=False)):
         log.info("Refreshing API cache")
 
+        api_data = {"timestamp": now.timestamp()}
+
         if r := await network.request(
             urljoin(API_URL, "api/v1/events/sports"),
             log=log,
             params={"user": "cdnlivetv", "plan": "free"},
         ):
-            api_data = r.json().get("cdn-live-tv", {"timestamp": now.timestamp()})
+            api_data = r.json().get("cdn-live-tv")
 
         API_FILE.write(api_data)
 
