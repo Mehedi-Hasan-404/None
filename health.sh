@@ -34,7 +34,7 @@ get_status() {
 
         echo "PASS" >>"$STATUSLOG"
     else
-        printf '❌ %s (%s)\n' "$channel" "$url"
+        printf '❌  %s (%s)\n' "$channel" "$url"
 
         if [[ "$output" =~ Server\ returned\ ([0-9]{3})\ (.+) ]]; then
             code="${BASH_REMATCH[1]}"
