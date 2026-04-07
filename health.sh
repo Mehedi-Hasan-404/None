@@ -8,16 +8,12 @@ STATUSLOG=$(mktemp)
 get_status() {
     local url="$1"
     local channel="$2"
-    local index="$3"
-    local total="$4"
     local attempt response status_code
 
     [[ "$url" != http* ]] && return
 
-    printf '[%d/%d] Checking "%s"\n' "$((index + 1))" "$total" "$url"
-
     output=$(
-        ffprobe \
+        timeout 10s ffprobe \
             -v error \
             -rw_timeout 15000000 \
             -timeout 15000000 \
@@ -25,18 +21,26 @@ get_status() {
             -show_entries stream=codec_name \
             -of csv=p=0 \
             -headers "User-Agent: $UA" \
+            -analyzeduration 5M \
+            -probesize 5M \
+            -http_persistent 0 \
             "$url" 2>&1
     )
 
     rc=$?
 
     if ((rc == 0)); then
+        printf '✔️  %s (%s)\n' "$channel" "$url"
+
         echo "PASS" >>"$STATUSLOG"
     else
+        printf '❌ %s (%s)\n' "$channel" "$url"
+
         if [[ "$output" =~ Server\ returned\ ([0-9]{3})\ (.+) ]]; then
             code="${BASH_REMATCH[1]}"
-
             echo "| $channel | HTTP Error ($code) | \`$url\` |" >>"$STATUSLOG"
+        elif ((rc == 124)); then
+            echo "| $channel | HTTP Timeout (408) | \`$url\` |" >>"$STATUSLOG"
         else
             echo "| $channel | HTTP Error (000) | \`$url\` |" >>"$STATUSLOG"
         fi
@@ -46,10 +50,11 @@ get_status() {
 }
 
 check_links() {
-    echo -e "Checking links from: $base_file\n"
     total_urls=$(grep -cE '^https?://' "$base_file")
     channel_num=0
     name=""
+
+    echo -e "Checking $total_urls links from: $base_file\n"
 
     echo "| Channel | Error (Code) | Link |" >"$STATUSLOG"
     echo "| ------- | ------------ | ---- |" >>"$STATUSLOG"
@@ -62,8 +67,8 @@ check_links() {
             [[ -z "$name" ]] && name="Channel $channel_num"
 
         elif [[ "$line" =~ ^https?:// ]]; then
-            while (($(jobs -r | wc -l) >= MAX_JOBS)); do sleep 0.2; done
-            get_status "$line" "$name" "$channel_num" "$total_urls" &
+            while (($(jobs -rp | wc -l) >= MAX_JOBS)); do sleep 0.2; done
+            get_status "$line" "$name" &
             ((channel_num++))
         fi
 
