@@ -1,14 +1,65 @@
-## Base Log @ 2026-04-07 09:42 UTC
+## Base Log @ 2026-04-07 15:52 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 5
+### ✅ Working Streams: 105<br>❌ Dead Streams: 56
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/20180.m3u8` |
+| AXS TV | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/135134.ts` |
+| Altitude Sports | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162771.ts` |
+| Aspire | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162754.ts` |
+| CBS Sports Network | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162524.ts` |
+| Cozi TV | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162527.ts` |
+| Discovery Life | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162531.ts` |
+| ESPN2 | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162676.ts` |
+| FDSN Detroit | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163686.ts` |
+| FDSN Florida | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163696.ts` |
+| FDSN Midwest | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163668.ts` |
+| FDSN North | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163682.ts` |
+| FDSN Ohio | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163690.ts` |
+| FDSN Oklahoma | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163674.ts` |
+| FDSN SoCal | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163692.ts` |
+| FDSN South | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163698.ts` |
+| FDSN Southeast | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163670.ts` |
+| FDSN Southwest | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163694.ts` |
+| FDSN Sun | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163688.ts` |
+| FDSN West | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163680.ts` |
+| FDSN Wisconsin | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163684.ts` |
+| FX Movie Channel | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162697.ts` |
+| FYI TV | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162544.ts` |
+| Fox Business | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162539.ts` |
+| Fox News | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/164784.ts` |
+| Fox Sports 1 | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/130355.ts` |
+| Fox Sports 2 | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/32151.ts` |
+| Freeform TV | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162693.ts` |
+| Game Show Network | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162699.ts` |
+| Golf Channel | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/40565.ts` |
+| Hallmark Mystery | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/30345.ts` |
+| History Channel | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162548.ts` |
+| ION TV | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162550.ts` |
+| Investigation Discovery | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162708.ts` |
+| MSNBC | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162560.ts` |
+| Marquee Sports Network | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162758.ts` |
+| MotorTrend TV | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/129656.ts` |
+| NBC Sports Boston | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162566.ts` |
+| NBC Sports California | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162769.ts` |
+| NFL RedZone | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/169208.ts` |
+| National Geographic | HTTP Error (000) | `http://23.237.104.106:8080/USA_NAT_GEO/index.m3u8` |
+| NewsNation | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162727.ts` |
+| Nick Jr | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/59666.ts` |
 | Premier Sports 1 | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117037.ts` |
 | Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117038.ts` |
+| Showtime Extreme | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162734.ts` |
 | Sky Family | HTTP Error (403) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/274.ts` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/78514.ts` |
+| Smithsonian Channel | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/45866.ts` |
+| Sony Movie Channel | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162583.ts` |
+| Space City Home Network | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/411333.ts` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/78514.ts` |
+| Spectrum SportsNet Lakers | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/78515.ts` |
+| Sportsman Channel | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162586.ts` |
+| TV Land | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162596.ts` |
+| The Weather Channel | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162591.ts` |
+| USA East | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162604.ts` |
+| Willow Cricket | HTTP Error (404) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/411382.ts` |
 ---
 #### Base Channels URL
 ```
