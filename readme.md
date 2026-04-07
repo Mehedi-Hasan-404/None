@@ -1,12 +1,12 @@
-## Base Log @ 2026-04-06 15:31 UTC
+## Base Log @ 2026-04-07 04:45 UTC
 
 ### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/k4Svp2/645504/20180.m3u8` |
-| HBO Family | HTTP Error (000) | `http://mytvstream.net:8080/live/k4Svp2/645504/17772.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://www.1play.cool:60001/live/ULtR63183811dd/kquFuCz3EpNa/78514.ts` |
+| Premier Sports 1 | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117037.ts` |
+| Premier Sports 2 | HTTP Error (000) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117038.ts` |
+| Sky Family | HTTP Error (403) | `https://starshare.st/live/P4B9TB9xR8/humongous2tonight/274.ts` |
 ---
 #### Base Channels URL
 ```
