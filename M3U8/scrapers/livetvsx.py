@@ -17,7 +17,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
 
-BASE_URL = "https://cdn.livetv873.me/rss/upcoming_en.xml"
+BASE_URL = "https://cdn.livetv872.me/rss/upcoming_en.xml"
 
 VALID_SPORTS = [
     "MLB. Preseason",
