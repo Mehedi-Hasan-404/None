@@ -1,13 +1,15 @@
-## Base Log @ 2026-04-07 17:13 UTC
+## Base Log @ 2026-04-07 21:09 UTC
 
-### ✅ Working Streams: 155<br>❌ Dead Streams: 5
+### ✅ Working Streams: 153<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | C-SPAN | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/92792.ts` |
-| FDSN Sun | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/163688.ts` |
-| Lifetime | HTTP Timeout (408) | `http://41.205.93.154/LIFETIME/index.m3u8` |
-| Sky Sports News | HTTP Timeout (408) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117064.ts` |
+| History Channel | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162548.ts` |
+| ION TV | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162550.ts` |
+| NBC Sports California | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162769.ts` |
+| Showtime Extreme | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162734.ts` |
+| Sony Movie Channel | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162583.ts` |
 | TLC | HTTP Timeout (408) | `http://89.105.221.127/tlc/mpegts?token=test` |
 ---
 #### Base Channels URL
