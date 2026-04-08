@@ -75,7 +75,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     events = []
 
     start_dt = now.delta(hours=-1)
-    end_dt = now.delta(minutes=5)
+    end_dt = now.delta(minutes=1)
 
     for sport in api_data:
         data = api_data[sport]
