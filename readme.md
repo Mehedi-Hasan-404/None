@@ -1,12 +1,12 @@
-## Base Log @ 2026-04-08 05:29 UTC
+## Base Log @ 2026-04-08 09:43 UTC
 
 ### ✅ Working Streams: 156<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | C-SPAN | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/92792.ts` |
-| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
-| Sportsnet East | HTTP Error (404) | `https://stream.decentdoubts.net/801/index.m3u8` |
+| QVC | HTTP Timeout (408) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/36743.ts` |
+| TLC | HTTP Timeout (408) | `http://89.105.221.127/tlc/mpegts?token=test` |
 | USA East | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162604.ts` |
 ---
 #### Base Channels URL
