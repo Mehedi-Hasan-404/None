@@ -1,24 +1,7 @@
-## Base Log @ 2026-04-08 21:07 UTC
+## Base Log @ 2026-04-08 23:39 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 15
+### ✅ Working Streams: 160<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| C-SPAN | HTTP Error (403) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/92792.ts` |
-| Grit TV | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/20861.m3u8` |
-| HBO Family | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/17772.m3u8` |
-| NBC Sports Bay Area | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/9900.m3u8` |
-| NBC Sports Philadelphia | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/20943.m3u8` |
-| NFL RedZone | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/169208.ts` |
-| Pop TV | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/20976.m3u8` |
-| Showtime Extreme | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162734.ts` |
-| Sky Sports News | HTTP Timeout (408) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117064.ts` |
-| SportsNet Pittsburgh | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/108178.m3u8` |
-| Sportsman Channel | HTTP Timeout (408) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162586.ts` |
-| TV One | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/20868.m3u8` |
-| Tennis Channel | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/20184.m3u8` |
-| USA East | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162604.ts` |
-| getTV | HTTP Error (404) | `http://mytvstream.net:8080/live/k4Svp2/645504/18366.m3u8` |
 ---
 #### Base Channels URL
 ```
