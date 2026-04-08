@@ -32,14 +32,14 @@ async def process_event(
     url_num: int,
 ) -> str | None:
 
-    if not (
-        r := await network.client.post(
-            urljoin(API_URLS[sport], "api/v2/generate_stream_info"),
-            headers={"Referer": BASE_URLS[sport]},
-            json={"flavor_id": flavor_id, "media_event_id": media_id},
-        )
-    ):
-        log.warning(f"URL {url_num}) Failed to create post request")
+    r = await network.client.post(
+        urljoin(API_URLS[sport], "api/v2/generate_stream_info"),
+        headers={"Referer": BASE_URLS[sport]},
+        json={"flavor_id": flavor_id, "media_event_id": media_id},
+    )
+
+    if r.status_code != 200:
+        log.warning(f"URL {url_num}) Failed to create post request.")
         return
 
     data: dict[str, str] = r.json()
