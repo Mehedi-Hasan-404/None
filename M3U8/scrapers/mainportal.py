@@ -53,7 +53,7 @@ async def process_event(
     return m3u8_url
 
 
-async def refresh_api_cache() -> dict[str, dict[str, list[dict]]]:
+async def get_api_data() -> dict[str, dict[str, list[dict]]]:
     tasks = [
         (
             sport,
@@ -70,7 +70,7 @@ async def refresh_api_cache() -> dict[str, dict[str, list[dict]]]:
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
-    api_data = await refresh_api_cache()
+    api_data = await get_api_data()
 
     events = []
 
