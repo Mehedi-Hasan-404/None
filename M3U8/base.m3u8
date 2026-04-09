@@ -16,7 +16,7 @@ https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_51
 http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/332892.ts
 
 #EXTINF:-1 tvg-chno="6" tvg-id="AMC.HD.us2" tvg-name="AMC" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10021_dark_360w_270h.png" group-title="TV",AMC
-http://41.205.93.154/AMC/index.m3u8
+http://23.239.31.26:8989/amc/index.m3u8
 
 #EXTINF:-1 tvg-chno="7" tvg-id="Animal.Planet.HD.us2" tvg-name="Animal Planet" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16331_dark_360w_270h.png" group-title="TV",Animal Planet
 http://23.237.104.106:8080/USA_ANIMAL_PLANET/index.m3u8
@@ -28,7 +28,7 @@ http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/647835.ts
 http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21630.ts
 
 #EXTINF:-1 tvg-chno="10" tvg-id="AXS.TV.us2" tvg-name="AXS TV" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s28506_dark_360w_270h.png" group-title="TV",AXS TV
-http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/42309.ts
+http://23.239.31.26:8989/axstv/index.m3u8
 
 #EXTINF:-1 tvg-chno="11" tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s64492_dark_360w_270h.png" group-title="TV",BBC America
 https://bcovlive-a.akamaihd.net/7f5ec16d102f4b5d92e8e27bc95ff424/us-east-1/6240731308001/playlist.m3u8
@@ -58,7 +58,7 @@ http://41.205.93.154/BRAVO/index.m3u8
 https://buzzrota-web.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 tvg-chno="20" tvg-id="CSPAN.us2" tvg-name="C-SPAN" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10161_dark_360w_270h.png" group-title="TV",C-SPAN
-http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/92792.ts
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/14804.ts
 
 #EXTINF:-1 tvg-chno="21" tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12131_dark_360w_270h.png" group-title="TV",Cartoon Network
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
@@ -100,7 +100,7 @@ http://hardcoremedia.xyz/live/rabdsbmz/3731346838/261524.ts
 https://fast-channels.sinclairstoryline.com/COMET/index.m3u8
 
 #EXTINF:-1 tvg-chno="34" tvg-id="Cooking.Channel.HD.us2" tvg-name="Cooking Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30156_dark_360w_270h.png" group-title="TV",Cooking Channel
-http://23.237.104.106:8080/USA_COOKING/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2297.ts
 
 #EXTINF:-1 tvg-chno="35" tvg-id="Court.TV.us2" tvg-name="Court TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s117160_dark_360w_270h.png" group-title="TV",Court TV
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8
@@ -115,7 +115,7 @@ http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/mpegts
 http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/87547.ts
 
 #EXTINF:-1 tvg-chno="39" tvg-id="Discovery.Channel.HD.us2" tvg-name="Discovery Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11150_dark_360w_270h.png" group-title="TV",Discovery Channel
-http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/23301.ts
 
 #EXTINF:-1 tvg-chno="40" tvg-id="Discovery.Family.Channel.HD.us2" tvg-name="Discovery Family Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16618_dark_360w_270h.png" group-title="TV",Discovery Family Channel
 http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/2598.ts
@@ -142,7 +142,7 @@ http://41.205.93.154/ESPN/index.m3u8
 http://hardcoremedia.xyz/live/rabdsbmz/3731346838/136160.ts
 
 #EXTINF:-1 tvg-chno="48" tvg-id="ESPNU.HD.us2" tvg-name="ESPN U" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s45654_dark_360w_270h.png" group-title="TV",ESPN U
-http://23.237.104.106:8080/USA_ESPNU/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2311.ts
 
 #EXTINF:-1 tvg-chno="49" tvg-id="ESPN2.HD.us2" tvg-name="ESPN2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12444_dark_360w_270h.png" group-title="TV",ESPN2
 http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/21590.ts
@@ -220,7 +220,7 @@ http://23.237.104.106:8080/USA_FX/index.m3u8
 http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162697.ts
 
 #EXTINF:-1 tvg-chno="74" tvg-id="FXX.HD.us2" tvg-name="FXX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" group-title="TV",FXX
-http://23.237.104.106:8080/USA_FXX/index.m3u8
+http://89.105.221.127/FX/index.m3u8?token=test
 
 #EXTINF:-1 tvg-chno="75" tvg-id="FYI.Channel.HD.us2" tvg-name="FYI TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16834_dark_360w_270h.png" group-title="TV",FYI TV
 http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162544.ts
@@ -355,7 +355,7 @@ http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129935.ts
 http://89.105.221.127/Oxygen/index.m3u8?token=test
 
 #EXTINF:-1 tvg-chno="119" tvg-id="Paramount.Network.HD.us2" tvg-name="Paramount Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11163_dark_360w_270h.png" group-title="TV",Paramount Network
-http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/14839.ts
 
 #EXTINF:-1 tvg-chno="120" tvg-id="PBS.KIDS.HD.us2" tvg-name="PBS Kids" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s101364_dark_360w_270h.png" group-title="TV",PBS Kids
 https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8
@@ -462,8 +462,8 @@ http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162596.ts
 #EXTINF:-1 tvg-chno="154" tvg-id="TV.ONE.HD.us2" tvg-name="TV One" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s35513_dark_360w_270h.png" group-title="TV",TV One
 http://mytvstream.net:8080/live/k4Svp2/645504/20868.m3u8
 
-#EXTINF:-1 tvg-chno="155" tvg-id="USA.Network.HD.us2" tvg-name="USA East" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11207_dark_360w_270h.png" group-title="TV",USA East
-http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162604.ts
+#EXTINF:-1 tvg-chno="155" tvg-id="USA.Network.HD.us2" tvg-name="USA East" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11207_dark_360w_270h.png" group-title="TV",USA Network
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3390.ts
 
 #EXTINF:-1 tvg-chno="156" tvg-id="VH1.HD.us2" tvg-name="VH1" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11218_dark_360w_270h.png" group-title="TV",VH1
 http://23.237.104.106:8080/USA_VH1/index.m3u8
@@ -478,4 +478,4 @@ http://23.237.104.106:8080/USA_WE_TV/index.m3u8
 http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/3972.ts
 
 #EXTINF:-1 tvg-chno="160" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
-http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/5519.ts
