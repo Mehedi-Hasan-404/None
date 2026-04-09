@@ -85,7 +85,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         event_dt = Time.from_str(event["start"], timezone="UTC")
 
-        if now.date() != event_dt.date():
+        if event_dt.date() != now.date():
             continue
 
         if not (channels := event.get("channels")):
