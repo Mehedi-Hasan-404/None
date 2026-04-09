@@ -1,19 +1,27 @@
-## Base Log @ 2026-04-09 04:56 UTC
+## Base Log @ 2026-04-09 09:46 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 11
+### ✅ Working Streams: 141<br>❌ Dead Streams: 19
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Antenna TV | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/647835.ts` |
+| Bloomberg TV | HTTP Error (404) | `http://41.205.93.154/BLOOMBERG/index.m3u8` |
+| C-SPAN | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/14804.ts` |
 | CW | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/87547.ts` |
 | Discovery Family Channel | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/2598.ts` |
 | Discovery Science | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/2595.ts` |
+| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
 | Golf Channel | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/2385.ts` |
 | Hallmark Mystery | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/97462.ts` |
+| MotorTrend TV | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162559.ts` |
+| Nick Jr | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162571.ts` |
 | Premier Sports 1 | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/89089.ts` |
 | Premier Sports 2 | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/89090.ts` |
-| Sky Sports News | HTTP Timeout (408) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117064.ts` |
+| Smithsonian Channel | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/45866.ts` |
 | Space City Home Network | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/663927.ts` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162585.ts` |
+| Spectrum SportsNet Lakers | HTTP Error (403) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162739.ts` |
+| USA East | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3390.ts` |
 | Willow Cricket | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/3972.ts` |
 ---
 #### Base Channels URL
