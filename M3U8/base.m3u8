@@ -409,16 +409,16 @@ http://mytvstream.net:8080/live/56481106/11185695/21842.m3u8
 http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/30847.ts
 
 #EXTINF:-1 tvg-chno="137" tvg-id="Sportsnet.360.HD.ca2" tvg-name="Sportsnet 360" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s49952_dark_360w_270h.png" group-title="TV",Sportsnet 360
-https://stream.decentdoubts.net/803/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3377.ts
 
 #EXTINF:-1 tvg-chno="138" tvg-id="Sportsnet.East.ca2" tvg-name="Sportsnet East" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s62109_dark_360w_270h.png" group-title="TV",Sportsnet East
-https://stream.decentdoubts.net/801/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/1720.ts
 
 #EXTINF:-1 tvg-chno="139" tvg-id="SNY.SportsNet.New.York.HD.us2" tvg-name="SportsNet New York" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s50038_dark_360w_270h.png" group-title="TV",SportsNet New York
 http://212.102.60.231/SNY/index.m3u8
 
 #EXTINF:-1 tvg-chno="140" tvg-id="Sportsnet.One.ca2" tvg-name="Sportsnet One" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68859_dark_360w_270h.png" group-title="TV",Sportsnet One
-https://stream.decentdoubts.net/808/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3378.ts
 
 #EXTINF:-1 tvg-chno="141" tvg-id="SportsNet.Pittsburgh.HD.us2" tvg-name="SportsNet Pittsburgh" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s26028_dark_360w_270h.png" group-title="TV",SportsNet Pittsburgh
 http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/59945.ts
@@ -451,10 +451,10 @@ https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_356
 https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8
 
 #EXTINF:-1 tvg-chno="151" tvg-id="TSN.1.ca2" tvg-name="TSN1" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11182_dark_360w_270h.png" group-title="TV",TSN1
-https://stream.decentdoubts.net/805/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/770.ts
 
 #EXTINF:-1 tvg-chno="152" tvg-id="TSN.2.ca2" tvg-name="TSN2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s61474_dark_360w_270h.png" group-title="TV",TSN2
-https://stream.decentdoubts.net/806/index.m3u8
+http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/771.ts
 
 #EXTINF:-1 tvg-chno="153" tvg-id="Turner.Classic.Movies.HD.us2" tvg-name="Turner Classic Movies" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12852_dark_360w_270h.png" group-title="TV",Turner Classic Movies
 https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8
