@@ -1,17 +1,14 @@
-## Base Log @ 2026-04-10 01:14 UTC
+## Base Log @ 2026-04-10 05:11 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 8
+### ✅ Working Streams: 156<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162771.ts` |
-| Antenna TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/live/mitrovic/19106b7cb4/15119.ts` |
-| FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/live/mitrovic/19106b7cb4/39873.ts` |
-| HBO Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/live/mitrovic/19106b7cb4/760.ts` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/live/mitrovic/19106b7cb4/194336.ts` |
-| Space City Home Network | HTTP Error (401) | `http://user.scalecdn.co:8080/live/69922173979534301/P0ZxXMOVz8qnPU4m/663927.ts` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162585.ts` |
-| Spectrum SportsNet Lakers | HTTP Error (404) | `http://tv.proyectox.vip:8080/live/eEiiLll09384Ecaiman34RtR/KTap2pdJx7/162739.ts` |
+| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/20180.m3u8` |
+| FDSN Florida | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296662.ts` |
+| FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
+| NESN | HTTP Error (404) | `http://23.237.104.106:8080/USA_NESN/index.m3u8` |
+| TLC | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2362.ts` |
 ---
 #### Base Channels URL
 ```
