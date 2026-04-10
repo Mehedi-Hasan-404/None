@@ -19,7 +19,7 @@ API_MIRRORS = [
     "https://api.ppv.to/api/streams",
     "https://api.ppv.cx/api/streams",
     "https://api.ppv.sh/api/streams",
-    "https://api.ppv.la/api/streams",
+    # "https://api.ppv.la/api/streams",
 ]
 
 
