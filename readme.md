@@ -1,15 +1,11 @@
-## Base Log @ 2026-04-10 09:45 UTC
+## Base Log @ 2026-04-10 15:12 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 7
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CW | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/171820.ts` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| Grit TV | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/15086.ts` |
-| History Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/761.ts` |
-| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
+| TV One | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/13010.ts` |
 | YES Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
