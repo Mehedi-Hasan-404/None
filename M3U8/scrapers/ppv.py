@@ -18,7 +18,7 @@ API_FILE = Cache(f"{TAG}-api", exp=19_800)
 API_MIRRORS = [
     "https://api.ppv.to/api/streams",
     "https://api.ppv.cx/api/streams",
-    "https://api.ppv.sh/api/streams",
+    # "https://api.ppv.sh/api/streams",
     # "https://api.ppv.la/api/streams",
 ]
 
