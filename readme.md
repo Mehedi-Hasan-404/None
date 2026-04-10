@@ -1,11 +1,16 @@
-## Base Log @ 2026-04-10 15:12 UTC
+## Base Log @ 2026-04-10 21:12 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 153<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| TV One | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/13010.ts` |
+| National Geographic | HTTP Error (404) | `http://23.237.104.106:8080/USA_NAT_GEO/index.m3u8` |
+| Sportsnet 360 | HTTP Error (403) | `https://stream.decentdoubts.net/803/index.m3u8` |
+| Sportsnet East | HTTP Error (403) | `https://stream.decentdoubts.net/801/index.m3u8` |
+| Sportsnet One | HTTP Error (403) | `https://stream.decentdoubts.net/808/index.m3u8` |
+| TSN1 | HTTP Error (403) | `https://stream.decentdoubts.net/805/index.m3u8` |
+| TSN2 | HTTP Error (403) | `https://stream.decentdoubts.net/806/index.m3u8` |
 | YES Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
