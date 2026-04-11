@@ -62,7 +62,7 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
-                # asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
+                asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 # asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
@@ -75,12 +75,12 @@ async def main() -> None:
                 asyncio.create_task(istreameast.scrape()),
                 # asyncio.create_task(listapreta.scrape()),
                 asyncio.create_task(mainportal.scrape()),
-                # asyncio.create_task(ovogoal.scrape()),
+                asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 # asyncio.create_task(streamhub.scrape()),
-                # asyncio.create_task(streamsgate.scrape()),
+                asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtpnew.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
