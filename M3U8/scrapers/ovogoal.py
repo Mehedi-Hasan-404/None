@@ -1,5 +1,6 @@
 import re
 from functools import partial
+from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -14,10 +15,6 @@ TAG = "OVO"
 CACHE_FILE = Cache(TAG, exp=28_800)
 
 BASE_URL = "https://ovogoaal.com"
-
-
-def fix_league(s: str) -> str:
-    return " ".join(x.capitalize() for x in s.split()) if len(s) > 5 else s.upper()
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
@@ -64,34 +61,31 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     soup = HTMLParser(html_data.content)
 
-    sport = None
+    sport = "Live Event"
 
-    for node in soup.css(".wrapper *"):
-        if (cls := node.attributes.get("class")) == "section-title":
-            sport = fix_league(node.text(strip=True))
+    for card in soup.css(".main-content .stream-row"):
+        if (not (watch_btn_elem := card.css_first(".watch-btn"))) or (
+            not (onclick := watch_btn_elem.attributes.get("onclick"))
+        ):
+            continue
 
-        if node.tag == "a" and cls == "match":
-            if not sport:
-                continue
+        if not (event_name_elem := card.css_first(".stream-info")):
+            continue
 
-            if not (team_elems := node.css(".team")):
-                continue
+        href = onclick.split(".href=")[-1].replace("'", "")
 
-            if not (href := node.attributes.get("href")):
-                continue
+        event_name = event_name_elem.text(strip=True)
 
-            event_name = " vs ".join(team.text(strip=True) for team in team_elems)
+        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+            continue
 
-            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-                continue
-
-            events.append(
-                {
-                    "sport": sport,
-                    "event": event_name,
-                    "link": href,
-                }
-            )
+        events.append(
+            {
+                "sport": sport,
+                "event": event_name,
+                "link": urljoin(f"{html_data.url}", href),
+            }
+        )
 
     return events
 

@@ -76,7 +76,7 @@ async def get_events(cached_hrefs: set[str]) -> list[dict[str, str]]:
             {
                 "sport": sport,
                 "event": clean_event.sub("", event_name),
-                "link": urljoin(BASE_URL, href),
+                "link": urljoin(f"{html_data.url}", href),
                 "href": href,
             }
         )

@@ -66,7 +66,7 @@ async def get_events() -> list[dict[str, str]]:
                 {
                     "sport": sport,
                     "event": event_name,
-                    "link": urljoin(BASE_URL, href),
+                    "link": urljoin(f"{html_data.url}", href),
                 }
             )
 
