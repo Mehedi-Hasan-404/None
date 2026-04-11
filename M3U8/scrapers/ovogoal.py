@@ -13,7 +13,7 @@ TAG = "OVO"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
-BASE_URL = "https://orbixa.top"
+BASE_URL = "https://ovogoaal.com"
 
 
 def fix_league(s: str) -> str:
