@@ -1,4 +1,3 @@
-import base64
 import re
 from functools import partial
 
@@ -17,39 +16,36 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 BASE_URL = "https://istreameast.app"
 
 
-async def process_event(url: str, url_num: int) -> str | None:
+async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
+    nones = None, None
+
     if not (event_data := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
-
-        return
+        return nones
 
     soup = HTMLParser(event_data.content)
 
     if not (iframe := soup.css_first("iframe#wp_player")):
         log.warning(f"URL {url_num}) No iframe element found.")
-
-        return
+        return nones
 
     if not (iframe_src := iframe.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe source found.")
-
-        return
+        return nones
 
     if not (iframe_src_data := await network.request(iframe_src, log=log)):
         log.warning(f"URL {url_num}) Failed to load iframe source.")
+        return nones
 
-        return
-
-    pattern = re.compile(r"source:\s*window\.atob\(\s*'([^']+)'\s*\)", re.I)
+    pattern = re.compile(r'const\s+source\s+=\s+"([^"]*)"', re.I)
 
     if not (match := pattern.search(iframe_src_data.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
-
-        return
+        return nones
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return base64.b64decode(match[1]).decode("utf-8")
+    return match[1], iframe_src
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
@@ -124,7 +120,7 @@ async def scrape() -> None:
                 url_num=i,
             )
 
-            url = await network.safe_process(
+            url, iframe = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.HTTP_S,
@@ -140,7 +136,7 @@ async def scrape() -> None:
             entry = {
                 "url": url,
                 "logo": logo,
-                "base": "https://gooz.aapmains.net",
+                "base": iframe,
                 "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
