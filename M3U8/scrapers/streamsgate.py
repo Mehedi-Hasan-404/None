@@ -80,7 +80,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return match[2]
+    return match[2], ifr_src
 
 
 async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
@@ -178,7 +178,7 @@ async def scrape() -> None:
                 url_num=i,
             )
 
-            url = await network.safe_process(
+            url, iframe = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.PW_S,
@@ -198,7 +198,7 @@ async def scrape() -> None:
             entry = {
                 "url": url,
                 "logo": logo,
-                "base": "https://streamfree.click",
+                "base": iframe,
                 "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
