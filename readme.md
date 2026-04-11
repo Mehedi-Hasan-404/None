@@ -1,12 +1,12 @@
-## Base Log @ 2026-04-10 22:04 UTC
+## Base Log @ 2026-04-11 04:32 UTC
 
 ### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| getTV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/194187.ts` |
-| YES Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8` |
+| Sony Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/5831.ts` |
+| YES Network | HTTP Timeout (408) | `http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
 ```
