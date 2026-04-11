@@ -48,9 +48,11 @@ def get_event(t1: str, t2: str) -> str:
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
+    nones = None, None
+
     if not (event_data := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
-        return
+        return nones
 
     soup_1 = HTMLParser(event_data.content)
 
@@ -58,7 +60,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     if not ifr or not (src := ifr.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe element found.")
-        return
+        return nones
 
     ifr_src = f"https:{src}" if src.startswith("//") else src
 
@@ -70,13 +72,13 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         )
     ):
         log.warning(f"URL {url_num}) Failed to load iframe source. (IFR1)")
-        return
+        return nones
 
     valid_m3u8 = re.compile(r"file:\s+(\'|\")([^\"]*)(\'|\")", re.I)
 
     if not (match := valid_m3u8.search(ifr_src_data.text)):
         log.warning(f"URL {url_num}) No source found.")
-        return
+        return nones
 
     log.info(f"URL {url_num}) Captured M3U8")
 
