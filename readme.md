@@ -1,12 +1,10 @@
-## Base Log @ 2026-04-11 22:07 UTC
+## Base Log @ 2026-04-12 05:10 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 160<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Florida | HTTP Error (404) | `http://iptvtree.net:8080/live/mitrovic/19106b7cb4/296662.ts` |
-| FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/mitrovic/19106b7cb4/39873.ts` |
-| Sony Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/mitrovic/19106b7cb4/5831.ts` |
+| FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
 ---
 #### Base Channels URL
 ```
