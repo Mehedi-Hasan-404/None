@@ -8,45 +8,58 @@ STATUSLOG=$(mktemp)
 get_status() {
     local url="$1"
     local channel="$2"
+    local index="$3"
+    local total="$4"
     local attempt response status_code
 
     [[ "$url" != http* ]] && return
 
-    output=$(
-        timeout 10s ffprobe \
-            -v error \
-            -rw_timeout 15000000 \
-            -timeout 15000000 \
-            -select_streams v:0 \
-            -show_entries stream=codec_name \
-            -of csv=p=0 \
-            -headers "User-Agent: $UA" \
-            -analyzeduration 5M \
-            -probesize 5M \
-            -http_persistent 0 \
+    printf -v chnl_info "%s (%s)\n" "$channel" "$url"
+
+    response=$(
+        curl -skL \
+            -A "$UA" \
+            -H "Accept: */*" \
+            -H "Accept-Language: en-US,en;q=0.9" \
+            -H "Connection: keep-alive" \
+            -o /dev/null \
+            --compressed \
+            --max-time 10 \
+            -w "%{http_code}" \
             "$url" 2>&1
     )
 
-    rc=$?
+    case "$response" in
 
-    if ((rc == 0)); then
-        printf '✔️  %s (%s)\n' "$channel" "$url"
+    2* | 3*)
+        printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
 
         echo "PASS" >>"$STATUSLOG"
-    else
-        printf '❌  %s (%s)\n' "$channel" "$url"
+        ;;
 
-        if [[ "$output" =~ Server\ returned\ ([0-9]{3})\ (.+) ]]; then
-            code="${BASH_REMATCH[1]}"
-            echo "| $channel | HTTP Error ($code) | \`$url\` |" >>"$STATUSLOG"
-        elif ((rc == 124)); then
+    4* | 5*)
+        printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+
+        echo "| $channel | HTTP Error ($response) | \`$url\` |" >>"$STATUSLOG"
+
+        echo "FAIL" >>"$STATUSLOG"
+        ;;
+
+    *)
+        printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+
+        if [[ "$response" == "000" ]]; then
             echo "| $channel | HTTP Timeout (408) | \`$url\` |" >>"$STATUSLOG"
+
         else
-            echo "| $channel | HTTP Error (000) | \`$url\` |" >>"$STATUSLOG"
+            echo "| $channel | Unknown status ($status_code) | \`$url\` |" >>"$STATUSLOG"
+
         fi
 
         echo "FAIL" >>"$STATUSLOG"
-    fi
+        ;;
+
+    esac
 }
 
 check_links() {
@@ -54,7 +67,7 @@ check_links() {
     channel_num=0
     name=""
 
-    echo -e "Checking $total_urls links from: $base_file\n"
+    printf "Checking %d links from %s\n" "$total_urls" "$base_file"
 
     echo "| Channel | Error (Code) | Link |" >"$STATUSLOG"
     echo "| ------- | ------------ | ---- |" >>"$STATUSLOG"
@@ -64,11 +77,14 @@ check_links() {
 
         if [[ "$line" == \#EXTINF* ]]; then
             name=$(echo "$line" | sed -n 's/.*tvg-name="\([^"]*\)".*/\1/p')
+
             [[ -z "$name" ]] && name="Channel $channel_num"
 
         elif [[ "$line" =~ ^https?:// ]]; then
             while (($(jobs -rp | wc -l) >= MAX_JOBS)); do sleep 0.2; done
-            get_status "$line" "$name" &
+
+            get_status "$line" "$name" "$channel_num" "$total_urls" &
+
             ((channel_num++))
         fi
 
