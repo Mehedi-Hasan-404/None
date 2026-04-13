@@ -1,11 +1,12 @@
-## Base Log @ 2026-04-12 21:10 UTC
+## Base Log @ 2026-04-13 05:27 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 2
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| FDSN Florida | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296662.ts` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| TLC | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2362.ts` |
+| Pop TV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/305494.ts` |
 ---
 #### Base Channels URL
 ```
