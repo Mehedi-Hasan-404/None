@@ -89,7 +89,7 @@ async def main() -> None:
             await asyncio.gather(*(pw_tasks + httpx_tasks))
 
             # others
-            await livetvsx.scrape(xtrnl_brwsr)
+            # await livetvsx.scrape(xtrnl_brwsr)
             await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
