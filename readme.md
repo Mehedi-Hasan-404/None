@@ -1,12 +1,16 @@
-## Base Log @ 2026-04-14 05:10 UTC
+## Base Log @ 2026-04-14 09:55 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 154<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/20180.m3u8` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| HBO Family | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/760.ts` |
-| getTV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/194187.ts` |
+| Grit TV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/15086.ts` |
+| Hallmark Family | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/304609.ts` |
+| Hallmark Mystery | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3388.ts` |
+| NBC Sports California | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/16116.ts` |
+| Sportsman Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/30847.ts` |
 ---
 #### Base Channels URL
 ```
