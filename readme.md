@@ -1,16 +1,17 @@
-## Base Log @ 2026-04-14 09:55 UTC
+## Base Log @ 2026-04-14 15:48 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 7
+### ✅ Working Streams: 153<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/79545.m3u8` |
 | Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/20180.m3u8` |
+| FDSN North | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/20928.m3u8` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| Grit TV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/15086.ts` |
-| Hallmark Family | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/304609.ts` |
-| Hallmark Mystery | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3388.ts` |
-| NBC Sports California | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/16116.ts` |
-| Sportsman Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/30847.ts` |
+| NBC Sports Bay Area | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/45785.ts` |
+| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/213668.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/31636.m3u8` |
+| Spectrum SportsNet Lakers | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/21842.m3u8` |
 ---
 #### Base Channels URL
 ```
