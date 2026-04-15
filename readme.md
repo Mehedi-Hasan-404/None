@@ -1,10 +1,11 @@
-## Base Log @ 2026-04-14 23:49 UTC
+## Base Log @ 2026-04-15 05:10 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 159<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
+| NBC Sports Bay Area | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/45785.ts` |
 ---
 #### Base Channels URL
 ```
