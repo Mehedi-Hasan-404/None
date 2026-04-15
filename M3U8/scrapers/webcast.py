@@ -2,6 +2,7 @@ import ast
 import asyncio
 import re
 from functools import partial
+from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -26,7 +27,12 @@ def fix_event(s: str) -> str:
     return " vs ".join(s.split("@"))
 
 
-async def process_event(url: str, url_num: int) -> str | None:
+async def process_event(
+    url: str,
+    url_num: int,
+    sport: str,
+) -> str | None:
+
     if not (event_data := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
         return
@@ -67,7 +73,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     if not (
         api_data := await network.request(
-            "https://mlbwebcast.com/stream/check_stream.php",
+            urljoin(BASE_URLS[sport], "stream/check_stream.php"),
             headers={"Referer": iframe_src},
             params=params,
             log=log,
@@ -153,6 +159,7 @@ async def scrape() -> None:
                 process_event,
                 url=(link := ev["link"]),
                 url_num=i,
+                sport=(sport := ev["sport"]),
             )
 
             url = await network.safe_process(
@@ -162,7 +169,7 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event = ev["sport"], ev["event"]
+            event = ev["event"]
 
             key = f"[{sport}] {event} ({TAG})"
 
