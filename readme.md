@@ -1,23 +1,21 @@
-## Base Log @ 2026-04-15 09:56 UTC
+## Base Log @ 2026-04-15 15:46 UTC
 
-### ✅ Working Streams: 147<br>❌ Dead Streams: 14
+### ✅ Working Streams: 149<br>❌ Dead Streams: 12
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/79545.m3u8` |
-| Antenna TV | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/20180.m3u8` |
-| Disney | HTTP Error (404) | `http://89.105.221.127/Disney/index.m3u8?token=test` |
-| ESPN | HTTP Error (404) | `http://89.105.221.127/ESPN1/index.m3u8?token=test` |
-| FDSN North | HTTP Error (404) | `http://mytvstream.net:8080/live/A0t5Ax/625375/20928.m3u8` |
-| FDSN Oklahoma | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/6452.ts` |
-| FDSN Southwest | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296685.ts` |
-| FDSN West | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3367.ts` |
+| Aspire | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/150605.ts` |
+| Comedy TV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/199482.ts` |
+| Cozi TV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/8392.ts` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1772/index.m3u8` |
-| NBC Sports Bay Area | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/45785.ts` |
-| Space City Home Network | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/213668.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/31636.m3u8` |
-| Spectrum SportsNet Lakers | HTTP Error (403) | `http://mytvstream.net:8080/live/A0t5Ax/625375/21842.m3u8` |
+| Game Show Network | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/466.ts` |
+| HBO Family | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/760.ts` |
+| Lifetime | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/4667.ts` |
+| NBC Sports Boston | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/35132.ts` |
+| Nick Jr | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/14835.ts` |
+| TV One | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/13010.ts` |
+| The Weather Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2361.ts` |
+| YES Network | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/5519.ts` |
 ---
 #### Base Channels URL
 ```
