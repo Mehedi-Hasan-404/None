@@ -8,9 +8,7 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
-    fsports,
     istreameast,
-    listapreta,
     livetvsx,
     mainportal,
     ovogoal,
@@ -64,7 +62,6 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(hdl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
-                # asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
             ]
@@ -72,7 +69,6 @@ async def main() -> None:
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
-                # asyncio.create_task(listapreta.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
@@ -103,9 +99,7 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
-        | fsports.urls
         | istreameast.urls
-        | listapreta.urls
         | livetvsx.urls
         | mainportal.urls
         | ovogoal.urls
