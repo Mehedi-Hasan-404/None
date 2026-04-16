@@ -1,12 +1,14 @@
-## Base Log @ 2026-04-16 05:16 UTC
+## Base Log @ 2026-04-16 09:55 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 156<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN West | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3367.ts` |
+| FDSN Ohio | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296675.ts` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
+| Hallmark Family | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/304609.ts` |
 | NBC Sports Bay Area | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/45785.ts` |
+| TLC | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2362.ts` |
 ---
 #### Base Channels URL
 ```
