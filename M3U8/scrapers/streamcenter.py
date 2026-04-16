@@ -46,7 +46,7 @@ async def process_event(url: str, url_num: int) -> str | None:
     return f"https://mainstreams.pro/hls/{iframe_src.rsplit("=", 1)[-1]}.m3u8"
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events() -> list[dict[str, str]]:
     now = Time.clean(Time.now())
 
     events = []
@@ -82,14 +82,12 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         if not (sport := CATEGORIES.get(category_id)):
             continue
 
-        if f"[{sport}] {name} ({TAG})" in cached_keys:
-            continue
-
         events.append(
             {
                 "sport": sport,
                 "event": name,
                 "link": iframe.split("<")[0],
+                "timestamp": now.timestamp(),
             }
         )
 
@@ -97,22 +95,17 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 
 async def scrape() -> None:
-    cached_urls = CACHE_FILE.load()
+    if cached_urls := CACHE_FILE.load():
+        urls.update(cached_urls)
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+        log.info(f"Loaded {len(urls)} event(s) from cache")
 
-    valid_count = cached_count = len(valid_urls)
-
-    urls.update(valid_urls)
-
-    log.info(f"Loaded {cached_count} event(s) from cache")
+        return
 
     log.info('Scraping from "https://streamcenter.xyz"')
 
-    if events := await get_events(cached_urls.keys()):
-        log.info(f"Processing {len(events)} new URL(s)")
-
-        now = Time.clean(Time.now())
+    if events := await get_events():
+        log.info(f"Processing {len(events)} URL(s)")
 
         for i, ev in enumerate(events, start=1):
             handler = partial(
@@ -128,7 +121,11 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event = ev["sport"], ev["event"]
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["timestamp"],
+            )
 
             key = f"[{sport}] {event} ({TAG})"
 
@@ -138,7 +135,7 @@ async def scrape() -> None:
                 "url": url,
                 "logo": logo,
                 "base": "https://streamcenter.xyz",
-                "timestamp": now.timestamp(),
+                "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
             }
@@ -146,13 +143,11 @@ async def scrape() -> None:
             cached_urls[key] = entry
 
             if url:
-                valid_count += 1
-
                 urls[key] = entry
 
-        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
+        log.info(f"Collected and cached {len(urls)} event(s)")
 
     else:
-        log.info("No new events found")
+        log.info("No events found")
 
     CACHE_FILE.write(cached_urls)

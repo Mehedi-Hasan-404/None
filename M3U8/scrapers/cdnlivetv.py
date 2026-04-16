@@ -30,8 +30,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         if r := await network.request(
             urljoin(API_URL, "api/v1/events/sports"),
+            params={
+                "user": "cdnlivetv",
+                "plan": "free",
+            },
             log=log,
-            params={"user": "cdnlivetv", "plan": "free"},
         ):
             api_data = r.json().get("cdn-live-tv")
 
@@ -68,22 +71,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
             event_links: list[str] = [channel["url"] for channel in channels]
 
-            # if not (
-            #     link := (
-            #         event_links[0]
-            #         if len(event_links) == 1
-            #         else await network.get_base(event_links)
-            #     )
-            # ):
-            #     continue
-
-            link = event_links[0]
-
             events.append(
                 {
                     "sport": league,
                     "event": name,
-                    "link": link,
+                    "link": event_links[0],
                     "timestamp": event_dt.timestamp(),
                 }
             )

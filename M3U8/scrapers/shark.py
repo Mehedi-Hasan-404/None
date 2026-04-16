@@ -11,9 +11,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "SHARK"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-HTML_FILE = Cache(f"{TAG}-html", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://sharkstreams.net"
 
@@ -38,8 +36,10 @@ async def process_event(url: str, url_num: int) -> str | None:
     return pattern.sub(r"chunks.m3u8", urls[0])
 
 
-async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
-    events = {}
+async def get_events() -> dict[str, dict[str, str | float]]:
+    now = Time.clean(Time.now())
+
+    events = []
 
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
@@ -59,6 +59,9 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
 
         event_dt = Time.from_str(date_node.text(strip=True), timezone="EST")
 
+        if event_dt.date() != now.date():
+            continue
+
         sport = sport_node.text(strip=True)
 
         event_name = name_node.text(strip=True)
@@ -73,59 +76,30 @@ async def refresh_html_cache(now_ts: float) -> dict[str, dict[str, str | float]]
 
         link = match[1].replace("player.php", "get-stream.php")
 
-        key = f"[{sport}] {event_name} ({TAG})"
-
-        events[key] = {
-            "sport": sport,
-            "event": event_name,
-            "link": link,
-            "event_ts": event_dt.timestamp(),
-            "timestamp": now_ts,
-        }
+        events.append(
+            {
+                "sport": sport,
+                "event": event_name,
+                "link": link,
+                "timestamp": now.timestamp(),
+            }
+        )
 
     return events
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (events := HTML_FILE.load()):
-        log.info("Refreshing HTML cache")
-
-        events = await refresh_html_cache(now.timestamp())
-
-        HTML_FILE.write(events)
-
-    live = []
-
-    start_ts = now.delta(hours=-1).timestamp()
-    end_ts = now.delta(minutes=10).timestamp()
-
-    for k, v in events.items():
-        if k in cached_keys:
-            continue
-
-        if not start_ts <= v["event_ts"] <= end_ts:
-            continue
-
-        live.append(v)
-
-    return live
-
-
 async def scrape() -> None:
-    cached_urls = CACHE_FILE.load()
+    if cached_urls := CACHE_FILE.load():
+        urls.update(cached_urls)
 
-    cached_count = len(cached_urls)
+        log.info(f"Loaded {len(urls)} event(s) from cache")
 
-    urls.update(cached_urls)
-
-    log.info(f"Loaded {cached_count} event(s) from cache")
+        return
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    if events := await get_events(cached_urls.keys()):
-        log.info(f"Processing {len(events)} new URL(s)")
+    if events := await get_events():
+        log.info(f"Processing {len(events)} URL(s)")
 
         for i, ev in enumerate(events, start=1):
             handler = partial(
@@ -141,31 +115,33 @@ async def scrape() -> None:
                 log=log,
             )
 
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["timestamp"],
+            )
+
+            tvg_id, logo = leagues.get_tvg_info(sport, event)
+
+            key = f"[{sport}] {event} ({TAG})"
+
+            entry = {
+                "url": url,
+                "logo": logo,
+                "base": BASE_URL,
+                "timestamp": ts,
+                "id": tvg_id or "Live.Event.us",
+                "link": link,
+            }
+
+            cached_urls[key] = entry
+
             if url:
-                sport, event, ts = (
-                    ev["sport"],
-                    ev["event"],
-                    ev["event_ts"],
-                )
+                urls[key] = entry
 
-                tvg_id, logo = leagues.get_tvg_info(sport, event)
-
-                key = f"[{sport}] {event} ({TAG})"
-
-                entry = {
-                    "url": url,
-                    "logo": logo,
-                    "base": BASE_URL,
-                    "timestamp": ts,
-                    "id": tvg_id or "Live.Event.us",
-                    "link": link,
-                }
-
-                urls[key] = cached_urls[key] = entry
-
-        log.info(f"Collected and cached {len(cached_urls) - cached_count} new event(s)")
+        log.info(f"Collected and cached {len(urls)} event(s)")
 
     else:
-        log.info("No new events found")
+        log.info("No events found")
 
     CACHE_FILE.write(cached_urls)

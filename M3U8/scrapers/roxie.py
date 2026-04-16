@@ -78,7 +78,7 @@ async def process_event(
         return
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events() -> list[dict[str, str]]:
     tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
     results = await asyncio.gather(*tasks)
@@ -102,9 +102,6 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             if not (href := a_tag.attributes.get("href")):
                 continue
 
-            if f"[{sport}] {event} ({TAG})" in cached_keys:
-                continue
-
             events.append(
                 {
                     "sport": sport,
@@ -117,20 +114,17 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 
 async def scrape(browser: Browser) -> None:
-    cached_urls = CACHE_FILE.load()
+    if cached_urls := CACHE_FILE.load():
+        urls.update(cached_urls)
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+        log.info(f"Loaded {len(urls)} event(s) from cache")
 
-    valid_count = cached_count = len(valid_urls)
-
-    urls.update(valid_urls)
-
-    log.info(f"Loaded {cached_count} event(s) from cache")
+        return
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    if events := await get_events(cached_urls.keys()):
-        log.info(f"Processing {len(events)} new URL(s)")
+    if events := await get_events():
+        log.info(f"Processing {len(events)} URL(s)")
 
         now = Time.clean(Time.now())
 
@@ -169,13 +163,11 @@ async def scrape(browser: Browser) -> None:
                     cached_urls[key] = entry
 
                     if url:
-                        valid_count += 1
-
                         urls[key] = entry
 
-        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
+        log.info(f"Collected and cached {len(urls)} event(s)")
 
     else:
-        log.info("No new events found")
+        log.info("No events found")
 
     CACHE_FILE.write(cached_urls)
