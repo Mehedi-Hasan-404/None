@@ -45,6 +45,8 @@ async def get_events() -> list[dict[str, str]]:
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
 
+    now = Time.clean(Time.now())
+
     soup = HTMLParser(html_data.content)
 
     for row in soup.css(".row"):
@@ -55,9 +57,14 @@ async def get_events() -> list[dict[str, str]]:
             continue
 
         for a in row.css("a.list-group-item[href]"):
-            splits = a.text(strip=True).split(":")
+            x, y = a.text(strip=True).split(":", 1)
 
-            event_name = ":".join(splits[:2]).split("@")[0].strip()
+            event_name = x.split("@")[0].strip()
+
+            event_dt = Time.from_str(y.split(":", 1)[-1], timezone="UTC")
+
+            if event_dt.date() != now.date():
+                continue
 
             if not (href := a.attributes.get("href")):
                 continue
@@ -67,6 +74,7 @@ async def get_events() -> list[dict[str, str]]:
                     "sport": sport,
                     "event": event_name,
                     "link": urljoin(f"{html_data.url}", href),
+                    "timestamp": now.timestamp(),
                 }
             )
 
@@ -86,8 +94,6 @@ async def scrape() -> None:
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
 
-        now = Time.clean(Time.now())
-
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
@@ -102,7 +108,11 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event = ev["sport"], ev["event"]
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["timestamp"],
+            )
 
             key = f"[{sport}] {event} ({TAG})"
 
@@ -112,7 +122,7 @@ async def scrape() -> None:
                 "url": url,
                 "logo": logo,
                 "base": BASE_URL,
-                "timestamp": now.timestamp(),
+                "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
             }

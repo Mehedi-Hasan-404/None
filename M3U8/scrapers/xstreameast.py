@@ -97,7 +97,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
             if (
                 not (live_badge := card.css_first("span.bg-green-600"))
-                or live_badge.text(strip=True) != "LIVE"
+                or live_badge.text(strip=True).lower().strip() != "live"
             ):
                 continue
 
