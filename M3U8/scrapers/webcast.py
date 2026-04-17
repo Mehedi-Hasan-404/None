@@ -133,7 +133,7 @@ async def get_events() -> list[dict[str, str]]:
 
 async def scrape() -> None:
     if cached_urls := CACHE_FILE.load():
-        urls.update(cached_urls)
+        urls.update({k: v for k, v in cached_urls.items() if v["url"]})
 
         log.info(f"Loaded {len(urls)} event(s) from cache")
 
