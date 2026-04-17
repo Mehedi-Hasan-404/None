@@ -1,19 +1,39 @@
-## Base Log @ 2026-04-17 16:09 UTC
+## Base Log @ 2026-04-17 21:09 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 10
+### ✅ Working Streams: 131<br>❌ Dead Streams: 30
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Discovery Life | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/201208` |
-| FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/39873` |
-| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
 | Grit TV | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
 | Hallmark Family | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
 | Hallmark Mystery | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3388` |
-| HBO Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/760` |
 | INSP | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
-| TLC | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
-| TV Land | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2364` |
+| NBC Sports Bay Area | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/45785` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| NHL Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2348` |
+| Nick Jr | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14835` |
+| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
+| Oxygen | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6378` |
+| Pop TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/305494` |
+| Premier Sports 1 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1097` |
+| Premier Sports 2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/4723` |
+| Showtime Extreme | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/12036` |
+| Sky Sports News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304775` |
+| Smithsonian Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8585` |
+| Sony Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5831` |
+| SportsNet Pittsburgh | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/59945` |
+| Sportsnet 360 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3377` |
+| Sportsnet East | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1720` |
+| Sportsnet One | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3378` |
+| TLC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
+| TSN1 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/770` |
+| TSN2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/771` |
+| TV Land | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2364` |
+| TV One | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/13010` |
+| The Weather Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2361` |
+| USA East | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3390` |
+| Willow Cricket | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296763` |
 ---
 #### Base Channels URL
 ```
