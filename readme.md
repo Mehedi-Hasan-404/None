@@ -1,18 +1,17 @@
-## Base Log @ 2026-04-17 15:52 UTC
+## Base Log @ 2026-04-17 16:09 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 11
+### ✅ Working Streams: 151<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cartoon Network | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2286` |
 | Discovery Life | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/201208` |
 | FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/39873` |
+| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
 | Grit TV | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
 | Hallmark Family | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
 | Hallmark Mystery | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3388` |
-| HLN TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/63468` |
+| HBO Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/760` |
 | INSP | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
-| NewsNation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6296` |
 | TLC | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
 | TV Land | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2364` |
 ---
