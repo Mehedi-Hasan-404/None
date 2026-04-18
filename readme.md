@@ -1,21 +1,19 @@
-## Base Log @ 2026-04-18 15:05 UTC
+## Base Log @ 2026-04-18 16:10 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 12
+### ✅ Working Streams: 151<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Discovery Life | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/201208.ts` |
-| FDSN Florida | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296662.ts` |
-| FDSN SoCal | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296681.ts` |
-| FDSN Southeast | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/82301.ts` |
-| FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| Grit TV | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/15086.ts` |
-| Hallmark Family | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/304609.ts` |
-| Hallmark Mystery | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3388.ts` |
-| INSP | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/30900.ts` |
-| Premier Sports 1 | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/1097.ts` |
-| TLC | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2362.ts` |
-| TV Land | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2364.ts` |
+| Discovery Life | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/201208` |
+| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
+| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
+| FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/39873` |
+| Grit TV | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
+| Hallmark Family | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
+| Hallmark Mystery | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3388` |
+| INSP | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
+| TLC | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
+| TV Land | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2364` |
 ---
 #### Base Channels URL
 ```
