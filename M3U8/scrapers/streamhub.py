@@ -83,7 +83,7 @@ async def process_event(
         wait_task = asyncio.create_task(got_one.wait())
 
         try:
-            await asyncio.wait_for(wait_task, timeout=10)
+            await asyncio.wait_for(wait_task, timeout=5)
         except asyncio.TimeoutError:
             log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
 
