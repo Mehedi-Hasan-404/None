@@ -74,7 +74,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) Failed to load iframe source. (IFR1)")
         return nones
 
-    valid_m3u8 = re.compile(r"file:\s+(\'|\")([^\"]*)(\'|\")", re.I)
+    valid_m3u8 = re.compile(r"(file|source):\s+(\'|\")([^\"]*)(\'|\")", re.I)
 
     if not (match := valid_m3u8.search(ifr_src_data.text)):
         log.warning(f"URL {url_num}) No source found.")
@@ -82,7 +82,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return match[2], ifr_src
+    return match[3], ifr_src
 
 
 async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
@@ -113,7 +113,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
     events = []
 
-    start_dt = now.delta(minutes=-30)
+    start_dt = now.delta(hours=-2.5)
     end_dt = now.delta(minutes=30)
 
     for stream_group in api_data:
