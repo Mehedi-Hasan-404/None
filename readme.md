@@ -1,19 +1,23 @@
-## Base Log @ 2026-04-18 16:10 UTC
+## Base Log @ 2026-04-19 05:15 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 10
+### ✅ Working Streams: 147<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Discovery Life | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/201208` |
-| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
-| FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/39873` |
-| Grit TV | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
-| Hallmark Family | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
-| Hallmark Mystery | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3388` |
-| INSP | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
-| TLC | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
-| TV Land | HTTP Error (502) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2364` |
+| Discovery Life | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/201208.ts` |
+| FDSN Oklahoma | HTTP Timeout (408) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/6452.ts` |
+| FDSN SoCal | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296681.ts` |
+| FDSN Southeast | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/82301.ts` |
+| FDSN Wisconsin | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/295668.ts` |
+| FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
+| Grit TV | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/15086.ts` |
+| Hallmark Family | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/304609.ts` |
+| Hallmark Mystery | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3388.ts` |
+| INSP | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/30900.ts` |
+| NBC Sports Bay Area | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/45785.ts` |
+| TLC | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2362.ts` |
+| TV Land | HTTP Error (502) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2364.ts` |
+| getTV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/194187.ts` |
 ---
 #### Base Channels URL
 ```
