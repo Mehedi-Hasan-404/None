@@ -1,18 +1,13 @@
-## Base Log @ 2026-04-20 15:52 UTC
+## Base Log @ 2026-04-20 21:08 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 11
+### ✅ Working Streams: 155<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| A&E TV | HTTP Timeout (408) | `http://23.239.31.26:8989/aande/index.m3u8` |
-| AMC | HTTP Timeout (408) | `http://23.239.31.26:8989/amc/index.m3u8` |
-| AXS TV | HTTP Timeout (408) | `http://23.239.31.26:8989/axstv/index.m3u8` |
 | Cleo TV | HTTP Error (401) | `http://supersonictv.live:8080/317136/Kennzack1218/86101` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
-| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
 | FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/39873` |
-| FYI TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/9234` |
 | NBC Sports Bay Area | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/45785` |
 | getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
 ---
