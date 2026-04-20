@@ -37,12 +37,12 @@ async def process_event(url: str, url_num: int) -> str | None:
 
 
 async def get_events() -> dict[str, dict[str, str | float]]:
-    now = Time.clean(Time.now())
-
     events = []
 
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
+
+    now = Time.clean(Time.now())
 
     pattern = re.compile(r"openEmbed\('([^']+)'\)", re.I)
 

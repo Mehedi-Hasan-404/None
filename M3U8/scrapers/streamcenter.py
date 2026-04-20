@@ -47,18 +47,18 @@ async def process_event(url: str, url_num: int) -> str | None:
 
 
 async def get_events() -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
     events = []
 
     if not (
         r := await network.request(
             API_URL,
-            log=log,
             params={"pageNumber": 1, "pageSize": 500},
+            log=log,
         )
     ):
         return events
+
+    now = Time.clean(Time.now())
 
     api_data: list[dict] = r.json()
 

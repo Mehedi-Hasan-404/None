@@ -127,8 +127,8 @@ async def refresh_html_cache(
     if not (
         html_data := await network.request(
             urljoin(BASE_URL, f"events/{date}"),
-            log=log,
             params={"sport_id": sport_id},
+            log=log,
         )
     ):
         return events
