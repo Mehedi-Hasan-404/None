@@ -1,4 +1,5 @@
 import asyncio
+import re
 from functools import partial
 from urllib.parse import urljoin
 
@@ -90,6 +91,8 @@ async def get_events() -> list[dict[str, str]]:
     ):
         return events
 
+    now = Time.clean(Time.now())
+
     for soup, url in soups:
         sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
 
@@ -102,11 +105,28 @@ async def get_events() -> list[dict[str, str]]:
             if not (href := a_tag.attributes.get("href")):
                 continue
 
+            if not (span := row.css_first("span.countdown-timer")) or not (
+                data_start := span.attributes.get("data-start")
+            ):
+                continue
+
+            event_time = (
+                data_start.rsplit(":", 1)[0]
+                if (re.search(r"\d+:\d+:\d+", data_start) or "M:00" in data_start)
+                else data_start
+            )
+
+            event_dt = Time.from_str(event_time, timezone="PST")
+
+            if event_dt.date() != now.date():
+                continue
+
             events.append(
                 {
                     "sport": sport,
                     "event": event,
                     "link": urljoin(BASE_URL, href),
+                    "timestamp": now.timestamp(),
                 }
             )
 
@@ -126,8 +146,6 @@ async def scrape(browser: Browser) -> None:
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
 
-        now = Time.clean(Time.now())
-
         async with network.event_context(browser) as context:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
@@ -145,7 +163,11 @@ async def scrape(browser: Browser) -> None:
                         log=log,
                     )
 
-                    sport, event = ev["sport"], ev["event"]
+                    sport, event, ts = (
+                        ev["sport"],
+                        ev["event"],
+                        ev["timestamp"],
+                    )
 
                     tvg_id, logo = leagues.get_tvg_info(sport, event)
 
@@ -155,7 +177,7 @@ async def scrape(browser: Browser) -> None:
                         "url": url,
                         "logo": logo,
                         "base": BASE_URL,
-                        "timestamp": now.timestamp(),
+                        "timestamp": ts,
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
                     }
