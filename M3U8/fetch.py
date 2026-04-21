@@ -65,6 +65,7 @@ async def main() -> None:
                 # asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
+                asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
@@ -80,13 +81,10 @@ async def main() -> None:
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
+                asyncio.create_task(livetvsx.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
-
-            # others
-            await livetvsx.scrape(xtrnl_brwsr)
-            await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
