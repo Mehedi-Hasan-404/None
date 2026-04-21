@@ -1,9 +1,11 @@
-## Base Log @ 2026-04-21 09:58 UTC
+## Base Log @ 2026-04-21 15:50 UTC
 
-### ✅ Working Streams: 83<br>❌ Dead Streams: 78
+### ✅ Working Streams: 77<br>❌ Dead Streams: 84
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/79545.m3u8` |
+| Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/20180.m3u8` |
 | Aspire | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/150605` |
 | C-SPAN | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14804` |
 | CBS Sports Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267357` |
@@ -21,6 +23,7 @@
 | FDSN Detroit | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6463` |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
 | FDSN Midwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/58557` |
+| FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/20928.m3u8` |
 | FDSN Ohio | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296675` |
 | FDSN Oklahoma | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
@@ -69,6 +72,9 @@
 | Sky Sports News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304775` |
 | Smithsonian Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8585` |
 | Sony Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5831` |
+| Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/213668.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/31636.m3u8` |
+| Spectrum SportsNet Lakers | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/21842.m3u8` |
 | SportsNet Pittsburgh | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/59945` |
 | Sportsnet 360 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3377` |
 | Sportsnet East | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1720` |
