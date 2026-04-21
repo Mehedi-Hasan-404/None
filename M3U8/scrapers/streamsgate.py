@@ -2,7 +2,6 @@ import asyncio
 import re
 from functools import partial
 from itertools import chain
-from typing import Any
 from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
@@ -15,9 +14,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STRMSGATE"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
-
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
 BASE_URL = "https://streamsgates.io"
 
@@ -85,36 +82,17 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
     return match[3], ifr_src
 
 
-async def refresh_api_cache(now_ts: float) -> list[dict[str, Any]]:
+async def get_events() -> list[dict[str, str]]:
+    now = Time.clean(Time.now())
+
     tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
     results = await asyncio.gather(*tasks)
 
-    if not (data := [*chain.from_iterable(r.json() for r in results if r)]):
-        return [{"timestamp": now_ts}]
-
-    for ev in data:
-        ev["ts"] = ev.pop("timestamp")
-
-    data[-1]["timestamp"] = now_ts
-
-    return data
-
-
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (api_data := API_FILE.load(per_entry=False, index=-1)):
-        log.info("Refreshing API cache")
-
-        api_data = await refresh_api_cache(now.timestamp())
-
-        API_FILE.write(api_data)
-
     events = []
 
-    start_dt = now.delta(hours=-2.5)
-    end_dt = now.delta(minutes=30)
+    if not (api_data := [*chain.from_iterable(r.json() for r in results if r)]):
+        return events
 
     for stream_group in api_data:
         date = stream_group.get("time")
@@ -123,34 +101,30 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         t1, t2 = stream_group.get("away"), stream_group.get("home")
 
-        if not (t1 and t2):
-            continue
-
-        event = get_event(t1, t2)
-
         if not (date and sport):
-            continue
-
-        if f"[{sport}] {event} ({TAG})" in cached_keys:
             continue
 
         event_dt = Time.from_str(date, timezone="UTC")
 
-        if not start_dt <= event_dt <= end_dt:
+        if event_dt.date() != now.date():
             continue
 
-        if not (streams := stream_group.get("streams")):
+        if not (streams := stream_group.get("streams")) or not (
+            url := streams[0].get("url")
+        ):
             continue
 
-        if not (url := streams[0].get("url")):
+        if not (t1 and t2):
             continue
+
+        event = get_event(t1, t2)
 
         events.append(
             {
                 "sport": sport,
                 "event": event,
                 "link": url,
-                "timestamp": event_dt.timestamp(),
+                "timestamp": now.timestamp(),
             }
         )
 
@@ -158,19 +132,16 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
 
 async def scrape() -> None:
-    cached_urls = CACHE_FILE.load()
+    if cached_urls := CACHE_FILE.load():
+        urls.update({k: v for k, v in cached_urls.items() if v["url"]})
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+        log.info(f"Loaded {len(urls)} event(s) from cache")
 
-    valid_count = cached_count = len(valid_urls)
-
-    urls.update(valid_urls)
-
-    log.info(f"Loaded {cached_count} event(s) from cache")
+        return
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    if events := await get_events(cached_urls.keys()):
+    if events := await get_events():
         log.info(f"Processing {len(events)} new URL(s)")
 
         for i, ev in enumerate(events, start=1):
@@ -183,7 +154,7 @@ async def scrape() -> None:
             url, iframe = await network.safe_process(
                 handler,
                 url_num=i,
-                semaphore=network.PW_S,
+                semaphore=network.HTTP_S,
                 log=log,
             )
 
@@ -209,11 +180,11 @@ async def scrape() -> None:
             cached_urls[key] = entry
 
             if url:
-                valid_count += 1
+                entry["url"] = url.split("?st")[0]
 
                 urls[key] = entry
 
-        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
+        log.info(f"Collected and cached {len(urls)} new event(s)")
 
     else:
         log.info("No new events found")

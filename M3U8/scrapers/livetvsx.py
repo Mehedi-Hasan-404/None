@@ -1,7 +1,6 @@
-import asyncio
+import re
 from functools import partial
 
-from playwright.async_api import Browser, Page, TimeoutError
 from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
@@ -17,83 +16,61 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 BASE_URL = "https://livetv.sx/export/webmasters.php"
 
 
-async def process_event(
-    url: str,
-    url_num: int,
-    page: Page,
-) -> str | None:
+async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
+    nones = None, None
 
-    captured: list[str] = []
+    if not (ev_data_1 := await network.request(url, log=log)):
+        log.warning(f"URL {url_num}) Failed to load url. (EVD1)")
+        return nones
 
-    got_one = asyncio.Event()
+    soup_1 = HTMLParser(ev_data_1.content)
 
-    handler = partial(
-        network.capture_req,
-        captured=captured,
-        got_one=got_one,
-    )
+    for a_elem in soup_1.css("a"):
+        if not (src_title := a_elem.attributes.get("title")) or (
+            "aliez" not in src_title.lower()
+        ):
+            continue
 
-    page.on("request", handler)
-
-    try:
-        resp = await page.goto(
-            url,
-            wait_until="domcontentloaded",
-            timeout=10_000,
-        )
-
-        if not resp or resp.status != 200:
-            log.warning(
-                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
-            )
-            return
-
-        try:
-            event_a = page.locator('a[title*="Aliez"]').first
-
-            href = await event_a.get_attribute("href", timeout=1_250)
-        except TimeoutError:
-            log.warning(f"URL {url_num}) No valid sources found.")
-            return
+        href = a_elem.attributes["href"]
 
         event_url = href if href.startswith("http") else f"https:{href}"
+        break
 
-        await page.goto(
-            event_url,
-            wait_until="domcontentloaded",
-            timeout=5_000,
-        )
+    else:
+        log.warning(f"URL {url_num}) No valid sources found.")
+        return nones
 
-        wait_task = asyncio.create_task(got_one.wait())
+    if not (ev_data_2 := await network.request(event_url, log=log)):
+        log.warning(f"URL {url_num}) Failed to load url. (EVD2)")
+        return nones
 
-        try:
-            await asyncio.wait_for(wait_task, timeout=6)
-        except asyncio.TimeoutError:
-            log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
-            return
+    soup_2 = HTMLParser(ev_data_2.content)
 
-        finally:
-            if not wait_task.done():
-                wait_task.cancel()
+    ifr_1 = soup_2.css_first("tr > td > iframe")
 
-                try:
-                    await wait_task
-                except asyncio.CancelledError:
-                    pass
+    if not ifr_1 or not (ifr_1_src := ifr_1.attributes.get("src")):
+        log.warning(f"URL {url_num}) No iframe element found.")
+        return nones
 
-        if captured:
-            log.info(f"URL {url_num}) Captured M3U8")
-            return captured[0]
+    ifr_1_src = "".join(
+        (ifr_1_src if ifr_1_src.startswith("http") else f"https:{ifr_1_src}").split()
+    )
 
-        log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
-        return
+    if not (ev_data_3 := await network.request(ifr_1_src, log=log)):
+        log.warning(f"URL {url_num}) Failed to load url. (EVD3)")
+        return nones
 
-    except Exception as e:
-        log.warning(f"URL {url_num}) {e}")
-        return
+    pattern = re.compile(r'pl\.init\((\'|\")([^"]*)(\'|\")\)', re.I)
 
-    finally:
-        page.remove_listener("request", handler)
+    if not (match := pattern.search(ev_data_3.text)):
+        log.warning(f"URL {url_num}) No M3U8 source found.")
+        return nones
+
+    log.info(f"URL {url_num}) Captured M3U8")
+
+    m3u: str = match[2] if match[2].startswith("http") else f"https:{match[2]}"
+
+    return m3u, ifr_1_src
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
@@ -102,6 +79,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     php_data = await network.unvd_client.get(BASE_URL, params={"lang": "en"})
 
     if php_data.status_code != 200:
+        log.warning("Failed to get php data.")
         return events
 
     soup = HTMLParser(php_data.content)
@@ -143,7 +121,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     return events
 
 
-async def scrape(browser: Browser) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
@@ -161,49 +139,45 @@ async def scrape(browser: Browser) -> None:
 
         now = Time.clean(Time.now())
 
-        async with network.event_context(browser, ignore_https=True) as context:
-            for i, ev in enumerate(events, start=1):
-                async with network.event_page(context) as page:
-                    handler = partial(
-                        process_event,
-                        url=(link := ev["link"]),
-                        url_num=i,
-                        page=page,
-                    )
+        for i, ev in enumerate(events, start=1):
+            handler = partial(
+                process_event,
+                url=(link := ev["link"]),
+                url_num=i,
+            )
 
-                    url = await network.safe_process(
-                        handler,
-                        url_num=i,
-                        semaphore=network.PW_S,
-                        log=log,
-                        timeout=20,
-                    )
+            url, iframe = await network.safe_process(
+                handler,
+                url_num=i,
+                semaphore=network.HTTP_S,
+                log=log,
+            )
 
-                    sport, league, event = (
-                        ev["sport"],
-                        ev["league"],
-                        ev["event"],
-                    )
+            sport, league, event = (
+                ev["sport"],
+                ev["league"],
+                ev["event"],
+            )
 
-                    key = f"[{sport} - {league}] {event} ({TAG})"
+            key = f"[{sport} - {league}] {event} ({TAG})"
 
-                    tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(sport, event)
 
-                    entry = {
-                        "url": url,
-                        "logo": logo,
-                        "base": "https://livetv.sx/enx/",
-                        "timestamp": now.timestamp(),
-                        "id": tvg_id or "Live.Event.us",
-                        "link": link,
-                    }
+            entry = {
+                "url": url,
+                "logo": logo,
+                "base": iframe,
+                "timestamp": now.timestamp(),
+                "id": tvg_id or "Live.Event.us",
+                "link": link,
+            }
 
-                    cached_urls[key] = entry
+            cached_urls[key] = entry
 
-                    if url:
-                        valid_count += 1
+            if url:
+                valid_count += 1
 
-                        urls[key] = entry
+                urls[key] = entry
 
         log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
