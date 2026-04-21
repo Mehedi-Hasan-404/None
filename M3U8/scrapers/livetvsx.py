@@ -1,9 +1,8 @@
 import asyncio
-import re
 from functools import partial
 
-import feedparser
 from playwright.async_api import Browser, Page, TimeoutError
+from selectolax.parser import HTMLParser
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -11,34 +10,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "LIVETVSX"
+TAG = "LTVSX"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-XML_CACHE = Cache(f"{TAG}-xml", exp=28_000)
-
-BASE_URL = "https://cdn.livetv872.me/rss/upcoming_en.xml"
-
-VALID_SPORTS = [
-    "MLB. Preseason",
-    "MLB",
-    "Basketball",
-    "Football",
-    "Ice Hockey",
-    "Wrestling",
-]
-
-
-def fix_url(s: str) -> str | None:
-    pattern = re.compile(r"eventinfo\/(\d*)", re.I)
-
-    if not (match := pattern.search(s)):
-        return
-
-    elif not (event_id := match[1]).isalnum():
-        return
-
-    return f"https://cdn.livetv872.me/cache/links/en.{event_id}.html"
+BASE_URL = "https://livetv.sx/export/webmasters.php"
 
 
 async def process_event(
@@ -120,80 +96,51 @@ async def process_event(
         page.remove_listener("request", handler)
 
 
-async def refresh_xml_cache(now_ts: float) -> dict[str, dict[str, str | float]]:
-    log.info("Refreshing XML cache")
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+    events = []
 
-    events = {}
+    php_data = await network.unvd_client.get(BASE_URL, params={"lang": "en"})
 
-    if not (xml_data := await network.request(BASE_URL, log=log)):
+    if php_data.status_code != 200:
         return events
 
-    feed = feedparser.parse(xml_data.content)
+    soup = HTMLParser(php_data.content)
 
-    for entry in feed.entries:
-        if not (date := entry.get("published")):
+    if not (table := soup.css_first("table.tbl")):
+        return events
+
+    for row in table.css("tr > td"):
+        if not (event_tbl := row.css_first("table")):
             continue
 
-        if (not (link := entry.get("link"))) or (not (fixed_link := fix_url(link))):
+        sport_elem = event_tbl.css_first(".spr")
+        league_elem = event_tbl.css_first(".cmp")
+        link_elem = event_tbl.css_first("a.title")
+        event_id_elem = row.css_first("div[id^='el']")
+
+        if not (league_elem and sport_elem and link_elem and event_id_elem):
             continue
 
-        if not (title := entry.get("title")):
+        elif not (event_id := event_id_elem.attributes.get("id")):
             continue
 
-        if not (sport_sum := entry.get("summary")):
+        sport = sport_elem.text(strip=True)
+        league = league_elem.text(strip=True)
+        event_name = link_elem.text(strip=True)
+
+        if f"[{sport} - {league}] {event_name} ({TAG})" in cached_keys:
             continue
 
-        sprt = sport_sum.split(".", 1)
-
-        sport, league = sprt[0], "".join(sprt[1:]).strip()
-
-        event_dt = Time.from_str(date)
-
-        if (key := f"[{sport} - {league}] {title} ({TAG})") in events:
-            continue
-
-        events[key] = {
-            "sport": sport,
-            "league": league,
-            "event": title,
-            "link": fixed_link,
-            "event_ts": event_dt.timestamp(),
-            "timestamp": now_ts,
-        }
+        events.append(
+            {
+                "sport": sport,
+                "league": league,
+                "event": event_name,
+                "link": f"https://cdn.livetv872.me/cache/links/en.{event_id[2:]}.html",
+            }
+        )
 
     return events
-
-
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
-    if not (events := XML_CACHE.load()):
-        events = await refresh_xml_cache(now.timestamp())
-
-        XML_CACHE.write(events)
-
-    start_ts = now.delta(hours=-1).timestamp()
-    end_ts = now.delta(minutes=5).timestamp()
-
-    live = []
-
-    for k, v in events.items():
-        if k in cached_keys:
-            continue
-
-        if (
-            v["sport"] not in VALID_SPORTS
-            and v["league"] not in VALID_SPORTS
-            and v["event"].lower() != "olympic games"
-        ):
-            continue
-
-        if not start_ts <= v["event_ts"] <= end_ts:
-            continue
-
-        live.append(v)
-
-    return live
 
 
 async def scrape(browser: Browser) -> None:
@@ -211,6 +158,8 @@ async def scrape(browser: Browser) -> None:
 
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
+
+        now = Time.clean(Time.now())
 
         async with network.event_context(browser, ignore_https=True) as context:
             for i, ev in enumerate(events, start=1):
@@ -230,11 +179,10 @@ async def scrape(browser: Browser) -> None:
                         timeout=20,
                     )
 
-                    sport, league, event, ts = (
+                    sport, league, event = (
                         ev["sport"],
                         ev["league"],
                         ev["event"],
-                        ev["event_ts"],
                     )
 
                     key = f"[{sport} - {league}] {event} ({TAG})"
@@ -245,7 +193,7 @@ async def scrape(browser: Browser) -> None:
                         "url": url,
                         "logo": logo,
                         "base": "https://livetv.sx/enx/",
-                        "timestamp": ts,
+                        "timestamp": now.timestamp(),
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
                     }
