@@ -1,93 +1,20 @@
-## Base Log @ 2026-04-21 15:50 UTC
+## Base Log @ 2026-04-21 16:32 UTC
 
-### ✅ Working Streams: 77<br>❌ Dead Streams: 84
+### ✅ Working Streams: 150<br>❌ Dead Streams: 11
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/79545.m3u8` |
-| Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/20180.m3u8` |
-| Aspire | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/150605` |
-| C-SPAN | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14804` |
-| CBS Sports Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267357` |
-| CNBC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2295` |
-| CW | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/171820` |
 | Cleo TV | HTTP Error (401) | `http://supersonictv.live:8080/317136/Kennzack1218/86101` |
-| Comedy TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/199482` |
-| Cozi TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8392` |
-| Discovery Family Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2300` |
-| Discovery Life | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/201208` |
-| Discovery Science | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2301` |
-| Disney | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2303` |
-| ESPN News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2312` |
-| ESPN2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/41918` |
-| FDSN Detroit | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6463` |
-| FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
-| FDSN Midwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/58557` |
 | FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/20928.m3u8` |
-| FDSN Ohio | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296675` |
-| FDSN Oklahoma | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
-| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
-| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
-| FDSN Southwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296685` |
-| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| FDSN West | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3367` |
-| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
-| FX Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/39873` |
-| FYI TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/9234` |
-| Fox News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1611` |
-| Fox Sports 1 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/756` |
-| Fox Sports 2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/757` |
-| Freeform TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2329` |
-| Game Show Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/466` |
-| Golf Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5845` |
-| Grit TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
-| HBO Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/760` |
-| Hallmark Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
-| Hallmark Mystery | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3388` |
-| History Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/761` |
-| INSP | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
-| ION TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/147661` |
-| Investigation Discovery | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8557` |
-| Lifetime | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/4667` |
-| MLB Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2342` |
-| MSNBC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/406` |
-| Marquee Sports Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/150609` |
-| MotorTrend TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/272264` |
-| NBC Sports Bay Area | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/45785` |
-| NBC Sports Boston | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/35132` |
-| NBC Sports California | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/16116` |
-| NBC Sports Philadelphia | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/35472` |
-| NFL RedZone | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2369` |
-| NHL Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2348` |
-| National Geographic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/749` |
-| NewsNation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6296` |
-| Nick Jr | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14835` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
-| Oxygen | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6378` |
-| Pop TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/305494` |
-| Premier Sports 1 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1097` |
-| Premier Sports 2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/4723` |
-| Showtime Extreme | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/12036` |
-| Sky Sports News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304775` |
-| Smithsonian Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8585` |
-| Sony Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5831` |
-| Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/213668.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/31636.m3u8` |
-| Spectrum SportsNet Lakers | HTTP Error (444) | `http://mytvstream.net:8080/live/5AGbfz/324331/21842.m3u8` |
-| SportsNet Pittsburgh | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/59945` |
-| Sportsnet 360 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3377` |
-| Sportsnet East | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1720` |
-| Sportsnet One | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3378` |
-| TLC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
-| TSN1 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/770` |
-| TSN2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/771` |
-| TV Land | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2364` |
-| TV One | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/13010` |
-| The Weather Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2361` |
-| USA East | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3390` |
-| Willow Cricket | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296763` |
-| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
+| FDSN SoCal | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296681.ts` |
+| FDSN Southeast | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/82301.ts` |
+| FDSN Southwest | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296685.ts` |
+| FDSN West | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3367.ts` |
+| FDSN Wisconsin | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/295668.ts` |
+| FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
+| getTV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/194187.ts` |
+| NBC Sports Bay Area | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/45785.ts` |
+| Smithsonian Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/8585.ts` |
 ---
 #### Base Channels URL
 ```
