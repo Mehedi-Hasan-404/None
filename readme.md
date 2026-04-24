@@ -1,18 +1,34 @@
-## Base Log @ 2026-04-24 10:01 UTC
+## Base Log @ 2026-04-24 15:45 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 9
+### ✅ Working Streams: 136<br>❌ Dead Streams: 25
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Oklahoma | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/6452.ts` |
+| Discovery Life | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/201208.ts` |
+| FDSN Ohio | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296675.ts` |
 | FDSN SoCal | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296681.ts` |
-| FDSN Southeast | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/82301.ts` |
 | FDSN Southwest | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296685.ts` |
 | FDSN West | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3367.ts` |
 | FDSN Wisconsin | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/295668.ts` |
 | FX Movie Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/39873.ts` |
-| NBC Sports Boston | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/35132.ts` |
-| Starz Encore Classic | HTTP Error (404) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
+| MLB Network | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2342.ts` |
+| Ovation | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/194336.ts` |
+| Pop TV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/305494.ts` |
+| Premier Sports 1 | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/1097.ts` |
+| Premier Sports 2 | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/4723.ts` |
+| Sky Sports News | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/304775.ts` |
+| Smithsonian Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/8585.ts` |
+| Sportsnet 360 | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3377.ts` |
+| Sportsnet East | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/1720.ts` |
+| TLC | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2362.ts` |
+| TSN1 | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/770.ts` |
+| TSN2 | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/771.ts` |
+| TV Land | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2364.ts` |
+| TV One | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/13010.ts` |
+| The Weather Channel | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/2361.ts` |
+| USA East | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/3390.ts` |
+| Willow Cricket | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296763.ts` |
+| getTV | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/194187.ts` |
 ---
 #### Base Channels URL
 ```
