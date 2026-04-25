@@ -51,7 +51,7 @@ async def process_ts3(ifr_src: str, url_num: int) -> str | None:
 
     soup_2 = HTMLParser(ifr_1_src_data.content)
 
-    ifr_2 = soup_2.css_first("iframe")
+    ifr_2 = soup_2.css_first("iframe[width='100%']")
 
     if not ifr_2 or not (ifr_2_src := ifr_2.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe element found. (IFR2)")
@@ -130,7 +130,10 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             if not (time_node := node.css_first(".col-3 span")):
                 continue
 
-            if time_node.text(strip=True).lower() != "matchstarted":
+            if time_node.text(strip=True).lower() not in [
+                "matchstarted",
+                "1minfrom now",
+            ]:
                 continue
 
             event_name = fix_txt(" vs ".join(teams))

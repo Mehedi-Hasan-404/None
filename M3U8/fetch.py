@@ -8,12 +8,11 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
+    fsports,
     istreameast,
     livetvsx,
     mainportal,
-    ovogoal,
     pawa,
-    ppv,
     roxie,
     shark,
     streamcenter,
@@ -62,7 +61,7 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
-                # asyncio.create_task(ppv.scrape(xtrnl_brwsr)),
+                asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
                 asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
@@ -72,7 +71,6 @@ async def main() -> None:
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
-                # asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
@@ -97,12 +95,11 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
+        | fsports.urls
         | istreameast.urls
         | livetvsx.urls
         | mainportal.urls
-        | ovogoal.urls
         | pawa.urls
-        | ppv.urls
         | roxie.urls
         | shark.urls
         | streamcenter.urls
