@@ -60,16 +60,15 @@ async def main() -> None:
 
             pw_tasks = [
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
-                asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
-                asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
+                asyncio.create_task(livetvsx.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
@@ -79,10 +78,13 @@ async def main() -> None:
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                asyncio.create_task(livetvsx.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
+
+            # others
+            await embedhd.scrape(hdl_brwsr)
+            await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
