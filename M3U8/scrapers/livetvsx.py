@@ -114,7 +114,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 "sport": sport,
                 "league": league,
                 "event": event_name,
-                "link": f"https://cdn.livetv879.me/cache/links/en.{event_id[2:]}.html",
+                "link": f"https://cdn.livetv880.me/cache/links/en.{event_id[2:]}.html",
             }
         )
 
