@@ -45,6 +45,8 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     return f"https://mainstreams.pro/hls/{iframe_src.rsplit("=", 1)[-1]}.m3u8"
 
+    # return f"https://edgestreams.pro/hls/{iframe_src.rsplit("=", 1)[-1]}.m3u8"
+
 
 async def get_events() -> list[dict[str, str]]:
     events = []

@@ -1,5 +1,6 @@
 import re
 from functools import partial
+from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -13,17 +14,19 @@ TAG = "LTVSX"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-BASE_URL = "https://livetv.sx/export/webmasters.php"
+BASE_URL = "https://livetv.sx"
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
     nones = None, None
 
-    if not (ev_data_1 := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url. (EVD1)")
+    r = await network.unvd_client.get(url)
+
+    if r.status_code != 200:
+        log.warning(f"{url_num}) Failed to get event data.")
         return nones
 
-    soup_1 = HTMLParser(ev_data_1.content)
+    soup_1 = HTMLParser(r.content)
 
     for a_elem in soup_1.css("a"):
         if not (src_title := a_elem.attributes.get("title")) or (
@@ -40,11 +43,11 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) No valid sources found.")
         return nones
 
-    if not (ev_data_2 := await network.request(event_url, log=log)):
+    if not (ev_data := await network.request(event_url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url. (EVD2)")
         return nones
 
-    soup_2 = HTMLParser(ev_data_2.content)
+    soup_2 = HTMLParser(ev_data.content)
 
     ifr_1 = soup_2.css_first("tr > td > iframe")
 
@@ -76,13 +79,16 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     events = []
 
-    php_data = await network.unvd_client.get(BASE_URL, params={"lang": "en"})
+    r = await network.unvd_client.get(
+        urljoin(BASE_URL, "export/webmasters.php"),
+        params={"lang": "en"},
+    )
 
-    if php_data.status_code != 200:
+    if r.status_code != 200:
         log.warning("Failed to get php data.")
         return events
 
-    soup = HTMLParser(php_data.content)
+    soup = HTMLParser(r.content)
 
     if not (table := soup.css_first("table.tbl")):
         return events
@@ -114,7 +120,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 "sport": sport,
                 "league": league,
                 "event": event_name,
-                "link": f"https://cdn.livetv880.me/cache/links/en.{event_id[2:]}.html",
+                "link": urljoin(BASE_URL, f"cache/links/en.{event_id[2:]}.html"),
             }
         )
 
