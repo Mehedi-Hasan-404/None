@@ -59,7 +59,7 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
-                asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
+                asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(streamhub.scrape(xtrnl_brwsr)),
@@ -83,7 +83,7 @@ async def main() -> None:
             await asyncio.gather(*(pw_tasks + httpx_tasks))
 
             # others
-            await embedhd.scrape(hdl_brwsr)
+            await cdnlivetv.scrape(xtrnl_brwsr)
             await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
