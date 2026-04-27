@@ -11,9 +11,9 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "TOTALSPRTK"
+TAG = "TSPRTK"
 
-CACHE_FILE = Cache("TSPRTK", exp=28_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
 BASE_URL = "https://live3.totalsportek.fyi"
 
