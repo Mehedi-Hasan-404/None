@@ -25,8 +25,8 @@ SPORT_URLS = [
         "nba",
         # "nfl",
         # "nhl",
-        # "soccer",
-        "wwe",
+        "soccer",
+        # "wwe",
     ]
 ]
 
