@@ -1,13 +1,18 @@
-## Base Log @ 2026-04-26 21:04 UTC
+## Base Log @ 2026-04-27 05:39 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 4
+### ✅ Working Streams: 152<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/79545.m3u8` |
+| Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/20180.m3u8` |
+| FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/20928.m3u8` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Southwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296685` |
-| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
-| Pop TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/305494` |
+| FX Movie Channel | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/10260.m3u8` |
+| NBC Sports Bay Area | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/45785` |
+| Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/213668.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/31636.m3u8` |
+| Spectrum SportsNet Lakers | HTTP Error (444) | `http://mytvstream.net:8080/live/8434692955/judgen64@yahoo.com/21842.m3u8` |
 ---
 #### Base Channels URL
 ```
