@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Cache venv
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
@@ -31,7 +31,7 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version-file: "pyproject.toml"
 
@@ -39,7 +39,7 @@ jobs:
         run: uv run M3U8/epg-fetch.py
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "update EPG"
           file_pattern: "M3U8/TV.xml"
