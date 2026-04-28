@@ -1,16 +1,14 @@
-## Base Log @ 2026-04-28 05:44 UTC
+## Base Log @ 2026-04-28 10:30 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 11
+### ✅ Working Streams: 152<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/79545.m3u8` |
 | Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20180.m3u8` |
-| Aspire | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/150605.ts` |
 | FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20928.m3u8` |
-| FDSN Ohio | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296675.ts` |
 | FDSN SoCal | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/296681.ts` |
-| FDSN South | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/277374.ts` |
+| FDSN Wisconsin | HTTP Error (404) | `http://iptvtree.net:8080/live/7e4b0dbd/1dd755dc3f/295668.ts` |
 | FX Movie Channel | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/10260.m3u8` |
 | Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
 | Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
