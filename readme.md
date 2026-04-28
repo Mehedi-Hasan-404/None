@@ -1,18 +1,17 @@
-## Base Log @ 2026-04-28 16:58 UTC
+## Base Log @ 2026-04-28 21:37 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 9
+### ✅ Working Streams: 154<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/79545.m3u8` |
-| Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20180.m3u8` |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
-| FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20928.m3u8` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FX Movie Channel | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/10260.m3u8` |
-| Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
-| Spectrum SportsNet Lakers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/21842.m3u8` |
+| FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
+| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
+| Fox News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1611` |
+| Hallmark Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
+| Premier Sports 1 | HTTP Timeout (408) | `http://46.43.65.98/premiersports/index.m3u8` |
+| Sky Sports Football | HTTP Timeout (408) | `http://46.43.65.98/skysportsfootball/index.m3u8` |
 ---
 #### Base Channels URL
 ```
