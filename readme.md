@@ -1,14 +1,23 @@
-## Base Log @ 2026-04-29 10:23 UTC
+## Base Log @ 2026-04-29 16:11 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 5
+### ✅ Working Streams: 148<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/79545.m3u8` |
+| Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20180.m3u8` |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
+| FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20928.m3u8` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
-| FDSN Southwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296685` |
+| FX Movie Channel | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/10260.m3u8` |
+| Hallmark Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
+| Paramount Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8` |
 | Sky Sports Football | HTTP Timeout (408) | `http://46.43.65.98/skysportsfootball/index.m3u8` |
+| Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
+| Spectrum SportsNet Lakers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/21842.m3u8` |
+| YES Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
 ```
