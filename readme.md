@@ -1,16 +1,14 @@
-## Base Log @ 2026-04-28 21:37 UTC
+## Base Log @ 2026-04-29 05:39 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 8
+### ✅ Working Streams: 156<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
-| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
-| Fox News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1611` |
-| Hallmark Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
-| Premier Sports 1 | HTTP Timeout (408) | `http://46.43.65.98/premiersports/index.m3u8` |
+| MLB Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2342` |
+| NBC Sports Boston | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/35132` |
 | Sky Sports Football | HTTP Timeout (408) | `http://46.43.65.98/skysportsfootball/index.m3u8` |
 ---
 #### Base Channels URL
