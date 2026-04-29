@@ -1,14 +1,13 @@
-## Base Log @ 2026-04-29 05:39 UTC
+## Base Log @ 2026-04-29 10:23 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 6
+### ✅ Working Streams: 157<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
-| MLB Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2342` |
-| NBC Sports Boston | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/35132` |
+| FDSN Southwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296685` |
 | Sky Sports Football | HTTP Timeout (408) | `http://46.43.65.98/skysportsfootball/index.m3u8` |
 ---
 #### Base Channels URL
