@@ -1,17 +1,18 @@
-## Base Log @ 2026-04-30 10:24 UTC
+## Base Log @ 2026-04-30 16:00 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 13
+### ✅ Working Streams: 148<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/79545.m3u8` |
 | Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20180.m3u8` |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
+| FDSN Midwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/58557` |
 | FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20928.m3u8` |
+| FDSN Ohio | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296675` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
-| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
 | FX Movie Channel | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/10260.m3u8` |
+| NBC Sports California | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/16116` |
 | Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
 | Sky Sports Football | HTTP Timeout (408) | `http://46.43.65.98/skysportsfootball/index.m3u8` |
 | Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
