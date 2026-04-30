@@ -59,9 +59,10 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             if f"[{sport}] {event_name} ({TAG})" in cached_keys:
                 continue
 
-            event_streams: list[dict[str, str]] = event["streams"]
+            if not (event_streams := event["streams"]):
+                continue
 
-            if not (event_link := event_streams[0].get("link")):
+            elif not (event_link := event_streams[0].get("link")):
                 continue
 
             events.append(
