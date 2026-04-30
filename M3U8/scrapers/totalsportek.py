@@ -98,11 +98,11 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         href = urlparse(href).path if href.startswith("http") else href
 
-        if not (time_node := node.css_first(".col-3 span")):
-            continue
+        # if not (time_node := node.css_first(".col-3 span")):
+        #     continue
 
-        if time_node.text(strip=True).lower() != "matchstarted":
-            continue
+        # if time_node.text(strip=True).lower() != "matchstarted":
+        #     continue
 
         event_name = fix_txt(" vs ".join(teams))
 
