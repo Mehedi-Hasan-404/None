@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 MAX_JOBS=10
-base_file="./M3U8/base.m3u8"
+BASE_FILE="./M3U8/base.m3u8"
 README="./readme.md"
 STATUSLOG=$(mktemp)
 
@@ -63,11 +63,11 @@ get_status() {
 }
 
 check_links() {
-    total_urls=$(grep -cE '^https?://' "$base_file")
+    total_urls=$(grep -cE '^https?://' "$BASE_FILE")
     channel_num=0
     name=""
 
-    printf "Checking %d links from %s\n" "$total_urls" "$base_file"
+    printf "Checking %d links from %s\n" "$total_urls" "$BASE_FILE"
 
     echo "| Channel | Error (Code) | Link |" >"$STATUSLOG"
     echo "| ------- | ------------ | ---- |" >>"$STATUSLOG"
@@ -88,7 +88,7 @@ check_links() {
             ((channel_num++))
         fi
 
-    done < <(cat "$base_file")
+    done < <(cat "$BASE_FILE")
 
     wait
     echo -e "\nDone."
@@ -136,6 +136,8 @@ write_readme() {
 
     } >"$README"
 }
+
+[[ ! -f "$BASE_FILE" ]] && exit 1
 
 check_links
 write_readme
