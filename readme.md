@@ -1,12 +1,16 @@
-## Base Log @ 2026-05-01 05:54 UTC
+## Base Log @ 2026-05-01 10:04 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 3
+### ✅ Working Streams: 155<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Disney XD | HTTP Timeout (408) | `http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8` |
 | FDSN Oklahoma | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
+| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
+| Grit TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
 | Sky Sports Football | HTTP Timeout (408) | `http://46.43.65.98/skysportsfootball/index.m3u8` |
+| Starz Encore Classic | HTTP Error (404) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
