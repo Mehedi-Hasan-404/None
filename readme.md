@@ -1,20 +1,12 @@
-## Base Log @ 2026-05-01 21:13 UTC
+## Base Log @ 2026-05-01 22:15 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 13
+### ✅ Working Streams: 156<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/79545.m3u8` |
-| Antenna TV | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20180.m3u8` |
-| FDSN Midwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/58557` |
-| FDSN North | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/20928.m3u8` |
 | FDSN Oklahoma | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FX Movie Channel | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/10260.m3u8` |
-| Hallmark Family | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304609` |
-| Space City Home Network | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/213668.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/31636.m3u8` |
-| Spectrum SportsNet Lakers | HTTP Error (444) | `http://mytvstream.net:8080/live/56481106/11185695/21842.m3u8` |
+| INSP | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
 | SportsNet New York | HTTP Error (403) | `http://212.102.60.231/SNY/index.m3u8` |
 | Starz Encore Classic | HTTP Error (403) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
 ---
