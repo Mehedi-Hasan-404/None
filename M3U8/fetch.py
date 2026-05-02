@@ -10,7 +10,6 @@ from scrapers import (
     fawa,
     fsports,
     istreameast,
-    livetvsx,
     mainportal,
     ovogoal,
     pawa,
@@ -70,7 +69,6 @@ async def main() -> None:
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
-                # asyncio.create_task(livetvsx.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pawa.scrape()),
@@ -103,7 +101,6 @@ async def main() -> None:
         | fawa.urls
         | fsports.urls
         | istreameast.urls
-        | livetvsx.urls
         | mainportal.urls
         | ovogoal.urls
         | pawa.urls
