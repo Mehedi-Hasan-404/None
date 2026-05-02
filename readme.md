@@ -1,17 +1,10 @@
-## Base Log @ 2026-05-02 15:11 UTC
+## Base Log @ 2026-05-02 15:31 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 8
+### ✅ Working Streams: 160<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Midwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/58557` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1772/index.m3u8` |
-| NBC Sports California | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/16116` |
-| Pop TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/305494` |
-| SportsNet New York | HTTP Error (403) | `http://212.102.60.231/SNY/index.m3u8` |
-| Sportsman Channel | HTTP Error (403) | `http://212.102.60.231/SPORTSMAN_CHANNEL/index.m3u8` |
-| Starz Encore Classic | HTTP Error (403) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
