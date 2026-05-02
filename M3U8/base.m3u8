@@ -406,7 +406,7 @@ http://mytvstream.net:8080/live/88623297/04243674/31636.m3u8
 http://mytvstream.net:8080/live/88623297/04243674/21842.m3u8
 
 #EXTINF:-1 tvg-chno="136" tvg-id="Sportsman.Channel.us2" tvg-name="Sportsman Channel" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s33930_dark_360w_270h.png" group-title="TV",Sportsman Channel
-http://212.102.60.231/SPORTSMAN_CHANNEL/index.m3u8
+http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30847
 
 #EXTINF:-1 tvg-chno="137" tvg-id="Sportsnet.360.HD.ca2" tvg-name="Sportsnet 360" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s49952_dark_360w_270h.png" group-title="TV",Sportsnet 360
 http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3377
@@ -415,7 +415,7 @@ http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3377
 http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1720
 
 #EXTINF:-1 tvg-chno="139" tvg-id="SNY.SportsNet.New.York.HD.us2" tvg-name="SportsNet New York" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s50038_dark_360w_270h.png" group-title="TV",SportsNet New York
-http://212.102.60.231/SNY/index.m3u8
+http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267219
 
 #EXTINF:-1 tvg-chno="140" tvg-id="Sportsnet.One.ca2" tvg-name="Sportsnet One" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68859_dark_360w_270h.png" group-title="TV",Sportsnet One
 http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3378
@@ -427,7 +427,7 @@ http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/59945
 http://23.237.104.106:8080/USA_STARZ/index.m3u8
 
 #EXTINF:-1 tvg-chno="143" tvg-id="Starz.Encore.Classic.us2" tvg-name="Starz Encore Classic" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14764_dark_360w_270h.png" group-title="TV",Starz Encore Classic
-http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8
+http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/25816
 
 #EXTINF:-1 tvg-chno="144" tvg-id="Syfy.HD.us2" tvg-name="Syfy" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11097_dark_360w_270h.png" group-title="TV",Syfy
 http://23.237.104.106:8080/USA_SYFY/index.m3u8
