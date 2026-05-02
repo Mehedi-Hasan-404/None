@@ -3,6 +3,9 @@ UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Ge
 MAX_JOBS=10
 BASE_FILE="./M3U8/base.m3u8"
 README="./readme.md"
+
+[[ ! -f "$BASE_FILE" ]] && exit 1
+
 STATUSLOG=$(mktemp)
 
 get_status() {
@@ -136,8 +139,6 @@ write_readme() {
 
     } >"$README"
 }
-
-[[ ! -f "$BASE_FILE" ]] && exit 1
 
 check_links
 write_readme
