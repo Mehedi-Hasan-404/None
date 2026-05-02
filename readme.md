@@ -1,19 +1,13 @@
-## Base Log @ 2026-05-02 21:06 UTC
+## Base Log @ 2026-05-02 22:03 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 10
+### ✅ Working Streams: 158<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1758/index.m3u8` |
-| CBS | HTTP Error (404) | `http://stream.cammonitorplus.net/1810/index.m3u8` |
+| Disney | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2303` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1772/index.m3u8` |
-| NBC Sports California | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/16116` |
-| Pop TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/305494` |
-| Showtime Extreme | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/12036` |
-| Sony Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5831` |
-| USA East | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3390` |
+| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
+| Starz Encore Classic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/25816` |
 ---
 #### Base Channels URL
 ```
