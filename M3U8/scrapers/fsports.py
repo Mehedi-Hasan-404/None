@@ -104,7 +104,7 @@ async def scrape(browser: Browser) -> None:
                     entry = {
                         "url": url,
                         "logo": logo,
-                        "base": "https://exposestrat.com/",
+                        "base": "https://hoca6.com/",
                         "timestamp": now.timestamp(),
                         "id": tvg_id or "Live.Event.us",
                         "link": link,

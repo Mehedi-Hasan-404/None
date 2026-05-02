@@ -97,9 +97,14 @@ async def process_event(
                     pass
 
         if captured:
+            if "smarthard.click" not in (m3u8 := captured[0]).lower():
+                log.warning(f"URL {url_num}) Invalid M3U8 found.")
+
+                return
+
             log.info(f"URL {url_num}) Captured M3U8")
 
-            return captured[0]
+            return m3u8
 
         log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
 

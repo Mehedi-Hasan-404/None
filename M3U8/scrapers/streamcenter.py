@@ -10,7 +10,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "STRMCNTR"
 
-CACHE_FILE = Cache(TAG, exp=28_800)
+CACHE_FILE = Cache(TAG, exp=86_400)
 
 API_URL = "https://backend.streamcenter.live/api/Parties"
 
