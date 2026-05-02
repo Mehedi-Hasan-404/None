@@ -1,13 +1,12 @@
-## Base Log @ 2026-05-01 22:15 UTC
+## Base Log @ 2026-05-02 05:23 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 5
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Oklahoma | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| INSP | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/30900` |
 | SportsNet New York | HTTP Error (403) | `http://212.102.60.231/SNY/index.m3u8` |
+| Sportsman Channel | HTTP Error (403) | `http://212.102.60.231/SPORTSMAN_CHANNEL/index.m3u8` |
 | Starz Encore Classic | HTTP Error (403) | `http://212.102.60.231/STARZ_ENCORE_CLASSIC/index.m3u8` |
 ---
 #### Base Channels URL
