@@ -1,12 +1,12 @@
-## Base Log @ 2026-05-03 05:42 UTC
+## Base Log @ 2026-05-03 09:46 UTC
 
 ### ✅ Working Streams: 159<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
-| SportsNet New York | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267219` |
+| National Geographic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/749` |
+| Pop TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/305494` |
 ---
 #### Base Channels URL
 ```
