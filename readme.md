@@ -1,13 +1,12 @@
-## Base Log @ 2026-05-02 22:03 UTC
+## Base Log @ 2026-05-03 05:42 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 4
+### ✅ Working Streams: 159<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Disney | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2303` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| Starz Encore Classic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/25816` |
+| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
+| SportsNet New York | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267219` |
 ---
 #### Base Channels URL
 ```
