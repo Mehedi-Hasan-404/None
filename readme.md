@@ -1,16 +1,12 @@
-## Base Log @ 2026-05-03 15:10 UTC
+## Base Log @ 2026-05-03 21:09 UTC
 
-### ✅ Working Streams: 155<br>❌ Dead Streams: 7
+### ✅ Working Streams: 159<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| NBC Sports Boston | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/35132` |
-| NewsNation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6296` |
-| Nick Jr | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14835` |
-| Smithsonian Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8585` |
-| SportsNet New York | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267219` |
+| Grit TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/15086` |
+| Nicktoons | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2351` |
 ---
 #### Base Channels URL
 ```
