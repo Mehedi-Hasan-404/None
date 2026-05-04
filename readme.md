@@ -1,19 +1,15 @@
-## Base Log @ 2026-05-04 10:31 UTC
+## Base Log @ 2026-05-04 16:18 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 10
+### ✅ Working Streams: 156<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Aspire | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/150605` |
-| C-SPAN | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14804` |
-| CBS Sports Network | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267357` |
-| CNBC | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2295` |
-| CW | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/171820` |
-| Comedy TV | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/199482` |
-| Cozi TV | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8392` |
-| FDSN Oklahoma | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
-| FDSN SoCal | HTTP Timeout (408) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| Starz Encore Classic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/25816` |
+| C-SPAN | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14804` |
+| FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
+| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
+| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
+| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
+| Sky Sports News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304775` |
 ---
 #### Base Channels URL
 ```
