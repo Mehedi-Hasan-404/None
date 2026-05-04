@@ -1,15 +1,16 @@
-## Base Log @ 2026-05-04 16:18 UTC
+## Base Log @ 2026-05-04 21:36 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 6
+### ✅ Working Streams: 155<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| C-SPAN | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14804` |
-| FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
+| FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
 | FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
-| Sky Sports News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/304775` |
+| NFL RedZone | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2369` |
+| QVC | HTTP Error (403) | `http://212.102.60.231/QVC/index.m3u8` |
+| Starz Encore Classic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/25816` |
+| Turner Classic Movies | HTTP Timeout (408) | `https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8` |
 ---
 #### Base Channels URL
 ```
