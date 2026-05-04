@@ -54,7 +54,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) Failed to load iframe source.")
         return nones
 
-    valid_m3u8 = re.compile(r'(var|const)\s+(\w+)\s*=\s*"([^"]*)"', re.I)
+    valid_m3u8 = re.compile(r'(var|const)\s+(\w+)\s+=\s+"([^"]*)"', re.I)
 
     if not (match := valid_m3u8.search(iframe_src_data.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
