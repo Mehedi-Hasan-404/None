@@ -1,9 +1,13 @@
-## Base Log @ 2026-05-05 10:17 UTC
+## Base Log @ 2026-05-05 21:33 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 157<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
+| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
+| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
+| Premier Sports 2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/4723` |
 | QVC | HTTP Error (403) | `http://212.102.60.231/QVC/index.m3u8` |
 ---
 #### Base Channels URL
