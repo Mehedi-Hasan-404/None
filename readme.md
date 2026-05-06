@@ -1,9 +1,10 @@
-## Base Log @ 2026-05-06 16:25 UTC
+## Base Log @ 2026-05-06 21:38 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 1
+### ✅ Working Streams: 160<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | QVC | HTTP Error (403) | `http://212.102.60.231/QVC/index.m3u8` |
 ---
 #### Base Channels URL
