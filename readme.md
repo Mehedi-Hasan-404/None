@@ -1,14 +1,16 @@
-## Base Log @ 2026-05-05 21:33 UTC
+## Base Log @ 2026-05-06 05:42 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 5
+### ✅ Working Streams: 155<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Cleo TV | HTTP Error (502) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
-| Premier Sports 2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/4723` |
+| Freeform TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2329` |
+| Lifetime | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/4667` |
 | QVC | HTTP Error (403) | `http://212.102.60.231/QVC/index.m3u8` |
+| TLC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
+| Willow Cricket | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296763` |
 ---
 #### Base Channels URL
 ```
