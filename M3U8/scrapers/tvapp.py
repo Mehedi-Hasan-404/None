@@ -36,7 +36,7 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return f"http://origin.thetvapp.to/hls/{channel_name.strip()}/mono.m3u8"
+    return f"https://tvpass.org/live/{channel_name.strip()}/sd"
 
 
 async def get_events() -> list[dict[str, str]]:
