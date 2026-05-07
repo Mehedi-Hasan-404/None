@@ -79,7 +79,7 @@ async def main() -> None:
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                asyncio.create_task(xstreameast.scrape()),
+                # asyncio.create_task(xstreameast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
