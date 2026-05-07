@@ -1,12 +1,15 @@
-## Base Log @ 2026-05-07 10:39 UTC
+## Base Log @ 2026-05-07 16:22 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 155<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Cozi TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8392` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| National Geographic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/749` |
+| FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
+| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1772/index.m3u8` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1785/index.m3u8` |
+| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
 ---
 #### Base Channels URL
 ```
