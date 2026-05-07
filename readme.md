@@ -1,15 +1,13 @@
-## Base Log @ 2026-05-07 16:22 UTC
+## Base Log @ 2026-05-07 16:36 UTC
 
-### ✅ Working Streams: 155<br>❌ Dead Streams: 6
+### ✅ Working Streams: 157<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cozi TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8392` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | FDSN Wisconsin | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/295668` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1772/index.m3u8` |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1785/index.m3u8` |
-| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
+| NBC Sports California | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/16116` |
+| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
 ---
 #### Base Channels URL
 ```
