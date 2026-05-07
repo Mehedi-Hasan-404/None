@@ -12,7 +12,6 @@ from scrapers import (
     istreameast,
     mainportal,
     ovogoal,
-    pawa,
     roxie,
     shark,
     streamcenter,
@@ -23,7 +22,6 @@ from scrapers import (
     tvapp,
     watchfooty,
     webcast,
-    xstreameast,
 )
 from scrapers.utils import get_logger, network
 
@@ -71,7 +69,6 @@ async def main() -> None:
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
-                # asyncio.create_task(pawa.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
@@ -79,7 +76,6 @@ async def main() -> None:
                 asyncio.create_task(totalsportek.scrape()),
                 asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                # asyncio.create_task(xstreameast.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
@@ -103,7 +99,6 @@ async def main() -> None:
         | istreameast.urls
         | mainportal.urls
         | ovogoal.urls
-        | pawa.urls
         | roxie.urls
         | shark.urls
         | streamcenter.urls
@@ -114,7 +109,6 @@ async def main() -> None:
         | tvapp.urls
         | watchfooty.urls
         | webcast.urls
-        | xstreameast.urls
     )
 
     live_events: list[str] = []

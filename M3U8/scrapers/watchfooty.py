@@ -164,9 +164,6 @@ async def process_event(
             log.info(f"URL {url_num}) Captured M3U8")
             return captured[0], iframe_url
 
-        log.warning(f"URL {url_num}) No M3U8 captured after waiting.")
-        return nones
-
     except Exception as e:
         log.warning(f"URL {url_num}) {e}")
         return nones
