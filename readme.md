@@ -1,15 +1,12 @@
-## Base Log @ 2026-05-07 05:45 UTC
+## Base Log @ 2026-05-07 10:39 UTC
 
-### ✅ Working Streams: 155<br>❌ Dead Streams: 6
+### ✅ Working Streams: 158<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 | FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| NBC Sports California | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/16116` |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1785/index.m3u8` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
-| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
+| National Geographic | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/749` |
 ---
 #### Base Channels URL
 ```
