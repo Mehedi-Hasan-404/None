@@ -1,7 +1,17 @@
-## Base Log @ 2026-05-08 15:58 UTC
+## Base Log @ 2026-05-08 21:33 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 153<br>❌ Dead Streams: 8
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1758/index.m3u8` |
+| CBS | HTTP Error (404) | `http://stream.cammonitorplus.net/1810/index.m3u8` |
+| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
+| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1772/index.m3u8` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1785/index.m3u8` |
+| Nicktoons | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2351` |
+| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
+| TLC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2362` |
 ---
 #### Base Channels URL
 ```
