@@ -1,14 +1,7 @@
-## Base Log @ 2026-05-08 10:01 UTC
+## Base Log @ 2026-05-08 15:58 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 5
+### ✅ Working Streams: 160<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| Cozi TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8392` |
-| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Southwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296685` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
-| Willow Cricket | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296763` |
 ---
 #### Base Channels URL
 ```
