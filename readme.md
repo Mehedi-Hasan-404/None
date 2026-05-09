@@ -1,12 +1,7 @@
-## Base Log @ 2026-05-08 22:33 UTC
+## Base Log @ 2026-05-09 05:34 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 3
+### ✅ Working Streams: 160<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| Aspire | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/150605` |
-| Cozi TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/8392` |
-| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
 ---
 #### Base Channels URL
 ```
