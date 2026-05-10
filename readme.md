@@ -1,16 +1,11 @@
-## Base Log @ 2026-05-10 15:31 UTC
+## Base Log @ 2026-05-10 21:11 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 7
+### ✅ Working Streams: 158<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
-| FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
-| FDSN West | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/3367` |
-| Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
-| Sony Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5831` |
-| getTV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194187` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| Sportsnet One | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3071.ts` |
 ---
 #### Base Channels URL
 ```
