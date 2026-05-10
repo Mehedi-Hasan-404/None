@@ -1,14 +1,13 @@
-## Base Log @ 2026-05-10 05:49 UTC
+## Base Log @ 2026-05-10 09:52 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 8
+### ✅ Working Streams: 154<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Cleo TV | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
+| Cooking Channel | HTTP Error (404) | `http://23.237.104.106:8080/USA_COOKING/index.m3u8` |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
-| FDSN South | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/277374` |
-| FDSN Southeast | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/82301` |
 | FDSN Sun | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2325` |
 | Ovation | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/194336` |
 | Sony Movie Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5831` |
