@@ -29,11 +29,9 @@ async def process_event(url: str, url_num: int) -> str | None:
 
         return
 
-    pattern = re.compile(r"playlist\.m3u8\?.*$", re.I)
-
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return pattern.sub(r"chunks.m3u8", urls[0])
+    return urls[0]
 
 
 async def get_events() -> dict[str, dict[str, str | float]]:
@@ -52,6 +50,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
         date_node = row.css_first(".ch-date")
 
         sport_node = row.css_first(".ch-category")
+
         name_node = row.css_first(".ch-name")
 
         if not (date_node and sport_node and name_node):
@@ -71,16 +70,14 @@ async def get_events() -> dict[str, dict[str, str | float]]:
         if not embed_btn or not (onclick := embed_btn.attributes.get("onclick")):
             continue
 
-        if not (match := pattern.search(onclick)):
+        elif not (match := pattern.search(onclick)):
             continue
-
-        link = match[1].replace("player.php", "get-stream.php")
 
         events.append(
             {
                 "sport": sport,
                 "event": event_name,
-                "link": link,
+                "link": match[1].replace("player.php", "get-stream.php"),
                 "timestamp": now.timestamp(),
             }
         )

@@ -52,7 +52,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
             {
                 "sport": sport,
                 "event": name,
-                "link": urljoin(BASE_URL, href),
+                "link": urljoin(f"{html_data.url}", href),
             }
         )
 
