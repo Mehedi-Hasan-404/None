@@ -1,11 +1,11 @@
-## Base Log @ 2026-05-11 11:41 UTC
+## Base Log @ 2026-05-11 17:08 UTC
 
 ### ✅ Working Streams: 158<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Fox Sports 1 | HTTP Error (404) | `http://41.223.30.230/FOXSPORTS1/index.m3u8` |
-| Sportsnet One | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3071.ts` |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1762/index.m3u8` |
+| Fox Sports 1 | HTTP Timeout (408) | `http://41.223.30.230/FOXSPORTS1/index.m3u8` |
 ---
 #### Base Channels URL
 ```
