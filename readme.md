@@ -1,10 +1,11 @@
-## Base Log @ 2026-05-11 21:49 UTC
+## Base Log @ 2026-05-12 05:52 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 2
+### ✅ Working Streams: 157<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Comedy TV | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/77411.ts` |
+| FDSN Midwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3784.ts` |
+| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1752/index.m3u8` |
 | Sportsnet 360 | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3073.ts` |
 ---
 #### Base Channels URL
