@@ -1,12 +1,7 @@
-## Base Log @ 2026-05-12 10:57 UTC
+## Base Log @ 2026-05-12 16:38 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 3
+### ✅ Working Streams: 160<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| Bravo TV | HTTP Error (404) | `http://41.205.93.154/BRAVO/index.m3u8` |
-| CBS | HTTP Error (404) | `http://stream.cammonitorplus.net/1810/index.m3u8` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1752/index.m3u8` |
 ---
 #### Base Channels URL
 ```
