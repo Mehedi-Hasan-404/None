@@ -1,12 +1,17 @@
-## Base Log @ 2026-05-13 06:02 UTC
+## Base Log @ 2026-05-13 11:04 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 3
+### ✅ Working Streams: 152<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Bravo TV | HTTP Error (404) | `http://41.205.93.154/BRAVO/index.m3u8` |
-| FDSN Southwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663270.ts` |
+| FDSN Midwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3784.ts` |
+| FDSN West | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663285.ts` |
+| Nick Jr | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/74691.ts` |
+| Ovation | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/31180.ts` |
 | Premier Sports 2 | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/89090.ts` |
+| Sky Sports News | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2183.ts` |
+| Sony Movie Channel | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2412.ts` |
 ---
 #### Base Channels URL
 ```
