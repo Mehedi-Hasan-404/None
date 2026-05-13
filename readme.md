@@ -1,7 +1,12 @@
-## Base Log @ 2026-05-12 21:49 UTC
+## Base Log @ 2026-05-13 06:02 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 157<br>❌ Dead Streams: 3
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Bravo TV | HTTP Error (404) | `http://41.205.93.154/BRAVO/index.m3u8` |
+| FDSN Southwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663270.ts` |
+| Premier Sports 2 | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/89090.ts` |
 ---
 #### Base Channels URL
 ```
