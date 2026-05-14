@@ -1,10 +1,15 @@
-## Base Log @ 2026-05-14 06:02 UTC
+## Base Log @ 2026-05-14 10:42 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 1
+### ✅ Working Streams: 154<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Sky Sports Football | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/30822.ts` |
+| Big Ten Network | HTTP Timeout (408) | `http://23.237.104.106:8080/USA_BTN/index.m3u8` |
+| Boomerang | HTTP Timeout (408) | `http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8` |
+| Bounce TV | HTTP Error (404) | `http://23.237.104.106:8080/USA_BOUNCE/index.m3u8` |
+| Cartoon Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8` |
+| Disney XD | HTTP Error (404) | `http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8` |
+| MTV | HTTP Error (404) | `http://23.237.104.106:8080/USA_MTV/index.m3u8` |
 ---
 #### Base Channels URL
 ```
