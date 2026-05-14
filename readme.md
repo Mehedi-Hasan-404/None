@@ -1,7 +1,10 @@
-## Base Log @ 2026-05-13 21:51 UTC
+## Base Log @ 2026-05-14 06:02 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 159<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Sky Sports Football | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/30822.ts` |
 ---
 #### Base Channels URL
 ```
