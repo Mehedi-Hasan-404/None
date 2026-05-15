@@ -47,8 +47,6 @@ class Network:
 
         self.client = httpx.AsyncClient(**client_params)
 
-        self.unvd_client = httpx.AsyncClient(**client_params, verify=False)
-
     async def request(
         self,
         url: str,
