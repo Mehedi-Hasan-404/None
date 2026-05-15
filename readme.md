@@ -1,7 +1,10 @@
-## Base Log @ 2026-05-15 16:20 UTC
+## Base Log @ 2026-05-15 21:34 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 159<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Sony Movie Channel | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2412.ts` |
 ---
 #### Base Channels URL
 ```
