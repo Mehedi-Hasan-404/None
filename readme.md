@@ -1,10 +1,11 @@
-## Base Log @ 2026-05-16 05:40 UTC
+## Base Log @ 2026-05-16 09:56 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 1
+### ✅ Working Streams: 158<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FYI TV | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/30924.ts` |
+| Cooking Channel | HTTP Error (404) | `http://23.237.104.106:8080/USA_COOKING/index.m3u8` |
+| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1752/index.m3u8` |
 ---
 #### Base Channels URL
 ```
