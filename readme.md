@@ -1,13 +1,10 @@
-## Base Log @ 2026-05-16 21:10 UTC
+## Base Log @ 2026-05-17 06:01 UTC
 
-### ✅ Working Streams: 156<br>❌ Dead Streams: 4
+### ✅ Working Streams: 159<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1809/index.m3u8` |
-| Comedy TV | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/77411.ts` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1752/index.m3u8` |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| Showtime Extreme | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/648984.ts` |
 ---
 #### Base Channels URL
 ```
