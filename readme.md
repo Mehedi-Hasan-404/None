@@ -1,11 +1,12 @@
-## Base Log @ 2026-05-18 06:38 UTC
+## Base Log @ 2026-05-18 11:59 UTC
 
-### ✅ Working Streams: 157<br>❌ Dead Streams: 3
+### ✅ Working Streams: 156<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | FDSN Detroit | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2528.ts` |
 | FDSN Oklahoma | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2516.ts` |
+| MSG | HTTP Error (404) | `http://23.237.104.106:8080/USA_MSG/index.m3u8` |
 | SportsNet New York | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3865.ts` |
 ---
 #### Base Channels URL
