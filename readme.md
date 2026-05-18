@@ -1,11 +1,10 @@
-## Base Log @ 2026-05-18 17:17 UTC
+## Base Log @ 2026-05-18 21:45 UTC
 
-### ✅ Working Streams: 158<br>❌ Dead Streams: 2
+### ✅ Working Streams: 159<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Southeast | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663159.ts` |
-| MSG | HTTP Error (404) | `http://23.237.104.106:8080/USA_MSG/index.m3u8` |
+| AXS TV | HTTP Error (404) | `http://23.239.31.26:8989/axstv/index.m3u8` |
 ---
 #### Base Channels URL
 ```
