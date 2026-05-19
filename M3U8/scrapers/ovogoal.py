@@ -14,7 +14,7 @@ TAG = "OVO"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
-BASE_URL = "https://ovogoaal.com"
+BASE_URL = "https://ovogoalz.top"
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:

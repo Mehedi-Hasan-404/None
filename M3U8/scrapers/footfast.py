@@ -9,76 +9,85 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "CDNTV"
+TAG = "FOOTFAST"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
+CACHE_FILE = Cache(TAG, exp=5_400)
 
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
+API_FILE = Cache(f"{TAG}-api", exp=28_800)
 
-API_URL = "https://api.cdnlivetv.tv"
+BASE_URL = "https://footfast.cc"
+
+CATEGORIES = {
+    1: "Soccer",
+    3: "NBA",
+    6: "UFC/MMA",
+    8: "NHL",
+    13: "Live Event",
+    17: "MLB",
+    10: "Racing",
+    21: "Basketball",
+    #: "American Football",
+    #: "Boxing",
+    #: "Rugby",
+    #: "Tennis",
+    #: "Golf",
+}
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     now = Time.clean(Time.now())
-
-    events = []
 
     if not (api_data := API_FILE.load(per_entry=False)):
         log.info("Refreshing API cache")
 
         api_data = {"timestamp": now.timestamp()}
 
-        if r := await network.request(
-            urljoin(API_URL, "api/v1/events/sports"),
-            params={
-                "user": "cdnlivetv",
-                "plan": "free",
-            },
-            log=log,
-        ):
-            api_data = r.json().get("cdn-live-tv")
+        if r := await network.request(urljoin(BASE_URL, "api/public/catalog"), log=log):
+            api_data: dict[str, list[dict]] = r.json()
+
+            api_data["timestamp"] = now.timestamp()
 
         API_FILE.write(api_data)
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
+    events = []
 
-    sports = [key for key in api_data.keys() if not key.islower()]
+    start_ts = now.delta(hours=-3).timestamp()
 
-    for sport in sports:
-        event_info = api_data[sport]
+    for event_info in api_data.get("events", []):
+        event_name: str = event_info.get("name")
+        category_id: int = event_info.get("category_id")
 
-        for event in event_info:
-            t1, t2 = event.get("awayTeam"), event.get("homeTeam")
+        event_ts: int = event_info.get("start")
 
-            if not (t1 and t2):
-                continue
+        if not (event_name and category_id and event_ts):
+            continue
 
-            name = f"{t1} vs {t2}"
+        if not start_ts <= event_ts <= now.timestamp():
+            continue
 
-            league = event["tournament"]
+        # if not (sources := event_info.get("source")):
+        #     continue
 
-            if f"[{league}] {name} ({TAG})" in cached_keys:
-                continue
+        # elif not (source_id := sources[0].get("id")):
+        #     continue
 
-            event_dt = Time.from_str(event["start"], timezone="UTC")
+        if not (sport := CATEGORIES.get(category_id)):
+            continue
 
-            if not start_dt <= event_dt <= end_dt:
-                continue
+        if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+            continue
 
-            if not (channels := event.get("channels")):
-                continue
+        embed_id: str = event_info["embedId"]
 
-            event_links: list[str] = [channel["url"] for channel in channels]
-
-            events.append(
-                {
-                    "sport": league,
-                    "event": name,
-                    "link": event_links[0],
-                    "timestamp": event_dt.timestamp(),
-                }
-            )
+        events.append(
+            {
+                "sport": sport,
+                "event": event_name,
+                # "link": f"https://aerastora.com/event/{embed_id}?source={source_id}",
+                "link": urljoin(BASE_URL, f"event/{embed_id}"),
+                "timestamp": event_ts,
+            }
+        )
 
     return events
 
@@ -94,7 +103,7 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    log.info(f'Scraping from "{API_URL}"')
+    log.info(f'Scraping from "{BASE_URL}"')
 
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
@@ -123,14 +132,14 @@ async def scrape(browser: Browser) -> None:
                         ev["timestamp"],
                     )
 
-                    key = f"[{sport}] {event} ({TAG})"
-
                     tvg_id, logo = leagues.get_tvg_info(sport, event)
+
+                    key = f"[{sport}] {event} ({TAG})"
 
                     entry = {
                         "url": url,
                         "logo": logo,
-                        "base": link,
+                        "base": "https://aerastora.com/ ",
                         "timestamp": ts,
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
