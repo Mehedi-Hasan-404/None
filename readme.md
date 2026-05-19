@@ -1,7 +1,19 @@
-## Base Log @ 2026-05-19 11:38 UTC
+## Base Log @ 2026-05-19 17:25 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 150<br>❌ Dead Streams: 10
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| FDSN Florida | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663186.ts` |
+| FDSN Midwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3784.ts` |
+| FDSN Ohio | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663237.ts` |
+| FDSN SoCal | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663253.ts` |
+| FDSN South | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2513.ts` |
+| FDSN Southeast | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663159.ts` |
+| FDSN Southwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663270.ts` |
+| FDSN Sun | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663153.ts` |
+| FDSN West | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663285.ts` |
+| FDSN Wisconsin | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3787.ts` |
 ---
 #### Base Channels URL
 ```
