@@ -1,10 +1,11 @@
-## Base Log @ 2026-05-18 21:45 UTC
+## Base Log @ 2026-05-19 06:32 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 1
+### ✅ Working Streams: 158<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| AXS TV | HTTP Error (404) | `http://23.239.31.26:8989/axstv/index.m3u8` |
+| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1752/index.m3u8` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
 ---
 #### Base Channels URL
 ```
