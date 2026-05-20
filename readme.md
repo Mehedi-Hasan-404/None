@@ -1,13 +1,13 @@
-## Base Log @ 2026-05-20 06:32 UTC
+## Base Log @ 2026-05-20 11:26 UTC
 
-### ✅ Working Streams: 137<br>❌ Dead Streams: 23
+### ✅ Working Streams: 136<br>❌ Dead Streams: 24
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1809/index.m3u8` |
-| Antenna TV | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/544767.ts` |
+| Altitude Sports | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/332892.ts` |
 | CW | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/93093.ts` |
-| Cozi TV | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2604.ts` |
+| Discovery Family Channel | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2598.ts` |
 | FDSN Detroit | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2528.ts` |
 | FDSN Florida | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663186.ts` |
 | FDSN Midwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3784.ts` |
@@ -21,12 +21,13 @@
 | FDSN Sun | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663153.ts` |
 | FDSN West | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663285.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3787.ts` |
-| ION TV | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/597281.ts` |
-| MotorTrend TV | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3747.ts` |
 | NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| NFL RedZone | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/97491.ts` |
 | Nicktoons | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/97474.ts` |
-| Showtime Extreme | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/648984.ts` |
-| Sky Sports Football | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/30822.ts` |
+| Sony Movie Channel | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2412.ts` |
+| Spectrum SportsNet Lakers | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/74684.ts` |
+| Sportsman Channel | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/78636.ts` |
+| USA East | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3767.ts` |
 ---
 #### Base Channels URL
 ```
