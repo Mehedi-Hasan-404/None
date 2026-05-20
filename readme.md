@@ -1,9 +1,10 @@
-## Base Log @ 2026-05-20 17:23 UTC
+## Base Log @ 2026-05-20 17:38 UTC
 
-### ✅ Working Streams: 147<br>❌ Dead Streams: 13
+### ✅ Working Streams: 145<br>❌ Dead Streams: 15
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1839/index.m3u8` |
 | FDSN Detroit | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2528.ts` |
 | FDSN Florida | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663186.ts` |
 | FDSN Midwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3784.ts` |
@@ -17,6 +18,7 @@
 | FDSN Sun | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663153.ts` |
 | FDSN West | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663285.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3787.ts` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1765/index.m3u8` |
 ---
 #### Base Channels URL
 ```
