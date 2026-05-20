@@ -1,9 +1,13 @@
-## Base Log @ 2026-05-19 21:54 UTC
+## Base Log @ 2026-05-20 06:32 UTC
 
-### ✅ Working Streams: 147<br>❌ Dead Streams: 13
+### ✅ Working Streams: 137<br>❌ Dead Streams: 23
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1809/index.m3u8` |
+| Antenna TV | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/544767.ts` |
+| CW | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/93093.ts` |
+| Cozi TV | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2604.ts` |
 | FDSN Detroit | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/2528.ts` |
 | FDSN Florida | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663186.ts` |
 | FDSN Midwest | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3784.ts` |
@@ -17,6 +21,12 @@
 | FDSN Sun | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663153.ts` |
 | FDSN West | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663285.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3787.ts` |
+| ION TV | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/597281.ts` |
+| MotorTrend TV | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3747.ts` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| Nicktoons | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/97474.ts` |
+| Showtime Extreme | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/648984.ts` |
+| Sky Sports Football | HTTP Error (502) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/30822.ts` |
 ---
 #### Base Channels URL
 ```
