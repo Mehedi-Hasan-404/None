@@ -1,10 +1,23 @@
-## Base Log @ 2026-05-21 19:37 UTC
+## Base Log @ 2026-05-21 21:56 UTC
 
-### ✅ Working Streams: 139<br>❌ Dead Streams: 1
+### ✅ Working Streams: 126<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Cozi TV | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/154960` |
+| CW | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/155023` |
+| Discovery Science | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/155072` |
+| Game Show Network | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/155526` |
+| Grit TV | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/155539` |
+| Hallmark Mystery | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/155551` |
+| History Channel | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/155610` |
+| Sony Movie Channel | HTTP Error (403) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156558` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156586` |
+| Sportsman Channel | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156591` |
+| TSN2 | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/5509` |
+| TV Land | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156730` |
+| TV One | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156735` |
+| USA Network | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156759` |
+| Willow Cricket | HTTP Error (502) | `http://vipmdvmxqha.top:8080/vip371769954258/41705c78bd64/156819` |
 ---
 #### Base Channels URL
 ```
