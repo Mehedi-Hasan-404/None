@@ -1,6 +1,6 @@
-## Base Log @ 2026-05-21 06:34 UTC
+## Base Log @ 2026-05-21 11:44 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 15
+### ✅ Working Streams: 147<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -17,8 +17,6 @@
 | FDSN Sun | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663153.ts` |
 | FDSN West | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/663285.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://realsport.scalecdn.co:8080/live/supersonicstreams/cUewZolveU8Jh18jk34BDJ/3787.ts` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1780/index.m3u8` |
-| NBC Sports California | HTTP Error (404) | `http://stream.cammonitorplus.net/1795/index.m3u8` |
 ---
 #### Base Channels URL
 ```
