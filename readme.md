@@ -1,10 +1,11 @@
-## Base Log @ 2026-05-22 06:31 UTC
+## Base Log @ 2026-05-22 11:23 UTC
 
-### ✅ Working Streams: 81<br>❌ Dead Streams: 80
+### ✅ Working Streams: 82<br>❌ Dead Streams: 79
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Aspire | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/150605` |
+| BET | HTTP Error (404) | `http://41.205.93.154/BET-EN/index.m3u8` |
 | C-SPAN | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/14804` |
 | CBS Sports Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/267357` |
 | CNBC | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2295` |
@@ -19,7 +20,6 @@
 | FDSN Detroit | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6463` |
 | FDSN Florida | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296662` |
 | FDSN Midwest | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/58557` |
-| FDSN North | HTTP Error (403) | `http://mytvstream.net:8080/live/88623297/04243674/20928.m3u8` |
 | FDSN Ohio | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296675` |
 | FDSN Oklahoma | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/6452` |
 | FDSN SoCal | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/296681` |
@@ -33,7 +33,6 @@
 | Fox News | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/1611` |
 | Fox Sports 1 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/756` |
 | Fox Sports 2 | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/757` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1780/index.m3u8` |
 | Freeform TV | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/2329` |
 | Game Show Network | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/466` |
 | Golf Channel | HTTP Error (404) | `http://aflaxtv.xyz:8080/mitrovic/19106b7cb4/5845` |
