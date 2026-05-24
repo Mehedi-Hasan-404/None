@@ -1,17 +1,16 @@
-## Base Log @ 2026-05-24 10:18 UTC
+## Base Log @ 2026-05-24 15:43 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 14
+### ✅ Working Streams: 145<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CBS | HTTP Error (404) | `http://stream.cammonitorplus.net/1840/index.m3u8` |
 | Cleo TV | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
-| FDSN SoCal | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/665.ts` |
+| FDSN Florida | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1622.ts` |
+| FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1207.ts` |
+| FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1621.ts` |
 | Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/148.ts` |
-| MotorTrend TV | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/250.ts` |
-| NBC Sports California | HTTP Error (404) | `http://stream.cammonitorplus.net/1795/index.m3u8` |
 | NESN | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129931.ts` |
 | NFL RedZone | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257208.ts` |
 | Premier Sports 1 | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117037.ts` |
