@@ -1,4 +1,4 @@
-## Base Log @ 2026-05-23 21:14 UTC
+## Base Log @ 2026-05-24 06:16 UTC
 
 ### ✅ Working Streams: 145<br>❌ Dead Streams: 13
 
@@ -6,12 +6,12 @@
 | ------- | ------------ | ---- |
 | Cleo TV | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129849.ts` |
 | FDSN Detroit | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/317.ts` |
-| FDSN Florida | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1622.ts` |
-| FDSN North | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/320.ts` |
 | FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1207.ts` |
+| FDSN South | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/319.ts` |
 | FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/1621.ts` |
+| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live//bongus/35zqYxrbg0/148.ts` |
 | NESN | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/129931.ts` |
 | NFL RedZone | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/257208.ts` |
 | Premier Sports 1 | HTTP Error (401) | `http://hardcoremedia.xyz/live/rabdsbmz/3731346838/117037.ts` |
