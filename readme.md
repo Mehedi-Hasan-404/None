@@ -1,6 +1,6 @@
-## Base Log @ 2026-05-25 12:04 UTC
+## Base Log @ 2026-05-25 16:39 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 7
+### ✅ Working Streams: 148<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -8,9 +8,11 @@
 | FDSN North | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/320.ts` |
 | FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1207.ts` |
 | FDSN South | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/319.ts` |
+| FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
 | Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
+| Smithsonian Channel | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/46810.ts` |
 ---
 #### Base Channels URL
 ```
