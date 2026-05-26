@@ -16,8 +16,8 @@ TAG = "TSPRTK"
 CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASES = {
-    "TSPRTK1": "https://live.totalsportek.fyi",
-    "TSPRTK3": "https://live3.totalsportek.fyi",
+    "TSPRTK1": "https://live.totalsportek.rodeo",
+    "TSPRTK3": "https://live3.totalsportek.rodeo",
 }
 
 
@@ -69,7 +69,7 @@ async def process_ts3(ifr_src: str, url_num: int) -> str | None:
         log.warning(f"URL {url_num}) Failed to load iframe source. (IFR2)")
         return
 
-    valid_m3u8 = re.compile(r'currentStreamUrl\s+=\s+"([^"]*)"', re.I)
+    valid_m3u8 = re.compile(r'StreamUrl\s+=\s+"([^"]*)"', re.I)
 
     if not (match := valid_m3u8.search(ifr_2_src_data.text)):
         log.warning(f"URL {url_num}) No Clappr source found.")
