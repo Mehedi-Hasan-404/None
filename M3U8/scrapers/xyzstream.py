@@ -49,7 +49,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
             events[key] = {
                 "url": feed,
                 "logo": logo,
-                "base": "",
+                "base": "https://xyzstreams.shop",
                 "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
             }
