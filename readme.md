@@ -1,15 +1,17 @@
-## Base Log @ 2026-05-26 06:32 UTC
+## Base Log @ 2026-05-26 17:43 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 6
+### ✅ Working Streams: 149<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| BET | HTTP Error (404) | `http://41.205.93.154/BET-EN/index.m3u8` |
 | FDSN Detroit | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/317.ts` |
 | FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1207.ts` |
-| FDSN South | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/319.ts` |
+| FDSN SoCal | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/665.ts` |
 | FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
+| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
 ---
 #### Base Channels URL
 ```
