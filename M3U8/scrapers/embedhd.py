@@ -1,7 +1,8 @@
+import asyncio
 from functools import partial
 from urllib.parse import urljoin
 
-from playwright.async_api import Browser
+from playwright.async_api import Browser, Page
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -20,6 +21,67 @@ BASE_URL = "https://embedhd.org"
 
 def fix_league(s: str) -> str:
     return " ".join(x.capitalize() for x in s.split()) if len(s) > 5 else s.upper()
+
+
+async def process_event(
+    url: str,
+    url_num: int,
+    page: Page,
+) -> str | None:
+
+    captured: list[str] = []
+
+    got_one = asyncio.Event()
+
+    handler = partial(
+        network.capture_req,
+        captured=captured,
+        got_one=got_one,
+    )
+
+    page.on("request", handler)
+
+    try:
+        resp = await page.goto(
+            url,
+            wait_until="domcontentloaded",
+            timeout=6_000,
+            referer=BASE_URL,
+        )
+
+        if not resp or resp.status != 200:
+            log.warning(
+                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
+            )
+            return
+
+        wait_task = asyncio.create_task(got_one.wait())
+
+        try:
+            await asyncio.wait_for(wait_task, timeout=6)
+        except asyncio.TimeoutError:
+            log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
+            return
+
+        finally:
+            if not wait_task.done():
+                wait_task.cancel()
+
+                try:
+                    await wait_task
+                except asyncio.CancelledError:
+                    pass
+
+        if captured:
+            log.info(f"URL {url_num}) Captured M3U8")
+            return captured[0]
+
+    except Exception as e:
+        log.warning(f"URL {url_num}) {e}")
+        return
+
+    finally:
+        page.remove_listener("request", handler)
 
 
 async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
@@ -97,11 +159,10 @@ async def scrape(browser: Browser) -> None:
             for i, ev in enumerate(events, start=1):
                 async with network.event_page(context) as page:
                     handler = partial(
-                        network.process_event,
+                        process_event,
                         url=(link := ev["link"]),
                         url_num=i,
                         page=page,
-                        log=log,
                     )
 
                     url = await network.safe_process(
