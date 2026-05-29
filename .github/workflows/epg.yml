@@ -2,7 +2,7 @@ name: fetch epg
 
 on:
   schedule:
-    - cron: "45 2,10,18 * * *"
+    - cron: "45 2,18 * * *"
   workflow_dispatch:
 
 jobs:
