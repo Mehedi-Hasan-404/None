@@ -1,10 +1,9 @@
-## Base Log @ 2026-05-28 22:16 UTC
+## Base Log @ 2026-05-29 00:20 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 14
+### ✅ Working Streams: 147<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/727.ts` |
 | FDSN Detroit | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/317.ts` |
 | FDSN North | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/320.ts` |
 | FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1207.ts` |
@@ -15,9 +14,6 @@
 | FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
-| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
-| NESN | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/890.ts` |
-| Starz Encore Classic | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1471.ts` |
 ---
 #### Base Channels URL
 ```
