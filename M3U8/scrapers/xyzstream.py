@@ -8,13 +8,21 @@ TAG = "XYZSTRM"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
+BASE_URL = "https://xyzstreams.shop"
+
 API_URL = "https://blog.xyzstreams.shop:2053/api/scoreboard"
 
 
 async def get_events() -> dict[str, dict[str, str | float]]:
     events = {}
 
-    if not (r := await network.request(API_URL, log=log)):
+    if not (
+        r := await network.request(
+            API_URL,
+            headers={"Referer": BASE_URL},
+            log=log,
+        )
+    ):
         return events
 
     now = Time.clean(Time.now())
@@ -49,7 +57,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
             events[key] = {
                 "url": feed,
                 "logo": logo,
-                "base": "https://xyzstreams.shop",
+                "base": BASE_URL,
                 "timestamp": now.timestamp(),
                 "id": tvg_id or "Live.Event.us",
             }
@@ -65,7 +73,7 @@ async def scrape() -> None:
 
         return
 
-    log.info('Scraping from "https://xyzstreams.shop"')
+    log.info(f'Scraping from "{BASE_URL}"')
 
     urls.update(await get_events() or {})
 
