@@ -1,19 +1,15 @@
-## Base Log @ 2026-05-31 00:06 UTC
+## Base Log @ 2026-05-31 10:29 UTC
 
-### ✅ Working Streams: 147<br>❌ Dead Streams: 10
+### ✅ Working Streams: 151<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN Detroit | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/317.ts` |
-| FDSN North | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/320.ts` |
 | FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1207.ts` |
 | FDSN SoCal | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/665.ts` |
-| FDSN South | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/319.ts` |
-| FDSN Southeast | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/872.ts` |
-| FDSN Southwest | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1189.ts` |
 | FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
+| Premier Sports 1 | HTTP Error (407) | `http://world-protv.club:8080/GenIptvg@f0DE14aIRn/0h5GuR3HJ0edweFz3DyY/376` |
 ---
 #### Base Channels URL
 ```
