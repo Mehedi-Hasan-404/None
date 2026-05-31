@@ -1,16 +1,22 @@
-## Base Log @ 2026-05-31 15:46 UTC
+## Base Log @ 2026-05-31 23:47 UTC
 
-### ✅ Working Streams: 150<br>❌ Dead Streams: 7
+### ✅ Working Streams: 144<br>❌ Dead Streams: 13
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FDSN North | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/320.ts` |
-| FDSN Ohio | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1207.ts` |
-| FDSN Southwest | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1189.ts` |
-| FDSN Sun | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
-| FDSN West | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
-| FDSN Wisconsin | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
-| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
+| FDSN Detroit | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/317.ts` |
+| FDSN Florida | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1622.ts` |
+| FDSN Midwest | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/324.ts` |
+| FDSN North | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/320.ts` |
+| FDSN Ohio | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1207.ts` |
+| FDSN Oklahoma | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1611.ts` |
+| FDSN SoCal | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/665.ts` |
+| FDSN South | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/319.ts` |
+| FDSN Southeast | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/872.ts` |
+| FDSN Southwest | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1189.ts` |
+| FDSN Sun | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
+| FDSN West | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
+| FDSN Wisconsin | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
 ---
 #### Base Channels URL
 ```
