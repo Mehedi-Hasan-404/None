@@ -1,10 +1,9 @@
-## Base Log @ 2026-06-02 18:15 UTC
+## Base Log @ 2026-06-02 22:33 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 14
+### ✅ Working Streams: 142<br>❌ Dead Streams: 15
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Bloomberg TV | HTTP Error (404) | `https://live-manifest.production-public.tubi.io/live/a5aabf5a-9615-4987-8163-18edfa1360c6/playlist.m3u8` |
 | FDSN Detroit | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/317.ts` |
 | FDSN Florida | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1622.ts` |
 | FDSN Midwest | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/324.ts` |
@@ -18,6 +17,8 @@
 | FDSN Sun | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/322.ts` |
 | FDSN West | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
+| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
+| NESN | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/890.ts` |
 ---
 #### Base Channels URL
 ```
