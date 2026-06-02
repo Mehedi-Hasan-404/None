@@ -40,7 +40,7 @@ http://cdn1host.online:2999/live/bongus/35zqYxrbg0/204.ts
 http://23.237.104.106:8080/USA_BTN/index.m3u8
 
 #EXTINF:-1 tvg-chno="14" tvg-id="Bloomberg.HD.us2" tvg-name="Bloomberg TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s71799_dark_360w_270h.png" group-title="TV",Bloomberg TV
-https://live-manifest.production-public.tubi.io/live/a5aabf5a-9615-4987-8163-18edfa1360c6/playlist.m3u8
+https://www.bloomberg.com/media-manifest/streams/us.m3u8
 
 #EXTINF:-1 tvg-chno="15" tvg-id="Boomerang.us2" tvg-name="Boomerang" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s21883_dark_360w_270h.png" group-title="TV",Boomerang
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
