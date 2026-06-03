@@ -1,6 +1,6 @@
-## Base Log @ 2026-06-02 22:33 UTC
+## Base Log @ 2026-06-03 12:54 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 15
+### ✅ Working Streams: 143<br>❌ Dead Streams: 14
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -18,7 +18,6 @@
 | FDSN West | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1633.ts` |
 | FDSN Wisconsin | HTTP Error (406) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1621.ts` |
 | Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
-| NESN | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/890.ts` |
 ---
 #### Base Channels URL
 ```
