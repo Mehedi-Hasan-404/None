@@ -1,10 +1,11 @@
-## Base Log @ 2026-06-04 17:28 UTC
+## Base Log @ 2026-06-04 21:59 UTC
 
-### ✅ Working Streams: 143<br>❌ Dead Streams: 1
+### ✅ Working Streams: 142<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | BBC America | HTTP Error (403) | `https://bcovlive-a.akamaihd.net/7f5ec16d102f4b5d92e8e27bc95ff424/us-east-1/6240731308001/playlist.m3u8` |
+| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
 ---
 #### Base Channels URL
 ```
