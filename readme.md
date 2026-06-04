@@ -1,7 +1,10 @@
-## Base Log @ 2026-06-03 23:06 UTC
+## Base Log @ 2026-06-04 11:30 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 0
+### ✅ Working Streams: 143<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| FYI TV | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/164.ts` |
 ---
 #### Base Channels URL
 ```
