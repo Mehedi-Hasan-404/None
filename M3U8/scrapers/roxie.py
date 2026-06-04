@@ -1,5 +1,4 @@
 import asyncio
-import re
 from functools import partial
 from urllib.parse import urljoin
 
@@ -16,7 +15,7 @@ TAG = "ROXIE"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://roxiestreams.su"
+BASE_URL = "https://roxiestreams.info"
 
 SPORT_URLS = {
     # "March Madness": urljoin(BASE_URL, "march-madness"),
@@ -102,18 +101,10 @@ async def get_events() -> list[dict[str, str]]:
             if not (href := a_tag.attributes.get("href")):
                 continue
 
-            if not (span := row.css_first("span.countdown-timer")) or not (
-                data_start := span.attributes.get("data-start")
-            ):
+            if not (event_time_elem := row.css_first("td.event-start-time")):
                 continue
 
-            event_time = (
-                data_start.rsplit(":", 1)[0]
-                if (re.search(r"\d+:\d+:\d+", data_start) or "M:00" in data_start)
-                else data_start
-            )
-
-            event_dt = Time.from_str(event_time, timezone="PST")
+            event_dt = Time.from_str(event_time_elem.text(strip=True), timezone="EST")
 
             if event_dt.date() != now.date():
                 continue
