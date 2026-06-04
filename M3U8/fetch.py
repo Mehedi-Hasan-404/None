@@ -48,7 +48,7 @@ def load_base() -> tuple[list[str], int]:
 async def main() -> None:
     log.info(f"{'=' * 10} Scraper Started {'=' * 10}")
 
-    # base_m3u8, tvg_chno = load_base()
+    base_m3u8, tvg_chno = load_base()
 
     async with async_playwright() as p:
         try:
@@ -57,30 +57,30 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
-                # asyncio.create_task(embedhd.scrape(hdl_brwsr)),
-                # asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
-                # asyncio.create_task(roxie.scrape(hdl_brwsr)),
+                asyncio.create_task(embedhd.scrape(hdl_brwsr)),
+                asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
+                asyncio.create_task(roxie.scrape(hdl_brwsr)),
             ]
 
             httpx_tasks = [
-                # asyncio.create_task(fawa.scrape()),
-                # asyncio.create_task(istreameast.scrape()),
-                # # asyncio.create_task(ovogoal.scrape()),
-                # asyncio.create_task(shark.scrape()),
-                # asyncio.create_task(streamcenter.scrape()),
+                asyncio.create_task(fawa.scrape()),
+                asyncio.create_task(istreameast.scrape()),
+                # asyncio.create_task(ovogoal.scrape()),
+                asyncio.create_task(shark.scrape()),
+                asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
-                # asyncio.create_task(streamtpnew.scrape()),
-                # asyncio.create_task(totalsportek.scrape()),
-                # asyncio.create_task(tvapp.scrape()),
-                # asyncio.create_task(webcast.scrape()),
-                # asyncio.create_task(xyzstream.scrape()),
+                asyncio.create_task(streamtpnew.scrape()),
+                asyncio.create_task(totalsportek.scrape()),
+                asyncio.create_task(tvapp.scrape()),
+                asyncio.create_task(webcast.scrape()),
+                asyncio.create_task(xyzstream.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
 
             # others
-            # await cdnlivetv.scrape(xtrnl_brwsr)
-            # await watchfooty.scrape(xtrnl_brwsr)
+            await cdnlivetv.scrape(xtrnl_brwsr)
+            await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
@@ -89,68 +89,68 @@ async def main() -> None:
 
             await network.client.aclose()
 
-    # additions = (
-    #     cdnlivetv.urls
-    #     | embedhd.urls
-    #     | fawa.urls
-    #     | fsports.urls
-    #     | istreameast.urls
-    #     | ovogoal.urls
-    #     | roxie.urls
-    #     | shark.urls
-    #     | streamcenter.urls
-    #     | streamsgate.urls
-    #     | streamtpnew.urls
-    #     | totalsportek.urls
-    #     | tvapp.urls
-    #     | watchfooty.urls
-    #     | webcast.urls
-    #     | xyzstream.urls
-    # )
+    additions = (
+        cdnlivetv.urls
+        | embedhd.urls
+        | fawa.urls
+        | fsports.urls
+        | istreameast.urls
+        | ovogoal.urls
+        | roxie.urls
+        | shark.urls
+        | streamcenter.urls
+        | streamsgate.urls
+        | streamtpnew.urls
+        | totalsportek.urls
+        | tvapp.urls
+        | watchfooty.urls
+        | webcast.urls
+        | xyzstream.urls
+    )
 
-    # live_events: list[str] = []
+    live_events: list[str] = []
 
-    # combined_channels: list[str] = []
+    combined_channels: list[str] = []
 
-    # for i, (event, info) in enumerate(
-    #     sorted(additions.items()),
-    #     start=1,
-    # ):
-    #     extinf_all = (
-    #         f'#EXTINF:-1 tvg-chno="{tvg_chno + i}" tvg-id="{info["id"]}" '
-    #         f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
-    #     )
+    for i, (event, info) in enumerate(
+        sorted(additions.items()),
+        start=1,
+    ):
+        extinf_all = (
+            f'#EXTINF:-1 tvg-chno="{tvg_chno + i}" tvg-id="{info["id"]}" '
+            f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
+        )
 
-    #     extinf_live = (
-    #         f'#EXTINF:-1 tvg-chno="{i}" tvg-id="{info["id"]}" '
-    #         f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
-    #     )
+        extinf_live = (
+            f'#EXTINF:-1 tvg-chno="{i}" tvg-id="{info["id"]}" '
+            f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
+        )
 
-    #     vlc_block = [
-    #         f'#EXTVLCOPT:http-referrer={info["base"]}',
-    #         f'#EXTVLCOPT:http-origin={info["base"]}',
-    #         f"#EXTVLCOPT:http-user-agent={info.get('UA', network.UA)}",
-    #         info["url"],
-    #     ]
+        vlc_block = [
+            f'#EXTVLCOPT:http-referrer={info["base"]}',
+            f'#EXTVLCOPT:http-origin={info["base"]}',
+            f"#EXTVLCOPT:http-user-agent={info.get('UA', network.UA)}",
+            info["url"],
+        ]
 
-    #     combined_channels.extend(["\n" + extinf_all, *vlc_block])
+        combined_channels.extend(["\n" + extinf_all, *vlc_block])
 
-    #     live_events.extend(["\n" + extinf_live, *vlc_block])
+        live_events.extend(["\n" + extinf_live, *vlc_block])
 
-    # COMBINED_FILE.write_text(
-    #     "\n".join(base_m3u8 + combined_channels),
-    #     encoding="utf-8",
-    # )
+    COMBINED_FILE.write_text(
+        "\n".join(base_m3u8 + combined_channels),
+        encoding="utf-8",
+    )
 
-    # log.info(f"Base + Events saved to {COMBINED_FILE.resolve()}")
+    log.info(f"Base + Events saved to {COMBINED_FILE.resolve()}")
 
-    # EVENTS_FILE.write_text(
-    #     '#EXTM3U url-tvg="https://raw.githubusercontent.com/doms9/iptv/refs/heads/default/M3U8/TV.xml"\n'
-    #     + "\n".join(live_events),
-    #     encoding="utf-8",
-    # )
+    EVENTS_FILE.write_text(
+        '#EXTM3U url-tvg="https://raw.githubusercontent.com/doms9/iptv/refs/heads/default/M3U8/TV.xml"\n'
+        + "\n".join(live_events),
+        encoding="utf-8",
+    )
 
-    # log.info(f"Events saved to {EVENTS_FILE.resolve()}")
+    log.info(f"Events saved to {EVENTS_FILE.resolve()}")
 
 
 if __name__ == "__main__":
