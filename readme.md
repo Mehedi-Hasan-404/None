@@ -1,10 +1,10 @@
-## Base Log @ 2026-06-04 11:30 UTC
+## Base Log @ 2026-06-04 17:28 UTC
 
 ### ✅ Working Streams: 143<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| FYI TV | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/164.ts` |
+| BBC America | HTTP Error (403) | `https://bcovlive-a.akamaihd.net/7f5ec16d102f4b5d92e8e27bc95ff424/us-east-1/6240731308001/playlist.m3u8` |
 ---
 #### Base Channels URL
 ```
