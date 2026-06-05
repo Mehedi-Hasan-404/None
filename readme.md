@@ -1,11 +1,10 @@
-## Base Log @ 2026-06-05 11:41 UTC
+## Base Log @ 2026-06-05 16:46 UTC
 
-### ✅ Working Streams: 141<br>❌ Dead Streams: 3
+### ✅ Working Streams: 142<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC America | HTTP Error (403) | `https://bcovlive-a.akamaihd.net/7f5ec16d102f4b5d92e8e27bc95ff424/us-east-1/6240731308001/playlist.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
+| CBS | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/719.ts` |
 | Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
 ---
 #### Base Channels URL
