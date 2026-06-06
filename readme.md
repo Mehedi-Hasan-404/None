@@ -1,10 +1,9 @@
-## Base Log @ 2026-06-05 21:53 UTC
+## Base Log @ 2026-06-06 10:29 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 2
+### ✅ Working Streams: 143<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
 | Smithsonian Channel | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/46810.ts` |
 ---
 #### Base Channels URL
