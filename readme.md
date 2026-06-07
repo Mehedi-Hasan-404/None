@@ -1,7 +1,10 @@
-## Base Log @ 2026-06-06 21:36 UTC
+## Base Log @ 2026-06-07 10:40 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 0
+### ✅ Working Streams: 143<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
 ---
 #### Base Channels URL
 ```
