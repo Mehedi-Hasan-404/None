@@ -17,7 +17,6 @@ from scrapers import (
     streamsgate,
     streamtpnew,
     totalsportek,
-    tvapp,
     watchfooty,
     webcast,
     xyzstream,
@@ -71,7 +70,6 @@ async def main() -> None:
                 asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtpnew.scrape()),
                 asyncio.create_task(totalsportek.scrape()),
-                # asyncio.create_task(tvapp.scrape()),
                 asyncio.create_task(webcast.scrape()),
                 asyncio.create_task(xyzstream.scrape()),
             ]
@@ -102,7 +100,6 @@ async def main() -> None:
         | streamsgate.urls
         | streamtpnew.urls
         | totalsportek.urls
-        | tvapp.urls
         | watchfooty.urls
         | webcast.urls
         | xyzstream.urls
