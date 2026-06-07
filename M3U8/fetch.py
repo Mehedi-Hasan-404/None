@@ -10,7 +10,7 @@ from scrapers import (
     fawa,
     fsports,
     istreameast,
-    ovogoal,
+    mainportal,
     roxie,
     shark,
     streamcenter,
@@ -64,7 +64,7 @@ async def main() -> None:
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
-                # asyncio.create_task(ovogoal.scrape()),
+                asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
@@ -93,7 +93,7 @@ async def main() -> None:
         | fawa.urls
         | fsports.urls
         | istreameast.urls
-        | ovogoal.urls
+        | mainportal.urls
         | roxie.urls
         | shark.urls
         | streamcenter.urls
