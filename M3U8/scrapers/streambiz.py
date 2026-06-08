@@ -146,12 +146,10 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
             elif cached_links & {link := urljoin(BASE_URL, href)}:
                 continue
 
-            if scr_elem := event.css_first("script"):
-                if match := date_ptrn.search(scr_elem.text(strip=True)):
-                    event_dt = Time.fromisoformat(match[0]).to_tz("EST")
-
-                else:
-                    continue
+            if (scr_elem := event.css_first("script")) and (
+                match := date_ptrn.search(scr_elem.text(strip=True))
+            ):
+                event_dt = Time.fromisoformat(match[0]).to_tz("EST")
 
             elif event.css_first('span[id*="gameStatus-"]'):
                 event_dt = now
