@@ -222,7 +222,7 @@ class Network:
         escaped = [
             re.escape(i)
             for i in {
-                "amazonaws",
+                # "amazonaws",
                 "knitcdn",
                 "jwpltx",
             }

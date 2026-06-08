@@ -111,7 +111,7 @@ async def process_event(
     url: str,
     url_num: int,
     page: Page,
-) -> str | None:
+) -> tuple[str | None, str | None]:
 
     nones = None, None
 

@@ -13,6 +13,7 @@ from scrapers import (
     mainportal,
     roxie,
     shark,
+    streambiz,
     streamcenter,
     streamsgate,
     streamtpnew,
@@ -59,6 +60,7 @@ async def main() -> None:
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
+                asyncio.create_task(streambiz.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
@@ -96,6 +98,7 @@ async def main() -> None:
         | mainportal.urls
         | roxie.urls
         | shark.urls
+        | streambiz.urls
         | streamcenter.urls
         | streamsgate.urls
         | streamtpnew.urls
