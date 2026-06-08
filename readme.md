@@ -1,10 +1,13 @@
-## Base Log @ 2026-06-08 12:46 UTC
+## Base Log @ 2026-06-08 22:09 UTC
 
-### ✅ Working Streams: 142<br>❌ Dead Streams: 2
+### ✅ Working Streams: 139<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Lifetime | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/148.ts` |
+| Bravo TV | HTTP Error (404) | `http://41.205.93.154/BRAVO/index.m3u8` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| ESPN2 | HTTP Error (404) | `http://41.223.30.230/ESPN2/index.m3u8` |
+| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
 | Smithsonian Channel | HTTP Error (403) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/46810.ts` |
 ---
 #### Base Channels URL
