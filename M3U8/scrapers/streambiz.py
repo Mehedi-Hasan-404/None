@@ -1,5 +1,4 @@
 import asyncio
-import re
 from functools import partial
 from urllib.parse import urljoin
 
@@ -12,7 +11,7 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "SPRTPASS"
+TAG = "STRMBIZ"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
@@ -118,8 +117,6 @@ async def process_event(
 
 
 async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
-    now = Time.clean(Time.now())
-
     tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
     results = await asyncio.gather(*tasks)
@@ -131,11 +128,6 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
     ):
         return events
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
-
-    date_ptrn = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z", re.I)
-
     for soup, url in soups:
         sport = next((k for k, v in SPORT_URLS.items() if v == url), "Live Event")
 
@@ -146,25 +138,13 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
             elif cached_links & {link := urljoin(BASE_URL, href)}:
                 continue
 
-            if (scr_elem := event.css_first("script")) and (
-                match := date_ptrn.search(scr_elem.text(strip=True))
-            ):
-                event_dt = Time.fromisoformat(match[0]).to_tz("EST")
-
-            elif event.css_first('span[id*="gameStatus-"]'):
-                event_dt = now
-
-            else:
-                continue
-
-            if not start_dt <= event_dt <= end_dt:
+            if not event.css_first("span.status-badge.badge.bg-success"):
                 continue
 
             events.append(
                 {
                     "sport": sport,
                     "link": link,
-                    "timestamp": event_dt.timestamp(),
                 }
             )
 
@@ -188,6 +168,8 @@ async def scrape(browser: Browser) -> None:
 
     if events := await get_events(cached_links):
         log.info(f"Processing {len(events)} URL(s)")
+
+        now = Time.clean(Time.now())
 
         async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):
@@ -214,7 +196,7 @@ async def scrape(browser: Browser) -> None:
                         "url": url,
                         "logo": logo,
                         "base": ifr_src,
-                        "timestamp": ev["timestamp"],
+                        "timestamp": now.timestamp(),
                         "id": tvg_id or "Live.Event.us",
                         "link": link,
                     }
