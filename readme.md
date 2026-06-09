@@ -1,6 +1,6 @@
-## Base Log @ 2026-06-09 11:35 UTC
+## Base Log @ 2026-06-09 17:11 UTC
 
-### ✅ Working Streams: 73<br>❌ Dead Streams: 71
+### ✅ Working Streams: 72<br>❌ Dead Streams: 72
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -10,6 +10,7 @@
 | Bravo TV | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/200.ts` |
 | C-SPAN | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1184.ts` |
 | CBS Sports Network | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/197.ts` |
+| CMT | HTTP Error (404) | `http://23.237.104.106:8080/USA_CMT/index.m3u8` |
 | CNBC | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/192.ts` |
 | CW | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1086.ts` |
 | Comedy TV | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1459.ts` |
