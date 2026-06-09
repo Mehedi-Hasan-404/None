@@ -82,7 +82,7 @@ async def main() -> None:
 
             # others
             await cdnlivetv.scrape(xtrnl_brwsr)
-            await watchfooty.scrape(xtrnl_brwsr)
+            # await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
