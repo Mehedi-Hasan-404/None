@@ -47,7 +47,7 @@ async def process_event(channel_id: str, url_num: int) -> tuple[str | None, str 
     log.info(f"URL {url_num}) Captured M3U8")
 
     return (
-        m3u8.replace(urlsplit(m3u8).netloc, "kolis.phantemlis.top"),
+        m3u8,  # .replace(urlsplit(m3u8).netloc, "kolis.phantemlis.top"),
         ref_url,
     )
 

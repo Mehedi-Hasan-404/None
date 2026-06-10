@@ -19,7 +19,6 @@ from scrapers import (
     streamcenter,
     streamsgate,
     streamtp,
-    vivatops,
     watchfooty,
     webcast,
     xyzstream,
@@ -68,14 +67,13 @@ async def main() -> None:
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
-                # asyncio.create_task(mainportal.scrape()),
+                asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
-                # asyncio.create_task(resportz.scrape()),
+                asyncio.create_task(resportz.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtp.scrape()),
-                # asyncio.create_task(vivatops.scrape()),
                 asyncio.create_task(webcast.scrape()),
                 asyncio.create_task(xyzstream.scrape()),
             ]
@@ -84,7 +82,7 @@ async def main() -> None:
 
             # others
             await cdnlivetv.scrape(xtrnl_brwsr)
-            # await watchfooty.scrape(xtrnl_brwsr)
+            await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()
@@ -108,7 +106,6 @@ async def main() -> None:
         | streamcenter.urls
         | streamsgate.urls
         | streamtp.urls
-        | vivatops.urls
         | watchfooty.urls
         | webcast.urls
         | xyzstream.urls
