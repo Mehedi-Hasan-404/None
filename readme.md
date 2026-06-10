@@ -1,6 +1,6 @@
-## Base Log @ 2026-06-09 22:03 UTC
+## Base Log @ 2026-06-10 11:52 UTC
 
-### ✅ Working Streams: 138<br>❌ Dead Streams: 6
+### ✅ Working Streams: 137<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
@@ -10,6 +10,7 @@
 | Sportsnet One | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/2046.ts` |
 | TSN1 | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/1195.ts` |
 | TSN2 | HTTP Timeout (408) | `http://cdn1host.online:2999/live/bongus/35zqYxrbg0/175.ts` |
+| Vice TV | HTTP Error (404) | `http://23.237.104.106:8080/USA_VICETV/index.m3u8` |
 ---
 #### Base Channels URL
 ```
