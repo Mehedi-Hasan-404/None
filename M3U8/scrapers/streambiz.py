@@ -131,8 +131,8 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
     ):
         return events
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
+    start_dt = now.delta(hours=-3)
+    end_dt = now.delta(minutes=5)
 
     date_ptrn = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z", re.I)
 
