@@ -17,14 +17,12 @@ API_URL = "https://la18hd.com/eventos/json/agenda123.json"
 async def process_event(url: str, url_num: int) -> str | None:
     if not (html_data := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
-
         return
 
     valid_m3u8 = re.compile(r'var\s+playbackURL\s+=\s+"([^"]*)"', re.I)
 
     if not (match := valid_m3u8.search(html_data.text)):
-        log.info(f"URL {url_num}) No M3U8 found")
-
+        log.warning(f"URL {url_num}) No M3U8 found")
         return
 
     log.info(f"URL {url_num}) Captured M3U8")

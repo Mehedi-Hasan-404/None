@@ -12,13 +12,14 @@ from scrapers import (
     istreameast,
     mainportal,
     pelotalibre,
+    resportz,
     roxie,
     shark,
     streambiz,
     streamcenter,
     streamsgate,
     streamtp,
-    totalsportek,
+    vivatops,
     watchfooty,
     webcast,
     xyzstream,
@@ -69,11 +70,12 @@ async def main() -> None:
                 asyncio.create_task(istreameast.scrape()),
                 # asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
+                asyncio.create_task(resportz.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtp.scrape()),
-                asyncio.create_task(totalsportek.scrape()),
+                asyncio.create_task(vivatops.scrape()),
                 asyncio.create_task(webcast.scrape()),
                 asyncio.create_task(xyzstream.scrape()),
             ]
@@ -99,13 +101,14 @@ async def main() -> None:
         | istreameast.urls
         | mainportal.urls
         | pelotalibre.urls
+        | resportz.urls
         | roxie.urls
         | shark.urls
         | streambiz.urls
         | streamcenter.urls
         | streamsgate.urls
         | streamtp.urls
-        | totalsportek.urls
+        | vivatops.urls
         | watchfooty.urls
         | webcast.urls
         | xyzstream.urls

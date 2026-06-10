@@ -29,7 +29,7 @@ async def process_event(url: str, url_num: int) -> str | None:
     )
 
     if not (match := valid_m3u8.search(html_data.text)):
-        log.info(f"URL {url_num}) No M3U8 found")
+        log.warning(f"URL {url_num}) No M3U8 found")
 
         return
 

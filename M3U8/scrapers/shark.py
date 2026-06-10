@@ -19,14 +19,12 @@ BASE_URL = "https://sharkstreams.net"
 async def process_event(url: str, url_num: int) -> str | None:
     if not (r := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
-
         return
 
     data: dict[str, list[str]] = r.json()
 
     if not (urls := data.get("urls")):
         log.warning(f"URL {url_num}) No M3U8 found")
-
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
