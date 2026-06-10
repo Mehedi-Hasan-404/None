@@ -1,6 +1,7 @@
 import base64
 import re
 from functools import partial
+from urllib.parse import urlsplit
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -41,9 +42,14 @@ async def process_event(channel_id: str, url_num: int) -> tuple[str | None, str 
         log.warning(f"URL {url_num}) No M3U8 found")
         return nones
 
+    m3u8 = base64.b64decode(match[2]).decode("utf-8")
+
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return base64.b64decode(match[2]).decode("utf-8"), ref_url
+    return (
+        m3u8.replace(urlsplit(m3u8).netloc, "kolis.phantemlis.top"),
+        ref_url,
+    )
 
 
 async def get_events() -> list[dict[str, str]]:
@@ -95,11 +101,7 @@ async def get_events() -> list[dict[str, str]]:
 
             events.append(
                 {
-                    "sport": (
-                        "Soccer"
-                        if category.lower() == "all soccer events"
-                        else category
-                    ),
+                    "sport": category,
                     "event": name,
                     "channel-id": channel_id,
                     "timestamp": now.timestamp(),
