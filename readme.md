@@ -1,11 +1,11 @@
-## Base Log @ 2026-06-11 12:27 UTC
+## Base Log @ 2026-06-11 17:50 UTC
 
 ### ✅ Working Streams: 142<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| FIFA+ TV | HTTP Error (504) | `https://jmp2.uk/stvp-IN270000230` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
-| TSN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts` |
 ---
 #### Base Channels URL
 ```
