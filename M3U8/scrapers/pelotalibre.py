@@ -43,6 +43,9 @@ async def get_events() -> list[dict[str, str]]:
         if not (name := event.get("title")) or not (link := event.get("link")):
             continue
 
+        elif "drm.php" in link:
+            continue
+
         if (sport := event.get("category")) and sport == "Other":
             sport = "Live Event"
 

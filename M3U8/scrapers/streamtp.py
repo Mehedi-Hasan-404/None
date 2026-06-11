@@ -1,5 +1,4 @@
-import ast
-import base64
+import json
 import re
 from functools import partial
 
@@ -13,41 +12,25 @@ TAG = "STP"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-API_URL = "https://streamtp-x-y-z.ws/eventos.json"
+API_URL = "https://streamtpday1.xyz/eventos.json"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
-    if not (event_data := await network.request(url, log=log)):
+    if not (html_data := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
         return
 
-    digit_func_ptrn = re.compile(r"{return\s+(\d*);}", re.I)
+    valid_m3u8 = re.compile(r'var\s+playbackURL\s+=\s+"([^"]*)"', re.I)
 
-    if not (digit_list := digit_func_ptrn.findall(event_data.text)):
-        log.warning(f"URL {url_num}) Unable to decode url.")
+    if not (match := valid_m3u8.search(html_data.text)):
+        log.warning(f"URL {url_num}) No M3U8 found")
         return
-
-    embed_list_ptrn = re.compile(r"\w*=\[\[(.*)\]\];")
-
-    if not (embed_list := embed_list_ptrn.search(event_data.text)):
-        log.warning(f"URL {url_num}) Unable to decode url.")
-        return
-
-    embed_list_str = embed_list[0].split("=", 1)[-1].strip(";")
-
-    embed_list: list[tuple[int, str]] = ast.literal_eval(embed_list_str)
-
-    m3u8 = "".join(
-        chr(
-            int("".join(c for c in base64.b64decode(v).decode("utf-8") if c.isdigit()))
-            - sum(map(int, digit_list))
-        )
-        for _, v in sorted(embed_list, key=lambda i: i[0])
-    )
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return m3u8.split("ip=")[0]
+    m3u8 = match[1].split("ip=")[0]
+
+    return json.loads(f'"{m3u8}"')
 
 
 async def get_events() -> list[dict[str, str]]:
@@ -61,6 +44,9 @@ async def get_events() -> list[dict[str, str]]:
 
     for event in api_data:
         if not (name := event.get("title")) or not (link := event.get("link")):
+            continue
+
+        elif "sudamericaplay" in link:
             continue
 
         if (sport := event.get("category")) and sport == "Other":

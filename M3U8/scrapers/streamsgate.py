@@ -1,4 +1,5 @@
 import asyncio
+import json
 import re
 from functools import partial
 from itertools import chain
@@ -71,7 +72,10 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) Failed to load iframe source. (IFR1)")
         return nones
 
-    valid_m3u8 = re.compile(r"(file|source):\s+(\'|\")([^\"]*)(\'|\")", re.I)
+    valid_m3u8 = re.compile(
+        r"(file|source|currentStreamUrl)\s*(:|=)\s+(\'|\")([^\"]*)(\'|\")",
+        re.I,
+    )
 
     if not (match := valid_m3u8.search(ifr_src_data.text)):
         log.warning(f"URL {url_num}) No source found.")
@@ -79,7 +83,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return match[3], ifr_src
+    return json.loads(f'"{match[4]}"'), ifr_src
 
 
 async def get_events() -> list[dict[str, str]]:
