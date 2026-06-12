@@ -11,7 +11,9 @@ TAG = "PLIBRE"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-API_URL = "https://la18hd.com/eventos/json/agenda123.json"
+BASE_URL = "https://la18hd.com"
+
+API_URL = f"{BASE_URL}/eventos/json/agenda123.json"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -43,7 +45,7 @@ async def get_events() -> list[dict[str, str]]:
         if not (name := event.get("title")) or not (link := event.get("link")):
             continue
 
-        elif "drm.php" in link:
+        elif not link.startswith(BASE_URL) or "drm.php" in link:
             continue
 
         if (sport := event.get("category")) and sport == "Other":

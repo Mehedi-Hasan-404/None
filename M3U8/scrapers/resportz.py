@@ -1,7 +1,6 @@
 import base64
 import re
 from functools import partial
-from urllib.parse import urlsplit
 
 from .utils import Cache, Time, get_logger, leagues, network
 
