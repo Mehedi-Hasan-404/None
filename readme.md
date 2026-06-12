@@ -1,13 +1,9 @@
-## Base Log @ 2026-06-12 17:21 UTC
+## Base Log @ 2026-06-12 22:05 UTC
 
-### ✅ Working Streams: 139<br>❌ Dead Streams: 5
+### ✅ Working Streams: 143<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CBS Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3621.ts` |
-| Comedy TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/77411.ts` |
-| ESPN News | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3640.ts` |
-| Freeform TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2502.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 ---
 #### Base Channels URL
