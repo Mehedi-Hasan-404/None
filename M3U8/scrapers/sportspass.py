@@ -12,11 +12,11 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "STRMBIZ"
+TAG = "SPRTSPASS"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-BASE_URL = "https://streamseast.biz"
+BASE_URL = "https://streamseast.is"
 
 SPORT_URLS = {
     sport: urljoin(BASE_URL, sport.lower())
