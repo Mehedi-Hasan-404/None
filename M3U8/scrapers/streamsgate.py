@@ -99,9 +99,9 @@ async def get_events() -> list[dict[str, str]]:
         return events
 
     for stream_group in api_data:
-        date = stream_group.get("time")
+        date: str = stream_group.get("time")
 
-        sport = stream_group.get("league")
+        sport: str = stream_group.get("league")
 
         t1, t2 = stream_group.get("away"), stream_group.get("home")
 
@@ -113,13 +113,27 @@ async def get_events() -> list[dict[str, str]]:
         if event_dt.date() != now.date():
             continue
 
-        if not (streams := stream_group.get("streams")) or not (
-            url := streams[0].get("url")
+        if not (t1 and t2):
+            continue
+
+        if not (streams := stream_group.get("streams")):
+            continue
+
+        elif not (
+            valid_streams := sorted(
+                [
+                    *filter(
+                        lambda x: (lth := len(x.get("lang"))) == 0 or lth > 2,
+                        streams,
+                    )
+                ],
+                key=lambda x: len(x.get("lang")),
+                reverse=True,
+            )
         ):
             continue
 
-        if not (t1 and t2):
-            continue
+        url = valid_streams[0]["url"]
 
         event = get_event(t1, t2)
 
