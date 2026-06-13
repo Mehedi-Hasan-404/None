@@ -1,16 +1,11 @@
-## Base Log @ 2026-06-13 15:56 UTC
+## Base Log @ 2026-06-13 21:44 UTC
 
-### ✅ Working Streams: 134<br>❌ Dead Streams: 10
+### ✅ Working Streams: 139<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1809/index.m3u8` |
-| CBS | HTTP Error (404) | `http://stream.cammonitorplus.net/1810/index.m3u8` |
-| Fox | HTTP Error (404) | `http://stream.cammonitorplus.net/1752/index.m3u8` |
 | Freeform TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2502.ts` |
 | Golf Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2385.ts` |
-| MSG | HTTP Error (404) | `http://23.237.104.106:8080/USA_MSG/index.m3u8` |
-| NBC Sports California | HTTP Error (404) | `http://stream.cammonitorplus.net/1795/index.m3u8` |
 | Oxygen | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3756.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 | Willow Cricket | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
