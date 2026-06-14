@@ -1,11 +1,9 @@
-## Base Log @ 2026-06-14 11:13 UTC
+## Base Log @ 2026-06-14 21:49 UTC
 
-### ✅ Working Streams: 140<br>❌ Dead Streams: 4
+### ✅ Working Streams: 142<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1809/index.m3u8` |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 | TSN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts` |
 ---
