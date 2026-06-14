@@ -105,15 +105,12 @@ async def get_events() -> list[dict[str, str]]:
 
         t1, t2 = stream_group.get("away"), stream_group.get("home")
 
-        if not (date and sport):
+        if not (date and sport and t1 and t2):
             continue
 
         event_dt = Time.from_str(date, timezone="UTC")
 
         if event_dt.date() != now.date():
-            continue
-
-        if not (t1 and t2):
             continue
 
         if not (streams := stream_group.get("streams")):
