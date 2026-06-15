@@ -57,7 +57,7 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
         if not (href := link.attributes.get("href")):
             continue
 
-        elif cached_links & {link := urljoin(f"{html_data.url}", quote(href))}:
+        elif (link := urljoin(f"{html_data.url}", quote(href))) in cached_links:
             continue
 
         if not (text and subtext):

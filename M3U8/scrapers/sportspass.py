@@ -143,7 +143,7 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
             if not (href := event.attributes.get("href")):
                 continue
 
-            elif cached_links & {link := urljoin(BASE_URL, href)}:
+            elif (link := urljoin(BASE_URL, href)) in cached_links:
                 continue
 
             if (scr_elem := event.css_first("script")) and (
