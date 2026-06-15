@@ -18,6 +18,7 @@ from scrapers import (
     shark,
     sportspass,
     streamcenter,
+    streamhub,
     streamsgate,
     streamtp,
     watchfooty,
@@ -74,6 +75,7 @@ async def main() -> None:
                 # asyncio.create_task(resportz.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
+                asyncio.create_task(streamhub.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(webcast.scrape()),
@@ -107,6 +109,7 @@ async def main() -> None:
         | shark.urls
         | sportspass.urls
         | streamcenter.urls
+        | streamhub.urls
         | streamsgate.urls
         | streamtp.urls
         | watchfooty.urls

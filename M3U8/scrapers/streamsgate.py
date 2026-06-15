@@ -52,9 +52,9 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) Failed to load url.")
         return nones
 
-    soup_1 = HTMLParser(event_data.content)
+    soup = HTMLParser(event_data.content)
 
-    ifr = soup_1.css_first("iframe")
+    ifr = soup.css_first("iframe")
 
     if not ifr or not (src := ifr.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe element found.")
@@ -69,7 +69,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load iframe source. (IFR1)")
+        log.warning(f"URL {url_num}) Failed to load iframe source.")
         return nones
 
     valid_m3u8 = re.compile(
