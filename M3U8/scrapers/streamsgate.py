@@ -24,9 +24,9 @@ SPORT_URLS = [
     for sport in [
         # "cfb",
         "mlb",
-        "nba",
+        # "nba",
         # "nfl",
-        "nhl",
+        # "nhl",
         "soccer",
         "ufc",
     ]

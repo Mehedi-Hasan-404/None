@@ -15,12 +15,12 @@ CACHE_FILE = Cache(TAG, exp=28_800)
 API_URL = "https://backend.streamcenter.live/api/Parties"
 
 CATEGORIES = {
-    4: "Basketball",
+    # 4: "Basketball",
     9: "Football",
     13: "Baseball",
     # 14: "American Football",
     15: "Motor Sport",
-    16: "Hockey",
+    # 16: "Hockey",
     17: "Fight MMA",
     18: "Boxing",
     20: "WWE",
