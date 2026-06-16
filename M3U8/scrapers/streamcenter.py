@@ -1,4 +1,6 @@
+import re
 from functools import partial
+from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -13,6 +15,8 @@ TAG = "STRMCNTR"
 CACHE_FILE = Cache(TAG, exp=28_800)
 
 API_URL = "https://backend.streamcenter.live/api/Parties"
+
+BASE_URL = "https://streams.center"
 
 CATEGORIES = {
     # 4: "Basketball",
@@ -37,16 +41,40 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     iframe = soup.css_first("iframe")
 
-    if not iframe or not (iframe_src := iframe.attributes.get("src")):
+    if not iframe or not (src := iframe.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe element found.")
+        return
+
+    iframe_src = network.ensure_https(src)
+
+    if not (
+        iframe_src_data := await network.request(
+            iframe_src,
+            headers={"Referer": url},
+            log=log,
+        )
+    ):
+        log.warning(f"URL {url_num}) Failed to load iframe source.")
+        return
+
+    pattern = re.compile(r'input:\s+"([^"]*)"', re.I)
+
+    if not (match := pattern.search(iframe_src_data.text)):
+        log.warning(f"URL {url_num}) No encrypted URL found.")
+        return
+
+    if not (
+        decrypted := await network.client.post(
+            urljoin(BASE_URL, "embed/decrypt.php"),
+            data={"input": match[1]},
+        )
+    ):
+        log.warning(f"URL {url_num}) Failed to decrypt URL.")
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return f"https://mainstreams.pro/hls/{iframe_src.rsplit("=", 1)[-1]}.m3u8"
-
-    # return f"https://edgestreams.pro/hls/{iframe_src.rsplit("=", 1)[-1]}.m3u8"
-    # return f"https://edge2caster.pro/hls/{iframe_src.rsplit("=", 1)[-1]}.m3u8"
+    return decrypted.text.split("?")[0]
 
 
 async def get_events() -> list[dict[str, str]]:
@@ -74,7 +102,7 @@ async def get_events() -> list[dict[str, str]]:
 
         event_time: str = stream_group.get("beginPartie")
 
-        if not (name and category_id and iframe and event_time):
+        if not name or not category_id or not iframe or not event_time:
             continue
 
         event_dt = Time.from_str(event_time, timezone="CET")
@@ -85,13 +113,20 @@ async def get_events() -> list[dict[str, str]]:
         if not (sport := CATEGORIES.get(category_id)):
             continue
 
-        events.append(
+        stream_urls: dict[str, str] = {
+            lang: url
+            for entry in sorted(iframe.split(";"), reverse=True)
+            for url, lang in [entry.split("<")]
+        }
+
+        events.extend(
             {
                 "sport": sport,
-                "event": name,
-                "link": iframe.split("<")[0],
+                "event": f"{name} | {lang}",
+                "link": url,
                 "timestamp": now.timestamp(),
             }
+            for lang, url in stream_urls.items()
         )
 
     return events
@@ -105,7 +140,7 @@ async def scrape() -> None:
 
         return
 
-    log.info('Scraping from "https://streamcenter.xyz"')
+    log.info(f'Scraping from "{BASE_URL}"')
 
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
@@ -137,7 +172,7 @@ async def scrape() -> None:
             entry = {
                 "url": url,
                 "logo": logo,
-                "base": "https://streamcenter.xyz",
+                "base": BASE_URL,
                 "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
                 "link": link,

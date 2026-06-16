@@ -60,7 +60,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) No iframe element found.")
         return nones
 
-    ifr_src = f"https:{src}" if src.startswith("//") else src
+    ifr_src = network.ensure_https(src)
 
     if not (
         ifr_src_data := await network.request(

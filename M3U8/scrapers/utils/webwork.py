@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 from functools import cache, partial
 from pathlib import Path
 from typing import TypeVar
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urlunsplit
 
 import httpx
 from playwright.async_api import (
@@ -79,6 +79,15 @@ class Network:
                 continue
 
             return mirror
+
+    @staticmethod
+    def ensure_https(url: str) -> str:
+        splits = urlsplit(url)
+
+        if not splits.scheme:
+            splits = splits._replace(scheme="https")
+
+        return urlunsplit(splits)
 
     @staticmethod
     async def safe_process(
