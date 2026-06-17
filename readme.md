@@ -1,11 +1,9 @@
-## Base Log @ 2026-06-17 17:29 UTC
+## Base Log @ 2026-06-17 22:20 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 4
+### ✅ Working Streams: 148<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Court TV | HTTP Error (500) | `https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8` |
-| DAZN | HTTP Timeout (408) | `https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 | TSN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts` |
 ---
