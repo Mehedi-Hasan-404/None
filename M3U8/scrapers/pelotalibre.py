@@ -1,5 +1,6 @@
 import re
 from functools import partial
+from urllib.parse import urljoin
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -12,8 +13,6 @@ TAG = "PLIBRE"
 CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://la18hd.com"
-
-API_URL = f"{BASE_URL}/eventos/json/agenda123.json"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -35,7 +34,12 @@ async def process_event(url: str, url_num: int) -> str | None:
 async def get_events() -> list[dict[str, str]]:
     events = []
 
-    if not (api_req := await network.request(API_URL, log=log)):
+    if not (
+        api_req := await network.request(
+            urljoin(BASE_URL, "eventos/json/agenda123.json"),
+            log=log,
+        )
+    ):
         return events
 
     elif not (api_data := api_req.json()):

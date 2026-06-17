@@ -29,18 +29,28 @@ EPG_URLS = [
 ] + ["https://i.mjh.nz/Roku/all.xml.gz"]
 
 DUMMIES = {
-    "Basketball.Dummy.us": leagues.live_img,
-    "Golf.Dummy.us": leagues.live_img,
-    "Live.Event.us": leagues.live_img,
-    "MLB.Baseball.Dummy.us": None,
-    "NBA.Basketball.Dummy.us": None,
-    "NFL.Dummy.us": None,
-    "NHL.Hockey.Dummy.us": None,
-    "PPV.EVENTS.Dummy.us": leagues.live_img,
-    "Racing.Dummy.us": leagues.live_img,
-    "Soccer.Dummy.us": leagues.live_img,
-    "Tennis.Dummy.us": leagues.live_img,
-    "WNBA.dummy.us": None,
+    **{
+        tvg: leagues.live_img
+        for tvg in [
+            "Basketball.Dummy.us",
+            "Golf.Dummy.us",
+            "Live.Event.us",
+            "PPV.EVENTS.Dummy.us",
+            "Racing.Dummy.us",
+            "Soccer.Dummy.us",
+            "Tennis.Dummy.us",
+        ]
+    },
+    **{
+        tvg: None
+        for tvg in [
+            "MLB.Baseball.Dummy.us",
+            "NBA.Basketball.Dummy.us",
+            "NFL.Dummy.us",
+            "NHL.Hockey.Dummy.us",
+            "WNBA.dummy.us",
+        ]
+    },
 }
 
 REPLACE_IDs = {
