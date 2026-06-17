@@ -113,7 +113,7 @@ async def get_events() -> list[dict[str, str]]:
 
         stream_urls: dict[str, str] = {
             lang: url
-            for entry in sorted(iframes.split(";"), reverse=True)
+            for entry in iframes.split(";")[::-1]
             for url, lang in [entry.split("<")]
         }
 
