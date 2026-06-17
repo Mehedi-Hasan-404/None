@@ -1,11 +1,11 @@
-## Base Log @ 2026-06-17 12:35 UTC
+## Base Log @ 2026-06-17 17:29 UTC
 
 ### ✅ Working Streams: 146<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Bravo TV | HTTP Timeout (408) | `http://41.205.93.154/BRAVO/index.m3u8` |
-| Marquee Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/55178.ts` |
+| Court TV | HTTP Error (500) | `https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8` |
+| DAZN | HTTP Timeout (408) | `https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 | TSN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts` |
 ---
