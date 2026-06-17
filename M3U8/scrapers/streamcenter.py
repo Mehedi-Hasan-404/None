@@ -45,11 +45,9 @@ async def process_event(url: str, url_num: int) -> str | None:
         log.warning(f"URL {url_num}) No iframe element found.")
         return
 
-    iframe_src = network.ensure_https(src)
-
     if not (
         iframe_src_data := await network.request(
-            iframe_src,
+            network.ensure_https(src),
             headers={"Referer": url},
             log=log,
         )
@@ -98,11 +96,14 @@ async def get_events() -> list[dict[str, str]]:
 
         name: str = stream_group.get("gameName")
 
-        iframe: str = stream_group.get("videoUrl")
+        iframes: str = stream_group.get("videoUrl")
 
         event_time: str = stream_group.get("beginPartie")
 
-        if not name or not category_id or not iframe or not event_time:
+        if not name or not category_id or not iframes or not event_time:
+            continue
+
+        if not (sport := CATEGORIES.get(category_id)):
             continue
 
         event_dt = Time.from_str(event_time, timezone="CET")
@@ -110,12 +111,9 @@ async def get_events() -> list[dict[str, str]]:
         if event_dt.date() != now.date():
             continue
 
-        if not (sport := CATEGORIES.get(category_id)):
-            continue
-
         stream_urls: dict[str, str] = {
             lang: url
-            for entry in sorted(iframe.split(";"), reverse=True)
+            for entry in sorted(iframes.split(";"), reverse=True)
             for url, lang in [entry.split("<")]
         }
 
