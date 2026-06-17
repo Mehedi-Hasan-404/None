@@ -1,9 +1,11 @@
-## Base Log @ 2026-06-16 22:27 UTC
+## Base Log @ 2026-06-17 12:35 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 2
+### ✅ Working Streams: 146<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Bravo TV | HTTP Timeout (408) | `http://41.205.93.154/BRAVO/index.m3u8` |
+| Marquee Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/55178.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 | TSN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts` |
 ---
