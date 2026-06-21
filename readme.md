@@ -1,9 +1,10 @@
-## Base Log @ 2026-06-21 16:16 UTC
+## Base Log @ 2026-06-21 21:51 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 1
+### ✅ Working Streams: 148<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| BET | HTTP Error (404) | `http://41.205.93.154/BET-EN/index.m3u8` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 ---
 #### Base Channels URL
