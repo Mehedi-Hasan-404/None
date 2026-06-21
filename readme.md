@@ -1,9 +1,10 @@
-## Base Log @ 2026-06-20 21:46 UTC
+## Base Log @ 2026-06-21 11:29 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 1
+### ✅ Working Streams: 148<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Marquee Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/55178.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 ---
 #### Base Channels URL
