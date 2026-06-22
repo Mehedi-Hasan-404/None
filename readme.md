@@ -1,10 +1,13 @@
-## Base Log @ 2026-06-21 21:51 UTC
+## Base Log @ 2026-06-22 13:48 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 2
+### ✅ Working Streams: 145<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BET | HTTP Error (404) | `http://41.205.93.154/BET-EN/index.m3u8` |
+| Big Ten Network | HTTP Timeout (408) | `http://23.237.104.106:8080/USA_BTN/index.m3u8` |
+| Marquee Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/55178.ts` |
+| NBC Sports Bay Area | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2436.ts` |
+| NESN | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/149310.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 ---
 #### Base Channels URL
