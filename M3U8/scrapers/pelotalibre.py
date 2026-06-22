@@ -57,12 +57,12 @@ async def get_events() -> list[dict[str, str]]:
         if (sport := event.get("category")) and sport == "Other":
             sport = "Live Event"
 
-        counter[k := f"{title} | {lang.upper()}"] += 1
+        counter[name := f"{title} | {lang.upper()}"] += 1
 
         events.append(
             {
                 "sport": sport,
-                "event": f"{k} {counter[k]}",
+                "event": f"{name} {counter[name]}",
                 "link": link,
             }
         )
