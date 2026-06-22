@@ -1,15 +1,12 @@
-## Base Log @ 2026-06-22 22:21 UTC
+## Base Log @ 2026-06-22 23:33 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 6
+### ✅ Working Streams: 147<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | Altitude Sports | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/332892.ts` |
-| BET | HTTP Error (404) | `http://41.205.93.154/BET-EN/index.m3u8` |
-| ESPN2 | HTTP Error (403) | `http://41.223.30.230/ESPN2/index.m3u8` |
-| Fox Sports 1 | HTTP Error (403) | `http://41.223.30.230/FOXSPORTS1/index.m3u8` |
+| NESN | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/149310.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
-| Syfy | HTTP Error (404) | `http://23.237.104.106:8080/USA_SYFY/index.m3u8` |
 ---
 #### Base Channels URL
 ```
