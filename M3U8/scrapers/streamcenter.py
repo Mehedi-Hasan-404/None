@@ -1,4 +1,5 @@
 import re
+from collections import defaultdict
 from functools import partial
 from urllib.parse import urljoin
 
@@ -91,19 +92,23 @@ async def get_events() -> list[dict[str, str]]:
 
     api_data: list[dict] = r.json()
 
+    counter = defaultdict(int)
+
     for stream_group in api_data:
-        category_id: int = stream_group.get("categoryId")
+        category_id, title, iframes, event_time = (
+            stream_group.get(x)
+            for x in [
+                "categoryId",
+                "gameName",
+                "videoUrl",
+                "beginPartie",
+            ]
+        )
 
-        name: str = stream_group.get("gameName")
-
-        iframes: str = stream_group.get("videoUrl")
-
-        event_time: str = stream_group.get("beginPartie")
-
-        if not name or not category_id or not iframes or not event_time:
+        if not (category_id and title and iframes and event_time):
             continue
 
-        if not (sport := CATEGORIES.get(category_id)):
+        elif not (sport := CATEGORIES.get(category_id)):
             continue
 
         event_dt = Time.from_str(event_time, timezone="CET")
@@ -112,20 +117,22 @@ async def get_events() -> list[dict[str, str]]:
             continue
 
         stream_urls: dict[str, str] = {
-            lang: url
-            for entry in iframes.split(";")[::-1]
+            url: lang
+            for entry in iframes.split(";")
             for url, lang in [entry.split("<")]
         }
 
-        events.extend(
-            {
-                "sport": sport,
-                "event": f"{name} | {lang}",
-                "link": url,
-                "timestamp": now.timestamp(),
-            }
-            for lang, url in stream_urls.items()
-        )
+        for url, lang in stream_urls.items():
+            counter[name := f"{title} | {lang}"] += 1
+
+            events.append(
+                {
+                    "sport": sport,
+                    "event": f"{name} {counter[name]}",
+                    "link": url,
+                    "timestamp": now.timestamp(),
+                }
+            )
 
     return events
 

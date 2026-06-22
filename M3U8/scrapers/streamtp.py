@@ -1,5 +1,6 @@
 import json
 import re
+from collections import defaultdict
 from functools import partial
 from urllib.parse import urljoin
 
@@ -37,33 +38,35 @@ async def process_event(url: str, url_num: int) -> str | None:
 async def get_events() -> list[dict[str, str]]:
     events = []
 
-    if not (
-        api_req := await network.request(
-            urljoin(BASE_URL, "eventos.json"),
-            log=log,
-        )
-    ):
+    if not (api_req := await network.request(urljoin(BASE_URL, "wc.json"), log=log)):
         return events
 
     elif not (api_data := api_req.json()):
         return events
 
-    for event in api_data:
-        if not (name := event.get("title")) or not (link := event.get("link")):
-            continue
+    counter = defaultdict(int)
 
-        elif not link.startswith(BASE_URL):
-            continue
+    for event in api_data.get("events", []):
+        title = event["title"]
 
-        if (sport := event.get("category")) and sport == "Other":
+        if (sport := event["category"]) == "Other":
             sport = "Live Event"
 
-        if all(existing_event["event"] != name for existing_event in events):
+        if not (links := event.get("links")):
+            continue
+
+        stream_urls: dict[str, str] = {
+            link["url"]: link["lang"]["label"] for link in links
+        }
+
+        for url, lang in stream_urls.items():
+            counter[name := f"{title} | {lang.upper()}"] += 1
+
             events.append(
                 {
                     "sport": sport,
-                    "event": name,
-                    "link": link,
+                    "event": f"{name} {counter[name]}",
+                    "link": url,
                 }
             )
 

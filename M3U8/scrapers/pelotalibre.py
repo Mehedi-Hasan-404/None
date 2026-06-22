@@ -1,4 +1,5 @@
 import re
+from collections import defaultdict
 from functools import partial
 from urllib.parse import urljoin
 
@@ -45,24 +46,26 @@ async def get_events() -> list[dict[str, str]]:
     elif not (api_data := api_req.json()):
         return events
 
-    for event in api_data:
-        if not (name := event.get("title")) or not (link := event.get("link")):
-            continue
+    counter = defaultdict(int)
 
-        elif not link.startswith(BASE_URL) or "drm.php" in link:
+    for event in api_data:
+        title, lang, link = (event.get(x) for x in ["title", "language", "link"])
+
+        if not (title and lang and link):
             continue
 
         if (sport := event.get("category")) and sport == "Other":
             sport = "Live Event"
 
-        if all(existing_event["event"] != name for existing_event in events):
-            events.append(
-                {
-                    "sport": sport,
-                    "event": name,
-                    "link": link,
-                }
-            )
+        counter[k := f"{title} | {lang.upper()}"] += 1
+
+        events.append(
+            {
+                "sport": sport,
+                "event": f"{k} {counter[k]}",
+                "link": link,
+            }
+        )
 
     return events
 

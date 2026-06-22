@@ -45,11 +45,14 @@ async def get_events() -> dict[str, dict[str, str | float]]:
     soup = HTMLParser(html_data.content)
 
     for row in soup.css(".row"):
-        date_node = row.css_first(".ch-date")
-
-        sport_node = row.css_first(".ch-category")
-
-        name_node = row.css_first(".ch-name")
+        date_node, sport_node, name_node = (
+            row.css_first(x)
+            for x in [
+                ".ch-date",
+                ".ch-category",
+                ".ch-name",
+            ]
+        )
 
         if not (date_node and sport_node and name_node):
             continue

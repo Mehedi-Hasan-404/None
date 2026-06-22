@@ -99,11 +99,15 @@ async def get_events() -> list[dict[str, str]]:
         return events
 
     for stream_group in api_data:
-        date: str = stream_group.get("time")
-
-        sport: str = stream_group.get("league")
-
-        t1, t2 = stream_group.get("away"), stream_group.get("home")
+        date, sport, t1, t2 = (
+            stream_group.get(x)
+            for x in [
+                "time",
+                "league",
+                "away",
+                "home",
+            ]
+        )
 
         if not (date and sport and t1 and t2):
             continue

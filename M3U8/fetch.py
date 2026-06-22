@@ -13,7 +13,6 @@ from scrapers import (
     mainportal,
     ovogoal,
     pelotalibre,
-    resportz,
     roxie,
     shark,
     sportspass,
@@ -72,7 +71,6 @@ async def main() -> None:
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
-                # asyncio.create_task(resportz.scrape()),
                 asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamhub.scrape()),
@@ -104,7 +102,6 @@ async def main() -> None:
         | mainportal.urls
         | ovogoal.urls
         | pelotalibre.urls
-        | resportz.urls
         | roxie.urls
         | shark.urls
         | sportspass.urls

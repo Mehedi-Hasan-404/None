@@ -49,7 +49,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
         event_info = api_data[sport]
 
         for event in event_info:
-            t1, t2 = event.get("awayTeam"), event.get("homeTeam")
+            t1, t2 = (event.get(x) for x in ["awayTeam", "homeTeam"])
 
             if not (t1 and t2):
                 continue
