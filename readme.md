@@ -1,14 +1,15 @@
-## Base Log @ 2026-06-22 13:48 UTC
+## Base Log @ 2026-06-22 22:21 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 5
+### ✅ Working Streams: 144<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Big Ten Network | HTTP Timeout (408) | `http://23.237.104.106:8080/USA_BTN/index.m3u8` |
-| Marquee Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/55178.ts` |
-| NBC Sports Bay Area | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2436.ts` |
-| NESN | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/149310.ts` |
+| Altitude Sports | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/332892.ts` |
+| BET | HTTP Error (404) | `http://41.205.93.154/BET-EN/index.m3u8` |
+| ESPN2 | HTTP Error (403) | `http://41.223.30.230/ESPN2/index.m3u8` |
+| Fox Sports 1 | HTTP Error (403) | `http://41.223.30.230/FOXSPORTS1/index.m3u8` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
+| Syfy | HTTP Error (404) | `http://23.237.104.106:8080/USA_SYFY/index.m3u8` |
 ---
 #### Base Channels URL
 ```
