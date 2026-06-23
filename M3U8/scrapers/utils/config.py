@@ -10,6 +10,7 @@ class Time(datetime):
     ZONES = {
         "CET": pytz.timezone("Europe/Berlin"),
         "ET": pytz.timezone("America/New_York"),
+        "MSK": pytz.timezone("Europe/Moscow"),
         "PST": pytz.timezone("America/Los_Angeles"),
         "UTC": timezone.utc,
     }

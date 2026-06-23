@@ -78,7 +78,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
             sport = sport.upper() if len(sport) == 3 else sport
 
-            event_dt = Time.fromisoformat(event_time).to_tz("EST")
+            event_dt = Time.from_str(event_time, timezone="MSK")
 
             if event_dt.date() != now.date():
                 continue
