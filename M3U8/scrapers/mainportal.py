@@ -80,11 +80,14 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         data: dict = json.loads(f"{match[1]}")
 
-        teams = data.get("teams", {})
-
-        flavors = data.get("flavors", {})
-
-        media_events = data.get("media_events", {})
+        teams, flavors, media_events = (
+            data.get(x, {})
+            for x in (
+                "teams",
+                "flavors",
+                "media_events",
+            )
+        )
 
         team_identifier: dict[int, str] = {t.get("id"): t.get("name") for t in teams}
 

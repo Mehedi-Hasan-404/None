@@ -54,13 +54,13 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
         subtext = item.css_first(".user-item__playing")
         link = item.css_first("a[href]")
 
+        if not (text and subtext):
+            continue
+
         if not (href := link.attributes.get("href")):
             continue
 
         elif (link := urljoin(f"{html_data.url}", quote(href))) in cached_links:
-            continue
-
-        if not (text and subtext):
             continue
 
         event_name, details = text.text(strip=True), subtext.text(strip=True)

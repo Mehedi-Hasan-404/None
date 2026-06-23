@@ -9,6 +9,7 @@ from scrapers import (
     embedhd,
     fawa,
     fsports,
+    futbolx,
     istreameast,
     mainportal,
     ovogoal,
@@ -67,6 +68,7 @@ async def main() -> None:
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
+                asyncio.create_task(futbolx.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 # asyncio.create_task(ovogoal.scrape()),
@@ -98,6 +100,7 @@ async def main() -> None:
         | embedhd.urls
         | fawa.urls
         | fsports.urls
+        | futbolx.urls
         | istreameast.urls
         | mainportal.urls
         | ovogoal.urls

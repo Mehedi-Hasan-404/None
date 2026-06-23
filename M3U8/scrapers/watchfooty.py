@@ -147,7 +147,7 @@ async def process_event(
 
         try:
             await asyncio.wait_for(wait_task, timeout=6)
-        except asyncio.TimeoutError:
+        except TimeoutError:
             log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
             return nones
 

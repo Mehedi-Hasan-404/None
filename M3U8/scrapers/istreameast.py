@@ -59,19 +59,24 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     for link in soup.css("li.f1-podium--item > a.f1-podium--link"):
         li_item = link.parent
 
-        if not (rank_elem := li_item.css_first(".f1-podium--rank")):
+        if not all(
+            values := [
+                li_item.css_first(x)
+                for x in (
+                    ".f1-podium--rank",
+                    ".SaatZamanBilgisi",
+                    ".f1-podium--driver",
+                )
+            ]
+        ):
             continue
 
-        if not (time_elem := li_item.css_first(".SaatZamanBilgisi")):
-            continue
+        rank_elem, time_elem, driver_elem = values
 
         if time_elem.text(strip=True).lower() != "live":
             continue
 
         sport = rank_elem.text(strip=True)
-
-        if not (driver_elem := li_item.css_first(".f1-podium--driver")):
-            continue
 
         event_name = driver_elem.text(strip=True)
 

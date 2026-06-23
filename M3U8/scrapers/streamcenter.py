@@ -95,20 +95,22 @@ async def get_events() -> list[dict[str, str]]:
     counter = defaultdict(int)
 
     for stream_group in api_data:
-        category_id, title, iframes, event_time = (
-            stream_group.get(x)
-            for x in [
-                "categoryId",
-                "gameName",
-                "videoUrl",
-                "beginPartie",
+        if not all(
+            values := [
+                stream_group.get(x)
+                for x in (
+                    "categoryId",
+                    "gameName",
+                    "videoUrl",
+                    "beginPartie",
+                )
             ]
-        )
-
-        if not (category_id and title and iframes and event_time):
+        ):
             continue
 
-        elif not (sport := CATEGORIES.get(category_id)):
+        category_id, title, iframes, event_time = values
+
+        if not (sport := CATEGORIES.get(category_id)):
             continue
 
         event_dt = Time.from_str(event_time, timezone="CET")

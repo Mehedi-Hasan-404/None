@@ -49,10 +49,19 @@ async def get_events() -> list[dict[str, str]]:
     counter = defaultdict(int)
 
     for event in api_data:
-        title, lang, link = (event.get(x) for x in ["title", "language", "link"])
-
-        if not (title and lang and link):
+        if not all(
+            values := [
+                event.get(x)
+                for x in (
+                    "title",
+                    "language",
+                    "link",
+                )
+            ]
+        ):
             continue
+
+        title, lang, link = values
 
         if (sport := event.get("category")) and sport == "Other":
             sport = "Live Event"

@@ -106,7 +106,7 @@ class Network:
             try:
                 return await asyncio.wait_for(task, timeout=timeout)
 
-            except asyncio.TimeoutError:
+            except TimeoutError:
                 log.warning(
                     f"URL {url_num}) Timed out after {timeout}s, skipping event"
                 )
@@ -283,7 +283,7 @@ class Network:
 
             try:
                 await asyncio.wait_for(wait_task, timeout=timeout)
-            except asyncio.TimeoutError:
+            except TimeoutError:
                 log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
                 return
 

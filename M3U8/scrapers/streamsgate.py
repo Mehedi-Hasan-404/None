@@ -99,18 +99,20 @@ async def get_events() -> list[dict[str, str]]:
         return events
 
     for stream_group in api_data:
-        date, sport, t1, t2 = (
-            stream_group.get(x)
-            for x in [
-                "time",
-                "league",
-                "away",
-                "home",
+        if not all(
+            values := [
+                stream_group.get(x)
+                for x in (
+                    "time",
+                    "league",
+                    "away",
+                    "home",
+                )
             ]
-        )
-
-        if not (date and sport and t1 and t2):
+        ):
             continue
+
+        date, sport, t1, t2 = values
 
         event_dt = Time.from_str(date, timezone="UTC")
 
