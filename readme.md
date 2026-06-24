@@ -1,13 +1,10 @@
-## Base Log @ 2026-06-24 16:38 UTC
+## Base Log @ 2026-06-24 21:53 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 4
+### ✅ Working Streams: 149<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| MSG | HTTP Error (404) | `http://23.237.104.106:8080/USA_MSG/index.m3u8` |
-| SportsNet New York | HTTP Error (502) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3865.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
-| Starz Encore Classic | HTTP Error (502) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
 ---
 #### Base Channels URL
 ```
