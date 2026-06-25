@@ -15,7 +15,6 @@ from scrapers import (
     ovogoal,
     pelotalibre,
     roxie,
-    shark,
     sportspass,
     streamcenter,
     streamhub,
@@ -73,13 +72,12 @@ async def main() -> None:
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
-                # asyncio.create_task(shark.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamhub.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                # asyncio.create_task(xyzstream.scrape()),
+                asyncio.create_task(xyzstream.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
@@ -106,7 +104,6 @@ async def main() -> None:
         | ovogoal.urls
         | pelotalibre.urls
         | roxie.urls
-        | shark.urls
         | sportspass.urls
         | streamcenter.urls
         | streamhub.urls
