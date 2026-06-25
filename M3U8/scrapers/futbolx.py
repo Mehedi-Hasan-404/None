@@ -106,17 +106,18 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
 
 async def scrape() -> None:
-    if cached := CACHE_FILE.load():
-        urls.update(cached)
+    cached_urls = CACHE_FILE.load()
 
-        log.info(f"Loaded {len(urls)} event(s) from cache")
+    valid_count = len(valid_urls := {k: v for k, v in cached_urls.items() if v["url"]})
 
-        return
+    urls.update(valid_urls)
+
+    log.info(f"Loaded {valid_count} event(s) from cache")
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    urls.update(await get_events() or {})
+    urls.update(await get_events())
 
-    log.info(f"Collected and cached {len(urls)} new event(s)")
+    log.info(f"Collected and cached {len(urls) - valid_count} new event(s)")
 
     CACHE_FILE.write(urls)
