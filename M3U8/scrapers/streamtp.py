@@ -60,6 +60,9 @@ async def get_events() -> list[dict[str, str]]:
         }
 
         for url, lang in stream_urls.items():
+            if not url.startswith(BASE_URL):
+                continue
+
             counter[name := f"{title} | {lang.upper()}"] += 1
 
             events.append(

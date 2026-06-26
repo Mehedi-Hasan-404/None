@@ -66,6 +66,9 @@ async def get_events() -> list[dict[str, str]]:
         if (sport := event.get("category")) and sport == "Other":
             sport = "Live Event"
 
+        if not link.startswith(f"{BASE_URL}/vivo"):
+            continue
+
         counter[name := f"{title} | {lang.upper()}"] += 1
 
         events.append(
