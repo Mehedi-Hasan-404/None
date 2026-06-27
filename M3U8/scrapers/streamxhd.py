@@ -1,6 +1,6 @@
-import json
+import ast
+import base64
 import re
-from collections import defaultdict
 from functools import partial
 from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
 
@@ -10,27 +10,46 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "STP"
+TAG = "STRMXHD"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://streamtpday1.xyz"
+BASE_URL = "https://stream-xhd.com"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
-    if not (html_data := await network.request(url, log=log)):
+    if not (event_data := await network.request(url, log=log)):
         log.warning(f"URL {url_num}) Failed to load url.")
         return
 
-    valid_m3u8 = re.compile(r'var\s+playbackURL\s+=\s+"([^"]*)"', re.I)
+    digit_func_ptrn = re.compile(r"{return\s+(\d*);}", re.I)
 
-    if not (match := valid_m3u8.search(html_data.text)):
-        log.warning(f"URL {url_num}) No M3U8 found")
+    if not (digit_list := digit_func_ptrn.findall(event_data.text)):
+        log.warning(f"URL {url_num}) Unable to decode url.")
         return
 
-    log.info(f"URL {url_num}) Captured M3U8")
+    embed_list_ptrn = re.compile(
+        r"(\w+)\s*=\s*(\[\[.*?\]\])\s*;(?=\s*\1\.sort\()",
+        re.S,
+    )
 
-    m3u8: str = json.loads(f'"{match[1]}"')
+    if not (embed_list := embed_list_ptrn.search(event_data.text)):
+        log.warning(f"URL {url_num}) Unable to decode url.")
+        return
+
+    embed_list_str = embed_list[0].split("=", 1)[-1].strip(";")
+
+    embed_list: list[tuple[int, str]] = ast.literal_eval(embed_list_str)
+
+    m3u8 = "".join(
+        chr(
+            int("".join(c for c in base64.b64decode(v).decode("utf-8") if c.isdigit()))
+            - sum(map(int, digit_list[:2]))
+        )
+        for _, v in sorted(embed_list, key=lambda i: i[0])
+    )
+
+    log.info(f"URL {url_num}) Captured M3U8")
 
     splits = urlsplit(m3u8)
 
@@ -42,40 +61,45 @@ async def process_event(url: str, url_num: int) -> str | None:
 async def get_events() -> list[dict[str, str]]:
     events = []
 
-    if not (api_req := await network.request(urljoin(BASE_URL, "wc.json"), log=log)):
+    if not (
+        api_req := await network.request(
+            urljoin(BASE_URL, "eventos.json"),
+            log=log,
+        )
+    ):
         return events
 
     elif not (api_data := api_req.json()):
         return events
 
-    counter = defaultdict(int)
-
-    for event in api_data.get("events", []):
-        title = event["title"]
-
-        if (sport := event["category"]) == "Other":
-            sport = "Live Event"
-
-        if not (links := event.get("links")):
+    for event in api_data.get("sports", []):
+        if not (sport_leagues := event.get("leagues")):
             continue
 
-        stream_urls: dict[str, str] = {
-            link["url"]: link["lang"]["label"] for link in links
-        }
+        for league in sport_leagues:
+            sport = league["name"]
 
-        for url, lang in stream_urls.items():
-            if not url.startswith(BASE_URL):
+            if not (league_events := league.get("events")):
                 continue
 
-            counter[name := f"{title} | {lang.upper()}"] += 1
+            for event_info in league_events:
+                name = event_info["title"]
 
-            events.append(
-                {
-                    "sport": sport,
-                    "event": f"{name} {counter[name]}",
-                    "link": url,
+                if not (event_servers := event_info.get("servers")):
+                    continue
+
+                event_urls = {
+                    x["url"]: x["name"] for x in event_servers if ".php" in x["url"]
                 }
-            )
+
+                events.extend(
+                    {
+                        "sport": sport,
+                        "event": f"{name} | {lang}",
+                        "link": url,
+                    }
+                    for url, lang in event_urls.items()
+                )
 
     return events
 
@@ -88,7 +112,7 @@ async def scrape() -> None:
 
         return
 
-    log.info('Scraping from "https://streamtpnew.com"')
+    log.info(f'Scraping from "{BASE_URL}"')
 
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")

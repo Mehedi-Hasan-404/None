@@ -95,6 +95,7 @@ class Network:
         url_num: int,
         semaphore: asyncio.Semaphore,
         timeout: int | float = 30,
+        timeout_return: T | None = None,
         log: logging.Logger | None = None,
     ) -> T | None:
 
@@ -121,11 +122,11 @@ class Network:
                 except Exception as e:
                     log.warning(f"URL {url_num}) Ignore exception after timeout: {e}")
 
-                return
+                return timeout_return
             except Exception as e:
                 log.error(f"URL {url_num}) Unexpected error: {e}")
 
-                return
+                return timeout_return
 
     @cache
     @staticmethod

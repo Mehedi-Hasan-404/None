@@ -202,6 +202,7 @@ async def scrape(browser: Browser) -> None:
                     event, ifr_src, url = await network.safe_process(
                         handler,
                         url_num=i,
+                        timeout_return=(None, None, None),
                         semaphore=network.PW_S,
                         log=log,
                     )
