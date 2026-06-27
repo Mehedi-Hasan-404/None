@@ -71,7 +71,7 @@ async def main() -> None:
                 asyncio.create_task(futbolx.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
-                asyncio.create_task(ovogoal.scrape()),
+                # asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamhub.scrape()),
