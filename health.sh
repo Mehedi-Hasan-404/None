@@ -4,7 +4,7 @@ MAX_JOBS=10
 BASE_FILE="./M3U8/base.m3u8"
 README="./readme.md"
 
-[[ ! -f "$BASE_FILE" ]] && exit 1
+[[ ! -f $BASE_FILE ]] && echo "$BASE_FILE does not exist" && exit 1
 
 STATUSLOG=$(mktemp)
 
@@ -15,7 +15,7 @@ get_status() {
     local total="$4"
     local attempt response status_code
 
-    [[ "$url" != http* ]] && return
+    [[ $url != http* ]] && return
 
     printf -v chnl_info "%s (%s)\n" "$channel" "$url"
 
@@ -28,41 +28,60 @@ get_status() {
             -o /dev/null \
             --compressed \
             --max-time 10 \
-            -w "%{http_code}" \
+            -w "%{http_code}|%{content_type}" \
             "$url" 2>&1
     )
 
-    case "$response" in
+    rc=$?
 
-    2* | 3*)
-        printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
+    IFS="|" read -r status content_type <<<"$response"
 
-        echo "PASS" >>"$STATUSLOG"
-        ;;
+    if ((rc != 0)); then
+        if [[ $status == 2* && $rc == 28 ]]; then
+            printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
 
-    4* | 5*)
-        printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
-
-        echo "| $channel | HTTP Error ($response) | \`$url\` |" >>"$STATUSLOG"
-
-        echo "FAIL" >>"$STATUSLOG"
-        ;;
-
-    *)
-        printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
-
-        if [[ "$response" == "000" ]]; then
-            echo "| $channel | HTTP Timeout (408) | \`$url\` |" >>"$STATUSLOG"
+            echo "PASS" >>"$STATUSLOG"
 
         else
-            echo "| $channel | Unknown status ($status_code) | \`$url\` |" >>"$STATUSLOG"
+            printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
 
+            echo "| $channel | cURL Error ($rc) | \`$url\` |" >>"$STATUSLOG"
+
+            echo "FAIL" >>"$STATUSLOG"
         fi
 
-        echo "FAIL" >>"$STATUSLOG"
-        ;;
+    elif [[ $status != 2* ]]; then
+        printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
 
-    esac
+        echo "| $channel | HTTP Error ($status) | \`$url\` |" >>"$STATUSLOG"
+
+        echo "FAIL" >>"$STATUSLOG"
+
+    else
+        case "$content_type" in
+
+            application/vnd.apple.mpegurl* | \
+                application/x-mpegURL* | \
+                application/octet-stream* | \
+                video/mpeg* | \
+                video/mp2t* | \
+                text/plain*)
+
+                printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
+
+                echo "PASS" >>"$STATUSLOG"
+                ;;
+
+            text/html* | *)
+
+                printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+
+                echo "| $channel | Invalid M3U8 ($status) | \`$url\` |" >>"$STATUSLOG"
+
+                echo "FAIL" >>"$STATUSLOG"
+                ;;
+        esac
+    fi
 }
 
 check_links() {
@@ -76,22 +95,22 @@ check_links() {
     echo "| ------- | ------------ | ---- |" >>"$STATUSLOG"
 
     while IFS= read -r line; do
-        line=$(echo "$line" | tr -d '\r\n')
+        line=${line//$'\r'/}
 
-        if [[ "$line" == \#EXTINF* ]]; then
+        if [[ $line == \#EXTINF* ]]; then
             name=$(echo "$line" | sed -n 's/.*tvg-name="\([^"]*\)".*/\1/p')
 
-            [[ -z "$name" ]] && name="Channel $channel_num"
+            [[ -z $name ]] && name="Channel $channel_num"
 
-        elif [[ "$line" =~ ^https?:// ]]; then
-            while (($(jobs -rp | wc -l) >= MAX_JOBS)); do sleep 0.2; done
+        elif [[ $line =~ ^https?:// ]]; then
+            while (($(jobs -rp | wc -l) >= MAX_JOBS)); do wait -n; done
 
             get_status "$line" "$name" "$channel_num" "$total_urls" &
 
             ((channel_num++))
         fi
 
-    done < <(cat "$BASE_FILE")
+    done <"$BASE_FILE"
 
     wait
     echo -e "\nDone."
