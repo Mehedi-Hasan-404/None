@@ -72,6 +72,8 @@ async def get_events() -> list[dict[str, str]]:
     elif not (api_data := api_req.json()):
         return events
 
+    now = Time.clean(Time.now())
+
     for event in api_data.get("sports", []):
         if not (sport_leagues := event.get("leagues")):
             continue
@@ -85,6 +87,13 @@ async def get_events() -> list[dict[str, str]]:
             for event_info in league_events:
                 name = event_info["title"]
 
+                event_time = event_info["time"]
+
+                event_dt = Time.from_str(event_time, timezone="EST")
+
+                if event_dt.date() != now.date():
+                    continue
+
                 if not (event_servers := event_info.get("servers")):
                     continue
 
@@ -97,6 +106,7 @@ async def get_events() -> list[dict[str, str]]:
                         "sport": sport,
                         "event": f"{name} | {lang}",
                         "link": url,
+                        "timestamp": now.timestamp(),
                     }
                     for url, lang in event_urls.items()
                 )
@@ -120,8 +130,6 @@ async def scrape() -> None:
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
 
-        now = Time.clean(Time.now())
-
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
@@ -136,7 +144,11 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event = ev["sport"], ev["event"]
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["timestamp"],
+            )
 
             key = f"[{sport}] {event} ({TAG})"
 
@@ -146,7 +158,7 @@ async def scrape() -> None:
                 "url": url,
                 "logo": logo,
                 "base": link,
-                "timestamp": now.timestamp(),
+                "timestamp": ts,
                 "id": tvg_id or "Live.Event.us",
                 "link": link,
             }
