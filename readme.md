@@ -1,9 +1,12 @@
-## Base Log @ 2026-06-27 21:37 UTC
+## Base Log @ 2026-06-28 10:40 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 1
+### ✅ Working Streams: 145<br>❌ Dead Streams: 4
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
+| Bravo TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2655.ts` |
+| Hallmark Mystery | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2492.ts` |
+| Nicktoons | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3674.ts` |
 | Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
 ---
 #### Base Channels URL
