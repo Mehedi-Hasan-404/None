@@ -15,9 +15,9 @@ get_status() {
     local total="$4"
     local attempt response status_code
 
-    [[ $url != http* ]] && return
-
     shopt -s nocasematch
+
+    [[ $url != http* ]] && return
 
     printf -v chnl_info "%s (%s)\n" "$channel" "$url"
 

@@ -67,7 +67,7 @@ async def get_events() -> list[dict[str, str]]:
             if not url.startswith(BASE_URL):
                 continue
 
-            counter[name := f"{title} | {lang.upper()}"] += 1
+            counter[name := f"{title.split("|")[0].strip()} | {lang.upper()}"] += 1
 
             events.append(
                 {
