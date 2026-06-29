@@ -1,10 +1,14 @@
-## Base Log @ 2026-06-28 22:25 UTC
+## Base Log @ 2026-06-29 12:46 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 1
+### ✅ Working Streams: 146<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Sportsman Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/97483.ts` |
+| DSports 2 | Invalid M3U8 (200) | `http://181.64.27.65:8000/play/a0dq/index.m3u8` |
+| DSports Plus | Invalid M3U8 (200) | `http://190.108.83.69:8000/play/a05w/index.m3u8` |
+| DSports | Invalid M3U8 (200) | `http://148.222.230.197:8000/play/a0mm/index.m3u8` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| MSNBC | HTTP Error (404) | `http://41.205.93.154:80/MSNBC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
@@ -28,7 +32,7 @@ https://s.id/d9sEPG
 
 ---
 #### Mirrors
-[GitHub](https://github.com/doms9/iptv) | [GitLab](https://gitlab.com/doms9/iptv) | 
+[GitHub](https://github.com/doms9/iptv) | [GitLab](https://gitlab.com/doms9/iptv) |
 [Forgejo](https://forgejo.mxnticek.eu/doms/iptv)
 
 ---
