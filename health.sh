@@ -17,6 +17,8 @@ get_status() {
 
     [[ $url != http* ]] && return
 
+    shopt -s nocasematch
+
     printf -v chnl_info "%s (%s)\n" "$channel" "$url"
 
     response=$(
