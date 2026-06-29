@@ -6,6 +6,8 @@ README="./readme.md"
 
 [[ ! -f $BASE_FILE ]] && echo "$BASE_FILE does not exist" && exit 1
 
+shopt -s nocasematch
+
 STATUSLOG=$(mktemp)
 
 get_status() {
@@ -14,8 +16,6 @@ get_status() {
     local index="$3"
     local total="$4"
     local attempt response status_code
-
-    shopt -s nocasematch
 
     [[ $url != http* ]] && return
 
