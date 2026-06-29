@@ -145,7 +145,7 @@ write_readme() {
         echo "---"
         echo "#### Mirrors"
         echo -n "[GitHub](https://github.com/doms9/iptv) | "
-        echo -e "[GitLab](https://gitlab.com/doms9/iptv) | "
+        echo -e "[GitLab](https://gitlab.com/doms9/iptv) |"
         echo -e "[Forgejo](https://forgejo.mxnticek.eu/doms/iptv)\n"
         echo "---"
         echo "#### Legal Disclaimer"

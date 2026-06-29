@@ -17,16 +17,18 @@ EPG_URLS = [
     f"https://epgshare01.online/epgshare01/epg_ripper_{EPG_ID}.xml.gz"
     for EPG_ID in [
         "CA2",
+        "CO1",
         "DUMMY_CHANNELS",
-        "ES1",
+        # "ES1",
         # "FANDUEL1",
         "FR1",
+        "PEACOCK1",
         "PLEX1",
         "UK1",
         "US2",
         "US_LOCALS1",
     ]
-] + ["https://i.mjh.nz/Roku/all.xml.gz"]
+]
 
 DUMMIES = {
     **{
