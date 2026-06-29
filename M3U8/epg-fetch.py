@@ -26,6 +26,7 @@ EPG_URLS = [
         "PLEX1",
         "UK1",
         "US2",
+        "UY1",
         "US_LOCALS1",
     ]
 ]

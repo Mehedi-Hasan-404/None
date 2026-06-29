@@ -14,7 +14,7 @@ TAG = "STP"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://streamtpday1.xyz"
+BASE_URL = "https://streamtp.sbs"
 
 
 async def process_event(url: str, url_num: int) -> str | None:

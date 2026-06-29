@@ -35,7 +35,7 @@ SPORT_URLS = [
 ]
 
 
-async def get_events() -> dict[str, dict[str, str | float]]:
+async def get_events(cached_keys: list[str]) -> dict[str, dict[str, str | float]]:
     events = {}
 
     tasks = [network.request(url, log=log) for url in SPORT_URLS]
@@ -78,6 +78,9 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
             sport = sport.upper() if len(sport) == 3 else sport
 
+            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
+                continue
+
             event_dt = Time.from_str(event_time, timezone="MSK")
 
             if event_dt.date() != now.date():
@@ -116,7 +119,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    urls.update(await get_events())
+    urls.update(await get_events(cached_urls.keys()))
 
     log.info(f"Collected and cached {len(urls) - valid_count} new event(s)")
 

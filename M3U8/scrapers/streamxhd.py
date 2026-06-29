@@ -58,7 +58,7 @@ async def process_event(url: str, url_num: int) -> str | None:
     return urlunsplit(splits._replace(query=urlencode(params)))
 
 
-async def get_events() -> list[dict[str, str]]:
+async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
     events = []
 
     if not (
@@ -109,6 +109,7 @@ async def get_events() -> list[dict[str, str]]:
                         "timestamp": now.timestamp(),
                     }
                     for url, lang in event_urls.items()
+                    if f"[{sport}] {name} | {lang} ({TAG})" not in cached_keys
                 )
 
     return events
@@ -127,7 +128,7 @@ async def scrape() -> None:
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    if events := await get_events():
+    if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} URL(s)")
 
         for i, ev in enumerate(events, start=1):
