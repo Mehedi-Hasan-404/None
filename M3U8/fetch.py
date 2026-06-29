@@ -74,7 +74,7 @@ async def main() -> None:
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamhub.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
-                # asyncio.create_task(streamtp.scrape()),
+                asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(streamxhd.scrape()),
                 asyncio.create_task(webcast.scrape()),
                 asyncio.create_task(xyzstream.scrape()),
