@@ -4733,11 +4733,6 @@
       <value>PG</value>
     </rating>
   </programme>
-  <channel id="DSPORTS.(COL).(DTSC).co">
-    <display-name lang="es">DSPORTS (COL) (DTSC)</display-name>
-    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s109752_light_360w_270h.png" />
-    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s109752_light_360w_270h.png" />
-    </channel>
   <channel id="DSPORTS.2.(DTS2).co">
     <display-name lang="es">DSPORTS 2 (DTS2)</display-name>
     <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s107396_light_360w_270h.png" />
@@ -4748,157 +4743,6 @@
     <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s87031_white_360w_270h.png" />
     <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s87031_white_360w_270h.png" />
     </channel>
-  <channel id="DSPORTS.+.HD(DTS+HD).co">
-    <display-name lang="es">DSPORTS + HD(DTS+HD)</display-name>
-    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s107455_white_360w_270h.png" />
-    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s107455_white_360w_270h.png" />
-    </channel>
-  <programme start="20260628000000 -0500" stop="20260628010000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">DSPORTS Noticias Nite</title>
-    <category lang="es">Series</category>
-    <category lang="es">Talk</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010643730000/images/IMG-B04CEB78-4222-4DD9-85B5-3F594B41C098.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628010000 -0500" stop="20260628030000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Jordania vs. Argentina</title>
-    <category lang="es">Series</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628030000 -0500" stop="20260628033000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Uruguay vs. España</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628033000 -0500" stop="20260628040000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Noruega vs. Francia</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628040000 -0500" stop="20260628043000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Uruguay vs. España</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628043000 -0500" stop="20260628050000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Noruega vs. Francia</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628050000 -0500" stop="20260628070000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Jordania vs. Argentina</title>
-    <category lang="es">Series</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628070000 -0500" stop="20260628073000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628073000 -0500" stop="20260628080000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628080000 -0500" stop="20260628093000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">DSPORTS Noticias Lite</title>
-    <category lang="es">Series</category>
-    <category lang="es">Current</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628093000 -0500" stop="20260628110000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Fútbol Total</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010081750000/images/IMG-C50134D7-44BA-46F2-83E3-3B9DA1459944.jpeg" />
-    <rating system="CO">
-      <value>TVPG</value>
-    </rating>
-  </programme>
-  <programme start="20260628110000 -0500" stop="20260628130000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">DSPORTS Noticias</title>
-    <category lang="es">Series</category>
-    <category lang="es">Talk</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010259120000/images/IMG-D89D9D41-D3A2-4833-B93A-74E926EABFC2.jpeg" />
-  </programme>
-  <programme start="20260628130000 -0500" stop="20260628134800 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Sudáfrica vs. Canadá</title>
-    <category lang="es">Series</category>
-    <category lang="es">Talk</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-  </programme>
-  <programme start="20260628134800 -0500" stop="20260628170000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Sudáfrica vs. Canadá</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450069/images/IMG-74AAAB31-E576-4A09-9DF7-994E73161623.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628170000 -0500" stop="20260628173000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">De Fútbol Se Habla Así</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010360560000/images/IMG-32D2F0D0-F17F-4342-9CA1-FC35323870EA.jpeg" />
-  </programme>
-  <programme start="20260628173000 -0500" stop="20260628180000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Mundial Total</title>
-    <category lang="es">Special</category>
-    <category lang="es">Talk</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010642760000/images/IMG-9244D322-4ACA-4AD5-AC08-AFEADEBD601C.jpeg" />
-  </programme>
-  <programme start="20260628180000 -0500" stop="20260628190000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Puede pasar</title>
-    <category lang="es">Talk</category>
-    <category lang="es">default</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010269730000/images/IMG-9F939478-9855-499E-9FEE-BB7E89FD6657.jpeg" />
-  </programme>
-  <programme start="20260628190000 -0500" stop="20260628200000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">DSPORTS Noticias Nite</title>
-    <category lang="es">Series</category>
-    <category lang="es">Talk</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010643730000/images/IMG-B04CEB78-4222-4DD9-85B5-3F594B41C098.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628200000 -0500" stop="20260628220000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Sudáfrica vs. Canadá</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450069/images/IMG-74AAAB31-E576-4A09-9DF7-994E73161623.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628220000 -0500" stop="20260628230000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">DSPORTS Noticias Nite</title>
-    <category lang="es">Series</category>
-    <category lang="es">Talk</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/SH010643730000/images/IMG-B04CEB78-4222-4DD9-85B5-3F594B41C098.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628230000 -0500" stop="20260629010000 -0500" channel="DSPORTS.(COL).(DTSC).co">
-    <title lang="es">Escocia vs. Brasil</title>
-    <category lang="es">Series</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/610.png" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
   <programme start="20260628000000 -0500" stop="20260628020000 -0500" channel="DSPORTS.2.(DTS2).co">
     <title lang="es">Panamá vs. Inglaterra</title>
     <category lang="es">Series</category>
@@ -5087,129 +4931,6 @@
     <rating system="CO">
       <value>G</value>
     </rating>
-  </programme>
-  <programme start="20260628010000 -0500" stop="20260628030000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Argelia vs. Austria</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450070/images/IMG-5C33DD8F-28C3-4BB2-BAF7-AA7E392117AF.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628030000 -0500" stop="20260628050000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Panamá vs. Inglaterra</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450073/images/IMG-1BB8A4FA-B61B-4299-87D2-2A6B56800B94.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628050000 -0500" stop="20260628070000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Argelia vs. Austria</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450070/images/IMG-5C33DD8F-28C3-4BB2-BAF7-AA7E392117AF.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628070000 -0500" stop="20260628073000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Uruguay vs. España</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628073000 -0500" stop="20260628093000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Colombia vs. Portugal</title>
-    <category lang="es">Series</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628093000 -0500" stop="20260628100000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628100000 -0500" stop="20260628103000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Noruega vs. Francia</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628103000 -0500" stop="20260628123000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Panamá vs. Inglaterra</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450073/images/IMG-1BB8A4FA-B61B-4299-87D2-2A6B56800B94.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628123000 -0500" stop="20260628130000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628130000 -0500" stop="20260628134800 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">DSPORTS Mundial</title>
-    <category lang="es">Talk</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628134800 -0500" stop="20260628161500 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Mosaico WC FIFA 2026</title>
-    <category lang="es">Special</category>
-    <category lang="es">Event</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628161500 -0500" stop="20260628163000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628163000 -0500" stop="20260628183000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Grupo C: Marruecos vs. Haití</title>
-    <category lang="es">Series</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628183000 -0500" stop="20260628203000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Escocia vs. Brasil</title>
-    <category lang="es">Series</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628203000 -0500" stop="20260628210000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Copa Mundial: Ecuador vs. Alemania</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628210000 -0500" stop="20260628213000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
-  </programme>
-  <programme start="20260628213000 -0500" stop="20260628233000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Ecuador vs. Alemania</title>
-    <category lang="es">Series</category>
-    <icon src="https://d355knccl7z6vu.cloudfront.net/programs/DTH/EP010665450045/images/IMG-E5C01347-BE3F-4B3E-945A-5F162FBDA36F.jpeg" />
-    <rating system="CO">
-      <value>G</value>
-    </rating>
-  </programme>
-  <programme start="20260628233000 -0500" stop="20260629000000 -0500" channel="DSPORTS.+.HD(DTS+HD).co">
-    <title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</title>
-    <category lang="es">Series</category>
-    <category lang="es">default</category>
-    <icon src="https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/CO/1613.png" />
   </programme>
   <channel id="Basketball.Dummy.us">
         <display-name lang="en">Basketball</display-name>
@@ -418709,6 +418430,1532 @@
     <category lang="es">Sports talk</category>
     <icon src="http://dtil.tmsimg.com/assets/p29532471_b_h10_aa.jpg?w=960&amp;h=540" />
     <premiere lang="es" />
+  </programme>
+  <channel id="[SPOARHD].DSports.Argentina.HD.uy">
+    <display-name lang="en">[SPOARHD] DSports Argentina HD</display-name>
+    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s109752_light_360w_270h.png" />
+    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s109752_light_360w_270h.png" />
+    </channel>
+  <channel id="[SPOPLH].DSports.+.HD.uy">
+    <display-name lang="en">[SPOPLH] DSports + HD</display-name>
+    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s107455_white_360w_270h.png" />
+    <icon src="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s107455_white_360w_270h.png" />
+    </channel>
+  <programme start="20260628050000 +0000" stop="20260628060000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628060000 +0000" stop="20260628080000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Jordania se enfrenta a Argentina en el Estadio Dallas por la fecha 3 del Grupo J. Los Bravos se despiden de la competencia, mientras que Lionel Messi busca seguir haciendo historia como el máximo goleador de las Copas Mundiales.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00376YCS.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260628080000 +0000" stop="20260628083000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Uruguay vs. España</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2329</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628083000 +0000" stop="20260628090000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Noruega vs. Francia</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2328</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628090000 +0000" stop="20260628093000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Uruguay vs. España</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2329</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628093000 +0000" stop="20260628100000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Noruega vs. Francia</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2328</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628100000 +0000" stop="20260628120000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Jordania se enfrenta a Argentina en el Estadio Dallas por la fecha 3 del Grupo J. Los Bravos se despiden de la competencia, mientras que Lionel Messi busca seguir haciendo historia como el máximo goleador de las Copas Mundiales.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00376YCS.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260628120000 +0000" stop="20260628123000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2331</episode-num>
+    <premiere />
+  </programme>
+  <programme start="20260628123000 +0000" stop="20260628130000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <premiere />
+  </programme>
+  <programme start="20260628130000 +0000" stop="20260628143000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Lite</title>
+    <desc lang="es">¡Vivimos el Mundial 24/7! Arranca cada día informado con Manu Olivari y Sol Rivas.</desc>
+    <credits>
+      <actor>Sol Rivas</actor>
+      <actor>Manuel Olivari</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="es">News</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28473563_b_h10_ad.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628143000 +0000" stop="20260628160000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Fútbol Total</title>
+    <desc lang="es">Otra forma de sentir el Mundial: Debate, actualidad, análisis e historias que van más allá de la cancha con la conducción de Juanjo Buscalia.</desc>
+    <credits>
+      <actor>Juanjo Buscalía</actor>
+    </credits>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284867_b_h10_af.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="USA Parental Rating">
+      <value>TVPG</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>PG</value>
+    </rating>
+  </programme>
+  <programme start="20260628160000 +0000" stop="20260628180000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias</title>
+    <desc lang="es">Actualidad, protagonistas, análisis y cobertura especial desde las sedes de la Copa Mundial de la FIFA 2026.</desc>
+    <date>2022</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p23358608_b_h10_ah.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628180000 +0000" stop="20260628184800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <sub-title lang="es">Dieciseisavos de final: Sudáfrica vs. Canadá</sub-title>
+    <desc lang="es">Análisis previo del partido de los dieciseisavos de final de la Copa Mundial de la FIFA 2026. Sudáfrica se enfrenta a Canadá. Desde el Estadio Los Ángeles, en California, Estados Unidos.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628184800 +0000" stop="20260628210000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Sudáfrica se enfrenta a Canadá en el Estadio Los Ángeles para los dieciseisavos de final. Ambas selecciones se clasificaron en el segundo lugar de sus grupos. Los Bafana Bafana vencieron a Corea del Sur para arrebatarles la posición.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0037FN2J.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260628210000 +0000" stop="20260628223000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: De Fútbol Se Habla Así Argentina</title>
+    <desc lang="es">El debate futbolero más caliente del fútbol argentino de la mano de Toti Pasman y un gran equipo.</desc>
+    <credits>
+      <actor>Toti Pasman</actor>
+    </credits>
+    <date>2018</date>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28234049_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628223000 +0000" stop="20260628230000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Mundial Total</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32564044_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628230000 +0000" stop="20260629000000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Puede Pasar</title>
+    <desc lang="es">Mucho más que resultados: el Mundial se vive con estilo propio en Puede Pasar, con la conducción de Gustavo Kuffner.</desc>
+    <credits>
+      <actor>Gustavo Kuffner</actor>
+    </credits>
+    <date>2023</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p23905164_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629000000 +0000" stop="20260629010000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629010000 +0000" stop="20260629030000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Sudáfrica se enfrenta a Canadá en el Estadio Los Ángeles para los dieciseisavos de final. Ambas selecciones se clasificaron en el segundo lugar de sus grupos. Los Bafana Bafana vencieron a Corea del Sur para arrebatarles la posición.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0037FN2J.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260629030000 +0000" stop="20260629040000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260629040000 +0000" stop="20260629060000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Escocia se enfrenta a Brasil en un partido del Grupo C del Mundial de la FIFA en el Estadio Miami. Brasil ganó 3-0 a Haití, con dos goles de Matheus Cunha en la primera parte. Escocia intenta recuperarse tras la derrota por 1-0 ante Marruecos.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0036LMNZ.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260629060000 +0000" stop="20260629080000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Sudáfrica se enfrenta a Canadá en el Estadio Los Ángeles para los dieciseisavos de final. Ambas selecciones se clasificaron en el segundo lugar de sus grupos. Los Bafana Bafana vencieron a Corea del Sur para arrebatarles la posición.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0037FN2J.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260629080000 +0000" stop="20260629083000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial: Escocia vs. Brasil</sub-title>
+    <desc lang="es">Compacto de la jornada 3 del Grupo C de la Copa Mundial de la FIFA 2026. Disputado el 24 de junio de 2026.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2325</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629083000 +0000" stop="20260629090000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial: Ecuador vs. Alemania</sub-title>
+    <desc lang="es">Compacto de la jornada 3 del Grupo E de la Copa Mundial de la FIFA 2026. Disputado el 25 de junio de 2026.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2327</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629090000 +0000" stop="20260629093000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2333</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629093000 +0000" stop="20260629100000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Uruguay vs. España</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2329</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629100000 +0000" stop="20260629120000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Sudáfrica se enfrenta a Canadá en el Estadio Los Ángeles para los dieciseisavos de final. Ambas selecciones se clasificaron en el segundo lugar de sus grupos. Los Bafana Bafana vencieron a Corea del Sur para arrebatarles la posición.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0037FN2J.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260629120000 +0000" stop="20260629123000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629123000 +0000" stop="20260629130000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Sudáfrica vs. Canadá</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2332</episode-num>
+    <premiere />
+  </programme>
+  <programme start="20260629130000 +0000" stop="20260629143000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Lite</title>
+    <desc lang="es">¡Vivimos el Mundial 24/7! Arranca cada día informado con Manu Olivari y Sol Rivas.</desc>
+    <credits>
+      <actor>Sol Rivas</actor>
+      <actor>Manuel Olivari</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="es">News</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28473563_b_h10_ad.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629143000 +0000" stop="20260629160000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Fútbol Total</title>
+    <desc lang="es">Otra forma de sentir el Mundial: Debate, actualidad, análisis e historias que van más allá de la cancha con la conducción de Juanjo Buscalia.</desc>
+    <credits>
+      <actor>Juanjo Buscalía</actor>
+    </credits>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284867_b_h10_af.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="USA Parental Rating">
+      <value>TVPG</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>PG</value>
+    </rating>
+  </programme>
+  <programme start="20260629160000 +0000" stop="20260629164800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629164800 +0000" stop="20260629190000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260629190000 +0000" stop="20260629193000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Análisis</title>
+    <desc lang="es">Cobertura y discusiones de la mano de especialistas sobre todo lo que ocurre en la Copa Mundial de la FIFA 2026.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33256419_st_h10_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629193000 +0000" stop="20260629201800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629201800 +0000" stop="20260629223000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260629223000 +0000" stop="20260630000000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Puede Pasar</title>
+    <desc lang="es">Mucho más que resultados: el Mundial se vive con estilo propio en Puede Pasar, con la conducción de Gustavo Kuffner.</desc>
+    <credits>
+      <actor>Gustavo Kuffner</actor>
+    </credits>
+    <date>2023</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p23905164_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630000000 +0000" stop="20260630004800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630004800 +0000" stop="20260630030000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630030000 +0000" stop="20260630040000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630040000 +0000" stop="20260630080000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630080000 +0000" stop="20260630083000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Sudáfrica vs. Canadá</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2332</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260630083000 +0000" stop="20260630090000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260630090000 +0000" stop="20260630093000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Sudáfrica vs. Canadá</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2332</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260630093000 +0000" stop="20260630100000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260630100000 +0000" stop="20260630120000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630120000 +0000" stop="20260630123000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630123000 +0000" stop="20260630130000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630130000 +0000" stop="20260630143000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Lite</title>
+    <desc lang="es">¡Vivimos el Mundial 24/7! Arranca cada día informado con Manu Olivari y Sol Rivas.</desc>
+    <credits>
+      <actor>Sol Rivas</actor>
+      <actor>Manuel Olivari</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="es">News</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28473563_b_h10_ad.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630143000 +0000" stop="20260630160000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Fútbol Total</title>
+    <desc lang="es">Otra forma de sentir el Mundial: Debate, actualidad, análisis e historias que van más allá de la cancha con la conducción de Juanjo Buscalia.</desc>
+    <credits>
+      <actor>Juanjo Buscalía</actor>
+    </credits>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284867_b_h10_af.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="USA Parental Rating">
+      <value>TVPG</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>PG</value>
+    </rating>
+  </programme>
+  <programme start="20260630160000 +0000" stop="20260630164800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630164800 +0000" stop="20260630190000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630190000 +0000" stop="20260630200000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: De Fútbol Se Habla Así Argentina</title>
+    <desc lang="es">El debate futbolero más caliente del fútbol argentino de la mano de Toti Pasman y un gran equipo.</desc>
+    <credits>
+      <actor>Toti Pasman</actor>
+    </credits>
+    <date>2018</date>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28234049_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630200000 +0000" stop="20260630204800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630204800 +0000" stop="20260630230000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630230000 +0000" stop="20260701000000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Puede Pasar</title>
+    <desc lang="es">Mucho más que resultados: el Mundial se vive con estilo propio en Puede Pasar, con la conducción de Gustavo Kuffner.</desc>
+    <credits>
+      <actor>Gustavo Kuffner</actor>
+    </credits>
+    <date>2023</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p23905164_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701000000 +0000" stop="20260701004800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701004800 +0000" stop="20260701030000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701030000 +0000" stop="20260701040000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701040000 +0000" stop="20260701080000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701080000 +0000" stop="20260701083000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701083000 +0000" stop="20260701090000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701090000 +0000" stop="20260701100000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701100000 +0000" stop="20260701120000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701120000 +0000" stop="20260701123000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701123000 +0000" stop="20260701130000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701130000 +0000" stop="20260701140000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Lite</title>
+    <desc lang="es">¡Vivimos el Mundial 24/7! Arranca cada día informado con Manu Olivari y Sol Rivas.</desc>
+    <credits>
+      <actor>Sol Rivas</actor>
+      <actor>Manuel Olivari</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="es">News</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28473563_b_h10_ad.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701140000 +0000" stop="20260701150000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Fútbol Total</title>
+    <desc lang="es">Otra forma de sentir el Mundial: Debate, actualidad, análisis e historias que van más allá de la cancha con la conducción de Juanjo Buscalia.</desc>
+    <credits>
+      <actor>Juanjo Buscalía</actor>
+    </credits>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284867_b_h10_af.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="USA Parental Rating">
+      <value>TVPG</value>
+    </rating>
+    <rating system="Canadian Parental Rating">
+      <value>PG</value>
+    </rating>
+  </programme>
+  <programme start="20260701150000 +0000" stop="20260701154800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701154800 +0000" stop="20260701180000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701180000 +0000" stop="20260701190000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: De Fútbol Se Habla Así Argentina</title>
+    <desc lang="es">El debate futbolero más caliente del fútbol argentino de la mano de Toti Pasman y un gran equipo.</desc>
+    <credits>
+      <actor>Toti Pasman</actor>
+    </credits>
+    <date>2018</date>
+    <category lang="es">Soccer</category>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p28234049_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701190000 +0000" stop="20260701194800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701194800 +0000" stop="20260701220000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701220000 +0000" stop="20260701230000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Puede Pasar</title>
+    <desc lang="es">Mucho más que resultados: el Mundial se vive con estilo propio en Puede Pasar, con la conducción de Gustavo Kuffner.</desc>
+    <credits>
+      <actor>Gustavo Kuffner</actor>
+    </credits>
+    <date>2023</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p23905164_b_h10_ae.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701230000 +0000" stop="20260701234800 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial FIFA 2026: Pregame Show</title>
+    <desc lang="es">Disfruta del mejor análisis y discusiones junto a especialistas. Sigue de cerca cada detalle, polémica y jugada de la Copa Mundial de la FIFA 2026 con una cobertura completa y objetiva.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33315357_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701234800 +0000" stop="20260702020000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <premiere />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260702020000 +0000" stop="20260702030000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Live: DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260702030000 +0000" stop="20260702033000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260702033000 +0000" stop="20260702040000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260702040000 +0000" stop="20260702080000 +0000" channel="[SPOARHD].DSports.Argentina.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260628040000 +0000" stop="20260628060000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Se define el liderato del Grupo K entre Colombia y Portugal en el Estadio Miami por la fecha 3. Los Cafeteros llegan con ventaja de 2 puntos sobre Los Lusos, a quienes solo les sirve ganar para quedarse con la cima del grupo.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00379293.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260628060000 +0000" stop="20260628080000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Se disputa el segundo puesto entre Argelia y Austria en el Estadio Kansas City por la fecha 3 del Grupo J. Los Zorros del Desierto necesitan ganar anotando más de 2 goles frente a una selección austriaca que también se juega la clasificación.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00373ZZD.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260628080000 +0000" stop="20260628100000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Panamá se enfrenta a Inglaterra en el Estadio Nueva York-Nueva Jersey por la fecha 3 del Grupo L. Los Canaleros se despiden del torneo mundialista ante Los Tres Leones, que buscan la victoria con un gran margen de gol para mantener el liderato.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG003791RZ.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260628100000 +0000" stop="20260628120000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Se disputa el segundo puesto entre Argelia y Austria en el Estadio Kansas City por la fecha 3 del Grupo J. Los Zorros del Desierto necesitan ganar anotando más de 2 goles frente a una selección austriaca que también se juega la clasificación.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00373ZZD.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260628120000 +0000" stop="20260628123000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Uruguay vs. España</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2329</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628123000 +0000" stop="20260628143000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Se define el liderato del Grupo K entre Colombia y Portugal en el Estadio Miami por la fecha 3. Los Cafeteros llegan con ventaja de 2 puntos sobre Los Lusos, a quienes solo les sirve ganar para quedarse con la cima del grupo.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00379293.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260628143000 +0000" stop="20260628150000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628150000 +0000" stop="20260628153000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Noruega vs. Francia</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2328</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628153000 +0000" stop="20260628173000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Panamá se enfrenta a Inglaterra en el Estadio Nueva York-Nueva Jersey por la fecha 3 del Grupo L. Los Canaleros se despiden del torneo mundialista ante Los Tres Leones, que buscan la victoria con un gran margen de gol para mantener el liderato.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG003791RZ.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260628173000 +0000" stop="20260628180000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2333</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628180000 +0000" stop="20260628184800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260628184800 +0000" stop="20260628210000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260628210000 +0000" stop="20260628213000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260628213000 +0000" stop="20260628233000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Marruecos y Haití se enfrentan en un partido del Grupo C del Mundial de la FIFA en el Estadio Atlanta. Marruecos venció a Escocia por 1-0 gracias a un gol tempranero de Ismael Saibari. Haití espera marcar su primer gol en un Mundial.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00376T63.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260628233000 +0000" stop="20260629013000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Escocia se enfrenta a Brasil en un partido del Grupo C del Mundial de la FIFA en el Estadio Miami. Brasil ganó 3-0 a Haití, con dos goles de Matheus Cunha en la primera parte. Escocia intenta recuperarse tras la derrota por 1-0 ante Marruecos.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0036LMNZ.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260629013000 +0000" stop="20260629020000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial: Ecuador vs. Alemania</sub-title>
+    <desc lang="es">Compacto de la jornada 3 del Grupo E de la Copa Mundial de la FIFA 2026. Disputado el 25 de junio de 2026.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2327</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629020000 +0000" stop="20260629023000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Jordania vs. Argentina</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2330</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629023000 +0000" stop="20260629043000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Ecuador se enfrenta a Alemania por la tercera jornada del Grupo E en el Estadio Nueva York-Nueva Jersey. La Tricolor necesita una victoria para seguir en competencia, mientras que Los Teutones ya tienen asegurado su pase a los dieciseisavos de final.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00374C2H.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260629043000 +0000" stop="20260629050000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <sub-title lang="es">Copa Mundial de la FIFA 2026: Colombia vs. Portugal</sub-title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <date>2026</date>
+    <category lang="es">Series</category>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <episode-num system="onscreen">E2333</episode-num>
+    <previously-shown />
+  </programme>
+  <programme start="20260629050000 +0000" stop="20260629060000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260629060000 +0000" stop="20260629080000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Jordania se enfrenta a Argentina en el Estadio Dallas por la fecha 3 del Grupo J. Los Bravos se despiden de la competencia, mientras que Lionel Messi busca seguir haciendo historia como el máximo goleador de las Copas Mundiales.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG00376YCS.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260629080000 +0000" stop="20260629100000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Sudáfrica se enfrenta a Canadá en el Estadio Los Ángeles para los dieciseisavos de final. Ambas selecciones se clasificaron en el segundo lugar de sus grupos. Los Bafana Bafana vencieron a Corea del Sur para arrebatarles la posición.</desc>
+    <category lang="es">Sports</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG0037FN2J.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+  </programme>
+  <programme start="20260629100000 +0000" stop="20260629120000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260629120000 +0000" stop="20260629123000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260629123000 +0000" stop="20260629143000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260629143000 +0000" stop="20260629160000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260629160000 +0000" stop="20260629164800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629164800 +0000" stop="20260629190000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260629190000 +0000" stop="20260629193000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260629193000 +0000" stop="20260629201800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260629201800 +0000" stop="20260629223000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260629223000 +0000" stop="20260630000000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260630000000 +0000" stop="20260630004800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630004800 +0000" stop="20260630030000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260630030000 +0000" stop="20260630050000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630050000 +0000" stop="20260630060000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260630060000 +0000" stop="20260630120000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630120000 +0000" stop="20260630123000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260630123000 +0000" stop="20260630143000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260630143000 +0000" stop="20260630160000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260630160000 +0000" stop="20260630164800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630164800 +0000" stop="20260630190000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260630190000 +0000" stop="20260630200000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260630200000 +0000" stop="20260630204800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260630204800 +0000" stop="20260630230000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260630230000 +0000" stop="20260701000000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701000000 +0000" stop="20260701004800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701004800 +0000" stop="20260701030000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260701030000 +0000" stop="20260701050000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701050000 +0000" stop="20260701060000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">DSPORTS Noticias Nite</title>
+    <desc lang="es">Cierra el día con el resumen más completo del Mundial: análisis, noticias y repercusiones de la jornada con la dupla de Julián Fernández y Martín Reich.</desc>
+    <credits>
+      <actor>Julián Fernández</actor>
+      <actor>Martín Reich</actor>
+    </credits>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32600835_b_h10_ab.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701060000 +0000" stop="20260701120000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701120000 +0000" stop="20260701123000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701123000 +0000" stop="20260701143000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260701143000 +0000" stop="20260701150000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701150000 +0000" stop="20260701154800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701154800 +0000" stop="20260701180000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260701180000 +0000" stop="20260701190000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701190000 +0000" stop="20260701194800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701194800 +0000" stop="20260701220000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260701220000 +0000" stop="20260701230000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260701230000 +0000" stop="20260701234800 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: DSPORTS Mundial</title>
+    <desc lang="es">Todo lo que pasa en la Copa Mundial de la FIFA 2026 en un solo programa. Historias, análisis, debate y toda la cobertura del torneo.</desc>
+    <date>2026</date>
+    <category lang="es">Sports talk</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p33251804_b_h10_aa.jpg?w=960&amp;h=540" />
+    <premiere />
+  </programme>
+  <programme start="20260701234800 +0000" stop="20260702020000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Live: Mosaico WC FIFA 2026</title>
+    <date>2026</date>
+    <category lang="es">Special</category>
+    <category lang="es">Event</category>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/tvbanners/generic/generic_tvbanners_h12.png" />
+    <premiere />
+  </programme>
+  <programme start="20260702020000 +0000" stop="20260702023000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+  </programme>
+  <programme start="20260702023000 +0000" stop="20260702043000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Copa Mundial de la FIFA 2026</title>
+    <desc lang="es">Cobertura de la vigésima tercera edición de la Copa Mundial de la FIFA con 48 naciones participantes en este certamen. Por primera vez en su historia, cuenta con 3 sedes: Canadá, Estados Unidos y México.</desc>
+    <category lang="es">Soccer</category>
+    <icon src="http://dtil.tmsimg.com/assets/p32572427_b_h8_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
+    <rating system="Mediakasvatus- ja kuvaohjelmayksikkö">
+      <value>S</value>
+    </rating>
+    <rating system="Medierådet">
+      <value>A</value>
+    </rating>
+  </programme>
+  <programme start="20260702043000 +0000" stop="20260702050000 +0000" channel="[SPOPLH].DSports.+.HD.uy">
+    <title lang="es">Todo en 30</title>
+    <desc lang="es">En treinta minutos repaso de los mejores eventos deportivos. Lo más destacado de fútbol, básquet, tenis y todos los eventos que se transmitan en la pantalla de DIRECTV Sports.</desc>
+    <category lang="es">Multi-sport event</category>
+    <icon src="http://dtil.tmsimg.com/assets/p15284755_b_h10_ac.jpg?w=960&amp;h=540" />
+    <previously-shown />
   </programme>
   <channel id="WABC-DT.us_locals1">
     <icon src="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10003_dark_360w_270h.png" />
