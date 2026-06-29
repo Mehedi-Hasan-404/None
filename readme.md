@@ -1,14 +1,7 @@
-## Base Log @ 2026-06-29 12:46 UTC
+## Base Log @ 2026-06-29 17:18 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 5
+### ✅ Working Streams: 151<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| DSports 2 | Invalid M3U8 (200) | `http://181.64.27.65:8000/play/a0dq/index.m3u8` |
-| DSports Plus | Invalid M3U8 (200) | `http://190.108.83.69:8000/play/a05w/index.m3u8` |
-| DSports | Invalid M3U8 (200) | `http://148.222.230.197:8000/play/a0mm/index.m3u8` |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
-| MSNBC | HTTP Error (404) | `http://41.205.93.154:80/MSNBC/index.m3u8` |
 ---
 #### Base Channels URL
 ```
