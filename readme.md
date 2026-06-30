@@ -1,7 +1,11 @@
-## Base Log @ 2026-06-30 11:27 UTC
+## Base Log @ 2026-06-30 16:37 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 0
+### ✅ Working Streams: 149<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
 ---
 #### Base Channels URL
 ```
