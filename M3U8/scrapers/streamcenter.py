@@ -21,11 +21,11 @@ BASE_URL = "https://streams.center"
 
 CATEGORIES = {
     # 4: "Basketball",
-    9: "Football",
-    13: "Baseball",
-    # 14: "American Football",
+    9: "FIFA World Cup",
+    13: "MLB",
+    # 14: "NFL",
     15: "Motor Sport",
-    # 16: "Hockey",
+    # 16: "NHL",
     17: "Fight MMA",
     18: "Boxing",
     20: "WWE",
