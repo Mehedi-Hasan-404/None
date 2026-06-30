@@ -1,11 +1,12 @@
-## Base Log @ 2026-06-30 16:37 UTC
+## Base Log @ 2026-06-30 21:54 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 2
+### ✅ Working Streams: 146<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
-| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
+| DIRECTV Sports + | cURL Error (28) | `http://190.108.83.69:8000/play/a05w/index.m3u8` |
+| DIRECTV Sports | cURL Error (28) | `http://148.222.230.197:8000/play/a0mm/index.m3u8` |
+| Sky Sports Football | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2188.ts` |
 ---
 #### Base Channels URL
 ```
