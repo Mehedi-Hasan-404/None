@@ -1,7 +1,11 @@
-## Base Log @ 2026-07-01 11:38 UTC
+## Base Log @ 2026-07-01 16:45 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 0
+### ✅ Working Streams: 147<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1809/index.m3u8` |
+| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
 ---
 #### Base Channels URL
 ```
