@@ -1,11 +1,7 @@
-## Base Log @ 2026-07-01 21:58 UTC
+## Base Log @ 2026-07-02 11:06 UTC
 
-### ✅ Working Streams: 147<br>❌ Dead Streams: 2
+### ✅ Working Streams: 149<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
-| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
 ---
 #### Base Channels URL
 ```
