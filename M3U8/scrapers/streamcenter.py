@@ -1,5 +1,4 @@
 import re
-from collections import defaultdict
 from functools import partial
 from urllib.parse import urljoin
 
@@ -92,8 +91,6 @@ async def get_events() -> list[dict[str, str]]:
 
     api_data: list[dict] = r.json()
 
-    counter = defaultdict(int)
-
     for stream_group in api_data:
         if not all(
             values := [
@@ -120,22 +117,19 @@ async def get_events() -> list[dict[str, str]]:
 
         stream_urls: dict[str, str] = {
             url: lang
-            for entry in iframes.split(";")
+            for entry in iframes.split(";")[::-1]
             for url, lang in [entry.split("<")]
         }
 
-        for url, lang in stream_urls.items():
-            counter[name := f"{title} | {lang}"] += 1
-
-            events.append(
-                {
-                    "sport": sport,
-                    "event": f"{name} {counter[name]}",
-                    "link": url,
-                    "timestamp": now.timestamp(),
-                }
-            )
-
+        events.extend(
+            {
+                "sport": sport,
+                "event": f"{title} | {lang}",
+                "link": url,
+                "timestamp": now.timestamp(),
+            }
+            for url, lang in stream_urls.items()
+        )
     return events
 
 

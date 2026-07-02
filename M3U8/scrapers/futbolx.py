@@ -1,5 +1,7 @@
 import asyncio
+import base64
 import re
+from functools import partial
 from itertools import chain
 from urllib.parse import urljoin
 
@@ -11,7 +13,7 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "FUTBOLX"
 
-CACHE_FILE = Cache(TAG, exp=10_800)
+CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://futbol-x.xyz"
 
@@ -35,8 +37,24 @@ SPORT_URLS = [
 ]
 
 
-async def get_events(cached_keys: list[str]) -> dict[str, dict[str, str | float]]:
-    events = {}
+async def process_event(url: str, url_num: int) -> str | None:
+    if not (html_data := await network.request(url, log=log)):
+        log.warning(f"URL {url_num}) Failed to load url.")
+        return
+
+    valid_m3u8 = re.compile(r'var\s+hiddenUrl\s+=\s+"([^"]*)"', re.I)
+
+    if not (match := valid_m3u8.search(html_data.text)):
+        log.warning(f"URL {url_num}) No M3U8 found")
+        return
+
+    log.info(f"URL {url_num}) Captured M3U8")
+
+    return base64.b64decode(match[1]).decode("utf-8")
+
+
+async def get_events() -> list[dict[str, str]]:
+    events = []
 
     tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
@@ -50,8 +68,6 @@ async def get_events(cached_keys: list[str]) -> dict[str, dict[str, str | float]
         return events
 
     now = Time.clean(Time.now())
-
-    ptrn = re.compile(r"^http.*\.m3u8$", re.I)
 
     for event in api_data:
         if not (streams := event.get("streams")):
@@ -71,56 +87,85 @@ async def get_events(cached_keys: list[str]) -> dict[str, dict[str, str | float]
             ):
                 continue
 
-            event_name, sport, event_time, event_streams = values
-
-            if not (event_name and sport and event_time and event_streams):
-                continue
+            name, sport, event_time, event_streams = values
 
             sport = sport.upper() if len(sport) == 3 else sport
-
-            if f"[{sport}] {event_name} ({TAG})" in cached_keys:
-                continue
 
             event_dt = Time.from_str(event_time, timezone="MSK")
 
             if event_dt.date() != now.date():
                 continue
 
-            for i, stream_info in enumerate(event_streams, start=1):
+            for stream_info in event_streams:
                 if not (url := stream_info.get("url")):
                     continue
 
-                elif not ptrn.search(url):
-                    continue
-
-                key = f"[{sport}] {event_name} {i} ({TAG})"
-
-                tvg_id, logo = leagues.get_tvg_info(sport, event_name)
-
-                events[key] = {
-                    "url": url,
-                    "logo": logo,
-                    "base": BASE_URL,
-                    "timestamp": now.timestamp(),
-                    "id": tvg_id or "Live.Event.us",
-                }
+                events.append(
+                    {
+                        "sport": sport,
+                        "event": f"{name} | {stream_info['title']}",
+                        "link": url,
+                        "timestamp": now.timestamp(),
+                    }
+                )
 
     return events
 
 
 async def scrape() -> None:
-    cached_urls = CACHE_FILE.load()
+    if cached_urls := CACHE_FILE.load():
+        urls.update({k: v for k, v in cached_urls.items() if v["url"]})
 
-    valid_count = len(valid_urls := {k: v for k, v in cached_urls.items() if v["url"]})
+        log.info(f"Loaded {len(urls)} event(s) from cache")
 
-    urls.update(valid_urls)
-
-    log.info(f"Loaded {valid_count} event(s) from cache")
+        return
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    urls.update(await get_events(cached_urls.keys()))
+    if events := await get_events():
+        log.info(f"Processing {len(events)} URL(s)")
 
-    log.info(f"Collected and cached {len(urls) - valid_count} new event(s)")
+        for i, ev in enumerate(events, start=1):
+            handler = partial(
+                process_event,
+                url=(link := ev["link"]),
+                url_num=i,
+            )
 
-    CACHE_FILE.write(urls)
+            url = await network.safe_process(
+                handler,
+                url_num=i,
+                semaphore=network.HTTP_S,
+                log=log,
+            )
+
+            sport, event, ts = (
+                ev["sport"],
+                ev["event"],
+                ev["timestamp"],
+            )
+
+            key = f"[{sport}] {event} ({TAG})"
+
+            tvg_id, logo = leagues.get_tvg_info(sport, event)
+
+            entry = {
+                "url": url,
+                "logo": logo,
+                "base": link,
+                "timestamp": ts,
+                "id": tvg_id or "Live.Event.us",
+                "link": link,
+            }
+
+            cached_urls[key] = entry
+
+            if url:
+                urls[key] = entry
+
+        log.info(f"Collected and cached {len(urls)} event(s)")
+
+    else:
+        log.info("No events found")
+
+    CACHE_FILE.write(cached_urls)
