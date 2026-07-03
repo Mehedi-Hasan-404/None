@@ -127,8 +127,6 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
     start_ts = now.delta(minutes=-30).timestamp()
     end_ts = now.delta(minutes=30).timestamp()
 
-    breakpoint()
-
     return [
         Event(**v)
         for k, v in events.items()
