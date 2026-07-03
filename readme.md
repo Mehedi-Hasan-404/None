@@ -1,7 +1,10 @@
-## Base Log @ 2026-07-02 21:40 UTC
+## Base Log @ 2026-07-03 11:07 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 0
+### ✅ Working Streams: 148<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| BET | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/647385.ts` |
 ---
 #### Base Channels URL
 ```
