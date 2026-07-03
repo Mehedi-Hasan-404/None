@@ -31,6 +31,7 @@ BASE_URLS = {sport: url.replace("api.", "") for sport, url in API_URLS.items()}
 
 @dataclass(kw_only=True, slots=True)
 class MPEvent(Event):
+    link: str | None = None
     flavor_id: str
     media_id: int
 
