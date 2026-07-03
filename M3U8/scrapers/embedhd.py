@@ -1,10 +1,11 @@
 import asyncio
+from collections.abc import KeysView
 from functools import partial
 from urllib.parse import urljoin
 
 from playwright.async_api import Browser, Page
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -84,7 +85,7 @@ async def process_event(
         page.remove_listener("request", handler)
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events(cached_keys: KeysView[str]) -> list[Event]:
     now = Time.clean(Time.now())
 
     if not (api_data := API_FILE.load(per_entry=False)):
@@ -99,7 +100,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 
         API_FILE.write(api_data)
 
-    events = []
+    events: list[Event] = []
 
     start_dt = now.delta(hours=-3)
     end_dt = now.delta(minutes=30)
@@ -128,12 +129,12 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 continue
 
             events.append(
-                {
-                    "sport": sport,
-                    "event": event_name,
-                    "link": event_link,
-                    "timestamp": now.timestamp(),
-                }
+                Event(
+                    sport=sport,
+                    name=event_name,
+                    link=event_link,
+                    timestamp=now.timestamp(),
+                )
             )
 
     return events
@@ -142,7 +143,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 async def scrape(browser: Browser) -> None:
     cached_urls = CACHE_FILE.load()
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
 
     valid_count = cached_count = len(valid_urls)
 
@@ -160,40 +161,34 @@ async def scrape(browser: Browser) -> None:
                 async with network.event_page(context) as page:
                     handler = partial(
                         process_event,
-                        url=(link := ev["link"]),
+                        url=ev.link,
                         url_num=i,
                         page=page,
                     )
 
-                    url = await network.safe_process(
+                    m3u8 = await network.safe_process(
                         handler,
                         url_num=i,
                         semaphore=network.PW_S,
                         log=log,
                     )
 
-                    sport, event, ts = (
-                        ev["sport"],
-                        ev["event"],
-                        ev["timestamp"],
-                    )
+                    tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
-                    tvg_id, logo = leagues.get_tvg_info(sport, event)
-
-                    key = f"[{sport}] {event} ({TAG})"
+                    key = f"[{ev.sport}] {ev.name} ({TAG})"
 
                     entry = {
-                        "url": url,
+                        "m3u8": m3u8,
                         "logo": logo,
-                        "base": "https://exposestrat.com",
-                        "timestamp": ts,
-                        "id": tvg_id or "Live.Event.us",
-                        "link": link,
+                        "refer": "https://exposestrat.com",
+                        "timestamp": ev.timestamp,
+                        "tvg-id": tvg_id or "Live.Event.us",
+                        "link": ev.link,
                     }
 
                     cached_urls[key] = entry
 
-                    if url:
+                    if m3u8:
                         valid_count += 1
 
                         urls[key] = entry

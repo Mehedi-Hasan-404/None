@@ -4,7 +4,7 @@ from urllib.parse import quote, urljoin
 
 from selectolax.parser import HTMLParser
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -38,8 +38,8 @@ async def process_event(url: str, url_num: int) -> str | None:
     return match[2]
 
 
-async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
-    events = []
+async def get_events(cached_links: set[str]) -> list[Event]:
+    events: list[Event] = []
 
     if not (html_data := await network.request(BASE_URL, log=log)):
         return events
@@ -71,11 +71,11 @@ async def get_events(cached_links: set[str]) -> list[dict[str, str]]:
         sport = valid_event.split(details)[0].strip()
 
         events.append(
-            {
-                "sport": sport,
-                "event": clean_event.sub("", event_name),
-                "link": link,
-            }
+            Event(
+                sport=sport,
+                name=clean_event.sub("", event_name),
+                link=link,
+            )
         )
 
     return events
@@ -86,7 +86,7 @@ async def scrape() -> None:
 
     cached_links = {entry["link"] for entry in cached_urls.values()}
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
 
     valid_count = cached_count = len(valid_urls)
 
@@ -104,35 +104,33 @@ async def scrape() -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                url=(link := ev["link"]),
+                url=ev.link,
                 url_num=i,
             )
 
-            url = await network.safe_process(
+            m3u8 = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.HTTP_S,
                 log=log,
             )
 
-            sport, event = ev["sport"], ev["event"]
+            key = f"[{ev.sport}] {ev.name} ({TAG})"
 
-            key = f"[{sport}] {event} ({TAG})"
-
-            tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "url": url,
+                "m3u8": m3u8,
                 "logo": logo,
-                "base": BASE_URL,
+                "refer": BASE_URL,
                 "timestamp": now.timestamp(),
-                "id": tvg_id or "Live.Event.us",
-                "link": link,
+                "tvg-id": tvg_id or "Live.Event.us",
+                "link": ev.link,
             }
 
             cached_urls[key] = entry
 
-            if url:
+            if m3u8:
                 valid_count += 1
 
                 urls[key] = entry

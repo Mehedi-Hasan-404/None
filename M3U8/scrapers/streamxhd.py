@@ -1,10 +1,11 @@
 import ast
 import base64
 import re
+from collections.abc import KeysView
 from functools import partial
 from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -58,8 +59,8 @@ async def process_event(url: str, url_num: int) -> str | None:
     return urlunsplit(splits._replace(query=urlencode(params)))
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
-    events = []
+async def get_events(cached_keys: KeysView[str]) -> list[Event]:
+    events: list[Event] = []
 
     if not (
         api_req := await network.request(
@@ -97,18 +98,18 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 if not (event_servers := event_info.get("servers")):
                     continue
 
-                event_urls = {
+                event_links = {
                     x["url"]: x["name"] for x in event_servers if ".php" in x["url"]
                 }
 
                 events.extend(
-                    {
-                        "sport": sport,
-                        "event": f"{name} | {lang}",
-                        "link": url,
-                        "timestamp": now.timestamp(),
-                    }
-                    for url, lang in event_urls.items()
+                    Event(
+                        sport=sport,
+                        name=f"{name} | {lang}",
+                        link=link,
+                        timestamp=now.timestamp(),
+                    )
+                    for link, lang in event_links.items()
                     if f"[{sport}] {name} | {lang} ({TAG})" not in cached_keys
                 )
 
@@ -118,7 +119,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
 
     valid_count = cached_count = len(valid_urls)
 
@@ -134,39 +135,32 @@ async def scrape() -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                url=(link := ev["link"]),
+                url=ev.link,
                 url_num=i,
             )
 
-            url = await network.safe_process(
+            m3u8 = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.HTTP_S,
                 log=log,
             )
 
-            sport, event, ts = (
-                ev["sport"],
-                ev["event"],
-                ev["timestamp"],
-            )
+            key = f"[{ev.sport}] {ev.name} ({TAG})"
 
-            key = f"[{sport}] {event} ({TAG})"
-
-            tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "url": url,
+                "m3u8": m3u8,
                 "logo": logo,
-                "base": link,
-                "timestamp": ts,
-                "id": tvg_id or "Live.Event.us",
-                "link": link,
+                "refer": ev.link,
+                "timestamp": ev.timestamp,
+                "tvg-id": tvg_id or "Live.Event.us",
             }
 
             cached_urls[key] = entry
 
-            if url:
+            if m3u8:
                 valid_count += 1
 
                 urls[key] = entry

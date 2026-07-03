@@ -118,25 +118,35 @@ async def main() -> None:
 
     combined_channels: list[str] = []
 
-    for i, (event, info) in enumerate(
+    for i, (event_name, event_info) in enumerate(
         sorted(additions.items()),
         start=1,
     ):
+        tvg_id, logo, refer, m3u8 = (
+            event_info[x]
+            for x in (
+                "tvg-id",
+                "logo",
+                "refer",
+                "m3u8",
+            )
+        )
+
         extinf_all = (
-            f'#EXTINF:-1 tvg-chno="{tvg_chno + i}" tvg-id="{info["id"]}" '
-            f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
+            f'#EXTINF:-1 tvg-chno="{tvg_chno + i}" tvg-id="{tvg_id}" '
+            f'tvg-name="{event_name}" tvg-logo="{logo}" group-title="Live Events",{event_name}'
         )
 
         extinf_live = (
-            f'#EXTINF:-1 tvg-chno="{i}" tvg-id="{info["id"]}" '
-            f'tvg-name="{event}" tvg-logo="{info["logo"]}" group-title="Live Events",{event}'
+            f'#EXTINF:-1 tvg-chno="{i}" tvg-id="{tvg_id}" '
+            f'tvg-name="{event_name}" tvg-logo="{logo}" group-title="Live Events",{event_name}'
         )
 
-        vlc_block = [
-            f'#EXTVLCOPT:http-referrer={info["base"]}',
-            f'#EXTVLCOPT:http-origin={info["base"]}',
-            f"#EXTVLCOPT:http-user-agent={info.get('UA', network.UA)}",
-            info["url"],
+        vlc_block: list[str] = [
+            f"#EXTVLCOPT:http-referrer={refer}",
+            f"#EXTVLCOPT:http-origin={refer}",
+            f"#EXTVLCOPT:http-user-agent={event_info.get('UA', network.UA)}",
+            m3u8,
         ]
 
         combined_channels.extend(["\n" + extinf_all, *vlc_block])

@@ -1,10 +1,12 @@
 import asyncio
 import json
 import re
+from collections.abc import KeysView
+from dataclasses import dataclass
 from functools import partial
 from urllib.parse import urljoin
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -25,6 +27,12 @@ API_URLS = {
 }
 
 BASE_URLS = {sport: url.replace("api.", "") for sport, url in API_URLS.items()}
+
+
+@dataclass(kw_only=True, slots=True)
+class MPEvent(Event):
+    flavor_id: str
+    media_id: int
 
 
 async def process_event(
@@ -55,12 +63,12 @@ async def process_event(
     return m3u8_url
 
 
-async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
+async def get_events(cached_keys: KeysView[str]) -> list[MPEvent]:
     tasks = [network.request(url, log=log) for url in BASE_URLS.values()]
 
     results = await asyncio.gather(*tasks)
 
-    events = []
+    events: list[MPEvent] = []
 
     if not (html_data := [(html.text, html.url) for html in results if html]):
         return events
@@ -121,13 +129,13 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
                 flavor_id.lower().startswith("free.live")
             ):
                 events.append(
-                    {
-                        "sport": sport,
-                        "event": event_name,
-                        "timestamp": event_dt.timestamp(),
-                        "flavor_id": flavor_id,
-                        "media_id": media_id,
-                    }
+                    MPEvent(
+                        sport=sport,
+                        name=event_name,
+                        timestamp=event_dt.timestamp(),
+                        flavor_id=flavor_id,
+                        media_id=media_id,
+                    )
                 )
 
     return events
@@ -136,7 +144,7 @@ async def get_events(cached_keys: list[str]) -> list[dict[str, str]]:
 async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["url"]}
+    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
 
     valid_count = cached_count = len(valid_urls)
 
@@ -152,36 +160,34 @@ async def scrape() -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                sport=(sport := ev["sport"]),
-                flavor_id=ev["flavor_id"],
-                media_id=ev["media_id"],
+                sport=ev.sport,
+                flavor_id=ev.flavor_id,
+                media_id=ev.media_id,
                 url_num=i,
             )
 
-            url = await network.safe_process(
+            m3u8 = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.HTTP_S,
                 log=log,
             )
 
-            event, ts = ev["event"], ev["timestamp"]
+            key = f"[{ev.sport}] {ev.name} ({TAG})"
 
-            key = f"[{sport}] {event} ({TAG})"
-
-            tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "url": url,
+                "m3u8": m3u8,
                 "logo": logo,
-                "base": BASE_URLS[sport],
-                "timestamp": ts,
-                "id": tvg_id or "Live.Event.us",
+                "refer": BASE_URLS[ev.sport],
+                "timestamp": ev.timestamp,
+                "tvg-id": tvg_id or "Live.Event.us",
             }
 
             cached_urls[key] = entry
 
-            if url:
+            if m3u8:
                 valid_count += 1
 
                 urls[key] = entry

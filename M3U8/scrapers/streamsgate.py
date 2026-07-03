@@ -7,7 +7,7 @@ from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -86,14 +86,14 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
     return json.loads(f'"{match[4]}"'), ifr_src
 
 
-async def get_events() -> list[dict[str, str]]:
+async def get_events() -> list[Event]:
     now = Time.clean(Time.now())
 
     tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
     results = await asyncio.gather(*tasks)
 
-    events = []
+    events: list[Event] = []
 
     if not (api_data := [*chain.from_iterable(r.json() for r in results if r)]):
         return events
@@ -136,17 +136,13 @@ async def get_events() -> list[dict[str, str]]:
         ):
             continue
 
-        url = valid_streams[0]["url"]
-
-        event = get_event(t1, t2)
-
         events.append(
-            {
-                "sport": sport,
-                "event": event,
-                "link": url,
-                "timestamp": now.timestamp(),
-            }
+            Event(
+                sport=sport,
+                name=get_event(t1, t2),
+                link=valid_streams[0]["url"],
+                timestamp=now.timestamp(),
+            )
         )
 
     return events
@@ -154,7 +150,7 @@ async def get_events() -> list[dict[str, str]]:
 
 async def scrape() -> None:
     if cached_urls := CACHE_FILE.load():
-        urls.update({k: v for k, v in cached_urls.items() if v["url"]})
+        urls.update({k: v for k, v in cached_urls.items() if v["m3u8"]})
 
         log.info(f"Loaded {len(urls)} event(s) from cache")
 
@@ -168,11 +164,11 @@ async def scrape() -> None:
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                url=(link := ev["link"]),
+                url=ev.link,
                 url_num=i,
             )
 
-            url, iframe = await network.safe_process(
+            m3u8, iframe = await network.safe_process(
                 handler,
                 url_num=i,
                 timeout_return=(None, None),
@@ -180,29 +176,23 @@ async def scrape() -> None:
                 log=log,
             )
 
-            sport, event, ts = (
-                ev["sport"],
-                ev["event"],
-                ev["timestamp"],
-            )
+            key = f"[{ev.sport}] {ev.name} ({TAG})"
 
-            key = f"[{sport}] {event} ({TAG})"
-
-            tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "url": url,
+                "m3u8": m3u8,
                 "logo": logo,
-                "base": iframe,
-                "timestamp": ts,
-                "id": tvg_id or "Live.Event.us",
-                "link": link,
+                "refer": iframe,
+                "timestamp": ev.timestamp,
+                "tvg-id": tvg_id or "Live.Event.us",
+                "link": ev.link,
             }
 
             cached_urls[key] = entry
 
-            if url:
-                entry["url"] = url.split("?st")[0]
+            if m3u8:
+                entry["m3u8"] = m3u8.split("?st")[0]
 
                 urls[key] = entry
 

@@ -1,11 +1,12 @@
 import asyncio
 import base64
 import re
+from collections.abc import KeysView
 from functools import partial
 from itertools import chain
 from urllib.parse import urljoin
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -53,8 +54,8 @@ async def process_event(url: str, url_num: int) -> str | None:
     return base64.b64decode(match[1]).decode("utf-8")
 
 
-async def get_events() -> list[dict[str, str]]:
-    events = []
+async def get_events(cached_keys: KeysView[str]) -> list[Event]:
+    events: list[Event] = []
 
     tasks = [network.request(url, log=log) for url in SPORT_URLS]
 
@@ -100,72 +101,73 @@ async def get_events() -> list[dict[str, str]]:
                 if not (url := stream_info.get("url")):
                     continue
 
+                feed = stream_info["title"]
+
+                if f"[{sport}] {name} | {feed} ({TAG})" in cached_keys:
+                    continue
+
                 events.append(
-                    {
-                        "sport": sport,
-                        "event": f"{name} | {stream_info['title']}",
-                        "link": url,
-                        "timestamp": now.timestamp(),
-                    }
+                    Event(
+                        sport=sport,
+                        name=f"{name} | {feed}",
+                        link=url,
+                        timestamp=now.timestamp(),
+                    )
                 )
 
     return events
 
 
 async def scrape() -> None:
-    if cached_urls := CACHE_FILE.load():
-        urls.update({k: v for k, v in cached_urls.items() if v["url"]})
+    cached_urls = CACHE_FILE.load()
 
-        log.info(f"Loaded {len(urls)} event(s) from cache")
+    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
 
-        return
+    valid_count = cached_count = len(valid_urls)
+
+    urls.update(valid_urls)
+
+    log.info(f"Loaded {cached_count} event(s) from cache")
 
     log.info(f'Scraping from "{BASE_URL}"')
 
-    if events := await get_events():
+    if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} URL(s)")
 
         for i, ev in enumerate(events, start=1):
             handler = partial(
                 process_event,
-                url=(link := ev["link"]),
+                url=ev.link,
                 url_num=i,
             )
 
-            url = await network.safe_process(
+            m3u8 = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.HTTP_S,
                 log=log,
             )
 
-            sport, event, ts = (
-                ev["sport"],
-                ev["event"],
-                ev["timestamp"],
-            )
+            key = f"[{ev.sport}] {ev.name} ({TAG})"
 
-            key = f"[{sport}] {event} ({TAG})"
-
-            tvg_id, logo = leagues.get_tvg_info(sport, event)
+            tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "url": url,
+                "m3u8": m3u8,
                 "logo": logo,
-                "base": link,
-                "timestamp": ts,
-                "id": tvg_id or "Live.Event.us",
-                "link": link,
+                "refer": ev.link,
+                "timestamp": ev.timestamp,
+                "tvg-id": tvg_id or "Live.Event.us",
             }
 
             cached_urls[key] = entry
 
-            if url:
+            if m3u8:
                 urls[key] = entry
 
-        log.info(f"Collected and cached {len(urls)} event(s)")
+        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
     else:
-        log.info("No events found")
+        log.info("No new events found")
 
     CACHE_FILE.write(cached_urls)

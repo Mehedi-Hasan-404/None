@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 from playwright.async_api import Browser, Page, TimeoutError
 from selectolax.parser import HTMLParser
 
-from .utils import Cache, Time, get_logger, leagues, network
+from .utils import Cache, Event, Time, get_logger, leagues, network
 
 log = get_logger(__name__)
 
@@ -75,12 +75,12 @@ async def process_event(
         return
 
 
-async def get_events() -> list[dict[str, str]]:
+async def get_events() -> list[Event]:
     tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
     results = await asyncio.gather(*tasks)
 
-    events = []
+    events: list[Event] = []
 
     if not (
         soups := [(HTMLParser(html.content), html.url) for html in results if html]
@@ -110,12 +110,12 @@ async def get_events() -> list[dict[str, str]]:
                 continue
 
             events.append(
-                {
-                    "sport": sport,
-                    "event": event,
-                    "link": urljoin(BASE_URL, href),
-                    "timestamp": now.timestamp(),
-                }
+                Event(
+                    sport=sport,
+                    name=event,
+                    link=urljoin(BASE_URL, href),
+                    timestamp=now.timestamp(),
+                )
             )
 
     return events
@@ -123,7 +123,7 @@ async def get_events() -> list[dict[str, str]]:
 
 async def scrape(browser: Browser) -> None:
     if cached_urls := CACHE_FILE.load():
-        urls.update({k: v for k, v in cached_urls.items() if v["url"]})
+        urls.update({k: v for k, v in cached_urls.items() if v["m3u8"]})
 
         log.info(f"Loaded {len(urls)} event(s) from cache")
 
@@ -139,40 +139,34 @@ async def scrape(browser: Browser) -> None:
                 async with network.event_page(context) as page:
                     handler = partial(
                         process_event,
-                        url=(link := ev["link"]),
+                        url=ev.link,
                         url_num=i,
                         page=page,
                     )
 
-                    url = await network.safe_process(
+                    m3u8 = await network.safe_process(
                         handler,
                         url_num=i,
                         semaphore=network.PW_S,
                         log=log,
                     )
 
-                    sport, event, ts = (
-                        ev["sport"],
-                        ev["event"],
-                        ev["timestamp"],
-                    )
+                    tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
-                    tvg_id, logo = leagues.get_tvg_info(sport, event)
-
-                    key = f"[{sport}] {event} ({TAG})"
+                    key = f"[{ev.sport}] {ev.name} ({TAG})"
 
                     entry = {
-                        "url": url,
+                        "m3u8": m3u8,
                         "logo": logo,
-                        "base": BASE_URL,
-                        "timestamp": ts,
-                        "id": tvg_id or "Live.Event.us",
-                        "link": link,
+                        "refer": BASE_URL,
+                        "timestamp": ev.timestamp,
+                        "tvg-id": tvg_id or "Live.Event.us",
+                        "link": ev.link,
                     }
 
                     cached_urls[key] = entry
 
-                    if url:
+                    if m3u8:
                         urls[key] = entry
 
         log.info(f"Collected and cached {len(urls)} event(s)")

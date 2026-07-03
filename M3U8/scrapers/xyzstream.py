@@ -55,11 +55,11 @@ async def get_events() -> dict[str, dict[str, str | float]]:
             tvg_id, logo = leagues.get_tvg_info(sport, event_name)
 
             events[key] = {
-                "url": feed,
+                "m3u8": feed,
                 "logo": logo,
-                "base": BASE_URL,
+                "refer": BASE_URL,
                 "timestamp": now.timestamp(),
-                "id": tvg_id or "Live.Event.us",
+                "tvg-id": tvg_id or "Live.Event.us",
             }
 
     return events
