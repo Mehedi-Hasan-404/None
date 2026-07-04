@@ -1,14 +1,10 @@
-## Base Log @ 2026-07-03 21:38 UTC
+## Base Log @ 2026-07-04 10:31 UTC
 
-### ✅ Working Streams: 144<br>❌ Dead Streams: 5
+### ✅ Working Streams: 148<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1758/index.m3u8` |
-| ESPN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21590.ts` |
-| NBC Sports Bay Area | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2436.ts` |
-| NBC Sports Boston | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2435.ts` |
-| TV Land | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/614330.ts` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
 ---
 #### Base Channels URL
 ```
