@@ -1,10 +1,10 @@
-## Base Log @ 2026-07-04 10:31 UTC
+## Base Log @ 2026-07-04 15:38 UTC
 
 ### ✅ Working Streams: 148<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
+| DIRECTV Sports | cURL Error (28) | `http://201.230.121.85:8000/play/dssporthd/index.m3u8` |
 ---
 #### Base Channels URL
 ```
