@@ -150,7 +150,7 @@ async def get_events() -> list[Event]:
 
 async def scrape() -> None:
     if cached_urls := CACHE_FILE.load():
-        urls.update({k: v for k, v in cached_urls.items() if v["m3u8"]})
+        urls.update({k: v for k, v in cached_urls.items() if v["source"]})
 
         log.info(f"Loaded {len(urls)} event(s) from cache")
 
@@ -168,7 +168,7 @@ async def scrape() -> None:
                 url_num=i,
             )
 
-            m3u8, iframe = await network.safe_process(
+            source, iframe = await network.safe_process(
                 handler,
                 url_num=i,
                 timeout_return=(None, None),
@@ -181,7 +181,7 @@ async def scrape() -> None:
             tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "m3u8": m3u8,
+                "source": source,
                 "logo": logo,
                 "refer": iframe,
                 "timestamp": ev.timestamp,
@@ -191,8 +191,8 @@ async def scrape() -> None:
 
             cached_urls[key] = entry
 
-            if m3u8:
-                entry["m3u8"] = m3u8.split("?st")[0]
+            if source:
+                entry["source"] = source.split("?st")[0]
 
                 urls[key] = entry
 

@@ -176,7 +176,7 @@ async def scrape(browser: Browser) -> None:
 
     cached_links = {entry["link"] for entry in cached_urls.values()}
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
+    valid_urls = {k: v for k, v in cached_urls.items() if v["source"]}
 
     valid_count = cached_count = len(valid_urls)
 
@@ -199,7 +199,7 @@ async def scrape(browser: Browser) -> None:
                         page=page,
                     )
 
-                    name, ifr_src, m3u8 = await network.safe_process(
+                    name, ifr_src, source = await network.safe_process(
                         handler,
                         url_num=i,
                         timeout_return=(None, None, None),
@@ -212,7 +212,7 @@ async def scrape(browser: Browser) -> None:
                     key = f"[{ev.sport}] {name} ({TAG})"
 
                     entry = {
-                        "m3u8": m3u8,
+                        "source": source,
                         "logo": logo,
                         "refer": ifr_src,
                         "timestamp": ev.timestamp,
@@ -222,7 +222,7 @@ async def scrape(browser: Browser) -> None:
 
                     cached_urls[key] = entry
 
-                if m3u8:
+                if source:
                     valid_count += 1
 
                     urls[key] = entry

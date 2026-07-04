@@ -119,13 +119,13 @@ async def main() -> None:
         sorted(additions.items()),
         start=1,
     ):
-        tvg_id, logo, refer, m3u8 = (
+        tvg_id, logo, refer, source = (
             event_info[x]
             for x in (
                 "tvg-id",
                 "logo",
                 "refer",
-                "m3u8",
+                "source",
             )
         )
 
@@ -143,7 +143,7 @@ async def main() -> None:
             f"#EXTVLCOPT:http-referrer={refer}",
             f"#EXTVLCOPT:http-origin={refer}",
             f"#EXTVLCOPT:http-user-agent={event_info.get('UA', network.UA)}",
-            m3u8,
+            source,
         ]
 
         combined_channels.extend(["\n" + extinf_all, *vlc_block])

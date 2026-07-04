@@ -86,7 +86,7 @@ async def scrape() -> None:
 
     cached_links = {entry["link"] for entry in cached_urls.values()}
 
-    valid_urls = {k: v for k, v in cached_urls.items() if v["m3u8"]}
+    valid_urls = {k: v for k, v in cached_urls.items() if v["source"]}
 
     valid_count = cached_count = len(valid_urls)
 
@@ -108,7 +108,7 @@ async def scrape() -> None:
                 url_num=i,
             )
 
-            m3u8 = await network.safe_process(
+            source = await network.safe_process(
                 handler,
                 url_num=i,
                 semaphore=network.HTTP_S,
@@ -120,7 +120,7 @@ async def scrape() -> None:
             tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
             entry = {
-                "m3u8": m3u8,
+                "source": source,
                 "logo": logo,
                 "refer": BASE_URL,
                 "timestamp": now.timestamp(),
@@ -130,7 +130,7 @@ async def scrape() -> None:
 
             cached_urls[key] = entry
 
-            if m3u8:
+            if source:
                 valid_count += 1
 
                 urls[key] = entry
