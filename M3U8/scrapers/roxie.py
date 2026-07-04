@@ -26,7 +26,7 @@ SPORT_URLS = {
     for sport in [
         "Fighting",
         "MLB",
-        # "NBA",
+        "NBA",
         # "NHL",
         "Soccer",
     ]

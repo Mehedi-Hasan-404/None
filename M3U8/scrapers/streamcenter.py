@@ -19,7 +19,7 @@ API_URL = "https://backend.streamcenter.live/api/Parties"
 BASE_URL = "https://streams.center"
 
 CATEGORIES = {
-    # 4: "Basketball",
+    4: "Basketball",
     9: "FIFA World Cup",
     13: "MLB",
     # 14: "NFL",
