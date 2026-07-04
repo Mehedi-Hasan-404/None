@@ -1,10 +1,7 @@
-## Base Log @ 2026-07-04 15:38 UTC
+## Base Log @ 2026-07-04 21:25 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 1
+### ✅ Working Streams: 149<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| DIRECTV Sports | cURL Error (28) | `http://201.230.121.85:8000/play/dssporthd/index.m3u8` |
 ---
 #### Base Channels URL
 ```
