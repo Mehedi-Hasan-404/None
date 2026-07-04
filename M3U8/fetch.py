@@ -11,7 +11,6 @@ from scrapers import (
     futbolx,
     istreameast,
     mainportal,
-    ovogoal,
     pelotalibre,
     roxie,
     sportspass,
@@ -61,7 +60,7 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
-                # asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
+                asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
@@ -69,7 +68,6 @@ async def main() -> None:
                 asyncio.create_task(futbolx.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
-                # asyncio.create_task(ovogoal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamhub.scrape()),
@@ -100,7 +98,6 @@ async def main() -> None:
         | futbolx.urls
         | istreameast.urls
         | mainportal.urls
-        | ovogoal.urls
         | pelotalibre.urls
         | roxie.urls
         | sportspass.urls
