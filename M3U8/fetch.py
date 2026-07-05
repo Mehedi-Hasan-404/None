@@ -8,6 +8,7 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
+    fsports,
     futbolx,
     istreameast,
     mainportal,
@@ -59,6 +60,7 @@ async def main() -> None:
 
             pw_tasks = [
                 asyncio.create_task(embedhd.scrape(hdl_brwsr)),
+                asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
             ]
@@ -95,6 +97,7 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
+        | fsports.urls
         | futbolx.urls
         | istreameast.urls
         | mainportal.urls
@@ -129,6 +132,8 @@ async def main() -> None:
             )
         )
 
+        ua: str = event_info.get("user-agent", network.UA)
+
         extinf_all = (
             f'#EXTINF:-1 tvg-chno="{tvg_chno + i}" tvg-id="{tvg_id}" '
             f'tvg-name="{event_name}" tvg-logo="{logo}" group-title="Live Events",{event_name}'
@@ -142,7 +147,7 @@ async def main() -> None:
         vlc_block: list[str] = [
             f"#EXTVLCOPT:http-referrer={refer}",
             f"#EXTVLCOPT:http-origin={refer}",
-            f"#EXTVLCOPT:http-user-agent={event_info.get('UA', network.UA)}",
+            f"#EXTVLCOPT:http-user-agent={ua}",
             source,
         ]
 

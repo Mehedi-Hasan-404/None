@@ -87,7 +87,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
             Event(
                 sport=sport,
                 name=event_name,
-                link=urljoin(f"{html_data.url}", href),
+                link=urljoin(str(html_data.url), href),
             )
         )
 
