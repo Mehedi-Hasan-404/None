@@ -1,10 +1,12 @@
-## Base Log @ 2026-07-05 15:43 UTC
+## Base Log @ 2026-07-05 21:32 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 1
+### ✅ Working Streams: 146<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BET | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/647385.ts` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
+| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
 ---
 #### Base Channels URL
 ```
