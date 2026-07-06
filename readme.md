@@ -1,12 +1,14 @@
-## Base Log @ 2026-07-05 21:32 UTC
+## Base Log @ 2026-07-06 12:18 UTC
 
-### ✅ Working Streams: 146<br>❌ Dead Streams: 3
+### ✅ Working Streams: 144<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
-| Lifetime | HTTP Error (404) | `http://41.205.93.154/LIFETIME/index.m3u8` |
-| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| A&E TV | HTTP Error (404) | `http://23.239.31.26:8989/aande/index.m3u8` |
+| AMC | HTTP Error (404) | `http://23.239.31.26:8989/amc/index.m3u8` |
+| AXS TV | HTTP Error (404) | `http://23.239.31.26:8989/axstv/index.m3u8` |
+| ESPN2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21590.ts` |
+| TV One | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21897.ts` |
 ---
 #### Base Channels URL
 ```
