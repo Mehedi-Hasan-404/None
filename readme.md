@@ -1,16 +1,10 @@
-## Base Log @ 2026-07-07 16:44 UTC
+## Base Log @ 2026-07-07 21:49 UTC
 
-### ✅ Working Streams: 145<br>❌ Dead Streams: 7
+### ✅ Working Streams: 151<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
 | HBO 2 | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO2/index.m3u8` |
-| HBO Comedy | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8` |
-| HBO | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO/index.m3u8` |
-| Showtime Extreme | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648984.ts` |
-| Showtime | HTTP Error (404) | `http://23.237.104.106:8080/USA_SHOWTIME/index.m3u8` |
-| TV One | HTTP Error (404) | `http://206.212.244.63/166/index.m3u8` |
 ---
 #### Base Channels URL
 ```
