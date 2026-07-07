@@ -163,7 +163,7 @@ http://23.237.104.106:8080/USA_FOOD_NETWORK/index.m3u8
 http://stream.cammonitorplus.net/1752/index.m3u8
 
 #EXTINF:-1 tvg-chno="55" tvg-id="Fox.Business.HD.us2" tvg-name="Fox Business" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58649_dark_360w_270h.png" group-title="TV",Fox Business
-http://41.205.93.154/FOXBUSINESS/index.m3u8
+http://206.212.244.63/66/index.m3u8
 
 #EXTINF:-1 tvg-chno="56" tvg-id="Fox.News.Channel.HD.us2" tvg-name="Fox News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16374_dark_360w_270h.png" group-title="TV",Fox News
 http://206.212.244.63/67/index.m3u8
@@ -214,13 +214,13 @@ http://206.212.244.63/85/index.m3u8
 http://206.212.244.63/86/index.m3u8
 
 #EXTINF:-1 tvg-chno="72" tvg-id="HBO.East.us2" tvg-name="HBO" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10240_dark_360w_270h.png" group-title="TV",HBO
-http://23.237.104.106:8080/USA_HBO/index.m3u8
+http://40.160.24.53/HBO_HD/index.m3u8
 
 #EXTINF:-1 tvg-chno="73" tvg-id="HBO2.HD.us2" tvg-name="HBO 2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68140_dark_360w_270h.png" group-title="TV",HBO 2
 http://23.237.104.106:8080/USA_HBO2/index.m3u8
 
 #EXTINF:-1 tvg-chno="74" tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s59839_dark_360w_270h.png" group-title="TV",HBO Comedy
-http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
+http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts
 
 #EXTINF:-1 tvg-chno="75" tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Zone" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18431_dark_360w_270h.png" group-title="TV",HBO Zone
 http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
@@ -349,7 +349,7 @@ http://23.237.104.106:8080/USA_REELZ/index.m3u8
 http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-chno="117" tvg-id="Paramount+.with.Showtime.HD.us2" tvg-name="Showtime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-us.png" group-title="TV",Showtime
-http://23.237.104.106:8080/USA_SHOWTIME/index.m3u8
+http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2416.ts
 
 #EXTINF:-1 tvg-chno="118" tvg-id="Showtime.Extreme.HD.us2" tvg-name="Showtime Extreme" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18086_dark_360w_270h.png" group-title="TV",Showtime Extreme
 http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648984.ts
