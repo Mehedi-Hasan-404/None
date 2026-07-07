@@ -1386,25 +1386,31 @@ http://193.47.62.42/hls/FEEEEFQ.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 http://193.47.62.42/hls/FEEEEF.m3u8
 
-#EXTINF:-1 tvg-chno="308" tvg-id="Live.Event.us" tvg-name="[Tour de France] Etapa #4 | ESPN 5 (STRMXHD)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Tour de France] Etapa #4 | ESPN 5 (STRMXHD)
+#EXTINF:-1 tvg-chno="308" tvg-id="Live.Event.us" tvg-name="[Tennis Masters] Tennis Wimbledont 2 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Tennis Masters] Tennis Wimbledont 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/FEEEEFXX.m3u8
+
+#EXTINF:-1 tvg-chno="309" tvg-id="Live.Event.us" tvg-name="[Tour de France] Etapa #4 | ESPN 5 (STRMXHD)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Tour de France] Etapa #4 | ESPN 5 (STRMXHD)
 #EXTVLCOPT:http-referrer=https://streamx-hd.com/live1.php?stream=espn5
 #EXTVLCOPT:http-origin=https://streamx-hd.com/live1.php?stream=espn5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://khala.skylivehd.com/global/espn5/index.m3u8?token=e634f0978c82c362f63aca8fd810dcbaae42148a-32-1783470650-1783416650
 
-#EXTINF:-1 tvg-chno="309" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] New York vs. Dallas | ESPN 2 (STRMXHD)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] New York vs. Dallas | ESPN 2 (STRMXHD)
+#EXTINF:-1 tvg-chno="310" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] New York vs. Dallas | ESPN 2 (STRMXHD)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] New York vs. Dallas | ESPN 2 (STRMXHD)
 #EXTVLCOPT:http-referrer=https://streamx-hd.com/live1.php?stream=espn2
 #EXTVLCOPT:http-origin=https://streamx-hd.com/live1.php?stream=espn2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://khala.skylivehd.com/global/espn2/index.m3u8?token=afcaa54dea0354730858e842065aba2b0429c124-2c-1783470650-1783416650
 
-#EXTINF:-1 tvg-chno="310" tvg-id="Tennis.Dummy.us" tvg-name="[Wimbledon] 4tos de Final | Cobertura Internacional | ESPN 2 (STRMXHD)" tvg-logo="https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png" group-title="Live Events",[Wimbledon] 4tos de Final | Cobertura Internacional | ESPN 2 (STRMXHD)
+#EXTINF:-1 tvg-chno="311" tvg-id="Tennis.Dummy.us" tvg-name="[Wimbledon] 4tos de Final | Cobertura Internacional | ESPN 2 (STRMXHD)" tvg-logo="https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png" group-title="Live Events",[Wimbledon] 4tos de Final | Cobertura Internacional | ESPN 2 (STRMXHD)
 #EXTVLCOPT:http-referrer=https://streamx-hd.com/live1.php?stream=espn2
 #EXTVLCOPT:http-origin=https://streamx-hd.com/live1.php?stream=espn2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://khala.skylivehd.com/global/espn2/index.m3u8?token=4d10443aa413375eed5826ff3316d53964ec1a2b-a2-1783470650-1783416650
 
-#EXTINF:-1 tvg-chno="311" tvg-id="Tennis.Dummy.us" tvg-name="[Wimbledon] 4tos de Final | Cobertura Regional | ESPN 3 (STRMXHD)" tvg-logo="https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png" group-title="Live Events",[Wimbledon] 4tos de Final | Cobertura Regional | ESPN 3 (STRMXHD)
+#EXTINF:-1 tvg-chno="312" tvg-id="Tennis.Dummy.us" tvg-name="[Wimbledon] 4tos de Final | Cobertura Regional | ESPN 3 (STRMXHD)" tvg-logo="https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png" group-title="Live Events",[Wimbledon] 4tos de Final | Cobertura Regional | ESPN 3 (STRMXHD)
 #EXTVLCOPT:http-referrer=https://streamx-hd.com/live1.php?stream=espn3
 #EXTVLCOPT:http-origin=https://streamx-hd.com/live1.php?stream=espn3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
