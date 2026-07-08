@@ -1,10 +1,11 @@
-## Base Log @ 2026-07-07 21:49 UTC
+## Base Log @ 2026-07-08 10:34 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 1
+### ✅ Working Streams: 150<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | HBO 2 | HTTP Error (404) | `http://23.237.104.106:8080/USA_HBO2/index.m3u8` |
+| Sky Sports Football | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2188.ts` |
 ---
 #### Base Channels URL
 ```
