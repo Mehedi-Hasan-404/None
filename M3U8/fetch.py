@@ -62,6 +62,8 @@ async def main() -> None:
                 asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
+                asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
+                asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
             ]
 
             httpx_tasks = [
@@ -79,10 +81,6 @@ async def main() -> None:
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
-
-            # others
-            await cdnlivetv.scrape(xtrnl_brwsr)
-            await watchfooty.scrape(xtrnl_brwsr)
 
         finally:
             await hdl_brwsr.close()

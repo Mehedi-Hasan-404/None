@@ -73,7 +73,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         return nones
 
     valid_m3u8 = re.compile(
-        r"(file|source|currentStreamUrl)\s*(:|=)\s+(\'|\")([^\"]*)(\'|\")",
+        r"(file|source|streamUrl)\s*(:|=)\s+(\'|\")([^\"]*)(\'|\")",
         re.I,
     )
 
@@ -119,30 +119,22 @@ async def get_events() -> list[Event]:
         if event_dt.date() != now.date():
             continue
 
-        if not (streams := stream_group.get("streams")):
+        if not (iframes := stream_group.get("streams")):
             continue
 
-        elif not (
-            valid_streams := sorted(
-                [
-                    *filter(
-                        lambda x: (lth := len(x.get("lang"))) == 0 or lth > 2,
-                        streams,
-                    )
-                ],
-                key=lambda x: len(x.get("lang")),
-                reverse=True,
-            )
-        ):
-            continue
+        stream_urls: dict[str, str | None] = {
+            stream.get("lang") or "EN": stream.get("url") for stream in iframes
+        }
 
-        events.append(
+        events.extend(
             Event(
                 sport=sport,
-                name=get_event(t1, t2),
-                link=valid_streams[0]["url"],
+                name=f"{get_event(t1, t2)} | {lang}",
+                link=url,
                 timestamp=now.timestamp(),
             )
+            for lang, url in stream_urls.items()
+            if url
         )
 
     return events
