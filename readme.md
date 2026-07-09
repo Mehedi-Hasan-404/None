@@ -1,10 +1,11 @@
-## Base Log @ 2026-07-09 16:59 UTC
+## Base Log @ 2026-07-09 21:54 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 1
+### ✅ Working Streams: 152<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Showtime Extreme | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648984.ts` |
+| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
+| Willow Cricket | HTTP Error (502) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
 ---
 #### Base Channels URL
 ```
