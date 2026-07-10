@@ -1,11 +1,17 @@
-## Base Log @ 2026-07-09 21:54 UTC
+## Base Log @ 2026-07-10 11:23 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 2
+### ✅ Working Streams: 146<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN | HTTP Error (404) | `http://41.205.93.154/ESPN/index.m3u8` |
-| Willow Cricket | HTTP Error (502) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| CBS Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3621.ts` |
+| Comedy TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/77411.ts` |
+| Disney Jr | HTTP Error (404) | `http://206.212.244.63/655/index.m3u8` |
+| ESPN News | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3640.ts` |
+| FX Movie Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3736.ts` |
+| Golf Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2385.ts` |
+| ITV1 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/527497.ts` |
+| SportsNet New York | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3865.ts` |
 ---
 #### Base Channels URL
 ```
