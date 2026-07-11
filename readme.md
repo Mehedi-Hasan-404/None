@@ -1,7 +1,11 @@
-## Base Log @ 2026-07-10 16:36 UTC
+## Base Log @ 2026-07-11 09:55 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 0
+### ✅ Working Streams: 152<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| MotorTrend TV | HTTP Error (404) | `http://206.212.244.63/113/index.m3u8` |
+| NBA TV | cURL Error (28) | `http://23.237.104.106:8080/USA_NBA/tracks-v1a1/mono.m3u8` |
 ---
 #### Base Channels URL
 ```
