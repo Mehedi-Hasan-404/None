@@ -6,13 +6,13 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 from scrapers import (
     cdnlivetv,
-    embedhd,
     fawa,
     fsports,
     futbolx,
     istreameast,
     mainportal,
     pelotalibre,
+    playfast,
     roxie,
     sportspass,
     streamcenter,
@@ -21,7 +21,6 @@ from scrapers import (
     streamxhd,
     watchfooty,
     webcast,
-    xyzstream,
 )
 from scrapers.utils import get_logger, network
 
@@ -58,8 +57,8 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
-                # asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
+                asyncio.create_task(playfast.scrape(hdl_brwsr)),
                 asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
@@ -72,12 +71,11 @@ async def main() -> None:
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
-                # asyncio.create_task(streamcenter.scrape()),
+                asyncio.create_task(streamcenter.scrape()),
                 asyncio.create_task(streamsgate.scrape()),
                 asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(streamxhd.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                asyncio.create_task(xyzstream.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
@@ -91,13 +89,13 @@ async def main() -> None:
 
     additions = (
         cdnlivetv.urls
-        | embedhd.urls
         | fawa.urls
         | fsports.urls
         | futbolx.urls
         | istreameast.urls
         | mainportal.urls
         | pelotalibre.urls
+        | playfast.urls
         | roxie.urls
         | sportspass.urls
         | streamcenter.urls
@@ -106,7 +104,6 @@ async def main() -> None:
         | streamxhd.urls
         | watchfooty.urls
         | webcast.urls
-        | xyzstream.urls
     )
 
     live_events: list[str] = []

@@ -14,22 +14,11 @@ TAG = "STRMCNTR"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
-API_URL = "https://backend.streamcenter.live/api/Parties"
+BASE_URL = "https://streame.center"
 
-BASE_URL = "https://streams.center"
 
-CATEGORIES = {
-    4: "Basketball",
-    9: "FIFA World Cup",
-    13: "MLB",
-    # 14: "NFL",
-    15: "Motor Sport",
-    # 16: "NHL",
-    17: "Fight MMA",
-    18: "Boxing",
-    20: "WWE",
-    21: "Tennis",
-}
+def cleanup(s: str) -> str:
+    return "".join(i for i in s.split("—")[0] if i.isascii()).strip()
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -78,58 +67,53 @@ async def process_event(url: str, url_num: int) -> str | None:
 async def get_events() -> list[Event]:
     events: list[Event] = []
 
-    if not (
-        r := await network.request(
-            API_URL,
-            params={"pageNumber": 1, "pageSize": 500},
-            log=log,
-        )
-    ):
+    if not (html_data := await network.request(BASE_URL, log=log)):
         return events
+
+    soup = HTMLParser(html_data.content)
 
     now = Time.clean(Time.now())
 
-    api_data: list[dict] = r.json()
+    # if not (date_elem := soup.css_first(".tg-header > p")):
+    #     return events
 
-    for stream_group in api_data:
-        if not all(
-            values := [
-                stream_group.get(x)
-                for x in (
-                    "categoryId",
-                    "gameName",
-                    "videoUrl",
-                    "beginPartie",
+    # elif now.strftime("%A, %B %d, %Y") != date_elem.text(strip=True):
+    #     return events
+
+    for info in soup.css(".tg-cat"):
+        if not (sport_elem := info.css_first("h2")):
+            continue
+
+        sport = cleanup(sport_elem.text())
+
+        for game in info.css(".tg-game"):
+            if not (event_name_elem := game.css_first(".tg-title")):
+                continue
+
+            event_name = cleanup(event_name_elem.text())
+
+            for link in game.css(".tg-lang"):
+                if not (event_lang_elem := link.css_first(".tg-watch")):
+                    continue
+
+                elif not (a_elem := link.css_first("a")) or not (
+                    href := a_elem.attributes.get("href")
+                ):
+                    continue
+
+                event_lang = cleanup(event_lang_elem.text())
+
+                events.append(
+                    Event(
+                        sport=sport,
+                        name=(
+                            f"{event_name} | {event_lang}" if event_name else event_lang
+                        ),
+                        link=href,
+                        timestamp=now.timestamp(),
+                    )
                 )
-            ]
-        ):
-            continue
 
-        category_id, title, iframes, event_time = values
-
-        if not (sport := CATEGORIES.get(category_id)):
-            continue
-
-        event_dt = Time.from_str(event_time, timezone="CET")
-
-        if event_dt.date() != now.date():
-            continue
-
-        stream_urls: dict[str, str] = {
-            url: lang
-            for entry in iframes.split(";")[::-1]
-            for url, lang in [entry.split("<")]
-        }
-
-        events.extend(
-            Event(
-                sport=sport,
-                name=f"{title} | {lang}",
-                link=url,
-                timestamp=now.timestamp(),
-            )
-            for url, lang in stream_urls.items()
-        )
     return events
 
 
