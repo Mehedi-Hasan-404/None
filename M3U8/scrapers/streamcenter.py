@@ -74,11 +74,11 @@ async def get_events() -> list[Event]:
 
     now = Time.clean(Time.now())
 
-    # if not (date_elem := soup.css_first(".tg-header > p")):
-    #     return events
+    if not (date_elem := soup.css_first(".tg-header > p")):
+        return events
 
-    # elif now.strftime("%A, %B %d, %Y") != date_elem.text(strip=True):
-    #     return events
+    elif now.strftime("%A, %B %d, %Y") != date_elem.text(strip=True):
+        return events
 
     for info in soup.css(".tg-cat"):
         if not (sport_elem := info.css_first("h2")):

@@ -1,5 +1,6 @@
 from collections.abc import KeysView
 from functools import partial
+from typing import Any
 from urllib.parse import urljoin
 
 from playwright.async_api import Browser
@@ -32,7 +33,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
             params={"id": 1, "schedule": 1},
             log=log,
         ):
-            api_data: dict[str, list[dict[str, str]]] = r.json()
+            api_data: dict[str, list[dict[str, Any]]] = r.json()
 
             api_data["timestamp"] = now.timestamp()
 
