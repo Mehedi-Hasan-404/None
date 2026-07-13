@@ -1,11 +1,12 @@
-## Base Log @ 2026-07-13 16:45 UTC
+## Base Log @ 2026-07-13 21:27 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 2
+### ✅ Working Streams: 151<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
-| STV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2168.ts` |
+| Sky Sports Football | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2188.ts` |
+| Willow Cricket | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| beIN Sports 1 | HTTP Error (403) | `http://99.27.51.147:8080/BeinSport/mpegts` |
 ---
 #### Base Channels URL
 ```
