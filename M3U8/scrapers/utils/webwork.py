@@ -229,7 +229,7 @@ class Network:
         got_one: asyncio.Event,
     ) -> None:
 
-        escaped = [
+        blocked = [
             re.escape(i)
             for i in {
                 # "amazonaws",
@@ -238,7 +238,7 @@ class Network:
             }
         ]
 
-        pattern = re.compile(rf"^(?!.*({'|'.join(escaped)})).*\.m3u8", re.I)
+        pattern = re.compile(rf"^(?!.*({'|'.join(blocked)})).*\.m3u8", re.I)
 
         if pattern.search(req.url):
             captured.append(req.url)

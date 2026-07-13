@@ -13,7 +13,6 @@ from scrapers import (
     mainportal,
     pelotalibre,
     playfast,
-    roxie,
     sportspass,
     streamcenter,
     streamsgate,
@@ -59,7 +58,6 @@ async def main() -> None:
             pw_tasks = [
                 asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(playfast.scrape(hdl_brwsr)),
-                asyncio.create_task(roxie.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
                 asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
@@ -96,7 +94,6 @@ async def main() -> None:
         | mainportal.urls
         | pelotalibre.urls
         | playfast.urls
-        | roxie.urls
         | sportspass.urls
         | streamcenter.urls
         | streamsgate.urls
