@@ -1,7 +1,10 @@
-## Base Log @ 2026-07-14 21:29 UTC
+## Base Log @ 2026-07-15 10:19 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 0
+### ✅ Working Streams: 153<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| SEC Network | HTTP Error (404) | `http://206.212.244.63/2511/index.m3u8` |
 ---
 #### Base Channels URL
 ```
