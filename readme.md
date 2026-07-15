@@ -1,7 +1,11 @@
-## Base Log @ 2026-07-15 15:59 UTC
+## Base Log @ 2026-07-15 21:28 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 0
+### ✅ Working Streams: 152<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| BBC One | HTTP Error (403) | `http://193.239.186.231/BBC1/index.m3u8` |
+| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
 ---
 #### Base Channels URL
 ```
