@@ -7,8 +7,6 @@ from playwright.async_api import async_playwright
 from scrapers import (
     cdnlivetv,
     fawa,
-    fsports,
-    futbolx,
     istreameast,
     mainportal,
     pelotalibre,
@@ -56,7 +54,6 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
-                # asyncio.create_task(fsports.scrape(xtrnl_brwsr)),
                 asyncio.create_task(playfast.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
@@ -65,7 +62,6 @@ async def main() -> None:
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
-                # asyncio.create_task(futbolx.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
@@ -88,8 +84,6 @@ async def main() -> None:
     additions = (
         cdnlivetv.urls
         | fawa.urls
-        | fsports.urls
-        | futbolx.urls
         | istreameast.urls
         | mainportal.urls
         | pelotalibre.urls

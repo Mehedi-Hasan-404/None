@@ -19,7 +19,7 @@ CACHE_FILE = Cache(TAG, exp=19_800)
 
 BASE_URL = "https://streamsgates.io"
 
-SPORT_URLS = [
+API_URLS = [
     urljoin(BASE_URL, f"data/{sport}.json")
     for sport in [
         # "cfb",
@@ -89,7 +89,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 async def get_events() -> list[Event]:
     now = Time.clean(Time.now())
 
-    tasks = [network.request(url, log=log) for url in SPORT_URLS]
+    tasks = [network.request(url, log=log) for url in API_URLS]
 
     results = await asyncio.gather(*tasks)
 

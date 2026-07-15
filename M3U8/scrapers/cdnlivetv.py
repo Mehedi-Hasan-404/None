@@ -16,7 +16,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-BASE_URL = "https://api.cdnlivetv.tv"
+API_URL = "https://api.cdnlivetv.tv"
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[Event]:
@@ -30,7 +30,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
         api_data = {"timestamp": now.timestamp()}
 
         if r := await network.request(
-            urljoin(BASE_URL, "api/v1/events/sports"),
+            urljoin(API_URL, "api/v1/events/sports"),
             params={
                 "user": "cdnlivetv",
                 "plan": "free",
@@ -95,7 +95,7 @@ async def scrape(browser: Browser) -> None:
 
     log.info(f"Loaded {cached_count} event(s) from cache")
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    log.info(f'Scraping from "{API_URL}"')
 
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
