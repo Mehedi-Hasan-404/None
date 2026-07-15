@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 from functools import partial
-from urllib.parse import urljoin
+from urllib.parse import parse_qsl, urljoin, urlsplit
 
 from .utils import Cache, Event, Time, get_logger, leagues, network
 
@@ -63,7 +63,10 @@ async def get_events() -> list[Event]:
 
         title, lang, link = values
 
-        if not link.startswith(f"{BASE_URL}/vivo"):
+        if not (splits := urlsplit(link)).query:
+            continue
+
+        elif not dict(parse_qsl(splits.query)).get("stream"):
             continue
 
         sport, event_name = (s.strip() for s in title.split(":", 1))

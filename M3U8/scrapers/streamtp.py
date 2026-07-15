@@ -64,7 +64,10 @@ async def get_events() -> list[Event]:
         }
 
         for url, lang in stream_urls.items():
-            if not url.startswith(BASE_URL):
+            if not (splits := urlsplit(url)).query:
+                continue
+
+            elif not dict(parse_qsl(splits.query)).get("stream"):
                 continue
 
             counter[name := f"{title.split("|")[0].strip()} | {lang.upper()}"] += 1
