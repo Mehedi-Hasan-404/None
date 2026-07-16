@@ -31,7 +31,7 @@ http://206.212.244.63/12/index.m3u8
 http://206.212.244.63/13/index.m3u8
 
 #EXTINF:-1 tvg-chno="11" tvg-id="BBC.One.Lon.HD.uk" tvg-name="BBC One" tvg-logo="https://images.open-epg.com/x364.png" group-title="TV",BBC One
-http://193.239.186.231/BBC1/index.m3u8
+http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2359.ts
 
 #EXTINF:-1 tvg-chno="12" tvg-id="BBC.News.(North.America).HD.us2" tvg-name="BBC World News" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s89542_dark_360w_270h.png" group-title="TV",BBC World News
 https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8
