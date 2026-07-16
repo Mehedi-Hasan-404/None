@@ -1,27 +1,11 @@
-## Base Log @ 2026-07-16 10:24 UTC
+## Base Log @ 2026-07-16 15:53 UTC
 
-### ✅ Working Streams: 136<br>❌ Dead Streams: 18
+### ✅ Working Streams: 152<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Adult Swim | HTTP Error (404) | `https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_5128000.m3u8` |
-| CBS Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3621.ts` |
-| Comedy TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/77411.ts` |
-| Disney Jr | HTTP Error (404) | `http://206.212.244.63/655/index.m3u8` |
-| Disney XD | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3829.ts` |
-| E! Entertainment | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21569.ts` |
-| ESPN News | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3640.ts` |
-| FX Movie Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3736.ts` |
-| FXX | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21594.ts` |
-| Golf Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2385.ts` |
-| Nicktoons | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3674.ts` |
-| Sportsnet 360 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3073.ts` |
-| Sportsnet East | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3072.ts` |
-| Starz Cinema | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3960.ts` |
-| Starz Encore Classic | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
-| TBS | HTTP Error (404) | `https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8` |
-| Turner Classic Movies | HTTP Error (404) | `https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8` |
-| truTV | HTTP Error (404) | `https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8` |
+| DIRECTV Sports + | HTTP Error (404) | `http://190.108.83.69:8000/play/a05w/index.m3u8` |
+| Space City Home Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/663927.ts` |
 ---
 #### Base Channels URL
 ```
