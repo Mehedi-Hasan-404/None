@@ -1,11 +1,10 @@
-## Base Log @ 2026-07-16 15:53 UTC
+## Base Log @ 2026-07-16 21:31 UTC
 
-### ✅ Working Streams: 152<br>❌ Dead Streams: 2
+### ✅ Working Streams: 153<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| DIRECTV Sports + | HTTP Error (404) | `http://190.108.83.69:8000/play/a05w/index.m3u8` |
-| Space City Home Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/663927.ts` |
+| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
 ---
 #### Base Channels URL
 ```
