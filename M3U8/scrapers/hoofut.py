@@ -63,7 +63,7 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
             channel["name"]: channel.get("id")
             for channel in event_channels
             if channel.get("id")
-            if "backup" not in channel["name"]
+            if "backup" not in channel["name"].lower()
         }
 
         for ch_name, ch_id in event_urls.items():
