@@ -1,10 +1,7 @@
-## Base Log @ 2026-07-16 21:31 UTC
+## Base Log @ 2026-07-17 10:16 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 1
+### ✅ Working Streams: 154<br>❌ Dead Streams: 0
 
-| Channel | Error (Code) | Link |
-| ------- | ------------ | ---- |
-| NBC | HTTP Error (404) | `http://stream.cammonitorplus.net/1812/index.m3u8` |
 ---
 #### Base Channels URL
 ```
