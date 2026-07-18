@@ -1,10 +1,11 @@
-## Base Log @ 2026-07-18 09:53 UTC
+## Base Log @ 2026-07-18 15:27 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 1
+### ✅ Working Streams: 152<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| MotorTrend TV | HTTP Error (404) | `http://206.212.244.63/113/index.m3u8` |
+| ITV1 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/527497.ts` |
+| Sportsnet East | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3072.ts` |
 ---
 #### Base Channels URL
 ```
