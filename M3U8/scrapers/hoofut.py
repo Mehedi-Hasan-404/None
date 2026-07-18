@@ -11,19 +11,31 @@ TAG = "HOOFUT"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
+API_FILE = Cache(f"{TAG}-api", exp=28_800)
+
 BASE_URL = "https://hoofoot.ru"
 
 
 async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | float]]:
     events = {}
 
-    if not (api_req := await network.request(urljoin(BASE_URL, "api/events"), log=log)):
-        return events
-
-    elif not (api_data := api_req.json()):
-        return events
-
     now = Time.clean(Time.now())
+
+    if not (api_data := API_FILE.load(per_entry=False)):
+        log.info("Refreshing API cache")
+
+        api_data = {"timestamp": now.timestamp()}
+
+        if r := await network.request(
+            urljoin(BASE_URL, "api/events"),
+            headers={"Referer": BASE_URL},
+            log=log,
+        ):
+            api_data: dict[str, list[dict]] = r.json()
+
+            api_data["timestamp"] = now.timestamp()
+
+        API_FILE.write(api_data)
 
     start_dt = now.delta(minutes=-30)
     end_dt = now.delta(minutes=30)
@@ -73,7 +85,7 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
             tvg_id, logo = leagues.get_tvg_info(sport, name)
 
             events[key] = {
-                "source": urljoin(BASE_URL, f"stream?id={ch_id}"),
+                "source": urljoin(BASE_URL, f"stream/{ch_id}"),
                 "logo": logo,
                 "refer": BASE_URL,
                 "timestamp": now.timestamp(),

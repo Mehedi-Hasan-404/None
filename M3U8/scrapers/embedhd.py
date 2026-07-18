@@ -23,7 +23,9 @@ BASE_URL = "https://embedhd.st"
 def fix_league(s: str) -> str:
     splits = s.split()
 
-    return f"{splits[0].upper()} {' '.join(x.capitalize() for x in splits[1:])}".strip()
+    i = splits[0]
+
+    return f"{i.upper() if len(i) < 4 else i.capitalize()} {' '.join(x.capitalize() for x in splits[1:])}".strip()
 
 
 async def process_event(
