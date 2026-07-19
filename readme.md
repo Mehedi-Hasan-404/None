@@ -1,7 +1,13 @@
-## Base Log @ 2026-07-18 21:11 UTC
+## Base Log @ 2026-07-19 10:04 UTC
 
-### ✅ Working Streams: 154<br>❌ Dead Streams: 0
+### ✅ Working Streams: 150<br>❌ Dead Streams: 4
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| AMC | cURL Error (7) | `http://41.205.93.154/AMC/index.m3u8` |
+| Lifetime | cURL Error (7) | `http://41.205.93.154/LIFETIME/index.m3u8` |
+| MotorTrend TV | HTTP Error (404) | `http://206.212.244.63/113/index.m3u8` |
+| Sky Sports Football | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2188.ts` |
 ---
 #### Base Channels URL
 ```
