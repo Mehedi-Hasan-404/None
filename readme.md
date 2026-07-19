@@ -1,10 +1,14 @@
-## Base Log @ 2026-07-19 15:29 UTC
+## Base Log @ 2026-07-19 21:12 UTC
 
-### ✅ Working Streams: 153<br>❌ Dead Streams: 1
+### ✅ Working Streams: 149<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| AMC | HTTP Error (404) | `http://41.205.93.154/AMC/index.m3u8` |
+| C-SPAN | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/92792.ts` |
+| DIRECTV Sports + | cURL Error (28) | `http://190.108.83.69:8000/play/a05w/index.m3u8` |
+| DIRECTV Sports | HTTP Error (404) | `http://201.230.121.85:8000/play/dssporthd/index.m3u8` |
+| Premier Sports 2 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89090.ts` |
+| beIN Sports 1 | HTTP Error (403) | `http://99.27.51.147:8080/BeinSport/mpegts` |
 ---
 #### Base Channels URL
 ```
