@@ -9,11 +9,19 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "HOOFUT"
 
-CACHE_FILE = Cache(TAG, exp=19_800)
+CACHE_FILE = Cache(TAG, exp=10_800)
 
-API_FILE = Cache(f"{TAG}-api", exp=28_800)
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 BASE_URL = "https://hoofoot.ru"
+
+
+def get_event_info(name: str) -> tuple[str, str]:
+    return (
+        tuple(x.strip() for x in name.split(":")[:2])
+        if ":" in name
+        else ("Live Event", name)
+    )
 
 
 async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | float]]:
@@ -49,23 +57,22 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
                     "League",
                     "Date",
                     "Time",
-                    "Live",
                 )
             ]
         ):
             continue
 
-        name, sport, event_date, event_time, is_live = values
+        name, sport, event_date, event_time = values
 
         if sport.lower() == "unknown league":
-            continue
+            sport, name = get_event_info(name)
 
         event_dt = Time.from_str(f"{event_date} {event_time}", timezone="UTC")
 
         if event_dt.date() != now.date():
             continue
 
-        elif (not start_dt <= event_dt <= end_dt) or (not is_live):
+        elif not start_dt <= event_dt <= end_dt:
             continue
 
         elif not (event_channels := event.get("Channels")):
@@ -75,7 +82,7 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
             channel["name"]: channel.get("id")
             for channel in event_channels
             if channel.get("id")
-            if "backup" not in channel["name"].lower()
+            if not channel["name"].lower().startswith("backup")
         }
 
         for ch_name, ch_id in event_urls.items():
