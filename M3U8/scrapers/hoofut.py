@@ -1,5 +1,5 @@
 from collections.abc import KeysView
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -45,9 +45,6 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
 
         API_FILE.write(api_data)
 
-    start_dt = now.delta(minutes=-30)
-    end_dt = now.delta(minutes=30)
-
     for event in api_data.get("events", []):
         if not all(
             values := [
@@ -72,9 +69,6 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
         if event_dt.date() != now.date():
             continue
 
-        elif not start_dt <= event_dt <= end_dt:
-            continue
-
         elif not (event_channels := event.get("Channels")):
             continue
 
@@ -92,7 +86,7 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
             tvg_id, logo = leagues.get_tvg_info(sport, name)
 
             events[key] = {
-                "source": urljoin(BASE_URL, f"stream/{ch_id}"),
+                "source": urljoin(BASE_URL, quote(f"stream/{ch_id}")),
                 "logo": logo,
                 "refer": BASE_URL,
                 "timestamp": now.timestamp(),

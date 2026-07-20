@@ -16,19 +16,19 @@ TAG = "SPRTSPASS"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-BASE_URL = "https://streamseast.me"
+BASE_URL = "https://streamseast.ws"
 
 SPORT_URLS = {
     sport: urljoin(BASE_URL, sport.lower())
     for sport in [
         # "Boxing",
         # "F1",
-        # "MLB",
+        "MLB",
         # "MMA",
         # "NBA",
         # "NFL",
         # "NHL",
-        "Soccer",
+        # "Soccer",
     ]
 }
 
