@@ -1,11 +1,10 @@
-## Base Log @ 2026-07-20 16:08 UTC
+## Base Log @ 2026-07-20 21:39 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 2
+### ✅ Working Streams: 150<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Nick Jr | cURL Error (28) | `http://40.160.24.55/NICK_JR/index.m3u8` |
-| Showtime Extreme | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648984.ts` |
+| ESPN News | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3640.ts` |
 ---
 #### Base Channels URL
 ```
