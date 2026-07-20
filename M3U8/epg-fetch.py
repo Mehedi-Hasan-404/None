@@ -21,12 +21,12 @@ EPG_URLS = [
         "DUMMY_CHANNELS",
         # "ES1",
         # "FANDUEL1",
-        "FR1",
+        # "FR1",
         "PEACOCK1",
         "PLEX1",
         "UK1",
         "US2",
-        "UY1",
+        # "UY1",
         "US_LOCALS1",
     ]
 ]
