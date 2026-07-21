@@ -1,5 +1,5 @@
 from collections.abc import KeysView
-from urllib.parse import quote, urljoin
+from urllib.parse import urljoin
 
 from .utils import Cache, Time, get_logger, leagues, network
 
@@ -86,7 +86,7 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
             tvg_id, logo = leagues.get_tvg_info(sport, name)
 
             events[key] = {
-                "source": urljoin(BASE_URL, quote(f"stream/{ch_id}")),
+                "source": urljoin(BASE_URL, f"stream/{ch_id}"),
                 "logo": logo,
                 "refer": BASE_URL,
                 "timestamp": now.timestamp(),
