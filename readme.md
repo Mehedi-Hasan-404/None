@@ -1,7 +1,15 @@
-## Base Log @ 2026-07-21 15:59 UTC
+## Base Log @ 2026-07-21 21:39 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 0
+### ✅ Working Streams: 145<br>❌ Dead Streams: 6
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| CBS Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3621.ts` |
+| Comedy TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/77411.ts` |
+| ESPN News | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3640.ts` |
+| FX Movie Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3736.ts` |
+| Golf Channel | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2385.ts` |
+| Starz Encore Classic | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
 ---
 #### Base Channels URL
 ```
