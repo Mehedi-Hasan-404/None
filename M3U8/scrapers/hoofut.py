@@ -66,6 +66,8 @@ async def get_events(cached_keys: KeysView[str]) -> dict[str, dict[str, str | fl
 
         event_dt = Time.from_str(f"{event_date} {event_time}", timezone="UTC")
 
+        event_dt = event_dt.delta(days=1) if event_time.startswith("0") else event_dt
+
         if event_dt.date() != now.date():
             continue
 
