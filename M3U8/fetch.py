@@ -8,7 +8,6 @@ from scrapers import (
     cdnlivetv,
     embedhd,
     fawa,
-    hoofut,
     istreameast,
     mainportal,
     pelotalibre,
@@ -65,7 +64,6 @@ async def main() -> None:
 
             httpx_tasks = [
                 asyncio.create_task(fawa.scrape()),
-                asyncio.create_task(hoofut.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
@@ -89,7 +87,6 @@ async def main() -> None:
         cdnlivetv.urls
         | embedhd.urls
         | fawa.urls
-        | hoofut.urls
         | istreameast.urls
         | mainportal.urls
         | pelotalibre.urls
