@@ -229,6 +229,45 @@
         }
       },
       {
+        "BRASILEIRÃO": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/85.png",
+          "names": [
+            "BRASIL BRASILEIRÃO",
+            "BRASIL BRASILEIRÃO",
+            "BRASIL SERIE A",
+            "BRASILEIRAO",
+            "BRAZIL BRASILEIRAO",
+            "BRAZIL BRASILEIRÃO",
+            "BRAZIL SERIE A",
+            "BRAZILIAN SERIE A",
+            "BRAZILIAN SÉRIE A",
+            "CAMPEONATO BRASILEIRAO SERIE A",
+            "CAMPEONATO BRASILEIRO SERIE A",
+            "CAMPEONATO BRASILEIRO SÉRIE A",
+            "CAMPEONATO BRASILEIRÃO SÉRIE A"
+          ]
+        }
+      },
+      {
+        "BRASILEIRÃO SÉRIE B": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2299.png",
+          "names": [
+            "BRASIL BRASILEIRÃO",
+            "BRASIL BRASILEIRÃO",
+            "BRASIL SERIE B",
+            "BRAZIL BRASILEIRAO",
+            "BRAZIL BRASILEIRÃO",
+            "BRAZIL SERIE B",
+            "BRAZILIAN SERIE B",
+            "BRAZILIAN SÉRIE B",
+            "CAMPEONATO BRASILEIRAO SERIE B",
+            "CAMPEONATO BRASILEIRO SERIE B",
+            "CAMPEONATO BRASILEIRO SÉRIE B",
+            "CAMPEONATO BRASILEIRÃO SÉRIE B"
+          ]
+        }
+      },
+      {
         "BUNDESLIGA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/10.png",
           "names": ["BUNDESLIG", "GERMAN BUNDESLIGA", "GERMANY BUNDESLIGA"]
@@ -332,7 +371,11 @@
       {
         "COPA SUDAMERICANA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1208.png",
-          "names": ["CONMEBOL SUDAMERICANA", "COPA CONMEBOL SUDAMERICANA"]
+          "names": [
+            "CONMEBOL SUDAMERICANA",
+            "COPA CONMEBOL SUDAMERICANA",
+            "SOUTH AMERICA COPA SUDAMERICANA"
+          ]
         }
       },
       {
@@ -394,6 +437,12 @@
         "EKSTRAKLASA": {
           "logo": "https://i.gyazo.com/362e31efdd0dad03b00858f4fb0901b5.png",
           "names": ["PKO BANK POLSKI EKSTRAKLASA", "POLAND EKSTRAKLASA"]
+        }
+      },
+      {
+        "ELITESERIEN": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/13.png",
+          "names": ["NORWEGIAN ELITESERIEN"]
         }
       },
       {
@@ -870,6 +919,7 @@
             "AUSTRALIAN OPEN",
             "FRENCH OPEN",
             "TENNIS ATP",
+            "TENNIS WTA",
             "US OPEN",
             "WIMBLEDON"
           ]
@@ -888,7 +938,11 @@
       {
         "WNBA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png",
-          "names": ["NBA W", "WOMEN'S NATIONAL BASKETBALL ASSOCIATION"]
+          "names": [
+            "NBA W",
+            "WNBA BASKETBALL",
+            "WOMEN'S NATIONAL BASKETBALL ASSOCIATION"
+          ]
         }
       }
     ]
