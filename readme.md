@@ -1,7 +1,10 @@
-## Base Log @ 2026-07-22 10:37 UTC
+## Base Log @ 2026-07-22 15:57 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 0
+### ✅ Working Streams: 150<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Cartoon Network | HTTP Error (404) | `http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8` |
 ---
 #### Base Channels URL
 ```
