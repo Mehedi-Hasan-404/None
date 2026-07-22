@@ -1,6 +1,5 @@
 import asyncio
 import re
-from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
@@ -12,9 +11,9 @@ urls: dict[str, dict[str, str | float]] = {}
 
 TAG = "XYZ"
 
-CACHE_FILE = Cache(TAG, exp=19_800)
+CACHE_FILE = Cache(TAG, exp=28_800)
 
-API_FILE = Cache(f"{TAG}-api", exp=19_800)
+API_FILE = Cache(f"{TAG}-api", exp=28_800)
 
 BASE_URL = "https://xyzstreams.st/"
 
@@ -28,27 +27,43 @@ SPORTS = [
 
 SPORT_URLS = {sport: urljoin(BASE_URL, sport.lower()) for sport in SPORTS}
 
-API_URLS = [f"https://stats-api.sportsnet.ca/ticker?league={sport}" for sport in SPORTS]
+API_URLS = [
+    urljoin("https://site.api.espn.com/apis/site/v2/sports/", f"{sport}/scoreboard")
+    for sport in [
+        "baseball/mlb",
+        # "basketball/nba",
+        "basketball/wnba",
+        # "football/nfl",
+        # "hockey/nhl",
+    ]
+]
 
 
-async def get_api_data(now_ts: float) -> list[dict[str, Any]]:
-    tasks = [network.request(url, log=log) for url in API_URLS]
+async def get_api_data(now: Time) -> list[dict[str, Any]]:
+    tasks = [
+        network.request(
+            url,
+            params={"dates": f"{now:%Y%m%d}"},
+            log=log,
+        )
+        for url in API_URLS
+    ]
 
     results = await asyncio.gather(*tasks)
 
-    if not (
-        api_data := [
-            *chain.from_iterable(
-                r.json().get("data", {}).get("games", []) for r in results if r
-            )
-        ]
-    ):
-        return [{"timestamp": now_ts}]
+    api_data = []
 
-    for ev in api_data:
-        ev["ts"] = ev.pop("timestamp")
+    for resp in (r for r in results if r):
+        data = resp.json()
 
-    api_data[-1]["timestamp"] = now_ts
+        league = data["leagues"][0]["abbreviation"].upper()
+
+        for event in data.get("events", []):
+            event["league"] = league
+
+            api_data.append(event)
+
+    api_data[-1]["timestamp"] = now.timestamp()
 
     return api_data
 
@@ -62,6 +77,24 @@ async def get_sports_map() -> dict[str, dict[str, dict[str, str]]]:
 
     if not (texts := [(html.text, html.url) for html in results if html]):
         return sports_map
+
+    replaces = {
+        "MLB": {
+            "CWS": "CHW",
+            "OAK": "ATH",
+            "AZ": "ARI",
+            "WAS": "WSH",
+        },
+        "WNBA": {
+            "GSV": "GS",
+            "LVA": "LV",
+            "LAS": "LA",
+            "NYL": "NY",
+            "PHO": "PHX",
+            "PDX": "POR",
+            "WAS": "WSH",
+        },
+    }
 
     ptrn = re.compile(r"M3U8_CHANNELS_MAP\s*=\s*\{(.*?)\};", re.S)
 
@@ -79,6 +112,10 @@ async def get_sports_map() -> dict[str, dict[str, dict[str, str]]]:
 
             sports_map[sport] = dict(pairs)
 
+    for sport, abbrs in replaces.items():
+        for old, new in abbrs.items():
+            sports_map[sport][new] = sports_map[sport].pop(old, {})
+
     return sports_map
 
 
@@ -90,7 +127,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
         log.info("Refreshing API cache")
 
-        api_data = await get_api_data(now.timestamp())
+        api_data = await get_api_data(now)
 
         API_FILE.write(api_data)
 
@@ -103,37 +140,24 @@ async def get_events() -> dict[str, dict[str, str | float]]:
                 game_info.get(x)
                 for x in (
                     "league",
-                    "visiting_team",
-                    "home_team",
-                    "ts",
+                    "name",
+                    "shortName",
                 )
             ]
         ):
             continue
 
-        sport, away_team_info, home_team_info, timestamp = values
+        sport, name, short_name = values
 
-        if Time.from_ts(timestamp).date() != now.date():
-            continue
+        short_away, short_home = (i.strip() for i in short_name.split("@"))
 
-        sport = sport.upper()
-
-        short_away, long_away, short_home, long_home = (
-            away_team_info["short_name"],
-            away_team_info["name"],
-            home_team_info["short_name"],
-            home_team_info["name"],
-        )
-
-        name = f"{long_away} vs {long_home}"
-
-        for loc in (short_away, short_home):
-            key = f"[{sport}] {name} | {loc} Feed ({TAG})"
+        for abbr in [short_away, short_home]:
+            key = f"[{sport}] {name} | {abbr} Feed ({TAG})"
 
             tvg_id, logo = leagues.get_tvg_info(sport, name)
 
             events[key] = {
-                "source": sports_map.get(sport, {}).get(loc),
+                "source": sports_map.get(sport, {}).get(abbr),
                 "logo": logo,
                 "refer": BASE_URL,
                 "timestamp": now.timestamp(),
