@@ -15,7 +15,7 @@ get_status() {
     local channel="$2"
     local index="$3"
     local total="$4"
-    local attempt response status_code
+    local response
 
     [[ $url != http* ]] && return
 
@@ -130,7 +130,7 @@ write_readme() {
         echo "### ✅ Working Streams: $passed<br>❌ Dead Streams: $failed"
         echo
 
-        if (($failed > 0)); then
+        if ((failed > 0)); then
             head -n 1 "$STATUSLOG"
             grep -v -e '^PASS$' -e '^FAIL$' -e '^---' "$STATUSLOG" | grep -v '^| Channel' | sort -u
         fi
