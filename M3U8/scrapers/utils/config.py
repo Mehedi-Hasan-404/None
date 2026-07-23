@@ -38,11 +38,7 @@ class Time(datetime):
 
     @classmethod
     def default_8(cls) -> float:
-        return (
-            cls.now()
-            .replace(hour=8, minute=0, second=0, microsecond=0, tzinfo=cls.TZ)
-            .timestamp()
-        )
+        return cls.now().replace(hour=8, minute=0, second=0, microsecond=0).timestamp()
 
     def delta(self, **kwargs) -> "Time":
         return self.from_ts((self + timedelta(**kwargs)).timestamp())
@@ -96,6 +92,7 @@ class Time(datetime):
                 "%m/%d/%Y %H:%M",
                 "%m/%d/%Y %I:%M %p",
                 "%m/%d/%Y %H:%M:%S",
+                "%d/%m/%Y %I:%M %p",
                 "%a, %d %b %Y %H:%M",
                 "%a, %d %b %Y %H:%M:%S %z",
                 "%A, %b %d, %Y %H:%M",

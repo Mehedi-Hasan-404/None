@@ -5,8 +5,8 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 from scrapers import (
+    buzz,
     cdnlivetv,
-    embedhd,
     fawa,
     istreameast,
     mainportal,
@@ -56,8 +56,8 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
+                asyncio.create_task(buzz.scrape(hdl_brwsr)),
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
-                asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(playfast.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
                 asyncio.create_task(watchfooty.scrape(xtrnl_brwsr)),
@@ -86,8 +86,8 @@ async def main() -> None:
             await network.client.aclose()
 
     additions = (
-        cdnlivetv.urls
-        | embedhd.urls
+        buzz.urls
+        | cdnlivetv.urls
         | fawa.urls
         | istreameast.urls
         | mainportal.urls
