@@ -137,7 +137,7 @@ class Leagues:
                 for tvg_id, leagues in self.data["leagues"].items()
                 for league_entry in leagues
                 for league_name, league_data in league_entry.items()
-                if sport == league_name or sport in league_data.get("names", [])
+                if sport == league_name or sport in league_data.get("aliases", [])
             ),
             None,
         ):

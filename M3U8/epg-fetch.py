@@ -35,11 +35,16 @@ DUMMIES = {
     **{
         tvg: leagues.live_img
         for tvg in [
+            "AUS.Rules.Football.Dummy.us",
             "Basketball.Dummy.us",
             "Golf.Dummy.us",
             "Live.Event.us",
+            "NBA.Basketball.Dummy.us",
+            "NFL.Dummy.us",
+            "NHL.Hockey.Dummy.us",
             "PPV.EVENTS.Dummy.us",
             "Racing.Dummy.us",
+            "Rugby.Dummy.us",
             "Soccer.Dummy.us",
             "Tennis.Dummy.us",
         ]
@@ -47,10 +52,8 @@ DUMMIES = {
     **{
         tvg: None
         for tvg in [
+            "Darts.Dummy.us",
             "MLB.Baseball.Dummy.us",
-            "NBA.Basketball.Dummy.us",
-            "NFL.Dummy.us",
-            "NHL.Hockey.Dummy.us",
             "WNBA.dummy.us",
         ]
     },
