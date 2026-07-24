@@ -211,6 +211,16 @@
         }
       },
       {
+        "ALLSVENSKAN": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/16.png",
+          "names": [
+            "FOTBOLLSALLSVENSKAN",
+            "SWEDEN ALLSVENSKAN",
+            "SWEDISH ALLSVENSKAN"
+          ]
+        }
+      },
+      {
         "ASEAN CHAMPIONSHIP": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2261.png",
           "names": ["AFF CHAMPIONSHIP", "AFF CUP", "ASEAN UNITED FC"]
@@ -356,6 +366,7 @@
           "names": [
             "APF DIVISION DE HONOR",
             "APF DIVISIÓN DE HONOR",
+            "PARAGUAY PRIMERA DIVISION",
             "PARAGUAYAN PRIMERA DIVISION",
             "PARAGUAYAN PRIMERA DIVISIÓN"
           ]
@@ -453,7 +464,12 @@
       {
         "EKSTRAKLASA": {
           "logo": "https://i.gyazo.com/362e31efdd0dad03b00858f4fb0901b5.png",
-          "names": ["PKO BANK POLSKI EKSTRAKLASA", "POLAND EKSTRAKLASA"]
+          "names": [
+            "EKSTRAKLASA - REGULAR SEASON",
+            "PKO BANK POLSKI EKSTRAKLASA",
+            "POLAND EKSTRAKLASA",
+            "POLAND – EKSTRAKLASA"
+          ]
         }
       },
       {
@@ -515,7 +531,12 @@
       {
         "FOOTBALL": {
           "logo": "https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png",
-          "names": []
+          "names": [
+            "CLUB FRIENDLIES",
+            "CLUB FRIENDLY GAMES",
+            "CONCACAF SUB-20",
+            "WORLD CLUB FRIENDLY"
+          ]
         }
       },
       {
@@ -607,6 +628,7 @@
             "LIGA 1 TE APUESTO",
             "PERU LIGA 1",
             "PERU LIGA I",
+            "PERU PRIMERA DIVISION",
             "PERUVIAN LIGA 1",
             "PERUVIAN LIGA I"
           ]
@@ -679,6 +701,7 @@
             "ROMANIA LIGA 1",
             "ROMANIA LIGA I",
             "ROMANIA SUPERLIGA",
+            "ROMANIA – LIGA I",
             "ROMANIAN LIGA 1",
             "ROMANIAN LIGA I",
             "SUPERLIGA"
@@ -707,8 +730,12 @@
         "LIGA PROFESIONAL ARGENTINA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1.png",
           "names": [
+            "ARGENTINA LIGA PROFESIONAL",
             "ARGENTINA PRIMERA DIVISION",
             "ARGENTINA PRIMERA DIVISIÓN",
+            "ARGENTINA – PRIMERA DIVISION",
+            "ARGENTINA – PRIMERA DIVISIÓN",
+            "ARGENTINE LIGA PROFESIONAL",
             "ARGENTINE LPF",
             "ARGENTINE PRIMERA DIVISION",
             "ARGENTINE PRIMERA DIVISIÓN",
@@ -792,6 +819,16 @@
         "PRIMERA B": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2295.png",
           "names": ["COLOMBIA PRIMERA B", "COLOMBIAN PRIMERA B"]
+        }
+      },
+      {
+        "RUSSIAN PREMIER LEAGUE": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/106.png",
+          "names": [
+            "RPL",
+            "RUSSIA RUSSIAN PREMIER LEAGUE",
+            "RUSSIAN PREMIER LIGA"
+          ]
         }
       },
       {
