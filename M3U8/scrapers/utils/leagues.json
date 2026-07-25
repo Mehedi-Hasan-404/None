@@ -38,6 +38,20 @@
         }
       }
     ],
+    "Football.Dummy.us": [
+      {
+        "AMERICAN FOOTBALL": {
+          "logo": "https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png",
+          "aliases": []
+        }
+      },
+      {
+        "CFL": {
+          "logo": "https://i.gyazo.com/52d415fe2f1c6acfbbc4a928feb2f7ab.png",
+          "aliases": ["CANADIAN FOOTBALL", "CANADIAN FOOTBALL LEAGUE"]
+        }
+      }
+    ],
     "Golf.Dummy.us": [
       {
         "GOLF": {
@@ -130,7 +144,6 @@
         "NFL": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png",
           "aliases": [
-            "AMERICAN FOOTBALL",
             "NATIONAL FOOTBALL LEAGUE",
             "NFL PLAYOFFS",
             "NFL PRESEASON",
@@ -1062,6 +1075,36 @@
     ]
   },
   "teams": {
+    "CFL": [
+      "Alouettes",
+      "Argonauts",
+      "Blue Bombers",
+      "Bombers",
+      "British Columbia",
+      "British Columbia Lions",
+      "Calgary",
+      "Calgary Stampeders",
+      "Edmonton",
+      "Edmonton Elks",
+      "Elks",
+      "Hamilton",
+      "Hamilton Tiger-Cats",
+      "Lions",
+      "Montreal",
+      "Montreal Alouettes",
+      "Ottawa",
+      "Ottawa RedBlacks",
+      "RedBlacks",
+      "Roughriders",
+      "Saskatchewan",
+      "Saskatchewan Roughriders",
+      "Stampeders",
+      "Tiger-Cats",
+      "Toronto",
+      "Toronto Argonauts",
+      "Winnipeg",
+      "Winnipeg Blue Bombers"
+    ],
     "MLB": [
       "Angels",
       "Arizona",
