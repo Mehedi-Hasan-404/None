@@ -7,6 +7,7 @@ from playwright.async_api import async_playwright
 from scrapers import (
     buzz,
     cdnlivetv,
+    embedsport,
     fawa,
     istreameast,
     mainportal,
@@ -64,6 +65,7 @@ async def main() -> None:
             ]
 
             httpx_tasks = [
+                asyncio.create_task(embedsport.scrape()),
                 asyncio.create_task(fawa.scrape()),
                 asyncio.create_task(istreameast.scrape()),
                 asyncio.create_task(mainportal.scrape()),
@@ -88,6 +90,7 @@ async def main() -> None:
     additions = (
         buzz.urls
         | cdnlivetv.urls
+        | embedsport.urls
         | fawa.urls
         | istreameast.urls
         | mainportal.urls
