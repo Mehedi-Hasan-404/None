@@ -189,10 +189,25 @@
         "F1": {
           "logo": "https://1000logos.net/wp-content/uploads/2021/06/F1-logo-500x281.png",
           "aliases": [
+            "FIA FORMULA 1",
+            "FIA FORMULA 2",
             "FORMULA 1",
             "FORMULA 1 GP",
             "FORMULA ONE",
             "FORMULA ONE GP"
+          ]
+        }
+      },
+      {
+        "F2": {
+          "logo": "https://r2.thesportsdb.com/images/media/league/badgearchive/q5o1b81768918140.png",
+          "aliases": [
+            "FIA FORMULA 2",
+            "FIA FORMULA TWO",
+            "FORMULA 2",
+            "FORMULA 2 GP",
+            "FORMULA TWO",
+            "FORMULA TWO GP"
           ]
         }
       },
@@ -378,6 +393,16 @@
         }
       },
       {
+        "CHINESE SUPER LEAGUE": {
+          "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2350.png",
+          "aliases": [
+            "CHINA SUPER LEAGUE",
+            "CHINESE FOOTBALL SUPER LEAGUE",
+            "CSL"
+          ]
+        }
+      },
+      {
         "CONCACAF CENTRAL AMERICAN CUP": {
           "logo": "https://b.fssta.com/uploads/application/soccer/competition-logos/CONCACAFCentralAmericanCup.png",
           "aliases": ["COPA CENTROAMERICANA DE CONCACAF"]
@@ -539,7 +564,7 @@
       {
         "ELITESERIEN": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/13.png",
-          "aliases": ["NORWEGIAN ELITESERIEN"]
+          "aliases": ["NORWAY ELITESERIEN", "NORWEGIAN ELITESERIEN"]
         }
       },
       {
@@ -902,6 +927,7 @@
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/106.png",
           "aliases": [
             "RPL",
+            "RUSSIA PREMIER LEAGUE",
             "RUSSIA RUSSIAN PREMIER LEAGUE",
             "RUSSIAN PREMIER LIGA"
           ]
@@ -928,7 +954,11 @@
       {
         "SERBIA SUPERLIGA": {
           "logo": "https://i.gyazo.com/0992f078dcacfef489477fc7bb1f5220.webp",
-          "aliases": ["MOZZART SUPERLIGA", "SERBIAN SUPER LEAGUE"]
+          "aliases": [
+            "MOZZART SUPERLIGA",
+            "SERBIA - SUPER LIGA",
+            "SERBIAN SUPER LEAGUE"
+          ]
         }
       },
       {
