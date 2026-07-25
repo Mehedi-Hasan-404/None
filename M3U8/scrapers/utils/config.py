@@ -162,6 +162,7 @@ class Leagues:
 
         return event.lower() in {
             "nfl redzone",
+            "nfl red zone",
             "redzone",
             "red zone",
             "college gameday",
@@ -176,11 +177,13 @@ class Leagues:
 
         match sport:
             case "American Football" | "NFL":
-                return (
-                    self.info("NFL")
-                    if self.is_valid(name, "NFL")
-                    else self.info("NCAA")
-                )
+                if self.is_valid(name, "NFL"):
+                    return self.info("NFL")
+
+                elif self.is_valid(name, "CFL"):
+                    return self.info("CFL")
+
+                return self.info("American Football")
 
             case "Basketball" | "NBA":
                 if self.is_valid(name, "NBA"):
