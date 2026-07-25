@@ -1,12 +1,11 @@
-## Base Log @ 2026-07-24 21:35 UTC
+## Base Log @ 2026-07-25 10:06 UTC
 
-### ✅ Working Streams: 148<br>❌ Dead Streams: 3
+### ✅ Working Streams: 149<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Comedy TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/77411.ts` |
 | NBC Sports Philadelphia | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3769.ts` |
-| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| TSN1 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3146.ts` |
 ---
 #### Base Channels URL
 ```
