@@ -122,6 +122,9 @@ async def get_events() -> list[Event]:
         if not (iframes := stream_group.get("streams")):
             continue
 
+        if len(sport_splits := sport.split(":", 1)) > 1:
+            sport = sport_splits[0].strip()
+
         stream_urls: dict[str, str | None] = {
             stream.get("lang") or "EN": stream.get("url") for stream in iframes
         }

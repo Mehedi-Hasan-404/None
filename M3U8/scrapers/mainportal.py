@@ -49,7 +49,7 @@ async def process_event(
         json={"flavor_id": flavor_id, "media_event_id": media_id},
     )
 
-    if r.status_code != 200:
+    if not r.is_success:
         log.warning(f"URL {url_num}) Failed to create post request.")
         return
 

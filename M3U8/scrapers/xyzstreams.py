@@ -149,9 +149,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
         sport, name, short_name = values
 
-        short_away, short_home = (i.strip() for i in short_name.split("@"))
-
-        for abbr in [short_away, short_home]:
+        for abbr in (i.strip() for i in short_name.split("@")):
             key = f"[{sport}] {name} | {abbr} Feed ({TAG})"
 
             tvg_id, logo = leagues.get_tvg_info(sport, name)

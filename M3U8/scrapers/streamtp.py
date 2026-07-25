@@ -14,7 +14,7 @@ TAG = "STP"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://streamtp.sbs"
+BASE_URL = "https://streamtp99a.sbs"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -42,43 +42,60 @@ async def process_event(url: str, url_num: int) -> str | None:
 async def get_events() -> list[Event]:
     events: list[Event] = []
 
-    if not (api_req := await network.request(urljoin(BASE_URL, "wc.json"), log=log)):
+    if not (
+        api_req := await network.request(
+            urljoin(BASE_URL, "eventos.json"),
+            log=log,
+        )
+    ):
         return events
 
-    elif not (api_data := api_req.json()):
-        return events
+    counter: dict[str, int] = defaultdict(int)
 
-    counter = defaultdict(int)
+    api_data: list[dict[str, str]] = api_req.json()
 
-    for event in api_data.get("events", []):
-        title = event["title"]
-
-        if (sport := event["category"]) == "Other":
-            sport = "Live Event"
-
-        if not (links := event.get("links")):
+    for event_info in api_data:
+        if not all(
+            values := [
+                event_info.get(x)
+                for x in (
+                    "title",
+                    "category",
+                    "link",
+                )
+            ]
+        ):
             continue
 
-        stream_urls: dict[str, str] = {
-            link["url"]: link["lang"]["label"] for link in links
-        }
+        title, sport, link = values
 
-        for url, lang in stream_urls.items():
-            if not (splits := urlsplit(url)).query:
-                continue
+        if sport == "Other":
+            sport = "Live Event"
 
-            elif not dict(parse_qsl(splits.query)).get("stream"):
-                continue
+        if len(title_splits := title.split(":", 1)) > 1:
+            sport, title = (i.strip() for i in title_splits[:2])
 
-            counter[name := f"{title.split("|")[0].strip()} | {lang.upper()}"] += 1
+        if not (url_splits := urlsplit(link)).query:
+            continue
 
-            events.append(
-                Event(
-                    sport=sport,
-                    name=f"{name} {counter[name]}",
-                    link=url,
-                )
+        elif not dict(parse_qsl(url_splits.query)).get("stream"):
+            continue
+
+        name = (
+            f"{title.split("|")[0].strip()} | {lang}"
+            if (lang := event_info.get("language"))
+            else f"{title.split("|")[0].strip()}"
+        )
+
+        counter[name] += 1
+
+        events.append(
+            Event(
+                sport=sport,
+                name=f"{name} {counter[name]}",
+                link=link,
             )
+        )
 
     return events
 
@@ -91,7 +108,7 @@ async def scrape() -> None:
 
         return
 
-    log.info('Scraping from "https://streamtpnew.com"')
+    log.info(f'Scraping from "{BASE_URL}"')
 
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")

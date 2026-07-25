@@ -1,6 +1,5 @@
 import asyncio
 import logging
-import random
 import re
 from collections.abc import AsyncGenerator, Awaitable, Callable
 from contextlib import asynccontextmanager
@@ -67,18 +66,6 @@ class Network:
             log.error(f'Failed to fetch "{url}": {e}')
 
             return ""
-
-    async def get_base(self, mirrors: list[str]) -> str | None:
-        random.shuffle(mirrors)
-
-        for mirror in mirrors:
-            if not (r := await self.request(mirror)):
-                continue
-
-            elif r.status_code != 200:
-                continue
-
-            return mirror
 
     @staticmethod
     def ensure_https(url: str) -> str:

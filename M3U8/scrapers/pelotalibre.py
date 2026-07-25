@@ -13,7 +13,7 @@ TAG = "PLIBRE"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://la20hd.com"
+BASE_URL = "https://la18hd.su"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -43,40 +43,46 @@ async def get_events() -> list[Event]:
     ):
         return events
 
-    elif not (api_data := api_req.json()):
-        return events
+    api_data: list[dict[str, str]] = api_req.json()
 
-    counter = defaultdict(int)
+    counter: dict[str, int] = defaultdict(int)
 
-    for event in api_data:
+    for event_info in api_data:
         if not all(
             values := [
-                event.get(x)
+                event_info.get(x)
                 for x in (
                     "title",
-                    "language",
+                    "category",
                     "link",
                 )
             ]
         ):
             continue
 
-        title, lang, link = values
+        title, sport, link = values
 
-        if not (splits := urlsplit(link)).query:
+        if len(title_splits := title.split(":", 1)) > 1:
+            sport, title = (i.strip() for i in title_splits[:2])
+
+        if not (url_splits := urlsplit(link)).query:
             continue
 
-        elif not dict(parse_qsl(splits.query)).get("stream"):
+        elif not dict(parse_qsl(url_splits.query)).get("stream"):
             continue
 
-        sport, event_name = (s.strip() for s in title.split(":", 1))
+        name = (
+            f"{title.split("|")[0].strip()} | {lang}"
+            if (lang := event_info.get("language"))
+            else f"{title.split("|")[0].strip()}"
+        )
 
-        counter[x := f"{event_name} | {lang.upper()}"] += 1
+        counter[name] += 1
 
         events.append(
             Event(
                 sport=sport,
-                name=f"{x} {counter[x]}",
+                name=f"{name} {counter[name]}",
                 link=link,
             )
         )
@@ -92,7 +98,7 @@ async def scrape() -> None:
 
         return
 
-    log.info('Scraping from "https://la18hd.com"')
+    log.info(f'Scraping from "{BASE_URL}"')
 
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
