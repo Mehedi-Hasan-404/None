@@ -1,11 +1,10 @@
-## Base Log @ 2026-07-25 10:06 UTC
+## Base Log @ 2026-07-25 15:35 UTC
 
-### ✅ Working Streams: 149<br>❌ Dead Streams: 2
+### ✅ Working Streams: 150<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
 | NBC Sports Philadelphia | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3769.ts` |
-| TSN1 | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3146.ts` |
 ---
 #### Base Channels URL
 ```
