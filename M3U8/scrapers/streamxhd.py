@@ -19,7 +19,13 @@ BASE_URL = "https://stream-xhd.com"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
-    if not (event_data := await network.request(url, log=log)):
+    if not (
+        event_data := await network.request(
+            url,
+            headers={"Referer": BASE_URL},
+            log=log,
+        )
+    ):
         log.warning(f"URL {url_num}) Failed to load url.")
         return
 
