@@ -1,7 +1,14 @@
-## Base Log @ 2026-07-26 10:17 UTC
+## Base Log @ 2026-07-26 15:36 UTC
 
-### ✅ Working Streams: 151<br>❌ Dead Streams: 0
+### ✅ Working Streams: 146<br>❌ Dead Streams: 5
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/332892.ts` |
+| CBS Sports Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3621.ts` |
+| Comedy TV | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/77411.ts` |
+| MLB Network | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3661.ts` |
+| Spectrum SportsNet Lakers | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/512561.ts` |
 ---
 #### Base Channels URL
 ```
