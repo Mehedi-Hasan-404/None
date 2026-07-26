@@ -179,6 +179,8 @@ async def scrape() -> None:
             cached_urls[key] = entry
 
             if source:
+                valid_count += 1
+
                 entry["source"] = clean_m3u(source)
 
                 urls[key] = entry
