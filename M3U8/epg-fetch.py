@@ -52,6 +52,7 @@ DUMMIES = {
     **{
         tvg: None
         for tvg in [
+            "Cricket.Dummy.us",
             "Darts.Dummy.us",
             "Football.Dummy.us",
             "MLB.Baseball.Dummy.us",

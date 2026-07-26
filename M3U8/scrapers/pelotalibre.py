@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 from functools import partial
-from urllib.parse import parse_qsl, urljoin, urlsplit
+from urllib.parse import parse_qsl, urljoin, urlsplit, urlunsplit
 
 from .utils import Cache, Event, Time, get_logger, leagues, network
 
@@ -70,6 +70,9 @@ async def get_events() -> list[Event]:
 
         elif not dict(parse_qsl(url_splits.query)).get("stream"):
             continue
+
+        if not link.startswith(BASE_URL):
+            link: str = urlunsplit(url_splits._replace(netloc=BASE_URL.split("/")[-1]))
 
         name = (
             f"{title.split("|")[0].strip()} | {lang}"

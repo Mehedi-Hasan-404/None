@@ -28,9 +28,29 @@
         }
       },
       {
+        "BIG3": {
+          "logo": "https://1000logos.net/wp-content/uploads/2018/09/BIG3-League-Logo.png",
+          "aliases": ["BIG 3", "BIG THREE"]
+        }
+      },
+      {
         "EUROLEAGUE": {
           "logo": "https://www.euroleaguebasketball.net/images/logo-default.png",
           "aliases": ["BASKETBALL EUROLEAGUE", "EUROLEAGUE BASKETBALL"]
+        }
+      }
+    ],
+    "Cricket.Dummy.us": [
+      {
+        "CRICKET": {
+          "logo": "https://i.gyazo.com/f008a3e3b9e6b0187857985b6c44782b.png",
+          "aliases": []
+        }
+      },
+      {
+        "THE HUNDRED": {
+          "logo": "https://crystalpng.com/wp-content/uploads/2026/04/The_Hundred_Logo.png",
+          "aliases": ["CRICKET THE HUNDRED"]
         }
       }
     ],
@@ -38,7 +58,7 @@
       {
         "DARTS": {
           "logo": "https://i.gyazo.com/4cd43600457c8611d5cd10d2c8bdf244.png",
-          "aliases": []
+          "aliases": ["PDC"]
         }
       }
     ],
@@ -212,9 +232,34 @@
         }
       },
       {
+        "F3": {
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F3_Championship_logo.png",
+          "aliases": [
+            "FIA FORMULA 3",
+            "FIA FORMULA THREE",
+            "FORMULA 3",
+            "FORMULA 3 GP",
+            "FORMULA THREE",
+            "FORMULA THREE GP"
+          ]
+        }
+      },
+      {
+        "FORMULA E": {
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Formula-e-logo-championship_2023.svg/3840px-Formula-e-logo-championship_2023.svg.png",
+          "aliases": []
+        }
+      },
+      {
         "MOTO GP": {
           "logo": "https://1000logos.net/wp-content/uploads/2021/03/MotoGP-Logo-500x281.png",
           "aliases": ["MOTOGP"]
+        }
+      },
+      {
+        "NASCAR": {
+          "logo": "https://logos-world.net/wp-content/uploads/2021/09/NASCAR-Logo.png",
+          "aliases": ["NASCAR CUP SERIES"]
         }
       },
       {
@@ -226,9 +271,21 @@
     ],
     "Rugby.Dummy.us": [
       {
+        "ENGLISH RUGBY SUPER LEAGUE": {
+          "logo": "https://static.wikia.nocookie.net/rugbyleaguefootball/images/c/c4/SuperLeagueLogoStacked.png/revision/latest/scale-to-width-down/1200",
+          "aliases": ["BETFRED SUPER LEAGUE"]
+        }
+      },
+      {
         "RUGBY": {
           "logo": null,
           "aliases": []
+        }
+      },
+      {
+        "SA RUGBY CURRIE CUP": {
+          "logo": "https://i.gyazo.com/b9e0d222d2ea4e8749bbeeaef2b686f3.webp",
+          "aliases": ["CURRIE CUP", "RUGBY CURRIE CUP"]
         }
       }
     ],
@@ -247,6 +304,12 @@
         "3. LIGA": {
           "logo": "https://i.gyazo.com/9f4f2e8370377b6214b4103003196de7.png",
           "aliases": ["GERMAN 3 LIGA"]
+        }
+      },
+      {
+        "A-LIGA": {
+          "logo": "https://r2.thesportsdb.com/images/media/league/badge/gtsuhy1730130224.png",
+          "aliases": ["DENMARK - A-LIGA"]
         }
       },
       {
@@ -271,6 +334,7 @@
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/16.png",
           "aliases": [
             "FOTBOLLSALLSVENSKAN",
+            "SWEDEN - ALLSVENSKAN",
             "SWEDEN ALLSVENSKAN",
             "SWEDISH ALLSVENSKAN"
           ]
@@ -352,6 +416,16 @@
         }
       },
       {
+        "BULGARIA EFBET LEAGUE": {
+          "logo": "https://i.gyazo.com/60bc0d6690696ab68e344568841e590b.png",
+          "aliases": [
+            "BULGARIA - PARVA LIGA",
+            "BULGARIA PARVA LIGA",
+            "BULGARIAN FIRST LEAGUE"
+          ]
+        }
+      },
+      {
         "BUNDESLIGA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/10.png",
           "aliases": ["BUNDESLIG", "GERMAN BUNDESLIGA", "GERMANY BUNDESLIGA"]
@@ -384,6 +458,12 @@
             "CANPL",
             "CPL"
           ]
+        }
+      },
+      {
+        "CECAFA KAGAME CUP": {
+          "logo": "https://i.gyazo.com/91e68dbb84c7d02d7ad46fa3bcf74d91.png",
+          "aliases": ["KAGAME CUP", "KAGAME INTERCLUB CUP"]
         }
       },
       {
@@ -514,6 +594,27 @@
         }
       },
       {
+        "CZECH CHANCE LIGA": {
+          "logo": "https://cdn.prod.website-files.com/68f550992570ca0322737dc2/68fe4cde8ecaae94ebe64622_chance-liga-footballlogos-org.webp",
+          "aliases": [
+            "CHANCE LIGA",
+            "CZECH FIRST LEAGUE",
+            "CZECH REPUBLIC - 1. LIGA",
+            "CZECH REPUBLIC 1. LIGA"
+          ]
+        }
+      },
+      {
+        "DENMARK SUPERLIGA": {
+          "logo": "https://1000logos.net/wp-content/uploads/2021/06/Danish-Superliga-logo.png",
+          "aliases": [
+            "DANISH SUPERLIGA",
+            "DENMARK - SUPERLIGA",
+            "DENMARK SUPER LIGA"
+          ]
+        }
+      },
+      {
         "EERSTE DIVISIE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/105.png",
           "aliases": ["KEUKEN KAMPIOEN DIVISIE"]
@@ -571,7 +672,11 @@
       {
         "ELITESERIEN": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/13.png",
-          "aliases": ["NORWAY ELITESERIEN", "NORWEGIAN ELITESERIEN"]
+          "aliases": [
+            "NORWAY - ELITESERIEN",
+            "NORWAY ELITESERIEN",
+            "NORWEGIAN ELITESERIEN"
+          ]
         }
       },
       {
@@ -622,6 +727,12 @@
         }
       },
       {
+        "FINLAND VEIKKAUSLIIGA": {
+          "logo": "https://1000logos.net/wp-content/uploads/2022/01/Veikkausliiga-logo.png",
+          "aliases": ["FINNISH VEIKKAUSLIIGA", "VEIKKAUSLIIGA"]
+        }
+      },
+      {
         "FRAUEN BUNDESLIGA": {
           "logo": "https://i.gyazo.com/d13d4c0330be96801aa4b2d8b83d3a8f.png",
           "aliases": [
@@ -638,6 +749,21 @@
         }
       },
       {
+        "HUNGARY NB 1 LIGA": {
+          "logo": "https://assets.football-logos.cc/logos/hungary/1500x1500/nemzeti-bajnoksag.bd684103.png",
+          "aliases": [
+            "HUNGARY - NB I",
+            "HUNGARY NB1",
+            "NB I",
+            "NEMZETI BAJNOKSAG",
+            "NEMZETI BAJNOKSAG I",
+            "NEMZETI BAJNOKSÁG",
+            "NEMZETI BAJNOKSÁG I",
+            "OTP BANK LIGA"
+          ]
+        }
+      },
+      {
         "J1 LEAGUE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2199.png",
           "aliases": ["J.LEAGUE", "JAPANESE J.LEAGUE", "MEIJI YASUDA J1 LEAGUE"]
@@ -647,6 +773,16 @@
         "K LEAGUE 1": {
           "logo": "https://i.gyazo.com/721eba6c954e2015d999ead7a0bd5c69.png",
           "aliases": []
+        }
+      },
+      {
+        "KAZAKHSTAN - PREMIER LEAGUE": {
+          "logo": "https://upload.wikimedia.org/wikipedia/fr/c/cc/Kazakhstan_Premier_League_New_Logo.png",
+          "aliases": [
+            "KAZAKH PREMIER LEAGUE",
+            "KAZAKHSTAN PREMIER LEAGUE",
+            "KAZAKHSTAN PROFESSIONAL FOOTBALL LEAGUE"
+          ]
         }
       },
       {
@@ -696,6 +832,21 @@
         }
       },
       {
+        "LATVIA VIRSLIGA": {
+          "logo": "https://i.gyazo.com/d674b413fe360d196f5046b6ae82646e.png",
+          "aliases": [
+            "LATVIA - VIRSLIGA",
+            "LATVIA - VIRSLĪGA",
+            "LATVIAN HIGHER LEAGUE",
+            "TONYBET VIRSLIGA",
+            "TONYBET VIRSLĪGA",
+            "VIRSLIGA",
+            "VIRSLIGA",
+            "VIRSLĪGA"
+          ]
+        }
+      },
+      {
         "LEAGUES CUP": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2410.png",
           "aliases": []
@@ -708,11 +859,14 @@
             "LIGA 1 DE FUTBOL PROFESIONAL",
             "LIGA 1 DE FÚTBOL PROFESIONAL",
             "LIGA 1 TE APUESTO",
+            "PERU - PRIMERA DIVISION",
+            "PERU - PRIMERA DIVISIÓN",
             "PERU LIGA 1",
             "PERU LIGA 1 APERTURA",
             "PERU LIGA I",
             "PERU LIGA I APERTURA",
             "PERU PRIMERA DIVISION",
+            "PERU PRIMERA DIVISIÓN",
             "PERUVIAN LIGA 1",
             "PERUVIAN LIGA I"
           ]
@@ -797,6 +951,7 @@
         "LIGA I": {
           "logo": "https://i.gyazo.com/3fd4b38d5263ca391e45850eb58d11e6.png",
           "aliases": [
+            "ROMANIA - LIGA I",
             "ROMANIA LIGA 1",
             "ROMANIA LIGA I",
             "ROMANIA SUPERLIGA",
@@ -885,6 +1040,7 @@
           "aliases": [
             "NATIONAL WOMEN'S SOCCER LEAGUE",
             "NWSL WOMEN",
+            "UNITED STATES NWSL",
             "USA NWSL WOMEN"
           ]
         }
@@ -893,6 +1049,12 @@
         "NWSL CHALLENGE CUP": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2445.png",
           "aliases": []
+        }
+      },
+      {
+        "POLAND DIVISION 1": {
+          "logo": "https://assets.football-logos.cc/logos/poland/1500x1500/1-liga.c3871b6c.png",
+          "aliases": ["BETCLIC 1 LIGA", "I LIGA"]
         }
       },
       {
@@ -933,10 +1095,21 @@
         }
       },
       {
+        "RUSSIA - FNL": {
+          "logo": "https://assets.football-logos.cc/logos/russia/1500x1500/russian-first-league.5f49893f.png",
+          "aliases": [
+            "RUSSIAN FIRST DIVISION",
+            "RUSSIAN FIRST LEAGUE",
+            "RUSSIAN FOOTBALL NATIONAL LEAGUE"
+          ]
+        }
+      },
+      {
         "RUSSIAN PREMIER LEAGUE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/106.png",
           "aliases": [
             "RPL",
+            "RUSSIA - PREMIER LEAGUE",
             "RUSSIA - RUSSIAN PREMIER LEAGUE",
             "RUSSIA PREMIER LEAGUE",
             "RUSSIA RUSSIAN PREMIER LEAGUE",
@@ -954,6 +1127,16 @@
         "SCOTTISH CHAMPIONSHIP": {
           "logo": "https://i.gyazo.com/e1a8b0c2a85a16494bcee4a3422ba514.png",
           "aliases": []
+        }
+      },
+      {
+        "SCOTTISH LEAGUE CUP": {
+          "logo": "https://www.cfclassics.co/images/cups/scotland/leaguecup/scottish-league-cup-600x400.png",
+          "aliases": [
+            "SCOTLAND - SCOTTISH LEAGUE CUP",
+            "SCOTLAND SCOTTISH LEAGUE CUP",
+            "SCOTTISH CUP"
+          ]
         }
       },
       {
@@ -994,6 +1177,26 @@
         }
       },
       {
+        "SLOVAKIA NIKE LIGA": {
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Nik%C3%A9_Liga_logo.jpg/960px-Nik%C3%A9_Liga_logo.jpg",
+          "aliases": ["NIKE LIGA", "NIKÉ LIGA", "SLOVAK FIRST FOOTBALL LEAGUE"]
+        }
+      },
+      {
+        "SLOVENIA PRVA LIGA": {
+          "logo": "https://assets.football-logos.cc/logos/slovenia/700x700/slovenian-prvaliga--no-text.43825296.png",
+          "aliases": [
+            "1. SNL",
+            "PRVA LIGA",
+            "PRVA LIGA TELEMACH",
+            "PRVA SLOVENSKA NOGOMETNA LIGA",
+            "PRVALIGA",
+            "SLOVENIA - PRVA LIGA",
+            "SLOVENIAN PRVALIGA"
+          ]
+        }
+      },
+      {
         "SOCCER": {
           "logo": "https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png",
           "aliases": [
@@ -1021,6 +1224,18 @@
             "GREEK SUPER LEAGUE",
             "SUPER LEAGUE 1"
           ]
+        }
+      },
+      {
+        "SUPERETTAN": {
+          "logo": "https://assets.football-logos.cc/logos/sweden/1500x1500/superettan.8796f38b.png",
+          "aliases": ["SWEDEN SUPERETTAN", "SWEDISH SUPERETTAN"]
+        }
+      },
+      {
+        "SWITZERLAND SUPER LEAGUE": {
+          "logo": "https://i.gyazo.com/ecd3368b394b6f5778be7023d4c564d6.png",
+          "aliases": ["SWITZERLAND - SUPER LEAGUE"]
         }
       },
       {
@@ -1121,6 +1336,12 @@
         "USL LEAGUE TWO": {
           "logo": "https://i.gyazo.com/2eb31f1e8e120c648d7f8b4547fec91a.png",
           "aliases": ["UNITED SOCCER LEAGUE LEAGUE TWO", "USL 2", "USL2"]
+        }
+      },
+      {
+        "UZBEKISTAN SUPER LEAGUE": {
+          "logo": "https://assets.football-logos.cc/logos/uzbekistan/1500x1500/uzbekistan-super-league.d56222d2.png",
+          "aliases": ["ARTEL SUPERLIGA", "ARTEL SUPERLIGASI"]
         }
       },
       {
