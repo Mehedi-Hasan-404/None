@@ -39,7 +39,7 @@ API_URLS = [
 ]
 
 
-async def get_api_data(now: Time) -> list[dict[str, Any]]:
+async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
     tasks = [
         network.request(
             url,
@@ -62,6 +62,9 @@ async def get_api_data(now: Time) -> list[dict[str, Any]]:
             event["league"] = league
 
             api_data.append(event)
+
+    if not api_data:
+        return [{"timestamp": now.timestamp()}]
 
     api_data[-1]["timestamp"] = now.timestamp()
 
@@ -127,7 +130,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
         log.info("Refreshing API cache")
 
-        api_data = await get_api_data(now)
+        api_data = await refresh_api_cache(now)
 
         API_FILE.write(api_data)
 

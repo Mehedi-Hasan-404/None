@@ -1,9 +1,6 @@
-import asyncio
 import json
 import re
 from functools import partial
-from itertools import chain
-from urllib.parse import urljoin
 
 from selectolax.parser import HTMLParser
 
@@ -13,36 +10,19 @@ log = get_logger(__name__)
 
 urls: dict[str, dict[str, str | float]] = {}
 
-TAG = "STRMSGATE"
+TAG = "FLYEMBD"
 
-CACHE_FILE = Cache(TAG, exp=19_800)
+CACHE_FILE = Cache(TAG, exp=10_800)
 
-BASE_URL = "https://streamsgates.io"
-
-API_URLS = [
-    urljoin(BASE_URL, f"data/{sport}.json")
-    for sport in [
-        # "cfb",
-        "mlb",
-        "nba",
-        # "nfl",
-        # "nhl",
-        "soccer",
-        "ufc",
-    ]
-]
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 
-def get_event(t1: str, t2: str) -> str:
-    match t1:
-        case "RED ZONE":
-            return "NFL RedZone"
+def clean_ev_name(s: str) -> str:
+    return re.sub(r"(\r|\n)", "", s).strip()
 
-        case "TBD":
-            return "TBD"
 
-        case _:
-            return f"{t1.strip()} vs {t2.strip()}"
+def clean_m3u(s: str) -> str:
+    return re.sub(r"\.live\n", ".pro", s)
 
 
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
@@ -89,69 +69,81 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 async def get_events() -> list[Event]:
     now = Time.clean(Time.now())
 
-    tasks = [network.request(url, log=log) for url in API_URLS]
-
-    results = await asyncio.gather(*tasks)
-
     events: list[Event] = []
 
-    if not (api_data := [*chain.from_iterable(r.json() for r in results if r)]):
-        return events
+    if not (api_data := API_FILE.load(per_entry=False, index=-1)):
+        log.info("Refreshing API cache")
 
-    for stream_group in api_data:
+        api_data = [{"timestamp": now.timestamp()}]
+
+        if r := await network.request(
+            "https://ovogoal.cyou/api/v2/flyembed.json",
+            log=log,
+        ):
+            api_data: list[dict[str, str]] = r.json()
+
+            api_data[-1]["timestamp"] = now.timestamp()
+
+        API_FILE.write(api_data)
+
+    start_dt = now.delta(hours=-3)
+    end_dt = now.delta(minutes=30)
+
+    for event_group in api_data:
         if not all(
             values := [
-                stream_group.get(x)
+                event_group.get(x)
                 for x in (
-                    "time",
-                    "league",
-                    "away",
-                    "home",
+                    "League",
+                    "Team 1 ",
+                    "Team2",
+                    "Date",
+                    "Time",
+                    "iframeURL",
                 )
             ]
         ):
             continue
 
-        date, sport, t1, t2 = values
+        sport, away, home, date, time, link = values
 
-        event_dt = Time.from_str(date, timezone="UTC")
+        event_dt = Time.from_str(
+            re.sub(
+                r"\s?(A\.?M\.?|P\.?M\.?)",
+                "",
+                f"{date} {time}",
+                flags=re.I,
+            ),
+            timezone="UTC",
+        )
 
-        if event_dt.date() != now.date():
+        if not start_dt <= event_dt <= end_dt:
             continue
 
-        if not (iframes := stream_group.get("streams")):
-            continue
-
-        if len(sport_splits := sport.split(":", 1)) > 1:
-            sport = sport_splits[0].strip()
-
-        stream_urls: dict[str, str | None] = {
-            stream.get("lang") or "EN": stream.get("url") for stream in iframes
-        }
-
-        events.extend(
+        events.append(
             Event(
                 sport=sport,
-                name=f"{get_event(t1, t2)} | {lang}",
-                link=url,
+                name=clean_ev_name(f"{away} vs {home}"),
+                link=link,
                 timestamp=now.timestamp(),
             )
-            for lang, url in stream_urls.items()
-            if url
         )
 
     return events
 
 
 async def scrape() -> None:
-    if cached_urls := CACHE_FILE.load():
-        urls.update({k: v for k, v in cached_urls.items() if v["source"]})
+    cached_urls = CACHE_FILE.load()
 
-        log.info(f"Loaded {len(urls)} event(s) from cache")
+    valid_urls = {k: v for k, v in cached_urls.items() if v["source"]}
 
-        return
+    valid_count = cached_count = len(valid_urls)
 
-    log.info(f'Scraping from "{BASE_URL}"')
+    urls.update(valid_urls)
+
+    log.info(f"Loaded {cached_count} event(s) from cache")
+
+    log.info('Scraping from "https://flyembed.xyz"')
 
     if events := await get_events():
         log.info(f"Processing {len(events)} new URL(s)")
@@ -187,11 +179,11 @@ async def scrape() -> None:
             cached_urls[key] = entry
 
             if source:
-                entry["source"] = source.split("?st")[0]
+                entry["source"] = clean_m3u(source)
 
                 urls[key] = entry
 
-        log.info(f"Collected and cached {len(urls)} new event(s)")
+        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
     else:
         log.info("No new events found")

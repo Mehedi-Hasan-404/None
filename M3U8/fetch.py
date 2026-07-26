@@ -15,7 +15,7 @@ from scrapers import (
     playfast,
     sportspass,
     streamcenter,
-    streamsgate,
+    streamgate,
     streamtp,
     streamxhd,
     watchfooty,
@@ -71,7 +71,7 @@ async def main() -> None:
                 asyncio.create_task(mainportal.scrape()),
                 asyncio.create_task(pelotalibre.scrape()),
                 asyncio.create_task(streamcenter.scrape()),
-                asyncio.create_task(streamsgate.scrape()),
+                asyncio.create_task(streamgate.scrape()),
                 asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(streamxhd.scrape()),
                 # asyncio.create_task(webcast.scrape()),
@@ -98,7 +98,7 @@ async def main() -> None:
         | playfast.urls
         | sportspass.urls
         | streamcenter.urls
-        | streamsgate.urls
+        | streamgate.urls
         | streamtp.urls
         | streamxhd.urls
         | watchfooty.urls
