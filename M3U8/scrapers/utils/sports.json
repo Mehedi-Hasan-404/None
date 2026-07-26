@@ -198,6 +198,18 @@
     ],
     "PPV.EVENTS.Dummy.us": [
       {
+        "BOXING": {
+          "logo": null,
+          "aliases": ["BOXING ZUFFA", "ZUFFA BOXING"]
+        }
+      },
+      {
+        "FIGHTING": {
+          "logo": null,
+          "aliases": []
+        }
+      },
+      {
         "PAY PER VIEW": {
           "logo": null,
           "aliases": ["PAY-PER-VIEW", "PAYPERVIEW", "PPV"]
@@ -206,7 +218,13 @@
       {
         "WRESTLING": {
           "logo": null,
-          "aliases": ["AEW", "WRESTLING (NXT)", "WWE", "WWE WRESTLING"]
+          "aliases": [
+            "AEW",
+            "AEW WRESTLING",
+            "WRESTLING (NXT)",
+            "WWE",
+            "WWE WRESTLING"
+          ]
         }
       }
     ],
@@ -1011,6 +1029,7 @@
             "LIGA BBVA MX",
             "LIGA MX, APERTURA",
             "MEXICAN LIGA BBVA MX",
+            "MEXICO - LIGA MX",
             "MEXICO LIGA MX",
             "PRIMERA DIVISION DE MEXICO",
             "PRIMERA DIVISIÓN DE MÉXICO"
