@@ -876,7 +876,13 @@ https://khala.skylivehd.com/global/disney2/index.m3u8?token=b0a67777fca70c3b5718
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://khala.skylivehd.com/global/disney3/index.m3u8?token=0ca4c6ac48efe0ccf7fcb5563625249866f73a21-f0-1785198648-1785144648
 
-#EXTINF:-1 tvg-chno="227" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[WWE] Monday Night Raw | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[WWE] Monday Night Raw | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="227" tvg-id="Live.Event.us" tvg-name="[The Hundred Women] Oval Invincibles Women vs Southern Brave Women (CDNTV)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[The Hundred Women] Oval Invincibles Women vs Southern Brave Women (CDNTV)
+#EXTVLCOPT:http-referrer=https://cdnlivetv.tv/api/v1/channels/player/?name=Willow%20Cricket%20Extra%20FHD%20US&code=us&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-origin=https://cdnlivetv.tv/api/v1/channels/player/?name=Willow%20Cricket%20Extra%20FHD%20US&code=us&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://cdnlivetv.tv/secure/api/v1/6a288d2881d8192bb76cb5f2/playlist.m3u8?token=NmEyODhkMjg4MWQ4MTkyYmI3NmNiNWYyOjE3ODUxNzE2MjA5ODY6Y2RubGl2ZXR2LnR2OjkzMmUwYmNjMDIzNTdiYWUuNmQzMDEzYTYwZDFhYzIwOTAxOWIzMWRjMmMwMTI4MzcxMzdjMTE4MjcxZmZlYTYwMzE5NmZlOGVmMzQwNTgxOA
+
+#EXTINF:-1 tvg-chno="228" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[WWE] Monday Night Raw | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[WWE] Monday Night Raw | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
