@@ -820,7 +820,7 @@
       {
         "ICELAND LEAGUE": {
           "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9b/BestaLeague.png",
-          "aliases": ["BESTA DEILD KARLA"]
+          "aliases": ["BESTA DEILD KARLA", "BESTA DEILDIN"]
         }
       },
       {
@@ -1104,6 +1104,17 @@
         }
       },
       {
+        "NORWAY OBOS-LIGAEN": {
+          "logo": "https://www.fotball.no/imagevault/publishedmedia/tv0fegz06hf1g7x0s7xu/OBOS-ligaen-logo.png",
+          "aliases": [
+            "1. DIVISJON",
+            "FØRSTE DIVISJON",
+            "NORWAY FIRST DIVISION",
+            "NORWEGIAN FIRST DIVISION"
+          ]
+        }
+      },
+      {
         "NWSL": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2323.png",
           "aliases": [
@@ -1272,6 +1283,7 @@
           "logo": "https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png",
           "aliases": [
             "AMISTOSO",
+            "CAMPEONATO SUB-20",
             "CLUB FRIENDLIES",
             "CLUB FRIENDLY",
             "CLUB FRIENDLY GAMES",
@@ -1284,6 +1296,12 @@
             "WORLD CLUB FRIENDLY",
             "WORLD CUP QUALIFIERS"
           ]
+        }
+      },
+      {
+        "SOUTH AFRICA BETWAY PREMIERSHIP": {
+          "logo": "https://i.namu.wiki/i/mQeWpjDZ4jPnOdBn5shW18IbWNuYVa8FZsevJqU1EIeG-6dzRaDeCvLO1NPiDZjZg7aiWflJw_CFTDrSQEhobQ.webp",
+          "aliases": ["BETWAY PREMIERSHIP", "SOUTH AFRICAN PREMIERSHIP"]
         }
       },
       {
