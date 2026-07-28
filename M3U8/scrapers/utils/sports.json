@@ -530,7 +530,10 @@
       {
         "CONCACAF CENTRAL AMERICAN CUP": {
           "logo": "https://b.fssta.com/uploads/application/soccer/competition-logos/CONCACAFCentralAmericanCup.png",
-          "aliases": ["COPA CENTROAMERICANA DE CONCACAF"]
+          "aliases": [
+            "COPA CENTROAMERICANA",
+            "COPA CENTROAMERICANA DE CONCACAF"
+          ]
         }
       },
       {
@@ -565,6 +568,17 @@
             "COPA AMERICA",
             "COPA LIBERTADORES DE AMÉRICA",
             "SOUTH AMERICAN FOOTBALL CHAMPIONSHIP"
+          ]
+        }
+      },
+      {
+        "COPA BETPLAY": {
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/7/77/Copa_Betplay_Dimayor_Colombia.png",
+          "aliases": [
+            "COPA BETPLAY DIMAYOR",
+            "COPA COLOMBIA",
+            "COPA COLOMBIANA",
+            "COPA DIMAYOR"
           ]
         }
       },
@@ -1282,6 +1296,7 @@
         "SOCCER": {
           "logo": "https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png",
           "aliases": [
+            "ALL SOCCER EVENTS",
             "AMISTOSO",
             "CAMPEONATO SUB-20",
             "CLUB FRIENDLIES",

@@ -16,7 +16,7 @@ TAG = "BUZZ"
 
 CACHE_FILE = Cache(TAG, exp=5_400)
 
-HTML_FILE = Cache(f"{TAG}-html", exp=28_800)
+HTML_FILE = Cache(f"{TAG}-html", exp=19_800)
 
 BASE_URL = "https://streamed.buzz"
 
