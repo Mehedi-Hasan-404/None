@@ -1,7 +1,11 @@
-## Base Log @ 2026-07-27 21:35 UTC
+## Base Log @ 2026-07-28 10:57 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 158<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Altitude Sports | HTTP Error (404) | `http://206.212.244.63/6153/index.m3u8` |
+| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
 ---
 #### Base Channels URL
 ```
