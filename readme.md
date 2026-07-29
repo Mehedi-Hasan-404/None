@@ -1,7 +1,11 @@
-## Base Log @ 2026-07-28 21:37 UTC
+## Base Log @ 2026-07-29 11:00 UTC
 
-### ✅ Working Streams: 160<br>❌ Dead Streams: 0
+### ✅ Working Streams: 158<br>❌ Dead Streams: 2
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1790/index.m3u8` |
+| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
 ---
 #### Base Channels URL
 ```
