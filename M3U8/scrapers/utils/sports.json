@@ -631,7 +631,8 @@
           "aliases": [
             "CONMEBOL SUDAMERICANA",
             "COPA CONMEBOL SUDAMERICANA",
-            "SOUTH AMERICA COPA SUDAMERICANA"
+            "SOUTH AMERICA COPA SUDAMERICANA",
+            "SUDAMERICANA"
           ]
         }
       },
@@ -1107,6 +1108,7 @@
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/19.png",
           "aliases": [
             "MAJOR LEAGUE SOCCER",
+            "MLS ALL-STAR",
             "MLS NEXT PRO",
             "USA/CANADA MAJOR LEAGUE SOCCER"
           ]
@@ -1155,7 +1157,7 @@
       {
         "PREMIER LEAGUE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/23.png",
-          "aliases": ["ENGLISH PREMIER LEAGUE", "EPL"]
+          "aliases": ["ENGLISH PREMIER LEAGUE", "EPL", "PREMIER LEAGUE SUMMER"]
         }
       },
       {
@@ -1305,12 +1307,14 @@
             "CLUB FRIENDLY GAMES",
             "CONCACAF CHAMPIONSHIP U20",
             "CONCACAF SUB-20",
+            "CONCACAF U20 CHAMPIONSHIP",
             "FOOTBALL",
             "FRIENDLY MATCH",
             "FUTBOL",
             "FÚTBOL",
             "NORTH AMERICA CONCACAF U20 CHAMPIONSHIP",
             "PARTIDO AMISTOSO",
+            "U18 EUROPEAN CHAMPIONSHIP",
             "WORLD CLUB FRIENDLY",
             "WORLD CUP QUALIFIERS"
           ]
