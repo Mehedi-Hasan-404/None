@@ -18,6 +18,12 @@
           "logo": "https://i.gyazo.com/3e1119df65dee3290afdad55b84ac332.webp",
           "aliases": ["WBC", "WORLD BASEBALL CLASSIC"]
         }
+      },
+      {
+        "MINOR LEAGUE BASEBALL": {
+          "logo": "https://i.gyazo.com/dd2ac80d2bc0215352ee6807ee117753.png",
+          "aliases": ["MILB"]
+        }
       }
     ],
     "Basketball.Dummy.us": [
@@ -615,6 +621,12 @@
         }
       },
       {
+        "COPA ECUADOR": {
+          "logo": "https://r2.thesportsdb.com/images/media/league/badge/86kk7j1753772273.png",
+          "aliases": ["COPA FEF ECUADOR"]
+        }
+      },
+      {
         "COPA LIBERTADORES": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/58.png",
           "aliases": [
@@ -1042,6 +1054,7 @@
         "LIGA MX": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/22.png",
           "aliases": [
+            "",
             "LIGA BBVA MX",
             "LIGA MX, APERTURA",
             "MEXICAN LIGA BBVA MX",
@@ -1109,6 +1122,7 @@
           "aliases": [
             "MAJOR LEAGUE SOCCER",
             "MLS ALL-STAR",
+            "MLS GAME",
             "MLS NEXT PRO",
             "USA/CANADA MAJOR LEAGUE SOCCER"
           ]
