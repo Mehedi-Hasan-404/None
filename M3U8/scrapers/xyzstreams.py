@@ -32,7 +32,7 @@ API_URLS = [
     for sport in [
         "baseball/mlb",
         # "basketball/nba",
-        "basketball/wnba",
+        # "basketball/wnba",
         # "football/nfl",
         # "hockey/nhl",
     ]
