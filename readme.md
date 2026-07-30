@@ -1,10 +1,10 @@
-## Base Log @ 2026-07-30 10:38 UTC
+## Base Log @ 2026-07-30 16:04 UTC
 
 ### ✅ Working Streams: 171<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
+| beIN Sports 1 France | HTTP Error (403) | `http://99.27.51.147:8080/BeinSport/mpegts` |
 ---
 #### Base Channels URL
 ```
