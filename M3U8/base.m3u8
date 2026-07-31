@@ -123,8 +123,8 @@ http://206.212.244.63/49/index.m3u8
 #EXTINF:-1 tvg-chno="41" tvg-id="Crime.and.Investigation.Network.HD.us2" tvg-name="Crime & Investigation Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s61469_dark_360w_270h.png" group-title="TV",Crime & Investigation Network
 http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/mpegts
 
-#EXTINF:-1 tvg-chno="42" tvg-id="WPIX-DT.us_locals1" tvg-name="CW" tvg-logo="https://i.gyazo.com/afd5b481b327d204087dfde6a7741f9d.png" group-title="TV",CW
-http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3115.ts
+#EXTINF:-1 tvg-chno="42" tvg-id="KSTW-DT.us_locals1" tvg-name="CW" tvg-logo="https://i.gyazo.com/afd5b481b327d204087dfde6a7741f9d.png" group-title="TV",CW
+https://gpuserver3.tier1streams.com/CW/index.m3u8
 
 #EXTINF:-1 tvg-chno="43" tvg-id="Dabl.Network.LLC.us2" tvg-name="Dabl" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s112157_dark_360w_270h.png" group-title="TV",Dabl
 http://40.160.24.56/DABL/index.m3u8
