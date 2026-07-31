@@ -1,7 +1,12 @@
-## Base Log @ 2026-07-31 16:17 UTC
+## Base Log @ 2026-07-31 21:34 UTC
 
-### ✅ Working Streams: 172<br>❌ Dead Streams: 0
+### ✅ Working Streams: 169<br>❌ Dead Streams: 3
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| CW | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3115.ts` |
+| HBO Comedy | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts` |
+| Starz Encore Classic | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
 ---
 #### Base Channels URL
 ```
