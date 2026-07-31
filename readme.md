@@ -1,7 +1,10 @@
-## Base Log @ 2026-07-30 21:39 UTC
+## Base Log @ 2026-07-31 11:04 UTC
 
-### ✅ Working Streams: 172<br>❌ Dead Streams: 0
+### ✅ Working Streams: 171<br>❌ Dead Streams: 1
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
 ---
 #### Base Channels URL
 ```
