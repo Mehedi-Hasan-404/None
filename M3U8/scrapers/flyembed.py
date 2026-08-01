@@ -1,6 +1,7 @@
 import json
 import re
 from functools import partial
+from typing import KeysView
 
 from selectolax.parser import HTMLParser
 
@@ -17,7 +18,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 
-def clean_ev_name(s: str) -> str:
+def clean_name(s: str) -> str:
     return re.sub(r"(\r|\n)", "", s).strip()
 
 
@@ -66,7 +67,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
     return json.loads(f'"{match[4]}"'), ifr_src
 
 
-async def get_events() -> list[Event]:
+async def get_events(cached_keys: KeysView[str]) -> list[Event]:
     now = Time.clean(Time.now())
 
     events: list[Event] = []
@@ -120,10 +121,15 @@ async def get_events() -> list[Event]:
         if not start_dt <= event_dt <= end_dt:
             continue
 
+        sport, name = clean_name(sport), clean_name(f"{away} vs {home}")
+
+        if f"[{sport}] {name} ({TAG})" in cached_keys:
+            continue
+
         events.append(
             Event(
                 sport=sport,
-                name=clean_ev_name(f"{away} vs {home}"),
+                name=name,
                 link=link,
                 timestamp=now.timestamp(),
             )
@@ -145,7 +151,7 @@ async def scrape() -> None:
 
     log.info('Scraping from "https://flyembed.xyz"')
 
-    if events := await get_events():
+    if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
         for i, ev in enumerate(events, start=1):

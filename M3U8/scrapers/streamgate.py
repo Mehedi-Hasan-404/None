@@ -130,7 +130,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
             values := [
                 stream_group.get(x)
                 for x in (
-                    "time",
+                    "ts",
                     "league",
                     "away",
                     "home",
@@ -141,7 +141,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
 
         date, sport, t1, t2 = values
 
-        event_dt = Time.from_str(date, timezone="UTC")
+        event_dt = Time.from_ts(date)
 
         if not start_dt <= event_dt <= end_dt:
             continue
