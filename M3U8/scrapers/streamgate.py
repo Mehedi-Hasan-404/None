@@ -155,7 +155,9 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
         name = get_event(t1, t2)
 
         stream_urls: dict[str, str | None] = {
-            stream.get("lang") or "EN": stream.get("url") for stream in iframes
+            stream.get("lang") or "EN": stream.get("url")
+            for stream in iframes
+            if "auto_source" not in stream
         }
 
         events.extend(
