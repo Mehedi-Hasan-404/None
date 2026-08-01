@@ -1,12 +1,16 @@
-## Base Log @ 2026-07-31 21:34 UTC
+## Base Log @ 2026-08-01 10:14 UTC
 
-### ✅ Working Streams: 169<br>❌ Dead Streams: 3
+### ✅ Working Streams: 165<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CW | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3115.ts` |
-| HBO Comedy | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts` |
-| Starz Encore Classic | HTTP Error (403) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
+| Altitude Sports | HTTP Error (404) | `http://206.212.244.63/6153/index.m3u8` |
+| BET | HTTP Error (404) | `http://206.212.244.63/16/index.m3u8` |
+| Cheddar | HTTP Error (404) | `http://206.212.244.63/35/index.m3u8` |
+| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
+| Marquee Sports Network | cURL Error (28) | `https://gpuserver3.tier1streams.com/MARQUEE_SPORTS_NETWORK/index.m3u8` |
+| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| beIN Sports USA | HTTP Error (404) | `http://23.237.104.106:8080/USA_BEIN/index.m3u8` |
 ---
 #### Base Channels URL
 ```
