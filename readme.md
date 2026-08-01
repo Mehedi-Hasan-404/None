@@ -1,12 +1,14 @@
-## Base Log @ 2026-08-01 15:33 UTC
+## Base Log @ 2026-08-01 21:14 UTC
 
-### ✅ Working Streams: 169<br>❌ Dead Streams: 3
+### ✅ Working Streams: 167<br>❌ Dead Streams: 5
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| A&E TV | HTTP Error (403) | `http://206.212.244.63/1/index.m3u8` |
-| Fox News | HTTP Error (403) | `http://206.212.244.63/67/index.m3u8` |
-| Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| BET | HTTP Error (403) | `http://206.212.244.63/16/index.m3u8` |
+| CNN | HTTP Error (403) | `http://206.212.244.63/43/index.m3u8` |
+| ESPN | HTTP Error (403) | `http://206.212.244.63/59/index.m3u8` |
+| Game Show Network | HTTP Error (403) | `http://206.212.244.63/4237/index.m3u8` |
+| MSNBC | HTTP Error (403) | `http://206.212.244.63/114/index.m3u8` |
 ---
 #### Base Channels URL
 ```
