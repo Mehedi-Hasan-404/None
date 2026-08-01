@@ -1,16 +1,12 @@
-## Base Log @ 2026-08-01 10:14 UTC
+## Base Log @ 2026-08-01 15:33 UTC
 
-### ✅ Working Streams: 165<br>❌ Dead Streams: 7
+### ✅ Working Streams: 169<br>❌ Dead Streams: 3
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Altitude Sports | HTTP Error (404) | `http://206.212.244.63/6153/index.m3u8` |
-| BET | HTTP Error (404) | `http://206.212.244.63/16/index.m3u8` |
-| Cheddar | HTTP Error (404) | `http://206.212.244.63/35/index.m3u8` |
-| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
-| Marquee Sports Network | cURL Error (28) | `https://gpuserver3.tier1streams.com/MARQUEE_SPORTS_NETWORK/index.m3u8` |
+| A&E TV | HTTP Error (403) | `http://206.212.244.63/1/index.m3u8` |
+| Fox News | HTTP Error (403) | `http://206.212.244.63/67/index.m3u8` |
 | Willow Cricket | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
-| beIN Sports USA | HTTP Error (404) | `http://23.237.104.106:8080/USA_BEIN/index.m3u8` |
 ---
 #### Base Channels URL
 ```
