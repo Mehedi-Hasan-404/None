@@ -1,14 +1,11 @@
-## Base Log @ 2026-08-01 21:14 UTC
+## Base Log @ 2026-08-02 10:13 UTC
 
-### ✅ Working Streams: 167<br>❌ Dead Streams: 5
+### ✅ Working Streams: 170<br>❌ Dead Streams: 2
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BET | HTTP Error (403) | `http://206.212.244.63/16/index.m3u8` |
-| CNN | HTTP Error (403) | `http://206.212.244.63/43/index.m3u8` |
-| ESPN | HTTP Error (403) | `http://206.212.244.63/59/index.m3u8` |
-| Game Show Network | HTTP Error (403) | `http://206.212.244.63/4237/index.m3u8` |
-| MSNBC | HTTP Error (403) | `http://206.212.244.63/114/index.m3u8` |
+| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
+| beIN Sports 1 France | HTTP Error (403) | `http://99.27.51.147:8080/BeinSport/mpegts` |
 ---
 #### Base Channels URL
 ```
