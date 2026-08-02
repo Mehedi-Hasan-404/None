@@ -50,7 +50,11 @@ async def refresh_html_cache(now: Time) -> dict[str, dict[str, str | float]]:
 
         sport, event_name, event_date, ch_id = (x.text(strip=True) for x in values)
 
-        event_dt = Time.from_str(event_date.replace("\t", " "), timezone="EST")
+        event_dt = Time.from_str(
+            event_date.replace("\t", " "),
+            fmt="%d/%m/%Y %I:%M %p",
+            timezone="EST",
+        )
 
         key = f"[{sport}] {event_name} ({TAG})"
 
