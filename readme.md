@@ -1,11 +1,10 @@
-## Base Log @ 2026-08-02 10:13 UTC
+## Base Log @ 2026-08-02 15:34 UTC
 
-### ✅ Working Streams: 170<br>❌ Dead Streams: 2
+### ✅ Working Streams: 171<br>❌ Dead Streams: 1
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
-| beIN Sports 1 France | HTTP Error (403) | `http://99.27.51.147:8080/BeinSport/mpegts` |
+| Altitude Sports | HTTP Error (404) | `http://206.212.244.63/6153/index.m3u8` |
 ---
 #### Base Channels URL
 ```
