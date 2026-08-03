@@ -1,7 +1,16 @@
-## Base Log @ 2026-08-02 21:15 UTC
+## Base Log @ 2026-08-03 11:52 UTC
 
-### ✅ Working Streams: 172<br>❌ Dead Streams: 0
+### ✅ Working Streams: 165<br>❌ Dead Streams: 7
 
+| Channel | Error (Code) | Link |
+| ------- | ------------ | ---- |
+| BBC One | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2359.ts` |
+| ESPN2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21590.ts` |
+| HBO Comedy | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts` |
+| Premier Sports 1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89089.ts` |
+| STV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2168.ts` |
+| Spectrum SportsNet Lakers | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/512561.ts` |
+| TSN2 | cURL Error (28) | `http://40.160.24.55/TSN_2/index.m3u8` |
 ---
 #### Base Channels URL
 ```
