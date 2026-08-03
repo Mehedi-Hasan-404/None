@@ -1337,6 +1337,7 @@
             "LIGA BETPLAY DIMAYOR",
             "LIGA COLOMBIA",
             "LIGA COLOMBIANA",
+            "LIGA DE COLOMBIA",
             "LIGA DIMAYOR"
           ]
         }
@@ -1612,6 +1613,12 @@
         }
       },
       {
+        "UKRAINIAN PREMIER LEAGUE": {
+          "logo": "https://1000logos.net/wp-content/uploads/2023/06/Ukrainian-Premier-League-Logo-2016.png",
+          "aliases": ["UKRAINE PREMIER LEAGUE", "UPL"]
+        }
+      },
+      {
         "USL CHAMPIONSHIP": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2292.png",
           "aliases": ["UNITED SOCCER LEAGUE CHAMPIONSHIP", "USLC"]
@@ -1677,15 +1684,52 @@
     ],
     "Tennis.Dummy.us": [
       {
+        "AUSTRALIAN OPEN": {
+          "logo": "https://1000logos.net/wp-content/uploads/2020/09/Logo-Australian-Open.png",
+          "aliases": [
+            "AO TENNIS",
+            "AUSSIE OPEN",
+            "TENNIS AUSSIE CHAMPIONSHIPS",
+            "TENNIS AUSTRALIAN CHAMPIONSHIPS"
+          ]
+        }
+      },
+      {
+        "ROLAND GARROS": {
+          "logo": "https://logos-world.net/wp-content/uploads/2020/07/Roland-Garros-Logo.png",
+          "aliases": [
+            "FRENCH OPEN",
+            "ROLAND-GARROS",
+            "TENNIS FRENCH CHAMPIONSHIPS"
+          ]
+        }
+      },
+      {
         "TENNIS": {
           "logo": "https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png",
           "aliases": [
-            "AUSTRALIAN OPEN",
-            "FRENCH OPEN",
+            "ATP 1000",
+            "ATP MASTERS 1000",
+            "MASTERS 1000",
             "TENNIS ATP",
-            "TENNIS WTA",
-            "US OPEN",
-            "WIMBLEDON"
+            "TENNIS MASTERS",
+            "TENNIS WTA"
+          ]
+        }
+      },
+      {
+        "US OPEN": {
+          "logo": "https://1000logos.net/wp-content/uploads/2020/09/US_OPEN_Logo.png",
+          "aliases": ["TENNIS US OPEN", "US OPEN TENNIS CHAMPIONSHIPS"]
+        }
+      },
+      {
+        "WIMBLEDON": {
+          "logo": "https://1000logos.net/wp-content/uploads/2024/04/Wimbledon-Championships-Logo-500x281.png",
+          "aliases": [
+            "TENNIS WIMBLEDON",
+            "TENNIS WIMBLEDON CHAMPIONSHIPS",
+            "WIMBLEDON CHAMPIONSHIPS"
           ]
         }
       }
