@@ -1,22 +1,15 @@
-## Base Log @ 2026-08-04 11:01 UTC
+## Base Log @ 2026-08-04 16:27 UTC
 
-### ✅ Working Streams: 159<br>❌ Dead Streams: 13
+### ✅ Working Streams: 166<br>❌ Dead Streams: 6
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ABC | HTTP Error (404) | `http://stream.cammonitorplus.net/1790/index.m3u8` |
 | ESPN | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3636.ts` |
-| FYI TV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/30924.ts` |
-| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
-| Fox Business | HTTP Error (404) | `http://41.205.93.154/FOXBUSINESS/index.m3u8` |
-| ITV1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/527497.ts` |
-| Marquee Sports Network | HTTP Error (404) | `https://gpuserver3.tier1streams.com/MARQUEE_SPORTS_NETWORK/index.m3u8` |
-| STV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2168.ts` |
-| Sky Sports Premier League | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2182.ts` |
-| TNT Sports 1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2337.ts` |
-| The Weather Channel | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/42308.ts` |
-| Willow Cricket | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
-| beIN Sports USA | cURL Error (28) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21585.ts` |
+| HBO Comedy | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts` |
+| Hallmark Family | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/660922.ts` |
+| NESN | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/149310.ts` |
+| Nicktoons | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3674.ts` |
+| Sky Sports News | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2179.ts` |
 ---
 #### Base Channels URL
 ```
