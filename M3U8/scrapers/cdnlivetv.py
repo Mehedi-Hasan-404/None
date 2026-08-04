@@ -16,7 +16,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
-API_URL = "https://api.cdnlivetv.tv"
+API_URL = "https://api.cdnlivetv.is"
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[Event]:
