@@ -44,6 +44,7 @@ async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
         network.request(
             url,
             params={"dates": f"{now:%Y%m%d}"},
+            headers={"User-Agent": "curl/8.20.0"},
             log=log,
         )
         for url in API_URLS
