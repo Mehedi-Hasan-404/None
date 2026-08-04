@@ -1,7 +1,7 @@
 import json
 import re
+from collections.abc import KeysView
 from functools import partial
-from typing import KeysView
 
 from selectolax.parser import HTMLParser
 
