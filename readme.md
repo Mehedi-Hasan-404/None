@@ -1,18 +1,19 @@
-## Base Log @ 2026-08-04 21:45 UTC
+## Base Log @ 2026-08-05 10:57 UTC
 
-### ✅ Working Streams: 163<br>❌ Dead Streams: 9
+### ✅ Working Streams: 162<br>❌ Dead Streams: 10
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC One | HTTP Error (403) | `http://51.178.182.222:80/BBC1/index.m3u8` |
-| Game Show Network | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648975.ts` |
-| ITV1 | HTTP Error (403) | `http://51.178.182.222:80/ITV1/index.m3u8` |
-| NBC News NOW | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/638808.ts` |
-| NBC Sports Boston | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2435.ts` |
+| ESPN2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21590.ts` |
+| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
+| Freeform TV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2502.ts` |
+| INSP | HTTP Error (404) | `http://40.160.24.53/INSP/index.m3u8` |
+| NHL Network | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3672.ts` |
 | Nicktoons | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3674.ts` |
-| Spectrum SportsNet Lakers | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/512561.ts` |
-| Starz Encore Classic | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
+| Premier Sports 2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89090.ts` |
+| Sportsnet 360 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3073.ts` |
 | Willow Cricket | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
+| beIN Sports USA | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21585.ts` |
 ---
 #### Base Channels URL
 ```
