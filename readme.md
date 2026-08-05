@@ -1,19 +1,20 @@
-## Base Log @ 2026-08-05 10:57 UTC
+## Base Log @ 2026-08-05 16:15 UTC
 
-### ✅ Working Streams: 162<br>❌ Dead Streams: 10
+### ✅ Working Streams: 164<br>❌ Dead Streams: 11
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| ESPN2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21590.ts` |
-| Flix | HTTP Error (404) | `https://gpuserver3.tier1streams.com/FLIX/index.m3u8` |
-| Freeform TV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2502.ts` |
-| INSP | HTTP Error (404) | `http://40.160.24.53/INSP/index.m3u8` |
-| NHL Network | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3672.ts` |
-| Nicktoons | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3674.ts` |
-| Premier Sports 2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89090.ts` |
-| Sportsnet 360 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3073.ts` |
-| Willow Cricket | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3972.ts` |
-| beIN Sports USA | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21585.ts` |
+| BBC One | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2359.ts` |
+| CNN | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2608.ts` |
+| ESPN Deportes | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2578.ts` |
+| ITV1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/527497.ts` |
+| MeTV Toons | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/721378.ts` |
+| NBC News NOW | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/638808.ts` |
+| NewsNation | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/647784.ts` |
+| STV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2168.ts` |
+| Sky Sports Main Event | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2185.ts` |
+| Starz Encore Classic | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
+| TLC | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2594.ts` |
 ---
 #### Base Channels URL
 ```
