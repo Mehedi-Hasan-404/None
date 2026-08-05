@@ -1,20 +1,16 @@
-## Base Log @ 2026-08-05 16:15 UTC
+## Base Log @ 2026-08-05 21:40 UTC
 
-### ✅ Working Streams: 164<br>❌ Dead Streams: 11
+### ✅ Working Streams: 174<br>❌ Dead Streams: 7
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC One | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2359.ts` |
-| CNN | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2608.ts` |
-| ESPN Deportes | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2578.ts` |
+| Bravo TV | cURL Error (28) | `http://41.205.93.154/BRAVO/index.m3u8` |
+| ESPN | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3636.ts` |
 | ITV1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/527497.ts` |
-| MeTV Toons | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/721378.ts` |
-| NBC News NOW | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/638808.ts` |
-| NewsNation | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/647784.ts` |
-| STV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2168.ts` |
-| Sky Sports Main Event | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2185.ts` |
-| Starz Encore Classic | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts` |
-| TLC | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2594.ts` |
+| MGM Plus Marquee | HTTP Error (500) | `https://sra72yz.s.gy/MGM_PLUS_MARQUEE_SD` |
+| Premier Sports 2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89090.ts` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/74683.ts` |
+| Sportsnet 360 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3073.ts` |
 ---
 #### Base Channels URL
 ```
