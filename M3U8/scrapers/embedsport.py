@@ -5,7 +5,7 @@ from collections.abc import KeysView
 from dataclasses import dataclass
 from functools import partial
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from .utils import Cache, Event, Time, get_logger, leagues, network
 

@@ -7,7 +7,7 @@ from itertools import chain
 from typing import Any
 from urllib.parse import urljoin
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from .utils import Cache, Event, Time, get_logger, leagues, network
 

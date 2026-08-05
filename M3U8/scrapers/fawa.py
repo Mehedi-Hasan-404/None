@@ -2,7 +2,7 @@ import re
 from functools import partial
 from urllib.parse import quote, urljoin
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from .utils import Cache, Event, Time, get_logger, leagues, network
 
