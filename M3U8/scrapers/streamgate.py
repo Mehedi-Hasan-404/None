@@ -29,7 +29,7 @@ API_URLS = [
         # "cfb",
         "mlb",
         "nba",
-        # "nfl",
+        "nfl",
         # "nhl",
         "soccer",
         "ufc",
