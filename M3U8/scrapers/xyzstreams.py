@@ -19,7 +19,7 @@ BASE_URL = "https://xyzstreams.st/"
 
 SPORTS = [
     "MLB",
-    # "WNBA",
+    "WNBA",
     # "NBA",
     # "NHL",
     # "NFL",
