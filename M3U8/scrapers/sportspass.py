@@ -26,7 +26,7 @@ SPORT_URLS = {
         "MLB",
         # "MMA",
         # "NBA",
-        # "NFL",
+        "NFL",
         # "NHL",
         # "Soccer",
     ]
