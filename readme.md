@@ -1,26 +1,18 @@
-## Base Log @ 2026-08-07 00:57 UTC
+## Base Log @ 2026-08-07 09:29 UTC
 
-### ✅ Working Streams: 164<br>❌ Dead Streams: 17
+### ✅ Working Streams: 172<br>❌ Dead Streams: 9
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| CW | HTTP Error (404) | `https://gpuserver3.tier1streams.com/CW/index.m3u8` |
-| Dabl | HTTP Error (404) | `http://40.160.24.56/DABL/index.m3u8` |
+| CNN | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2608.ts` |
+| CW | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/90546.ts` |
+| Cooking Channel | HTTP Error (404) | `http://23.237.104.106:8080/USA_COOKING/index.m3u8` |
 | HBO Comedy | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts` |
-| ITV1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/527497.ts` |
-| MGM Plus | cURL Error (28) | `https://gpuserver3.tier1streams.com/EPIX/index.m3u8` |
-| NBC Sports Bay Area | HTTP Error (404) | `https://gpuserver7.tier1streams.com/NBC_SPORTS_NETWORK/index.m3u8` |
-| NHL Network | HTTP Error (404) | `https://gpuserver5.tier1streams.com/NHL_NETWORK/index.m3u8` |
-| Premier Sports 2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89090.ts` |
-| Sky Sports Main Event | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2185.ts` |
-| Sony Movie Channel | HTTP Error (404) | `https://gpuserver5.tier1streams.com/SONY_MOVIES/index.m3u8` |
-| Spectrum SportsNet LA Dodgers | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/74683.ts` |
-| TNT Sports 1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2337.ts` |
-| TSN 2 | HTTP Error (404) | `https://gpuserver5.tier1streams.com/TSN_2/index.m3u8` |
-| TSN 3 | HTTP Error (404) | `https://gpuserver5.tier1streams.com/TSN_3/index.m3u8` |
-| TSN 4 | HTTP Error (404) | `https://gpuserver5.tier1streams.com/TSN_4/index.m3u8` |
-| TSN 5 | HTTP Error (404) | `https://gpuserver5.tier1streams.com/TSN_5/index.m3u8` |
-| beIN Sports 1 France | HTTP Error (404) | `https://tv.streamboxtv.cc:443/testlivestream/testlivestream/4194` |
+| IFC | HTTP Error (404) | `http://23.237.104.106:8080/USA_IFC/index.m3u8` |
+| MGM Plus Marquee | HTTP Error (500) | `https://sra72yz.s.gy/MGM_PLUS_MARQUEE_SD` |
+| One America News | HTTP Error (404) | `https://gpuserver5.tier1streams.com/ONE_AMERICA_NEWS/index.m3u8` |
+| SEC Network | cURL Error (28) | `http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8` |
+| STV | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2168.ts` |
 ---
 #### Base Channels URL
 ```
