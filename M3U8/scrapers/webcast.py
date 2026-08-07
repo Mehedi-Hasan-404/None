@@ -17,9 +17,9 @@ TAG = "WEBCAST"
 CACHE_FILE = Cache(TAG, exp=12_600)
 
 BASE_URLS = {
-    "MLB": "https://mlbwebcast.com",
-    "NFL": "https://nflwebcast.com",
-    # "NHL": "https://slapstreams.com",
+    "MLB": {"base": "https://mlbwebcast.com", "api": "stream/check_stream.php"},
+    "NFL": {"base": "https://nflwebcast.com", "api": "live/check_stream.php"},
+    # "NHL": {"base": "https://slapstreams.com", "api-check": ""},
 }
 
 
@@ -33,8 +33,7 @@ async def process_event(
     sport: str,
 ) -> str | None:
 
-    if not (event_data := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url.")
+    if not (event_data := await network.request(url, url_num, log=log)):
         return
 
     soup = HTMLParser(event_data.content)
@@ -47,14 +46,17 @@ async def process_event(
         log.warning(f"URL {url_num}) No iframe source found.")
         return
 
+    elif iframe_src.lower() == "about:blank":
+        iframe_src = iframe.attributes.get("data-litespeed-src")
+
     if not (
         iframe_src_data := await network.request(
             iframe_src,
+            url_num,
             headers={"Referer": url},
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load iframe source.")
         return
 
     pattern = re.compile(r'var\s+\w*=\[([^"]*)\];', re.I)
@@ -73,13 +75,13 @@ async def process_event(
 
     if not (
         api_data := await network.request(
-            urljoin(BASE_URLS[sport], "stream/check_stream.php"),
+            urljoin(BASE_URLS[sport]["base"], BASE_URLS[sport]["api"]),
+            url_num,
             headers={"Referer": iframe_src},
             params=params,
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to make php request.")
         return
 
     elif (data := api_data.json()).get("error"):
@@ -95,7 +97,9 @@ async def process_event(
 
 
 async def get_events() -> list[Event]:
-    tasks = [network.request(url, log=log) for url in BASE_URLS.values()]
+    tasks = [
+        network.request(url, log=log) for url in (i["base"] for i in BASE_URLS.values())
+    ]
 
     results = await asyncio.gather(*tasks)
 
@@ -107,7 +111,10 @@ async def get_events() -> list[Event]:
         return events
 
     for soup, url in soups:
-        sport = next((k for k, v in BASE_URLS.items() if v == url), "Live Event")
+        sport = next(
+            (k for k, v in BASE_URLS.items() if v["base"] == url),
+            "Live Event",
+        )
 
         for row in soup.css("tr.singele_match_date"):
             if not (vs_node := row.css_first("td.teamvs a")):
@@ -142,7 +149,7 @@ async def scrape() -> None:
 
         return
 
-    log.info(f'Scraping from "{' & '.join(BASE_URLS.values())}"')
+    log.info(f'Scraping from "{' & '.join(i["base"] for i in BASE_URLS.values())}"')
 
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
@@ -171,7 +178,7 @@ async def scrape() -> None:
             entry = {
                 "source": source,
                 "logo": logo,
-                "refer": BASE_URLS[ev.sport],
+                "refer": BASE_URLS[ev.sport]["base"],
                 "timestamp": now.timestamp(),
                 "tvg-id": tvg_id or "Live.Event.us",
                 "link": ev.link,

@@ -33,17 +33,19 @@ async def process_event(url_num: int, event_id: str) -> str | None:
     if not (
         event_data := await network.request(
             "https://embedfootball.site/ppv/",
+            url_num,
             params={"id": event_id},
             headers={"Referer": BASE_URL},
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load url.")
+        return
 
     pattern = re.compile(r'const\s+stream\s+=\s+"([^"]*)"', re.I)
 
     if not (match := pattern.search(event_data.text)):
         log.warning(f"URL {url_num}) No source found.")
+        return
 
     log.info(f"URL {url_num}) Captured M3U8")
 

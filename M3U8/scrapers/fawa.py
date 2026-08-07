@@ -18,9 +18,7 @@ BASE_URL = "http://www.fawanews.sc/"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
-    if not (html_data := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url.")
-
+    if not (html_data := await network.request(url, url_num, log=log)):
         return
 
     valid_m3u8 = re.compile(
@@ -30,7 +28,6 @@ async def process_event(url: str, url_num: int) -> str | None:
 
     if not (match := valid_m3u8.search(html_data.text)):
         log.warning(f"URL {url_num}) No M3U8 found")
-
         return
 
     log.info(f"URL {url_num}) Captured M3U8")

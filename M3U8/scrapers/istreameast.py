@@ -20,8 +20,7 @@ BASE_URL = "https://thestreameast.top"
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
     nones = None, None
 
-    if not (event_data := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url.")
+    if not (event_data := await network.request(url, url_num, log=log)):
         return nones
 
     soup = HTMLParser(event_data.content)
@@ -30,11 +29,11 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) No iframe element found.")
         return nones
 
-    if not (iframe_src := iframe.attributes.get("src")):
+    elif not (iframe_src := iframe.attributes.get("src")):
         log.warning(f"URL {url_num}) No iframe source found.")
         return nones
 
-    if not (iframe_src_data := await network.request(iframe_src, log=log)):
+    elif not (iframe_src_data := await network.request(iframe_src, log=log)):
         log.warning(f"URL {url_num}) Failed to load iframe source.")
         return nones
 

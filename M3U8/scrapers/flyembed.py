@@ -22,8 +22,8 @@ def clean_name(s: str) -> str:
     return re.sub(r"(\r|\n)", "", s).strip()
 
 
-def clean_m3u(s: str) -> str:
-    return re.sub(r"\.live\n", ".pro", s)
+# def clean_m3u(s: str) -> str:
+#     return re.sub(r"\.live\n", ".pro", s)
 
 
 async def process_event(
@@ -215,8 +215,6 @@ async def scrape(browser: Browser) -> None:
 
                     if source:
                         valid_count += 1
-
-                        entry["source"] = clean_m3u(source)
 
                         urls[key] = entry
 

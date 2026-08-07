@@ -41,23 +41,10 @@ def clean_m3u(s: str) -> str:
     return re.sub(r"\.live\n", ".pro", s)
 
 
-def get_event(t1: str, t2: str) -> str:
-    match t1:
-        case "RED ZONE":
-            return "NFL RedZone"
-
-        case "TBD":
-            return "TBD"
-
-        case _:
-            return f"{t1.strip()} vs {t2.strip()}"
-
-
 async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
     nones = None, None
 
-    if not (event_data := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url.")
+    if not (event_data := await network.request(url, url_num, log=log)):
         return nones
 
     soup = HTMLParser(event_data.content)
@@ -73,11 +60,11 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
     if not (
         ifr_src_data := await network.request(
             ifr_src,
+            url_num,
             headers={"Referer": url},
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load iframe source.")
         return nones
 
     valid_m3u8 = re.compile(
@@ -152,7 +139,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
         if len(sport_splits := sport.split(":", 1)) > 1:
             sport = sport_splits[0].strip()
 
-        name = get_event(t1, t2)
+        name = f"{t1.strip()} vs {t2.strip()}"
 
         stream_urls: dict[str, str | None] = {
             stream.get("lang") or "EN": stream.get("url")

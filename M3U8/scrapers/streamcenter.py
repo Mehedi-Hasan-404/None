@@ -22,8 +22,7 @@ def cleanup(s: str) -> str:
 
 
 async def process_event(url: str, url_num: int) -> str | None:
-    if not (html_data := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url.")
+    if not (html_data := await network.request(url, url_num, log=log)):
         return
 
     soup = HTMLParser(html_data.content)
@@ -37,11 +36,11 @@ async def process_event(url: str, url_num: int) -> str | None:
     if not (
         iframe_src_data := await network.request(
             network.ensure_https(src),
+            url_num,
             headers={"Referer": url},
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load iframe source.")
         return
 
     pattern = re.compile(r'input:\s+"([^"]*)"', re.I)
@@ -50,12 +49,12 @@ async def process_event(url: str, url_num: int) -> str | None:
         log.warning(f"URL {url_num}) No encrypted URL found.")
         return
 
-    if not (
-        decrypted := await network.client.post(
-            urljoin(BASE_URL, "embed/decrypt.php"),
-            data={"input": match[1]},
-        )
-    ):
+    decrypted = await network.client.post(
+        urljoin(BASE_URL, "embed/decrypt.php"),
+        data={"input": match[1]},
+    )
+
+    if not decrypted.is_success:
         log.warning(f"URL {url_num}) Failed to decrypt URL.")
         return
 

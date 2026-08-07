@@ -22,11 +22,11 @@ async def process_event(url: str, url_num: int) -> str | None:
     if not (
         event_data := await network.request(
             url,
+            url_num,
             headers={"Referer": BASE_URL},
             log=log,
         )
     ):
-        log.warning(f"URL {url_num}) Failed to load url.")
         return
 
     digit_func_ptrn = re.compile(r"{return\s+(\d*);}", re.I)

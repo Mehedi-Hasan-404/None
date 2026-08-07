@@ -18,8 +18,7 @@ BASE_URL = "https://streamtp99a.sbs"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
-    if not (html_data := await network.request(url, log=log)):
-        log.warning(f"URL {url_num}) Failed to load url.")
+    if not (html_data := await network.request(url, url_num, log=log)):
         return
 
     valid_m3u8 = re.compile(r'var\s+playbackURL\s+=\s+"([^"]*)"', re.I)
