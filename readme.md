@@ -1,25 +1,17 @@
-## Base Log @ 2026-08-07 15:15 UTC
+## Base Log @ 2026-08-07 21:06 UTC
 
-### ✅ Working Streams: 165<br>❌ Dead Streams: 16
+### ✅ Working Streams: 173<br>❌ Dead Streams: 8
 
 | Channel | Error (Code) | Link |
 | ------- | ------------ | ---- |
-| BBC One | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2359.ts` |
-| MeTV Toons | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/721378.ts` |
-| NBC Sports Bay Area | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2436.ts` |
+| CNN International | HTTP Error (403) | `https://rb.gy/esnpvn` |
+| Discovery Life | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2597.ts` |
+| HBO Comedy | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts` |
+| MGM Plus Marquee | HTTP Error (500) | `https://sra72yz.s.gy/MGM_PLUS_MARQUEE_SD` |
 | NBC Sports Boston | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2435.ts` |
-| Premier Sports 2 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/89090.ts` |
-| Sky Sports Football | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=SKYSPORTSFOOTBALLUK` |
-| Sky Sports Main Event | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=SKYSPORTSMAINEVENT` |
-| Sky Sports News | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=SKYSPORTSNEWS` |
-| Sky Sports Premier League | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=SKYSPORTSPREMIERLEAGUE` |
-| Sportsnet East | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3072.ts` |
-| TNT Sports 1 | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2337.ts` |
-| TSN 2 | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=TSN2` |
-| TSN 3 | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=TSN3` |
-| TSN 4 | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=TSN4` |
-| TSN 5 | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=TSN5` |
-| beIN Sports 1 France | HTTP Error (429) | `https://ftv.itscwd273.workers.dev/?id=BEINSPORT1FR` |
+| Spectrum SportsNet LA Dodgers | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/74683.ts` |
+| Sportsnet One | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3071.ts` |
+| beIN Sports en Español | HTTP Error (500) | `http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21586.ts` |
 ---
 #### Base Channels URL
 ```
