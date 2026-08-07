@@ -85,7 +85,7 @@ async def get_sports_map() -> dict[str, dict[str, dict[str, str]]]:
     replaces = {
         "MLB": {
             "CWS": "CHW",
-            "OAK": "ATH",
+            # "OAK": "ATH",
             "AZ": "ARI",
             "WAS": "WSH",
         },
