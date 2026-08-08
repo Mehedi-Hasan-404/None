@@ -123,11 +123,12 @@ check_links() {
 }
 
 write_readme() {
-    local commits="https://github.com/doms9/iptv/commits/default"
     local base="https://s.id/d9M3U8"
     local live="https://s.id/d9Live"
     local combined="https://s.id/d9M3U8"
     local epg="https://s.id/d9sEPG"
+
+    local commits="https://github.com/doms9/iptv/commits/default"
 
     local datefmt="%Y-%m-%d %H:%M %Z"
     local TZ IFS url channel error
@@ -141,8 +142,9 @@ write_readme() {
     {
         echo -e "<h1 align='center'>\U1F4FA IPTV</h1>"
         echo "<p align='center'>"
-        printf "<a href='%s'><img src='%s'></a>\n" "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
         printf "<a href='%s'><img src='%s'></a>\n" "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
+        printf "<a href='%s'><img src='%s'></a>\n" "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
+        printf "<img src='%s'>\n" "https://img.shields.io/github/license/doms9/iptv"
         printf "<img src='%s'>\n" "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
         echo "</p><br>"
         echo
