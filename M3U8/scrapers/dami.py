@@ -26,12 +26,6 @@ class DAMIEvent(Event):
 
 
 async def process_event(stream_id: str, url_num: int) -> str | None:
-    # url = (
-    #     urljoin(BASE_URL, f"papi/dl/stream/{quote(stream_id)}")
-    #     if stream_id.startswith("dl-")
-    #     else urljoin(BASE_URL, f"papi/extract-url/{stream_id}")
-    # )
-
     if not (
         event_data := await network.request(
             urljoin(BASE_URL, f"papi/extract-url/{stream_id}"),
@@ -44,12 +38,6 @@ async def process_event(stream_id: str, url_num: int) -> str | None:
     elif not (api_data := event_data.json()).get("success"):
         log.warning(f"URL {url_num}) Unsuccessful Request: {api_data.get("error")}")
         return
-
-    # m3u8: str | None = (
-    #     api_data.get("stream")
-    #     if stream_id.startswith("dl-")
-    #     else api_data.get("hlsUrl", api_data.get("sdUrl"))
-    # )
 
     if not (m3u8 := api_data.get("hlsUrl", api_data.get("sdUrl"))):
         log.warning(f"URL {url_num}) No source found.")
@@ -100,6 +88,9 @@ async def get_events(cached_keys: KeysView[str]) -> list[DAMIEvent]:
                 continue
 
             name, sport, start_ts, stream_id = values
+
+            if stream_id.lower().startswith("dl-"):
+                continue
 
             event_dt = Time.from_ts(start_ts)
 
