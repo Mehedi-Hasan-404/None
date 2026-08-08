@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
 MAX_JOBS=10
 BASE_FILE="./M3U8/base.m3u8"
@@ -15,7 +16,7 @@ get_status() {
     local channel="$2"
     local index="$3"
     local total="$4"
-    local response
+    local chnl_info response rc IFS status content_type
 
     [[ $url != http* ]] && return
 
@@ -47,7 +48,7 @@ get_status() {
         else
             printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
 
-            echo "| $channel | cURL Error ($rc) | \`$url\` |" >>"$STATUSLOG"
+            echo "| [$channel]($url) | cURL Error ($rc) |" >>"$STATUSLOG"
 
             echo "FAIL" >>"$STATUSLOG"
         fi
@@ -55,54 +56,57 @@ get_status() {
     elif [[ $status != 2* ]]; then
         printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
 
-        echo "| $channel | HTTP Error ($status) | \`$url\` |" >>"$STATUSLOG"
+        echo "| [$channel]($url) | HTTP Error ($status) |" >>"$STATUSLOG"
 
         echo "FAIL" >>"$STATUSLOG"
 
     else
         case "$content_type" in
 
-            application/vnd.apple.mpegurl* | \
-                application/x-mpegURL* | \
-                application/octet-stream* | \
-                video/mpeg* | \
-                video/mp2t* | \
-                text/plain*)
+        application/vnd.apple.mpegurl* | \
+            application/x-mpegURL* | \
+            application/octet-stream* | \
+            video/mpeg* | \
+            video/mp2t* | \
+            text/plain*)
 
-                printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
+            printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
 
-                echo "PASS" >>"$STATUSLOG"
-                ;;
+            echo "PASS" >>"$STATUSLOG"
+            ;;
 
-            text/html* | *)
+        text/html* | *)
 
-                printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+            printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
 
-                echo "| $channel | Invalid M3U8 ($status) | \`$url\` |" >>"$STATUSLOG"
+            echo "| [$channel]($url) | Invalid M3U8 ($status) |" >>"$STATUSLOG"
 
-                echo "FAIL" >>"$STATUSLOG"
-                ;;
+            echo "FAIL" >>"$STATUSLOG"
+            ;;
         esac
     fi
 }
 
 check_links() {
-    total_urls=$(grep -cE '^https?://' "$BASE_FILE")
-    channel_num=0
-    name=""
 
-    printf "Checking %d links from %s\n" "$total_urls" "$BASE_FILE"
+    # shellcheck disable=SC2155
+    local total_urls=$(grep -cE '^https?://' "$BASE_FILE")
+    local channel_num=0
+    local name=""
+    local line
 
-    echo "| Channel | Error (Code) | Link |" >"$STATUSLOG"
-    echo "| ------- | ------------ | ---- |" >>"$STATUSLOG"
+    printf "Checking %d links from %s\n\n" "$total_urls" "$BASE_FILE"
+
+    echo "| Channel | Error (Code) |" >"$STATUSLOG"
+    echo "| ------- | ------------ |" >>"$STATUSLOG"
 
     while IFS= read -r line; do
         line=${line//$'\r'/}
 
         if [[ $line == \#EXTINF* ]]; then
-            name=$(echo "$line" | sed -n 's/.*tvg-name="\([^"]*\)".*/\1/p')
+            name=$(sed -n 's/.*tvg-name="\([^"]*\)".*/\1/p' <<<"$line")
 
-            [[ -z $name ]] && name="Channel $channel_num"
+            [[ -z $name ]] && name="Channel $((channel_num + 1))"
 
         elif [[ $line =~ ^https?:// ]]; then
             while (($(jobs -rp | wc -l) >= MAX_JOBS)); do wait -n; done
@@ -119,31 +123,45 @@ check_links() {
 }
 
 write_readme() {
-    local passed failed
+    local commits="https://github.com/doms9/iptv/commits/default"
+    local base="https://s.id/d9M3U8"
+    local live="https://s.id/d9Live"
+    local combined="https://s.id/d9M3U8"
+    local epg="https://s.id/d9sEPG"
 
-    passed=$(grep -c '^PASS$' "$STATUSLOG")
-    failed=$(grep -c '^FAIL$' "$STATUSLOG")
+    # shellcheck disable=SC2155
+    local passed=$(grep -c '^PASS$' "$STATUSLOG")
+
+    # shellcheck disable=SC2155
+    local failed=$(grep -c '^FAIL$' "$STATUSLOG")
 
     {
+        echo -e '<h1 align="center">\U1F4FA IPTV</h1>'
+        echo '<p align="center">'
+        printf '<a href="%s"><img src="%s"></a>\n' "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
+        printf '<a href="%s"><img src="%s"></a>\n' "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
+        printf '<img src="%s">\n' "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
+        echo "</p><br>"
+        echo
         echo "## Base Log @ $(TZ="UTC" date "+%Y-%m-%d %H:%M %Z")"
         echo
-        echo "### ✅ Working Streams: $passed<br>❌ Dead Streams: $failed"
+        printf "### ✅ Working Streams: %d<br>❌ Dead Streams: %d" "$passed" "$failed"
         echo
 
         if ((failed > 0)); then
-            head -n 1 "$STATUSLOG"
+            head -1 "$STATUSLOG"
             grep -v -e '^PASS$' -e '^FAIL$' -e '^---' "$STATUSLOG" | grep -v '^| Channel' | sort -u
         fi
 
         echo "---"
-        echo "#### Base Channels URL"
-        echo -e "\`\`\`\nhttps://s.id/d9Base\n\`\`\`\n"
-        echo "#### Live Events URL"
-        echo -e "\`\`\`\nhttps://s.id/d9Live\n\`\`\`\n"
-        echo "#### Combined (Base + Live Events) URL"
-        echo -e "\`\`\`\nhttps://s.id/d9M3U8\n\`\`\`\n"
-        echo "#### EPG URL"
-        echo -e "\`\`\`\nhttps://s.id/d9sEPG\n\`\`\`\n"
+        echo "#### Base Channels"
+        echo -e "\`\`\`\n$base\n\`\`\`\n"
+        echo "#### Live Events"
+        echo -e "\`\`\`\n$live\n\`\`\`\n"
+        echo "#### Combined (Base Channels + Live Events)"
+        echo -e "\`\`\`\n$combined\n\`\`\`\n"
+        echo "#### EPG"
+        echo -e "\`\`\`\n$epg\n\`\`\`\n"
         echo "---"
         echo "#### Mirrors"
         echo -n "[GitHub](https://github.com/doms9/iptv) | "
