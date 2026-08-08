@@ -5,9 +5,9 @@
 <img src='https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff'>
 </p><br>
 
-<h2 align='center'>Base Log @ 2026-08-08 09:07 UTC</h2>
+<h2 align='center'>Base Log @ 2026-08-08 14:55 UTC</h2>
 
-<h3 align='center'>✅ Working Streams: 156<br>❌ Dead Streams: 25</h3>
+<h3 align='center'>✅ Working Streams: 158<br>❌ Dead Streams: 23</h3>
 
 <table align='center'>
 <thead>
@@ -20,15 +20,15 @@
 <tr><td><a href='http://79.143.16.38/cloud/stream/234/ssmehvec.ts'>Sky Sports Main Event</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='http://79.143.16.38/cloud/stream/236/ssfoothvec.ts'>Sky Sports Football</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='http://79.143.16.38/cloud/stream/247/psports1fhd.ts'>Premier Sports 1</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21586.ts'>beIN Sports en Español</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2412.ts'>Sony Movie Channel</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3073.ts'>Sportsnet 360</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3142.ts'>TSN 5</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3144.ts'>TSN 3</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/332892.ts'>Altitude Sports</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts'>Starz Encore Classic</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/512561.ts'>Spectrum SportsNet Lakers</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts'>HBO Comedy</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21585.ts'>beIN Sports USA</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21586.ts'>beIN Sports en Español</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2436.ts'>NBC Sports Bay Area</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2598.ts'>Discovery Family Channel</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3071.ts'>Sportsnet One</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts'>TSN 2</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/332892.ts'>Altitude Sports</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3953.ts'>Starz Encore Classic</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/721378.ts'>MeTV Toons</a></td><td>HTTP Error (500)</td></tr>
 <tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/74683.ts'>Spectrum SportsNet LA Dodgers</a></td><td>HTTP Error (500)</td></tr>
 <tr><td><a href='https://gpuserver3.tier1streams.com/ASPIRE/index.m3u8'>Aspire</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver3.tier1streams.com/AXS_TV/index.m3u8'>AXS TV</a></td><td>HTTP Error (404)</td></tr>
@@ -37,8 +37,6 @@
 <tr><td><a href='https://gpuserver3.tier1streams.com/C-SPAN_HD/index.m3u8'>C-SPAN</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver3.tier1streams.com/CHEDDAR_BUSINESS/index.m3u8'>Cheddar</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver3.tier1streams.com/CNBC_WORLD/index.m3u8'>CNBC World</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/NEWSNATION/index.m3u8'>NewsNation</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://sra72yz.s.gy/MGM_PLUS_MARQUEE_SD'>MGM Plus Marquee</a></td><td>HTTP Error (500)</td></tr>
 </tbody>
 </table>
 
