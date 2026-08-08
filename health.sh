@@ -16,7 +16,7 @@ get_status() {
     local channel="$2"
     local index="$3"
     local total="$4"
-    local chnl_info response rc IFS status content_type
+    local chnl_info response rc IFS status_code content_type
 
     [[ $url != http* ]] && return
 
@@ -37,26 +37,28 @@ get_status() {
 
     rc=$?
 
-    IFS="|" read -r status content_type <<<"$response"
+    IFS="|" read -r status_code content_type <<<"$response"
 
     if ((rc != 0)); then
-        if [[ $status == 2* && $rc == 28 ]]; then
-            printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
+        if [[ $status_code == 2* && $rc == 28 ]]; then
+            printf "[%d/%d] ✔️  %s" "$((index + 1))" "$total" "$chnl_info"
 
             echo "PASS" >>"$STATUSLOG"
 
         else
-            printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+            printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
 
-            echo "| [$channel]($url) | cURL Error ($rc) |" >>"$STATUSLOG"
+            printf "<tr><td><a href='%s'>%s</a></td><td>cURL Error (%s)</td></tr>\n" \
+                "$url" "$channel" "$rc" >>"$STATUSLOG"
 
             echo "FAIL" >>"$STATUSLOG"
         fi
 
-    elif [[ $status != 2* ]]; then
-        printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+    elif [[ $status_code != 2* ]]; then
+        printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
 
-        echo "| [$channel]($url) | HTTP Error ($status) |" >>"$STATUSLOG"
+        printf "<tr><td><a href='%s'>%s</a></td><td>HTTP Error (%s)</td></tr>\n" \
+            "$url" "$channel" "$status_code" >>"$STATUSLOG"
 
         echo "FAIL" >>"$STATUSLOG"
 
@@ -70,16 +72,17 @@ get_status() {
             video/mp2t* | \
             text/plain*)
 
-            printf '[%d/%d] ✔️  %s' "$((index + 1))" "$total" "$chnl_info"
+            printf "[%d/%d] ✔️  %s" "$((index + 1))" "$total" "$chnl_info"
 
             echo "PASS" >>"$STATUSLOG"
             ;;
 
         text/html* | *)
 
-            printf '[%d/%d] ❌  %s' "$((index + 1))" "$total" "$chnl_info"
+            printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
 
-            echo "| [$channel]($url) | Invalid M3U8 ($status) |" >>"$STATUSLOG"
+            printf "<tr><td><a href='%s'>%s</a></td><td>Invalid M3U8 (%s)</td></tr>\n" \
+                "$url" "$channel" "$status_code" >>"$STATUSLOG"
 
             echo "FAIL" >>"$STATUSLOG"
             ;;
@@ -93,12 +96,9 @@ check_links() {
     local total_urls=$(grep -cE '^https?://' "$BASE_FILE")
     local channel_num=0
     local name=""
-    local line
+    local IFS line
 
     printf "Checking %d links from %s\n\n" "$total_urls" "$BASE_FILE"
-
-    echo "| Channel | Error (Code) |" >"$STATUSLOG"
-    echo "| ------- | ------------ |" >>"$STATUSLOG"
 
     while IFS= read -r line; do
         line=${line//$'\r'/}
@@ -129,6 +129,9 @@ write_readme() {
     local combined="https://s.id/d9M3U8"
     local epg="https://s.id/d9sEPG"
 
+    local datefmt="%Y-%m-%d %H:%M %Z"
+    local TZ
+
     # shellcheck disable=SC2155
     local passed=$(grep -c '^PASS$' "$STATUSLOG")
 
@@ -136,24 +139,34 @@ write_readme() {
     local failed=$(grep -c '^FAIL$' "$STATUSLOG")
 
     {
-        echo -e '<h1 align="center">\U1F4FA IPTV</h1>'
-        echo '<p align="center">'
-        printf '<a href="%s"><img src="%s"></a>\n' "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
-        printf '<a href="%s"><img src="%s"></a>\n' "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
-        printf '<img src="%s">\n' "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
+        echo -e "<h1 align='center'>\U1F4FA IPTV</h1>"
+        echo "<p align='center'>"
+        printf "<a href='%s'><img src='%s'></a>\n" "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
+        printf "<a href='%s'><img src='%s'></a>\n" "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
+        printf "<img src='%s'>\n" "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
         echo "</p><br>"
         echo
-        echo "## Base Log @ $(TZ="UTC" date "+%Y-%m-%d %H:%M %Z")"
+        TZ="UTC" printf "<h2 align='center'>Base Log @ %($datefmt)T</h2>\n" -1
         echo
-        printf "### ✅ Working Streams: %d<br>❌ Dead Streams: %d" "$passed" "$failed"
+        printf "<h3 align='center'>✅ Working Streams: %d<br>❌ Dead Streams: %d</h3>\n" \
+            "$passed" "$failed"
+
         echo
 
         if ((failed > 0)); then
-            head -1 "$STATUSLOG"
-            grep -v -e '^PASS$' -e '^FAIL$' -e '^---' "$STATUSLOG" | grep -v '^| Channel' | sort -u
+            echo "<table align='center'>"
+            echo "<thead>"
+            echo "<tr><th align='center'>Channel</th><th align='center'>Error (Code)</th></tr>"
+            echo "</thead>"
+            echo "<tbody>"
+
+            grep -v -e '^PASS$' -e '^FAIL$' "$STATUSLOG" | sort -u
+
+            echo "</tbody>"
+            echo "</table>"
         fi
 
-        echo "---"
+        echo -e "\n---"
         echo "#### Base Channels"
         echo -e "\`\`\`\n$base\n\`\`\`\n"
         echo "#### Live Events"
