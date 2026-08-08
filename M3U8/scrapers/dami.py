@@ -93,14 +93,13 @@ async def get_events(cached_keys: KeysView[str]) -> list[DAMIEvent]:
                         "name",
                         "league",
                         "starts_at",
-                        "poster",
                         "id",
                     )
                 ]
             ):
                 continue
 
-            name, sport, start_ts, logo, stream_id = values
+            name, sport, start_ts, stream_id = values
 
             event_dt = Time.from_ts(start_ts)
 
@@ -114,9 +113,9 @@ async def get_events(cached_keys: KeysView[str]) -> list[DAMIEvent]:
                 DAMIEvent(
                     sport=sport,
                     name=name,
+                    logo=event.get("poster"),
                     stream_id=stream_id,
                     timestamp=event_dt.timestamp(),
-                    logo=logo,
                 )
             )
 
