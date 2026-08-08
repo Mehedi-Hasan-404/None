@@ -48,7 +48,7 @@ get_status() {
         else
             printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
 
-            printf "<tr><td><a href='%s'>%s</a></td><td>cURL Error (%s)</td></tr>\n" \
+            printf "%s\t%s\tcURL Error (%s)\n" \
                 "$url" "$channel" "$rc" >>"$STATUSLOG"
 
             echo "FAIL" >>"$STATUSLOG"
@@ -57,7 +57,7 @@ get_status() {
     elif [[ $status_code != 2* ]]; then
         printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
 
-        printf "<tr><td><a href='%s'>%s</a></td><td>HTTP Error (%s)</td></tr>\n" \
+        printf "%s\t%s\tHTTP Error (%s)\n" \
             "$url" "$channel" "$status_code" >>"$STATUSLOG"
 
         echo "FAIL" >>"$STATUSLOG"
@@ -81,7 +81,7 @@ get_status() {
 
             printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
 
-            printf "<tr><td><a href='%s'>%s</a></td><td>Invalid M3U8 (%s)</td></tr>\n" \
+            printf "%s\t%s\tInvalid M3U8 (%s)\n" \
                 "$url" "$channel" "$status_code" >>"$STATUSLOG"
 
             echo "FAIL" >>"$STATUSLOG"
@@ -130,7 +130,7 @@ write_readme() {
     local epg="https://s.id/d9sEPG"
 
     local datefmt="%Y-%m-%d %H:%M %Z"
-    local TZ
+    local TZ IFS url channel error
 
     # shellcheck disable=SC2155
     local passed=$(grep -c '^PASS$' "$STATUSLOG")
@@ -160,7 +160,13 @@ write_readme() {
             echo "</thead>"
             echo "<tbody>"
 
-            grep -v -e '^PASS$' -e '^FAIL$' "$STATUSLOG" | sort -u
+            sort -V -t $'\t' -k 2,2 -u -f "$STATUSLOG" |
+                while IFS=$'\t' read -r url channel error; do
+                    if [[ ! $url =~ ^(PASS|FAIL)$ ]]; then
+                        printf "<tr><td><a href='%s'>%s</a></td><td>%s</td></tr>\n" \
+                            "$url" "$channel" "$error"
+                    fi
+                done
 
             echo "</tbody>"
             echo "</table>"
