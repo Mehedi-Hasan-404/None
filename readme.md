@@ -6,22 +6,20 @@
 <img src='https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff'>
 </p><br>
 
-<h2 align='center'>Base Log @ 2026-08-08 20:55 UTC</h2>
+<h2 align='center'>Base Log @ 2026-08-09 09:09 UTC</h2>
 
-<h3 align='center'>✅ Working Streams: 173<br>❌ Dead Streams: 9</h3>
+<h3 align='center'>✅ Working Streams: 175<br>❌ Dead Streams: 7</h3>
 
 <table align='center'>
 <thead>
 <tr><th align='center'>Channel</th><th align='center'>Error (Code)</th></tr>
 </thead>
 <tbody>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/42309.ts'>AXS TV</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://41.205.93.154/BRAVO/index.m3u8'>Bravo TV</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2616.ts'>Cheddar</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='https://bigboss.bemtv.cn/STREAM/1736/playlist.m3u8'>Fox Deportes</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/648977.ts'>HBO Comedy</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2435.ts'>NBC Sports Boston</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3769.ts'>NBC Sports Philadelphia</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/21585.ts'>beIN Sports USA</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/647385.ts'>BET</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://gpuserver3.tier1streams.com/COZI_TV/index.m3u8'>Cozi TV</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://sra72yz.s.gy/MGM_PLUS_MARQUEE_SD'>MGM Plus Marquee</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3071.ts'>Sportsnet One</a></td><td>HTTP Error (500)</td></tr>
 <tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2337.ts'>TNT Sports 1</a></td><td>HTTP Error (500)</td></tr>
 <tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts'>TSN 2</a></td><td>HTTP Error (500)</td></tr>
 </tbody>
