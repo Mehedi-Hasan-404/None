@@ -37,8 +37,7 @@ class ColorFormatter(logging.Formatter):
 
 
 def get_logger(name: str | None = None) -> logging.Logger:
-    if not name:
-        name = Path(__file__).stem
+    name = name or Path(__file__).stem
 
     logger = logging.getLogger(name)
 

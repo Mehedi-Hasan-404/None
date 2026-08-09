@@ -26,7 +26,7 @@ from scrapers import (
 )
 from scrapers.utils import get_logger, network
 
-log = get_logger(__name__)
+log = get_logger(Path(__file__).stem)
 
 BASE_FILE = Path(__file__).parent / "base.m3u8"
 

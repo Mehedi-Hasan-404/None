@@ -7,7 +7,7 @@ from xml.etree import ElementTree as ET
 
 from scrapers.utils import get_logger, leagues, network
 
-log = get_logger(__name__)
+log = get_logger(Path(__file__).stem)
 
 BASE_M3U8 = Path(__file__).parent / "base.m3u8"
 
@@ -22,15 +22,14 @@ EPG_URLS = [
         # "ES1",
         # "FANDUEL1",
         "FR1",
-        # "PEACOCK1",
-        "PLEX1",
+        "PEACOCK1",
+        # "PLEX1",
         "UK1",
         "US2",
         # "UY1",
         "US_LOCALS1",
     ]
-    + ["https://i.mjh.nz/PlutoTV/us.xml.gz"]
-]
+] + ["https://i.mjh.nz/PlutoTV/us.xml.gz"]
 
 DUMMIES = {
     **{
