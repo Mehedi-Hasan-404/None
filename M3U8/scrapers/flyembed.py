@@ -60,7 +60,7 @@ async def process_event(
             )
             return nones
 
-        iframe = page.locator("iframe")
+        iframe = page.locator("iframe").first
 
         iframe_src = await iframe.get_attribute("src", timeout=1_500)
 
