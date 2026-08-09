@@ -150,7 +150,7 @@ write_readme() {
         echo
         TZ="UTC" printf "<h2 align='center'>Base Log @ %($datefmt)T</h2>\n" -1
         echo
-        printf "<h3 align='center'>✅ Working Streams: %d<br>❌ Dead Streams: %d</h3>\n" \
+        printf "<h3 align='center'>✔️ Working Streams: %d<br>❌ Dead Streams: %d</h3>\n" \
             "$passed" "$failed"
 
         echo
