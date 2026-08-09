@@ -6,21 +6,42 @@
 <img src='https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff'>
 </p><br>
 
-<h2 align='center'>Base Log @ 2026-08-09 14:59 UTC</h2>
+<h2 align='center'>Base Log @ 2026-08-09 20:58 UTC</h2>
 
-<h3 align='center'>✅ Working Streams: 176<br>❌ Dead Streams: 6</h3>
+<h3 align='center'>✅ Working Streams: 155<br>❌ Dead Streams: 27</h3>
 
 <table align='center'>
 <thead>
 <tr><th align='center'>Channel</th><th align='center'>Error (Code)</th></tr>
 </thead>
 <tbody>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/332892.ts'>Altitude Sports</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3716.ts'>CNBC World</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='https://gpuserver3.tier1streams.com/COZI_TV/index.m3u8'>Cozi TV</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://sra72yz.s.gy/MGM_PLUS_MARQUEE_SD'>MGM Plus Marquee</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/2181.ts'>Sky Sports Premier League</a></td><td>HTTP Error (500)</td></tr>
-<tr><td><a href='http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3071.ts'>Sportsnet One</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/332892'>Altitude Sports</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/21630'>Aspire</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/21586'>beIN Sports en Español</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2616'>Cheddar</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3716'>CNBC World</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/92792'>C-SPAN</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2597'>Discovery Life</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/648977'>HBO Comedy</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/527497'>ITV1</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/333485'>MGM Plus</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3724'>MGM Plus Hits</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2436'>NBC Sports Bay Area</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2435'>NBC Sports Boston</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3769'>NBC Sports Philadelphia</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3672'>NHL Network</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/89089'>Premier Sports 1</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/89090'>Premier Sports 2</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2184'>Sky Sports Main Event</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2179'>Sky Sports News</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/74683'>Spectrum SportsNet LA Dodgers</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3073'>Sportsnet 360</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3953'>Starz Encore Classic</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2594'>TLC</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/2337'>TNT Sports 1</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3145'>TSN 2</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3144'>TSN 3</a></td><td>HTTP Error (500)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/69922173979534301/P0ZxXMOVz8qnPU4m/3143'>TSN 4</a></td><td>HTTP Error (500)</td></tr>
 </tbody>
 </table>
 
