@@ -5,9 +5,9 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 from scrapers import (
-    buzz,
     cdnlivetv,
     dami,
+    embedhd,
     embedsport,
     fawa,
     flyembed,
@@ -59,8 +59,8 @@ async def main() -> None:
             xtrnl_brwsr = await network.browser(p, external=True)
 
             pw_tasks = [
-                asyncio.create_task(buzz.scrape(hdl_brwsr)),
                 asyncio.create_task(cdnlivetv.scrape(xtrnl_brwsr)),
+                asyncio.create_task(embedhd.scrape(hdl_brwsr)),
                 asyncio.create_task(flyembed.scrape(xtrnl_brwsr)),
                 asyncio.create_task(playfast.scrape(hdl_brwsr)),
                 asyncio.create_task(sportspass.scrape(xtrnl_brwsr)),
@@ -92,9 +92,9 @@ async def main() -> None:
             await network.client.aclose()
 
     additions = (
-        buzz.urls
-        | cdnlivetv.urls
+        cdnlivetv.urls
         | dami.urls
+        | embedhd.urls
         | embedsport.urls
         | fawa.urls
         | flyembed.urls

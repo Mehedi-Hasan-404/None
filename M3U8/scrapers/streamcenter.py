@@ -14,11 +14,13 @@ TAG = "STRMCNTR"
 
 CACHE_FILE = Cache(TAG, exp=28_800)
 
-BASE_URL = "https://streame.center"
+BASE_URL = "https://streamecenter.live"
+
+ALT_BASE = "https://streame.center"
 
 
 def cleanup(s: str) -> str:
-    return "".join(i for i in s.split("—")[0] if i.isascii()).strip()
+    return "".join(i for i in s.split("—")[-1] if i.isascii()).strip()
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -37,7 +39,7 @@ async def process_event(url: str, url_num: int) -> str | None:
         iframe_src_data := await network.request(
             network.ensure_https(src),
             url_num,
-            headers={"Referer": url},
+            headers={"Referer": ALT_BASE},
             log=log,
         )
     ):
@@ -49,66 +51,69 @@ async def process_event(url: str, url_num: int) -> str | None:
         log.warning(f"URL {url_num}) No encrypted URL found.")
         return
 
-    decrypted = await network.client.post(
-        urljoin(BASE_URL, "embed/decrypt.php"),
+    decrypted_data = await network.client.post(
+        urljoin(ALT_BASE, "embed/decrypt.php"),
         data={"input": match[1]},
     )
 
-    if not decrypted.is_success:
+    if not decrypted_data.is_success:
         log.warning(f"URL {url_num}) Failed to decrypt URL.")
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return decrypted.text.split("?")[0]
+    return decrypted_data.text.split("?")[0]
 
 
 async def get_events() -> list[Event]:
     events: list[Event] = []
 
-    if not (html_data := await network.request(BASE_URL, log=log)):
+    if not (
+        html_data := await network.request(
+            urljoin(BASE_URL, "game-cards/embed"),
+            log=log,
+        )
+    ):
         return events
 
     soup = HTMLParser(html_data.content)
 
     now = Time.clean(Time.now())
 
-    # if not (date_elem := soup.css_first(".tg-header > p")):
-    #     return events
-
-    # elif now.strftime("%A, %B %d, %Y") != date_elem.text(strip=True):
-    #     return events
-
-    for info in soup.css(".tg-cat"):
-        if not (sport_elem := info.css_first("h2")):
+    for card in soup.css(".game-card-group"):
+        if not (sport_elem := card.css_first("h2")):
             continue
 
-        sport = cleanup(sport_elem.text())
-
-        for game in info.css(".tg-game"):
-            if not (event_name_elem := game.css_first(".tg-title")):
+        for game in card.css(".game-card-row"):
+            if not (name_elem := game.css_first("h3")):
                 continue
 
-            event_name = cleanup(event_name_elem.text())
+            if not (event_time_elem := game.css_first(".game-card-when > time")):
+                continue
 
-            for link in game.css(".tg-lang"):
-                if not (event_lang_elem := link.css_first(".tg-watch")):
+            elif not (event_time := event_time_elem.attributes.get("datetime")):
+                continue
+
+            event_dt = Time.fromisoformat(event_time).to_tz("EST")
+
+            if event_dt.date() != now.date():
+                continue
+
+            sport = cleanup(sport_elem.text(strip=True))
+
+            event_name = name_elem.text(strip=True)
+
+            for source in game.css(".game-card-source > a.game-card-open-link"):
+                if not (href := source.attributes.get("href")):
                     continue
 
-                elif not (a_elem := link.css_first("a")) or not (
-                    href := a_elem.attributes.get("href")
-                ):
-                    continue
-
-                event_lang = cleanup(event_lang_elem.text())
+                lang = source.text(strip=True) or "English"
 
                 events.append(
                     Event(
                         sport=sport,
-                        name=(
-                            f"{event_name} | {event_lang}" if event_name else event_lang
-                        ),
-                        link=href,
+                        name=f"{event_name} | {lang}",
+                        link=urljoin(BASE_URL, href),
                         timestamp=now.timestamp(),
                     )
                 )
