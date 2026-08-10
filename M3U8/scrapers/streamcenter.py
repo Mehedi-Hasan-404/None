@@ -107,7 +107,7 @@ async def get_events() -> list[Event]:
                 if not (href := source.attributes.get("href")):
                     continue
 
-                lang = source.text(strip=True) or "English"
+                lang = source.text(strip=True)
 
                 events.append(
                     Event(
