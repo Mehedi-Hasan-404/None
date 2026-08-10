@@ -5,7 +5,10 @@ MAX_JOBS=10
 BASE_FILE="./M3U8/base.m3u8"
 README="./readme.md"
 
-[[ ! -f $BASE_FILE ]] && echo "$BASE_FILE does not exist" && exit 1
+[[ ! -f $BASE_FILE ]] && {
+    echo "$BASE_FILE does not exist"
+    exit 1
+}
 
 shopt -s nocasematch
 
@@ -41,26 +44,23 @@ get_status() {
 
     if ((rc != 0)); then
         if [[ $status_code == 2* && $rc == 28 ]]; then
-            printf "[%d/%d] ✔️  %s" "$((index + 1))" "$total" "$chnl_info"
-
-            echo "PASS" >>"$STATUSLOG"
+            printf "[%d/%d]\t%b\t%s" \
+                "$index" "$total" "\u2714\ufe0f" "$chnl_info"
 
         else
-            printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
+            printf "[%d/%d]\t%b\t%s" \
+                "$index" "$total" "\u274c" "$chnl_info"
 
             printf "%s\t%s\tcURL Error (%s)\n" \
                 "$url" "$channel" "$rc" >>"$STATUSLOG"
-
-            echo "FAIL" >>"$STATUSLOG"
         fi
 
     elif [[ $status_code != 2* ]]; then
-        printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
+        printf "[%d/%d]\t%b\t%s" \
+            "$index" "$total" "\u274c" "$chnl_info"
 
         printf "%s\t%s\tHTTP Error (%s)\n" \
             "$url" "$channel" "$status_code" >>"$STATUSLOG"
-
-        echo "FAIL" >>"$STATUSLOG"
 
     else
         case "$content_type" in
@@ -72,30 +72,28 @@ get_status() {
             video/mp2t* | \
             text/plain*)
 
-            printf "[%d/%d] ✔️  %s" "$((index + 1))" "$total" "$chnl_info"
-
-            echo "PASS" >>"$STATUSLOG"
+            printf "[%d/%d]\t%b\t%s" \
+                "$index" "$total" "\u2714\ufe0f" "$chnl_info"
             ;;
 
         text/html* | *)
 
-            printf "[%d/%d] ❌  %s" "$((index + 1))" "$total" "$chnl_info"
+            printf "[%d/%d]\t%b\t%s" \
+                "$index" "$total" "\u274c" "$chnl_info"
 
             printf "%s\t%s\tInvalid M3U8 (%s)\n" \
                 "$url" "$channel" "$status_code" >>"$STATUSLOG"
-
-            echo "FAIL" >>"$STATUSLOG"
             ;;
         esac
     fi
 }
 
 check_links() {
+    local total_urls=$1
 
-    # shellcheck disable=SC2155
-    local total_urls=$(grep -cE '^https?://' "$BASE_FILE")
-    local channel_num=0
+    local channel_num=1
     local name=""
+
     local IFS line
 
     printf "Checking %d links from %s\n\n" "$total_urls" "$BASE_FILE"
@@ -106,7 +104,7 @@ check_links() {
         if [[ $line == \#EXTINF* ]]; then
             name=$(sed -n 's/.*tvg-name="\([^"]*\)".*/\1/p' <<<"$line")
 
-            [[ -z $name ]] && name="Channel $((channel_num + 1))"
+            [[ -z $name ]] && name="Channel $channel_num"
 
         elif [[ $line =~ ^https?:// ]]; then
             while (($(jobs -rp | wc -l) >= MAX_JOBS)); do wait -n; done
@@ -123,52 +121,56 @@ check_links() {
 }
 
 write_readme() {
+    local total_urls=$1
+
     local base="https://s.id/d9M3U8"
     local live="https://s.id/d9Live"
     local combined="https://s.id/d9M3U8"
     local epg="https://s.id/d9sEPG"
-
     local commits="https://github.com/doms9/iptv/commits/default"
 
     local datefmt="%Y-%m-%d %H:%M %Z"
-    local TZ IFS url channel error
+    local TZ IFS url channel error failed passed
 
-    # shellcheck disable=SC2155
-    local passed=$(grep -c '^PASS$' "$STATUSLOG")
-
-    # shellcheck disable=SC2155
-    local failed=$(grep -c '^FAIL$' "$STATUSLOG")
+    failed=$(grep -cE '(Error|Invalid)' "$STATUSLOG")
+    passed=$((total_urls - failed))
 
     {
-        echo -e "<h1 align='center'>\U1F4FA IPTV</h1>"
+        printf "<h1 align='center'>%b IPTV</h1>\n" "\U1F4FA"
         echo "<p align='center'>"
-        printf "<a href='%s'><img src='%s'></a>\n" "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
-        printf "<a href='%s'><img src='%s'></a>\n" "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
+
+        printf "<a href='%s'><img src='%s'></a>\n" \
+            "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
+
+        printf "<a href='%s'><img src='%s'></a>\n" \
+            "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
+
         printf "<img src='%s'>\n" "https://img.shields.io/github/license/doms9/iptv"
         printf "<img src='%s'>\n" "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
         echo "</p><br>"
-        echo
-        TZ="UTC" printf "<h2 align='center'>Base Log @ %($datefmt)T</h2>\n" -1
-        echo
-        printf "<h3 align='center'>✔️ Working Streams: %d<br>❌ Dead Streams: %d</h3>\n" \
-            "$passed" "$failed"
 
-        echo
+        TZ="UTC" printf "\n<h2 align='center'>Base Log @ %($datefmt)T</h2>\n" -1
+
+        printf "\n<h3 align='center'>"
+        printf "%b Working Streams: %d" "\u2714\ufe0f" "$passed"
+        printf "<br>"
+        printf "%b Dead Streams: %d" "\u274c" "$failed"
+        printf "</h3>\n"
 
         if ((failed > 0)); then
             echo "<table align='center'>"
             echo "<thead>"
-            echo "<tr><th align='center'>Channel</th><th align='center'>Error (Code)</th></tr>"
+            printf "<tr><th align='center'>Channel</th>"
+            printf "<th align='center'>Error (Code)</th></tr>\n"
             echo "</thead>"
             echo "<tbody>"
 
-            sort -V -t $'\t' -k 2,2 -u -f "$STATUSLOG" |
-                while IFS=$'\t' read -r url channel error; do
-                    if [[ ! $url =~ ^(PASS|FAIL)$ ]]; then
-                        printf "<tr><td><a href='%s'>%s</a></td><td>%s</td></tr>\n" \
-                            "$url" "$channel" "$error"
-                    fi
-                done
+            while IFS=$'\t' read -r url channel error; do
+                printf "<tr><td>"
+                printf "<a href='%s'>%s</a></td>" "$url" "$channel"
+                printf "<td>%s</td></tr>\n" "$error"
+
+            done < <(sort -V -t $'\t' -k 2,2 -u -f "$STATUSLOG")
 
             echo "</tbody>"
             echo "</table>"
@@ -176,13 +178,21 @@ write_readme() {
 
         echo -e "\n---"
         echo "#### Base Channels"
-        echo -e "\`\`\`\n$base\n\`\`\`\n"
+
+        # shellcheck disable=SC2016
+        printf '```\n%s\n```\n\n' "$base"
         echo "#### Live Events"
-        echo -e "\`\`\`\n$live\n\`\`\`\n"
+
+        # shellcheck disable=SC2016
+        printf '```\n%s\n```\n\n' "$live"
         echo "#### Combined (Base Channels + Live Events)"
-        echo -e "\`\`\`\n$combined\n\`\`\`\n"
+
+        # shellcheck disable=SC2016
+        printf '```\n%s\n```\n\n' "$combined"
         echo "#### EPG"
-        echo -e "\`\`\`\n$epg\n\`\`\`\n"
+
+        # shellcheck disable=SC2016
+        printf '```\n%s\n```\n\n' "$epg"
         echo "---"
         echo "#### Mirrors"
         echo -n "[GitHub](https://github.com/doms9/iptv) | "
@@ -200,6 +210,8 @@ write_readme() {
     } >"$README"
 }
 
-check_links
-write_readme
+total_urls=$(grep -cE '^https?://' "$BASE_FILE")
+
+check_links "$total_urls"
+write_readme "$total_urls"
 rm "$STATUSLOG"
