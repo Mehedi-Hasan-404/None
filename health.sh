@@ -6,7 +6,7 @@ BASE_FILE="./M3U8/base.m3u8"
 README="./readme.md"
 
 [[ ! -f $BASE_FILE ]] && {
-    echo "$BASE_FILE does not exist"
+    echo "$BASE_FILE does not exist" >&2
     exit 1
 }
 
