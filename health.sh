@@ -19,7 +19,7 @@ get_status() {
     local channel="$2"
     local index="$3"
     local total="$4"
-    local chnl_info response rc IFS status_code content_type
+    local chnl_info response rc IFS status_code content_type index_width
 
     [[ $url != http* ]] && return
 
@@ -42,13 +42,15 @@ get_status() {
 
     IFS="|" read -r status_code content_type <<<"$response"
 
+    index_width=${#total}
+
     if ((rc != 0)); then
         if [[ $status_code == 2* && $rc == 28 ]]; then
-            printf "[%d/%d]\t%b\t%s" \
+            printf "[%${index_width}d/%d]\t%b\t%s" \
                 "$index" "$total" "\u2714\ufe0f" "$chnl_info"
 
         else
-            printf "[%d/%d]\t%b\t%s" \
+            printf "[%${index_width}d/%d]\t%b\t%s" \
                 "$index" "$total" "\u274c" "$chnl_info"
 
             printf "%s\t%s\tcURL Error (%s)\n" \
@@ -56,7 +58,7 @@ get_status() {
         fi
 
     elif [[ $status_code != 2* ]]; then
-        printf "[%d/%d]\t%b\t%s" \
+        printf "[%${index_width}d/%d]\t%b\t%s" \
             "$index" "$total" "\u274c" "$chnl_info"
 
         printf "%s\t%s\tHTTP Error (%s)\n" \
@@ -72,13 +74,13 @@ get_status() {
             video/mp2t* | \
             text/plain*)
 
-            printf "[%d/%d]\t%b\t%s" \
+            printf "[%${index_width}d/%d]\t%b\t%s" \
                 "$index" "$total" "\u2714\ufe0f" "$chnl_info"
             ;;
 
         text/html* | *)
 
-            printf "[%d/%d]\t%b\t%s" \
+            printf "[%${index_width}d/%d]\t%b\t%s" \
                 "$index" "$total" "\u274c" "$chnl_info"
 
             printf "%s\t%s\tInvalid M3U8 (%s)\n" \
