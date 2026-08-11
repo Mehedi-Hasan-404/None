@@ -6,9 +6,19 @@
 <img src='https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff'>
 </p><br>
 
-<h2 align='center'>Base Log @ 2026-08-10 21:08 UTC</h2>
+<h2 align='center'>Base Log @ 2026-08-11 09:26 UTC</h2>
 
-<h3 align='center'>✔️ Working Streams: 181<br>❌ Dead Streams: 0</h3>
+<h3 align='center'>✔️ Working Streams: 179<br>❌ Dead Streams: 3</h3>
+<table align='center'>
+<thead>
+<tr><th align='center'>Channel</th><th align='center'>Error (Code)</th></tr>
+</thead>
+<tbody>
+<tr><td><a href='https://gpuserver7.tier1streams.com/NEWSNATION/index.m3u8'>NewsNation</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/ONE_AMERICA_NEWS/index.m3u8'>One America News</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='http://181.119.108.43:9001/play/a044/index.m3u8'>Telemundo</a></td><td>cURL Error (28)</td></tr>
+</tbody>
+</table>
 
 ---
 #### Base Channels
