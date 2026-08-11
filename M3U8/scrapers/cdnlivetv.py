@@ -62,7 +62,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
             if f"[{league}] {name} ({TAG})" in cached_keys:
                 continue
 
-            event_dt = Time.from_str(event["start"], timezone="UTC")
+            event_dt = Time.from_str(event["start"], tz_name="UTC")
 
             if not start_dt <= event_dt <= end_dt:
                 continue

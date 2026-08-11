@@ -5,6 +5,6 @@ requires-python = ">=3.13"
 dependencies = [
     "httpx[http2]>=0.28.1",
     "playwright>=1.62.0",
-    "pytz>=2026.3.post1",
     "selectolax>=0.4.11",
+    "tzdata>=2026.3",
 ]

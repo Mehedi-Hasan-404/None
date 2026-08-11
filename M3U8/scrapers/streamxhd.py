@@ -96,7 +96,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
 
                 event_time = event_info["time"]
 
-                event_dt = Time.from_str(event_time, timezone="EST")
+                event_dt = Time.from_str(event_time, tz_name="EST")
 
                 if event_dt.date() != now.date():
                     continue
