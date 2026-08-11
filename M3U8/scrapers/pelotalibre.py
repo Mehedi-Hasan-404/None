@@ -77,7 +77,7 @@ async def get_events() -> list[Event]:
             f"{title.split("|")[0].strip()} | {lang}"
             if (lang := event_info.get("language"))
             else f"{title.split("|")[0].strip()}"
-        )
+        ).capitalize()
 
         counter[name] += 1
 

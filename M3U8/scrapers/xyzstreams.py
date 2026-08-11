@@ -32,7 +32,7 @@ API_URLS = [
     for sport in [
         "baseball/mlb",
         # "basketball/nba",
-        # "basketball/wnba",
+        "basketball/wnba",
         # "football/nfl",
         # "hockey/nhl",
     ]
@@ -153,7 +153,7 @@ async def get_events() -> dict[str, dict[str, str | float]]:
 
         sport, name, short_name = values
 
-        for abbr in (i.strip() for i in short_name.split("@")):
+        for abbr in re.sub(r"(@|VS)", "", short_name, flags=re.I).split():
             key = f"[{sport}] {name} | {abbr} Feed ({TAG})"
 
             tvg_id, logo = leagues.get_tvg_info(sport, name)

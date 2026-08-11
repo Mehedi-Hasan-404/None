@@ -1,6 +1,5 @@
-import re
 from functools import partial
-from urllib.parse import urljoin
+from urllib.parse import parse_qsl, urljoin, urlsplit
 
 from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
@@ -35,34 +34,17 @@ async def process_event(url: str, url_num: int) -> str | None:
         log.warning(f"URL {url_num}) No iframe element found.")
         return
 
-    if not (
-        iframe_src_data := await network.request(
-            network.ensure_https(src),
-            url_num,
-            headers={"Referer": ALT_BASE},
-            log=log,
-        )
-    ):
-        return
+    splits = urlsplit(src)
 
-    pattern = re.compile(r'input:\s+"([^"]*)"', re.I)
+    params = dict(parse_qsl(splits.query))
 
-    if not (match := pattern.search(iframe_src_data.text)):
-        log.warning(f"URL {url_num}) No encrypted URL found.")
-        return
-
-    decrypted_data = await network.client.post(
-        urljoin(ALT_BASE, "embed/decrypt.php"),
-        data={"input": match[1]},
-    )
-
-    if not decrypted_data.is_success:
-        log.warning(f"URL {url_num}) Failed to decrypt URL.")
+    if not (stream_id := params.get("stream")):
+        log.warning(f"URL {url_num}) No stream ID found.")
         return
 
     log.info(f"URL {url_num}) Captured M3U8")
 
-    return decrypted_data.text.split("?")[0]
+    return f"https://edgestream2.pro/hls/{stream_id}.m3u8"
 
 
 async def get_events() -> list[Event]:
@@ -155,7 +137,7 @@ async def scrape() -> None:
             entry = {
                 "source": source,
                 "logo": logo,
-                "refer": BASE_URL,
+                "refer": ALT_BASE,
                 "timestamp": ev.timestamp,
                 "tvg-id": tvg_id or "Live.Event.us",
                 "link": ev.link,
