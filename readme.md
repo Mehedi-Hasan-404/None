@@ -6,9 +6,9 @@
 <img src='https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff'>
 </p><br>
 
-<h2 align='center'>Base Log @ 2026-08-11 21:22 UTC</h2>
+<h2 align='center'>Base Log @ 2026-08-12 04:22 UTC</h2>
 
-<h3 align='center'>✔️ Working Streams: 132<br>❌ Dead Streams: 50</h3>
+<h3 align='center'>✔️ Working Streams: 131<br>❌ Dead Streams: 51</h3>
 <table align='center'>
 <thead>
 <tr><th align='center'>Channel</th><th align='center'>Error (Code)</th></tr>
@@ -23,6 +23,7 @@
 <tr><td><a href='https://primexclusive.day/1444576/5450985/19183'>CBS Sports Network</a></td><td>HTTP Error (455)</td></tr>
 <tr><td><a href='https://primexclusive.day/1444576/5450985/27144'>Cheddar</a></td><td>HTTP Error (455)</td></tr>
 <tr><td><a href='https://primexclusive.day/1444576/5450985/16109'>CNBC World</a></td><td>HTTP Error (455)</td></tr>
+<tr><td><a href='https://gpuserver3.tier1streams.com/COMEDY_TV/index.m3u8'>Comedy TV</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://primexclusive.day/1444576/5450985/16114'>Cozi TV</a></td><td>HTTP Error (455)</td></tr>
 <tr><td><a href='https://primexclusive.day/1444576/5450985/20415'>CW</a></td><td>HTTP Error (455)</td></tr>
 <tr><td><a href='https://primexclusive.day/1444576/5450985/24761'>C-SPAN</a></td><td>HTTP Error (455)</td></tr>
