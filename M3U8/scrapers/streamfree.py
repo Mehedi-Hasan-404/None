@@ -77,13 +77,13 @@ async def process_event(
 
     m3u_info: dict[str, dict[str, Any]] = json.loads(match[1])[available_quals[0]]
 
-    query_string = urlencode(m3u_info)
+    query = urlencode(m3u_info)
 
     log.info(f"URL {url_num}) Captured M3U8")
 
     return urljoin(
         BASE_URL,
-        f"live/{stream_key}{available_quals[-1]}/index.m3u8?{query_string}",
+        f"live/{stream_key}{available_quals[-1]}/index.m3u8?{query}",
     )
 
 
@@ -192,7 +192,7 @@ async def scrape() -> None:
                 "logo": ev.logo or logo,
                 "refer": urljoin(BASE_URL, f"embed/{ev.category}/{ev.stream_key}"),
                 "timestamp": ev.timestamp,
-                "id": tvg_id or "Live.Event.us",
+                "tvg-id": tvg_id or "Live.Event.us",
             }
 
             cached_urls[key] = entry
