@@ -76,6 +76,8 @@ class Time(datetime):
                 "%B %d, %Y %H:%M",
                 "%d %B,%Y %I:%M %p",
                 "%d %B,%Y %H:%M %p",
+                "%d %B ,%Y %I:%M %p",
+                "%d %B ,%Y %H:%M %p",
                 "%B %d, %Y %I:%M %p",
                 "%B %d, %Y %I:%M:%S %p",
                 "%B %d, %Y %H:%M:%S",

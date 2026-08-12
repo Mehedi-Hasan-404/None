@@ -51,7 +51,7 @@ async def process_event(stream_id: str, url_num: int) -> str | None:
 async def get_events(cached_keys: KeysView[str]) -> list[DAMIEvent]:
     now = Time.clean(Time.now())
 
-    events: list[Event] = []
+    events: list[DAMIEvent] = []
 
     if not (api_data := API_FILE.load(per_entry=False)):
         log.info("Refreshing API cache")
@@ -130,7 +130,6 @@ async def scrape() -> None:
         log.info(f"Processing {len(events)} new URL(s)")
 
         for i, ev in enumerate(events, start=1):
-
             handler = partial(
                 process_event,
                 stream_id=ev.stream_id,
@@ -140,7 +139,7 @@ async def scrape() -> None:
             source = await network.safe_process(
                 handler,
                 url_num=i,
-                semaphore=network.PW_S,
+                semaphore=network.HTTP_S,
                 log=log,
             )
 
