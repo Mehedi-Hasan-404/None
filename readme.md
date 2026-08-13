@@ -6,15 +6,19 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-13 15:55 UTC</h2>
+<h2>Base Log @ 2026-08-13 21:22 UTC</h2>
 
-<h3>✅ Working Streams: 178<br>❌ Dead Streams: 4</h3>
+<h3>✅ Working Streams: 174<br>❌ Dead Streams: 8</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/SCIENCE_SD/index.m3u8'>Discovery Science</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/GRIT_SD/index.m3u8'>Grit TV</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='http://79.143.16.38:80/stream/247/psports1fhd.ts'>Premier Sports 1</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='http://79.143.16.38:80/stream/248/psports2fhd.ts'>Premier Sports 2</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver4.tier1streams.com/HALLMARK_MOVIES_AND_MYSTERIES/index.m3u8'>Hallmark Mystery</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver4.tier1streams.com/HBO_HD/index.m3u8'>HBO</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver4.tier1streams.com/HISTORY_CHANNEL/index.m3u8'>History Channel</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver4.tier1streams.com/MSNBC/index.m3u8'>MSNBC</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/OXYGEN/index.m3u8'>Oxygen</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME/index.m3u8'>Showtime</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME_2/index.m3u8'>Showtime 2</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/USA_NETWORK/index.m3u8'>USA Network</a></td><td>HTTP Error (404)</td></tr>
 </table>
 </div>
 
