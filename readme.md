@@ -6,15 +6,40 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-13 09:41 UTC</h2>
+<h2>Base Log @ 2026-08-13 15:31 UTC</h2>
 
-<h3>✔️ Working Streams: 178<br>❌ Dead Streams: 4</h3>
+<h3>✅ Working Streams: 153<br>❌ Dead Streams: 29</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/FOX_BUSINESS_NETWORK/index.m3u8'>Fox Business</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/NEWSNATION/index.m3u8'>NewsNation</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME/index.m3u8'>Showtime</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SUNDANCE/index.m3u8'>Sundance</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/8528.m3u'>beIN Sports USA</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://gpuserver6.tier1streams.com/DABL/index.m3u8'>Dabl</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/SCIENCE_SD/index.m3u8'>Discovery Science</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/ESPN_DEPORTES/index.m3u8'>ESPN Deportes</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/FOX_BUSINESS_NETWORK/index.m3u8'>Fox Business</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/GSN_SD/index.m3u8'>Game Show Network</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/GRIT_SD/index.m3u8'>Grit TV</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/9631.m3u'>MGM Plus Drive-In</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/NEWSNATION/index.m3u8'>NewsNation</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/NICK_JR/index.m3u8'>Nick Jr</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/ONE_AMERICA_NEWS/index.m3u8'>One America News</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/OVATION/index.m3u8'>Ovation</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/OXYGEN/index.m3u8'>Oxygen</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/POP/index.m3u8'>Pop TV</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='http://79.143.16.38:80/stream/247/psports1fhd.ts'>Premier Sports 1</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='http://79.143.16.38:80/stream/248/psports2fhd.ts'>Premier Sports 2</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME/index.m3u8'>Showtime</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME_2/index.m3u8'>Showtime 2</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME_EXTREME/index.m3u8'>Showtime Extreme</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SMITHSONIAN/index.m3u8'>Smithsonian Channel</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SNY/index.m3u8'>SportsNet New York</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/STARZ_EDGE/index.m3u8'>Starz Edge</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/STARZ_ENCORE/index.m3u8'>Starz Encore</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SUNDANCE/index.m3u8'>Sundance</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/TLC_SD/index.m3u8'>TLC</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/TSN_1/index.m3u8'>TSN 1</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/TV_LAND/index.m3u8'>TV Land</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/TV_ONE/index.m3u8'>TV One</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/USA_NETWORK/index.m3u8'>USA Network</a></td><td>cURL Error (28)</td></tr>
 </table>
 </div>
 
