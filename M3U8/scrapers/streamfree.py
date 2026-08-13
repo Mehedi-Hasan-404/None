@@ -97,8 +97,11 @@ async def get_events(cached_keys: list[str]) -> list[STFEvent]:
 
         api_data = {"timestamp": now.timestamp()}
 
-        if r := await network.request(urljoin(BASE_URL, "streams"), log=log):
-            api_data: dict[str, dict[str, list[dict[str, Any]]]] = r.json()
+        if r := await network.request(
+            urljoin(BASE_URL, "api/v1/streams"),
+            log=log,
+        ):
+            api_data: dict[str, list[dict[str, Any]]] = r.json()
 
             api_data["timestamp"] = now.timestamp()
 
@@ -107,47 +110,41 @@ async def get_events(cached_keys: list[str]) -> list[STFEvent]:
     start_dt = now.delta(hours=-1)
     end_dt = now.delta(minutes=5)
 
-    for category in api_data.get("streams", {}):
-        for stream_info in api_data["streams"][category]:
-            if not all(
-                values := [
-                    stream_info.get(x)
-                    for x in (
-                        "league",
-                        "name",
-                        "match_timestamp",
-                        "stream_key",
-                    )
-                ]
-            ):
-                continue
-
-            sport, name, event_time, stream_key = values
-
-            if f"[{sport}] {name} ({TAG})" in cached_keys:
-                continue
-
-            event_dt = Time.from_ts(event_time)
-
-            if not start_dt <= event_dt <= end_dt:
-                continue
-
-            logo = (
-                urljoin(BASE_URL, thumbnail)
-                if (thumbnail := stream_info.get("thumbnail_url"))
-                else None
-            )
-
-            events.append(
-                STFEvent(
-                    sport=sport,
-                    name=name,
-                    category=category,
-                    stream_key=quote(stream_key),
-                    logo=logo,
-                    timestamp=now.timestamp(),
+    for stream_info in api_data.get("streams", []):
+        if not all(
+            values := [
+                stream_info.get(x)
+                for x in (
+                    "league",
+                    "category",
+                    "name",
+                    "match_timestamp",
+                    "stream_key",
                 )
+            ]
+        ):
+            continue
+
+        sport, category, name, event_time, stream_key = values
+
+        if f"[{sport}] {name} ({TAG})" in cached_keys:
+            continue
+
+        event_dt = Time.from_ts(event_time)
+
+        if not start_dt <= event_dt <= end_dt:
+            continue
+
+        events.append(
+            STFEvent(
+                sport=sport,
+                name=name,
+                category=category,
+                stream_key=quote(stream_key),
+                logo=stream_info.get("thumbnail_url"),
+                timestamp=now.timestamp(),
             )
+        )
 
     return events
 
