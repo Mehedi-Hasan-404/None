@@ -6,9 +6,16 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-13 04:26 UTC</h2>
+<h2>Base Log @ 2026-08-13 09:41 UTC</h2>
 
-<h3>✔️ Working Streams: 182<br>❌ Dead Streams: 0</h3>
+<h3>✔️ Working Streams: 178<br>❌ Dead Streams: 4</h3>
+<table>
+<tr><th>Channel</th><th>Error (Code)</th></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/FOX_BUSINESS_NETWORK/index.m3u8'>Fox Business</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/NEWSNATION/index.m3u8'>NewsNation</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME/index.m3u8'>Showtime</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SUNDANCE/index.m3u8'>Sundance</a></td><td>HTTP Error (404)</td></tr>
+</table>
 </div>
 
 ---
