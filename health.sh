@@ -83,7 +83,7 @@ get_status() {
             printf "[%${index_width}d/%d]\t%b\t%s" \
                 "$index" "$total" "\u274c" "$chnl_info"
 
-            printf "%s\t%s\tInvalid M3U8 (%s)\n" \
+            printf "%s\t%s\tInvalid Source (%s)\n" \
                 "$url" "$channel" "$status_code" >>"$STATUSLOG"
             ;;
         esac
@@ -130,6 +130,7 @@ write_readme() {
     local combined="https://s.id/d9M3U8"
     local epg="https://s.id/d9sEPG"
     local commits="https://github.com/doms9/iptv/commits/default"
+    local license="https://github.com/doms9/iptv/blob/default/LICENSE"
 
     local datefmt="%Y-%m-%d %H:%M %Z"
     local TZ IFS url channel error failed passed
@@ -138,47 +139,37 @@ write_readme() {
     passed=$((total_urls - failed))
 
     {
-        printf "<h1 align='center'>%b IPTV</h1>\n" "\U1F4FA"
-        echo "<p align='center'>"
+        echo "<div align='center'>"
+        printf "<h1>%b IPTV</h1>\n\n" "\U1F4FA"
 
-        printf "<a href='%s'><img src='%s'></a>\n" \
-            "$base" "https://img.shields.io/badge/updates-hourly-a396ff"
+        printf "[![update freq.](%s)](%s)\n" "https://img.shields.io/badge/updates-hourly-ac99e0" "$base"
+        printf "[![commits](%s)](%s)\n" "https://img.shields.io/github/commit-activity/w/doms9/iptv" "$commits"
+        printf "[![license](%s)](%s)\n" "https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c" "$license"
+        printf "![python](%s)\n" "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
 
-        printf "<a href='%s'><img src='%s'></a>\n" \
-            "$commits" "https://img.shields.io/github/commit-activity/w/doms9/iptv"
+        TZ="UTC" printf "\n<h2>Base Log @ %($datefmt)T</h2>\n" -1
 
-        printf "<img src='%s'>\n" "https://img.shields.io/github/license/doms9/iptv"
-        printf "<img src='%s'>\n" "https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff"
-        echo "</p><br>"
-
-        TZ="UTC" printf "\n<h2 align='center'>Base Log @ %($datefmt)T</h2>\n" -1
-
-        printf "\n<h3 align='center'>"
+        printf "\n<h3>"
         printf "%b Working Streams: %d" "\u2714\ufe0f" "$passed"
         printf "<br>"
         printf "%b Dead Streams: %d" "\u274c" "$failed"
-        printf "</h3>\n"
+        echo "</h3>"
 
         if ((failed > 0)); then
-            echo "<table align='center'>"
-            echo "<thead>"
-            printf "<tr><th align='center'>Channel</th>"
-            printf "<th align='center'>Error (Code)</th></tr>\n"
-            echo "</thead>"
-            echo "<tbody>"
+            echo "<table>"
+            printf "<tr><th>Channel</th>"
+            printf "<th>Error (Code)</th></tr>\n"
 
             while IFS=$'\t' read -r url channel error; do
                 printf "<tr><td>"
                 printf "<a href='%s'>%s</a></td>" "$url" "$channel"
                 printf "<td>%s</td></tr>\n" "$error"
-
             done < <(sort -V -t $'\t' -k 2,2 -u -f "$STATUSLOG")
 
-            echo "</tbody>"
             echo "</table>"
         fi
 
-        echo -e "\n---"
+        echo -e "</div>\n\n---"
         echo "#### Base Channels"
 
         # shellcheck disable=SC2016
