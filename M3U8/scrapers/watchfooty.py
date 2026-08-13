@@ -22,7 +22,7 @@ BASE_DOMAIN = "watchfooty.ru"
 API_URL, BASE_URL = f"https://api.{BASE_DOMAIN}", f"https://www.{BASE_DOMAIN}"
 
 
-def build_wfty_url(live: bool, event_id: str = None) -> str:
+def build_wfty_url(live: bool, event_id: str | None = None) -> str:
     url = urljoin(
         API_URL,
         (
@@ -35,7 +35,7 @@ def build_wfty_url(live: bool, event_id: str = None) -> str:
     input_data = {
         "0": {
             "json": {
-                "start": (now := Time.now()).isoformat(),
+                "start": (now := Time.rn()).isoformat(),
                 "end": now.delta(days=1).isoformat(),
             }
         },
@@ -226,7 +226,7 @@ async def scrape(browser: Browser) -> None:
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
-        now = Time.clean(Time.now())
+        now = Time.rn()
 
         async with network.event_context(browser, stealth=False) as context:
             for i, ev in enumerate(events, start=1):

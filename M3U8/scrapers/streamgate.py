@@ -98,7 +98,7 @@ async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[Event]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     events: list[Event] = []
 

@@ -73,7 +73,7 @@ async def refresh_api_cache(now: Time) -> list[dict[str, Any]]:
 
 
 async def get_sports_map() -> dict[str, dict[str, dict[str, str]]]:
-    sports_map = {}
+    sports_map: dict[str, dict[str, dict[str, str]]] = {}
 
     tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
@@ -124,9 +124,9 @@ async def get_sports_map() -> dict[str, dict[str, dict[str, str]]]:
 
 
 async def get_events() -> dict[str, dict[str, str | float]]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
-    events = {}
+    events: dict[str, dict[str, str | float]] = {}
 
     if not (api_data := API_FILE.load(per_entry=False, index=-1)):
         log.info("Refreshing API cache")

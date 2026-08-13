@@ -74,7 +74,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[MPEvent]:
     if not (html_data := [(html.text, html.url) for html in results if html]):
         return events
 
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     stateshot_ptrn = re.compile(r"var\s+stateshot\s+=\s+(.*);", re.I)
 

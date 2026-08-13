@@ -33,6 +33,7 @@ async def process_event(
     category: str,
     url_num: int,
 ) -> str | None:
+
     if not (
         quality_data := await network.request(
             urljoin(BASE_URL, f"api/stream-status/{stream_key}"),
@@ -88,7 +89,7 @@ async def process_event(
 
 
 async def get_events(cached_keys: list[str]) -> list[STFEvent]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     events: list[STFEvent] = []
 

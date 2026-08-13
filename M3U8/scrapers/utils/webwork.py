@@ -69,7 +69,7 @@ class Network:
                 else f'Failed to fetch "{url}": {e}'
             )
 
-            return ""
+            return
 
     @staticmethod
     def ensure_https(url: str) -> str:

@@ -60,7 +60,7 @@ async def get_events() -> list[Event]:
 
     soup = HTMLParser(html_data.content)
 
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     for card in soup.css(".game-card-group"):
         if not (sport_elem := card.css_first("h2")):

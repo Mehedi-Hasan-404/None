@@ -47,20 +47,20 @@ async def get_events(cached_links: set[str]) -> list[Event]:
     clean_event = re.compile(r"\s+-+\s+\w{1,4}")
 
     for item in soup.css(".user-item"):
-        text = item.css_first(".user-item__name")
-        subtext = item.css_first(".user-item__playing")
-        link = item.css_first("a[href]")
+        text_elem = item.css_first(".user-item__name")
+        subtext_elem = item.css_first(".user-item__playing")
+        link_elem = item.css_first("a[href]")
 
-        if not (text and subtext):
+        if not (text_elem and subtext_elem):
             continue
 
-        if not (href := link.attributes.get("href")):
+        elif not (href := link_elem.attributes.get("href")):
             continue
 
         elif (link := urljoin(str(html_data.url), quote(href))) in cached_links:
             continue
 
-        event_name, details = text.text(strip=True), subtext.text(strip=True)
+        event_name, details = text_elem.text(strip=True), subtext_elem.text(strip=True)
 
         if not (valid_event.search(details)):
             continue
@@ -96,7 +96,7 @@ async def scrape() -> None:
     if events := await get_events(cached_links):
         log.info(f"Processing {len(events)} new URL(s)")
 
-        now = Time.clean(Time.now())
+        now = Time.rn()
 
         for i, ev in enumerate(events, start=1):
             handler = partial(

@@ -103,7 +103,7 @@ async def refresh_html_cache(now: Time) -> dict[str, dict[str, str | float]]:
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[EMBDEvent]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     if not (events := HTML_FILE.load()):
         log.info("Refreshing HTML cache")

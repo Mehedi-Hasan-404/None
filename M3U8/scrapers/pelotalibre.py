@@ -105,7 +105,7 @@ async def scrape() -> None:
     if events := await get_events():
         log.info(f"Processing {len(events)} URL(s)")
 
-        now = Time.clean(Time.now())
+        now = Time.rn()
 
         for i, ev in enumerate(events, start=1):
             handler = partial(

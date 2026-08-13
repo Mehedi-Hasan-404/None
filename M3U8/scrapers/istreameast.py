@@ -34,7 +34,6 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         return nones
 
     elif not (iframe_src_data := await network.request(iframe_src, log=log)):
-        log.warning(f"URL {url_num}) Failed to load iframe source.")
         return nones
 
     pattern = re.compile(r'const\s+source\s+=\s+"([^"]*)"', re.I)
@@ -57,9 +56,10 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
     soup = HTMLParser(html_data.content)
 
     for link in soup.css("li.f1-podium--item > a.f1-podium--link"):
-        li_item = link.parent
+        if not (li_item := link.parent):
+            continue
 
-        if not all(
+        elif not all(
             values := [
                 li_item.css_first(x)
                 for x in (
@@ -116,7 +116,7 @@ async def scrape() -> None:
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
-        now = Time.clean(Time.now())
+        now = Time.rn()
 
         for i, ev in enumerate(events, start=1):
             handler = partial(

@@ -40,11 +40,11 @@ async def process_event(url: str, url_num: int) -> str | None:
         re.S,
     )
 
-    if not (embed_list := embed_list_ptrn.search(event_data.text)):
+    if not (match := embed_list_ptrn.search(event_data.text)):
         log.warning(f"URL {url_num}) Unable to decode url.")
         return
 
-    embed_list_str = embed_list[0].split("=", 1)[-1].strip(";")
+    embed_list_str = match[0].split("=", 1)[-1].strip(";")
 
     embed_list: list[tuple[int, str]] = ast.literal_eval(embed_list_str)
 
@@ -79,7 +79,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
     elif not (api_data := api_req.json()):
         return events
 
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     for event in api_data.get("sports", []):
         if not (sport_leagues := event.get("leagues")):

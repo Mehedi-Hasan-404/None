@@ -49,7 +49,7 @@ async def process_event(stream_id: str, url_num: int) -> str | None:
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[DAMIEvent]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     events: list[DAMIEvent] = []
 

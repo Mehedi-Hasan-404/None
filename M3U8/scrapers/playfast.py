@@ -21,7 +21,7 @@ BASE_URL = "https://playfa.st"
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[Event]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     if not (api_data := API_FILE.load(per_entry=False)):
         log.info("Refreshing API cache")

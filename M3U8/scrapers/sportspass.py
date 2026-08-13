@@ -118,7 +118,7 @@ async def process_event(
 
 
 async def get_events(cached_links: set[str]) -> list[Event]:
-    now = Time.clean(Time.now())
+    now = Time.rn()
 
     tasks = [network.request(url, log=log) for url in SPORT_URLS.values()]
 
