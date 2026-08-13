@@ -47,11 +47,11 @@ get_status() {
     if ((rc != 0)); then
         if [[ $status_code == 2* && $rc == 28 ]]; then
             printf "[%${index_width}d/%d]\t%b\t%s" \
-                "$index" "$total" "\u2714\ufe0f" "$chnl_info"
+                "$index" "$total" "\U2705" "$chnl_info"
 
         else
             printf "[%${index_width}d/%d]\t%b\t%s" \
-                "$index" "$total" "\u274c" "$chnl_info"
+                "$index" "$total" "\U274C" "$chnl_info"
 
             printf "%s\t%s\tcURL Error (%s)\n" \
                 "$url" "$channel" "$rc" >>"$STATUSLOG"
@@ -59,7 +59,7 @@ get_status() {
 
     elif [[ $status_code != 2* ]]; then
         printf "[%${index_width}d/%d]\t%b\t%s" \
-            "$index" "$total" "\u274c" "$chnl_info"
+            "$index" "$total" "\U274C" "$chnl_info"
 
         printf "%s\t%s\tHTTP Error (%s)\n" \
             "$url" "$channel" "$status_code" >>"$STATUSLOG"
@@ -75,13 +75,13 @@ get_status() {
             text/plain*)
 
             printf "[%${index_width}d/%d]\t%b\t%s" \
-                "$index" "$total" "\u2714\ufe0f" "$chnl_info"
+                "$index" "$total" "\U2705" "$chnl_info"
             ;;
 
         text/html* | *)
 
             printf "[%${index_width}d/%d]\t%b\t%s" \
-                "$index" "$total" "\u274c" "$chnl_info"
+                "$index" "$total" "\U274C" "$chnl_info"
 
             printf "%s\t%s\tInvalid Source (%s)\n" \
                 "$url" "$channel" "$status_code" >>"$STATUSLOG"
@@ -150,9 +150,9 @@ write_readme() {
         TZ="UTC" printf "\n<h2>Base Log @ %($datefmt)T</h2>\n" -1
 
         printf "\n<h3>"
-        printf "%b Working Streams: %d" "\u2714\ufe0f" "$passed"
+        printf "%b Working Streams: %d" "\U2705" "$passed"
         printf "<br>"
-        printf "%b Dead Streams: %d" "\u274c" "$failed"
+        printf "%b Dead Streams: %d" "\U274C" "$failed"
         echo "</h3>"
 
         if ((failed > 0)); then
