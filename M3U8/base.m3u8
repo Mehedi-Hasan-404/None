@@ -219,11 +219,11 @@ https://ccctv.xyz:2096/live/n24/SUZsBNHv12/4714.ts
 #EXTINF:-1 tvg-chno="73" tvg-id="Game.Show.Network.HD.us2" tvg-name="Game Show Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14909_dark_360w_270h.png" group-title="TV",Game Show Network
 https://gpuserver7.tier1streams.com/GSN_SD/index.m3u8
 
-#EXTINF:-1 tvg-chno="74" tvg-id="Great.Entertainment.Television.us2" tvg-name="Great Entertainment Television" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002QQ7SV.png?w=360&h=270" group-title="TV",Great Entertainment Television
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/83256.ts
-
-#EXTINF:-1 tvg-chno="75" tvg-id="Golf.Channel.HD.us2" tvg-name="Golf Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14899_dark_360w_270h.png" group-title="TV",Golf Channel
+#EXTINF:-1 tvg-chno="74" tvg-id="Golf.Channel.HD.us2" tvg-name="Golf Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14899_dark_360w_270h.png" group-title="TV",Golf Channel
 https://ccctv.xyz:2096/live/n24/SUZsBNHv12/78008.ts
+
+#EXTINF:-1 tvg-chno="75" tvg-id="Great.Entertainment.Television.us2" tvg-name="Great Entertainment Television" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002QQ7SV.png?w=360&h=270" group-title="TV",Great Entertainment Television
+https://ccctv.xyz:2096/live/n24/SUZsBNHv12/83256.ts
 
 #EXTINF:-1 tvg-chno="76" tvg-id="Grit.us2" tvg-name="Grit TV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s89922_dark_360w_270h.png" group-title="TV",Grit TV
 https://gpuserver7.tier1streams.com/GRIT_SD/index.m3u8
@@ -376,7 +376,7 @@ http://23.237.104.106:8080/USA_OUTDOOR/mpegts
 https://gpuserver5.tier1streams.com/OVATION/index.m3u8
 
 #EXTINF:-1 tvg-chno="126" tvg-id="Oxygen.True.Crime.HD.us2" tvg-name="Oxygen" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s70522_dark_360w_270h.png" group-title="TV",Oxygen
-https://gpuserver5.tier1streams.com/OXYGEN/index.m3u8
+https://gpuserver7.tier1streams.com/OXYGEN_SD/index.m3u8
 
 #EXTINF:-1 tvg-chno="127" tvg-id="Paramount.Network.HD.us2" tvg-name="Paramount Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11163_dark_360w_270h.png" group-title="TV",Paramount Network
 http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
@@ -529,7 +529,7 @@ https://gpuserver5.tier1streams.com/TV_LAND/index.m3u8
 https://gpuserver5.tier1streams.com/TV_ONE/index.m3u8
 
 #EXTINF:-1 tvg-chno="177" tvg-id="USA.Network.HD.us2" tvg-name="USA Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11207_dark_360w_270h.png" group-title="TV",USA Network
-https://gpuserver5.tier1streams.com/USA_NETWORK/index.m3u8
+https://gpuserver7.tier1streams.com/USA_NETWORK_SD/index.m3u8
 
 #EXTINF:-1 tvg-chno="178" tvg-id="VH1.HD.us2" tvg-name="VH1" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11218_dark_360w_270h.png" group-title="TV",VH1
 http://23.237.104.106:8080/USA_VH1/index.m3u8
