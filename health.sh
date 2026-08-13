@@ -47,7 +47,7 @@ get_status() {
     if ((rc != 0)); then
         if [[ $status_code == 2* && $rc == 28 ]]; then
             printf "[%${index_width}d/%d]\t%b\t%s" \
-                "$index" "$total" "\U2705" "$chnl_info"
+                "$index" "$total" "\u2714\ufe0f" "$chnl_info"
 
         else
             printf "[%${index_width}d/%d]\t%b\t%s" \
@@ -75,7 +75,7 @@ get_status() {
             text/plain*)
 
             printf "[%${index_width}d/%d]\t%b\t%s" \
-                "$index" "$total" "\U2705" "$chnl_info"
+                "$index" "$total" "\u2714\ufe0f" "$chnl_info"
             ;;
 
         text/html* | *)
