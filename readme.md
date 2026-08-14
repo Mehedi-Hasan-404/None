@@ -6,19 +6,27 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-13 21:22 UTC</h2>
+<h2>Base Log @ 2026-08-14 04:23 UTC</h2>
 
-<h3>✅ Working Streams: 174<br>❌ Dead Streams: 8</h3>
+<h3>✅ Working Streams: 167<br>❌ Dead Streams: 16</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
 <tr><td><a href='https://gpuserver4.tier1streams.com/HALLMARK_MOVIES_AND_MYSTERIES/index.m3u8'>Hallmark Mystery</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver4.tier1streams.com/HBO_HD/index.m3u8'>HBO</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver4.tier1streams.com/HISTORY_CHANNEL/index.m3u8'>History Channel</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver4.tier1streams.com/MSNBC/index.m3u8'>MSNBC</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/OXYGEN/index.m3u8'>Oxygen</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME/index.m3u8'>Showtime</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME_2/index.m3u8'>Showtime 2</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/USA_NETWORK/index.m3u8'>USA Network</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/METV_SD/index.m3u'>MeTV</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/NICK_JR/index.m3u8'>Nick Jr</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/ONE_AMERICA_NEWS/index.m3u8'>One America News</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/OVATION/index.m3u8'>Ovation</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/POP/index.m3u8'>Pop TV</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME_EXTREME/index.m3u8'>Showtime Extreme</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SMITHSONIAN/index.m3u8'>Smithsonian Channel</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SONY_MOVIES/index.m3u8'>Sony Movie Channel</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SNY/index.m3u8'>SportsNet New York</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/STARZ_EDGE/index.m3u8'>Starz Edge</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/STARZ_ENCORE/index.m3u8'>Starz Encore</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/SUNDANCE/index.m3u8'>Sundance</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/TSN_1/index.m3u8'>TSN 1</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/TV_LAND/index.m3u8'>TV Land</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver5.tier1streams.com/TV_ONE/index.m3u8'>TV One</a></td><td>HTTP Error (404)</td></tr>
 </table>
 </div>
 
