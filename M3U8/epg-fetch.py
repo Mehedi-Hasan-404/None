@@ -23,14 +23,14 @@ EPG_URLS = [
         # "FANDUEL1",
         "FR1",
         "IE1",
-        # "PEACOCK1",
+        "PEACOCK1",
         # "PLEX1",
         "UK1",
         "US2",
         "US_LOCALS1",
         # "UY1",
     ]
-] + ["https://i.mjh.nz/PlutoTV/us.xml.gz"]
+]
 
 DUMMIES = {
     **{

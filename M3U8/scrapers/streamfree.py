@@ -15,7 +15,7 @@ TAG = "STRMFREE"
 
 CACHE_FILE = Cache(TAG, exp=10_800)
 
-API_FILE = Cache(f"{TAG}-api", exp=28_800)
+API_FILE = Cache(f"{TAG}-api", exp=19_800)
 
 BASE_URL = "https://streamfree.top"
 

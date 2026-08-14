@@ -22,6 +22,14 @@ def cleanup(s: str) -> str:
     return "".join(i for i in s.split("—")[-1] if i.isascii()).strip()
 
 
+def fix_sport(s: str) -> str:
+    splits = s.split()
+
+    i = splits[0]
+
+    return f"{i.upper() if len(i) < 5 else i.capitalize()} {' '.join(x.capitalize() for x in splits[1:])}".strip()
+
+
 async def process_event(url: str, url_num: int) -> str | None:
     if not (html_data := await network.request(url, url_num, log=log)):
         return
@@ -93,7 +101,7 @@ async def get_events() -> list[Event]:
 
                 events.append(
                     Event(
-                        sport=sport,
+                        sport=fix_sport(sport),
                         name=f"{event_name} | {lang}",
                         link=urljoin(BASE_URL, href),
                         timestamp=now.timestamp(),
