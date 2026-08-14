@@ -112,7 +112,7 @@ async def get_events() -> list[Event]:
 
     for soup, url in soups:
         sport = next(
-            (k for k, v in BASE_URLS.items() if str(url).startswith(v["base"])),
+            (k for k, v in BASE_URLS.items() if f"{url}".startswith(v["base"])),
             "Live Event",
         )
 
