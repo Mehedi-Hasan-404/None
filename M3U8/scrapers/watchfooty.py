@@ -71,7 +71,7 @@ def build_wfty_url(live: bool, event_id: str | None = None) -> str:
 
 
 async def pre_process(url: str, url_num: int) -> str | None:
-    if not (event_data := await network.request(url, log=log)):
+    if not (event_data := await network.request(url, url_num, log=log)):
         return
 
     api_data: dict = (

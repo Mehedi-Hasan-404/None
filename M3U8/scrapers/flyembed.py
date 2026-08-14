@@ -1,9 +1,8 @@
-import asyncio
 import re
 from collections.abc import KeysView
 from functools import partial
 
-from playwright.async_api import Browser, Page
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from .utils import Cache, Event, Time, get_logger, leagues, network
 
@@ -26,71 +25,56 @@ def clean_name(s: str) -> str:
 #     return re.sub(r"\.live\n", ".pro", s)
 
 
-async def process_event(
-    url: str,
-    url_num: int,
-    page: Page,
-    timeout: int | float = 10,
-) -> str | None:
-
+async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]:
     nones = None, None
 
-    captured: list[str] = []
-
-    got_one = asyncio.Event()
-
-    handler = partial(
-        network.capture_req,
-        captured=captured,
-        got_one=got_one,
-    )
-
-    page.on("request", handler)
-
-    try:
-        resp = await page.goto(
-            url,
-            wait_until="domcontentloaded",
-            timeout=6_000,
-        )
-
-        if not resp or resp.status != 200:
-            log.warning(
-                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
-            )
-            return nones
-
-        iframe = page.locator("iframe").first
-
-        iframe_src = await iframe.get_attribute("src", timeout=1_500)
-
-        wait_task = asyncio.create_task(got_one.wait())
-
-        try:
-            await asyncio.wait_for(wait_task, timeout=timeout)
-        except TimeoutError:
-            log.warning(f"URL {url_num}) Timed out waiting for M3U8.")
-            return nones
-
-        finally:
-            if not wait_task.done():
-                wait_task.cancel()
-
-                try:
-                    await wait_task
-                except asyncio.CancelledError:
-                    pass
-
-        if captured:
-            log.info(f"URL {url_num}) Captured M3U8")
-            return captured[0], iframe_src
-
-    except Exception as e:
-        log.warning(f"URL {url_num}) {e}")
+    if not (html_data := await network.request(url, url_num, log=log)):
         return nones
 
-    finally:
-        page.remove_listener("request", handler)
+    soup = HTMLParser(html_data.content)
+
+    iframe = soup.css_first("iframe")
+
+    if not iframe or not (iframe_src := iframe.attributes.get("src")):
+        log.warning(f"URL {url_num}) No iframe source found.")
+        return nones
+
+    elif not (
+        iframe_src_data := await network.request(
+            iframe_src,
+            url_num,
+            headers={"Referer": url},
+            log=log,
+        )
+    ):
+        return nones
+
+    num_list_ptrn = re.compile(r"var\s+_(\w|\d)+=\[(.*)\],", re.S)
+
+    index_ptrn = re.compile(r'\],(.*)(_.*="")')
+
+    m3u_ptrn = re.compile(r'var\s+signed_url\s+=\s+"(.*)";', re.I)
+
+    if not (num_list_mtch := num_list_ptrn.search(iframe_src_data.text)):
+        log.info(f"URL {url_num}) Unable to decipher m3u encryption.")
+        return nones
+
+    elif not (index_mtch := index_ptrn.search(iframe_src_data.text)):
+        log.info(f"URL {url_num}) Unable to decipher m3u encryption.")
+        return nones
+
+    num_list = (int(i) for i in num_list_mtch[2].split(","))
+
+    x, y = (int(i.split("=")[-1]) for i in index_mtch[1].split(",") if i)
+
+    js = "".join(chr(((i ^ x) - y + 65536) % 65536) for i in num_list)
+
+    if not (m3u_mtch := m3u_ptrn.search(js)):
+        return nones
+
+    log.info(f"URL {url_num}) Captured M3U8")
+
+    return m3u_mtch[1], iframe_src
 
 
 async def get_events(cached_keys: KeysView[str]) -> list[Event]:
@@ -156,7 +140,7 @@ async def get_events(cached_keys: KeysView[str]) -> list[Event]:
     return events
 
 
-async def scrape(browser: Browser) -> None:
+async def scrape() -> None:
     cached_urls = CACHE_FILE.load()
 
     valid_urls = {k: v for k, v in cached_urls.items() if v["source"]}
@@ -172,43 +156,40 @@ async def scrape(browser: Browser) -> None:
     if events := await get_events(cached_urls.keys()):
         log.info(f"Processing {len(events)} new URL(s)")
 
-        async with network.event_context(browser, stealth=False) as context:
-            for i, ev in enumerate(events, start=1):
-                async with network.event_page(context) as page:
-                    handler = partial(
-                        process_event,
-                        url=ev.link,
-                        url_num=i,
-                        page=page,
-                    )
+        for i, ev in enumerate(events, start=1):
+            handler = partial(
+                process_event,
+                url=ev.link,
+                url_num=i,
+            )
 
-                    source, iframe = await network.safe_process(
-                        handler,
-                        url_num=i,
-                        timeout_return=(None, None),
-                        semaphore=network.PW_S,
-                        log=log,
-                    )
+            source, iframe = await network.safe_process(
+                handler,
+                url_num=i,
+                timeout_return=(None, None),
+                semaphore=network.HTTP_S,
+                log=log,
+            )
 
-                    key = f"[{ev.sport}] {ev.name} ({TAG})"
+            key = f"[{ev.sport}] {ev.name} ({TAG})"
 
-                    tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
+            tvg_id, logo = leagues.get_tvg_info(ev.sport, ev.name)
 
-                    entry = {
-                        "source": source,
-                        "logo": logo,
-                        "refer": iframe,
-                        "timestamp": ev.timestamp,
-                        "tvg-id": tvg_id or "Live.Event.us",
-                        "link": ev.link,
-                    }
+            entry = {
+                "source": source,
+                "logo": logo,
+                "refer": iframe,
+                "timestamp": ev.timestamp,
+                "tvg-id": tvg_id or "Live.Event.us",
+                "link": ev.link,
+            }
 
-                    cached_urls[key] = entry
+            cached_urls[key] = entry
 
-                    if source:
-                        valid_count += 1
+            if source:
+                valid_count += 1
 
-                        urls[key] = entry
+                urls[key] = entry
 
         log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 

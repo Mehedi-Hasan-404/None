@@ -33,7 +33,7 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
         log.warning(f"URL {url_num}) No iframe source found.")
         return nones
 
-    elif not (iframe_src_data := await network.request(iframe_src, log=log)):
+    elif not (iframe_src_data := await network.request(iframe_src, url_num, log=log)):
         return nones
 
     pattern = re.compile(r'const\s+source\s+=\s+"([^"]*)"', re.I)
