@@ -372,6 +372,7 @@
             "GERMAN 2 BUNDESLIGA",
             "GERMAN 2. BUNDESLIGA",
             "GERMAN BUNDESLIGA 2",
+            "GERMANY - BUNDESLIGA 2",
             "GERMANY 2 BUNDESLIGA",
             "GERMANY 2. BUNDESLIGA",
             "GERMANY BUNDESLIGA 2"
@@ -488,10 +489,17 @@
         }
       },
       {
+        "AZERBAIJAN PREMIER LEAGUE": {
+          "logo": "https://gfr1.b-cdn.net/GFR%20League%20Logos/Azerbaijan%20Premier%20League.png",
+          "aliases": ["AZƏRBAYCAN PREMYER LIQASI", "MISLI PREMYER LIQASI"]
+        }
+      },
+      {
         "BELARUS VYSSHAYA LIG": {
           "logo": "https://r2.thesportsdb.com/images/media/league/badge/nb8xtg1656531943.png",
           "aliases": [
             "BELARUS PREMIER LEAGUE",
+            "BELARUS VYSSHAYA LIGA",
             "BELARUSIAN PREMIER LEAGUE",
             "BETERA PREMIER LEAGUE",
             "VYSHEYSHAYA LIG",
@@ -834,7 +842,13 @@
       {
         "COPPA ITALIA": {
           "logo": "https://i.gyazo.com/8fd7660cca8f8b690f50979b72b295c3.png",
-          "aliases": ["ITALIAN CUP"]
+          "aliases": [
+            "COPA ITALIA",
+            "ITALIAN CUP",
+            "ITALY - COPPA ITALIA",
+            "ITALY COPPA ITALIA",
+            "ITALY CUP"
+          ]
         }
       },
       {
@@ -1175,6 +1189,7 @@
             "CAMPEONATO NACIONAL DE LIGA DE SEGUNDA DIVISION",
             "CAMPEONATO NACIONAL DE LIGA DE SEGUNDA DIVISIÓN",
             "LALIGA 2",
+            "LALIGA HYPERMOTION",
             "SEGUNDA DIVISION",
             "SEGUNDA DIVISIÓN",
             "SEGUNDA LIGA",
@@ -1511,6 +1526,7 @@
         "PRIMEIRA LIGA": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/14.png",
           "aliases": [
+            "LIGA DE PORTUGAL",
             "LIGA PORTUGAL",
             "LIGA PORTUGAL BETCLIC",
             "PORTUGAL PRIMEIRA LIGA",
@@ -1774,6 +1790,19 @@
         }
       },
       {
+        "SWITZERLAND CUP": {
+          "logo": "https://www.thesportsdb.com/images/media/league/badgearchive/98s7kp1783556025.png",
+          "aliases": [
+            "COPA DE SUIZA",
+            "COPPA SVIZZERA",
+            "COUPE DE SUISSE",
+            "CUPPA SVIZRA",
+            "SCHWEIZER CUP",
+            "SWISS CUP"
+          ]
+        }
+      },
+      {
         "SWITZERLAND SUPER LEAGUE": {
           "logo": "https://i.gyazo.com/ecd3368b394b6f5778be7023d4c564d6.png",
           "aliases": ["SWISS SUPER LEAGUE", "SWITZERLAND - SUPER LEAGUE"]
@@ -1788,6 +1817,16 @@
             "SÜPERLIG",
             "TURKEY SUPER LIG",
             "TURKISH SUPER LIG"
+          ]
+        }
+      },
+      {
+        "TANZANIA LIGI KUU BARA": {
+          "logo": "https://www.ligikuu.co.tz/wp-content/uploads/2020/12/Untitled-2.png",
+          "aliases": [
+            "LIGI KUU TANZANIA BARA",
+            "TANZANIA MAINLAND PREMIER LEAGUE",
+            "TANZANIAN PREMIER LEAGUE"
           ]
         }
       },
@@ -1807,6 +1846,21 @@
         "U.S. OPEN CUP": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/69.png",
           "aliases": ["LAMAR HUNT U.S. OPEN CUP", "US OPEN CUP", "USOC"]
+        }
+      },
+      {
+        "UAE PREMIER LEAGUE": {
+          "logo": "https://brandlogos.net/wp-content/uploads/2026/01/uae_pro_league-logo_brandlogos.net_2xkd7-512x612.png",
+          "aliases": [
+            "ADNOC PRO LEAGUE",
+            "UAE PL",
+            "UAE PRO LEAGUE",
+            "UAE PROFESSIONAL LEAGUE",
+            "UNITED ARAB EMIRATES PL",
+            "UNITED ARAB EMIRATES PREMIER LEAGUE",
+            "UNITED ARAB EMIRATES PRO LEAGUE",
+            "UNITED ARAB EMIRATES PROFESSIONAL LEAGUE"
+          ]
         }
       },
       {
