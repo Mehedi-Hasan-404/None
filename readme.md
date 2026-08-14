@@ -6,13 +6,15 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-14 04:23 UTC</h2>
+<h2>Base Log @ 2026-08-14 09:37 UTC</h2>
 
-<h3>✅ Working Streams: 167<br>❌ Dead Streams: 16</h3>
+<h3>✅ Working Streams: 165<br>❌ Dead Streams: 18</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
+<tr><td><a href='http://99.27.51.147:8080/BeinSport/mpegts'>beIN Sports 1 France</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='https://gpuserver4.tier1streams.com/HALLMARK_MOVIES_AND_MYSTERIES/index.m3u8'>Hallmark Mystery</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver7.tier1streams.com/METV_SD/index.m3u'>MeTV</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/NEWSNATION/index.m3u8'>NewsNation</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver5.tier1streams.com/NICK_JR/index.m3u8'>Nick Jr</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver5.tier1streams.com/ONE_AMERICA_NEWS/index.m3u8'>One America News</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://gpuserver5.tier1streams.com/OVATION/index.m3u8'>Ovation</a></td><td>HTTP Error (404)</td></tr>
