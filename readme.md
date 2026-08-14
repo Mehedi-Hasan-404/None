@@ -6,29 +6,9 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-14 15:23 UTC</h2>
+<h2>Base Log @ 2026-08-14 15:58 UTC</h2>
 
-<h3>✅ Working Streams: 166<br>❌ Dead Streams: 17</h3>
-<table>
-<tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/HALLMARK_DRAMA_SD/index.m3u8'>Hallmark Family</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver4.tier1streams.com/HALLMARK_MOVIES_AND_MYSTERIES/index.m3u8'>Hallmark Mystery</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/METV_SD/index.m3u'>MeTV</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/NICK_JR/index.m3u8'>Nick Jr</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/ONE_AMERICA_NEWS/index.m3u8'>One America News</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/OVATION/index.m3u8'>Ovation</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/POP/index.m3u8'>Pop TV</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SHOWTIME_EXTREME/index.m3u8'>Showtime Extreme</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SMITHSONIAN/index.m3u8'>Smithsonian Channel</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SONY_MOVIES/index.m3u8'>Sony Movie Channel</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SNY/index.m3u8'>SportsNet New York</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/STARZ_EDGE/index.m3u8'>Starz Edge</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/STARZ_ENCORE/index.m3u8'>Starz Encore</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/SUNDANCE/index.m3u8'>Sundance</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/TSN_1/index.m3u8'>TSN 1</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/TV_LAND/index.m3u8'>TV Land</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver5.tier1streams.com/TV_ONE/index.m3u8'>TV One</a></td><td>HTTP Error (404)</td></tr>
-</table>
+<h3>✅ Working Streams: 183<br>❌ Dead Streams: 0</h3>
 </div>
 
 ---
