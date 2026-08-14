@@ -201,6 +201,7 @@
             "NFL PRETEMPORADA",
             "NFL RED ZONE",
             "NFL REDZONE",
+            "NFL TEMPORADA",
             "NFL TRAINING CAMP",
             "RED ZONE",
             "REDZONE",
@@ -516,6 +517,12 @@
         }
       },
       {
+        "BELGIUM CHALLENGER PRO LEAGUE": {
+          "logo": "https://contentful-asset-proxy.sd.indazn.com/vhp9jnid12wf/2zjU9OgUHSaFEE48DfzaQS/301815d826b3b3b3ffbe48edfbd1be6b/Challenger_Pro_League-modified.png?fm=webp&q=35",
+          "aliases": ["1B PRO LEAGUE", "CHALLENGER PRO LEAGUE"]
+        }
+      },
+      {
         "BELGIUM SUPER CUP": {
           "logo": "https://b.fssta.com/uploads/application/soccer/competition-logos/Belguim-Super-Cup.vresize.500.500.medium.0.png",
           "aliases": ["PRO LEAGUE SUPERCUP", "SUPERCOPA DE BÉLGICA"]
@@ -656,6 +663,8 @@
         "CHAMPIONSHIP": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png",
           "aliases": [
+            "EFL CHAMPIONSHIP",
+            "ENGLAND - CHAMPIONSHIP",
             "ENGLAND CHAMPIONSHIP",
             "ENGLISH CHAMPIONSHIP",
             "ENGLISH FOOTBALL LEAGUE CHAMPIONSHIP",
@@ -1111,6 +1120,17 @@
         "ICELAND LEAGUE": {
           "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9b/BestaLeague.png",
           "aliases": ["BESTA DEILD KARLA", "BESTA DEILDIN"]
+        }
+      },
+      {
+        "IRELAND FAI CUP": {
+          "logo": "https://r2.thesportsdb.com/images/media/league/badge/ffnp2x1750442568.png",
+          "aliases": [
+            "CLUB ORANGE FAI CUP",
+            "FAI CUP",
+            "FOOTBALL ASSOCIATION OF IRELAND SENIOR CHALLENGE CUP",
+            "IRISH FAI CUP"
+          ]
         }
       },
       {
@@ -1601,6 +1621,8 @@
           "aliases": [
             "LIGA DE ARABIA SAUDITA",
             "ROSHN SAUDI LEAGUE",
+            "SAUDI ARABIA - PRO LEAGUE",
+            "SAUDI ARABIA PRO LEAGUE",
             "SAUDI PREMIER LEAGUE"
           ]
         }
@@ -1815,6 +1837,7 @@
             "SUPER LIG",
             "SUPERLIG",
             "SÜPERLIG",
+            "TURKEY - SUPER LIG",
             "TURKEY SUPER LIG",
             "TURKISH SUPER LIG"
           ]
