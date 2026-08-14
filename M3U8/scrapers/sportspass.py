@@ -227,7 +227,7 @@ async def scrape(browser: Browser) -> None:
 
                     urls[key] = entry
 
-        log.info(f"Collected and cached {valid_count - cached_count} event(s)")
+        log.info(f"Collected and cached {valid_count - cached_count} new event(s)")
 
     else:
         log.info("No new events found")
