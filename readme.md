@@ -6,16 +6,9 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-15 08:57 UTC</h2>
+<h2>Base Log @ 2026-08-15 14:50 UTC</h2>
 
-<h3>✅ Working Streams: 182<br>❌ Dead Streams: 4</h3>
-<table>
-<tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='http://99.27.51.147:8080/BeinSport/mpegts'>beIN Sports 1 France</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://23.237.104.106:8080/USA_COMEDY_CENTRAL/index.m3u8'>Comedy Central</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://gpuserver7.tier1streams.com/SMITHSONIAN_SD/index.m3u8'>Smithsonian Channel</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/Marky0416/2c1744538b/74683'>Spectrum SportsNet LA Dodgers</a></td><td>HTTP Error (403)</td></tr>
-</table>
+<h3>✅ Working Streams: 185<br>❌ Dead Streams: 0</h3>
 </div>
 
 ---
