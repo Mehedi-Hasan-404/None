@@ -6,9 +6,15 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-15 14:50 UTC</h2>
+<h2>Base Log @ 2026-08-15 20:50 UTC</h2>
 
-<h3>✅ Working Streams: 185<br>❌ Dead Streams: 0</h3>
+<h3>✅ Working Streams: 182<br>❌ Dead Streams: 3</h3>
+<table>
+<tr><th>Channel</th><th>Error (Code)</th></tr>
+<tr><td><a href='https://gpuserver7.tier1streams.com/ESPN_DEPORTES/index.m3u8'>ESPN Deportes</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/Marky0416/2c1744538b/89089'>Premier Sports 1</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/Marky0416/2c1744538b/89090'>Premier Sports 2</a></td><td>HTTP Error (403)</td></tr>
+</table>
 </div>
 
 ---
