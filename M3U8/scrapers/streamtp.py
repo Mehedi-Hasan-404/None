@@ -14,7 +14,7 @@ TAG = "STP"
 
 CACHE_FILE = Cache(TAG, exp=19_800)
 
-BASE_URL = "https://streamtp99a.sbs"
+BASE_URL = "https://streamtp-golden1.click"
 
 
 async def process_event(url: str, url_num: int) -> str | None:
@@ -82,7 +82,7 @@ async def get_events() -> list[Event]:
 
         name = (
             f"{title.split("|")[0].strip()} | {lang}"
-            if (lang := event_info.get("language"))
+            if (lang := event_info.get("language", "").capitalize())
             else f"{title.split("|")[0].strip()}"
         )
 
