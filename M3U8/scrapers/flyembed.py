@@ -55,7 +55,13 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     m3u_ptrn = re.compile(r'var\s+signed_url\s+=\s+"(.*)";', re.I)
 
-    if not (num_list_mtch := num_list_ptrn.search(iframe_src_data.text)):
+    z_ptrn = re.compile(r"\%(\d+)")
+
+    if not (z_mtch := z_ptrn.search(iframe_src_data.text)):
+        log.warning(f"URL {url_num}) Unable to decipher m3u encryption.")
+        return nones
+
+    elif not (num_list_mtch := num_list_ptrn.search(iframe_src_data.text)):
         log.warning(f"URL {url_num}) Unable to decipher m3u encryption.")
         return nones
 
@@ -67,7 +73,9 @@ async def process_event(url: str, url_num: int) -> tuple[str | None, str | None]
 
     x, y = (int(i.split("=")[-1]) for i in index_mtch[1].split(",") if i)
 
-    js = "".join(chr(((i ^ x) - y + 65536) % 65536) for i in num_list)
+    z = int(z_mtch[1])
+
+    js = "".join(chr(((i ^ x) - y + z) % z) for i in num_list)
 
     if not (m3u_mtch := m3u_ptrn.search(js)):
         log.warning(f"URL {url_num}) No M3U8 source found.")

@@ -45,21 +45,26 @@ async def process_event(
 
     quality_info: dict[str, str | Any] = quality_data.json()
 
-    if not quality_info.get("available") or not (
-        qualities := quality_info.get("qualities")
-    ):
+    if not quality_info.get("available"):
         log.warning(f"URL {url_num}) Stream is unavailable.")
         return
 
-    elif not (
+    if not (
         available_quals := sorted(
-            (q for q, ok in qualities.items() if ok),
+            (q for q, ok in quality_info.get("qualities", {}).items() if ok),
             key=lambda q: int(q.rstrip("p")),
             reverse=True,
         )
     ):
-        log.warning(f"URL {url_num}) No available qualities found.")
-        return
+        if not (
+            available_quals := sorted(
+                (q for q, ok in quality_info.get("qualities2", {}).items() if ok),
+                key=lambda q: int(q.rstrip("p")),
+                reverse=True,
+            )
+        ):
+            log.warning(f"URL {url_num}) No available qualities found.")
+            return
 
     if not (
         stream_data := await network.request(
@@ -132,7 +137,7 @@ async def get_events(cached_keys: list[str]) -> list[STFEvent]:
 
         event_dt = Time.from_ts(event_time)
 
-        if not start_dt <= event_dt <= now:
+        if not start_dt <= event_dt.delta(minutes=30) <= now:
             continue
 
         events.append(
