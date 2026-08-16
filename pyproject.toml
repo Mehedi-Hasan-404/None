@@ -3,6 +3,7 @@ name = "iptv"
 version = "0.0.9"
 requires-python = ">=3.13"
 dependencies = [
+    "adblock>=0.6.0",
     "httpx[http2]>=0.28.1",
     "playwright>=1.62.0",
     "selectolax>=0.4.11",
