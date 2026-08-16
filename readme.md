@@ -6,9 +6,9 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-16 14:51 UTC</h2>
+<h2>Base Log @ 2026-08-16 20:49 UTC</h2>
 
-<h3>✅ Working Streams: 186<br>❌ Dead Streams: 0</h3>
+<h3>✅ Working Streams: 194<br>❌ Dead Streams: 0</h3>
 </div>
 
 ---
