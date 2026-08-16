@@ -81,7 +81,7 @@ async def main() -> None:
                 asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(streamxhd.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                # asyncio.create_task(xyzstreams.scrape()),
+                asyncio.create_task(xyzstreams.scrape()),
             ]
 
             await asyncio.gather(*(pw_tasks + httpx_tasks))
