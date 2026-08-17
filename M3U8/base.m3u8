@@ -361,7 +361,7 @@ https://ccctv.xyz:2096/live/n24/SUZsBNHv12/81854.ts
 https://ccctv.xyz:2096/live/n24/SUZsBNHv12/9160.ts
 
 #EXTINF:-1 tvg-chno="121" tvg-id="Newsmax.TV.HD.us2" tvg-name="Newsmax TV" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s87925_dark_360w_270h.png" group-title="TV",Newsmax TV
-https://a-cdn.klowdtv.com/live2/newsmax_720p/playlist.m3u8
+https://nmx1ota.akamaized.net/hls/live/2107010/Live_1/index.m3u8
 
 #EXTINF:-1 tvg-chno="122" tvg-id="NewsNation.us2" tvg-name="NewsNation" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s91096_dark_360w_270h.png" group-title="TV",NewsNation
 https://ccctv.xyz:2096/live/n24/SUZsBNHv12/82102.ts
@@ -427,25 +427,25 @@ https://ccctv.xyz:2096/live/n24/SUZsBNHv12/8346.ts
 https://ccctv.xyz:2096/live/n24/SUZsBNHv12/82629.ts
 
 #EXTINF:-1 tvg-chno="143" tvg-id="SkySp.Action.uk" tvg-name="Sky Sports Action" tvg-logo="https://images.open-epg.com/x476.png" group-title="TV",Sky Sports Action
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71719.ts
+http://stream.bottledesk.net/p/AQNASgYGemc/index.m3u8
 
 #EXTINF:-1 tvg-chno="144" tvg-id="SkySp.Cricket.uk" tvg-name="Sky Sports Cricket" tvg-logo="https://images.open-epg.com/x470.png" group-title="TV",Sky Sports Cricket
 https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71717.ts
 
 #EXTINF:-1 tvg-chno="145" tvg-id="SkySp.F1.uk" tvg-name="Sky Sports F1" tvg-logo="https://images.open-epg.com/x479.png" group-title="TV",Sky Sports F1
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71716.ts
+http://stream.bottledesk.net/p/AwZGQwwEZA/index.m3u8
 
 #EXTINF:-1 tvg-chno="146" tvg-id="SkySp.Fball.uk" tvg-name="Sky Sports Football" tvg-logo="https://images.open-epg.com/x469.png" group-title="TV",Sky Sports Football
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71715.ts
+https://origin.mycdn.video/skyfootball/index.m3u8
 
 #EXTINF:-1 tvg-chno="147" tvg-id="SkySp.Golf.uk" tvg-name="Sky Sports Golf" tvg-logo="https://images.open-epg.com/x472.png" group-title="TV",Sky Sports Golf
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71714.ts
+https://origin.mycdn.video/skygolf/index.m3u8
 
 #EXTINF:-1 tvg-chno="148" tvg-id="SkySpMainEvHD.uk" tvg-name="Sky Sports Main Event" tvg-logo="https://images.open-epg.com/x468.png" group-title="TV",Sky Sports Main Event
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71713.ts
+https://origin.mycdn.video/skymain/index.m3u8
 
 #EXTINF:-1 tvg-chno="149" tvg-id="SkySp.Mix.HD.uk" tvg-name="Sky Sports Mix" tvg-logo="https://images.open-epg.com/x477.png" group-title="TV",Sky Sports Mix
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71712.ts
+https://origin.mycdn.video/skymix/index.m3u8
 
 #EXTINF:-1 tvg-chno="150" tvg-id="SkySp.News.HD.uk" tvg-name="Sky Sports News" tvg-logo="https://images.open-epg.com/x482.png" group-title="TV",Sky Sports News
 https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71710.ts
@@ -535,10 +535,10 @@ https://ccctv.xyz:2096/live/n24/SUZsBNHv12/148.ts
 https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8
 
 #EXTINF:-1 tvg-chno="179" tvg-id="TNT.Sports.1.HD.uk" tvg-name="TNT Sports 1" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s97542_dark_360w_270h.png" group-title="TV",TNT Sports 1
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/72997.ts
+https://origin.mycdn.video/tntsport1/index.m3u8
 
 #EXTINF:-1 tvg-chno="180" tvg-id="TNT.Sports.2.HD.uk" tvg-name="TNT Sports 2" tvg-logo="https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s82449_dark_360w_270h.png" group-title="TV",TNT Sports 2
-https://ccctv.xyz:2096/live/n24/SUZsBNHv12/72998.ts
+https://origin.mycdn.video/tntsport2/index.m3u8
 
 #EXTINF:-1 tvg-chno="181" tvg-id="truTV.HD.us2" tvg-name="truTV" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10153_dark_360w_270h.png" group-title="TV",truTV
 https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8
