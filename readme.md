@@ -6,12 +6,13 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-17 09:10 UTC</h2>
+<h2>Base Log @ 2026-08-17 14:56 UTC</h2>
 
-<h3>✅ Working Streams: 179<br>❌ Dead Streams: 16</h3>
+<h3>✅ Working Streams: 178<br>❌ Dead Streams: 17</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
 <tr><td><a href='http://45.90.106.117:80/stream/94/itv1wal.ts'>ITV1</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/9631.ts'>MGM Plus Drive-In</a></td><td>HTTP Error (503)</td></tr>
 <tr><td><a href='http://89.46.123.7:80/stream/436/ssactionhevc.ts'>Sky Sports Action</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='http://89.46.123.7:80/stream/431/sscrickethevc.ts'>Sky Sports Cricket</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='http://89.46.123.7:80/stream/454/ssf1hevc.ts'>Sky Sports F1</a></td><td>HTTP Error (403)</td></tr>
