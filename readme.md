@@ -6,28 +6,19 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-17 14:56 UTC</h2>
+<h2>Base Log @ 2026-08-17 20:56 UTC</h2>
 
-<h3>✅ Working Streams: 178<br>❌ Dead Streams: 17</h3>
+<h3>✅ Working Streams: 187<br>❌ Dead Streams: 8</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='http://45.90.106.117:80/stream/94/itv1wal.ts'>ITV1</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/9631.ts'>MGM Plus Drive-In</a></td><td>HTTP Error (503)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/436/ssactionhevc.ts'>Sky Sports Action</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/431/sscrickethevc.ts'>Sky Sports Cricket</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/454/ssf1hevc.ts'>Sky Sports F1</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/434/ssfootballhevc.ts'>Sky Sports Football</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/435/ssgolfhevc.ts'>Sky Sports Golf</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/432/ssmainhevc.ts'>Sky Sports Main Event</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/438/ssmixhevc.ts'>Sky Sports Mix</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/439/ssnewshevc.ts'>Sky Sports News</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/437/ssplushevc.ts'>Sky Sports Plus</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/433/ssprehevc.ts'>Sky Sports Premier League</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.6:80/stream/281/ssracingsd.ts'>Sky Sports Racing</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://89.46.123.7:80/stream/456/sstennisfhd.ts'>Sky Sports Tennis</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://45.90.106.117:80/stream/100/stvhd.ts'>STV</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://79.143.16.38:80/stream/243/tnt1fhd.ts'>TNT Sports 1</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='http://79.143.16.38:80/stream/244/tnt2fhd.ts'>TNT Sports 2</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='http://41.205.93.154/LIFETIME/index.m3u8'>Lifetime</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71714.ts'>Sky Sports Golf</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71713.ts'>Sky Sports Main Event</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71712.ts'>Sky Sports Mix</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/103267.ts'>Sky Sports Plus</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/71709.ts'>Sky Sports Racing</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/103268.ts'>Sky Sports Tennis</a></td><td>Invalid Source (200)</td></tr>
+<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/103254.ts'>STV</a></td><td>Invalid Source (200)</td></tr>
 </table>
 </div>
 
