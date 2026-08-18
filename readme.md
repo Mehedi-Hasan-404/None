@@ -6,15 +6,13 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-18 09:05 UTC</h2>
+<h2>Base Log @ 2026-08-18 15:03 UTC</h2>
 
-<h3>✅ Working Streams: 191<br>❌ Dead Streams: 4</h3>
+<h3>✅ Working Streams: 192<br>❌ Dead Streams: 2</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/index.m3u8'>Crime & Investigation Network</a></td><td>cURL Error (28)</td></tr>
 <tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/103267.ts'>Sky Sports Plus</a></td><td>Invalid Source (200)</td></tr>
 <tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/103268.ts'>Sky Sports Tennis</a></td><td>Invalid Source (200)</td></tr>
-<tr><td><a href='https://ccctv.xyz:2096/live/n24/SUZsBNHv12/103254.ts'>STV</a></td><td>Invalid Source (200)</td></tr>
 </table>
 </div>
 
