@@ -808,6 +808,12 @@
         }
       },
       {
+        "COPA BOLIVIA": {
+          "logo": "https://copadebolivia.com/wp-content/uploads/2025/11/Copa-de-Bolivia.png",
+          "aliases": []
+        }
+      },
+      {
         "COPA CHILE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2331.png",
           "aliases": ["CHILE COPA", "CHILE CUP"]
@@ -872,7 +878,7 @@
       {
         "COPA PARAGUAY": {
           "logo": "https://i.gyazo.com/789c8cae8aaacebe1045d14c6d67f6bc.gif",
-          "aliases": ["PARAGUAY CUP", "PARAGUAYAN CUP"]
+          "aliases": ["PARAGUAY COPA", "PARAGUAY CUP", "PARAGUAYAN CUP"]
         }
       },
       {
@@ -1067,6 +1073,23 @@
             "NORWAY ELITESERIEN",
             "NORWEGIAN ELITESERIEN"
           ]
+        }
+      },
+      {
+        "ENGLISH EFL TROPHY": {
+          "logo": "https://upload.wikimedia.org/wikipedia/en/c/c3/EFL_Trophy.png",
+          "aliases": [
+            "EFL TROPHY",
+            "ENGLAND FOOTBALL LEAGUE TROPHY",
+            "ENGLISH FOOTBALL LEAGUE TROPHY",
+            "VERTU TROPHY"
+          ]
+        }
+      },
+      {
+        "ENGLISH NATIONAL LEAGUE CUP": {
+          "logo": "https://gateshead-fc.com/wp-content/uploads/2024/09/nl-cup.png",
+          "aliases": ["NATIONAL LEAGUE CUP"]
         }
       },
       {
@@ -1911,6 +1934,17 @@
         }
       },
       {
+        "SWEDEN SVENSKA CUPEN": {
+          "logo": "https://www.cfclassics.co/images/cups/sweden/svenskacupen/svenska-cupen-600x400.png",
+          "aliases": [
+            "SVENSKA CUPEN",
+            "SWEDEN CUP",
+            "SWEDISH CUP",
+            "SWEDISH SVENSKA CUPEN"
+          ]
+        }
+      },
+      {
         "SWITZERLAND CHALLENGE LEAGUE": {
           "logo": "https://r2.thesportsdb.com/images/media/league/badge/5816yi1635867610.png",
           "aliases": [
@@ -2013,7 +2047,17 @@
       {
         "UEFA CHAMPIONS LEAGUE": {
           "logo": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png",
-          "aliases": ["CHAMPIONS LEAGUE", "EUROPE UEFA CHAMPIONS LEAGUE", "UCL"]
+          "aliases": [
+            "CHAMPIONS LEAGUE",
+            "CHAMPIONS LEAGUE QUALIFIER",
+            "CHAMPIONS LEAGUE QUALIFIERS",
+            "CHAMPIONS LEAGUE QUALIFYING",
+            "EUROPE UEFA CHAMPIONS LEAGUE",
+            "UCL",
+            "UCL QUALIFIER",
+            "UCL QUALIFIERS",
+            "UCL QUALIFYING"
+          ]
         }
       },
       {
