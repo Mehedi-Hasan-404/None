@@ -15,7 +15,7 @@ CACHE_FILE = Cache(TAG, exp=10_800)
 
 API_FILE = Cache(f"{TAG}-api", exp=28_800)
 
-BASE_URL = "https://damitv.st"
+BASE_URL = "https://ondemand.st"
 
 
 @dataclass(kw_only=True, slots=True)
