@@ -6,19 +6,16 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-19 15:31 UTC</h2>
+<h2>Base Log @ 2026-08-19 20:54 UTC</h2>
 
-<h3>✅ Working Streams: 184<br>❌ Dead Streams: 8</h3>
+<h3>✅ Working Streams: 187<br>❌ Dead Streams: 5</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21630'>Aspire</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21586'>beIN Sports en Español</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21585'>beIN Sports USA</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3745'>Investigation Discovery</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='http://23.237.104.106:8080/USA_NAT_GEO/index.m3u8'>Nat Geo</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='http://23.237.104.106:8080/USA_NBA/index.m3u8'>NBA TV</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/149310'>NESN</a></td><td>cURL Error (56)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21563'>BET</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21615'>NHL Network</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3965'>Showtime 2</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3950'>Starz Encore</a></td><td>HTTP Error (502)</td></tr>
 </table>
 </div>
 
