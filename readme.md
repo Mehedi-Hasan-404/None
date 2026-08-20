@@ -6,32 +6,26 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-20 09:06 UTC</h2>
+<h2>Base Log @ 2026-08-20 15:05 UTC</h2>
 
-<h3>✅ Working Streams: 171<br>❌ Dead Streams: 21</h3>
+<h3>✅ Working Streams: 177<br>❌ Dead Streams: 15</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21585'>beIN Sports USA</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21563'>BET</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/77411'>Comedy TV</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2581'>ESPN2</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3736'>FX Movie Channel</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/333484'>Dabl</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3736'>FX Movie Channel</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/40583'>Grit TV</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/649413'>Hallmark Mystery</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/74682'>INSP</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3745'>Investigation Discovery</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/4431'>MGM Plus Drive-In</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/648977'>HBO Comedy</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/721378'>MeTV Toons</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3724'>MGM Plus Hits</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/663879'>MLB Network</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21615'>NHL Network</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/97472'>Nick Jr</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/31180'>Ovation</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3863'>Pop TV</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2416'>Showtime</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/648984'>Showtime Extreme</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3812'>Smithsonian Channel</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3961'>Starz Edge</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3953'>Starz Encore Classic</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/614330'>TV Land</a></td><td>HTTP Error (403)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21897'>TV One</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3969'>Showtime Family Zone</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/663927'>Space City Home Network</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2594'>TLC</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3145'>TSN 2</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3143'>TSN 4</a></td><td>HTTP Error (502)</td></tr>
 </table>
 </div>
 
