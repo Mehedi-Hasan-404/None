@@ -24,7 +24,7 @@ EPG_URLS = [
         "FR1",
         "IE1",
         "PEACOCK1",
-        # "PLEX1",
+        "PLEX1",
         "UK1",
         "US2",
         "US_LOCALS1",
