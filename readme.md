@@ -6,16 +6,26 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-19 20:54 UTC</h2>
+<h2>Base Log @ 2026-08-20 03:24 UTC</h2>
 
-<h3>✅ Working Streams: 187<br>❌ Dead Streams: 5</h3>
+<h3>✅ Working Streams: 177<br>❌ Dead Streams: 15</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21630'>Aspire</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21586'>beIN Sports en Español</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21585'>beIN Sports USA</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21563'>BET</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2581'>ESPN2</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2491'>HBO</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/74682'>INSP</a></td><td>HTTP Error (403)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/21615'>NHL Network</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3756'>Oxygen</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2416'>Showtime</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3965'>Showtime 2</a></td><td>HTTP Error (403)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2412'>Sony Movie Channel</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2413'>SportsNet New York</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3759'>Sundance</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3144'>TSN 3</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3143'>TSN 4</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3972'>Willow Cricket</a></td><td>HTTP Error (502)</td></tr>
 </table>
 </div>
 
