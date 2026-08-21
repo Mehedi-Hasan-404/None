@@ -6,9 +6,9 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-21 09:08 UTC</h2>
+<h2>Base Log @ 2026-08-21 15:04 UTC</h2>
 
-<h3>✅ Working Streams: 103<br>❌ Dead Streams: 92</h3>
+<h3>✅ Working Streams: 104<br>❌ Dead Streams: 91</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/51557'>Action MAX</a></td><td>HTTP Error (401)</td></tr>
@@ -36,7 +36,6 @@
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/2500'>Fox Sports 2 (Alt)</a></td><td>HTTP Error (401)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3736'>FX Movie Channel</a></td><td>HTTP Error (401)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/30924'>FYI TV</a></td><td>HTTP Error (401)</td></tr>
-<tr><td><a href='https://tvsen6.aynaott.com/golfchannel/index.m3u8'>Golf Channel</a></td><td>HTTP Error (404)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/40583'>Grit TV</a></td><td>HTTP Error (401)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/3739'>Hallmark Family</a></td><td>HTTP Error (401)</td></tr>
 <tr><td><a href='https://restream-live.realiptv.to/09145054/65339468/649413'>Hallmark Mystery</a></td><td>HTTP Error (401)</td></tr>
