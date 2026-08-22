@@ -63,9 +63,7 @@ async def process_event(
         )
 
         if not resp or resp.status != 200:
-            log.warning(
-                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
-            )
+            log.error(f"URL {url_num}) Status Code: {resp.status if resp else 'None'}")
             return (event_name, *nones)
 
         event_name_elem = page.locator("h1.match-head")

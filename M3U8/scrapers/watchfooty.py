@@ -139,9 +139,7 @@ async def process_event(
         )
 
         if not resp or resp.status != 200:
-            log.warning(
-                f"URL {url_num}) Status Code: {resp.status if resp else 'None'}"
-            )
+            log.error(f"URL {url_num}) Status Code: {resp.status if resp else 'None'}")
             return nones
 
         wait_task = asyncio.create_task(got_one.wait())
