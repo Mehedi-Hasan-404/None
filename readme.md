@@ -6,25 +6,17 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-22 08:16 UTC</h2>
+<h2>Base Log @ 2026-08-22 14:16 UTC</h2>
 
-<h3>✅ Working Streams: 178<br>❌ Dead Streams: 14</h3>
+<h3>✅ Working Streams: 186<br>❌ Dead Streams: 6</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/280818'>beIN Sports en Español</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://tvsen6.aynaott.com/pix11/index.m3u8'>CW</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://tvsen6.aynaott.com/foxnews/index.m3u8'>Fox News</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/1728'>FX Movie Channel</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://tvsen6.aynaott.com/golfchannel/index.m3u8'>Golf Channel</a></td><td>HTTP Error (404)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/280818'>beIN Sports en Español</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/1997'>Fox Soccer Plus</a></td><td>cURL Error (28)</td></tr>
 <tr><td><a href='https://d9.goaltend.xyz/channel/408188'>MeTV Toons</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://tvsen6.aynaott.com/msnbc/index.m3u8'>MS NOW</a></td><td>HTTP Error (404)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/1940'>NBC Sports Boston</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/1706'>NESN</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/1880'>Ovation</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/5244'>Premier Sports 2</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/266336'>Sky Sports Mix</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/11432'>NHL Network</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='http://stream.bottledesk.net/p/AwZGQwwEZA/index.m3u8'>Sky Sports F1</a></td><td>HTTP Error (502)</td></tr>
 <tr><td><a href='https://d9.goaltend.xyz/channel/250968'>TSN 2</a></td><td>HTTP Error (502)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/2134'>TV One</a></td><td>cURL Error (28)</td></tr>
 </table>
 </div>
 
