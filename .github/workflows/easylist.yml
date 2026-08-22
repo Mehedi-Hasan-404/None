@@ -1,0 +1,29 @@
+name: easylist
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-easylist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Get latest easylist
+        run: |
+          curl \
+            -z M3U8/scrapers/utils/easylist.txt \
+            -o M3U8/scrapers/utils/easylist.txt \
+            https://easylist-downloads.adblockplus.org/easylist.txt
+
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "update easylist"
+          file_pattern: "M3U8/scrapers/utils/easylist.txt"
+          commit_author: "GitHub Actions Bot <actions@github.com>"
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
