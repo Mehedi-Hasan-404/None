@@ -65,4 +65,4 @@ def get_logger(name: str | None = None) -> logging.Logger:
     return logger
 
 
-__all__ = ["get_logger", "ColorFormatter"]
+__all__ = ["get_logger"]
