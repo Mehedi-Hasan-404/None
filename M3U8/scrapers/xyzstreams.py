@@ -17,15 +17,16 @@ API_FILE = Cache(f"{TAG}-api", exp=28_800)
 
 BASE_URL = "https://xyzstreams.st/"
 
-SPORTS = [
-    "MLB",
-    "WNBA",
-    # "NBA",
-    # "NHL",
-    # "NFL",
-]
-
-SPORT_URLS = {sport: urljoin(BASE_URL, sport.lower()) for sport in SPORTS}
+SPORT_URLS = {
+    sport: urljoin(BASE_URL, endpoint)
+    for sport, endpoint in {
+        "MLB": "mlb",
+        "WNBA": "wnba",
+        # "NBA",
+        # "NHL",
+        "NFL": "nflembed",
+    }.items()
+}
 
 API_URLS = [
     urljoin("https://site.api.espn.com/apis/site/v2/sports/", f"{sport}/scoreboard")
@@ -33,7 +34,7 @@ API_URLS = [
         "baseball/mlb",
         # "basketball/nba",
         "basketball/wnba",
-        # "football/nfl",
+        "football/nfl",
         # "hockey/nhl",
     ]
 ]
@@ -96,6 +97,9 @@ async def get_sports_map() -> dict[str, dict[str, dict[str, str]]]:
             "NYL": "NY",
             "PHO": "PHX",
             "PDX": "POR",
+            "WAS": "WSH",
+        },
+        "NFL": {
             "WAS": "WSH",
         },
     }

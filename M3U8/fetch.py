@@ -23,7 +23,6 @@ from scrapers import (
     streamxhd,
     watchfooty,
     webcast,
-    xyz2,
     xyzstreams,
 )
 from scrapers.utils import get_logger, network
@@ -82,7 +81,6 @@ async def main() -> None:
                 asyncio.create_task(streamtp.scrape()),
                 asyncio.create_task(streamxhd.scrape()),
                 asyncio.create_task(webcast.scrape()),
-                # asyncio.create_task(xyz2.scrape()),
                 asyncio.create_task(xyzstreams.scrape()),
             ]
 
@@ -114,7 +112,6 @@ async def main() -> None:
         | streamxhd.urls
         | watchfooty.urls
         | webcast.urls
-        | xyz2.urls
         | xyzstreams.urls
     )
 
