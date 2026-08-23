@@ -19,7 +19,7 @@ get_status() {
     local channel="$2"
     local index="$3"
     local total="$4"
-    local refer="${5:-https://google.com}"
+    local referer="${5:-https://google.com}"
 
     local chnl_info response rc IFS status_code content_type index_width
 
