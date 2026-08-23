@@ -208,11 +208,13 @@ class Network:
 
     @staticmethod
     async def browser(playwright: Playwright, external: bool = False) -> Browser:
-        return (
-            await playwright.chromium.connect_over_cdp("http://localhost:9222")
-            if external
-            else await playwright.firefox.launch(headless=True)
-        )
+        if external:
+            try:
+                return await playwright.chromium.connect_over_cdp("http://localhost:9222")
+            except Exception:
+                return await playwright.chromium.launch(headless=True)
+        else:
+            return await playwright.firefox.launch(headless=True)
 
     @staticmethod
     def capture_req(
