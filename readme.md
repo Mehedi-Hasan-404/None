@@ -6,18 +6,17 @@
 [![license](https://img.shields.io/github/license/doms9/iptv?logoColor=86b58c)](https://github.com/doms9/iptv/blob/default/LICENSE)
 ![python](https://img.shields.io/badge/Python-4584b6?logo=python&logoColor=fff)
 
-<h2>Base Log @ 2026-08-22 20:15 UTC</h2>
+<h2>Base Log @ 2026-08-23 00:16 UTC</h2>
 
-<h3>✅ Working Streams: 185<br>❌ Dead Streams: 7</h3>
+<h3>✅ Working Streams: 186<br>❌ Dead Streams: 6</h3>
 <table>
 <tr><th>Channel</th><th>Error (Code)</th></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/11241'>beIN Sports USA</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/2107'>Fox Business</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/16864'>INSP</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/1927'>NBC Sports Bay Area</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/266333'>Sky Sports Cricket</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/1762'>Sportsnet 360</a></td><td>cURL Error (28)</td></tr>
-<tr><td><a href='https://d9.goaltend.xyz/channel/250968'>TSN 2</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/280818'>beIN Sports en Español</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/1985'>CBS Sports Network</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/1718'>CNBC World</a></td><td>HTTP Error (502)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/1706'>NESN</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/11432'>NHL Network</a></td><td>cURL Error (28)</td></tr>
+<tr><td><a href='https://d9.goaltend.xyz/channel/1880'>Ovation</a></td><td>cURL Error (28)</td></tr>
 </table>
 </div>
 
