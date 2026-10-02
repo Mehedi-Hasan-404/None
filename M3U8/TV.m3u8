@@ -831,440 +831,878 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-chno="193" tvg-id="AUS.Rules.Football.Dummy.us" tvg-name="[AFL Aussie Rules] Richmond W vs Geelong Cats W (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/afl.png" group-title="Live Events",[AFL Aussie Rules] Richmond W vs Geelong Cats W (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/URRR.m3u8
-
-#EXTINF:-1 tvg-chno="194" tvg-id="Soccer.Dummy.us" tvg-name="[ASEAN Championship] Thailand vs Philippines (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2261.png" group-title="Live Events",[ASEAN Championship] Thailand vs Philippines (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.55/hls/TTTTTX.m3u8
-
-#EXTINF:-1 tvg-chno="195" tvg-id="Football.Dummy.us" tvg-name="[American Football] Liberty Flamesvs.Delaware Blue Hens | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png" group-title="Live Events",[American Football] Liberty Flamesvs.Delaware Blue Hens | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="193" tvg-id="Football.Dummy.us" tvg-name="[American Football] Liberty Flamesvs.Delaware Blue Hens | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png" group-title="Live Events",[American Football] Liberty Flamesvs.Delaware Blue Hens | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/sfjnzabacah31.m3u8
 
-#EXTINF:-1 tvg-chno="196" tvg-id="Football.Dummy.us" tvg-name="[American Football] Penn State Nittany Lionsvs.Northwestern Wildcats | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png" group-title="Live Events",[American Football] Penn State Nittany Lionsvs.Northwestern Wildcats | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="194" tvg-id="Football.Dummy.us" tvg-name="[American Football] Penn State Nittany Lionsvs.Northwestern Wildcats | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png" group-title="Live Events",[American Football] Penn State Nittany Lionsvs.Northwestern Wildcats | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/qsdnajbq32.m3u8
 
-#EXTINF:-1 tvg-chno="197" tvg-id="Football.Dummy.us" tvg-name="[American Football] Pittsburgh Panthersvs.Virginia Tech Hokies | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png" group-title="Live Events",[American Football] Pittsburgh Panthersvs.Virginia Tech Hokies | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="195" tvg-id="Football.Dummy.us" tvg-name="[American Football] Pittsburgh Panthersvs.Virginia Tech Hokies | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/01/Football-Emoji-500x281.png" group-title="Live Events",[American Football] Pittsburgh Panthersvs.Virginia Tech Hokies | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/JHDAJBDnjdna30.m3u8
 
-#EXTINF:-1 tvg-chno="198" tvg-id="Live.Event.us" tvg-name="[Basketball NBL] Perth vs South East Melbourne (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Basketball NBL] Perth vs South East Melbourne (FAWA)
+#EXTINF:-1 tvg-chno="196" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Baskonia vs Olimpia Milano 1 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Baskonia vs Olimpia Milano 1 (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/URRRAAAa.m3u8
+http://193.47.62.55/hls/VAAAQaaaa.m3u8
 
-#EXTINF:-1 tvg-chno="199" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball] WNBA Dallas Wings at Golden State Valkyries | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/04/Basketball-Emoji-1536x864.png" group-title="Live Events",[Basketball] WNBA Dallas Wings at Golden State Valkyries | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="197" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Baskonia vs Olimpia Milano 2 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Baskonia vs Olimpia Milano 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/3bf88417-d6e5-4873-94b5-f13038df97f8.m3u8
+
+#EXTINF:-1 tvg-chno="198" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Bayern Munchen vs Partizan 1 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Bayern Munchen vs Partizan 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAAQa.m3u8
+
+#EXTINF:-1 tvg-chno="199" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Bayern Munchen vs Partizan 2 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Bayern Munchen vs Partizan 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/18a99d7e-7772-4e00-a06e-1eb6839ad01b.m3u8
+
+#EXTINF:-1 tvg-chno="200" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Besiktas vs Barcelona 1 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Besiktas vs Barcelona 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/RRUUU.m3u8
+
+#EXTINF:-1 tvg-chno="201" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Besiktas vs Barcelona 2 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Besiktas vs Barcelona 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/252647b0-89ab-4e76-8c9c-a28046ca4957.m3u8
+
+#EXTINF:-1 tvg-chno="202" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Fenerbahce vs Dubai 1 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Fenerbahce vs Dubai 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAAQ.m3u8
+
+#EXTINF:-1 tvg-chno="203" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Fenerbahce vs Dubai 2 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Fenerbahce vs Dubai 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/d3e27d5c-873a-4dee-b4bd-47d11199178f.m3u8
+
+#EXTINF:-1 tvg-chno="204" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Lyon-Villeurbanne vs Valencia 1 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Lyon-Villeurbanne vs Valencia 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAAQaa.m3u8
+
+#EXTINF:-1 tvg-chno="205" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Lyon-Villeurbanne vs Valencia 2 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Lyon-Villeurbanne vs Valencia 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/806b5e7a-9708-4c1a-92e1-13d2e5fe7d7a.m3u8
+
+#EXTINF:-1 tvg-chno="206" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Panathinaikos vs Maccabi Tel Aviv 1 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Panathinaikos vs Maccabi Tel Aviv 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAAQaaa.m3u8
+
+#EXTINF:-1 tvg-chno="207" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball Euroleague] Panathinaikos vs Maccabi Tel Aviv 2 (FAWA)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Basketball Euroleague] Panathinaikos vs Maccabi Tel Aviv 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/ea487101-bbb7-45c0-9df7-23a4f351bae4.m3u8
+
+#EXTINF:-1 tvg-chno="208" tvg-id="Basketball.Dummy.us" tvg-name="[Basketball] WNBA Dallas Wings at Golden State Valkyries | English (STRMCNTR)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/04/Basketball-Emoji-1536x864.png" group-title="Live Events",[Basketball] WNBA Dallas Wings at Golden State Valkyries | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/cwxvbnfghq60.m3u8
 
-#EXTINF:-1 tvg-chno="200" tvg-id="Live.Event.us" tvg-name="[Football Asian Games] North Korea W vs Japan W (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Football Asian Games] North Korea W vs Japan W (FAWA)
+#EXTINF:-1 tvg-chno="209" tvg-id="Soccer.Dummy.us" tvg-name="[Bolivia Copa] SA Bulo Bulo vs Academia del Balompie (FAWA)" tvg-logo="https://copadebolivia.com/wp-content/uploads/2025/11/Copa-de-Bolivia.png" group-title="Live Events",[Bolivia Copa] SA Bulo Bulo vs Academia del Balompie (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.55/hls/TATATA.m3u8
+http://193.47.62.55/hls/YLLLQ.m3u8
 
-#EXTINF:-1 tvg-chno="201" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Belgiumvs.Türkiye | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Belgiumvs.Türkiye | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="210" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[Boxing] Boxing Primetime Fight Night Vol 10 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Boxing] Boxing Primetime Fight Night Vol 10 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/GAGAGA.m3u8
+
+#EXTINF:-1 tvg-chno="211" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[Boxing] Faour - Sachbazjan (EMBEDHD)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Boxing] Faour - Sachbazjan (EMBEDHD)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://lb9.strmd.st/secure/gouLXuKKRSiyFbaIcNJBUtsawiAakLEY/ingest/stream/mevent2/1/playlist.m3u8
+
+#EXTINF:-1 tvg-chno="212" tvg-id="Live.Event.us" tvg-name="[CONCACAF Nations League] Saint Lucia vs Guadeloupe (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[CONCACAF Nations League] Saint Lucia vs Guadeloupe (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/YLLLQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="213" tvg-id="Live.Event.us" tvg-name="[Czech MOL Cup] Dukla Prague vs Jablonec (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech MOL Cup] Dukla Prague vs Jablonec (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.50/hls/EMMMQQQQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="214" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Bili Tygri Liberec vs Olomouc | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Bili Tygri Liberec vs Olomouc | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=84bd78d7e823893f580fbd31ee787aaa%2Findex.m3u8&e=1790967900&sig=7EDhUVQOdWp42o4YhH1mC0tEqrFkCsRexzMUDMSVUfQ&v=1790966100-5350
+
+#EXTINF:-1 tvg-chno="215" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Dynamo Pardubice vs Plzen | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Dynamo Pardubice vs Plzen | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=94a7b5b18c19cbc29688540ab79335b5%2Findex.m3u8&e=1790967895&sig=ETtSAITK4eZwbL7VscwntfINug0jsfjdzkKCXyw1_MI&v=1790966095-1884
+
+#EXTINF:-1 tvg-chno="216" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Kometa Brno vs Mlada vs Boleslav | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Kometa Brno vs Mlada vs Boleslav | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=76a5e19e42340a9ff599bf9453b1e07f%2Findex.m3u8&e=1790967897&sig=62GRnfgfrAeBRiOlM-KBwJaL6wwEyS6xhiuLzZqIYVM&v=1790966097-9196
+
+#EXTINF:-1 tvg-chno="217" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Rytiri Kladno vs Mountfield | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Rytiri Kladno vs Mountfield | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=c564bc7e3c0914e67ee7ea0b4fd4f51f%2Findex.m3u8&e=1790967903&sig=9K4Vfmt68Z84l2UKqgCvNpkQFKPoQpXd1Ek2DLNwHV8&v=1790966103-4654
+
+#EXTINF:-1 tvg-chno="218" tvg-id="Darts.Dummy.us" tvg-name="[Darts] Darts World Grand Prix (FAWA)" tvg-logo="https://i.gyazo.com/4cd43600457c8611d5cd10d2c8bdf244.png" group-title="Live Events",[Darts] Darts World Grand Prix (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/ZRRRAAAAAx.m3u8
+
+#EXTINF:-1 tvg-chno="219" tvg-id="Soccer.Dummy.us" tvg-name="[Dutch Eerste Divisie] Helmond vs Heracles (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/11.png" group-title="Live Events",[Dutch Eerste Divisie] Helmond vs Heracles (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/YLLLQQ.m3u8
+
+#EXTINF:-1 tvg-chno="220" tvg-id="Live.Event.us" tvg-name="[English Premiership Rugby] Bath vs Exeter Chiefs (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[English Premiership Rugby] Bath vs Exeter Chiefs (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/AYYY.m3u8
+
+#EXTINF:-1 tvg-chno="221" tvg-id="Live.Event.us" tvg-name="[Euro U21 Qualification] Andorra U21 vs Moldova U21 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Euro U21 Qualification] Andorra U21 vs Moldova U21 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAA.m3u8
+
+#EXTINF:-1 tvg-chno="222" tvg-id="Live.Event.us" tvg-name="[Euro U21 Qualification] Austria U21 vs Denmark U21 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Euro U21 Qualification] Austria U21 vs Denmark U21 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.50/hls/EMMMQQ.m3u8
+
+#EXTINF:-1 tvg-chno="223" tvg-id="Live.Event.us" tvg-name="[Euro U21 Qualification] England U21 vs Slovakia U21 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Euro U21 Qualification] England U21 vs Slovakia U21 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAAQaaaaaAA.m3u8
+
+#EXTINF:-1 tvg-chno="224" tvg-id="Live.Event.us" tvg-name="[Euro U21 Qualification] Slovenia U21 vs Netherlands U21 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Euro U21 Qualification] Slovenia U21 vs Netherlands U21 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.50/hls/EMMMQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="225" tvg-id="Live.Event.us" tvg-name="[Euro U21 Qualification] Ukraine U21 vs Croatia U21 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Euro U21 Qualification] Ukraine U21 vs Croatia U21 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.50/hls/EMMMQQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="226" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Besiktas vs Barcelona | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Besiktas vs Barcelona | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=6488e829b2d71f9284ba6335d25ef31b%2Findex.m3u8&e=1790967960&sig=wppJKQcwKhtl3pP_1Nqyx3Ge2NaqhOw46d3SY_gNMrM&v=1790966160-8420
+
+#EXTINF:-1 tvg-chno="227" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] FC Bayern Munchen vs Partizan Mozzart Belgrad | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] FC Bayern Munchen vs Partizan Mozzart Belgrad | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=82c5b0de40d0f66ec16c13d319dbd109%2Findex.m3u8&e=1790967952&sig=2gyaAPkn0NdLVfjetCDKplkxvMrwIaxv5uUKQh1nveQ&v=1790966152-8233
+
+#EXTINF:-1 tvg-chno="228" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Fenerbahce vs Dubai | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Fenerbahce vs Dubai | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=a6f0db1671277d037eda0ea8d39fd850%2Findex.m3u8&e=1790967958&sig=xjX2eS4EJNxYI5TynnKm_rar3eVGXabTg9IlUaXJAo4&v=1790966158-5305
+
+#EXTINF:-1 tvg-chno="229" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Lyon Villeurbanne vs Valencia | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Lyon Villeurbanne vs Valencia | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=b8bf17e4e6ca1b4d1ba51d757263f07a%2Findex.m3u8&e=1790967955&sig=4Z_LBUFin64BEmxIj1mfn_8aPeAf1-kLrovy7NnvwuU&v=1790966155-5984
+
+#EXTINF:-1 tvg-chno="230" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Panathinaikos vs Maccabi Tel Aviv | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Panathinaikos vs Maccabi Tel Aviv | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=08f8c9e711822e17468f26f2a6d46fb2%2Findex.m3u8&e=1790967889&sig=1KAoTjlVhWbne_ArrEo5iqiZdG0tbsmDG0dKMbiHMjQ&v=1790966089-1858
+
+#EXTINF:-1 tvg-chno="231" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Panathinaikos vs Maccabi Tel Aviv | GR (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Panathinaikos vs Maccabi Tel Aviv | GR (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=64a1542a3502580b17414b317feff30a%2Findex.m3u8&e=1790967886&sig=4qz0D0NrE_KJbhuZNOvQ5S-VhpxYgQevcM2i8J2tNsY&v=1790966086-6044
+
+#EXTINF:-1 tvg-chno="232" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Saski Baskonia vs Olimpia Milano | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Saski Baskonia vs Olimpia Milano | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=118c7e53588f712a763b9631557cfdbb%2Findex.m3u8&e=1790967950&sig=g979uO9Z6c7ODtOM_2vBn3EAKVqI32lkC9MiGGeqCp8&v=1790966150-7294
+
+#EXTINF:-1 tvg-chno="233" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Belgium vs Turkey | BE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Belgium vs Turkey | BE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=c43f93e25cb602599a2ba9a5ed372394%2Findex.m3u8&e=1790967884&sig=iRgTtVi8F9TE2z4ReGbCxw1t8vRZEEizIx9BZAbUdcY&v=1790966084-1089
+
+#EXTINF:-1 tvg-chno="234" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Belgium vs Turkey | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Belgium vs Turkey | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=23ab266ed39b6376928a26fb503c2a8e%2Findex.m3u8&e=1790967881&sig=Ftys9c3ZsvDtXPL_PDr4UW60o5vKSTyVmDOgbG0XJNQ&v=1790966081-9560
+
+#EXTINF:-1 tvg-chno="235" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Bosnia and Herzegovina vs Sweden | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Bosnia and Herzegovina vs Sweden | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=07ae5785d9f5ce3acbd1e831e4c023ec%2Findex.m3u8&e=1790967947&sig=ylO255HwadjyYtj4YyNNrm38Ix0DS2jLyfXgSm4E8oQ&v=1790966147-8819
+
+#EXTINF:-1 tvg-chno="236" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Bosnia and Herzegovina vs Sweden | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Bosnia and Herzegovina vs Sweden | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=49d3ee00dc9b987bfe956cfe0cb11f31%2Findex.m3u8&e=1790967945&sig=5VG4SZ9addPcU5SHf93Jj_7seU98ampW-KXTkMwrzlo&v=1790966145-4271
+
+#EXTINF:-1 tvg-chno="237" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Faroe Islands vs Slovakia | SK (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Faroe Islands vs Slovakia | SK (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=7f5277c24aa1519ba0a9da6e9480a93e%2Findex.m3u8&e=1790967918&sig=8XjlrbYQwqb4WULyvwYpwblJ1hyNGUY2oI-Us1ao318&v=1790966118-4713
+
+#EXTINF:-1 tvg-chno="238" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] France vs Italy | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] France vs Italy | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=ae48836381ea1dc4e923da3a418649bb%2Findex.m3u8&e=1790967913&sig=KmdrUIsZivTPfikfu8i0A0BO56xzKOGIXNs8hQIpj00&v=1790966113-5874
+
+#EXTINF:-1 tvg-chno="239" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] France vs Italy | FR (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] France vs Italy | FR (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=131aad542969f2e906086706986d6698%2Findex.m3u8&e=1790967910&sig=kiH8VKnEC7w9BlUgwpowapyAzZTDblq009k3Z5qTK7U&v=1790966110-2838
+
+#EXTINF:-1 tvg-chno="240" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] France vs Italy | IT (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] France vs Italy | IT (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=d7bb70bbe1dafb9cbec7469b899bee63%2Findex.m3u8&e=1790967908&sig=WOY3P_TFQY-KJHYbC57Hnqf6YcQ4oAhszbzK7AQZYwY&v=1790966108-9873
+
+#EXTINF:-1 tvg-chno="241" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Hungary vs Georgia | HU (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Hungary vs Georgia | HU (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=d6eae01bed513495f81eb45cc68216af%2Findex.m3u8&e=1790967905&sig=87gy8nQVjHI3rLFN4VVVOFf6kPBKiuC9y_U-gVHO1iw&v=1790966105-2443
+
+#EXTINF:-1 tvg-chno="242" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Poland vs Romania | PL (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Poland vs Romania | PL (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=236891f4057e4b7b95512d0ecfac29e1%2Findex.m3u8&e=1790967921&sig=4x2mNhBbv5f3IaC7rnnG7EUY2M6GJoOtiNOyYIOAulo&v=1790966121-8531
+
+#EXTINF:-1 tvg-chno="243" tvg-id="Live.Event.us" tvg-name="[Europe UEFA Nations League] Ukraine vs Northern Ireland | UA (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Europe UEFA Nations League] Ukraine vs Northern Ireland | UA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=76f47724d55d3e3d9ddd4679598e55c5%2Findex.m3u8&e=1790967916&sig=cvbDeacKOZoxu7P83y7a-blqZ03AcyGs46NUEFKO6rU&v=1790966116-9075
+
+#EXTINF:-1 tvg-chno="244" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] Assat vs Lukko | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] Assat vs Lukko | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=3cd25b0b3db256d838549b42bc24f198%2Findex.m3u8&e=1790967942&sig=QynEYckssU79btCFCKQwmj3WZfSj3wULITGYLtmKvbY&v=1790966142-8465
+
+#EXTINF:-1 tvg-chno="245" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Belgiumvs.Türkiye | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Belgiumvs.Türkiye | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/377qj1h2727.m3u8
 
-#EXTINF:-1 tvg-chno="202" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Bosnia-Herzegovinavs.Sweden | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Bosnia-Herzegovinavs.Sweden | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="246" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Bosnia-Herzegovinavs.Sweden | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Bosnia-Herzegovinavs.Sweden | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/24SDAZFcsqnj24.m3u8
 
-#EXTINF:-1 tvg-chno="203" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Cyprusvs.Armenia | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Cyprusvs.Armenia | English (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streame.center
-#EXTVLCOPT:http-origin=https://streame.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestream2.pro/hls/24SDAZFcsqnj24.m3u8
-
-#EXTINF:-1 tvg-chno="204" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Faroe Islandsvs.Slovakia | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Faroe Islandsvs.Slovakia | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="247" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Faroe Islandsvs.Slovakia | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Faroe Islandsvs.Slovakia | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/dza5z8f69.m3u8
 
-#EXTINF:-1 tvg-chno="205" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Francevs.Italy | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Francevs.Italy | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="248" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Francevs.Italy | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Francevs.Italy | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/eJmauBDCIf.m3u8
 
-#EXTINF:-1 tvg-chno="206" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Hungaryvs.Georgia | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Hungaryvs.Georgia | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="249" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Hungaryvs.Georgia | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Hungaryvs.Georgia | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/b0h5fNwDKH.m3u8
 
-#EXTINF:-1 tvg-chno="207" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Kazakhstanvs.Moldova | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Kazakhstanvs.Moldova | English (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streame.center
-#EXTVLCOPT:http-origin=https://streame.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestream2.pro/hls/eJmauBDCIf.m3u8
-
-#EXTINF:-1 tvg-chno="208" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Latviavs.Montenegro | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Latviavs.Montenegro | English (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streame.center
-#EXTVLCOPT:http-origin=https://streame.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestream2.pro/hls/b0h5fNwDKH.m3u8
-
-#EXTINF:-1 tvg-chno="209" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Polandvs.Romania | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Polandvs.Romania | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="250" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Polandvs.Romania | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Polandvs.Romania | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/griogoehvn2.m3u8
 
-#EXTINF:-1 tvg-chno="210" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Ukrainevs.Northern Ireland | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Ukrainevs.Northern Ireland | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="251" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Ukrainevs.Northern Ireland | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Ukrainevs.Northern Ireland | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/sqdahach1ax.m3u8
 
-#EXTINF:-1 tvg-chno="211" tvg-id="Racing.Dummy.us" tvg-name="[Formula 1] Formula 1 2026 - Bahrain GP (iSTRMEAST)" tvg-logo="https://1000logos.net/wp-content/uploads/2021/06/F1-logo-500x281.png" group-title="Live Events",[Formula 1] Formula 1 2026 - Bahrain GP (iSTRMEAST)
+#EXTINF:-1 tvg-chno="252" tvg-id="Racing.Dummy.us" tvg-name="[Formula 1] Formula 1 2026 - Bahrain GP (iSTRMEAST)" tvg-logo="https://1000logos.net/wp-content/uploads/2021/06/F1-logo-500x281.png" group-title="Live Events",[Formula 1] Formula 1 2026 - Bahrain GP (iSTRMEAST)
 #EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/57392?ad=111
 #EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/57392?ad=111
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://chatgpt.hereisman.net/playlist/57392/load-playlist
 
-#EXTINF:-1 tvg-chno="212" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] China vs Palestine 1 (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] China vs Palestine 1 (FAWA)
+#EXTINF:-1 tvg-chno="253" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] Serbia U21 vs Russia U21 (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] Serbia U21 vs Russia U21 (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/URRRAAA.m3u8
+http://193.47.62.50/hls/EMMMQQQQQ.m3u8
 
-#EXTINF:-1 tvg-chno="213" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] China vs Palestine 2 (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] China vs Palestine 2 (FAWA)
+#EXTINF:-1 tvg-chno="254" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] Sevilla vs Aston Villa (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] Sevilla vs Aston Villa (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://www.rtmpcdn.com/live/af34076c-b6f6-48a3-9d1a-8472dfe779b3.m3u8
+http://193.47.62.55/hls/VAAAQaaaaa.m3u8
 
-#EXTINF:-1 tvg-chno="214" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] FC Twente vs Werder Bremen (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] FC Twente vs Werder Bremen (FAWA)
+#EXTINF:-1 tvg-chno="255" tvg-id="Soccer.Dummy.us" tvg-name="[German Women Bundesliga] Bayer Leverkusen W vs Werder Bremen W (FAWA)" tvg-logo="https://i.gyazo.com/d13d4c0330be96801aa4b2d8b83d3a8f.png" group-title="Live Events",[German Women Bundesliga] Bayer Leverkusen W vs Werder Bremen W (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/HOOOA.m3u8
+http://193.47.62.50/hls/EMMMQQQQQQQ.m3u8
 
-#EXTINF:-1 tvg-chno="215" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] Hacken vs Elfsborg (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] Hacken vs Elfsborg (FAWA)
+#EXTINF:-1 tvg-chno="256" tvg-id="Live.Event.us" tvg-name="[Germany DEL] Augsburger Panther vs Grizzly Wolfsburg | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Germany DEL] Augsburger Panther vs Grizzly Wolfsburg | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=7bb9c8db145ddbf8b75a8f98223221b4%2Findex.m3u8&e=1790967865&sig=ECrVwl4n-9K_P8c0MWDHbQu-0WIeEfc3FBkt3XmDN5o&v=1790966065-3539
+
+#EXTINF:-1 tvg-chno="257" tvg-id="Live.Event.us" tvg-name="[Germany DEL] Kolner Haie vs EHC Red Bull Munchen | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Germany DEL] Kolner Haie vs EHC Red Bull Munchen | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=7437dc59183bb16ebc475580c4cee076%2Findex.m3u8&e=1790967871&sig=aK3_WCT2NmyVWypvtTwWhzqHGoVSPdVdQ26KBcHrbFU&v=1790966071-1869
+
+#EXTINF:-1 tvg-chno="258" tvg-id="Live.Event.us" tvg-name="[Germany DEL] Krefeld Pinguine vs ERC Ingolstadt | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Germany DEL] Krefeld Pinguine vs ERC Ingolstadt | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=ff2596f8f855e3e2f224518feb937c8c%2Findex.m3u8&e=1790967873&sig=Jp85UsdYlqQBOHups-27iISS8WY_s9MU2flhovxgg-M&v=1790966073-2442
+
+#EXTINF:-1 tvg-chno="259" tvg-id="Live.Event.us" tvg-name="[Germany DEL] Lowen Frankfurt vs Eisbaren Berlin | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Germany DEL] Lowen Frankfurt vs Eisbaren Berlin | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=e0fb624f5ff1cdd17251c43b5487e6f4%2Findex.m3u8&e=1790967868&sig=IyZF2j9HMeSiltsalp6DWA5KFVpMiB4Z_YcidAajF5c&v=1790966068-3783
+
+#EXTINF:-1 tvg-chno="260" tvg-id="Live.Event.us" tvg-name="[Germany DEL] Nurnberg Ice Tigers vs Schwenninger | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Germany DEL] Nurnberg Ice Tigers vs Schwenninger | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=3bc7b152b1a24a36514887f5cfeef106%2Findex.m3u8&e=1790967876&sig=OJJ4d6zprtJQUnrBtqR515BB5Lhp616bTwCNgfZQwBE&v=1790966076-9384
+
+#EXTINF:-1 tvg-chno="261" tvg-id="Live.Event.us" tvg-name="[Germany DEL] Straubing Tigers vs Bremerhaven | DE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Germany DEL] Straubing Tigers vs Bremerhaven | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=7b609c48f4d1c2c615d43c5f7e25194f%2Findex.m3u8&e=1790967879&sig=3zw8aF9eDsa6SmErPdiSgyE59FNi4o29-zCc-Hk3I9M&v=1790966079-1174
+
+#EXTINF:-1 tvg-chno="262" tvg-id="Golf.Dummy.us" tvg-name="[Golf PGA] Golf PGA Bank of Utah Championship (FAWA)" tvg-logo="https://1000logos.net/wp-content/uploads/2024/10/PGA-Tour-Logo-500x281.png" group-title="Live Events",[Golf PGA] Golf PGA Bank of Utah Championship (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.55/hls/hyhyhya.m3u8
+http://193.47.62.41/hls/zfffAA.m3u8
 
-#EXTINF:-1 tvg-chno="216" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] Kolding vs Odense (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] Kolding vs Odense (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/HOOO.m3u8
-
-#EXTINF:-1 tvg-chno="217" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] Lugano vs Hellas Verona (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] Lugano vs Hellas Verona (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.55/hls/hyhyhy.m3u8
-
-#EXTINF:-1 tvg-chno="218" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] Nurnberg vs Ingolstadt (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] Nurnberg vs Ingolstadt (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.55/hls/TATATAa.m3u8
-
-#EXTINF:-1 tvg-chno="219" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] South Korea vs Venezuela 1 (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] South Korea vs Venezuela 1 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/URRRAA.m3u8
-
-#EXTINF:-1 tvg-chno="220" tvg-id="Soccer.Dummy.us" tvg-name="[Friendly Match] South Korea vs Venezuela 2 (FAWA)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Friendly Match] South Korea vs Venezuela 2 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://www.rtmpcdn.com/live/b903c093-a6a8-4834-9f15-c2076cfc012e.m3u8
-
-#EXTINF:-1 tvg-chno="221" tvg-id="Golf.Dummy.us" tvg-name="[Golf] Golf Alfred Dunhill Links Championship (FAWA)" tvg-logo="https://i.gyazo.com/14a883f22796f631e6f97c34dbeb6ada.png" group-title="Live Events",[Golf] Golf Alfred Dunhill Links Championship (FAWA)
+#EXTINF:-1 tvg-chno="263" tvg-id="Golf.Dummy.us" tvg-name="[Golf] Golf Alfred Dunhill Links Championship (FAWA)" tvg-logo="https://i.gyazo.com/14a883f22796f631e6f97c34dbeb6ada.png" group-title="Live Events",[Golf] Golf Alfred Dunhill Links Championship (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 http://193.47.62.44/hls/iiiiaA.m3u8
 
-#EXTINF:-1 tvg-chno="222" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] Anaheim Ducksvs.Vegas Golden Knights | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] Anaheim Ducksvs.Vegas Golden Knights | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="264" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] Anaheim Ducksvs.Vegas Golden Knights | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] Anaheim Ducksvs.Vegas Golden Knights | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/bnvcxwhfg54.m3u8
 
-#EXTINF:-1 tvg-chno="223" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] Boston Bruinsvs.Winnipeg Jets | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] Boston Bruinsvs.Winnipeg Jets | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="265" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] Boston Bruinsvs.Winnipeg Jets | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] Boston Bruinsvs.Winnipeg Jets | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/lmdsjkfgv52.m3u8
 
-#EXTINF:-1 tvg-chno="224" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] New York Rangersvs.Detroit Red Wings | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] New York Rangersvs.Detroit Red Wings | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="266" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] New York Rangersvs.Detroit Red Wings | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] New York Rangersvs.Detroit Red Wings | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/uyopzarf50.m3u8
 
-#EXTINF:-1 tvg-chno="225" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] St. Louis Bluesvs.Dallas Stars | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] St. Louis Bluesvs.Dallas Stars | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="267" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] St. Louis Bluesvs.Dallas Stars | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] St. Louis Bluesvs.Dallas Stars | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/rtzaeyvhb53.m3u8
 
-#EXTINF:-1 tvg-chno="226" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] Washington Capitalsvs.Carolina Hurricanes | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] Washington Capitalsvs.Carolina Hurricanes | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="268" tvg-id="Ice.Hockey.Dummy.us" tvg-name="[Hockey] Washington Capitalsvs.Carolina Hurricanes | English (STRMCNTR)" tvg-logo="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f3d2.png" group-title="Live Events",[Hockey] Washington Capitalsvs.Carolina Hurricanes | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/hjksgdfauzy51.m3u8
 
-#EXTINF:-1 tvg-chno="227" tvg-id="Live.Event.us" tvg-name="[Horse Racing] Horse Racing 1 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Horse Racing] Horse Racing 1 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.194/hls/vavavava.m3u8
-
-#EXTINF:-1 tvg-chno="228" tvg-id="Live.Event.us" tvg-name="[Horse Racing] Horse Racing 2 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Horse Racing] Horse Racing 2 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.194/hls/vavavavaq.m3u8
-
-#EXTINF:-1 tvg-chno="229" tvg-id="Soccer.Dummy.us" tvg-name="[LaLiga 2] Eldense vs Real Oviedo 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/107.png" group-title="Live Events",[LaLiga 2] Eldense vs Real Oviedo 1 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=hypermotion1
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=hypermotion1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://Ym9yZQ.fubo18.com:443/hypermotion1/mono.m3u8?token=10128750d81bdf721bf23b7a1b3075e34b51b675-9-1790964724-1790946724
-
-#EXTINF:-1 tvg-chno="230" tvg-id="Soccer.Dummy.us" tvg-name="[Liga Profesional] Independiente vs Instituto 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1.png" group-title="Live Events",[Liga Profesional] Independiente vs Instituto 1 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espnpremium 
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espnpremium 
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://dglvz29s.fubo18.com:443/espnpremium /mono.m3u8?token=c83753fec78ef574dbcbc38967af114c6140304f-bf-1790964726-1790946726
-
-#EXTINF:-1 tvg-chno="231" tvg-id="Live.Event.us" tvg-name="[Liga de Naciones de la CONCACAF] St. Kitts and Nevis vs Cuba 1 (PLIBRE)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Liga de Naciones de la CONCACAF] St. Kitts and Nevis vs Cuba 1 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://y2fzdgxl.fubo18.com:443/foxsoccerplus/mono.m3u8?token=accc11eeb31bb959ee44fad031f5986eb1266684-79-1790964726-1790946726
-
-#EXTINF:-1 tvg-chno="232" tvg-id="Live.Event.us" tvg-name="[Liga de Naciones de la CONCACAF] Surinam vs Guatemala 1 (PLIBRE)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Liga de Naciones de la CONCACAF] Surinam vs Guatemala 1 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsports2_usa
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsports2_usa
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://eWVz.fubo18.com:443/foxsports2_usa/mono.m3u8?token=6f1b61dbeceb095fbf78057948aa6a1157d8d43a-f3-1790964726-1790946726
-
-#EXTINF:-1 tvg-chno="233" tvg-id="Live.Event.us" tvg-name="[One] One Friday Fights | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[One] One Friday Fights | EN (PLYFST)
+#EXTINF:-1 tvg-chno="269" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] BIK Karlskoga vs Leksands IF | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] BIK Karlskoga vs Leksands IF | SE (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.hockey.do/secure_hls.php?path=5f58ccc896c81d5fefdf94d70070c622%2Findex.m3u8&e=1790949427&sig=Oalm3wMY1iC6C8gVDbweFt4oEuPqssVG5eqAzXAbcz0&v=1790947627-2920
+https://hls.hockey.do/secure_hls.php?path=967ad451871741a480fac9595c942e5c%2Findex.m3u8&e=1790967934&sig=fmfIZooch1puXuB8OuewWmajQY806r8QCpuRjW76bZQ&v=1790966134-9862
 
-#EXTINF:-1 tvg-chno="234" tvg-id="Live.Event.us" tvg-name="[Snooker] Snooker Shenzhen Opene 1 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Snooker] Snooker Shenzhen Opene 1 (FAWA)
+#EXTINF:-1 tvg-chno="270" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] Kalmar HC vs Mora IK | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] Kalmar HC vs Mora IK | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=2ae8e5cf5abbaf50c533cdc6dbc7bba1%2Findex.m3u8&e=1790967926&sig=AMLUojxYJ9opixnlgyBCrz4j50417TrpRbAAFpoU_Y8&v=1790966126-8698
+
+#EXTINF:-1 tvg-chno="271" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] Nybro Vikings IF vs AIK | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] Nybro Vikings IF vs AIK | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=8d65b265d6acbfb47733821ee20bf170%2Findex.m3u8&e=1790967929&sig=DrbqmK5o85O7px9--3vYlFaCmRhVUMdFg3ER3cgUZTs&v=1790966129-3039
+
+#EXTINF:-1 tvg-chno="272" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] Sodertalje SK vs Ostersunds IK | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] Sodertalje SK vs Ostersunds IK | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=48822202a4a7e1ed0aeee4076609daa3%2Findex.m3u8&e=1790967923&sig=q3pcWBG9bDc_hQEBEVscizm6LCeGggVOg7CYjTPiHD4&v=1790966123-7171
+
+#EXTINF:-1 tvg-chno="273" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] Vasteras IK vs IK Oskarshamn | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] Vasteras IK vs IK Oskarshamn | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=98a19680cec78145d8ac25178dd87ff7%2Findex.m3u8&e=1790967931&sig=VJanL1U-Qg2N5S75kiIq8CYxOMelG3pQOkN8B9QbiTg&v=1790966131-5089
+
+#EXTINF:-1 tvg-chno="274" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] Vimmerby HC vs Almtuna IS | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] Vimmerby HC vs Almtuna IS | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=8e0dd8a119a48506e4d24e57c32149c4%2Findex.m3u8&e=1790967939&sig=JPXove_seZZk_P-f08TBOytJ60oa0ySlQCpl_Ycr4Xo&v=1790966139-4922
+
+#EXTINF:-1 tvg-chno="275" tvg-id="Live.Event.us" tvg-name="[Hockeyallsvenskan] Visby/Roma HK vs Modo Hockey | SE (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Hockeyallsvenskan] Visby/Roma HK vs Modo Hockey | SE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=a75f0eef2e8b0b9094514379b1a8ca3a%2Findex.m3u8&e=1790967937&sig=Z-MUWgWoqilXpz-nhMHdVJ8jQ7bGf578d5RwntREWlA&v=1790966137-3167
+
+#EXTINF:-1 tvg-chno="276" tvg-id="Soccer.Dummy.us" tvg-name="[Ireland Premier Division] Dundalk vs Bohemians (FAWA)" tvg-logo="https://assets.football-logos.cc/logos/republic-of-ireland/1500x1500/league-of-ireland-premier-division.bbd4823a.png" group-title="Live Events",[Ireland Premier Division] Dundalk vs Bohemians (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.44/hls/grrrAAA.m3u8
+http://193.47.62.55/hls/AYYYAAAA.m3u8
 
-#EXTINF:-1 tvg-chno="235" tvg-id="Live.Event.us" tvg-name="[Snooker] Snooker Shenzhen Opene 2 (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Snooker] Snooker Shenzhen Opene 2 (FAWA)
+#EXTINF:-1 tvg-chno="277" tvg-id="Soccer.Dummy.us" tvg-name="[LaLiga 2] Eldense vs Real Oviedo 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/107.png" group-title="Live Events",[LaLiga 2] Eldense vs Real Oviedo 1 (PLIBRE)
+#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=hypermotion1
+#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=hypermotion1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://YXdlc29tZQ.fubo18.com:443/hypermotion1/mono.m3u8?token=91c3937c00b06ab2479999b60b6ec6b5ae22a288-86-1790983163-1790965163
+
+#EXTINF:-1 tvg-chno="278" tvg-id="Soccer.Dummy.us" tvg-name="[Liga Profesional] Independiente vs Instituto 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1.png" group-title="Live Events",[Liga Profesional] Independiente vs Instituto 1 (PLIBRE)
+#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espnpremium 
+#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espnpremium 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://YXdlc29tZQ.fubo18.com:443/espnpremium /mono.m3u8?token=d58ea9cc12b738bc51eb76430e21d53e236c29a8-16-1790983165-1790965165
+
+#EXTINF:-1 tvg-chno="279" tvg-id="Live.Event.us" tvg-name="[Liga de Naciones de la CONCACAF] St. Kitts and Nevis vs Cuba 1 (PLIBRE)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Liga de Naciones de la CONCACAF] St. Kitts and Nevis vs Cuba 1 (PLIBRE)
+#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
+#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://eWVz.fubo18.com:443/foxsoccerplus/mono.m3u8?token=9627fb685aa5f25b40417f0ac72e96d6445d7d9c-e5-1790983165-1790965165
+
+#EXTINF:-1 tvg-chno="280" tvg-id="Live.Event.us" tvg-name="[Liga de Naciones de la CONCACAF] Surinam vs Guatemala 1 (PLIBRE)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Liga de Naciones de la CONCACAF] Surinam vs Guatemala 1 (PLIBRE)
+#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsports2_usa
+#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsports2_usa
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://eWVz.fubo18.com:443/foxsports2_usa/mono.m3u8?token=114901d1af699218d6f2661d17ee6fcda6f47d5b-a1-1790983165-1790965165
+
+#EXTINF:-1 tvg-chno="281" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[MMA PFL] MMA PFL : Neda vs Saidy (FAWA)" tvg-logo="https://images.seeklogo.com/logo-png/59/2/professional-fighters-league-pfl-logo-png_seeklogo-592299.png" group-title="Live Events",[MMA PFL] MMA PFL : Neda vs Saidy (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.44/hls/grrrAA.m3u8
+http://193.47.62.50/hls/oooo.m3u8
 
-#EXTINF:-1 tvg-chno="236" tvg-id="Tennis.Dummy.us" tvg-name="[Tennis WTA] Tennis WTA Beijing (FAWA)" tvg-logo="https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png" group-title="Live Events",[Tennis WTA] Tennis WTA Beijing (FAWA)
+#EXTINF:-1 tvg-chno="282" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[Mma/pfl/bkfc] PFL Mena 11 Neda - Saidy (EMBEDHD)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Mma/pfl/bkfc] PFL Mena 11 Neda - Saidy (EMBEDHD)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://lb9.strmd.st/secure/ozAufhNTvfFIDDcLCtDnHPPAKdgLuopy/ingest/stream/mevent1/1/playlist.m3u8
+
+#EXTINF:-1 tvg-chno="283" tvg-id="Soccer.Dummy.us" tvg-name="[Norway OBOS-ligaen] Ranheim vs Egersund (FAWA)" tvg-logo="https://www.fotball.no/imagevault/publishedmedia/tv0fegz06hf1g7x0s7xu/OBOS-ligaen-logo.png" group-title="Live Events",[Norway OBOS-ligaen] Ranheim vs Egersund (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDDDDQQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="284" tvg-id="Live.Event.us" tvg-name="[Other] PFL MENA 11 (iSTRMEAST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Other] PFL MENA 11 (iSTRMEAST)
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/57433?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/57433?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/57433/load-playlist
+
+#EXTINF:-1 tvg-chno="285" tvg-id="Soccer.Dummy.us" tvg-name="[Spain Segunda Division] Eldense vs Real Oviedo | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/107.png" group-title="Live Events",[Spain Segunda Division] Eldense vs Real Oviedo | ES (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.hockey.do/secure_hls.php?path=6f80381755208b4a64b4a9a1e78e3421%2Findex.m3u8&e=1790967892&sig=FoyRJ_LWIkytGGgP5ueFwNcLCuO_45lKk8FLGAfPfas&v=1790966092-5214
+
+#EXTINF:-1 tvg-chno="286" tvg-id="Soccer.Dummy.us" tvg-name="[Spanish Segunda Liga] Eldense vs Oviedo (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/107.png" group-title="Live Events",[Spanish Segunda Liga] Eldense vs Oviedo (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/VAAAQaaaaaA.m3u8
+
+#EXTINF:-1 tvg-chno="287" tvg-id="Soccer.Dummy.us" tvg-name="[Sweden Division 1] Karlbergs vs Sollentuna (FAWA)" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/w8f05c1579901188.png" group-title="Live Events",[Sweden Division 1] Karlbergs vs Sollentuna (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDDDDQ.m3u8
+
+#EXTINF:-1 tvg-chno="288" tvg-id="Soccer.Dummy.us" tvg-name="[Sweden Division 1] Kristianstad vs AFC Malmo (FAWA)" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/w8f05c1579901188.png" group-title="Live Events",[Sweden Division 1] Kristianstad vs AFC Malmo (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDDDDQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="289" tvg-id="Soccer.Dummy.us" tvg-name="[Sweden Division 1] Lunds vs Laholms (FAWA)" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/w8f05c1579901188.png" group-title="Live Events",[Sweden Division 1] Lunds vs Laholms (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDDDDQQ.m3u8
+
+#EXTINF:-1 tvg-chno="290" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] BIK Karlskoga vs Leksand (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] BIK Karlskoga vs Leksand (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAA.m3u8
+
+#EXTINF:-1 tvg-chno="291" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] Kalmar vs Mora (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] Kalmar vs Mora (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAAD.m3u8
+
+#EXTINF:-1 tvg-chno="292" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] Nybro vs AIK (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] Nybro vs AIK (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADD.m3u8
+
+#EXTINF:-1 tvg-chno="293" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] Sodertalje vs Ostersund (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] Sodertalje vs Ostersund (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDD.m3u8
+
+#EXTINF:-1 tvg-chno="294" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] Vasteras vs Oskarshamn (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] Vasteras vs Oskarshamn (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDD.m3u8
+
+#EXTINF:-1 tvg-chno="295" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] Vimmerby vs Almtuna (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] Vimmerby vs Almtuna (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDDD.m3u8
+
+#EXTINF:-1 tvg-chno="296" tvg-id="Live.Event.us" tvg-name="[Sweden HockeyAllsvenskan] Visby Roma vs Modo (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Sweden HockeyAllsvenskan] Visby Roma vs Modo (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/FAAADDDDDD.m3u8
+
+#EXTINF:-1 tvg-chno="297" tvg-id="Tennis.Dummy.us" tvg-name="[Tennis WTA] Tennis WTA Beijing (FAWA)" tvg-logo="https://i.gyazo.com/b5e83afc3a75dacfb831abe975fd3821.png" group-title="Live Events",[Tennis WTA] Tennis WTA Beijing (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 http://193.47.62.55/hls/JJJJJ.m3u8
 
-#EXTINF:-1 tvg-chno="237" tvg-id="Live.Event.us" tvg-name="[UAE League Cup] Al Ain vs Ajman (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[UAE League Cup] Al Ain vs Ajman (FAWA)
+#EXTINF:-1 tvg-chno="298" tvg-id="Live.Event.us" tvg-name="[UAE League Cup] Khorfakkan vs Al Jazira (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[UAE League Cup] Khorfakkan vs Al Jazira (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/RIII.m3u8
+http://193.47.62.50/hls/EMMM.m3u8
 
-#EXTINF:-1 tvg-chno="238" tvg-id="Live.Event.us" tvg-name="[UAE League Cup] Al Wasl vs Ittihad Kalba (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[UAE League Cup] Al Wasl vs Ittihad Kalba (FAWA)
+#EXTINF:-1 tvg-chno="299" tvg-id="Live.Event.us" tvg-name="[UAE League Cup] Shabab Al-Ahli Dubai vs Al Nasr (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[UAE League Cup] Shabab Al-Ahli Dubai vs Al Nasr (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/RIIIA.m3u8
+http://193.47.62.50/hls/EMMMQ.m3u8
 
-#EXTINF:-1 tvg-chno="239" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Suecia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Suecia 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="300" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Belgium vs Turkey 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Belgium vs Turkey 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.41/hls/OIIIQQQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="301" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Belgium vs Turkey 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Belgium vs Turkey 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/ab1ea1d1-7137-44ee-8592-90789d7aa234.m3u8
+
+#EXTINF:-1 tvg-chno="302" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Suecia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Suecia 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espn2 
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espn2 
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://am91cm5leQ.fubo18.com:443/espn2 /mono.m3u8?token=755f9acf4cc8f371d38ac87a03e13804dead7794-74-1790964725-1790946725
+https://y2fzdgxl.fubo18.com:443/espn2 /mono.m3u8?token=8baa04392ad6c33d2bbf1fb8ec63607e4586c319-de-1790983163-1790965163
 
-#EXTINF:-1 tvg-chno="240" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Suecia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Suecia 2 (PLIBRE)
+#EXTINF:-1 tvg-chno="303" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Suecia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Suecia 2 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney4
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://a2lja3m.fubo18.com:443/disney4/mono.m3u8?token=489739851a77e8c1b735ba9725af081e84a5b874-5e-1790964725-1790946725
+https://bmf0aw9u.fubo18.com:443/disney4/mono.m3u8?token=235f948c05edafeebbaf2bc3e69094c09974dcfb-63-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="241" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Suecia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Suecia 3 (PLIBRE)
+#EXTINF:-1 tvg-chno="304" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Suecia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Suecia 3 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bmf0aw9u.fubo18.com:443/foxsoccerplus/mono.m3u8?token=77b826afd70b09af88b2ff8633cd79dd68c67e77-5b-1790964725-1790946725
+https://y2fzdgxl.fubo18.com:443/foxsoccerplus/mono.m3u8?token=8b1e68f4d296a8ebea38fe0b6cf83dadc393508c-70-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="242" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bélgica vs Turquía 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bélgica vs Turquía 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="305" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Sweden 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Sweden 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.41/hls/OIIIQ.m3u8
+
+#EXTINF:-1 tvg-chno="306" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bosnia-Herzegovina vs Sweden 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bosnia-Herzegovina vs Sweden 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/d5bc34e3-4238-46a4-8015-9542cedfaf11.m3u8
+
+#EXTINF:-1 tvg-chno="307" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bélgica vs Turquía 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bélgica vs Turquía 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney8
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://b2ZmaWNpYWw.fubo18.com:443/disney8/mono.m3u8?token=5c2cbf0dbf0b21cc1abb67d9684abbded2c75534-b0-1790964725-1790946725
+https://y2fzdgxl.fubo18.com:443/disney8/mono.m3u8?token=f38aa25156299e839bd096d571115e51c5d09495-a3-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="243" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bélgica vs Turquía 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bélgica vs Turquía 2 (PLIBRE)
+#EXTINF:-1 tvg-chno="308" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Bélgica vs Turquía 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Bélgica vs Turquía 2 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=sportv
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=sportv
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://a2lja3m.fubo18.com:443/sportv/mono.m3u8?token=93fbd0c4fa0f33292736e32636ad6a50c11e72eb-1d-1790964725-1790946725
+https://dglvz29s.fubo18.com:443/sportv/mono.m3u8?token=96520c3f34c19c39f25d561682319aeffcd22f76-fa-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="244" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Chipre vs Armenia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Chipre vs Armenia 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="309" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Chipre vs Armenia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Chipre vs Armenia 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espn2 
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espn2 
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bgvnzw5k.fubo18.com:443/espn2 /mono.m3u8?token=256d08d0e864c3b6295be13d5b6050d30ee96df3-98-1790964724-1790946724
+https://bgvnzw5k.fubo18.com:443/espn2 /mono.m3u8?token=38f6bcc16df9e132ae84e0491e1f76dc51e8999e-75-1790983162-1790965162
 
-#EXTINF:-1 tvg-chno="245" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Chipre vs Armenia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Chipre vs Armenia 2 (PLIBRE)
+#EXTINF:-1 tvg-chno="310" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Chipre vs Armenia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Chipre vs Armenia 2 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney2
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bgvnzw5k.fubo18.com:443/disney2/mono.m3u8?token=95ba876ef87a40e4631786871396729bd02db24d-30-1790964724-1790946724
+https://b2ZmaWNpYWw.fubo18.com:443/disney2/mono.m3u8?token=e6715b8eb3d8f3dc016c084e8487f783d6cd9221-38-1790983163-1790965163
 
-#EXTINF:-1 tvg-chno="246" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Chipre vs Armenia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Chipre vs Armenia 3 (PLIBRE)
+#EXTINF:-1 tvg-chno="311" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Chipre vs Armenia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Chipre vs Armenia 3 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsoccerplus
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bmf0aw9u.fubo18.com:443/foxsoccerplus/mono.m3u8?token=93efc16dd4185a4305ac8006e049bdea1883bc01-2a-1790964724-1790946724
+https://am91cm5leQ.fubo18.com:443/foxsoccerplus/mono.m3u8?token=12f95d78f9e7f5f9991d413c9d0af96351ae4bdb-2f-1790983163-1790965163
 
-#EXTINF:-1 tvg-chno="247" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Francia vs Italia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Francia vs Italia 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="312" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Faroe Islands vs Slovakia 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Faroe Islands vs Slovakia 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.41/hls/OIII.m3u8
+
+#EXTINF:-1 tvg-chno="313" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Faroe Islands vs Slovakia 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Faroe Islands vs Slovakia 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/4063080c-6559-4ba9-8dbc-6a739792c166.m3u8
+
+#EXTINF:-1 tvg-chno="314" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] France vs Italy 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] France vs Italy 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.41/hls/OIIIQQQQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="315" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] France vs Italy 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] France vs Italy 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/4ad41d19-13f6-40f4-b283-06dd152fa8a1.m3u8
+
+#EXTINF:-1 tvg-chno="316" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Francia vs Italia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Francia vs Italia 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espn
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espn
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bmf0aw9u.fubo18.com:443/espn/mono.m3u8?token=eff1da12017839317fc4c2852d0a83ae32b43eff-d4-1790964726-1790946726
+https://Ym9yZQ.fubo18.com:443/espn/mono.m3u8?token=d6f59811666b399f2cf8a2e9a067d7825cf857c1-b4-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="248" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Francia vs Italia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Francia vs Italia 2 (PLIBRE)
+#EXTINF:-1 tvg-chno="317" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Francia vs Italia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Francia vs Italia 2 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney9
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bgvnzw5k.fubo18.com:443/disney9/mono.m3u8?token=ecbd53014be500312df431c4f4fe60f11b826a44-98-1790964726-1790946726
+https://a2lja3m.fubo18.com:443/disney9/mono.m3u8?token=ff0727c3946d09fbc91bbecdeb325a4913dd6ba3-55-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="249" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Francia vs Italia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Francia vs Italia 3 (PLIBRE)
+#EXTINF:-1 tvg-chno="318" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Francia vs Italia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Francia vs Italia 3 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsports1_usa
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsports1_usa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://am91cm5leQ.fubo18.com:443/foxsports1_usa/mono.m3u8?token=8d7fc9647ce7211b3c426a1b0dc9b0990184184d-ad-1790964726-1790946726
+https://dglvz29s.fubo18.com:443/foxsports1_usa/mono.m3u8?token=4cbac88ed359a92f5f180348d0780049c382f2cc-96-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="250" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Hungría vs Georgia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Hungría vs Georgia 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="319" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Hungary vs Georgia 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Hungary vs Georgia 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.41/hls/OIIIQQ.m3u8
+
+#EXTINF:-1 tvg-chno="320" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Hungary vs Georgia 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Hungary vs Georgia 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/dd4f0f71-8990-45e8-952e-da9f0f47f2e6.m3u8
+
+#EXTINF:-1 tvg-chno="321" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Hungría vs Georgia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Hungría vs Georgia 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney5
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://Ym9yZQ.fubo18.com:443/disney5/mono.m3u8?token=409c6b5fe25eeb08b5605b7c0838d7bd7d9382b0-a7-1790964725-1790946725
+https://bmf0aw9u.fubo18.com:443/disney5/mono.m3u8?token=51c929cb5cd150c0502fb35717a228e2fed226a7-9f-1790983164-1790965164
 
-#EXTINF:-1 tvg-chno="251" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Islas Feroe vs Eslovaquia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Islas Feroe vs Eslovaquia 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="322" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Islas Feroe vs Eslovaquia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Islas Feroe vs Eslovaquia 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney10
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney10
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bgvnzw5k.fubo18.com:443/disney10/mono.m3u8?token=f277e5ef535d5c8bea083d338aeeaa1cc8ee4ace-b4-1790964726-1790946726
+https://bgvnzw5k.fubo18.com:443/disney10/mono.m3u8?token=a9447594e4f5aafcff10703767e6c7992d302afd-4-1790983165-1790965165
 
-#EXTINF:-1 tvg-chno="252" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Kazajstán vs Moldavia 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Kazajstán vs Moldavia 1 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espn2 
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espn2 
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bmf0aw9u.fubo18.com:443/espn2 /mono.m3u8?token=ee1143935bda2c1a142ffdcd19e1ffc577448ea1-c9-1790964723-1790946723
-
-#EXTINF:-1 tvg-chno="253" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Kazajstán vs Moldavia 2 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Kazajstán vs Moldavia 2 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney1
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://bgvnzw5k.fubo18.com:443/disney1/mono.m3u8?token=76c2f9f349a422793306e36bdb13f28e297aae1b-ea-1790964724-1790946724
-
-#EXTINF:-1 tvg-chno="254" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Kazajstán vs Moldavia 3 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Kazajstán vs Moldavia 3 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=foxsports2_usa
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=foxsports2_usa
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://y2fzdgxl.fubo18.com:443/foxsports2_usa/mono.m3u8?token=986439c01437daba96550566b1b13ae75aa5c9f0-da-1790964724-1790946724
-
-#EXTINF:-1 tvg-chno="255" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Kazakhstan vs Moldova 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Kazakhstan vs Moldova 1 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/RIIIAA.m3u8
-
-#EXTINF:-1 tvg-chno="256" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Kazakhstan vs Moldova 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Kazakhstan vs Moldova 2 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://www.rtmpcdn.com/live/7e9c8498-4662-42f4-8066-18f85202d772.m3u8
-
-#EXTINF:-1 tvg-chno="257" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Letonia vs Montenegro 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Letonia vs Montenegro 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="323" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Letonia vs Montenegro 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Letonia vs Montenegro 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney3
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://am91cm5leQ.fubo18.com:443/disney3/mono.m3u8?token=06d786bd010cfc2bffdd52c46085ce07acc40546-b-1790964724-1790946724
+https://Ym9yZQ.fubo18.com:443/disney3/mono.m3u8?token=b1fd51f9b8ccb44967b156567a28069157762255-1a-1790983163-1790965163
 
-#EXTINF:-1 tvg-chno="258" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Polonia vs Rumania 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Polonia vs Rumania 1 (PLIBRE)
-#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney6
-#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://am91cm5leQ.fubo18.com:443/disney6/mono.m3u8?token=ca808127e7583469c795ef8f295c0c050163f4df-cb-1790964725-1790946725
-
-#EXTINF:-1 tvg-chno="259" tvg-id="Live.Event.us" tvg-name="[Volleyabll Asian Games] Japan vs China (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Volleyabll Asian Games] Japan vs China (FAWA)
+#EXTINF:-1 tvg-chno="324" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Poland vs Romania 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Poland vs Romania 1 (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.50/hls/URRRA.m3u8
+http://193.47.62.41/hls/OIIIQQQ.m3u8
 
-#EXTINF:-1 tvg-chno="260" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Dallas Wings at Golden State Valkyries | DAL Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Dallas Wings at Golden State Valkyries | DAL Feed (XYZ)
+#EXTINF:-1 tvg-chno="325" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Poland vs Romania 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Poland vs Romania 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/b6f7004b-8766-48c4-b07d-4571e70f601c.m3u8
+
+#EXTINF:-1 tvg-chno="326" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Polonia vs Rumania 1 (PLIBRE)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Polonia vs Rumania 1 (PLIBRE)
+#EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney6
+#EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://y2fzdgxl.fubo18.com:443/disney6/mono.m3u8?token=f1659966025fe422e02988032673e4cd2105e4e5-2a-1790983164-1790965164
+
+#EXTINF:-1 tvg-chno="327" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] UEFA Nations League Simulcast (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] UEFA Nations League Simulcast (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/YLLL.m3u8
+
+#EXTINF:-1 tvg-chno="328" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Ukraine vs Northern Ireland 1 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Ukraine vs Northern Ireland 1 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.41/hls/OIIIQQQQ.m3u8
+
+#EXTINF:-1 tvg-chno="329" tvg-id="Soccer.Dummy.us" tvg-name="[UEFA Nations League] Ukraine vs Northern Ireland 2 (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2395.png" group-title="Live Events",[UEFA Nations League] Ukraine vs Northern Ireland 2 (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://www.rtmpcdn.com/live/7222e93f-0e0e-4cc8-9743-538aa9567487.m3u8
+
+#EXTINF:-1 tvg-chno="330" tvg-id="Live.Event.us" tvg-name="[United Rugby Championship] Benetton vs Connacht (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[United Rugby Championship] Benetton vs Connacht (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/AYYYA.m3u8
+
+#EXTINF:-1 tvg-chno="331" tvg-id="Live.Event.us" tvg-name="[United Rugby Championship] Cardiff Rugby vs Zebre (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[United Rugby Championship] Cardiff Rugby vs Zebre (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/AYYYAA.m3u8
+
+#EXTINF:-1 tvg-chno="332" tvg-id="Live.Event.us" tvg-name="[United Rugby Championship] Edinburgh vs Stormers (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[United Rugby Championship] Edinburgh vs Stormers (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.55/hls/AYYYAAA.m3u8
+
+#EXTINF:-1 tvg-chno="333" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Dallas Wings at Golden State Valkyries | DAL Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Dallas Wings at Golden State Valkyries | DAL Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://247v2.dlhd.net/?stream_id=dallaswings&pro_id=sling&index.m3u8
 
-#EXTINF:-1 tvg-chno="261" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Dallas Wings at Golden State Valkyries | GS Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Dallas Wings at Golden State Valkyries | GS Feed (XYZ)
+#EXTINF:-1 tvg-chno="334" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Dallas Wings at Golden State Valkyries | GS Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Dallas Wings at Golden State Valkyries | GS Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://247v2.dlhd.net/?stream_id=goldenstatevalkyries&pro_id=sling&index.m3u8
 
-#EXTINF:-1 tvg-chno="262" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[WWE] WWE Friday Night Smackdown | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[WWE] WWE Friday Night Smackdown | English (STRMCNTR)
+#EXTINF:-1 tvg-chno="335" tvg-id="PPV.EVENTS.Dummy.us" tvg-name="[WWE] WWE Friday Night Smackdown | English (STRMCNTR)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[WWE] WWE Friday Night Smackdown | English (STRMCNTR)
 #EXTVLCOPT:http-referrer=https://streame.center
 #EXTVLCOPT:http-origin=https://streame.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestream2.pro/hls/zeuryuegn48.m3u8
 
-#EXTINF:-1 tvg-chno="263" tvg-id="Live.Event.us" tvg-name="[World Rally] World Rally Championship Italy (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[World Rally] World Rally Championship Italy (FAWA)
+#EXTINF:-1 tvg-chno="336" tvg-id="Live.Event.us" tvg-name="[World Rally] World Rally Championship Italy (FAWA)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[World Rally] World Rally Championship Italy (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://dms.redbull.tv/v5/destination/rallytv/07f960dc-fd36-466c-971f-64a597518b83/personal_computer/http/us/en_US/playlist.m3u8
 
-#EXTINF:-1 tvg-chno="264" tvg-id="Soccer.Dummy.us" tvg-name="[futbol] NHL – Detroit Red Wings vs New York Rangers 1 (PLIBRE)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[futbol] NHL – Detroit Red Wings vs New York Rangers 1 (PLIBRE)
+#EXTINF:-1 tvg-chno="337" tvg-id="Soccer.Dummy.us" tvg-name="[futbol] NHL – Detroit Red Wings vs New York Rangers 1 (PLIBRE)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[futbol] NHL – Detroit Red Wings vs New York Rangers 1 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=espn3
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=espn3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://YXdlc29tZQ.fubo18.com:443/espn3/mono.m3u8?token=92e1705dac03a75e5af943af275073e6cf6c2116-48-1790964727-1790946727
+https://a2lja3m.fubo18.com:443/espn3/mono.m3u8?token=d567b3fdfe2b48bd3eede6abe7919d777a82968c-33-1790983162-1790965162
 
-#EXTINF:-1 tvg-chno="265" tvg-id="Soccer.Dummy.us" tvg-name="[futbol] NHL – Detroit Red Wings vs New York Rangers 2 (PLIBRE)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[futbol] NHL – Detroit Red Wings vs New York Rangers 2 (PLIBRE)
+#EXTINF:-1 tvg-chno="338" tvg-id="Soccer.Dummy.us" tvg-name="[futbol] NHL – Detroit Red Wings vs New York Rangers 2 (PLIBRE)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[futbol] NHL – Detroit Red Wings vs New York Rangers 2 (PLIBRE)
 #EXTVLCOPT:http-referrer=https://la18hd.su/vivo/canales.php?stream=disney11
 #EXTVLCOPT:http-origin=https://la18hd.su/vivo/canales.php?stream=disney11
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://Ym9yZQ.fubo18.com:443/disney11/mono.m3u8?token=9f7ace40642253685cd7823a1951984db9bfa136-64-1790964727-1790946727
+https://am91cm5leQ.fubo18.com:443/disney11/mono.m3u8?token=c4929aca217ff2cb4efe2cf22e6967e7ccb0dc74-74-1790983162-1790965162
