@@ -1,24 +1,36 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/doms9/iptv/refs/heads/default/M3U8/TV.xml"
 
-#EXTINF:-1 tvg-chno="1" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Carolina Panthers at Green Bay Packers | CAR Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Carolina Panthers at Green Bay Packers | CAR Feed (XYZ)
+#EXTINF:-1 tvg-chno="1" tvg-id="Soccer.Dummy.us" tvg-name="[Denmark DBU Pokalen] Aarhus Fremad vs København | DK (PLYFST)" tvg-logo="https://assets.football-logos.cc/logos/denmark/1500x1500/danish-cup--white.e6350a16.png" group-title="Live Events",[Denmark DBU Pokalen] Aarhus Fremad vs København | DK (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=f653d03c61441af6c609634af849e9ea%2Findex.m3u8&e=1793282175&sig=WgdDTVsVttu_NeyWRMC9M2-q1189O5TH3lmQqN3dTDQ&v=1793280375-9589
+
+#EXTINF:-1 tvg-chno="2" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Carolina Panthers at Green Bay Packers | CAR Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Carolina Panthers at Green Bay Packers | CAR Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://ftv.xyzstreams.blog/WLTX/F0108/master.m3u8
 
-#EXTINF:-1 tvg-chno="2" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Carolina Panthers at Green Bay Packers | GB Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Carolina Panthers at Green Bay Packers | GB Feed (XYZ)
+#EXTINF:-1 tvg-chno="3" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Carolina Panthers at Green Bay Packers | GB Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Carolina Panthers at Green Bay Packers | GB Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://ftv.xyzstreams.blog/WGBA/N1055/master.m3u8
 
-#EXTINF:-1 tvg-chno="3" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Golden State Valkyries at Atlanta Dream | ATL Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Golden State Valkyries at Atlanta Dream | ATL Feed (XYZ)
+#EXTINF:-1 tvg-chno="4" tvg-id="Live.Event.us" tvg-name="[Poland Puchar Polski] Avia Świdnik vs Radomiak Radom | PL (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Poland Puchar Polski] Avia Świdnik vs Radomiak Radom | PL (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=236891f4057e4b7b95512d0ecfac29e1%2Findex.m3u8&e=1793282173&sig=GVcvpAiqy3fvnZdXOkBSAWngtYaKygS_gc720ymBwR8&v=1793280373-8529
+
+#EXTINF:-1 tvg-chno="5" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Golden State Valkyries at Atlanta Dream | ATL Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Golden State Valkyries at Atlanta Dream | ATL Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://247v2.dlhd.net/?stream_id=atlantadream&pro_id=sling&index.m3u8
 
-#EXTINF:-1 tvg-chno="4" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Golden State Valkyries at Atlanta Dream | GS Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Golden State Valkyries at Atlanta Dream | GS Feed (XYZ)
+#EXTINF:-1 tvg-chno="6" tvg-id="WNBA.dummy.us" tvg-name="[WNBA] Golden State Valkyries at Atlanta Dream | GS Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png" group-title="Live Events",[WNBA] Golden State Valkyries at Atlanta Dream | GS Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
