@@ -831,8 +831,92 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-chno="193" tvg-id="Live.Event.us" tvg-name="[Australia A-League] Brisbane Roar vs Auckland | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Australia A-League] Brisbane Roar vs Auckland | EN (PLYFST)
+#EXTINF:-1 tvg-chno="193" tvg-id="Soccer.Dummy.us" tvg-name="[Bulgaria Parva Liga] CSKA 1948 vs Spartak Varna | BG (PLYFST)" tvg-logo="https://i.gyazo.com/60bc0d6690696ab68e344568841e590b.png" group-title="Live Events",[Bulgaria Parva Liga] CSKA 1948 vs Spartak Varna | BG (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=f0e34dbfd8cd7a28da4a9cf3ad4b0fd3%2Findex.m3u8&e=1793357293&sig=DD6eexjgDYdgsOKvcXCYyrKiaLtJaAZprNJ20FEDXPU&v=1793355493-9177
+https://hls.lshls.st/secure_hls.php?path=dad368e7f07d489edc4ab114e3571a3c%2Findex.m3u8&e=1793379470&sig=Dd4KY6SbiZ3VjGvxG_mxM5SZNLhzqankdmg5SQrJJp4&v=1793377670-5838
+
+#EXTINF:-1 tvg-chno="194" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Litvinov vs Vitkovice | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Litvinov vs Vitkovice | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=47ed0734107c4894ef1fbaf6de5554d8%2Findex.m3u8&e=1793379463&sig=Qa1DgIvQqExdsiiOHVOnEQX5hLyVM090jWyi2t6ufFw&v=1793377663-3207
+
+#EXTINF:-1 tvg-chno="195" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Mlada vs Boleslav vs Sparta Praha | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Mlada vs Boleslav vs Sparta Praha | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=94a7b5b18c19cbc29688540ab79335b5%2Findex.m3u8&e=1793379466&sig=ENzZ4vQ2XrTMav6DyghVW14ZA-7bAAeJdJRh37l7crw&v=1793377666-6027
+
+#EXTINF:-1 tvg-chno="196" tvg-id="Live.Event.us" tvg-name="[Czech Republic Extraliga] Plzen vs Ocelari Trinec | CZ (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Czech Republic Extraliga] Plzen vs Ocelari Trinec | CZ (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=76a5e19e42340a9ff599bf9453b1e07f%2Findex.m3u8&e=1793379468&sig=m9PrJmUCU6zRI4ahsfGu6t4htGs2CEaY7ubMFC8HLK0&v=1793377668-3410
+
+#EXTINF:-1 tvg-chno="197" tvg-id="Basketball.Dummy.us" tvg-name="[Euroleague] Dubai vs Hapoel Tel vs Aviv | DE (PLYFST)" tvg-logo="https://www.euroleaguebasketball.net/images/logo-default.png" group-title="Live Events",[Euroleague] Dubai vs Hapoel Tel vs Aviv | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=6488e829b2d71f9284ba6335d25ef31b%2Findex.m3u8&e=1793379488&sig=mGvLHpUSZmA_ixovqQjGKien75AqT_0RotWldvRm0uA&v=1793377688-4731
+
+#EXTINF:-1 tvg-chno="198" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] HPK vs Kiekko-Espoo | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] HPK vs Kiekko-Espoo | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=3cd25b0b3db256d838549b42bc24f198%2Findex.m3u8&e=1793379474&sig=8XnKGqF5cGzgjlXQt5tk3OByyTSKIkfTkFOg0vanuLg&v=1793377674-7218
+
+#EXTINF:-1 tvg-chno="199" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] Lukko vs Kookoo | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] Lukko vs Kookoo | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=c3dd1269c019240017cdedf5304b4bc9%2Findex.m3u8&e=1793379478&sig=v15EA-eCqIeT0tblMrhamef_r9MpNnQyMhGjjgj9xK8&v=1793377678-7580
+
+#EXTINF:-1 tvg-chno="200" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] SaiPa vs JYP | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] SaiPa vs JYP | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=7faf6ed9907322b14e1083802ecf7740%2Findex.m3u8&e=1793379480&sig=9RZXjJb4HYlELR2yE3VgAoGpje3mBiK7L_NI2Fvq024&v=1793377680-2935
+
+#EXTINF:-1 tvg-chno="201" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] TPS vs Pelicans | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] TPS vs Pelicans | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=114f7b609f39c0489e4ca692658244fb%2Findex.m3u8&e=1793379482&sig=toiPxaZrgV0_RMfTk4b28aVNTADwCKQWwR2ZOadXXt8&v=1793377682-7554
+
+#EXTINF:-1 tvg-chno="202" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] Tappara vs Ilves | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] Tappara vs Ilves | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=1a4a7f37a94c2ef783e343d07e6aae27%2Findex.m3u8&e=1793379476&sig=kL-gXlNORt4jUSb6BgrXlmf7HcZpm69EvPMm-ngL6xA&v=1793377676-2555
+
+#EXTINF:-1 tvg-chno="203" tvg-id="Live.Event.us" tvg-name="[Finland Liiga] Ässät vs HIFK | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Liiga] Ässät vs HIFK | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=f95837b960746ac94cf68110411e25c4%2Findex.m3u8&e=1793379472&sig=9dHOMRN8hP0ow9KzJVT9UPJIyWbnSSrZuC5pMIZA9H4&v=1793377672-7501
+
+#EXTINF:-1 tvg-chno="204" tvg-id="Live.Event.us" tvg-name="[Finland Mestis] JoKP vs Hermes | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Mestis] JoKP vs Hermes | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=26bb2a6b2cc7a40cc290fe38e2b68341%2Findex.m3u8&e=1793379484&sig=UewNPE6A5MhXaJ3zUx92zVg_rc0IxxAxn9k7-pgOMEE&v=1793377684-7319
+
+#EXTINF:-1 tvg-chno="205" tvg-id="Live.Event.us" tvg-name="[Finland Mestis] K-Vantaa vs RoKi | FI (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Finland Mestis] K-Vantaa vs RoKi | FI (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=63b2ab410425175ce004744db357c779%2Findex.m3u8&e=1793379486&sig=O6BEstaKSTe6Wjfnpr8IZlny4PIVphMP8srBWY5qv7E&v=1793377686-1228
+
+#EXTINF:-1 tvg-chno="206" tvg-id="Racing.Dummy.us" tvg-name="[Formula 1] Formula 1 2026 - Mexico GP (iSTRMEAST)" tvg-logo="https://1000logos.net/wp-content/uploads/2021/06/F1-logo-500x281.png" group-title="Live Events",[Formula 1] Formula 1 2026 - Mexico GP (iSTRMEAST)
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/58842?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/58842?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/58842/load-playlist-multi
+
+#EXTINF:-1 tvg-chno="207" tvg-id="Live.Event.us" tvg-name="[OFC] ONE Friday Fights 176: Khunsuk vs YodUdon (iSTRMEAST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[OFC] ONE Friday Fights 176: Khunsuk vs YodUdon (iSTRMEAST)
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/58874?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/58874?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/58874/load-playlist
