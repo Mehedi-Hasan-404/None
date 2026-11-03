@@ -1,235 +1,55 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/doms9/iptv/refs/heads/default/M3U8/TV.xml"
 
-#EXTINF:-1 tvg-chno="1" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] AS Roma vs Manchester United (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_as-roma-vs-manchester-united_AS_Roma_vs_Manchester_United" group-title="Live Events",[Champions League] AS Roma vs Manchester United (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/as-roma-vs-manchester-united
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/as-roma-vs-manchester-united
+#EXTINF:-1 tvg-chno="1" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Wofford Terriers vs Tennessee Volunteers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_wofford-terriers-vs-tennessee-volunteers_Wofford_Terriers_vs_Tennessee_" group-title="Live Events",[NCAA Men's Basketball] Wofford Terriers vs Tennessee Volunteers (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/wofford-terriers-vs-tennessee-volunteers
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/wofford-terriers-vs-tennessee-volunteers
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/as-roma-vs-manchester-united540p/index.m3u8?_e=1793769949&_n=c295759754cd4967&_t=L0zzZ1_7MPUYiJc5dFofXQ
+https://streamfree.top/live/wofford-terriers-vs-tennessee-volunteers1080p/index.m3u8?_e=1793777552&_n=be1d3b055f72e85d&_t=GYNKGvamUox3V2HTMiD7gA
 
-#EXTINF:-1 tvg-chno="2" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] Aston Villa vs Barcelona (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_aston-villa-vs-barcelona_Aston_Villa_vs_Barcelona" group-title="Live Events",[Champions League] Aston Villa vs Barcelona (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/aston-villa-vs-barcelona
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/aston-villa-vs-barcelona
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/aston-villa-vs-barcelona540p/index.m3u8?_e=1793769948&_n=0dc768c91874ea88&_t=mmrELIDLpRGgkPKnC8n0_w
-
-#EXTINF:-1 tvg-chno="3" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] Bayern Munich vs Atlético Madrid (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_bayern-munich-vs-atlético-madrid_Bayern_Munich_vs_Atlético_Madr" group-title="Live Events",[Champions League] Bayern Munich vs Atlético Madrid (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/bayern-munich-vs-atl%C3%A9tico-madrid
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/bayern-munich-vs-atl%C3%A9tico-madrid
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/bayern-munich-vs-atl%C3%A9tico-madrid540p/index.m3u8?_e=1793769947&_n=8b8644eb29dd68ca&_t=aziH6Y2FkVWbY1ae05Nblg
-
-#EXTINF:-1 tvg-chno="4" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] Internazionale vs Feyenoord Rotterdam (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_internazionale-vs-feyenoord-rotterdam_Internazionale_vs_Feyenoord_Ro" group-title="Live Events",[Champions League] Internazionale vs Feyenoord Rotterdam (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/internazionale-vs-feyenoord-rotterdam
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/internazionale-vs-feyenoord-rotterdam
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/internazionale-vs-feyenoord-rotterdam540p/index.m3u8?_e=1793769948&_n=d71443c629379f58&_t=vB1oFRRsMlaz_8Q7TrRM6w
-
-#EXTINF:-1 tvg-chno="5" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] Lille vs Bodo/Glimt (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_lille-vs-bodoglimt_Lille_vs_BodoGlimt" group-title="Live Events",[Champions League] Lille vs Bodo/Glimt (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/lille-vs-bodoglimt
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/lille-vs-bodoglimt
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/lille-vs-bodoglimt540p/index.m3u8?_e=1793769948&_n=173c9c33e93c3d0a&_t=SoaPwOs6xusnCalHJnv8Eg
-
-#EXTINF:-1 tvg-chno="6" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] Paris Saint-Germain vs Villarreal (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_paris-saint-germain-vs-villarreal_Paris_Saint-Germain_vs_Villarr" group-title="Live Events",[Champions League] Paris Saint-Germain vs Villarreal (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/paris-saint-germain-vs-villarreal
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/paris-saint-germain-vs-villarreal
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/paris-saint-germain-vs-villarreal1080p/index.m3u8?_e=1793769949&_n=ec9a288189ab2408&_t=Y_3hJ0zbHpbKRTZ5eWNdUQ
-
-#EXTINF:-1 tvg-chno="7" tvg-id="Soccer.Dummy.us" tvg-name="[Champions League] Slovan Bratislava vs LASK Linz (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_slovan-bratislava-vs-lask-linz_Slovan_Bratislava_vs_LASK_Linz" group-title="Live Events",[Champions League] Slovan Bratislava vs LASK Linz (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/slovan-bratislava-vs-lask-linz
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/slovan-bratislava-vs-lask-linz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/slovan-bratislava-vs-lask-linz540p/index.m3u8?_e=1793769948&_n=d289dde9a270c17b&_t=9i9KoStZwg3T4nKkPEiDmQ
-
-#EXTINF:-1 tvg-chno="8" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Bolton Wanderers vs Charlton Athletic (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_bolton-wanderers-vs-charlton-athletic_Bolton_Wanderers_vs_Charlton_A" group-title="Live Events",[EFL Championship] Bolton Wanderers vs Charlton Athletic (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/bolton-wanderers-vs-charlton-athletic
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/bolton-wanderers-vs-charlton-athletic
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/bolton-wanderers-vs-charlton-athletic1080p/index.m3u8?_e=1793769946&_n=5ad6dbadc60b84e0&_t=jXg0pvZ8EbET430ro7Lp5g
-
-#EXTINF:-1 tvg-chno="9" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Lincoln City vs Watford (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_lincoln-city-vs-watford_Lincoln_City_vs_Watford" group-title="Live Events",[EFL Championship] Lincoln City vs Watford (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/lincoln-city-vs-watford
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/lincoln-city-vs-watford
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/lincoln-city-vs-watford1080p/index.m3u8?_e=1793769947&_n=c9c792509a809bbe&_t=GO_Dypw84bkt2IKyBgfitQ
-
-#EXTINF:-1 tvg-chno="10" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Millwall vs Birmingham City (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_millwall-vs-birmingham-city_Millwall_vs_Birmingham_City" group-title="Live Events",[EFL Championship] Millwall vs Birmingham City (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/millwall-vs-birmingham-city
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/millwall-vs-birmingham-city
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/millwall-vs-birmingham-city1080p/index.m3u8?_e=1793769949&_n=103499c965b0a69a&_t=L_U-77edelTL3Gg1_W-otw
-
-#EXTINF:-1 tvg-chno="11" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Norwich City vs Derby County (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_norwich-city-vs-derby-county_Norwich_City_vs_Derby_County" group-title="Live Events",[EFL Championship] Norwich City vs Derby County (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/norwich-city-vs-derby-county
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/norwich-city-vs-derby-county
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/norwich-city-vs-derby-county1080p/index.m3u8?_e=1793769947&_n=d3d55056319747ba&_t=j6tWbgQP7oR3GazN6L8xMA
-
-#EXTINF:-1 tvg-chno="12" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Southampton vs West Bromwich Albion (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_southampton-vs-west-bromwich-albion_Southampton_vs_West_Bromwich_A" group-title="Live Events",[EFL Championship] Southampton vs West Bromwich Albion (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/southampton-vs-west-bromwich-albion
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/southampton-vs-west-bromwich-albion
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/southampton-vs-west-bromwich-albion540p/index.m3u8?_e=1793769949&_n=bc1d9ef868265a3e&_t=CJQ6OD5DDKseXx8-yX_HKg
-
-#EXTINF:-1 tvg-chno="13" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Stoke City vs Blackburn Rovers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_stoke-city-vs-blackburn-rovers_Stoke_City_vs_Blackburn_Rovers" group-title="Live Events",[EFL Championship] Stoke City vs Blackburn Rovers (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/stoke-city-vs-blackburn-rovers
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/stoke-city-vs-blackburn-rovers
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/stoke-city-vs-blackburn-rovers1080p/index.m3u8?_e=1793769946&_n=371e77621bd6bb05&_t=kNV4PC28uoTwT0MSROPjlg
-
-#EXTINF:-1 tvg-chno="14" tvg-id="Soccer.Dummy.us" tvg-name="[EFL Championship] Swansea City vs Portsmouth (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_swansea-city-vs-portsmouth_Swansea_City_vs_Portsmouth" group-title="Live Events",[EFL Championship] Swansea City vs Portsmouth (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/swansea-city-vs-portsmouth
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/swansea-city-vs-portsmouth
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/swansea-city-vs-portsmouth1080p/index.m3u8?_e=1793769947&_n=fd28240adfc211f9&_t=BNWgF5GFFK0rZ0za0l4Ayw
-
-#EXTINF:-1 tvg-chno="15" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Birmingham City vs Millwall | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Birmingham City vs Millwall | EN (PLYFST)
+#EXTINF:-1 tvg-chno="2" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Columbus Blue Jackets vs Colorado Avalanche | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Columbus Blue Jackets vs Colorado Avalanche | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=d2cf4a545b7a79d529e7139a668540f7%2Findex.m3u8&e=1793743082&sig=25PptOX_-i2rfBGrSA27o2Eov8plac2s2ZQ8EQdmLBg
+https://hls.lshls.st/secure_hls.php?path=d2cf4a545b7a79d529e7139a668540f7%2Findex.m3u8&e=1793750571&sig=ymkEygpXeLvBGtgpRh6Vsa3Z4qm0n9TXaQjGWcEqj9g
 
-#EXTINF:-1 tvg-chno="16" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Blackburn Rovers vs Stoke City | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Blackburn Rovers vs Stoke City | EN (PLYFST)
+#EXTINF:-1 tvg-chno="3" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Montreal Canadiens vs Winnipeg Jets | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Montreal Canadiens vs Winnipeg Jets | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=75711b4c58321ffe37e598d58e779e2b%2Findex.m3u8&e=1793743054&sig=3wzK02911KyMQ-VQ-kGY7avHiqDDD1BniJzT0c5_BkI
+https://hls.lshls.st/secure_hls.php?path=5825d9248e99dddf41b59f26c2e66424%2Findex.m3u8&e=1793750557&sig=1IMtzPv5A3YDfF6CEwb6M74Ahs1Qf-XQYSyO6K2rW7s
 
-#EXTINF:-1 tvg-chno="17" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Derby County vs Norwich City | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Derby County vs Norwich City | EN (PLYFST)
+#EXTINF:-1 tvg-chno="4" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] New York Rangers vs St. Louis Blues | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] New York Rangers vs St. Louis Blues | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=5825d9248e99dddf41b59f26c2e66424%2Findex.m3u8&e=1793743056&sig=OtaGbvirZYOh7lDZUgffsftz3f4vlMIuxRXWuVFe7L4
+https://hls.lshls.st/secure_hls.php?path=7b145bbd4bf206f377e4cb4a72e4ab03%2Findex.m3u8&e=1793750561&sig=ho1LDhOQyyeYm3AHIRNQYp-tvjssnd6W10l_8ppzK6k
 
-#EXTINF:-1 tvg-chno="18" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Portsmouth vs Swansea City | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Portsmouth vs Swansea City | EN (PLYFST)
+#EXTINF:-1 tvg-chno="5" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Philadelphia Flyers vs Minnesota Wild | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Philadelphia Flyers vs Minnesota Wild | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=f6a214cf886d35a5591087d6a8ca8d58%2Findex.m3u8&e=1793743062&sig=2QZk62lBvK3OmRgVLRfEgtwlz4cFGyWNxu7-DJ5_Jlg
+https://hls.lshls.st/secure_hls.php?path=ab65a2596ab462ff14bdfd6ee1055085%2Findex.m3u8&e=1793750563&sig=vOGuiOilWGwFid-yoya0UIJEjD_j48Vfmz6u6Qz1FZM
 
-#EXTINF:-1 tvg-chno="19" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Preston North End vs Sheffield United | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Preston North End vs Sheffield United | EN (PLYFST)
+#EXTINF:-1 tvg-chno="6" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Pittsburgh Penguins vs Vegas Golden Knights | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Pittsburgh Penguins vs Vegas Golden Knights | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=7b145bbd4bf206f377e4cb4a72e4ab03%2Findex.m3u8&e=1793743065&sig=zktFYMBwHC7rN04MEjk5FkZaBnzlw7pHbbi5JN9KlfU
+https://hls.lshls.st/secure_hls.php?path=3ce16cae309ca17fb913e24603663305%2Findex.m3u8&e=1793750566&sig=ktYoN6fy-m9V3q2aR0SQPaaqAq1XIlR4lDDZiEH5YSA
 
-#EXTINF:-1 tvg-chno="20" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Queens Park Rangers vs Burnley | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Queens Park Rangers vs Burnley | EN (PLYFST)
+#EXTINF:-1 tvg-chno="7" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Tampa Bay Lightning vs Detroit Red Wings | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Tampa Bay Lightning vs Detroit Red Wings | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=ab65a2596ab462ff14bdfd6ee1055085%2Findex.m3u8&e=1793743068&sig=leaNPK0MbB4oPxfnBb4ZmHt-YEq7MGSRhRj11_pHdXs
+https://hls.lshls.st/secure_hls.php?path=f6a214cf886d35a5591087d6a8ca8d58%2Findex.m3u8&e=1793750559&sig=bb1ju1TMr23Mel4Lrv2r5zoNeTIfVfEcsEzfZE3rMnc
 
-#EXTINF:-1 tvg-chno="21" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] Watford vs Lincoln City | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] Watford vs Lincoln City | EN (PLYFST)
+#EXTINF:-1 tvg-chno="8" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Toronto Maple Leafs vs Utah Mammoth | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Toronto Maple Leafs vs Utah Mammoth | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=3ce16cae309ca17fb913e24603663305%2Findex.m3u8&e=1793743072&sig=3EOTajSlDebhVe162j76dDFiYyijBpZk8zcpOPBb3js
+https://hls.lshls.st/secure_hls.php?path=75711b4c58321ffe37e598d58e779e2b%2Findex.m3u8&e=1793750555&sig=-w1MqwISMsC2KnTDelpynOiXySuZv6gAryoF83fhhe0
 
-#EXTINF:-1 tvg-chno="22" tvg-id="Soccer.Dummy.us" tvg-name="[England Championship] West Bromwich Albion vs Southampton | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/24.png" group-title="Live Events",[England Championship] West Bromwich Albion vs Southampton | EN (PLYFST)
+#EXTINF:-1 tvg-chno="9" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Washington Capitals vs Dallas Stars | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Washington Capitals vs Dallas Stars | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=5f58ccc896c81d5fefdf94d70070c622%2Findex.m3u8&e=1793743085&sig=vLagPGXQXfGpuuE0B4z4v9-GPB4E2RbFI1WePVYGpmU
-
-#EXTINF:-1 tvg-chno="23" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Atlético Madrid vs Bayern München | DE (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Atlético Madrid vs Bayern München | DE (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=7bb9c8db145ddbf8b75a8f98223221b4%2Findex.m3u8&e=1793742970&sig=3DMMOXhsl6m9f6AZqiMyMrM2ZVpDb3Qw4vqEyAXaXMA
-
-#EXTINF:-1 tvg-chno="24" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Atlético Madrid vs Bayern München | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Atlético Madrid vs Bayern München | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=f0e34dbfd8cd7a28da4a9cf3ad4b0fd3%2Findex.m3u8&e=1793742965&sig=EZVuEeGfNAKmRclAR-9ndL71J_rSd0uTViI9ecmtsG0
-
-#EXTINF:-1 tvg-chno="25" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Atlético Madrid vs Bayern München | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Atlético Madrid vs Bayern München | ES (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=f7f64d8fee34a109d4926c9fedc01dec%2Findex.m3u8&e=1793742975&sig=r9NRfZPdkwqzU4RKiHtyNoeif62b3wIzOu0aHz24LqM
-
-#EXTINF:-1 tvg-chno="26" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Barcelona vs Aston Villa | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Barcelona vs Aston Villa | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=9ae3de4b40a6ecfdd03fc90be82c4535%2Findex.m3u8&e=1793742959&sig=RJh6zjxhyIR9OLeW80qal99Hi4F5sZOEsVqTwFlbA1w
-
-#EXTINF:-1 tvg-chno="27" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Barcelona vs Aston Villa | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Barcelona vs Aston Villa | ES (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=9b49004040ccf64adf108ab4e17a68a6%2Findex.m3u8&e=1793742963&sig=A7Ccomg4r2Ckj4hjX2BsKuLjFq1LSunn0fk6CQI7azk
-
-#EXTINF:-1 tvg-chno="28" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Bodø / Glimt vs Lille | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Bodø / Glimt vs Lille | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=634a1c2817f51944e01c462d32db815f%2Findex.m3u8&e=1793743002&sig=tcHSnhEmCLeHWhMUhO3ZT5y7qqMNy2DHp55TgpjNTG0
-
-#EXTINF:-1 tvg-chno="29" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Bodø / Glimt vs Lille | FR (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Bodø / Glimt vs Lille | FR (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=018dc4baf7d903a8b159f6e54f1dac55%2Findex.m3u8&e=1793743007&sig=xibcxj2aorEnvwDye65W243X5-Mm3rGwAqfNrubXIt0
-
-#EXTINF:-1 tvg-chno="30" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Feyenoord vs Internazionale | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Feyenoord vs Internazionale | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=a2eb767a63c0646e710447c54083b3e4%2Findex.m3u8&e=1793742989&sig=JfsIrbsnih2-cXxOPxWH25Fe0SgGFeLHSp5gqR206oU
-
-#EXTINF:-1 tvg-chno="31" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Feyenoord vs Internazionale | IT (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Feyenoord vs Internazionale | IT (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=d6eae01bed513495f81eb45cc68216af%2Findex.m3u8&e=1793742995&sig=45dW_8WudCgU4DWicErkDGF5A-4eoB42uqRKroDPHuo
-
-#EXTINF:-1 tvg-chno="32" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Feyenoord vs Internazionale | NL (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Feyenoord vs Internazionale | NL (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=a08663a4fc28ff247dda5e18cd4c7d89%2Findex.m3u8&e=1793742999&sig=dxedtcd2Pr0edKBVYGfUoQOpeFcf-fw9w63IAlB89ZQ
-
-#EXTINF:-1 tvg-chno="33" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] LASK Linz vs Slovan Bratislava | AT (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] LASK Linz vs Slovan Bratislava | AT (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=e0fb624f5ff1cdd17251c43b5487e6f4%2Findex.m3u8&e=1793743032&sig=DOkAuV2cosxoys87iOJsl6GP5TCKtDLWORShf4YuWPI
-
-#EXTINF:-1 tvg-chno="34" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Manchester United vs Roma | IT (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Manchester United vs Roma | IT (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=d7bb70bbe1dafb9cbec7469b899bee63%2Findex.m3u8&e=1793743023&sig=nStnshEH0Pqv5nlcgz9aiSqrJ63UfHHmRtlU7ujzBDM
-
-#EXTINF:-1 tvg-chno="35" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Simulcast | DE (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Simulcast | DE (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=23ab266ed39b6376928a26fb503c2a8e%2Findex.m3u8&e=1793743050&sig=k91mawrAoFPxdIzDs9yzGDlJOM978FfOhj1DW15EOxU
-
-#EXTINF:-1 tvg-chno="36" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Villarreal vs PSG | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Villarreal vs PSG | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=58c61f4546642149cd5f3f5b0c508dff%2Findex.m3u8&e=1793742978&sig=twFr78J4yiOH84uUOHBW9gXUtzS0qctRCkZFUtBN-qo
-
-#EXTINF:-1 tvg-chno="37" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Villarreal vs PSG | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Villarreal vs PSG | ES (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=2d29dfe2b8e9f42ca732080a6981e684%2Findex.m3u8&e=1793742981&sig=x48pnKjcAw7IwzQRhSboaWJo3DLsvOOy-QGrXsyOxi8
-
-#EXTINF:-1 tvg-chno="38" tvg-id="Soccer.Dummy.us" tvg-name="[Europe UEFA Champions League] Villarreal vs PSG | FR (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png" group-title="Live Events",[Europe UEFA Champions League] Villarreal vs PSG | FR (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=131aad542969f2e906086706986d6698%2Findex.m3u8&e=1793742986&sig=M6zByTYzQhGprKr3daROf976YYCX6LOr90bYkk6S4cU
-
-#EXTINF:-1 tvg-chno="39" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Atlético Madridvs.Bayern Munich | Spanish (STRMCNTR)" tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="Live Events",[Football] Atlético Madridvs.Bayern Munich | Spanish (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streame.center
-#EXTVLCOPT:http-origin=https://streame.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestream2.pro/hls/hflfkrtib42.m3u8
+https://hls.lshls.st/secure_hls.php?path=eed330e6c07b8be08b20dbccdba8d599%2Findex.m3u8&e=1793750568&sig=GhTxclOKsWcc8bodYgNcPKqQbD828d9t1229qmGr95I
