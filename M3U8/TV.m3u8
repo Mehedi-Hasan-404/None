@@ -831,20 +831,98 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-chno="193" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Chicago Bears at Seattle Seahawks | CHI Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Chicago Bears at Seattle Seahawks | CHI Feed (XYZ)
+#EXTINF:-1 tvg-chno="193" tvg-id="Soccer.Dummy.us" tvg-name="[Argentina Primera División] Atlético Tucumán vs Argentinos Juniors | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1.png" group-title="Live Events",[Argentina Primera División] Atlético Tucumán vs Argentinos Juniors | ES (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=1baba6a20bbc0edf3b190e935e8617c4%2Findex.m3u8&e=1793667008&sig=0BDOp4x1Xhp7YMWv3XOMMrz58qkGnRY3hxSej9sPzKc
+
+#EXTINF:-1 tvg-chno="194" tvg-id="Soccer.Dummy.us" tvg-name="[Argentina Primera División] Independiente Rivadavia vs Banfield | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1.png" group-title="Live Events",[Argentina Primera División] Independiente Rivadavia vs Banfield | ES (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=92c2fffbaf6e3dffc3a5f96b2da55b53%2Findex.m3u8&e=1793667010&sig=IBadkm3dIDcUXG5tYkjTa8S6ROyye7MuJlUzIe13AI4
+
+#EXTINF:-1 tvg-chno="195" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Charlotte Hornets vs Detroit Pistons | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Charlotte Hornets vs Detroit Pistons | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=5825d9248e99dddf41b59f26c2e66424%2Findex.m3u8&e=1793666999&sig=JKat_RzyceDStGBOil3zUpksKBkMW9a0HV4hQGONFus
+
+#EXTINF:-1 tvg-chno="196" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Cleveland Cavaliers vs Oklahoma City Thunder | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Cleveland Cavaliers vs Oklahoma City Thunder | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=75711b4c58321ffe37e598d58e779e2b%2Findex.m3u8&e=1793666997&sig=DAfco5pq8sZ82oU4N-RQTeIxsrw8SethTct6LxME5kQ
+
+#EXTINF:-1 tvg-chno="197" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Indiana Pacers vs Atlanta Hawks | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Indiana Pacers vs Atlanta Hawks | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=f6a214cf886d35a5591087d6a8ca8d58%2Findex.m3u8&e=1793667001&sig=W6xxzsqBRbZpVDSIRlyKRZFtX17g4XRFnQ01w79bgsg
+
+#EXTINF:-1 tvg-chno="198" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] New York Knicks vs Brooklyn Nets | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] New York Knicks vs Brooklyn Nets | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=7b145bbd4bf206f377e4cb4a72e4ab03%2Findex.m3u8&e=1793667003&sig=LfZL4ZVyC8PkcgVEHsI6XH142XFn2ZTC-U-jMpEb2Oo
+
+#EXTINF:-1 tvg-chno="199" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Orlando Magic vs Washington Wizards | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Orlando Magic vs Washington Wizards | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=ab65a2596ab462ff14bdfd6ee1055085%2Findex.m3u8&e=1793667004&sig=OkRFVZjVH9iXstEPTbzG1HDi6UOWgiS9-Vlaah4ZbIc
+
+#EXTINF:-1 tvg-chno="200" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Philadelphia 76ers vs Chicago Bulls | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Philadelphia 76ers vs Chicago Bulls | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=3ce16cae309ca17fb913e24603663305%2Findex.m3u8&e=1793667006&sig=fxsUel6W3dp0czSBXZ2GEehjdVL7RVea9MdsVMiD2lU
+
+#EXTINF:-1 tvg-chno="201" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Army Black Knights vs Duke Blue Devils (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_army-black-knights-vs-duke-blue-devils_Army_Black_Knights_vs_Duke_Blu" group-title="Live Events",[NCAA Men's Basketball] Army Black Knights vs Duke Blue Devils (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/army-black-knights-vs-duke-blue-devils
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/army-black-knights-vs-duke-blue-devils
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/army-black-knights-vs-duke-blue-devils1080p/index.m3u8?_e=1793693992&_n=261f5f38c08bffeb&_t=jfRES5Fi6k93OnpoDmeBSg
+
+#EXTINF:-1 tvg-chno="202" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Miami Hurricanes vs Florida Gators (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_miami-hurricanes-vs-florida-gators_Miami_Hurricanes_vs_Florida_Ga" group-title="Live Events",[NCAA Men's Basketball] Miami Hurricanes vs Florida Gators (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/miami-hurricanes-vs-florida-gators
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/miami-hurricanes-vs-florida-gators
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/miami-hurricanes-vs-florida-gators1080p/index.m3u8?_e=1793693992&_n=267a7f4ed0856ba9&_t=oR3iqdAhDoZtSfOrW8zKpw
+
+#EXTINF:-1 tvg-chno="203" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Monmouth Hawks vs St. John's Red Storm (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_monmouth-hawks-vs-st-johns-red-storm_Monmouth_Hawks_vs_St_Johns_Red" group-title="Live Events",[NCAA Men's Basketball] Monmouth Hawks vs St. John's Red Storm (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/monmouth-hawks-vs-st-johns-red-storm
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/monmouth-hawks-vs-st-johns-red-storm
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/monmouth-hawks-vs-st-johns-red-storm1080p/index.m3u8?_e=1793693992&_n=fc369d3251934289&_t=p93NXLZ6yqg3byjzUGZP3Q
+
+#EXTINF:-1 tvg-chno="204" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Oakland Golden Grizzlies vs Michigan Wolverines (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_oakland-golden-grizzlies-vs-michigan-wolverines_Oakland_Golden_Grizzlies_vs_Mi" group-title="Live Events",[NCAA Men's Basketball] Oakland Golden Grizzlies vs Michigan Wolverines (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/oakland-golden-grizzlies-vs-michigan-wolverines
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/oakland-golden-grizzlies-vs-michigan-wolverines
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/oakland-golden-grizzlies-vs-michigan-wolverines1080p/index.m3u8?_e=1793693992&_n=51dda2ec76842a3a&_t=m7XTzPIzRJpha9n3zZv67w
+
+#EXTINF:-1 tvg-chno="205" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Chicago Bears at Seattle Seahawks | CHI Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Chicago Bears at Seattle Seahawks | CHI Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://ftv.xyzstreams.blog/WFLD/F3059/master.m3u8
 
-#EXTINF:-1 tvg-chno="194" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Chicago Bears at Seattle Seahawks | SEA Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Chicago Bears at Seattle Seahawks | SEA Feed (XYZ)
+#EXTINF:-1 tvg-chno="206" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Chicago Bears at Seattle Seahawks | SEA Feed (XYZ)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Chicago Bears at Seattle Seahawks | SEA Feed (XYZ)
 #EXTVLCOPT:http-referrer=https://xyzstreams.st/
 #EXTVLCOPT:http-origin=https://xyzstreams.st/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://ftv.xyzstreams.blog/KLSR/F3082/master.m3u8
 
-#EXTINF:-1 tvg-chno="195" tvg-id="Soccer.Dummy.us" tvg-name="[Serie A] Fiorentina vs Sassuolo (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/soccer_fiorentina-vs-sassuolo_Fiorentina_vs_Sassuolo" group-title="Live Events",[Serie A] Fiorentina vs Sassuolo (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/soccer/fiorentina-vs-sassuolo
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/soccer/fiorentina-vs-sassuolo
+#EXTINF:-1 tvg-chno="207" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Boston Bruins vs Vegas Golden Knights | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Boston Bruins vs Vegas Golden Knights | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/fiorentina-vs-sassuolo1080p/index.m3u8?_e=1793673457&_n=31ab68ac17727377&_t=i50srBFVFDZXV80G6gJJ7g
+https://hls.lshls.st/secure_hls.php?path=efcf0daf38c7d00d886c3002cea356e1%2Findex.m3u8&e=1793666994&sig=_3EUiJZGqOc9v55HifomcwRoOSwoEJbGBF1yJrfCrxk
+
+#EXTINF:-1 tvg-chno="208" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Florida Panthers vs Detroit Red Wings | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Florida Panthers vs Detroit Red Wings | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=58c61f4546642149cd5f3f5b0c508dff%2Findex.m3u8&e=1793666995&sig=Y54lwG6coEsifYKX1c7VMBgjWJt49cXGapakfr3Lhxs
