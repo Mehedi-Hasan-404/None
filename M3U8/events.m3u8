@@ -1,121 +1,247 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/doms9/iptv/refs/heads/default/M3U8/TV.xml"
 
-#EXTINF:-1 tvg-chno="1" tvg-id="Soccer.Dummy.us" tvg-name="[Mexico Liga MX] Tigres UANL vs Cruz Azul | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/22.png" group-title="Live Events",[Mexico Liga MX] Tigres UANL vs Cruz Azul | ES (PLYFST)
+#EXTINF:-1 tvg-chno="1" tvg-id="Soccer.Dummy.us" tvg-name="[Mexico Liga MX] Toluca vs Monterrey | ES (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/22.png" group-title="Live Events",[Mexico Liga MX] Toluca vs Monterrey | ES (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=e3a100f30ce36b0ac1bd02ad7bbb4677%2Findex.m3u8&e=1794095384&sig=XJaw5tvWUxPzwUlZB60nR1x-Kr5ky6lWfI4PSPDmzII
+https://hls.lshls.st/secure_hls.php?path=f7f64d8fee34a109d4926c9fedc01dec%2Findex.m3u8&e=1794107170&sig=30el7nWlnDlKIi97lYx87JFoZD3gPYY9SH8jBoVbn4c
 
-#EXTINF:-1 tvg-chno="2" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Denver Nuggets vs Indiana Pacers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_denver-nuggets-vs-indiana-pacers_Denver_Nuggets_vs_Indiana_Pace" group-title="Live Events",[NBA] Denver Nuggets vs Indiana Pacers (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/denver-nuggets-vs-indiana-pacers
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/denver-nuggets-vs-indiana-pacers
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/denver-nuggets-vs-indiana-pacers540p/index.m3u8?_e=1794122370&_n=40e5bc835b1b5c25&_t=Gdn2y6np0nWja9YHpzi1OQ
-
-#EXTINF:-1 tvg-chno="3" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Indiana vs Denver | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Indiana vs Denver | EN (PLYFST)
+#EXTINF:-1 tvg-chno="2" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Atlanta vs Brooklyn Nets | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Atlanta vs Brooklyn Nets | EN (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=9ae3de4b40a6ecfdd03fc90be82c4535%2Findex.m3u8&e=1794095377&sig=KlfL2vVf9b119whzzlPKrKq7Wigr6NIsw2Vk3WlaBPY
+https://hls.lshls.st/secure_hls.php?path=f0e34dbfd8cd7a28da4a9cf3ad4b0fd3%2Findex.m3u8&e=1794107156&sig=w3EHn1Xg6T4VZzflzWsEftgnEipvW2yXeUX2u_5o7dE
 
-#EXTINF:-1 tvg-chno="4" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Charlotte 49ers vs UAB Blazers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_charlotte-49ers-vs-uab-blazers_Charlotte_49ers_vs_UAB_Blazers" group-title="Live Events",[NCAAF] Charlotte 49ers vs UAB Blazers (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/charlotte-49ers-vs-uab-blazers
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/charlotte-49ers-vs-uab-blazers
+#EXTINF:-1 tvg-chno="3" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Brooklyn Nets vs Atlanta Hawks (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_brooklyn-nets-vs-atlanta-hawks_Brooklyn_Nets_vs_Atlanta_Hawks" group-title="Live Events",[NBA] Brooklyn Nets vs Atlanta Hawks (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/brooklyn-nets-vs-atlanta-hawks
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/brooklyn-nets-vs-atlanta-hawks
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/charlotte-49ers-vs-uab-blazers1080p/index.m3u8?_e=1794122372&_n=c0a6f75034d3866d&_t=hXp3RG7KlTlr-gV30PlKXw
+https://streamfree.top/live/brooklyn-nets-vs-atlanta-hawks540p/index.m3u8?_e=1794134154&_n=a18c98b5ed383694&_t=yL9WhpJSqwMyFwcWY474Ig
 
-#EXTINF:-1 tvg-chno="5" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Cincinnati Bearcats vs Houston Cougars (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_cincinnati-bearcats-vs-houston-cougars_Cincinnati_Bearcats_vs_Houston" group-title="Live Events",[NCAAF] Cincinnati Bearcats vs Houston Cougars (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/cincinnati-bearcats-vs-houston-cougars
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/cincinnati-bearcats-vs-houston-cougars
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/cincinnati-bearcats-vs-houston-cougars1080p/index.m3u8?_e=1794122372&_n=de038033c9cd59ef&_t=knVBUIuUFKsJayDhTCWwQQ
-
-#EXTINF:-1 tvg-chno="6" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Delaware Blue Hens vs Kennesaw State Owls (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_delaware-blue-hens-vs-kennesaw-state-owls_Delaware_Blue_Hens_vs_Kennesaw" group-title="Live Events",[NCAAF] Delaware Blue Hens vs Kennesaw State Owls (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/delaware-blue-hens-vs-kennesaw-state-owls
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/delaware-blue-hens-vs-kennesaw-state-owls
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/delaware-blue-hens-vs-kennesaw-state-owls1080p/index.m3u8?_e=1794122371&_n=d2296b03e44a89a3&_t=WEj5MCmLi4oXBZIUDF0FdQ
-
-#EXTINF:-1 tvg-chno="7" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Louisiana Tech Bulldogs vs Troy Trojans (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_louisiana-tech-bulldogs-vs-troy-trojans_Louisiana_Tech_Bulldogs_vs_Tro" group-title="Live Events",[NCAAF] Louisiana Tech Bulldogs vs Troy Trojans (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/louisiana-tech-bulldogs-vs-troy-trojans
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/louisiana-tech-bulldogs-vs-troy-trojans
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/louisiana-tech-bulldogs-vs-troy-trojans1080p/index.m3u8?_e=1794122374&_n=8eb47b9358287bc1&_t=44DbBNwXp-WxY1YoB63CkA
-
-#EXTINF:-1 tvg-chno="8" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Marshall Thundering Herd vs Georgia Southern Eagles (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_marshall-thundering-herd-vs-georgia-southern-eagles_Marshall_Thundering_Herd_vs_Ge" group-title="Live Events",[NCAAF] Marshall Thundering Herd vs Georgia Southern Eagles (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/marshall-thundering-herd-vs-georgia-southern-eagles
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/marshall-thundering-herd-vs-georgia-southern-eagles
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/marshall-thundering-herd-vs-georgia-southern-eagles1080p/index.m3u8?_e=1794122373&_n=ea8811cd9c91c8a0&_t=27vadJp_HZCSCFrT-iIxCA
-
-#EXTINF:-1 tvg-chno="9" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Missouri State Bears vs Florida International Panthers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_missouri-state-bears-vs-florida-international-panthers_Missouri_State_Bears_vs_Florid" group-title="Live Events",[NCAAF] Missouri State Bears vs Florida International Panthers (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/missouri-state-bears-vs-florida-international-panthers
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/missouri-state-bears-vs-florida-international-panthers
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/missouri-state-bears-vs-florida-international-panthers1080p/index.m3u8?_e=1794122374&_n=8035c38fe2626e16&_t=KIl3rqv5i7vD-KG-7Jeq8w
-
-#EXTINF:-1 tvg-chno="10" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Oregon Ducks vs Ohio State Buckeyes (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_oregon-ducks-vs-ohio-state-buckeyes_Oregon_Ducks_vs_Ohio_State_Buc" group-title="Live Events",[NCAAF] Oregon Ducks vs Ohio State Buckeyes (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/oregon-ducks-vs-ohio-state-buckeyes
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/oregon-ducks-vs-ohio-state-buckeyes
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/oregon-ducks-vs-ohio-state-buckeyes1080p/index.m3u8?_e=1794122371&_n=1ae82dca18a25b5a&_t=7lpbH81GTGIPdq1mYmLo0w
-
-#EXTINF:-1 tvg-chno="11" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Penn State Nittany Lions vs Washington Huskies (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_penn-state-nittany-lions-vs-washington-huskies_Penn_State_Nittany_Lions_vs_Wa" group-title="Live Events",[NCAAF] Penn State Nittany Lions vs Washington Huskies (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/penn-state-nittany-lions-vs-washington-huskies
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/penn-state-nittany-lions-vs-washington-huskies
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/penn-state-nittany-lions-vs-washington-huskies1080p/index.m3u8?_e=1794122372&_n=dbaf647db159b1d8&_t=UBIb4G6RO_9dW8POwxwSFw
-
-#EXTINF:-1 tvg-chno="12" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] South Alabama Jaguars vs Louisiana Ragin' Cajuns (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_south-alabama-jaguars-vs-louisiana-ragin-cajuns_South_Alabama_Jaguars_vs_Louis" group-title="Live Events",[NCAAF] South Alabama Jaguars vs Louisiana Ragin' Cajuns (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/south-alabama-jaguars-vs-louisiana-ragin-cajuns
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/south-alabama-jaguars-vs-louisiana-ragin-cajuns
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/south-alabama-jaguars-vs-louisiana-ragin-cajuns1080p/index.m3u8?_e=1794122375&_n=4b41e756184d08a8&_t=yvvIac0ti03uFtRSnAbzCw
-
-#EXTINF:-1 tvg-chno="13" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Temple Owls vs Navy Midshipmen (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_temple-owls-vs-navy-midshipmen_Temple_Owls_vs_Navy_Midshipmen" group-title="Live Events",[NCAAF] Temple Owls vs Navy Midshipmen (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/temple-owls-vs-navy-midshipmen
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/temple-owls-vs-navy-midshipmen
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/temple-owls-vs-navy-midshipmen1080p/index.m3u8?_e=1794122373&_n=4580fab7bed93f8b&_t=fdNu5OHY1ZnzyfT2fkBLmw
-
-#EXTINF:-1 tvg-chno="14" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] UCF Knights vs Kansas Jayhawks (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_ucf-knights-vs-kansas-jayhawks_UCF_Knights_vs_Kansas_Jayhawks" group-title="Live Events",[NCAAF] UCF Knights vs Kansas Jayhawks (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/ucf-knights-vs-kansas-jayhawks
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/ucf-knights-vs-kansas-jayhawks
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/ucf-knights-vs-kansas-jayhawks1080p/index.m3u8?_e=1794122373&_n=312a9205e31bb94c&_t=TfRUeZCyTXBJ0dIwcWEzdg
-
-#EXTINF:-1 tvg-chno="15" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Vanderbilt Commodores vs Mississippi State Bulldogs (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_vanderbilt-commodores-vs-mississippi-state-bulldogs_Vanderbilt_Commodores_vs_Missi" group-title="Live Events",[NCAAF] Vanderbilt Commodores vs Mississippi State Bulldogs (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/vanderbilt-commodores-vs-mississippi-state-bulldogs
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/vanderbilt-commodores-vs-mississippi-state-bulldogs
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/vanderbilt-commodores-vs-mississippi-state-bulldogs1080p/index.m3u8?_e=1794122375&_n=0ff736cbc7fb9e60&_t=kSQrvvWYQt_qVg_efMWvww
-
-#EXTINF:-1 tvg-chno="16" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Western Kentucky Hilltoppers vs Middle Tennessee Blue Raiders (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_western-kentucky-hilltoppers-vs-middle-tennessee-blue-raiders_Western_Kentucky_Hilltoppers_v" group-title="Live Events",[NCAAF] Western Kentucky Hilltoppers vs Middle Tennessee Blue Raiders (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/western-kentucky-hilltoppers-vs-middle-tennessee-blue-raiders
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/western-kentucky-hilltoppers-vs-middle-tennessee-blue-raiders
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/western-kentucky-hilltoppers-vs-middle-tennessee-blue-raiders1080p/index.m3u8?_e=1794122373&_n=f6374e28dfb7bea2&_t=iMfdnvcs7F-CRPINgkjsfw
-
-#EXTINF:-1 tvg-chno="17" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] New York Rangers vs Seattle Kraken (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_new-york-rangers-vs-seattle-kraken_New_York_Rangers_vs_Seattle_Kr" group-title="Live Events",[NHL] New York Rangers vs Seattle Kraken (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/new-york-rangers-vs-seattle-kraken
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/new-york-rangers-vs-seattle-kraken
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/new-york-rangers-vs-seattle-kraken1080p/index.m3u8?_e=1794122370&_n=6e6006c161d2d828&_t=5arSsvnfW8SfOm05ZLTfvw
-
-#EXTINF:-1 tvg-chno="18" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Seattle Kraken vs Rangers | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Seattle Kraken vs Rangers | CA (PLYFST)
+#EXTINF:-1 tvg-chno="4" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Cleveland vs New York | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Cleveland vs New York | EN (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=c564bc7e3c0914e67ee7ea0b4fd4f51f%2Findex.m3u8&e=1794095380&sig=gaI9NgC7IpfD5RCzfCIyujfMOGO57BkPKmFxXpgkppI
+https://hls.lshls.st/secure_hls.php?path=efcf0daf38c7d00d886c3002cea356e1%2Findex.m3u8&e=1794107159&sig=psjjOavzbLlCKmGj-ZjZJpytI8dk8-NFJfj1bwG_1s0
 
-#EXTINF:-1 tvg-chno="19" tvg-id="UFC.247.Dummy.us" tvg-name="[UFC] UFC Fight Night | EN (PLYFST)" tvg-logo="https://1000logos.net/wp-content/uploads/2017/06/Logo-UFC-500x313.png" group-title="Live Events",[UFC] UFC Fight Night | EN (PLYFST)
+#EXTINF:-1 tvg-chno="5" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Golden State vs Orlando | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Golden State vs Orlando | EN (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=ae48836381ea1dc4e923da3a418649bb%2Findex.m3u8&e=1794095382&sig=5B8_l24DKO5rZJ-gofDKlGB5bQrm_uNjmGdcMdu5JWk
+https://hls.lshls.st/secure_hls.php?path=a2eb767a63c0646e710447c54083b3e4%2Findex.m3u8&e=1794107163&sig=16smLwSwGLOnd3kqdZMp5AyeTSXVHn1j7ul4RV2emG0
 
-#EXTINF:-1 tvg-chno="20" tvg-id="UFC.247.Dummy.us" tvg-name="[UFC] UFC Fight Night: Cortes Acosta vs. Walker (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/combat_ufc-fight-night-cortes-acosta-vs-walker_UFC_Fight_Night_Cortes_Acosta_" group-title="Live Events",[UFC] UFC Fight Night: Cortes Acosta vs. Walker (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/combat/ufc-fight-night-cortes-acosta-vs-walker
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/combat/ufc-fight-night-cortes-acosta-vs-walker
+#EXTINF:-1 tvg-chno="6" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Houston Rockets vs Phoenix Suns (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_houston-rockets-vs-phoenix-suns_Houston_Rockets_vs_Phoenix_Sun" group-title="Live Events",[NBA] Houston Rockets vs Phoenix Suns (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/houston-rockets-vs-phoenix-suns
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/houston-rockets-vs-phoenix-suns
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/ufc-fight-night-cortes-acosta-vs-walker1080p/index.m3u8?_e=1794122371&_n=1423b85ca4369cc5&_t=ypfxvx-j6bd65W9sx0pgzQ
+https://streamfree.top/live/houston-rockets-vs-phoenix-suns540p/index.m3u8?_e=1794134155&_n=2d3da2afc53b078d&_t=dWyc1pjsl4F-MCbBb8ZGLA
+
+#EXTINF:-1 tvg-chno="7" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] New York Knicks vs Cleveland Cavaliers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_new-york-knicks-vs-cleveland-cavaliers_New_York_Knicks_vs_Cleveland_C" group-title="Live Events",[NBA] New York Knicks vs Cleveland Cavaliers (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/new-york-knicks-vs-cleveland-cavaliers
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/new-york-knicks-vs-cleveland-cavaliers
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/new-york-knicks-vs-cleveland-cavaliers540p/index.m3u8?_e=1794134154&_n=e65e9c16e5e1dced&_t=P7wjnUm_xAhyb19IyXGweA
+
+#EXTINF:-1 tvg-chno="8" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Oklahoma vs Washington | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Oklahoma vs Washington | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=58c61f4546642149cd5f3f5b0c508dff%2Findex.m3u8&e=1794107161&sig=q7GF2PFbXGc76Xn00N6KAJF_DbFpGuyM74aeXaM0qz0
+
+#EXTINF:-1 tvg-chno="9" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Orlando Magic vs Golden State Warriors (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_orlando-magic-vs-golden-state-warriors_Orlando_Magic_vs_Golden_State_" group-title="Live Events",[NBA] Orlando Magic vs Golden State Warriors (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/orlando-magic-vs-golden-state-warriors
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/orlando-magic-vs-golden-state-warriors
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/orlando-magic-vs-golden-state-warriors540p/index.m3u8?_e=1794134155&_n=d2e42d641e910146&_t=SLHV9FucGmKIX2EOc6o8QA
+
+#EXTINF:-1 tvg-chno="10" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Phoenix vs Houston | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Phoenix vs Houston | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=1a4e64d8dc4457909cdb26dabbadae3a%2Findex.m3u8&e=1794107166&sig=cwN1f9Nj5TmppcO1RGn03cggqt0LiSDekpWNwEG6XFE
+
+#EXTINF:-1 tvg-chno="11" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Portland vs San Antonio | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Portland vs San Antonio | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=1ff92290efd0ffd2e6948d5d39522456%2Findex.m3u8&e=1794107168&sig=35VCiMe68bfsLofb97fxqnrGyt6iqDfmaOLDDV_ZMlw
+
+#EXTINF:-1 tvg-chno="12" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Washington Wizards vs Oklahoma City Thunder (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_washington-wizards-vs-oklahoma-city-thunder_Washington_Wizards_vs_Oklahoma" group-title="Live Events",[NBA] Washington Wizards vs Oklahoma City Thunder (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/washington-wizards-vs-oklahoma-city-thunder
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/washington-wizards-vs-oklahoma-city-thunder
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/washington-wizards-vs-oklahoma-city-thunder540p/index.m3u8?_e=1794134155&_n=2a8359b0e0535e63&_t=eZWB3r0TWLZBwZBVEZC3eQ
+
+#EXTINF:-1 tvg-chno="13" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Air Force Falcons vs Army Black Knights (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_air-force-falcons-vs-army-black-knights_Air_Force_Falcons_vs_Army_Blac" group-title="Live Events",[NCAAF] Air Force Falcons vs Army Black Knights (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/air-force-falcons-vs-army-black-knights
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/air-force-falcons-vs-army-black-knights
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/air-force-falcons-vs-army-black-knights1080p/index.m3u8?_e=1794134160&_n=b99ec4cd4140ab69&_t=87rB8C-2woxgDBB-hPRbPw
+
+#EXTINF:-1 tvg-chno="14" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Colorado Buffaloes vs Arizona State Sun Devils (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_colorado-buffaloes-vs-arizona-state-sun-devils_Colorado_Buffaloes_vs_Arizona_" group-title="Live Events",[NCAAF] Colorado Buffaloes vs Arizona State Sun Devils (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/colorado-buffaloes-vs-arizona-state-sun-devils
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/colorado-buffaloes-vs-arizona-state-sun-devils
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/colorado-buffaloes-vs-arizona-state-sun-devils1080p/index.m3u8?_e=1794134159&_n=0fe67051489e9d24&_t=RUQWn1cKVFbaIkCRkoHaLQ
+
+#EXTINF:-1 tvg-chno="15" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Georgia Bulldogs vs Ole Miss Rebels (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_georgia-bulldogs-vs-ole-miss-rebels_Georgia_Bulldogs_vs_Ole_Miss_R" group-title="Live Events",[NCAAF] Georgia Bulldogs vs Ole Miss Rebels (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/georgia-bulldogs-vs-ole-miss-rebels
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/georgia-bulldogs-vs-ole-miss-rebels
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/georgia-bulldogs-vs-ole-miss-rebels1080p/index.m3u8?_e=1794134159&_n=5164626d6ab1acb2&_t=ueHEEWbjncvH_vNW_vj9Vg
+
+#EXTINF:-1 tvg-chno="16" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Iowa Hawkeyes vs Northwestern Wildcats (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_iowa-hawkeyes-vs-northwestern-wildcats_Iowa_Hawkeyes_vs_Northwestern_" group-title="Live Events",[NCAAF] Iowa Hawkeyes vs Northwestern Wildcats (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/iowa-hawkeyes-vs-northwestern-wildcats
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/iowa-hawkeyes-vs-northwestern-wildcats
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/iowa-hawkeyes-vs-northwestern-wildcats1080p/index.m3u8?_e=1794134159&_n=a9a8b91f7c4bd53b&_t=ATb5_lTYAGjRaWZY6IOGlA
+
+#EXTINF:-1 tvg-chno="17" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Kentucky Wildcats vs Tennessee Volunteers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_kentucky-wildcats-vs-tennessee-volunteers_Kentucky_Wildcats_vs_Tennessee" group-title="Live Events",[NCAAF] Kentucky Wildcats vs Tennessee Volunteers (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/kentucky-wildcats-vs-tennessee-volunteers
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/kentucky-wildcats-vs-tennessee-volunteers
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/kentucky-wildcats-vs-tennessee-volunteers1080p/index.m3u8?_e=1794134158&_n=320437910bf49a8c&_t=0LQScA5_ddVlGLZBpxzJlw
+
+#EXTINF:-1 tvg-chno="18" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Liberty Flames vs New Mexico State Aggies (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_liberty-flames-vs-new-mexico-state-aggies_Liberty_Flames_vs_New_Mexico_S" group-title="Live Events",[NCAAF] Liberty Flames vs New Mexico State Aggies (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/liberty-flames-vs-new-mexico-state-aggies
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/liberty-flames-vs-new-mexico-state-aggies
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/liberty-flames-vs-new-mexico-state-aggies1080p/index.m3u8?_e=1794134161&_n=aa52f1702b715850&_t=9teyBYwjzlgeiXd77NXn2A
+
+#EXTINF:-1 tvg-chno="19" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Louisville Cardinals vs Georgia Tech Yellow Jackets (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_louisville-cardinals-vs-georgia-tech-yellow-jackets_Louisville_Cardinals_vs_Georgi" group-title="Live Events",[NCAAF] Louisville Cardinals vs Georgia Tech Yellow Jackets (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/louisville-cardinals-vs-georgia-tech-yellow-jackets
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/louisville-cardinals-vs-georgia-tech-yellow-jackets
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/louisville-cardinals-vs-georgia-tech-yellow-jackets1080p/index.m3u8?_e=1794134160&_n=7f9b2ab5dd57bd27&_t=tjWN68XByUO0v7EAjyg6jw
+
+#EXTINF:-1 tvg-chno="20" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Miami Hurricanes vs Notre Dame Fighting Irish (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_miami-hurricanes-vs-notre-dame-fighting-irish_Miami_Hurricanes_vs_Notre_Dame" group-title="Live Events",[NCAAF] Miami Hurricanes vs Notre Dame Fighting Irish (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/miami-hurricanes-vs-notre-dame-fighting-irish
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/miami-hurricanes-vs-notre-dame-fighting-irish
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/miami-hurricanes-vs-notre-dame-fighting-irish1080p/index.m3u8?_e=1794134159&_n=29954f2d28476abe&_t=XTi-buDv4eUZgntv0kdsHg
+
+#EXTINF:-1 tvg-chno="21" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Michigan State Spartans vs Michigan Wolverines (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_michigan-state-spartans-vs-michigan-wolverines_Michigan_State_Spartans_vs_Mic" group-title="Live Events",[NCAAF] Michigan State Spartans vs Michigan Wolverines (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/michigan-state-spartans-vs-michigan-wolverines
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/michigan-state-spartans-vs-michigan-wolverines
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/michigan-state-spartans-vs-michigan-wolverines1080p/index.m3u8?_e=1794134160&_n=f331b7ce2f6d3dec&_t=g6tj_3lmhQUdFdPN-fR_yw
+
+#EXTINF:-1 tvg-chno="22" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Oklahoma Sooners vs Florida Gators (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_oklahoma-sooners-vs-florida-gators_Oklahoma_Sooners_vs_Florida_Ga" group-title="Live Events",[NCAAF] Oklahoma Sooners vs Florida Gators (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/oklahoma-sooners-vs-florida-gators
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/oklahoma-sooners-vs-florida-gators
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/oklahoma-sooners-vs-florida-gators1080p/index.m3u8?_e=1794134161&_n=36773df7223c9983&_t=bsp4UMqDsRzqD4-k-hAI0w
+
+#EXTINF:-1 tvg-chno="23" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Sam Houston Bearkats vs Jacksonville State Gamecocks (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_sam-houston-bearkats-vs-jacksonville-state-gamecocks_Sam_Houston_Bearkats_vs_Jackso" group-title="Live Events",[NCAAF] Sam Houston Bearkats vs Jacksonville State Gamecocks (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/sam-houston-bearkats-vs-jacksonville-state-gamecocks
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/sam-houston-bearkats-vs-jacksonville-state-gamecocks
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/sam-houston-bearkats-vs-jacksonville-state-gamecocks1080p/index.m3u8?_e=1794134158&_n=844e5cf1af569f39&_t=jWmFlbX2cxMuBE70jS3Oqw
+
+#EXTINF:-1 tvg-chno="24" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Carolina vs Chicago | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Carolina vs Chicago | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=d2cf4a545b7a79d529e7139a668540f7%2Findex.m3u8&e=1794107175&sig=kfmnuVClbndr6_VlEfnZZXtR08kWeVo6GDlpjSWapO4
+
+#EXTINF:-1 tvg-chno="25" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Chicago Blackhawks vs Carolina Hurricanes (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_chicago-blackhawks-vs-carolina-hurricanes_Chicago_Blackhawks_vs_Carolina" group-title="Live Events",[NHL] Chicago Blackhawks vs Carolina Hurricanes (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/chicago-blackhawks-vs-carolina-hurricanes
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/chicago-blackhawks-vs-carolina-hurricanes
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/chicago-blackhawks-vs-carolina-hurricanes1080p/index.m3u8?_e=1794134157&_n=67924d01560cc744&_t=_GN2CZuD2VI0aPvisqHeCg
+
+#EXTINF:-1 tvg-chno="26" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Colorado vs Detroit | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Colorado vs Detroit | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=489eac40c009279a37f4adf6e28d8efb%2Findex.m3u8&e=1794107179&sig=_K2c_t_cQyBQHdS-6UHITnMsf51trTlGof93GVq23-E
+
+#EXTINF:-1 tvg-chno="27" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Dallas vs San Jose | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Dallas vs San Jose | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=5f58ccc896c81d5fefdf94d70070c622%2Findex.m3u8&e=1794107177&sig=sc6iAVDO0czK3kl9I0oOJYFsaigAZKwlR8DWJbjuHHw
+
+#EXTINF:-1 tvg-chno="28" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Detroit Red Wings vs Colorado Avalanche (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_detroit-red-wings-vs-colorado-avalanche_Detroit_Red_Wings_vs_Colorado_" group-title="Live Events",[NHL] Detroit Red Wings vs Colorado Avalanche (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/detroit-red-wings-vs-colorado-avalanche
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/detroit-red-wings-vs-colorado-avalanche
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/detroit-red-wings-vs-colorado-avalanche1080p/index.m3u8?_e=1794134157&_n=9c6f5871afb366fb&_t=FHDuVVWTMd31UzQ8pJFz7Q
+
+#EXTINF:-1 tvg-chno="29" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Edmonton vs Vancouver | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Edmonton vs Vancouver | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=75711b4c58321ffe37e598d58e779e2b%2Findex.m3u8&e=1794107172&sig=VTb8P_-1elcFpPtqtxAJSE-LQhRfcv6zKw4f6i4Rh5g
+
+#EXTINF:-1 tvg-chno="30" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Los Angeles vs Pittsburgh | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Los Angeles vs Pittsburgh | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=c564bc7e3c0914e67ee7ea0b4fd4f51f%2Findex.m3u8&e=1794107191&sig=4prjDjEeDlp2NDJVTpdjy23sVlOrgykmg_mM3yefQtg
+
+#EXTINF:-1 tvg-chno="31" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Minnesota vs Tampa Bay | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Minnesota vs Tampa Bay | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=47ed0734107c4894ef1fbaf6de5554d8%2Findex.m3u8&e=1794107182&sig=qV9_TVFFXpFtTWLivzyJBqD1jicSRS_z3DMntoWu5sE
+
+#EXTINF:-1 tvg-chno="32" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Montreal Canadiens vs Toronto Maple Leafs (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_montreal-canadiens-vs-toronto-maple-leafs_Montreal_Canadiens_vs_Toronto_" group-title="Live Events",[NHL] Montreal Canadiens vs Toronto Maple Leafs (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/montreal-canadiens-vs-toronto-maple-leafs
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/montreal-canadiens-vs-toronto-maple-leafs
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/montreal-canadiens-vs-toronto-maple-leafs1080p/index.m3u8?_e=1794134156&_n=d5e9a7450f12c892&_t=Wr4dViJQIyiZuTGrqtaT_g
+
+#EXTINF:-1 tvg-chno="33" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] NY Islanders vs New Jersey | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] NY Islanders vs New Jersey | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=84bd78d7e823893f580fbd31ee787aaa%2Findex.m3u8&e=1794107188&sig=yNLiq6WIMp9Bg8H0JUchx9_zX4Mo25XIo7prFN1-olE
+
+#EXTINF:-1 tvg-chno="34" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] New Jersey Devils vs New York Islanders (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_new-jersey-devils-vs-new-york-islanders_New_Jersey_Devils_vs_New_York_" group-title="Live Events",[NHL] New Jersey Devils vs New York Islanders (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/new-jersey-devils-vs-new-york-islanders
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/new-jersey-devils-vs-new-york-islanders
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/new-jersey-devils-vs-new-york-islanders1080p/index.m3u8?_e=1794134156&_n=f4ee9e453b4085d1&_t=TTGUIHvWum3H_Ur19y1qjg
+
+#EXTINF:-1 tvg-chno="35" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Ottawa vs Utah Mammoth | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Ottawa vs Utah Mammoth | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=76a5e19e42340a9ff599bf9453b1e07f%2Findex.m3u8&e=1794107186&sig=zxrkKNFPwI5gxK-vI_qj5iBwbrJpq7AEa_Om5w-WjqI
+
+#EXTINF:-1 tvg-chno="36" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Pittsburgh Penguins vs Los Angeles Kings (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_pittsburgh-penguins-vs-los-angeles-kings_Pittsburgh_Penguins_vs_Los_Ang" group-title="Live Events",[NHL] Pittsburgh Penguins vs Los Angeles Kings (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/pittsburgh-penguins-vs-los-angeles-kings
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/pittsburgh-penguins-vs-los-angeles-kings
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/pittsburgh-penguins-vs-los-angeles-kings1080p/index.m3u8?_e=1794134158&_n=c93ef100a29c74e2&_t=IZxVf_2RfKVuVqsocfCJaQ
+
+#EXTINF:-1 tvg-chno="37" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] San Jose Sharks vs Dallas Stars (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_san-jose-sharks-vs-dallas-stars_San_Jose_Sharks_vs_Dallas_Star" group-title="Live Events",[NHL] San Jose Sharks vs Dallas Stars (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/san-jose-sharks-vs-dallas-stars
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/san-jose-sharks-vs-dallas-stars
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/san-jose-sharks-vs-dallas-stars1080p/index.m3u8?_e=1794134157&_n=83b28cef01a8543a&_t=SVLMoj2Ji9J2b3ykJzUJKw
+
+#EXTINF:-1 tvg-chno="38" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Tampa Bay Lightning vs Minnesota Wild (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_tampa-bay-lightning-vs-minnesota-wild_Tampa_Bay_Lightning_vs_Minneso" group-title="Live Events",[NHL] Tampa Bay Lightning vs Minnesota Wild (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/tampa-bay-lightning-vs-minnesota-wild
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/tampa-bay-lightning-vs-minnesota-wild
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/tampa-bay-lightning-vs-minnesota-wild1080p/index.m3u8?_e=1794134157&_n=48a74b95cdaf2316&_t=j_NgHv9Ax9agGRXtkd39qQ
+
+#EXTINF:-1 tvg-chno="39" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Toronto vs Montreal | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Toronto vs Montreal | CA (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=94a7b5b18c19cbc29688540ab79335b5%2Findex.m3u8&e=1794107184&sig=2SQ-NfkSfX2RYgpIKR_h64T6mkhp6tq-pD-MXuesUEc
+
+#EXTINF:-1 tvg-chno="40" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Utah Mammoth vs Ottawa Senators (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_utah-mammoth-vs-ottawa-senators_Utah_Mammoth_vs_Ottawa_Senator" group-title="Live Events",[NHL] Utah Mammoth vs Ottawa Senators (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/utah-mammoth-vs-ottawa-senators
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/utah-mammoth-vs-ottawa-senators
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/utah-mammoth-vs-ottawa-senators1080p/index.m3u8?_e=1794134156&_n=6c8686f8d5744b21&_t=X9I66iox5tjxd0QXH6UiIQ
+
+#EXTINF:-1 tvg-chno="41" tvg-id="UFC.247.Dummy.us" tvg-name="[UFC] Johnny Walker vs Waldo Cortes-Acosta | EN (PLYFST)" tvg-logo="https://1000logos.net/wp-content/uploads/2017/06/Logo-UFC-500x313.png" group-title="Live Events",[UFC] Johnny Walker vs Waldo Cortes-Acosta | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=ae48836381ea1dc4e923da3a418649bb%2Findex.m3u8&e=1794107193&sig=vBCSiDVO95F5HxOStUK7lf7wHq9I5iEaE7o3HyAZ7nc
