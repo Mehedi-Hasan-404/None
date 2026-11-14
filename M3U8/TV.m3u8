@@ -831,14 +831,68 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-chno="193" tvg-id="Live.Event.us" tvg-name="[North America CONCACAF Nations League] Saint Martin vs El Salvador | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[North America CONCACAF Nations League] Saint Martin vs El Salvador | EN (PLYFST)
+#EXTINF:-1 tvg-chno="193" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Atlanta Hawks vs Chicago Bulls | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Atlanta Hawks vs Chicago Bulls | EN (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=c0848baa0fff7dcc32acb6e770f6cfc4%2Findex.m3u8&e=1794611663&sig=H14mJEGbszh6O68kI-3wtaAB1oN79ZzY-Udp1NedRPI&v=1794609863-1250
+https://hls.lshls.st/secure_hls.php?path=7b145bbd4bf206f377e4cb4a72e4ab03%2Findex.m3u8&e=1794620446&sig=rSmDXKtUVUOzVS4dOixxwXMyG3jwbmo2xO9W6OnBaek&v=1794618646-7099
 
-#EXTINF:-1 tvg-chno="194" tvg-id="Live.Event.us" tvg-name="[World Friendly] Argentina vs Uruguay | ES (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[World Friendly] Argentina vs Uruguay | ES (PLYFST)
+#EXTINF:-1 tvg-chno="194" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Cleveland Cavaliers vs Miami Heat | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Cleveland Cavaliers vs Miami Heat | EN (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=9b49004040ccf64adf108ab4e17a68a6%2Findex.m3u8&e=1794611661&sig=nHNReujO7xIPjl1mLwyqXglcq5HBf4dlh1rfsa_a97U&v=1794609861-6223
+https://hls.lshls.st/secure_hls.php?path=f6a214cf886d35a5591087d6a8ca8d58%2Findex.m3u8&e=1794620444&sig=j9_mMOAopGvRCe6hW7L2fCaMdlshObMUnVSijWagwIo&v=1794618644-9842
+
+#EXTINF:-1 tvg-chno="195" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Memphis Grizzlies vs New Orleans Pelicans | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Memphis Grizzlies vs New Orleans Pelicans | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=ab65a2596ab462ff14bdfd6ee1055085%2Findex.m3u8&e=1794620447&sig=-o8FU5HW6m9tFyZAbXXR4ZtFTq7Az7zt45XAoGLa8mo&v=1794618647-9982
+
+#EXTINF:-1 tvg-chno="196" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Milwaukee Bucks vs Orlando Magic (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_milwaukee-bucks-vs-orlando-magic_Milwaukee_Bucks_vs_Orlando_Mag" group-title="Live Events",[NBA] Milwaukee Bucks vs Orlando Magic (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/milwaukee-bucks-vs-orlando-magic
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/milwaukee-bucks-vs-orlando-magic
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/milwaukee-bucks-vs-orlando-magic1080p/index.m3u8?_e=1794647438&_n=991ce4483964fd9f&_t=6Refd4d72VQM8Izx26-Y5w
+
+#EXTINF:-1 tvg-chno="197" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Milwaukee Bucks vs Orlando Magic | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Milwaukee Bucks vs Orlando Magic | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=5825d9248e99dddf41b59f26c2e66424%2Findex.m3u8&e=1794620443&sig=O1Own1DShzMmwcicsUXqsfnJA9XpzMB-pWdUVjDShFQ&v=1794618643-3949
+
+#EXTINF:-1 tvg-chno="198" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] New York Knicks vs Indiana Pacers | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] New York Knicks vs Indiana Pacers | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=75711b4c58321ffe37e598d58e779e2b%2Findex.m3u8&e=1794620441&sig=bl0lFPeM8gJXthn-wrycyjJXEtgkjCfXMGWKRuYSxBY&v=1794618641-9594
+
+#EXTINF:-1 tvg-chno="199" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Utah Jazz vs Houston Rockets | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Utah Jazz vs Houston Rockets | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=3ce16cae309ca17fb913e24603663305%2Findex.m3u8&e=1794620449&sig=zifflduzTBLi4wZAyQK4muzoWdbbkG3Ylv4FClMf6F8&v=1794618649-3587
+
+#EXTINF:-1 tvg-chno="200" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Northern Arizona Lumberjacks vs Kentucky Wildcats (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_northern-arizona-lumberjacks-vs-kentucky-wildcats_Northern_Arizona_Lumberjacks_v" group-title="Live Events",[NCAA Men's Basketball] Northern Arizona Lumberjacks vs Kentucky Wildcats (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/northern-arizona-lumberjacks-vs-kentucky-wildcats
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/northern-arizona-lumberjacks-vs-kentucky-wildcats
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/northern-arizona-lumberjacks-vs-kentucky-wildcats1080p/index.m3u8?_e=1794647439&_n=16d56248b962add2&_t=8b4jv5gv6Khtt21hXPKvGw
+
+#EXTINF:-1 tvg-chno="201" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Prairie View A&M Panthers vs Vanderbilt Commodores (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_prairie-view-am-panthers-vs-vanderbilt-commodores_Prairie_View_AM_Panthers_vs_Va" group-title="Live Events",[NCAA Men's Basketball] Prairie View A&M Panthers vs Vanderbilt Commodores (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/prairie-view-am-panthers-vs-vanderbilt-commodores
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/prairie-view-am-panthers-vs-vanderbilt-commodores
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/prairie-view-am-panthers-vs-vanderbilt-commodores1080p/index.m3u8?_e=1794647439&_n=58660426fd5d4a08&_t=9XiRlF3KgvAEU5BgHCA_qQ
+
+#EXTINF:-1 tvg-chno="202" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAAF] Florida State Seminoles vs Pittsburgh Panthers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_florida-state-seminoles-vs-pittsburgh-panthers_Florida_State_Seminoles_vs_Pit" group-title="Live Events",[NCAAF] Florida State Seminoles vs Pittsburgh Panthers (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/florida-state-seminoles-vs-pittsburgh-panthers
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/florida-state-seminoles-vs-pittsburgh-panthers
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/florida-state-seminoles-vs-pittsburgh-panthers1080p/index.m3u8?_e=1794647439&_n=b9e2d5eb9bd3d37c&_t=PCdReLvpFXvdnxeC1vyR_A
+
+#EXTINF:-1 tvg-chno="203" tvg-id="Live.Event.us" tvg-name="[North America CONCACAF Nations League] Montserrat vs Nicaragua | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[North America CONCACAF Nations League] Montserrat vs Nicaragua | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=07ae5785d9f5ce3acbd1e831e4c023ec%2Findex.m3u8&e=1794620450&sig=WlnkUE4uMQ8wFBA7GXP9nvPnYuPf8oCd8Q-R6NUh_l0&v=1794618650-2312
