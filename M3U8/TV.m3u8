@@ -831,110 +831,38 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-chno="193" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Chicago Bulls vs Cleveland Cavaliers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_chicago-bulls-vs-cleveland-cavaliers_Chicago_Bulls_vs_Cleveland_Cav" group-title="Live Events",[NBA] Chicago Bulls vs Cleveland Cavaliers (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/chicago-bulls-vs-cleveland-cavaliers
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/chicago-bulls-vs-cleveland-cavaliers
+#EXTINF:-1 tvg-chno="193" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Phoenix Suns vs Denver Nuggets (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_phoenix-suns-vs-denver-nuggets_Phoenix_Suns_vs_Denver_Nuggets" group-title="Live Events",[NBA] Phoenix Suns vs Denver Nuggets (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/phoenix-suns-vs-denver-nuggets
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/phoenix-suns-vs-denver-nuggets
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/chicago-bulls-vs-cleveland-cavaliers1080p/index.m3u8?_e=1794907582&_n=e6527b44d60e9bb5&_s=0WRLpYdS1J6PAuCx1lQMmQ&_sa=z3yREnMbBJSly0aoRE7Bpg&_t=M2aaGfz3AU77jqIWfyQ3pA&_ta=K_jzxkHlE4OPhNRNReb0bg
+https://streamfree.top/live/phoenix-suns-vs-denver-nuggets1080p/index.m3u8?_e=1794916945&_n=bb042f35a46bfa85&_s=yhxFnFGBc0qcwgSOmoh80Q&_sa=kUN6nMh4choSD3F9ioMQlw&_t=lKp6P-EubQP9totGJUt5DA&_ta=uGI2h5Lxbl5AFpqhZkU2qg
 
-#EXTINF:-1 tvg-chno="194" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Chicago Bulls vs Cleveland Cavaliers | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Chicago Bulls vs Cleveland Cavaliers | EN (PLYFST)
+#EXTINF:-1 tvg-chno="194" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Phoenix Suns vs Denver Nuggets | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Phoenix Suns vs Denver Nuggets | EN (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=75711b4c58321ffe37e598d58e779e2b%2Findex.m3u8&e=1794880588&sig=CzDTlG3rcmrqjwxj9B_46mfkMgwDaZq2uNImeu5fAS0&v=1794878788-5833
+https://hls.lshls.st/secure_hls.php?path=d2cf4a545b7a79d529e7139a668540f7%2Findex.m3u8&e=1794889950&sig=H3ZhOIe5U40wSd4hZiR4SGFX7BgA7jOwv77TKC06ijs&v=1794888150-6545
 
-#EXTINF:-1 tvg-chno="195" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Golden State Warriors vs New Orleans Pelicans | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Golden State Warriors vs New Orleans Pelicans | EN (PLYFST)
+#EXTINF:-1 tvg-chno="195" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Long Beach State Beach vs UCLA Bruins (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_long-beach-state-beach-vs-ucla-bruins_Long_Beach_State_Beach_vs_UCLA" group-title="Live Events",[NCAA Men's Basketball] Long Beach State Beach vs UCLA Bruins (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/long-beach-state-beach-vs-ucla-bruins
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/long-beach-state-beach-vs-ucla-bruins
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/long-beach-state-beach-vs-ucla-bruins1080p/index.m3u8?_e=1794916945&_n=c35430e642ff54cc&_s=R3TwW24LUv4pkxPXf2xOKA&_sa=AM3JGHQRQ1KWZoZXJoE9Jg&_t=KhEmfrnybVOIOC3ZcGCsSQ&_ta=np7oA2eECWaLkXjz4zl8gQ
+
+#EXTINF:-1 tvg-chno="196" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Los Angeles Chargers vs Baltimore Ravens (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_los-angeles-chargers-vs-baltimore-ravens_Los_Angeles_Chargers_vs_Baltim" group-title="Live Events",[NFL] Los Angeles Chargers vs Baltimore Ravens (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/los-angeles-chargers-vs-baltimore-ravens
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/los-angeles-chargers-vs-baltimore-ravens
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/los-angeles-chargers-vs-baltimore-ravens1080p/index.m3u8?_e=1794916946&_n=20a0cda47891728c&_s=JEsbAWUm9hlE_G9heLjm4g&_sa=U-sGMkxFVWSXbv2bzgvYZw&_t=5bRU1rVzqBjI5uLfWe4LAg&_ta=D8Q9gFir1wAdHXOM2WrvuA
+
+#EXTINF:-1 tvg-chno="197" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Vancouver Canucks vs Utah Mammoth (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_vancouver-canucks-vs-utah-mammoth_Vancouver_Canucks_vs_Utah_Mamm" group-title="Live Events",[NHL] Vancouver Canucks vs Utah Mammoth (STRMFREE)
+#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/vancouver-canucks-vs-utah-mammoth
+#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/vancouver-canucks-vs-utah-mammoth
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://streamfree.top/live/vancouver-canucks-vs-utah-mammoth1080p/index.m3u8?_e=1794916946&_n=b6e4d41d46a3c8fa&_s=W7oas2cTmxhJ3ciTfAWYCg&_sa=0UPN8QYjI2jqaEotrjjsjw&_t=bishAtQvJRjUBsfq6kOIlw&_ta=wbiqHPuP07NcyUUY0Q_DEg
+
+#EXTINF:-1 tvg-chno="198" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Vancouver Canucks vs Utah Mammoth | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Vancouver Canucks vs Utah Mammoth | CA (PLYFST)
 #EXTVLCOPT:http-referrer=https://exposestrat.com
 #EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=eed330e6c07b8be08b20dbccdba8d599%2Findex.m3u8&e=1794880599&sig=9k-db0BEW1WBP-XvPGkkBguqHr-lWa1Eh1AVtCp5HIk&v=1794878799-6547
-
-#EXTINF:-1 tvg-chno="196" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Houston Rockets vs Miami Heat (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_houston-rockets-vs-miami-heat_Houston_Rockets_vs_Miami_Heat" group-title="Live Events",[NBA] Houston Rockets vs Miami Heat (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/houston-rockets-vs-miami-heat
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/houston-rockets-vs-miami-heat
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/houston-rockets-vs-miami-heat1080p/index.m3u8?_e=1794907583&_n=1471840104e655ab&_s=qyA0NgK8LcHjAPdcYeyLzQ&_sa=0dMdAjLLQRdVxzpquULCkQ&_t=XHjxzxQeZWWUx9fb1iVM6A&_ta=Ys6VaTkM_yDgMsPZcdKrSw
-
-#EXTINF:-1 tvg-chno="197" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Houston Rockets vs Miami Heat | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Houston Rockets vs Miami Heat | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=ab65a2596ab462ff14bdfd6ee1055085%2Findex.m3u8&e=1794880595&sig=Mfh0mDnBWsduayrPAFEkj7B6nzPfsllfK37jZoNTMBI&v=1794878795-9005
-
-#EXTINF:-1 tvg-chno="198" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Memphis Grizzlies vs Washington Wizards (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_memphis-grizzlies-vs-washington-wizards_Memphis_Grizzlies_vs_Washingto" group-title="Live Events",[NBA] Memphis Grizzlies vs Washington Wizards (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/memphis-grizzlies-vs-washington-wizards
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/memphis-grizzlies-vs-washington-wizards
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/memphis-grizzlies-vs-washington-wizards1080p/index.m3u8?_e=1794907583&_n=7cb5885dd0efa30b&_s=Cio8zopPb7Y8b6WV-7UIyQ&_sa=fqUZ_e9_x-Hx8MMZlRP7Yg&_t=eWnMOT6C_oCj97-2tOgZLg&_ta=-6nOwG8O2y_5gzm7nTk7zg
-
-#EXTINF:-1 tvg-chno="199" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Memphis Grizzlies vs Washington Wizards | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Memphis Grizzlies vs Washington Wizards | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=5825d9248e99dddf41b59f26c2e66424%2Findex.m3u8&e=1794880590&sig=aSXNul6H47xFSOotXCvlsa_SY5DSvFSSGfY61byT9Zc&v=1794878790-4108
-
-#EXTINF:-1 tvg-chno="200" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Orlando Magic vs Boston Celtics (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_orlando-magic-vs-boston-celtics_Orlando_Magic_vs_Boston_Celtic" group-title="Live Events",[NBA] Orlando Magic vs Boston Celtics (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/orlando-magic-vs-boston-celtics
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/orlando-magic-vs-boston-celtics
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/orlando-magic-vs-boston-celtics1080p/index.m3u8?_e=1794907582&_n=431a479c57c9b165&_s=m-qk__65GW6yJWJVozXvjQ&_sa=eoQXY7CXJpJ17OFWe6rl9Q&_t=b1dsw1xgPGJ6ooyrQFLS2w&_ta=FicJT2vz5Wzt1gxuGCJkPQ
-
-#EXTINF:-1 tvg-chno="201" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Orlando Magic vs Boston Celtics | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Orlando Magic vs Boston Celtics | CA (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=7b145bbd4bf206f377e4cb4a72e4ab03%2Findex.m3u8&e=1794880594&sig=MNgVJ-Hn9-dHejIpFXxS5kl3mSSe4JKXXY-yG6qDlNc&v=1794878794-9470
-
-#EXTINF:-1 tvg-chno="202" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Philadelphia 76ers vs Brooklyn Nets (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_philadelphia-76ers-vs-brooklyn-nets_Philadelphia_76ers_vs_Brooklyn" group-title="Live Events",[NBA] Philadelphia 76ers vs Brooklyn Nets (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/philadelphia-76ers-vs-brooklyn-nets
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/philadelphia-76ers-vs-brooklyn-nets
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/philadelphia-76ers-vs-brooklyn-nets1080p/index.m3u8?_e=1794907583&_n=41c8b91381c976a8&_s=ANAnblqJtYWxvwMRVlbAgw&_sa=PNkfy4Hh582TsS5GnfP4kw&_t=LO1w0qr4WMpKP1ACWzc7KQ&_ta=gsMYIQlaRBbFHuWF7xKp8g
-
-#EXTINF:-1 tvg-chno="203" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Philadelphia 76ers vs Brooklyn Nets | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Philadelphia 76ers vs Brooklyn Nets | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=f6a214cf886d35a5591087d6a8ca8d58%2Findex.m3u8&e=1794880592&sig=T69396uQEHoE5hdiZ4LA6_Pj2dOoJjrklSpqxgS2Ixs&v=1794878792-8804
-
-#EXTINF:-1 tvg-chno="204" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Portland Trail Blazers vs Minnesota Timberwolves | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Portland Trail Blazers vs Minnesota Timberwolves | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=3ce16cae309ca17fb913e24603663305%2Findex.m3u8&e=1794880597&sig=8dzkV2klNl_lm4SirwFpbAIEzu1f6mndXgVcIL4nsIM&v=1794878797-5894
-
-#EXTINF:-1 tvg-chno="205" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Los Angeles Chargers vs Baltimore Ravens | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png" group-title="Live Events",[NFL] Los Angeles Chargers vs Baltimore Ravens | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=9ae3de4b40a6ecfdd03fc90be82c4535%2Findex.m3u8&e=1794880585&sig=5lsm4DXYfEPGv82lpXNVkCYHxPEf1Njd4DSusoxqFDw&v=1794878785-3976
-
-#EXTINF:-1 tvg-chno="206" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Montreal Canadiens vs New York Rangers (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_montreal-canadiens-vs-new-york-rangers_Montreal_Canadiens_vs_New_York" group-title="Live Events",[NHL] Montreal Canadiens vs New York Rangers (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/montreal-canadiens-vs-new-york-rangers
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/montreal-canadiens-vs-new-york-rangers
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/montreal-canadiens-vs-new-york-rangers1080p/index.m3u8?_e=1794907584&_n=49ab38cd8be3ca60&_s=8QlsQF9hB6hOwsIA6FVgqA&_sa=6pEsLlP-dqJCZcZSbfSXXQ&_t=v4VRJkFVC2I0S98Kj3vQ4g&_ta=Xes_mUM1RFBtCQvDr-oiEQ
-
-#EXTINF:-1 tvg-chno="207" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Montreal Canadiens vs New York Rangers | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Montreal Canadiens vs New York Rangers | CA (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=f0e34dbfd8cd7a28da4a9cf3ad4b0fd3%2Findex.m3u8&e=1794880587&sig=TdWbC2uWi2RUVDDxJzLFPbk_RF9ZCFYpDxWhpVeZn_0&v=1794878787-5434
-
-#EXTINF:-1 tvg-chno="208" tvg-id="Live.Event.us" tvg-name="[North America CONCACAF Nations League] Canada vs Guatemala | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[North America CONCACAF Nations League] Canada vs Guatemala | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=ae48836381ea1dc4e923da3a418649bb%2Findex.m3u8&e=1794880600&sig=JnM8QVykXA4HHHYXbBU1VzALE09GGXUVStApNTSUGl0&v=1794878800-6105
-
-#EXTINF:-1 tvg-chno="209" tvg-id="Live.Event.us" tvg-name="[North America CONCACAF Nations League] Martinique vs Aruba | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[North America CONCACAF Nations League] Martinique vs Aruba | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=07ae5785d9f5ce3acbd1e831e4c023ec%2Findex.m3u8&e=1794880604&sig=3mNGZW_V6Q63mtrfn-F_NH7x08Di63_34JLdV7A1xOw&v=1794878804-8785
-
-#EXTINF:-1 tvg-chno="210" tvg-id="Live.Event.us" tvg-name="[North America CONCACAF Nations League] Trinidad and Tobago vs Antigua and Barbuda | EN (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[North America CONCACAF Nations League] Trinidad and Tobago vs Antigua and Barbuda | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=c0848baa0fff7dcc32acb6e770f6cfc4%2Findex.m3u8&e=1794880602&sig=vFVOCyAtS641f23Un8frff6WE6D_L4FQIvhzH7F-4Ho&v=1794878802-2536
+https://hls.lshls.st/secure_hls.php?path=efcf0daf38c7d00d886c3002cea356e1%2Findex.m3u8&e=1794889948&sig=OJYYhE4554SE8tQxKAqqe64yw5YmB9Q2scGDwyLDe8g&v=1794888148-9543
