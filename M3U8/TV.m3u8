@@ -830,39 +830,3 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
-
-#EXTINF:-1 tvg-chno="193" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Phoenix Suns vs Denver Nuggets (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_phoenix-suns-vs-denver-nuggets_Phoenix_Suns_vs_Denver_Nuggets" group-title="Live Events",[NBA] Phoenix Suns vs Denver Nuggets (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/phoenix-suns-vs-denver-nuggets
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/phoenix-suns-vs-denver-nuggets
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/phoenix-suns-vs-denver-nuggets1080p/index.m3u8?_e=1794916945&_n=bb042f35a46bfa85&_s=yhxFnFGBc0qcwgSOmoh80Q&_sa=kUN6nMh4choSD3F9ioMQlw&_t=lKp6P-EubQP9totGJUt5DA&_ta=uGI2h5Lxbl5AFpqhZkU2qg
-
-#EXTINF:-1 tvg-chno="194" tvg-id="NBA.Basketball.Dummy.us" tvg-name="[NBA] Phoenix Suns vs Denver Nuggets | EN (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[NBA] Phoenix Suns vs Denver Nuggets | EN (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=d2cf4a545b7a79d529e7139a668540f7%2Findex.m3u8&e=1794889950&sig=H3ZhOIe5U40wSd4hZiR4SGFX7BgA7jOwv77TKC06ijs&v=1794888150-6545
-
-#EXTINF:-1 tvg-chno="195" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Long Beach State Beach vs UCLA Bruins (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_long-beach-state-beach-vs-ucla-bruins_Long_Beach_State_Beach_vs_UCLA" group-title="Live Events",[NCAA Men's Basketball] Long Beach State Beach vs UCLA Bruins (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/long-beach-state-beach-vs-ucla-bruins
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/long-beach-state-beach-vs-ucla-bruins
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/long-beach-state-beach-vs-ucla-bruins1080p/index.m3u8?_e=1794916945&_n=c35430e642ff54cc&_s=R3TwW24LUv4pkxPXf2xOKA&_sa=AM3JGHQRQ1KWZoZXJoE9Jg&_t=KhEmfrnybVOIOC3ZcGCsSQ&_ta=np7oA2eECWaLkXjz4zl8gQ
-
-#EXTINF:-1 tvg-chno="196" tvg-id="NFL.Dummy.us" tvg-name="[NFL] Los Angeles Chargers vs Baltimore Ravens (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/football_los-angeles-chargers-vs-baltimore-ravens_Los_Angeles_Chargers_vs_Baltim" group-title="Live Events",[NFL] Los Angeles Chargers vs Baltimore Ravens (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/football/los-angeles-chargers-vs-baltimore-ravens
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/football/los-angeles-chargers-vs-baltimore-ravens
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/los-angeles-chargers-vs-baltimore-ravens1080p/index.m3u8?_e=1794916946&_n=20a0cda47891728c&_s=JEsbAWUm9hlE_G9heLjm4g&_sa=U-sGMkxFVWSXbv2bzgvYZw&_t=5bRU1rVzqBjI5uLfWe4LAg&_ta=D8Q9gFir1wAdHXOM2WrvuA
-
-#EXTINF:-1 tvg-chno="197" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Vancouver Canucks vs Utah Mammoth (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/hockey_vancouver-canucks-vs-utah-mammoth_Vancouver_Canucks_vs_Utah_Mamm" group-title="Live Events",[NHL] Vancouver Canucks vs Utah Mammoth (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/hockey/vancouver-canucks-vs-utah-mammoth
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/hockey/vancouver-canucks-vs-utah-mammoth
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/vancouver-canucks-vs-utah-mammoth1080p/index.m3u8?_e=1794916946&_n=b6e4d41d46a3c8fa&_s=W7oas2cTmxhJ3ciTfAWYCg&_sa=0UPN8QYjI2jqaEotrjjsjw&_t=bishAtQvJRjUBsfq6kOIlw&_ta=wbiqHPuP07NcyUUY0Q_DEg
-
-#EXTINF:-1 tvg-chno="198" tvg-id="NHL.Hockey.Dummy.us" tvg-name="[NHL] Vancouver Canucks vs Utah Mammoth | CA (PLYFST)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png" group-title="Live Events",[NHL] Vancouver Canucks vs Utah Mammoth | CA (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=efcf0daf38c7d00d886c3002cea356e1%2Findex.m3u8&e=1794889948&sig=OJYYhE4554SE8tQxKAqqe64yw5YmB9Q2scGDwyLDe8g&v=1794888148-9543
