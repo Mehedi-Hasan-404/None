@@ -830,15 +830,3 @@ https://amg01269-amg01269c1-distrotv-us-5379.playouts.now.amagi.tv/playlist/amg0
 
 #EXTINF:-1 tvg-chno="192" tvg-id="Yes.Network.us2" tvg-name="YES Network" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30017_dark_360w_270h.png" group-title="TV",YES Network
 http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
-
-#EXTINF:-1 tvg-chno="193" tvg-id="NCAA.Sports.Dummy.us" tvg-name="[NCAA Men's Basketball] Notre Dame Fighting Irish vs Florida Gators (STRMFREE)" tvg-logo="https://streamfree.top/thumbnails/basketball_notre-dame-fighting-irish-vs-florida-gators_Notre_Dame_Fighting_Irish_vs_F" group-title="Live Events",[NCAA Men's Basketball] Notre Dame Fighting Irish vs Florida Gators (STRMFREE)
-#EXTVLCOPT:http-referrer=https://streamfree.top/embed/basketball/notre-dame-fighting-irish-vs-florida-gators
-#EXTVLCOPT:http-origin=https://streamfree.top/embed/basketball/notre-dame-fighting-irish-vs-florida-gators
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://streamfree.top/live/notre-dame-fighting-irish-vs-florida-gators1080p/index.m3u8?_e=1794983488&_n=eda6922154f1875b&_s=GbKeA_V9iIN0RkRYv1VwBA&_sa=CHs42Vt9XpuQUaiUQt1J7A&_t=AYvNZODIdL5BB6gxgxd-hw&_ta=PXUjaaLy9sbHj1SAbKT1Kw
-
-#EXTINF:-1 tvg-chno="194" tvg-id="Live.Event.us" tvg-name="[World Friendly] Argentina vs Costa Rica | ES (PLYFST)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[World Friendly] Argentina vs Costa Rica | ES (PLYFST)
-#EXTVLCOPT:http-referrer=https://exposestrat.com
-#EXTVLCOPT:http-origin=https://exposestrat.com
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://hls.lshls.st/secure_hls.php?path=a8b1123ea68e2c4553a808b5bd351764%2Findex.m3u8&e=1794956491&sig=OaqpmttBrN2W7caNdV0kNHP0IS8LfM6cTCG7Oj2cpjY&v=1794954691-9362
