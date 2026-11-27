@@ -1,7 +1,13 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/doms9/iptv/refs/heads/default/M3U8/TV.xml"
 
-#EXTINF:-1 tvg-chno="1" tvg-id="Live.Event.us" tvg-name="[Live Event] Philadelphia Eagles at Dallas Cowboys (SPRTSPASS)" tvg-logo="https://i.gyazo.com/4a5e9fa2525808ee4b65002b56d3450e.png" group-title="Live Events",[Live Event] Philadelphia Eagles at Dallas Cowboys (SPRTSPASS)
-#EXTVLCOPT:http-referrer=https://sportsembed.store/nfl/eagles.html
-#EXTVLCOPT:http-origin=https://sportsembed.store/nfl/eagles.html
+#EXTINF:-1 tvg-chno="1" tvg-id="Racing.Dummy.us" tvg-name="[MotoGP] Valencian Grand Prix | DE (PLYFST)" tvg-logo="https://1000logos.net/wp-content/uploads/2021/03/MotoGP-Logo-500x281.png" group-title="Live Events",[MotoGP] Valencian Grand Prix | DE (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://foxfiber.s3.eu-north-1.amazonaws.com/btsport.m3u8
+https://hls.lshls.st/secure_hls.php?path=498015d25774ff4638b53da409870932%2Findex.m3u8&e=1795774849&sig=898mh5fbseEzPaM3ZXTRQZnykxCFKghthNCTE29DSHo&v=1795773049-5837
+
+#EXTINF:-1 tvg-chno="2" tvg-id="Racing.Dummy.us" tvg-name="[MotoGP] Valencian Grand Prix | EN (PLYFST)" tvg-logo="https://1000logos.net/wp-content/uploads/2021/03/MotoGP-Logo-500x281.png" group-title="Live Events",[MotoGP] Valencian Grand Prix | EN (PLYFST)
+#EXTVLCOPT:http-referrer=https://exposestrat.com
+#EXTVLCOPT:http-origin=https://exposestrat.com
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://hls.lshls.st/secure_hls.php?path=f0e34dbfd8cd7a28da4a9cf3ad4b0fd3%2Findex.m3u8&e=1795774846&sig=m-cVyQXKdKxL65NBJ7YmkDfOtNGIS-5puqU-qUZkW2I&v=1795773046-5726
